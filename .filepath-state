@@ -116,6 +116,9 @@
   "4f72d56afb9f53157569789b68455dcf49016a69": [
     "ATADocs\\Token\\ATA.md"
   ],
+  "6003fcc8e48d206960bd8b6e3489e36bb68c25d8": [
+    "ATADocs\\Troubleshoot\\ata-technical-faq.md"
+  ],
   "66f284a73f1d853850f26f515d28f647f7af2a6a": [
     "ATADocs\\Troubleshoot\\ata-technical-faq.md"
   ],
@@ -124,6 +127,9 @@
   ],
   "b350630456ac2847366eabd6c498a558d17f2fc4": [
     "ATADocs\\Troubleshoot\\TOC.md"
+  ],
+  "32694dac750b87a5a07b3a04a51c11054c50917f": [
+    "ATADocs\\Troubleshoot\\troubleshooting-ata-using-ata-database.md"
   ],
   "341cf688170786c3b7beeb9c9776ee7c1b555a7c": [
     "ATADocs\\Troubleshoot\\troubleshooting-ata-using-ata-database.md"
