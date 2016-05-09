@@ -3,15 +3,15 @@
 ## Summary
  Property | Value 
  -------- | ----- 
- Total Files | 527
+ Total Files | 529
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 51
+[ Handoff Success Files ](#handoff-success-list)| 45
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 475
+[ Ignored Files ](#ignored-list)| 483
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -39,18 +39,13 @@
  [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-iiscert.md) | HandedOffSuccess | [Details](#29080677d0a2afe12f8d872bcf32ba8b03e93117117)
  [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-configuration.md) | HandedOffSuccess | [Details](#6040bba509af74f553e038ffd308c784efd97f29118)
  [ATADocs\DeployUse\operate-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/operate-ata.md) | HandedOffSuccess | [Details](#b30041b411c633308d20b5c833ca17c91deb9a01119)
- [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/preinstall-ata.md) | HandedOffSuccess | [Details](#7f4d3d3e207515b85123252a6e64de21b75b223c120)
  [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-ata-alerts.md) | HandedOffSuccess | [Details](#49ef41cbae98ef4c766629d8910720df63f47676121)
  [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | HandedOffSuccess | [Details](#69407ab44e09c309fd19cac34ca0c89f942c8095122)
- [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/DeployUse/TOC.md) | HandedOffSuccess | [Details](#17a5a93ba84e163f64f8afcb5d9696655740d29c123)
  [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/954fa96db02f15965fc9c2f1ef09d50f21d8ca74/ATADocs/DeployUse/validate-port-mirroring.md) | HandedOffSuccess | [Details](#965032eec59f602c3d012eb596d1ebfdca309433124)
  [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/working-with-ata-console.md) | HandedOffSuccess | [Details](#e187b7fea77773134ce0d3f7948ff082e0e40d16125)
  [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-detection-settings.md) | HandedOffSuccess | [Details](#e4816f70b26843d4ee3c15d9aefb7e64139ab5d5126)
  [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-suspicious-activities.md) | HandedOffSuccess | [Details](#90386f9abae36811a6543e9ef4bd1b17bfaece79127)
- [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/7e5b636fb557a45b425a1c4571e86cdb0299a1c7/ATADocs/index.md) | HandedOffSuccess | [Details](#215869011b8dd0d1ac7ba45bf1da42f19aed6f5c222)
- [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/PlanDesign/ata-architecture.md) | HandedOffSuccess | [Details](#80a438cafbeacfe400f5472713c20ba0bca7d7f3224)
  [ATADocs\PlanDesign\ata-capacity-planning.md](https://github.com/Microsoft/ATADocs-pr/blob/954fa96db02f15965fc9c2f1ef09d50f21d8ca74/ATADocs/PlanDesign/ata-capacity-planning.md) | HandedOffSuccess | [Details](#2c3bf59a5f97d16845641da018074da8cc71b8c1225)
- [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/PlanDesign/ata-prerequisites.md) | HandedOffSuccess | [Details](#1567deb2bd7a9354c0d6b3bc0435411771cc72e4226)
  [ATADocs\PlanDesign\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/PlanDesign/TOC.md) | HandedOffSuccess | [Details](#6ab89b98d3c9d4db7b9b84d6b373ab570f13a93e320)
  [ATADocs\template.md](https://github.com/Microsoft/ATADocs-pr/blob/f5cded4372e44521444432f5942747964e7fdca4/ATADocs/template.md) | HandedOffSuccess | [Details](#68090a038cec49009b6bd0ce0515a075f62483b8321)
  [ATADocs\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/TOC.md) | HandedOffSuccess | [Details](#7d9117a66b44f454b6c9890f257d1ab9b233a235322)
@@ -63,12 +58,11 @@
  [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr/blob/954fa96db02f15965fc9c2f1ef09d50f21d8ca74/ATADocs/Understand/ata-technical-faq.md) | HandedOffSuccess | [Details](#647e2afd04a2998d2f9bfab1b9aa3f8d9085460c424)
  [ATADocs\Understand\ata-update-1.5-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/ata-update-1.5-migration-guide.md) | HandedOffSuccess | [Details](#4d75d036a8d278aef25a35725986b2881d2b5be9425)
  [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/ee292a826d951bc8799c0a71d59f09ca0ccda336/ATADocs/Understand/ata-update-1.6-migration-guide.md) | HandedOffSuccess | [Details](#ac5562dfcc985b644f6c9141a6046ffb4d88f05a426)
- [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md) | HandedOffSuccess | [Details](#6a9c12c520e1a6051395d39739ef64d78310e920520)
- [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/what-is-ata.md) | HandedOffSuccess | [Details](#fb845fb41dfbec50711fefa64b6a561433040d0b521)
- [ATADocs\Understand\whats-new-version-1.4.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.4.md) | HandedOffSuccess | [Details](#84da34ea982844245086173d85f4a52e814b3c52522)
- [ATADocs\Understand\whats-new-version-1.5.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.5.md) | HandedOffSuccess | [Details](#bc5426c7bd21585bb4bd6be921353ce20fa0551b523)
- [ATADocs\Understand\whats-new-version-1.6.md](https://github.com/Microsoft/ATADocs-pr/blob/34956bae237e88f597d1d100a6b0c70994fb0b86/ATADocs/Understand/whats-new-version-1.6.md) | HandedOffSuccess | [Details](#15b3e0fd3491488501a0915c4cb61cc3db568ab5524)
- [template.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/template.md) | HandedOffSuccess | [Details](#68090a038cec49009b6bd0ce0515a075f62483b8526)
+ [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md) | HandedOffSuccess | [Details](#6a9c12c520e1a6051395d39739ef64d78310e920522)
+ [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/what-is-ata.md) | HandedOffSuccess | [Details](#fb845fb41dfbec50711fefa64b6a561433040d0b523)
+ [ATADocs\Understand\whats-new-version-1.4.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.4.md) | HandedOffSuccess | [Details](#84da34ea982844245086173d85f4a52e814b3c52524)
+ [ATADocs\Understand\whats-new-version-1.5.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.5.md) | HandedOffSuccess | [Details](#bc5426c7bd21585bb4bd6be921353ce20fa0551b525)
+ [template.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/template.md) | HandedOffSuccess | [Details](#68090a038cec49009b6bd0ce0515a075f62483b8528)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
@@ -185,6 +179,8 @@
  [ATADocs\DeployUse\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/media/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0109)
  [ATADocs\DeployUse\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/media/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd111)
  [ATADocs\DeployUse\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/media/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6112)
+ [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/preinstall-ata.md) | Ignored | [Details](#3045c1fb822aab849c8b1c2befbf8f725110f1e4120)
+ [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/TOC.md) | Ignored | [Details](#0f48ccbe2fc2a9e9a4342cc4d27015eabea40b17123)
  [ATADocs\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/docfx.json) | Ignored | [Details](#158500e561ef65c6163007f55591740d56f942e5128)
  [ATADocs\Image\150x150.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Image/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71129)
  [ATADocs\Image\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Image/ATA_center_fullpartial.png) | Ignored | [Details](#6349405da0cc5437d4907c1b377ebe448ef3810d196)
@@ -279,7 +275,10 @@
  [ATADocs\Image\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Image/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0218)
  [ATADocs\Image\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Image/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd220)
  [ATADocs\Image\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Image/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6221)
+ [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/index.md) | Ignored | [Details](#de05c2e5996d05f6b31e3efa91290e380d708cb2222)
  [ATADocs\md.style](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda223)
+ [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/ata-architecture.md) | Ignored | [Details](#b7f4b07796ee90d45b40bc00b749b56c5f11c83b224)
+ [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/ata-prerequisites.md) | Ignored | [Details](#b8f0eccddbb56fd2258cfb298a83ce3c2174a601226)
  [ATADocs\PlanDesign\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/docfx.json) | Ignored | [Details](#2049435c40c899c1644707ffc5dd335179b48c37227)
  [ATADocs\PlanDesign\md.style](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda228)
  [ATADocs\PlanDesign\media\150x150.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/media/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71229)
@@ -470,14 +469,14 @@
  [ATADocs\Understand\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/docfx.json) | Ignored | [Details](#bcbcb9074aa7bee2e889f125212417f9cae1e3d1427)
  [ATADocs\Understand\md.style](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda428)
  [ATADocs\Understand\media\150x150.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71429)
- [ATADocs\Understand\media\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_fullpartial.png) | Ignored | [Details](#6349405da0cc5437d4907c1b377ebe448ef3810d495)
- [ATADocs\Understand\media\ATA_center_outdated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_outdated.png) | Ignored | [Details](#5b8683e048642aee11b3fa468d06f05bccabac2c496)
- [ATADocs\Understand\media\ata_failed_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_failed_readinesschecks.png) | Ignored | [Details](#5c2e1899a2ec761053481ce0ea4ad32ad9609893497)
- [ATADocs\Understand\media\ata_gateways_general.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_gateways_general.png) | Ignored | [Details](#8456ada0f60bc3e2934a7e7e0d217103980b7f42498)
- [ATADocs\Understand\media\ATA_gw_updated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_gw_updated.png) | Ignored | [Details](#897dfb81c69563bcdb1239566b4a47f1e8a060cd499)
- [ATADocs\Understand\media\ata_install_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_install_readinesschecks.png) | Ignored | [Details](#6cdf0f7d546273ceeee2cea360a32129caf22fc3500)
- [ATADocs\Understand\media\ata_installupdatesautomatically.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_installupdatesautomatically.png) | Ignored | [Details](#b3bc48a786e065c01161208be5b5e56bc87aa6df501)
- [ATADocs\Understand\media\ata_ms_update.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_ms_update.png) | Ignored | [Details](#5c449f9c6b05039e43b806cf9d9e5c891123ab5c502)
+ [ATADocs\Understand\media\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_fullpartial.png) | Ignored | [Details](#6349405da0cc5437d4907c1b377ebe448ef3810d496)
+ [ATADocs\Understand\media\ATA_center_outdated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_outdated.png) | Ignored | [Details](#5b8683e048642aee11b3fa468d06f05bccabac2c497)
+ [ATADocs\Understand\media\ata_failed_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_failed_readinesschecks.png) | Ignored | [Details](#5c2e1899a2ec761053481ce0ea4ad32ad9609893498)
+ [ATADocs\Understand\media\ata_gateways_general.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_gateways_general.png) | Ignored | [Details](#8456ada0f60bc3e2934a7e7e0d217103980b7f42499)
+ [ATADocs\Understand\media\ATA_gw_updated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_gw_updated.png) | Ignored | [Details](#897dfb81c69563bcdb1239566b4a47f1e8a060cd500)
+ [ATADocs\Understand\media\ata_install_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_install_readinesschecks.png) | Ignored | [Details](#6cdf0f7d546273ceeee2cea360a32129caf22fc3501)
+ [ATADocs\Understand\media\ata_installupdatesautomatically.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_installupdatesautomatically.png) | Ignored | [Details](#b3bc48a786e065c01161208be5b5e56bc87aa6df502)
+ [ATADocs\Understand\media\ata_ms_update.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_ms_update.png) | Ignored | [Details](#5c449f9c6b05039e43b806cf9d9e5c891123ab5c503)
  [ATADocs\Understand\media\ATA-alerts.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-alerts.png) | Ignored | [Details](#f8847c09ae291ce8fb83cb013a7e5f5f3a4b6279434)
  [ATADocs\Understand\media\ATA-alerts-email-settings.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-alerts-email-settings.png) | Ignored | [Details](#9e4da487d65aa093c3dd0f9b8331079ecb469283430)
  [ATADocs\Understand\media\ATA-Alerts-laguage.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Alerts-laguage.png) | Ignored | [Details](#f8847c09ae291ce8fb83cb013a7e5f5f3a4b6279431)
@@ -487,7 +486,7 @@
  [ATADocs\Understand\media\ATA-Center-Configuration.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Center-Configuration.jpg) | Ignored | [Details](#dd4b81b028c2e7e2a48912a1dc72b8c590b026db436)
  [ATADocs\Understand\media\ATA-center-fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-center-fullpartial.png) | Ignored | [Details](#6349405da0cc5437d4907c1b377ebe448ef3810d437)
  [ATADocs\Understand\media\ATA-center-outdated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-center-outdated.png) | Ignored | [Details](#0199de55380fbd894c67b0eb9332276268cf2106438)
- [ATADocs\Understand\media\ATACenterSettings.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATACenterSettings.png) | Ignored | [Details](#62c2df167ae4639e45802b81f933a90699a91d61503)
+ [ATADocs\Understand\media\ATACenterSettings.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATACenterSettings.png) | Ignored | [Details](#62c2df167ae4639e45802b81f933a90699a91d61504)
  [ATADocs\Understand\media\ATA-change-console-IP.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-change-console-IP.jpg) | Ignored | [Details](#0932dedf4e4f231714a6072c12093c6678b08100439)
  [ATADocs\Understand\media\ATA-chge-center-IP-pull-down.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-chge-center-IP-pull-down.png) | Ignored | [Details](#58ad83ac54360dc73106d7a020244603f0f876f5440)
  [ATADocs\Understand\media\ATA-chge-IP-after-clicking-save.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-chge-IP-after-clicking-save.png) | Ignored | [Details](#012bde82b03d201055e269ecbe7d9ad4c9c6313c441)
@@ -505,8 +504,8 @@
  [ATADocs\Understand\media\ATA-Gateway-Configuration.JPG](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Gateway-Configuration.JPG) | Ignored | [Details](#b79a81b193f258cfee46d1a6478d89e46c7eecdc453)
  [ATADocs\Understand\media\ATA-Gateway-perf-counters.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Gateway-perf-counters.png) | Ignored | [Details](#3a5b4e5c2de5a6e109cd66dd94a37f40b02fa5df454)
  [ATADocs\Understand\media\ATA-GW-change-DC-password.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-GW-change-DC-password.jpg) | Ignored | [Details](#01e4a523ed3a895a6edc7866273118b18c46f92c455)
- [ATADocs\Understand\media\ATAGWDomainController.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATAGWDomainController.png) | Ignored | [Details](#dddd652fb096923a6ac044e9d8c151dc1af2982f505)
- [ATADocs\Understand\media\ataGW-not-synced.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ataGW-not-synced.png) | Ignored | [Details](#135d171efab4f40e3e549943e295afc9d19ca88d504)
+ [ATADocs\Understand\media\ATAGWDomainController.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATAGWDomainController.png) | Ignored | [Details](#dddd652fb096923a6ac044e9d8c151dc1af2982f506)
+ [ATADocs\Understand\media\ataGW-not-synced.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ataGW-not-synced.png) | Ignored | [Details](#135d171efab4f40e3e549943e295afc9d19ca88d505)
  [ATADocs\Understand\media\ATA-GW-uninstall-bug.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-GW-uninstall-bug.jpg) | Ignored | [Details](#84844fbeab61dc307350394e1071c1bad6e20659456)
  [ATADocs\Understand\media\ATA-gw-updated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-gw-updated.png) | Ignored | [Details](#897dfb81c69563bcdb1239566b4a47f1e8a060cd457)
  [ATADocs\Understand\media\ATA-Health-Center-Alert-red-dot.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Health-Center-Alert-red-dot.png) | Ignored | [Details](#d2b6088dd989cb01d54c714b18b23fdac454c71c458)
@@ -544,23 +543,26 @@
  [ATADocs\Understand\media\ATA-Unblock.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Unblock.jpg) | Ignored | [Details](#6c5e5d8d8bf41e1fa296514181a36bfa9f97fef7490)
  [ATADocs\Understand\media\ATA-uninstall-center-bug.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-uninstall-center-bug.jpg) | Ignored | [Details](#2693f2a42f01bacc6651248a0113d575c12054c3491)
  [ATADocs\Understand\media\ATA-Unresolved-Profile.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-Unresolved-Profile.jpg) | Ignored | [Details](#4fc9df3058f295d41f80db89e3805003cd18a9b7492)
- [ATADocs\Understand\media\ATA-VPN-Subnets.JPG](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-VPN-Subnets.JPG) | Ignored | [Details](#ce4a21e892357049d70b5ff1aa708547ca715b17493)
- [ATADocs\Understand\media\ATA-windows-event-forwarding.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-windows-event-forwarding.jpg) | Ignored | [Details](#cd5f88a75d06a7e6ed6d4ce5872a6b9c19ceb45b494)
- [ATADocs\Understand\media\attack-timeline.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/attack-timeline.png) | Ignored | [Details](#7ed12b436fccf9d40ecd76f13697812c159f69a3506)
- [ATADocs\Understand\media\AzureWebsiteIcons-install.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-install.png) | Ignored | [Details](#5a5fef111ba0c2b61d5c6e3b35def26563c95b6c507)
- [ATADocs\Understand\media\AzureWebsiteIcons-manage.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-manage.png) | Ignored | [Details](#24fa3a74955fb520a2cafe7f2ff80415def4107d508)
- [ATADocs\Understand\media\AzureWebsiteIcons-what-is-ata.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-what-is-ata.png) | Ignored | [Details](#e3c9dfb90cc3f2eebd8aa3395e3ab03666bc32bd509)
- [ATADocs\Understand\media\computer-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/computer-profile.png) | Ignored | [Details](#92803f3318fdfdbf17528b747b13f715ee40b7fe510)
- [ATADocs\Understand\media\health-center.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/health-center.png) | Ignored | [Details](#2b57f03ff7f6b23f604e7ef93efa4bc72c1a544a511)
- [ATADocs\Understand\media\migrationerror.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/migrationerror.png) | Ignored | [Details](#5c586ba530364a62580805245cb6b719c06723e7512)
- [ATADocs\Understand\media\notification-bar.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/notification-bar.png) | Ignored | [Details](#5a5c773c62ea63438b12536bfdb91f0b2a6866bf513)
- [ATADocs\Understand\media\user-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/user-profile.png) | Ignored | [Details](#746cfa4a7266e89f4083291f6903b6aea0509917514)
- [ATADocs\Understand\media\wef_4776.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_4776.png) | Ignored | [Details](#52452ea87355476bda32308ec38a95c6f75a99ef515)
- [ATADocs\Understand\media\wef_ad_eventlogreaders.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad_eventlogreaders.png) | Ignored | [Details](#1c19abba75023e7073977641e2674ddd62d20326517)
- [ATADocs\Understand\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0516)
- [ATADocs\Understand\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd518)
- [ATADocs\Understand\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6519)
- [README.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/README.md) | Ignored | [Details](#c07f29684d8ed129d48421c0019ecfeebb8d021d525)
+ [ATADocs\Understand\media\ata-update-error.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata-update-error.png) | Ignored | [Details](#5c586ba530364a62580805245cb6b719c06723e7493)
+ [ATADocs\Understand\media\ATA-VPN-Subnets.JPG](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-VPN-Subnets.JPG) | Ignored | [Details](#ce4a21e892357049d70b5ff1aa708547ca715b17494)
+ [ATADocs\Understand\media\ATA-windows-event-forwarding.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-windows-event-forwarding.jpg) | Ignored | [Details](#cd5f88a75d06a7e6ed6d4ce5872a6b9c19ceb45b495)
+ [ATADocs\Understand\media\attack-timeline.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/attack-timeline.png) | Ignored | [Details](#7ed12b436fccf9d40ecd76f13697812c159f69a3507)
+ [ATADocs\Understand\media\AzureWebsiteIcons-install.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-install.png) | Ignored | [Details](#5a5fef111ba0c2b61d5c6e3b35def26563c95b6c508)
+ [ATADocs\Understand\media\AzureWebsiteIcons-manage.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-manage.png) | Ignored | [Details](#24fa3a74955fb520a2cafe7f2ff80415def4107d509)
+ [ATADocs\Understand\media\AzureWebsiteIcons-what-is-ata.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-what-is-ata.png) | Ignored | [Details](#e3c9dfb90cc3f2eebd8aa3395e3ab03666bc32bd510)
+ [ATADocs\Understand\media\computer-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/computer-profile.png) | Ignored | [Details](#92803f3318fdfdbf17528b747b13f715ee40b7fe511)
+ [ATADocs\Understand\media\health-center.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/health-center.png) | Ignored | [Details](#2b57f03ff7f6b23f604e7ef93efa4bc72c1a544a512)
+ [ATADocs\Understand\media\migrationerror.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/migrationerror.png) | Ignored | [Details](#5c586ba530364a62580805245cb6b719c06723e7513)
+ [ATADocs\Understand\media\notification-bar.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/notification-bar.png) | Ignored | [Details](#5a5c773c62ea63438b12536bfdb91f0b2a6866bf514)
+ [ATADocs\Understand\media\uninstall-ata15.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/uninstall-ata15.png) | Ignored | [Details](#2f6eeb7a16e2122b26edb41d50c52e8a7ce4ba70515)
+ [ATADocs\Understand\media\user-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/user-profile.png) | Ignored | [Details](#746cfa4a7266e89f4083291f6903b6aea0509917516)
+ [ATADocs\Understand\media\wef_4776.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_4776.png) | Ignored | [Details](#52452ea87355476bda32308ec38a95c6f75a99ef517)
+ [ATADocs\Understand\media\wef_ad_eventlogreaders.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad_eventlogreaders.png) | Ignored | [Details](#1c19abba75023e7073977641e2674ddd62d20326519)
+ [ATADocs\Understand\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0518)
+ [ATADocs\Understand\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd520)
+ [ATADocs\Understand\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6521)
+ [ATADocs\Understand\whats-new-version-1.6.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/whats-new-version-1.6.md) | Ignored | [Details](#5f5953a980425b0b5da87104a5e7e0a04c7b0fcf526)
+ [README.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/README.md) | Ignored | [Details](#c07f29684d8ed129d48421c0019ecfeebb8d021d527)
 
 ## Item Details
 ##### <a name='7c4de7495fb4bb76bd8b9102a4ab583ce46e5cad0'></a> Source: [.gitignore](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/.gitignore)
@@ -2003,12 +2005,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7f4d3d3e207515b85123252a6e64de21b75b223c120'></a> Source: [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/preinstall-ata.md)
-* Status: HandedOffSuccess
+##### <a name='3045c1fb822aab849c8b1c2befbf8f725110f1e4120'></a> Source: [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/preinstall-ata.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.sv-se.xlf)
-* Handoff Datetime: 2016-05-05 18:05:31
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -2039,12 +2041,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='17a5a93ba84e163f64f8afcb5d9696655740d29c123'></a> Source: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/DeployUse/TOC.md)
-* Status: HandedOffSuccess
+##### <a name='0f48ccbe2fc2a9e9a4342cc4d27015eabea40b17123'></a> Source: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/DeployUse/TOC.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.sv-se.xlf)
-* Handoff Datetime: 2016-05-05 18:05:31
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -3227,12 +3229,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='215869011b8dd0d1ac7ba45bf1da42f19aed6f5c222'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/7e5b636fb557a45b425a1c4571e86cdb0299a1c7/ATADocs/index.md)
-* Status: HandedOffSuccess
+##### <a name='de05c2e5996d05f6b31e3efa91290e380d708cb2222'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/index.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/30733567ecf36c2b5bc02635314efb8e3fd4a661/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.sv-se.xlf)
-* Handoff Datetime: 2016-05-05 19:58:47
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -3251,12 +3253,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='80a438cafbeacfe400f5472713c20ba0bca7d7f3224'></a> Source: [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/PlanDesign/ata-architecture.md)
-* Status: HandedOffSuccess
+##### <a name='b7f4b07796ee90d45b40bc00b749b56c5f11c83b224'></a> Source: [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/ata-architecture.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.sv-se.xlf)
-* Handoff Datetime: 2016-05-05 18:05:31
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -3275,12 +3277,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1567deb2bd7a9354c0d6b3bc0435411771cc72e4226'></a> Source: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/PlanDesign/ata-prerequisites.md)
-* Status: HandedOffSuccess
+##### <a name='b8f0eccddbb56fd2258cfb298a83ce3c2174a601226'></a> Source: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/PlanDesign/ata-prerequisites.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.sv-se.xlf)
-* Handoff Datetime: 2016-05-05 18:05:31
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -5723,7 +5725,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6349405da0cc5437d4907c1b377ebe448ef3810d495'></a> Source: [ATADocs\Understand\media\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_fullpartial.png)
+##### <a name='6349405da0cc5437d4907c1b377ebe448ef3810d496'></a> Source: [ATADocs\Understand\media\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_fullpartial.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5735,7 +5737,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5b8683e048642aee11b3fa468d06f05bccabac2c496'></a> Source: [ATADocs\Understand\media\ATA_center_outdated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_outdated.png)
+##### <a name='5b8683e048642aee11b3fa468d06f05bccabac2c497'></a> Source: [ATADocs\Understand\media\ATA_center_outdated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_center_outdated.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5747,7 +5749,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5c2e1899a2ec761053481ce0ea4ad32ad9609893497'></a> Source: [ATADocs\Understand\media\ata_failed_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_failed_readinesschecks.png)
+##### <a name='5c2e1899a2ec761053481ce0ea4ad32ad9609893498'></a> Source: [ATADocs\Understand\media\ata_failed_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_failed_readinesschecks.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5759,7 +5761,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8456ada0f60bc3e2934a7e7e0d217103980b7f42498'></a> Source: [ATADocs\Understand\media\ata_gateways_general.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_gateways_general.png)
+##### <a name='8456ada0f60bc3e2934a7e7e0d217103980b7f42499'></a> Source: [ATADocs\Understand\media\ata_gateways_general.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_gateways_general.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5771,7 +5773,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='897dfb81c69563bcdb1239566b4a47f1e8a060cd499'></a> Source: [ATADocs\Understand\media\ATA_gw_updated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_gw_updated.png)
+##### <a name='897dfb81c69563bcdb1239566b4a47f1e8a060cd500'></a> Source: [ATADocs\Understand\media\ATA_gw_updated.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA_gw_updated.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5783,7 +5785,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6cdf0f7d546273ceeee2cea360a32129caf22fc3500'></a> Source: [ATADocs\Understand\media\ata_install_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_install_readinesschecks.png)
+##### <a name='6cdf0f7d546273ceeee2cea360a32129caf22fc3501'></a> Source: [ATADocs\Understand\media\ata_install_readinesschecks.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_install_readinesschecks.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5795,7 +5797,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b3bc48a786e065c01161208be5b5e56bc87aa6df501'></a> Source: [ATADocs\Understand\media\ata_installupdatesautomatically.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_installupdatesautomatically.png)
+##### <a name='b3bc48a786e065c01161208be5b5e56bc87aa6df502'></a> Source: [ATADocs\Understand\media\ata_installupdatesautomatically.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_installupdatesautomatically.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5807,7 +5809,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5c449f9c6b05039e43b806cf9d9e5c891123ab5c502'></a> Source: [ATADocs\Understand\media\ata_ms_update.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_ms_update.png)
+##### <a name='5c449f9c6b05039e43b806cf9d9e5c891123ab5c503'></a> Source: [ATADocs\Understand\media\ata_ms_update.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata_ms_update.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5927,7 +5929,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='62c2df167ae4639e45802b81f933a90699a91d61503'></a> Source: [ATADocs\Understand\media\ATACenterSettings.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATACenterSettings.png)
+##### <a name='62c2df167ae4639e45802b81f933a90699a91d61504'></a> Source: [ATADocs\Understand\media\ATACenterSettings.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATACenterSettings.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6143,7 +6145,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='dddd652fb096923a6ac044e9d8c151dc1af2982f505'></a> Source: [ATADocs\Understand\media\ATAGWDomainController.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATAGWDomainController.png)
+##### <a name='dddd652fb096923a6ac044e9d8c151dc1af2982f506'></a> Source: [ATADocs\Understand\media\ATAGWDomainController.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATAGWDomainController.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6155,7 +6157,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='135d171efab4f40e3e549943e295afc9d19ca88d504'></a> Source: [ATADocs\Understand\media\ataGW-not-synced.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ataGW-not-synced.png)
+##### <a name='135d171efab4f40e3e549943e295afc9d19ca88d505'></a> Source: [ATADocs\Understand\media\ataGW-not-synced.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ataGW-not-synced.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6611,7 +6613,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ce4a21e892357049d70b5ff1aa708547ca715b17493'></a> Source: [ATADocs\Understand\media\ATA-VPN-Subnets.JPG](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-VPN-Subnets.JPG)
+##### <a name='5c586ba530364a62580805245cb6b719c06723e7493'></a> Source: [ATADocs\Understand\media\ata-update-error.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ata-update-error.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6623,7 +6625,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cd5f88a75d06a7e6ed6d4ce5872a6b9c19ceb45b494'></a> Source: [ATADocs\Understand\media\ATA-windows-event-forwarding.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-windows-event-forwarding.jpg)
+##### <a name='ce4a21e892357049d70b5ff1aa708547ca715b17494'></a> Source: [ATADocs\Understand\media\ATA-VPN-Subnets.JPG](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-VPN-Subnets.JPG)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6635,7 +6637,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7ed12b436fccf9d40ecd76f13697812c159f69a3506'></a> Source: [ATADocs\Understand\media\attack-timeline.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/attack-timeline.png)
+##### <a name='cd5f88a75d06a7e6ed6d4ce5872a6b9c19ceb45b495'></a> Source: [ATADocs\Understand\media\ATA-windows-event-forwarding.jpg](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/ATA-windows-event-forwarding.jpg)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6647,7 +6649,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5a5fef111ba0c2b61d5c6e3b35def26563c95b6c507'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-install.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-install.png)
+##### <a name='7ed12b436fccf9d40ecd76f13697812c159f69a3507'></a> Source: [ATADocs\Understand\media\attack-timeline.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/attack-timeline.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6659,7 +6661,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='24fa3a74955fb520a2cafe7f2ff80415def4107d508'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-manage.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-manage.png)
+##### <a name='5a5fef111ba0c2b61d5c6e3b35def26563c95b6c508'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-install.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-install.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6671,7 +6673,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e3c9dfb90cc3f2eebd8aa3395e3ab03666bc32bd509'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-what-is-ata.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-what-is-ata.png)
+##### <a name='24fa3a74955fb520a2cafe7f2ff80415def4107d509'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-manage.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-manage.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6683,7 +6685,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='92803f3318fdfdbf17528b747b13f715ee40b7fe510'></a> Source: [ATADocs\Understand\media\computer-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/computer-profile.png)
+##### <a name='e3c9dfb90cc3f2eebd8aa3395e3ab03666bc32bd510'></a> Source: [ATADocs\Understand\media\AzureWebsiteIcons-what-is-ata.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/AzureWebsiteIcons-what-is-ata.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6695,7 +6697,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2b57f03ff7f6b23f604e7ef93efa4bc72c1a544a511'></a> Source: [ATADocs\Understand\media\health-center.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/health-center.png)
+##### <a name='92803f3318fdfdbf17528b747b13f715ee40b7fe511'></a> Source: [ATADocs\Understand\media\computer-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/computer-profile.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6707,7 +6709,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5c586ba530364a62580805245cb6b719c06723e7512'></a> Source: [ATADocs\Understand\media\migrationerror.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/migrationerror.png)
+##### <a name='2b57f03ff7f6b23f604e7ef93efa4bc72c1a544a512'></a> Source: [ATADocs\Understand\media\health-center.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/health-center.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6719,7 +6721,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5a5c773c62ea63438b12536bfdb91f0b2a6866bf513'></a> Source: [ATADocs\Understand\media\notification-bar.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/notification-bar.png)
+##### <a name='5c586ba530364a62580805245cb6b719c06723e7513'></a> Source: [ATADocs\Understand\media\migrationerror.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/migrationerror.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6731,7 +6733,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='746cfa4a7266e89f4083291f6903b6aea0509917514'></a> Source: [ATADocs\Understand\media\user-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/user-profile.png)
+##### <a name='5a5c773c62ea63438b12536bfdb91f0b2a6866bf514'></a> Source: [ATADocs\Understand\media\notification-bar.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/notification-bar.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6743,7 +6745,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='52452ea87355476bda32308ec38a95c6f75a99ef515'></a> Source: [ATADocs\Understand\media\wef_4776.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_4776.png)
+##### <a name='2f6eeb7a16e2122b26edb41d50c52e8a7ce4ba70515'></a> Source: [ATADocs\Understand\media\uninstall-ata15.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/uninstall-ata15.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6755,7 +6757,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1c19abba75023e7073977641e2674ddd62d20326517'></a> Source: [ATADocs\Understand\media\wef_ad_eventlogreaders.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad_eventlogreaders.png)
+##### <a name='746cfa4a7266e89f4083291f6903b6aea0509917516'></a> Source: [ATADocs\Understand\media\user-profile.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/user-profile.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6767,7 +6769,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0516'></a> Source: [ATADocs\Understand\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad-event-log-reader-popup.png)
+##### <a name='52452ea87355476bda32308ec38a95c6f75a99ef517'></a> Source: [ATADocs\Understand\media\wef_4776.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_4776.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6779,7 +6781,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d4d9ac890b80451972fbe194c30577b0655be0cd518'></a> Source: [ATADocs\Understand\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_http.png)
+##### <a name='1c19abba75023e7073977641e2674ddd62d20326519'></a> Source: [ATADocs\Understand\media\wef_ad_eventlogreaders.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad_eventlogreaders.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6791,7 +6793,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9b8562feafa85324c9a6e3e9020450535df920c6519'></a> Source: [ATADocs\Understand\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_subscription-prop.png)
+##### <a name='ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0518'></a> Source: [ATADocs\Understand\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_ad-event-log-reader-popup.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6803,7 +6805,31 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6a9c12c520e1a6051395d39739ef64d78310e920520'></a> Source: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md)
+##### <a name='d4d9ac890b80451972fbe194c30577b0655be0cd520'></a> Source: [ATADocs\Understand\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_http.png)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='9b8562feafa85324c9a6e3e9020450535df920c6521'></a> Source: [ATADocs\Understand\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/media/wef_subscription-prop.png)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='6a9c12c520e1a6051395d39739ef64d78310e920522'></a> Source: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.sv-se.xlf)
@@ -6815,7 +6841,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fb845fb41dfbec50711fefa64b6a561433040d0b521'></a> Source: [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/what-is-ata.md)
+##### <a name='fb845fb41dfbec50711fefa64b6a561433040d0b523'></a> Source: [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/what-is-ata.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.sv-se.xlf)
@@ -6827,7 +6853,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='84da34ea982844245086173d85f4a52e814b3c52522'></a> Source: [ATADocs\Understand\whats-new-version-1.4.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.4.md)
+##### <a name='84da34ea982844245086173d85f4a52e814b3c52524'></a> Source: [ATADocs\Understand\whats-new-version-1.4.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.4.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.sv-se.xlf)
@@ -6839,7 +6865,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bc5426c7bd21585bb4bd6be921353ce20fa0551b523'></a> Source: [ATADocs\Understand\whats-new-version-1.5.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.5.md)
+##### <a name='bc5426c7bd21585bb4bd6be921353ce20fa0551b525'></a> Source: [ATADocs\Understand\whats-new-version-1.5.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/whats-new-version-1.5.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.sv-se.xlf)
@@ -6851,19 +6877,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='15b3e0fd3491488501a0915c4cb61cc3db568ab5524'></a> Source: [ATADocs\Understand\whats-new-version-1.6.md](https://github.com/Microsoft/ATADocs-pr/blob/34956bae237e88f597d1d100a6b0c70994fb0b86/ATADocs/Understand/whats-new-version-1.6.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/804ba2d776ba90d7f1e2ee9f05ac822c0d82cf2e/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.sv-se.xlf)
-* Handoff Datetime: 2016-05-06 18:25:40
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='c07f29684d8ed129d48421c0019ecfeebb8d021d525'></a> Source: [README.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/README.md)
+##### <a name='5f5953a980425b0b5da87104a5e7e0a04c7b0fcf526'></a> Source: [ATADocs\Understand\whats-new-version-1.6.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/ATADocs/Understand/whats-new-version-1.6.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -6875,7 +6889,19 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='68090a038cec49009b6bd0ce0515a075f62483b8526'></a> Source: [template.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/template.md)
+##### <a name='c07f29684d8ed129d48421c0019ecfeebb8d021d527'></a> Source: [README.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/README.md)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='68090a038cec49009b6bd0ce0515a075f62483b8528'></a> Source: [template.md](https://github.com/Microsoft/ATADocs-pr/blob/7be0aa40d4def2d2b102ff7bc48359a6b2bbb000/template.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/43dcd8181cde4c0c879ffc9994867fb932339abb/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/template.5bdcb9582e246047532a26eee5064c933576bdd2.sv-se.xlf)
