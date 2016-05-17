@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "20e0a3868b6c6da4c8498dca80be1e7d89ca73b6",
-  "LastTranslatedCommit": null,
+  "LastTranslatedCommit": "9d6015ce6b0ddc860feef327c1d37922992c93e9",
   "Items": {
     "863b6725f0d6edbfb1469e413cf8ba7ddfe6a048": {
       "FileHash": "863b6725f0d6edbfb1469e413cf8ba7ddfe6a048",
@@ -439,14 +439,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "9d6015ce6b0ddc860feef327c1d37922992c93e9",
+      "TargetFilePath": "ATADocs\\DeployUse\\modifying-ata-config-consoleip.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\ATADocs-pr.sv-se\\master\\master\\modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf",
+      "HandbackFileCommit": "ee243ddc30206d797e6454404633f3712e3cc959",
+      "HandbackDateTime": "2016-05-17T08:38:07.8902537Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-17T08:38:07.8902537Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",

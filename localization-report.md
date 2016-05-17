@@ -5,11 +5,11 @@
  -------- | ----- 
  Total Files | 530
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 51
+[ Handoff Success Files ](#handoff-success-list)| 50
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 1
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
 [ Ignored Files ](#ignored-list)| 478
 
@@ -34,7 +34,6 @@
  [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/manage-telemetry-settings.md) | HandedOffSuccess | [Details](#3598c0e362e01371875a8f43eb649500acd6e17b20)
  [ATADocs\DeployUse\modifying-ata-config-centercert.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-centercert.md) | HandedOffSuccess | [Details](#824e91048771865b8f604a2ae2ad454b81550036113)
  [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-centerip.md) | HandedOffSuccess | [Details](#54caccd4f4337ed7193aa6b53c26bc5b96dd36ed114)
- [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-consoleip.md) | HandedOffSuccess | [Details](#d757c9721c38ba4752f5005bc5e89e21a874ff5b115)
  [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/DeployUse/modifying-ata-config-dcpassword.md) | HandedOffSuccess | [Details](#f01e0ddc665e5b0620e023b8b7bb06e581092316116)
  [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-iiscert.md) | HandedOffSuccess | [Details](#29080677d0a2afe12f8d872bcf32ba8b03e93117117)
  [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-configuration.md) | HandedOffSuccess | [Details](#6040bba509af74f553e038ffd308c784efd97f29118)
@@ -80,6 +79,9 @@
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-consoleip.md) | OutofSyncHandedBackSuccess | [Details](#d757c9721c38ba4752f5005bc5e89e21a874ff5b115)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
 
@@ -1947,7 +1949,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='d757c9721c38ba4752f5005bc5e89e21a874ff5b115'></a> Source: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
-* Status: HandedOffSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d778b6b283932075574bd62c23d1e2fb249746f4/ol-handoff/Microsoft/ATADocs-pr.sv-se/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf)
 * Handoff Datetime: 2016-05-05 18:05:31
@@ -1956,6 +1958,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr.sv-se/blob/9d6015ce6b0ddc860feef327c1d37922992c93e9/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
+* Current Handback File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/ee243ddc30206d797e6454404633f3712e3cc959/ol-handback/Microsoft/ATADocs-pr.sv-se/master/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf)
+* Current Handback Datetime: 2016-05-17 08:38:07
 * [Back to Top](#report-top)
 
 ##### <a name='f01e0ddc665e5b0620e023b8b7bb06e581092316116'></a> Source: [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/DeployUse/modifying-ata-config-dcpassword.md)
