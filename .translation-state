@@ -30,7 +30,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7b317005194bacc60988cb8ad68cc832a130cf88": {
       "FileHash": "7b317005194bacc60988cb8ad68cc832a130cf88",
@@ -60,7 +64,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "94997b240a8e00b59b2f0b747189dff96ec39621": {
       "FileHash": "94997b240a8e00b59b2f0b747189dff96ec39621",
@@ -90,7 +98,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-update-1.5-migration-guide.e0fbd2179284e3c16bb215102232ed2289163376.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6e9995cffa142bd03a9e5dde28bccf12f9551dcb": {
       "FileHash": "6e9995cffa142bd03a9e5dde28bccf12f9551dcb",
@@ -120,7 +132,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "56df7efc9248501aa8ad84db7bcd2a39687519ff": {
       "FileHash": "56df7efc9248501aa8ad84db7bcd2a39687519ff",
@@ -150,7 +166,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-preinstall.954ec393e3d46f6fd35bf7246bb874652bb703e9.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "83a1a9567f798e59e1a922344158e9985d19879b": {
       "FileHash": "83a1a9567f798e59e1a922344158e9985d19879b",
@@ -180,7 +200,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "29ed4bf76703ff4e36dd230fdcbe48ca8bbdad46": {
       "FileHash": "29ed4bf76703ff4e36dd230fdcbe48ca8bbdad46",
@@ -210,7 +234,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "22c8c3221877f19bc7beb6aae61afd476ee7c935": {
       "FileHash": "22c8c3221877f19bc7beb6aae61afd476ee7c935",
@@ -240,7 +268,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "8835878140f8685925b359649e8cf09e85febf1e": {
       "FileHash": "8835878140f8685925b359649e8cf09e85febf1e",
@@ -270,7 +302,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bd958c26b758758cfe08989b9c8161543bd53a44": {
       "FileHash": "bd958c26b758758cfe08989b9c8161543bd53a44",
@@ -300,7 +336,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "279fdb5e2347733c0c4c90053c3f87b733d1e639": {
       "FileHash": "279fdb5e2347733c0c4c90053c3f87b733d1e639",
@@ -330,7 +370,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a7f381cf1014b0405e65fba423047e285e52d841": {
       "FileHash": "a7f381cf1014b0405e65fba423047e285e52d841",
@@ -360,7 +404,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "31e6c001d8f5c8b1bd6493e1d9679e22082fa28d": {
       "FileHash": "31e6c001d8f5c8b1bd6493e1d9679e22082fa28d",
@@ -390,7 +438,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9d159cc838a4adcd4bc2ae85459109b60bf27187": {
       "FileHash": "9d159cc838a4adcd4bc2ae85459109b60bf27187",
@@ -420,7 +472,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5aa7652fb4adaa937e17d95bbd14af14f9e60e16": {
       "FileHash": "5aa7652fb4adaa937e17d95bbd14af14f9e60e16",
@@ -450,7 +506,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6a6d337d6b6d865f1777b4a2da4f5cb13305d507": {
       "FileHash": "6a6d337d6b6d865f1777b4a2da4f5cb13305d507",
@@ -480,7 +540,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "8edf0ef6df781804e73f1dd3e7f53fbdeefb3df6": {
       "FileHash": "8edf0ef6df781804e73f1dd3e7f53fbdeefb3df6",
@@ -510,7 +574,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "93733ed6ccdc1d8b84d00baa449d0e104bbd0fe7": {
       "FileHash": "93733ed6ccdc1d8b84d00baa449d0e104bbd0fe7",
@@ -540,7 +608,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-nicname.9781cee2740587d593a8ee46ef34235be5377433.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "42980d0b7f1534358e6322e99ad0596cad31df17": {
       "FileHash": "42980d0b7f1534358e6322e99ad0596cad31df17",
@@ -570,7 +642,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "8fd2840ac81bf37f02090513e4b4000a4a558830": {
       "FileHash": "8fd2840ac81bf37f02090513e4b4000a4a558830",
@@ -600,7 +676,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\pre-installation-steps.ccfffbb87b2b6e773b75cc3208e8fcf401365b8b.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "85cfd7c6e9adf9feab842b6c94e73b95f6866f70": {
       "FileHash": "85cfd7c6e9adf9feab842b6c94e73b95f6866f70",
@@ -630,7 +710,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a02822ec65d7349ade9da838bb891222c1752052": {
       "FileHash": "a02822ec65d7349ade9da838bb891222c1752052",
@@ -660,7 +744,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9167046a35dc63a2dfbecd063fa616ed52be8051": {
       "FileHash": "9167046a35dc63a2dfbecd063fa616ed52be8051",
@@ -690,7 +778,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\whats-new-version-1.4.46d6fd1deebcffbe887cee8a7488f2024a5da630.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "20634552884bf9aa67ef96122b36658a4c8d993c": {
       "FileHash": "20634552884bf9aa67ef96122b36658a4c8d993c",
@@ -720,7 +812,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\whats-new-version-1.5.34b5457cda20b03f964f3be33b72494b87dd4dc5.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9ba72bfe9b11799f36e3d95597c135c402bee299": {
       "FileHash": "9ba72bfe9b11799f36e3d95597c135c402bee299",
@@ -750,7 +846,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "aebde4e6cecab8aad3d7c827dd8724b2bfd59343": {
       "FileHash": "aebde4e6cecab8aad3d7c827dd8724b2bfd59343",
@@ -780,7 +880,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0662a43633c1c0f8b67ca5eb24fbe6a2a9e1b17d": {
       "FileHash": "0662a43633c1c0f8b67ca5eb24fbe6a2a9e1b17d",
@@ -810,7 +914,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ba7191a358a03e03f71d6d4d2938c70ef5eb0a9d": {
       "FileHash": "ba7191a358a03e03f71d6d4d2938c70ef5eb0a9d",
@@ -840,7 +948,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bf458bd99fc012e7ab0ec429efcd520c76443266": {
       "FileHash": "bf458bd99fc012e7ab0ec429efcd520c76443266",
@@ -870,7 +982,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1b2de31c6aaf5cfcb24726d97636673f224bc35e": {
       "FileHash": "1b2de31c6aaf5cfcb24726d97636673f224bc35e",
@@ -900,7 +1016,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\configure-event-collection.3801e6c6906b6ccbddb4b52927299bc9ea18d42a.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bb02befa7012ed6ffaac2e4290460b50ba26b6f4": {
       "FileHash": "bb02befa7012ed6ffaac2e4290460b50ba26b6f4",
@@ -930,7 +1050,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\configure-port-mirroring.03dcf97d3e925aa440cd7b41d34415f22881df9b.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5894b4477d89bf9b92e9ccc47c58240798d1abc7": {
       "FileHash": "5894b4477d89bf9b92e9ccc47c58240798d1abc7",
@@ -960,7 +1084,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2a4846a9af68755f2542c77663a11f31ed18d13a": {
       "FileHash": "2a4846a9af68755f2542c77663a11f31ed18d13a",
@@ -990,7 +1118,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\validate-port-mirroring.93214b3442651e32f95b634b5a150aa281daeda3.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2d876fba3180d808fcf91163b0e4e758cd8a9aa1": {
       "FileHash": "2d876fba3180d808fcf91163b0e4e758cd8a9aa1",
@@ -1020,7 +1152,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "4f72d56afb9f53157569789b68455dcf49016a69": {
       "FileHash": "4f72d56afb9f53157569789b68455dcf49016a69",
@@ -1050,7 +1186,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ATA.802427cdba72b53cf44827c94a4e390a41905ad3.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "66f284a73f1d853850f26f515d28f647f7af2a6a": {
       "FileHash": "66f284a73f1d853850f26f515d28f647f7af2a6a",
@@ -1080,7 +1220,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-technical-faq.fa1f89c776292e09c1d93eaa37cecd7df0b4a836.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b350630456ac2847366eabd6c498a558d17f2fc4": {
       "FileHash": "b350630456ac2847366eabd6c498a558d17f2fc4",
@@ -1110,7 +1254,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "341cf688170786c3b7beeb9c9776ee7c1b555a7c": {
       "FileHash": "341cf688170786c3b7beeb9c9776ee7c1b555a7c",
@@ -1140,7 +1288,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bc279aa12245049e4f7a8b79eea622e28dd0ea94": {
       "FileHash": "bc279aa12245049e4f7a8b79eea622e28dd0ea94",
@@ -1170,7 +1322,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "555ffec601c8d740420ab13430b5279e8f00f7ee": {
       "FileHash": "555ffec601c8d740420ab13430b5279e8f00f7ee",
@@ -1200,7 +1356,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "58390eb4fcca92ad454d40fa933ce5cf4dc0f93d": {
       "FileHash": "58390eb4fcca92ad454d40fa933ce5cf4dc0f93d",
@@ -1230,7 +1390,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "eed994196b47e1e655237c409b46492c881f2762": {
       "FileHash": "eed994196b47e1e655237c409b46492c881f2762",
@@ -1260,7 +1424,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-common-questions.34c8a30faa1744c2311113b5d0d232bf40816e17.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "862bb6ecde2fc84df2f593704a52f39930ffa1f3": {
       "FileHash": "862bb6ecde2fc84df2f593704a52f39930ffa1f3",
@@ -1290,7 +1458,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7dd696a90fa05b1a5673837fc2a66b9135948551": {
       "FileHash": "7dd696a90fa05b1a5673837fc2a66b9135948551",
@@ -1320,7 +1492,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "21b556d0fd933700fc11e99105e873400c4b807b": {
       "FileHash": "21b556d0fd933700fc11e99105e873400c4b807b",
@@ -1350,7 +1526,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-ata-console.1727ee5b9929dac975a02036ec1253cb008ce881.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "985645722601e5a17fd83ab5d927cf635bc8b148": {
       "FileHash": "985645722601e5a17fd83ab5d927cf635bc8b148",
@@ -1380,7 +1560,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0a70ce6862fbcbfe93a42a3e01030365c1c87e48": {
       "FileHash": "0a70ce6862fbcbfe93a42a3e01030365c1c87e48",
@@ -1410,7 +1594,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\index.cc3e62ac6c9901731450d753a0ecebc990048809.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3109455306baf9dd66748c4514e0c2a563390667": {
       "FileHash": "3109455306baf9dd66748c4514e0c2a563390667",
@@ -1440,7 +1628,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b8107f9b48698e0a3f84a07234840d060afaccd0": {
       "FileHash": "b8107f9b48698e0a3f84a07234840d060afaccd0",
@@ -1470,7 +1662,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.7ddc5acfa39575166941fca3973fc59ee376add6.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "d526e119b70ca1bfcb3d1cacd541aae4ed4c23b1": {
       "FileHash": "d526e119b70ca1bfcb3d1cacd541aae4ed4c23b1",
@@ -1500,7 +1696,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c5ae8d04088ce3a5b2640c1865a7f99d10a6d6cd": {
       "FileHash": "c5ae8d04088ce3a5b2640c1865a7f99d10a6d6cd",
@@ -1530,7 +1730,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.sv-se.xlf",
       "ArchiveFileCommit": "6d3b7a54c01d47011c85ec001f4d82a1d061e2f0",
       "ArchiveFileDateTime": "2016-04-28T10:13:23.0217071Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6003fcc8e48d206960bd8b6e3489e36bb68c25d8": {
       "FileHash": "6003fcc8e48d206960bd8b6e3489e36bb68c25d8",
@@ -1560,7 +1764,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "32694dac750b87a5a07b3a04a51c11054c50917f": {
       "FileHash": "32694dac750b87a5a07b3a04a51c11054c50917f",
@@ -1590,7 +1798,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ca4834c8727a5b742f410df0375ad6b5b6ef7b3b": {
       "FileHash": "ca4834c8727a5b742f410df0375ad6b5b6ef7b3b",
@@ -1620,7 +1832,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5062d3a5af525cd6c90999e4a9f1dc55e372f31b": {
       "FileHash": "5062d3a5af525cd6c90999e4a9f1dc55e372f31b",
@@ -1650,7 +1866,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5f509e248eb229a1f402bebb1ef660c321d6d88c": {
       "FileHash": "5f509e248eb229a1f402bebb1ef660c321d6d88c",
@@ -1680,7 +1900,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6ec59d752e0e49e083526174cff1b2f55d62e34b": {
       "FileHash": "6ec59d752e0e49e083526174cff1b2f55d62e34b",
@@ -1710,7 +1934,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0e57d9755a58d63d13ae1e31918795704f9c5628": {
       "FileHash": "0e57d9755a58d63d13ae1e31918795704f9c5628",
@@ -1740,7 +1968,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1bacbc427cbfb56b2ce4c8fab72cab1a8191d5a6": {
       "FileHash": "1bacbc427cbfb56b2ce4c8fab72cab1a8191d5a6",
@@ -1770,7 +2002,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "824cdd0557c85c8492b6544f9728f82ee749e2a0": {
       "FileHash": "824cdd0557c85c8492b6544f9728f82ee749e2a0",
@@ -1800,7 +2036,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "69a3c08dfa9a9a000c3a2efd5311a786ab42ca63": {
       "FileHash": "69a3c08dfa9a9a000c3a2efd5311a786ab42ca63",
@@ -1830,7 +2070,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c221459f4fa4987d655f4c5f12d257904fdfebb2": {
       "FileHash": "c221459f4fa4987d655f4c5f12d257904fdfebb2",
@@ -1860,7 +2104,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5aa6bb2cbbc4d59b923c99bef835c890103df41f": {
       "FileHash": "5aa6bb2cbbc4d59b923c99bef835c890103df41f",
@@ -1890,7 +2138,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9778261583a3a205bb643d2cef7be4e8beab8118": {
       "FileHash": "9778261583a3a205bb643d2cef7be4e8beab8118",
@@ -1920,7 +2172,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ae16ad8c05af991727bf10fe265f22d8ab222379": {
       "FileHash": "ae16ad8c05af991727bf10fe265f22d8ab222379",
@@ -1950,7 +2206,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5134e7fb8fab62799bd38c194ec3ea5e58f20b9a": {
       "FileHash": "5134e7fb8fab62799bd38c194ec3ea5e58f20b9a",
@@ -1980,7 +2240,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c28a0f0fc1c26f25a8be17bc2eea7482af8ace9c": {
       "FileHash": "c28a0f0fc1c26f25a8be17bc2eea7482af8ace9c",
@@ -2010,7 +2274,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "85ee2a5d60b5a167cfa3e3cff1c36da94442c515": {
       "FileHash": "85ee2a5d60b5a167cfa3e3cff1c36da94442c515",
@@ -2040,7 +2308,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3d05d4b97caa0590f58741130d06c585fda05526": {
       "FileHash": "3d05d4b97caa0590f58741130d06c585fda05526",
@@ -2070,7 +2342,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "07e826d201f2ed0d69831725f69e8dc49d2b4002": {
       "FileHash": "07e826d201f2ed0d69831725f69e8dc49d2b4002",
@@ -2100,7 +2376,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "166b79f3041da8ef751f4af0e2b45ac57085f818": {
       "FileHash": "166b79f3041da8ef751f4af0e2b45ac57085f818",
@@ -2130,7 +2410,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1b95350813b85ca17f4c88b033a489f255e33e9a": {
       "FileHash": "1b95350813b85ca17f4c88b033a489f255e33e9a",
@@ -2160,7 +2444,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "818d81e1ecf119f98d352c7e3bc26ac2528af3d3": {
       "FileHash": "818d81e1ecf119f98d352c7e3bc26ac2528af3d3",
@@ -2190,7 +2478,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2bf886b9ac1836f3516582a92746015cbc6ef8d8": {
       "FileHash": "2bf886b9ac1836f3516582a92746015cbc6ef8d8",
@@ -2220,7 +2512,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a1f8411c29219f477748395e715383f20d4fe960": {
       "FileHash": "a1f8411c29219f477748395e715383f20d4fe960",
@@ -2250,7 +2546,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a2bf72a7dc04e5d110932626137e46d7af2ddf84": {
       "FileHash": "a2bf72a7dc04e5d110932626137e46d7af2ddf84",
@@ -2280,7 +2580,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5c07c165bff33d2ca935ccbd60090bd89dbf7215": {
       "FileHash": "5c07c165bff33d2ca935ccbd60090bd89dbf7215",
@@ -2310,7 +2614,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "015f5aa384b4ecf70423a9371b1a199ed44f6714": {
       "FileHash": "015f5aa384b4ecf70423a9371b1a199ed44f6714",
@@ -2340,7 +2648,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9a76655db84aee2c27eda31792ca4d476957becc": {
       "FileHash": "9a76655db84aee2c27eda31792ca4d476957becc",
@@ -2370,7 +2682,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0bba0d216ce73fe11e9d7ca033ffbec88f412986": {
       "FileHash": "0bba0d216ce73fe11e9d7ca033ffbec88f412986",
@@ -2400,7 +2716,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "49ef41cbae98ef4c766629d8910720df63f47676": {
       "FileHash": "49ef41cbae98ef4c766629d8910720df63f47676",
@@ -2430,7 +2750,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "69407ab44e09c309fd19cac34ca0c89f942c8095": {
       "FileHash": "69407ab44e09c309fd19cac34ca0c89f942c8095",
@@ -2460,7 +2784,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3c4c5568e12f490d581835a8328c4ddc151ef8ff": {
       "FileHash": "3c4c5568e12f490d581835a8328c4ddc151ef8ff",
@@ -2490,7 +2818,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f8cf2238522c4c5c5003fa3ceae7fdc6dac69dd2": {
       "FileHash": "f8cf2238522c4c5c5003fa3ceae7fdc6dac69dd2",
@@ -2520,7 +2852,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c7f121b0690e89ea6ebbe81191dec8bff444fb05": {
       "FileHash": "c7f121b0690e89ea6ebbe81191dec8bff444fb05",
@@ -2550,7 +2886,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3976a724d59ef689de23e0c5f512844c40ca5bd8": {
       "FileHash": "3976a724d59ef689de23e0c5f512844c40ca5bd8",
@@ -2580,7 +2920,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "e4816f70b26843d4ee3c15d9aefb7e64139ab5d5": {
       "FileHash": "e4816f70b26843d4ee3c15d9aefb7e64139ab5d5",
@@ -2610,7 +2954,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "90386f9abae36811a6543e9ef4bd1b17bfaece79": {
       "FileHash": "90386f9abae36811a6543e9ef4bd1b17bfaece79",
@@ -2640,7 +2988,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0a720b621c5d32faa1f52420192b3ef9a041ab36": {
       "FileHash": "0a720b621c5d32faa1f52420192b3ef9a041ab36",
@@ -2670,7 +3022,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bbc61558e72eed01a509913c51610b2f559b5ccb": {
       "FileHash": "bbc61558e72eed01a509913c51610b2f559b5ccb",
@@ -2700,7 +3056,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "524465ee0b549ea5428fadce5f22c43fc3f41f46": {
       "FileHash": "524465ee0b549ea5428fadce5f22c43fc3f41f46",
@@ -2730,7 +3090,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b5f6e5c86d07afcf9d82e7463a38b541f00281ad": {
       "FileHash": "b5f6e5c86d07afcf9d82e7463a38b541f00281ad",
@@ -2760,7 +3124,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3e091ee2df511530fe06a787dbf4457fe5ce77cd": {
       "FileHash": "3e091ee2df511530fe06a787dbf4457fe5ce77cd",
@@ -2790,7 +3158,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "68090a038cec49009b6bd0ce0515a075f62483b8": {
       "FileHash": "68090a038cec49009b6bd0ce0515a075f62483b8",
@@ -2820,7 +3192,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "af9e408db9053336f5f89a60c6e807ab5e5770c0": {
       "FileHash": "af9e408db9053336f5f89a60c6e807ab5e5770c0",
@@ -2850,7 +3226,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c6f27ec925b3b7b53b7c52cbea5186550c1422ff": {
       "FileHash": "c6f27ec925b3b7b53b7c52cbea5186550c1422ff",
@@ -2880,7 +3260,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "749d16b77c5dffd939b37b5f41fd57f91889017f": {
       "FileHash": "749d16b77c5dffd939b37b5f41fd57f91889017f",
@@ -2910,7 +3294,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f36edd38eb642d89d1149fea4e4faa5962a7bf7b": {
       "FileHash": "f36edd38eb642d89d1149fea4e4faa5962a7bf7b",
@@ -2940,7 +3328,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b3d0a3ef1430d41ddf31ffe1627ccd2bc10dc94e": {
       "FileHash": "b3d0a3ef1430d41ddf31ffe1627ccd2bc10dc94e",
@@ -2970,7 +3362,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "cfad5e1128381680abb54eb19e7174e03981b17a": {
       "FileHash": "cfad5e1128381680abb54eb19e7174e03981b17a",
@@ -3000,7 +3396,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "d986a9428d4132a0f24cc2abc7ec1c98fa76a42c": {
       "FileHash": "d986a9428d4132a0f24cc2abc7ec1c98fa76a42c",
@@ -3030,7 +3430,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3ddd6eb938e4b8ac6b5c28bbce128fe1c0772580": {
       "FileHash": "3ddd6eb938e4b8ac6b5c28bbce128fe1c0772580",
@@ -3060,7 +3464,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c7f1e0b04b1c4d736e88bdbfbc1c7d1d5a0aecf1": {
       "FileHash": "c7f1e0b04b1c4d736e88bdbfbc1c7d1d5a0aecf1",
@@ -3090,7 +3498,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c9c3245a44bb092647c5e318bbc17a726b802d16": {
       "FileHash": "c9c3245a44bb092647c5e318bbc17a726b802d16",
@@ -3120,7 +3532,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "e187b7fea77773134ce0d3f7948ff082e0e40d16": {
       "FileHash": "e187b7fea77773134ce0d3f7948ff082e0e40d16",
@@ -3151,7 +3567,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "dfb1d870a3a68c97f8a81ad7e9f68c100909c22e": {
       "FileHash": "dfb1d870a3a68c97f8a81ad7e9f68c100909c22e",
@@ -3181,7 +3601,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "16b1bc2944d57f5a708c5e090e3dc71c290557e2": {
       "FileHash": "16b1bc2944d57f5a708c5e090e3dc71c290557e2",
@@ -3211,7 +3635,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c7b315dfa77713f20f35d675079429119baa6508": {
       "FileHash": "c7b315dfa77713f20f35d675079429119baa6508",
@@ -3241,7 +3669,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\configure-event-collection.76d422c1eaa8e04689ce451d7a7bb84d119fda52.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f5bf92a8aa7e5047852348ff9baf9a4067772c91": {
       "FileHash": "f5bf92a8aa7e5047852348ff9baf9a4067772c91",
@@ -3271,7 +3703,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "9c873287aa5d60286239968a243fde2dc6b170ba": {
       "FileHash": "9c873287aa5d60286239968a243fde2dc6b170ba",
@@ -3301,7 +3737,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "94c636a0df1adce24da23ff729c3bf47e5048df1": {
       "FileHash": "94c636a0df1adce24da23ff729c3bf47e5048df1",
@@ -3331,7 +3771,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1a248d97a6723c3d8aa32a6afbcbe89739313c8c": {
       "FileHash": "1a248d97a6723c3d8aa32a6afbcbe89739313c8c",
@@ -3361,7 +3805,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5d7101913aea45c77e5e6d314ed95c1fbc0fd5b9": {
       "FileHash": "5d7101913aea45c77e5e6d314ed95c1fbc0fd5b9",
@@ -3391,7 +3839,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c22a1ec5cf4a04ea70945765b3b8ffce5401c645": {
       "FileHash": "c22a1ec5cf4a04ea70945765b3b8ffce5401c645",
@@ -3421,7 +3873,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2664440ca83cf3bb6dc66ad39ed0fa4a984230eb": {
       "FileHash": "2664440ca83cf3bb6dc66ad39ed0fa4a984230eb",
@@ -3451,7 +3907,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "71e245b423e69387d6417e8e3f5eaa19401ca085": {
       "FileHash": "71e245b423e69387d6417e8e3f5eaa19401ca085",
@@ -3481,7 +3941,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2817822f4978b38fe93cbaebe3ef3e335850ab94": {
       "FileHash": "2817822f4978b38fe93cbaebe3ef3e335850ab94",
@@ -3511,7 +3975,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3598c0e362e01371875a8f43eb649500acd6e17b": {
       "FileHash": "3598c0e362e01371875a8f43eb649500acd6e17b",
@@ -3541,7 +4009,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "824e91048771865b8f604a2ae2ad454b81550036": {
       "FileHash": "824e91048771865b8f604a2ae2ad454b81550036",
@@ -3571,7 +4043,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "54caccd4f4337ed7193aa6b53c26bc5b96dd36ed": {
       "FileHash": "54caccd4f4337ed7193aa6b53c26bc5b96dd36ed",
@@ -3601,7 +4077,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "d757c9721c38ba4752f5005bc5e89e21a874ff5b": {
       "FileHash": "d757c9721c38ba4752f5005bc5e89e21a874ff5b",
@@ -3631,7 +4111,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f01e0ddc665e5b0620e023b8b7bb06e581092316": {
       "FileHash": "f01e0ddc665e5b0620e023b8b7bb06e581092316",
@@ -3661,7 +4145,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "29080677d0a2afe12f8d872bcf32ba8b03e93117": {
       "FileHash": "29080677d0a2afe12f8d872bcf32ba8b03e93117",
@@ -3691,7 +4179,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6040bba509af74f553e038ffd308c784efd97f29": {
       "FileHash": "6040bba509af74f553e038ffd308c784efd97f29",
@@ -3721,7 +4213,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b30041b411c633308d20b5c833ca17c91deb9a01": {
       "FileHash": "b30041b411c633308d20b5c833ca17c91deb9a01",
@@ -3751,7 +4247,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\operate-ata.9fb8be5f31f851cb5a21bb843445e9b55c735f08.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7f4d3d3e207515b85123252a6e64de21b75b223c": {
       "FileHash": "7f4d3d3e207515b85123252a6e64de21b75b223c",
@@ -3781,7 +4281,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "17a5a93ba84e163f64f8afcb5d9696655740d29c": {
       "FileHash": "17a5a93ba84e163f64f8afcb5d9696655740d29c",
@@ -3811,7 +4315,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7d1198f5e2d17fc7cfaeab4c4d1878c951b82acb": {
       "FileHash": "7d1198f5e2d17fc7cfaeab4c4d1878c951b82acb",
@@ -3841,7 +4349,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a370a758607f4c087c5c096a1cbb229bbb90879e": {
       "FileHash": "a370a758607f4c087c5c096a1cbb229bbb90879e",
@@ -3871,7 +4383,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "80a438cafbeacfe400f5472713c20ba0bca7d7f3": {
       "FileHash": "80a438cafbeacfe400f5472713c20ba0bca7d7f3",
@@ -3901,7 +4417,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "17aebd891a8f772bf3d7b4210604c1b70b5b4436": {
       "FileHash": "17aebd891a8f772bf3d7b4210604c1b70b5b4436",
@@ -3931,7 +4451,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1567deb2bd7a9354c0d6b3bc0435411771cc72e4": {
       "FileHash": "1567deb2bd7a9354c0d6b3bc0435411771cc72e4",
@@ -3961,7 +4485,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6ab89b98d3c9d4db7b9b84d6b373ab570f13a93e": {
       "FileHash": "6ab89b98d3c9d4db7b9b84d6b373ab570f13a93e",
@@ -3991,7 +4519,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7d9117a66b44f454b6c9890f257d1ab9b233a235": {
       "FileHash": "7d9117a66b44f454b6c9890f257d1ab9b233a235",
@@ -4021,7 +4553,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.7ddc5acfa39575166941fca3973fc59ee376add6.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ff9ed644ccbfd378d191f8374cd45d30a943db4f": {
       "FileHash": "ff9ed644ccbfd378d191f8374cd45d30a943db4f",
@@ -4051,7 +4587,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b4f08518d602675f7f2bec2b793ff8c7d85ca084": {
       "FileHash": "b4f08518d602675f7f2bec2b793ff8c7d85ca084",
@@ -4081,7 +4621,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "16b9e2a13546dd303b153d68d7ec72ba598dafdb": {
       "FileHash": "16b9e2a13546dd303b153d68d7ec72ba598dafdb",
@@ -4111,7 +4655,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "eba606c3f15af09d7bcd4069348c43a7f47561aa": {
       "FileHash": "eba606c3f15af09d7bcd4069348c43a7f47561aa",
@@ -4141,7 +4689,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "206948e3313e48a2638f796b2f6e03a5fed2fed0": {
       "FileHash": "206948e3313e48a2638f796b2f6e03a5fed2fed0",
@@ -4171,7 +4723,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a84b79d0b83235d5a00081e55d20b93b143061d5": {
       "FileHash": "a84b79d0b83235d5a00081e55d20b93b143061d5",
@@ -4201,7 +4757,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-release-notes.cd5912fb95129b60636ef4e9612fe0740d0ee2db.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f633fe28bcc33e2ff19ffb342cd95e10a1cda44c": {
       "FileHash": "f633fe28bcc33e2ff19ffb342cd95e10a1cda44c",
@@ -4231,7 +4791,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "4d75d036a8d278aef25a35725986b2881d2b5be9": {
       "FileHash": "4d75d036a8d278aef25a35725986b2881d2b5be9",
@@ -4261,7 +4825,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-update-1.5-migration-guide.67f35ccbe2b021acd909074d85359f05c4a001cb.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "165337874f829e5ba50bfc1eff172956acc48e5e": {
       "FileHash": "165337874f829e5ba50bfc1eff172956acc48e5e",
@@ -4291,7 +4859,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "6a9c12c520e1a6051395d39739ef64d78310e920": {
       "FileHash": "6a9c12c520e1a6051395d39739ef64d78310e920",
@@ -4321,7 +4893,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "fb845fb41dfbec50711fefa64b6a561433040d0b": {
       "FileHash": "fb845fb41dfbec50711fefa64b6a561433040d0b",
@@ -4351,7 +4927,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "84da34ea982844245086173d85f4a52e814b3c52": {
       "FileHash": "84da34ea982844245086173d85f4a52e814b3c52",
@@ -4381,7 +4961,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bc5426c7bd21585bb4bd6be921353ce20fa0551b": {
       "FileHash": "bc5426c7bd21585bb4bd6be921353ce20fa0551b",
@@ -4411,7 +4995,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "19e2580a65b306d4a7a0df31879b42dab83e94db": {
       "FileHash": "19e2580a65b306d4a7a0df31879b42dab83e94db",
@@ -4441,7 +5029,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "715208b1bc4b665ef3fd0bf7a73a011640e33f65": {
       "FileHash": "715208b1bc4b665ef3fd0bf7a73a011640e33f65",
@@ -4471,7 +5063,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "215869011b8dd0d1ac7ba45bf1da42f19aed6f5c": {
       "FileHash": "215869011b8dd0d1ac7ba45bf1da42f19aed6f5c",
@@ -4501,7 +5097,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b56ea199504c11694489b1d500bd3be873730592": {
       "FileHash": "b56ea199504c11694489b1d500bd3be873730592",
@@ -4531,7 +5131,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7526b1dc382c661e94139531468404cf3ead7a1f": {
       "FileHash": "7526b1dc382c661e94139531468404cf3ead7a1f",
@@ -4561,7 +5165,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "108509e713d1525a886e4add5c8a25e98e7bbf53": {
       "FileHash": "108509e713d1525a886e4add5c8a25e98e7bbf53",
@@ -4591,7 +5199,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "fdf247148cd6d94fe1558970fb59f91b81d0325c": {
       "FileHash": "fdf247148cd6d94fe1558970fb59f91b81d0325c",
@@ -4621,7 +5233,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "44f504bcbc233f21b2ae88ce962d24bbe6231e41": {
       "FileHash": "44f504bcbc233f21b2ae88ce962d24bbe6231e41",
@@ -4651,7 +5267,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "45052f4982efa8cc34d7013721980a0bf817fcd5": {
       "FileHash": "45052f4982efa8cc34d7013721980a0bf817fcd5",
@@ -4681,7 +5301,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "77a4aa4e541a3ca0c32fcc92258f7c01fa9a3b25": {
       "FileHash": "77a4aa4e541a3ca0c32fcc92258f7c01fa9a3b25",
@@ -4711,7 +5335,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "184c86f5d44023250fb0fed388b76b0db64f4f3a": {
       "FileHash": "184c86f5d44023250fb0fed388b76b0db64f4f3a",
@@ -4741,7 +5369,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "965032eec59f602c3d012eb596d1ebfdca309433": {
       "FileHash": "965032eec59f602c3d012eb596d1ebfdca309433",
@@ -4771,7 +5403,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2c3bf59a5f97d16845641da018074da8cc71b8c1": {
       "FileHash": "2c3bf59a5f97d16845641da018074da8cc71b8c1",
@@ -4801,7 +5437,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "d9a2929431d80096bd0f484560d0ec9c9f745f46": {
       "FileHash": "d9a2929431d80096bd0f484560d0ec9c9f745f46",
@@ -4831,7 +5471,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "647e2afd04a2998d2f9bfab1b9aa3f8d9085460c": {
       "FileHash": "647e2afd04a2998d2f9bfab1b9aa3f8d9085460c",
@@ -4861,7 +5505,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "1a3f7eb8b36343aecdc0a265092a7961c94bc5c6": {
       "FileHash": "1a3f7eb8b36343aecdc0a265092a7961c94bc5c6",
@@ -4891,7 +5539,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ac5562dfcc985b644f6c9141a6046ffb4d88f05a": {
       "FileHash": "ac5562dfcc985b644f6c9141a6046ffb4d88f05a",
@@ -4921,7 +5573,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "15b3e0fd3491488501a0915c4cb61cc3db568ab5": {
       "FileHash": "15b3e0fd3491488501a0915c4cb61cc3db568ab5",
@@ -4951,7 +5607,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "3045c1fb822aab849c8b1c2befbf8f725110f1e4": {
       "FileHash": "3045c1fb822aab849c8b1c2befbf8f725110f1e4",
@@ -4981,7 +5641,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "0f48ccbe2fc2a9e9a4342cc4d27015eabea40b17": {
       "FileHash": "0f48ccbe2fc2a9e9a4342cc4d27015eabea40b17",
@@ -5011,7 +5675,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "de05c2e5996d05f6b31e3efa91290e380d708cb2": {
       "FileHash": "de05c2e5996d05f6b31e3efa91290e380d708cb2",
@@ -5041,7 +5709,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b7f4b07796ee90d45b40bc00b749b56c5f11c83b": {
       "FileHash": "b7f4b07796ee90d45b40bc00b749b56c5f11c83b",
@@ -5071,7 +5743,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "b8f0eccddbb56fd2258cfb298a83ce3c2174a601": {
       "FileHash": "b8f0eccddbb56fd2258cfb298a83ce3c2174a601",
@@ -5101,7 +5777,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "5f5953a980425b0b5da87104a5e7e0a04c7b0fcf": {
       "FileHash": "5f5953a980425b0b5da87104a5e7e0a04c7b0fcf",
@@ -5131,7 +5811,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "cc7428be2b81d2c93e0dd4c45ac9c0c2ffac534a": {
       "FileHash": "cc7428be2b81d2c93e0dd4c45ac9c0c2ffac534a",
@@ -5161,7 +5845,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "dabb2531fd656393b2de719a2303be017205aa4e": {
       "FileHash": "dabb2531fd656393b2de719a2303be017205aa4e",
@@ -5191,7 +5879,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "00de46b6f50079b2df46e8b55a4dbdef5acaee50": {
       "FileHash": "00de46b6f50079b2df46e8b55a4dbdef5acaee50",
@@ -5221,7 +5913,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "88999409ef976d50b6bb80803213b82146cee1fe": {
       "FileHash": "88999409ef976d50b6bb80803213b82146cee1fe",
@@ -5251,7 +5947,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "bc5d8ba077f2e34195cced4f316f8c8a5158d869": {
       "FileHash": "bc5d8ba077f2e34195cced4f316f8c8a5158d869",
@@ -5281,7 +5981,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "36e55ceddbfa5ef72c29f9077fab373fdf1e5125": {
       "FileHash": "36e55ceddbfa5ef72c29f9077fab373fdf1e5125",
@@ -5311,7 +6015,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "8217e7613f5310612c3fba5cd6a21662ff41d360": {
       "FileHash": "8217e7613f5310612c3fba5cd6a21662ff41d360",
@@ -5341,7 +6049,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "ce3f8bd462a560c505b5430ff730782e1f016974": {
       "FileHash": "ce3f8bd462a560c505b5430ff730782e1f016974",
@@ -5371,7 +6083,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "abc77daf444c6e8681d1c79748d98f1d32de9d42": {
       "FileHash": "abc77daf444c6e8681d1c79748d98f1d32de9d42",
@@ -5401,7 +6117,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "58dfd66b317a639ddd2df823cdd1c1dfa2a5e73c": {
       "FileHash": "58dfd66b317a639ddd2df823cdd1c1dfa2a5e73c",
@@ -5431,7 +6151,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "120881be893c98694bc9979de2e362bb84bb5210": {
       "FileHash": "120881be893c98694bc9979de2e362bb84bb5210",
@@ -5461,7 +6185,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "446b4afd45192336b2bd595e3f7e3474cc172af3": {
       "FileHash": "446b4afd45192336b2bd595e3f7e3474cc172af3",
@@ -5491,7 +6219,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "925694878154d5fb218f1db6fef8949a3bb7e154": {
       "FileHash": "925694878154d5fb218f1db6fef8949a3bb7e154",
@@ -5521,7 +6253,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "7e5f00eef0db1c2c523ca05917143a3e69bb8801": {
       "FileHash": "7e5f00eef0db1c2c523ca05917143a3e69bb8801",
@@ -5551,7 +6287,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "a5efa3f2b838af537126945aaf71ae522ce8a8d2": {
       "FileHash": "a5efa3f2b838af537126945aaf71ae522ce8a8d2",
@@ -5581,7 +6321,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "66e9322774d10d0c41cc7bccda0f4b32bce4fe71": {
       "FileHash": "66e9322774d10d0c41cc7bccda0f4b32bce4fe71",
@@ -5611,7 +6355,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c2a4a52abfdc6a7cb88f4aff57821feeb9b85c4a": {
       "FileHash": "c2a4a52abfdc6a7cb88f4aff57821feeb9b85c4a",
@@ -5641,7 +6389,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "54bb8923b2033f36a7682a19fbd45107ca97d432": {
       "FileHash": "54bb8923b2033f36a7682a19fbd45107ca97d432",
@@ -5671,7 +6423,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\index.cc3e62ac6c9901731450d753a0ecebc990048809.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "209dae9a43681e32238bf90c3d500d9db4d0ae2e": {
       "FileHash": "209dae9a43681e32238bf90c3d500d9db4d0ae2e",
@@ -5701,7 +6457,11 @@
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "c4b9eb1106ff6ce6bf516cad665d49df5a5ee2d2": {
       "FileHash": "c4b9eb1106ff6ce6bf516cad665d49df5a5ee2d2",
@@ -5731,7 +6491,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\template.5bdcb9582e246047532a26eee5064c933576bdd2.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f0229756e4d55cf88d8f63393080373b7e1f90ea": {
       "FileHash": "f0229756e4d55cf88d8f63393080373b7e1f90ea",
@@ -5761,7 +6525,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f02309a66663311922454af40a68b9a9200b64d3": {
       "FileHash": "f02309a66663311922454af40a68b9a9200b64d3",
@@ -5791,7 +6559,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "460e8ac37e94b02ebc045297caf86fa9c65704e3": {
       "FileHash": "460e8ac37e94b02ebc045297caf86fa9c65704e3",
@@ -5821,7 +6593,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "f67ed5e0f6e79fa37407092f78979cbb100a240a": {
       "FileHash": "f67ed5e0f6e79fa37407092f78979cbb100a240a",
@@ -5851,7 +6627,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "2d7eb7882ee12c5500dccd2bc0f34df21f150793": {
       "FileHash": "2d7eb7882ee12c5500dccd2bc0f34df21f150793",
@@ -5881,7 +6661,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "e19e295302c19b372fd7e53e63c9651afa379f9f": {
       "FileHash": "e19e295302c19b372fd7e53e63c9651afa379f9f",
@@ -5911,7 +6695,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     },
     "76dd524dd48e6d79029e308c6c77440b0e4e0b27": {
       "FileHash": "76dd524dd48e6d79029e308c6c77440b0e4e0b27",
@@ -5941,7 +6729,11 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.sv-se\\master\\archive\\TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.sv-se.xlf",
       "ArchiveFileCommit": "e534c5db2d6c6fda63184ab77d2d8841db1ecf36",
       "ArchiveFileDateTime": "2016-06-02T02:42:42.7460793Z",
-      "ArchiveException": null
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
     }
   }
 }
