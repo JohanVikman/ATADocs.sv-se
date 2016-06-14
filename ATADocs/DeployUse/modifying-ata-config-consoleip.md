@@ -83,11 +83,11 @@ Följ de här stegen på ATA Center-servern om du behöver ändra IP-adressen so
 
 
 ## Se även
-- [Arbeta med ATA-konsolen](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt på vårt forum om du vill ha support!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 
