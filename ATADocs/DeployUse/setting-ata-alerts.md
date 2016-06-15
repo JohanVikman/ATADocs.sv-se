@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Konfigurera ATA-aviseringar | Microsoft Advanced Threat Analytics
-description: Beskriver hur du får ATA att meddela dig (via e-post eller vidarebefordran av ATA-händelser) när det upptäcker misstänkta aktiviteter 
+title: Konfigurera ATA-meddelanden | Microsoft Advanced Threat Analytics
+description: Beskriver hur du ställer in ATA-meddelanden så att du meddelas när misstänkta aktiviteter identifieras.
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -76,6 +76,6 @@ Ange följande för att ta emot Syslog-aviseringar:
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
