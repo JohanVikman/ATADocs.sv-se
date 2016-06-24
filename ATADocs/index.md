@@ -21,12 +21,12 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
     <section id="hero-content">
       <h1>Dokumentation för Microsoft Advanced Threat Analytics</h1>
       <h2>Lär dig hur du distribuerar och hanterar Microsoft Advanced Threat Analytics (ATA), en lokal produkt som hjälper IT-säkerhetsproffs att skydda företaget från avancerade riktade attacker.</h2>
-      <h3>Har du inte använt ATA förut? <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/" target="_blank">Besök vår produktsida &rarr;</a></h3>
+      <h3>Har du inte använt ATA förut? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Besök vår produktsida &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>Är du redo att sätta igång?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Prova nu</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Prova nu</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
@@ -191,6 +191,6 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
