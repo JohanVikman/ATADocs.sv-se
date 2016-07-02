@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vad är nytt i ATA version 1.6 | Microsoft Advanced Threat Analytics
-description: Visar en lista över nyheter i ATA version 1.6 tillsammans med kända problem
-keywords:
+title: "Vad är nytt i ATA version 1.6 | Microsoft Advanced Threat Analytics"
+description: "Visar en lista över nyheter i ATA version 1.6 tillsammans med kända problem"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: eee114a62e1854b5821c0ca4a6f276e9dcd121c8
+
 
 ---
 
@@ -147,10 +141,11 @@ Den nya och förbättrade identifieringsmotorn använder teknik för infogad ide
 Uppdateringsprocessen för ATA exporterar data, om du vill ha den för framtida undersökningar, till `<Center Installation Path>\Migration` som en JSON-fil.
 
 ## Se även
-[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Uppdatera ATA till version 1.6 – migreringsguide](ata-update-1.6-migration-guide.md)
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

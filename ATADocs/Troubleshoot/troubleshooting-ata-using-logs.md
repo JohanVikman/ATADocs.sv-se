@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Felsöka ATA med ATA-loggarna | Microsoft Advanced Threat Analytics
-description: Beskriver hur du kan använda ATA-loggarna för att felsöka problem
-keywords:
+title: "Felsöka ATA med ATA-loggarna | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du kan använda ATA-loggarna för att felsöka problem"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4f02b0fba381eb76ad500e198392ec7624a3028a
+
 
 ---
 
@@ -47,7 +41,7 @@ ATA Gateway har följande loggar:
 > [!NOTE]
 > De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
 
-### ATA Center-loggar
+## ATA Center-loggar
 ATA Center-loggarna finns i undermappen **Logs**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Center\Logs**".
 
 ATA Center har följande loggar:
@@ -64,7 +58,7 @@ ATA Center har följande loggar:
 > [!NOTE]
 > De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
 
-### ATA-konsolloggar
+## ATA-konsolloggar
 ATA-konsolloggarna (hanterings-API-loggarna) finns i undermappen **Logs**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Management\Logs**.
 
 ATA-konsolen har följande loggar:
@@ -81,7 +75,7 @@ ATA-konsolen har följande loggar:
 > [!NOTE]
 > De första två loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
 
-### ATA-distributionsloggar
+## ATA-distributionsloggar
 ATA-distributionsloggarna finns i temp-katalogen för användaren som installerade produkten. På standardplatsen för installation finns den i: **C:\Användare\Administrator\AppData\Local\Temp** (eller en katalog över %temp%).
 
 ATA Center-distributionsloggar:
@@ -103,9 +97,10 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
