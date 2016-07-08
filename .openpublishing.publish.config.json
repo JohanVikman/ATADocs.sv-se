@@ -1,78 +1,68 @@
 {
-  "build_entry_point": "",
+  "build_entry_point": "docs.ps1",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "ATADeployUse",
-      "build_source_folder": null,
-      "build_output_subfolder": "/advanced-threat-analytics/deploy-use",
-      "build_entry_point": "docs.ps1",
+      "docset_name": "ATADocs",
+      "build_output_subfolder": "ATADocs",
       "locale": "sv-se",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      }
-    },
-    {
-      "docset_name": "ATAPlanDesign",
-      "build_source_folder": null,
-      "build_output_subfolder": "/advanced-threat-analytics/plan-design",
-      "build_entry_point": "docs.ps1",
-      "locale": "sv-se",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
+        "Conceptual": "Content"
       }
     },
     {
       "docset_name": "ATAUnderstand",
-      "build_source_folder": null,
-      "build_output_subfolder": "/advanced-threat-analytics/understand-explore",
-      "build_entry_point": "docs.ps1",
+      "build_output_subfolder": "ATADocs/Understand",
       "locale": "sv-se",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
+        "Conceptual": "Content"
       }
     },
     {
-      "docset_name": "ATADocs",
-      "build_source_folder": null,
-      "build_output_subfolder": "/advanced-threat-analytics",
-      "build_entry_point": "docs.ps1",
+      "docset_name": "ATAPlanDesign",
+      "build_output_subfolder": "ATADocs/PlanDesign",
       "locale": "sv-se",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "ATADeployUse",
+      "build_output_subfolder": "ATADocs/DeployUse",
+      "locale": "sv-se",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
       }
     },
     {
       "docset_name": "ATATroubleshoot",
-      "build_source_folder": null,
-      "build_output_subfolder": "/advanced-threat-analytics/troubleshoot",
-      "build_entry_point": "docs.ps1",
+      "build_output_subfolder": "ATADocs/Troubleshoot",
       "locale": "sv-se",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
+        "Conceptual": "Content"
       }
     }
   ],
-  "notification_subscribers": null
+  "notification_subscribers": [
+    ""
+  ],
+  "skip_source_output_uploading": false,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.sv-se",
+      "branch": "master"
+    }
+  ]
 }
