@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Konfigurera portspegling | Microsoft Advanced Threat Analytics
-description: Beskriver alternativ för portspegling och hur du konfigurerar dem för ATA
-keywords:
+description: "Beskriver alternativ för portspegling och hur du konfigurerar dem för ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: a4befce4003951b18a5e1a9d8bc1addf9e7ea255
+
 
 ---
 
 # Konfigurera portspegling
-> [!NOTE] Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Om du vill fastställa om du behöver använda ATA Gateway kan du se [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment)
+> [!NOTE] 
+> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
  
 Den huvudsakliga datakälla som används av ATA är djup paketinspektion av nätverkstrafiken till och från domänkontrollanterna. Om ATA ska kunna se nätverkstrafiken måste du konfigurera portspegling eller använda en nätverks-TAP.
 
@@ -72,9 +67,10 @@ När du har konfigurerat portspegling ska du kontrollera att det fungerar innan 
 ## Se även
 - [Verifiera portspegling](validate-port-mirroring.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO5-->
 
 

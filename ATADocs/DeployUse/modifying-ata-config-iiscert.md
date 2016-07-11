@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändra ATA-konfiguration – IIS-certifikat | Microsoft Advanced Threat Analytics
-description: Beskriver hur du ändrar certifikatet som används av IIS för ATA Center.
-keywords:
+title: "Ändra ATA-konfiguration – IIS-certifikat | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du ändrar certifikatet som används av IIS för ATA Center."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 07888a46e26a7f87dc3b6424d97aba0813b43d02
+
 
 ---
 
@@ -45,9 +39,9 @@ Följ de här stegen från ATA Center-servern om du behöver ändra certifikatet
 
 2.  Öppna IIS-hanteraren (Internet Information Services).A
 
-3.  Expandera namnet på servern och expandera **Platser**.
+3.  Expandera namnet på servern och **Platser**.
 
-4.  Välj platsen för Microsoft ATA-konsolen och klicka på **Bindningar** i rutan **Åtgärder**.
+4.  Välj platsen för Microsoft ATA-konsolen, gå till rutan **Åtgärder** och klicka på **Bindningar**.
 
     ![Åtgärder för ATA-konsolens bindningar](media/ATA-console-change-IP-bindings.jpg)
 
@@ -64,9 +58,10 @@ Följ de här stegen från ATA Center-servern om du behöver ändra certifikatet
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

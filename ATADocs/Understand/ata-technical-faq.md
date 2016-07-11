@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vanliga frågor och svar om ATA | Microsoft Advanced Threat Analytics
-description: Visar en lista med vanliga frågor om ATA och tillhörande svar
-keywords:
+title: "Vanliga frågor och svar om ATA | Microsoft Advanced Threat Analytics"
+description: "Visar en lista med vanliga frågor om ATA och tillhörande svar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+
 
 ---
 
@@ -30,7 +24,7 @@ Den här artikeln innehåller en lista med vanliga frågor om ATA och ger insikt
 
 
 ## Hur licensieras ATA?
-Licensieringsinformation finns i [Köpa Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+Licensieringsinformation finns i [Köpa Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
 
 
 ## Vad gör jag om ATA-gatewayen inte startar?
@@ -54,7 +48,7 @@ Krypterad trafik analyseras inte (till exempel: LDAPS, IPSEC ESP).
 Aktivering av Kerberos Armoring, som även kallas Flexible Authentication Secure Tunneling (FAST), stöds av ATA, med undantag för identifiering av ”over-pass the hash” som inte fungerar.
 ## Hur många ATA-gatewayer behöver jag?
 
-Till att börja med rekommenderar vi att du använder ATA Lightweight Gateway på alla domänkontrollanter som kan hantera det. Information om att fastställa detta finns i [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+Till att börja med rekommenderar vi att du använder ATA Lightweight Gateway på alla domänkontrollanter som kan hantera det. Information om att fastställa detta finns i [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 Om alla domänkontrollanter kan omfattas av ATA Lightweight Gateway behövs ingen ATA Gateway.
 
@@ -101,7 +95,7 @@ ATA-gatewayen måste ha minst två nätverkskort:<br>1. Ett nätverkskort för a
 ATA har en dubbelriktad integrering med SIEM enligt följande:
 
 1. ATA kan konfigureras för att skicka en Syslog-avisering vid misstänkt aktivitet till valfri SIEM-server som använder CEF-formatet.
-2. ATA kan konfigureras för att ta emot Syslog-meddelanden för varje Windows-händelse med ID 4776, från [dessa SIEM-servrar](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support).
+2. ATA kan konfigureras för att ta emot Syslog-meddelanden för varje Windows-händelse med ID 4776, från [dessa SIEM-servrar](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## Kan ATA övervaka domänkontrollanter som är visualiserade på IaaS-lösningen?
 
@@ -143,10 +137,11 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

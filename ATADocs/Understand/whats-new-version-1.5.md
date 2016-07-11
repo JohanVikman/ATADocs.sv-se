@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vad är nytt i ATA version 1.5 | Microsoft Advanced Threat Analytics
-description: Visar en lista över vad som är nytt i ATA version 1.5 tillsammans med kända problem
-keywords:
+title: "Vad är nytt i ATA version 1.5 | Microsoft Advanced Threat Analytics"
+description: "Visar en lista över vad som är nytt i ATA version 1.5 tillsammans med kända problem"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 5836792bcfadb2585d05d4a195979bd6003c84cf
+
 
 ---
 
@@ -65,7 +59,7 @@ Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och instal
 När konfigurationen för en ATA Gateway är klar och ATA Gateway startar för första gången visas etiketten "Ej synkroniserad" tills tjänsten har startats helt, vilket kan ta upp till 10 minuter första gången tjänsten startar.
 
 ### Programvara för nätverksavbildning
-Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Om annan programvara installeras kommer ATA Gateway att sluta fungera korrekt.
+Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Om annan programvara installeras kommer ATA Gateway att sluta fungera korrekt.
 
 ### KB på virtualiseringsvärd
 Installera inte KB 3047154 på en virtualiseringsvärd. Det kan leda till att portspegling slutar fungera ordentligt.
@@ -76,9 +70,10 @@ Installera inte KB 3047154 på en virtualiseringsvärd. Det kan leda till att po
 
 [Uppdatera ATA till version 1.6 – migreringsguide](ata-update-1.6-migration-guide.md)
 
-[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

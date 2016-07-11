@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Felsöka ATA-felloggen | Microsoft Advanced Threat Analytics
-description: Beskriver hur du kan felsöka vanliga fel i ATA 
-keywords:
+title: "Felsöka ATA-felloggen | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du kan felsöka vanliga fel i ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
+
 
 ---
 
@@ -50,7 +44,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 ## Distributionsfel
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
-|Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/en-us/kb/2919355) är installerade på servern innan ATA installeras.|
+|Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/kb/2919355) är installerade på servern innan ATA installeras.|
 
 ![Bild för ATA .NET-installationsfel](media/netinstallerror.png)
 
@@ -60,9 +54,10 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

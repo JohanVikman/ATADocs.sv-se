@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Krav för ATA | Microsoft Advanced Threat Analytics
-description: Beskriver kraven för en lyckad distribution av ATA i din miljö
-keywords:
+title: "Krav för ATA | Microsoft Advanced Threat Analytics"
+description: "Beskriver kraven för en lyckad distribution av ATA i din miljö"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc
+ms.openlocfilehash: da887431d8e63a7ae8ceeb3e7e22011d356e3590
+
 
 ---
 
 # Krav för ATA
 Den här artikeln beskriver kraven för en lyckad distribution av ATA i din miljö.
 
->[!NOTE] Mer information om hur du planerar resurser och kapacitet finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
+>[!NOTE]
+> Mer information om hur du planerar resurser och kapacitet finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 
 ATA består av ATA Center, ATA Gateway och/eller ATA Lightweight Gateway. Mer information om ATA-komponenterna finns i [ATA-arkitektur](ata-architecture.md).
@@ -52,7 +47,8 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 
 -   Användarkonto och lösenord med läsbehörighet till alla objekt i de domäner som ska övervakas.
 
-    > [!NOTE] Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
+    > [!NOTE]
+    > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
 -   Ha en lista över alla undernät som används i nätverket för VPN och Wi-Fi, som omtilldelar IP-adresser mellan enheter inom en mycket kort tidsperiod (sekunder eller minuter).  Du bör identifiera de här undernäten med kortsiktiga lån så att ATA kan minska cachelivstiden för snabb omtilldelning mellan enheter. Information om konfiguration av undernät med kortsiktiga lån finns i [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata).
 -   Kontrollera att Message Analyzer och Wire Shark inte är installerade på ATA Gateway eller ATA Center.
@@ -68,13 +64,20 @@ Det här avsnittet innehåller kraven för ATA Center.
 ### Allmänt
 ATA Center har stöd för installation på en server med Windows Server 2012 R2. ATA Center kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 
+Innan du installerar ATA Center ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
+
+Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
+
 Installation av ATA Center som en virtuell dator stöds. 
 
 Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du skapar en ny kontrollpunkt för att undvika att databasen skadas.
 ### Serverspecifikationer
-ATA-databasen kräver att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas Node Interleaving i systemet. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen.<br>
+När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas Node Interleaving i systemet. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Obs! Det här gäller inte när ATA Center körs på en virtuell server.<br>
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
 Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs, mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
+
+>[!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -88,7 +91,8 @@ Du bör ha följande:
 
 Kommunikation mellan ATA Center och ATA Gateway krypteras med SSL på port 443. Dessutom körs ATA-konsolen på IIS och skyddas med SSL på port 443. **Två IP-adresser** rekommenderas. ATA Center-tjänsten binder port 443 till den första IP-adressen och IIS binder port 443 till den andra IP-adressen.
 
-> [!NOTE] En enda IP-adress med två olika portar kan användas, men två IP-adresser rekommenderas.
+> [!NOTE]
+> En enda IP-adress med två olika portar kan användas, men två IP-adresser rekommenderas.
 
 ### Portar
 I följande tabell visas de portar som minst måste öppnas för att ATA Center ska fungera korrekt.
@@ -105,10 +109,11 @@ I den här tabellen är IP-adress 1 bunden till ATA Center-tjänsten och IP-adre
 |**Syslog** (valfritt)|TCP|514|Syslog-server|Utgående|IP-adress 2|
 
 ### Certifikat
-Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har Internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
+Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
 
 För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.<br>
-> [!NOTE] Certifikatets providertyp måste vara kryptografiprovider (CSP).
+> [!NOTE]
+> Certifikatets providertyp måste vara kryptografiprovider (CSP).
 
 
 ATA Center kräver certifikat för följande tjänster:
@@ -117,7 +122,8 @@ ATA Center kräver certifikat för följande tjänster:
 
 -   ATA Center-tjänst – certifikat för serverautentisering
 
-> [!NOTE] Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av IIS. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
+> [!NOTE]
+> Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av IIS. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
 
 ## Krav för ATA Gateway
 Det här avsnittet innehåller kraven för ATA Gateway.
@@ -125,7 +131,7 @@ Det här avsnittet innehåller kraven för ATA Gateway.
 ATA Gateway har stöd för installation på en server med Windows Server 2012 R2.
 ATA Gateway kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 
-Innan du installerar ATA Gateway ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Innan du installerar ATA Gateway ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
 
@@ -135,6 +141,8 @@ Information om hur du använder virtuella datorer med ATA Gateway finns i [Konfi
 För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.<br>
 En ATA-gateway har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik till och från domänkontrollanterna.
 
+>[!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -152,7 +160,8 @@ ATA- gatewayen kräver minst ett hanteringskort och minst ett avbildningskort:
 
         ![Konfigurera DNS-suffix i avancerade TCP/IP-inställningar](media/ATA-DNS-Suffix.png)
 
-        > [!NOTE] Om ATA-gatewayen är medlem i domänen konfigureras det automatiskt.
+        > [!NOTE]
+        > Om ATA-gatewayen är medlem i domänen konfigureras det automatiskt.
 
 -   **Avbildningskort** – används för att avbilda trafik till och från domänkontrollanterna.
 
@@ -178,7 +187,8 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 |SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />–   IP-adress för IIS|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 
-> [!NOTE] Som en del av lösningsprocessen som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA-gatewayerna.
+> [!NOTE]
+> Som en del av lösningsprocessen som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA-gatewayerna.
 >
 > -   NTLM över RPC
 > -   NetBIOS
@@ -188,24 +198,31 @@ Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-ga
 För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.
 
 > [!NOTE]
-Certifikatets providertyp måste vara kryptografiprovider (CSP).<br>
+> Certifikatets providertyp måste vara kryptografiprovider (CSP).<br>
 
 Ett certifikat med stöd för **serverautentisering** måste vara installerat i datorarkivet för ATA Gateway i det lokala datorarkivet. Certifikatet måste vara betrott av ATA Center.
 
 ## Krav för ATA Lightweight Gateway
 Det här avsnittet innehåller kraven för ATA Lightweight Gateway.
 ### Allmänt
-ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
+ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2.
 
 Domänkontrollanten kan vara en skrivskyddad domänkontrollant (RODC).
 
 Domänkontrollanten kan inte vara Server Core.
+
+Innan du installerar ATA Lightweight Gateway på en domänkontrollant som kör Windows Server 2012 R2 SP1 måste du bekräfta att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 ### Serverspecifikationer
 
 ATA Lightweight Gateway kräver att minst 2 kärnor och 6 GB RAM är installerat på domänkontrollanten.
 För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
 ATA Lightweight Gateway kan distribueras på domänkontrollanter med olika belastningar och storlekar, beroende på mängden nätverkstrafik till och från domänkontrollanterna och mängden resurser som finns installerade på den domänkontrollanten.
+
+>[!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Lightweight Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -224,7 +241,8 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 |SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />–   IP-adress för IIS|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 
-> [!NOTE] Som en del av lösningsprocessen som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA Lightweight-gatewayerna.
+> [!NOTE]
+> Som en del av lösningsåtgärden som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA Lightweight-gatewayerna.
 >
 > -   NTLM över RPC
 > -   NetBIOS
@@ -233,7 +251,7 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA Lightweight-gatewayerna inte har Internetåtkomst följer du proceduren för att importera en CRL manuellt, och ser till att installera alla CRL-distributionsplatser för hela kedjan.
 För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Lightweight Gateway.
 > [!NOTE]
-Certifikatets providertyp måste vara kryptografiprovider (CSP).
+> Certifikatets providertyp måste vara kryptografiprovider (CSP).
 
 Ett certifikat med stöd för serverautentisering måste vara installerat i datorarkivet för ATA Lightweight Gateway i det lokala datorarkivet. Certifikatet måste vara betrott av ATA Center.
 
@@ -250,10 +268,11 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 - [ATA-arkitektur](ata-architecture.md)
 - [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

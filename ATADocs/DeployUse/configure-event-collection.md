@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurera händelseinsamling | Microsoft Advanced Threat Analytics
-description: Beskriver alternativen för att konfigurera händelseinsamling med ATA
-keywords:
+title: "Konfigurera händelseinsamling | Microsoft Advanced Threat Analytics"
+description: "Beskriver alternativen för att konfigurera händelseinsamling med ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,17 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 17f30cbe478a868f3b6887bf48d8084934624191
+
 
 ---
 
 # Konfigurera händelseinsamling
-För att förbättra identifieringsfunktionerna behöver ATA Windows-händelselogg ID 4776. Den kan vidarebefordras till ATA Gateway på något av två sätt, antingen genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att [Konfigurera vidarebefordran av Windows-händelser](#configuring-windows-event-forwarding)..
+För att förbättra identifieringsfunktionerna behöver ATA Windows-händelselogg ID 4776. Den kan vidarebefordras till ATA Gateway på ett av två sätt, antingen genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att [Konfigurera vidarebefordran av Windows-händelser](#configuring-windows-event-forwarding).
 
 ## Händelseinsamling
 Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelse 4776 för att förbättra ATA Pass-the-Hash-identifiering ytterligare. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
@@ -176,7 +170,8 @@ Message är den ursprungliga händelsetexten från Windows-händelsen
 
 Se till att det finns \t mellan nyckel=värde-paren.
 
->[!NOTE] Användning av WinCollect för Windows-händelseinsamling stöds inte.
+>[!NOTE] 
+> Användning av WinCollect för Windows-händelseinsamling stöds inte.
 
 ## Konfigurera vidarebefordran av Windows-händelser
 Om du inte har en SIEM-server kan du konfigurera domänkontrollanterna så att de vidarebefordrar Windows händelse-ID 4776 direkt till någon av dina ATA-gatewayer.
@@ -208,21 +203,21 @@ Ställ in **Protokoll** på **HTTP** och **Port** på **5985**.<br>
     ![wef_http](media/wef_http.png)
 
 7.  [Valfritt] Om du vill ha ett kortare avsökningsintervall anger du prenumerationens hjärtslag till 5 sekunder på ATA Gateway för att få ett kortare avsökningsintervall.
-    wecutil ss <CollectionName>/cm:custom
-    wecutil ss <CollectionName> /hi:5000
+    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
 
 8. På konfigurationssidan för ATA Gateway aktiverar du **Insamling av vidarebefordran av Windows-händelser**.
 
 > [!NOTE]
-När den här inställningen aktiveras tittar ATA Gateway i loggen för vidarebefordrade händelser om det finns Windows-händelser som har vidarebefordrats till den från domänkontrollanterna.
+> När den här inställningen aktiveras tittar ATA Gateway i loggen för vidarebefordrade händelser om det finns Windows-händelser som har vidarebefordrats till den från domänkontrollanterna.
 
-Mer information finns i: [Konfigurera datorerna för att vidarebefordra och samla in händelser](https://technet.microsoft.com/en-us/library/cc748890)
+Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)
 
 ## Se även
 - [Installera ATA](install-ata.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Installera ATA – Steg 4 | Microsoft Advanced Threat Analytics
-description: I steg fyra av ATA-installationen får du hjälp att installera ATA Gateway.
-keywords:
+title: "Installera ATA – Steg 4 | Microsoft Advanced Threat Analytics"
+description: "I steg fyra av ATA-installationen får du hjälp att installera ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+
 
 ---
 
@@ -44,7 +38,8 @@ Innan du installerar ATA Gateway på en dedikerad server ska du kontrollera att 
 På ATA Gateway-servern utför du följande steg.
 
 1.  Extrahera filerna från ZIP-filen. 
-> [!NOTE] Installation direkt från ZIP-filen misslyckas.
+> [!NOTE] 
+> Installation direkt från ZIP-filen misslyckas.
 
 2.  Kör **Microsoft ATA Gateway Setup.exe** från en upphöjd kommandotolk och följ installationsguiden.
 
@@ -82,12 +77,13 @@ På ATA Gateway-servern utför du följande steg.
 
 ## Se även
 
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

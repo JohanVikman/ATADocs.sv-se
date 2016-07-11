@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Arbeta med misstänkta aktiviteter | Microsoft Advanced Threat Analytics
-description: Beskriver hur du granskar misstänkta aktiviteter som identifieras av ATA
-keywords:
+title: "Arbeta med misstänkta aktiviteter | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du granskar misstänkta aktiviteter som identifieras av ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+
 
 ---
 
@@ -113,11 +107,12 @@ Om du vill göra det möjligt för ATA att lära sig om nätverket med dig kan v
 Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktivitetens aktuella status och välja något av följande: **Öppet**, **Löst** eller **Avvisat**.
 
 ## Se även
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeta med identifieringsinställningar i ATA](working-with-detection-settings.md)
 - [Ändra ATA-konfiguration](modifying-ata-configuration.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

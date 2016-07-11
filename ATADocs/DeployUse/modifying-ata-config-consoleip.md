@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändra ATA-konfiguration – IP-adress för ATA-konsolen | Microsoft Advanced Threat Analytics
-description: Beskriver hur du ändrar IP-adressen för ATA-konsolen, som används för att skapa en genväg till ATA-konsolen på ATA-gatewayerna.
-keywords:
+title: "Ändra ATA-konfiguration – IP-adress för ATA-konsolen | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du ändrar IP-adressen för ATA-konsolen, som används för att skapa en genväg till ATA-konsolen på ATA-gatewayerna."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
 # Ändra ATA-konfiguration – IP-adress för ATA-konsolen
 
 >[!div class="step-by-step"]
-[« ATA Center-certifikat](modifying-ata-config-centercert.md)
-[IIS-certifikat »](modifying-ata-config-iiscert.md)
+[«ATA Center-certifikat](modifying-ata-config-centercert.md)
+[IIS-certifikat»](modifying-ata-config-iiscert.md)
 
 ## Ändra IP-adressen för ATA-konsolen
 ATA-konsolens URL är som standard den IP-adress som valdes som IP-adress för ATA-konsolen när du installerade ATA Center.
@@ -55,7 +49,7 @@ Följ de här stegen på ATA Center-servern om du behöver ändra IP-adressen so
 
 3.  Expandera namnet på servern och **Platser**.
 
-4.  Välj platsen för Microsoft ATA-konsolen och klicka på **Bindningar** i rutan **Åtgärder**.
+4.  Välj platsen för Microsoft ATA-konsolen, gå till rutan **Åtgärder** och klicka på **Bindningar**.
 
     ![Bild av åtgärder för ATA-konsolens bindningar](media/ATA-console-change-IP-bindings.jpg)
 
@@ -63,7 +57,7 @@ Följ de här stegen på ATA Center-servern om du behöver ändra IP-adressen so
 
     ![Bild av Redigera bindning för webbplats](media/ATA-change-console-IP.jpg)
 
-6.  Klicka på **Starta om** under **Hantera webbplats** i rutan **Åtgärd**.
+6.  I rutan **Åtgärd** klickar du på **Starta om** under **Hantera webbplats**.
 
 7.  Öppna en administratörskommandotolk och skriv följande kommandon för att uppdatera HTTP.SYS-drivrutinen:
 
@@ -78,16 +72,17 @@ Följ de här stegen på ATA Center-servern om du behöver ändra IP-adressen so
 9. Om ATA-konsolens URL är ett FQDN uppdaterar du DNS med den nya IP-adressen för FQDN.
 
 >[!div class="step-by-step"]
-[« ATA Center-certifikat](modifying-ata-config-centercert.md)
-[IIS-certifikat »](modifying-ata-config-iiscert.md)
+[«ATA Center-certifikat](modifying-ata-config-centercert.md)
+[IIS-certifikat»](modifying-ata-config-iiscert.md)
 
 
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

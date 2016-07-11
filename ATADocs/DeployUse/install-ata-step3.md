@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Installera ATA – Steg 3 | Microsoft Advanced Threat Analytics
-description: Steg tre av ATA-installationen hjälper dig att hämta installationspaketet för ATA Gateway.
-keywords:
+title: "Installera ATA – Steg 3 | Microsoft Advanced Threat Analytics"
+description: "Steg tre av ATA-installationen hjälper dig att hämta installationspaketet för ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0209d8352704fef6caf059d152d6bde6127d3d55
+
 
 ---
 
@@ -36,7 +30,7 @@ När du har konfigurerat anslutningsinställningarna för domänen kan du hämta
 
 Hämta ATA Gateway-paketet:
 
-1.  Från ATA-konsolen klickar du på inställningsikonen och väljer **Konfiguration**.
+1.  I ATA-konsolen klickar du på inställningsikonen och väljer **Konfiguration**.
 
     ![Konfigurationsinställningar för ATA Gateway](media/ATA-config-icon.JPG)
 
@@ -58,11 +52,12 @@ ZIP-filen innehåller följande:
 
 ## Se även
 
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

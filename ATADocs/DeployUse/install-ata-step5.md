@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Installera ATA – Steg 5 | Microsoft Advanced Threat Analytics
-description: Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway.
-keywords:
+title: "Installera ATA – Steg 5 | Microsoft Advanced Threat Analytics"
+description: "Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 6400a0eabefac91b418e00eb670b1329fa1b5fb5
+
 
 ---
 
 # Installera ATA – Steg 5
 
->[!div class="step-by-step"] [« Steg 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
 
@@ -53,8 +48,9 @@ Följande information gäller för alla servrar du anger i listan **Domänkontro
  - **Kandidat för domänsynkronisering**<br>
 Eventuell ATA Gateway som har konfigurerats som kandidat för domänsynkronisering kan ansvara för synkronisering mellan ATA och Active Directory-domänen. Beroende på domänens storlek kan den första synkroniseringen ta lite tid och vara resurskrävande. Som standard konfigureras endast ATA-gatewayer som kandidater för domänsynkronisering. <br>Vi rekommenderar att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.<br>Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Mer information finns i [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features).
 
-> [!NOTE] Det tar några minuter för ATA Gateway-tjänsten att startas första gången eftersom den bygger upp cache för tolkar för nätverksavbildning.<br>
-Konfigurationsändringarna verkställs på ATA Gateway vid nästa schemalagda synkronisering mellan ATA Gateway och ATA Center.
+> [!NOTE] 
+> Det tar några minuter för ATA Gateway-tjänsten att startas första gången eftersom den bygger upp cache för tolkar för nätverksavbildning.<br>
+> Konfigurationsändringarna verkställs på ATA Gateway vid nästa schemalagda synkronisering mellan ATA Gateway och ATA Center.
 
 
 
@@ -83,17 +79,19 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
     ![Bild av hur du lägger till prestandaräknare](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"] [« Steg 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
 ## Se även
 
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

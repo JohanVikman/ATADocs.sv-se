@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft Advanced Threat Analytics
-description: Beskriver hur du ändrar IP-adress, port eller certifikat för ett ATA Center.
-keywords:
+title: "Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du ändrar IP-adress, port eller certifikat för ett ATA Center."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+
 
 ---
 
@@ -37,7 +31,7 @@ Ta hänsyn till följande om du behöver ändra IP-adress och port eller certifi
 
 ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lokalt. De ansluter regelbundet till ATA Center och hämtar konfigurationsändringar. Det är en process i två steg att ändra hur en ATA Gateway ansluter till ATA Center.
 
--   Steg ett: uppdatera IP-adressen och porten för den ATA Center-tjänst du vill ATA Gateway ska använda. I det här läget lyssnar ATA Center fortfarande på den ursprungliga IP-adressen och nästa gång ATA Gateway synkroniserar sin konfiguration får den två IP-adresser till ATA Center. Så länge ATA Gateway kan ansluta genom att använda den ursprungliga (första) IP-adressen kommer den inte att försöka använda den nya IP-adressen och porten.
+-   Steg ett: uppdatera IP-adressen och porten du vill att ATA Center-tjänsten ska använda. I det här läget lyssnar ATA Center fortfarande på den ursprungliga IP-adressen och nästa gång ATA Gateway synkroniserar sin konfiguration får den två IP-adresser till ATA Center. Så länge ATA Gateway kan ansluta genom att använda den ursprungliga (första) IP-adressen kommer den inte att försöka använda den nya IP-adressen och porten.
 
 -   Steg två: när alla ATA Gateways har synkroniserats med den uppdaterade konfigurationen ska den nya IP-adressen och porten som ATA Center lyssnar på aktiveras. När du aktiverar den nya IP-adressen kopplas ATA Center-tjänsten till denna. ATA Gateways kommer inte att kunna ansluta till den ursprungliga adressen och försöker nu att ansluta till den andra (nya) IP-adressen till ATA Center. Efter anslutning till ATA Center med den nya IP-adressen hämtar ATA Gateway den senaste konfigurationen och har en enda IP-adress för ATA Center. (Såvida du inte startade processen igen.)
 
@@ -82,9 +76,10 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

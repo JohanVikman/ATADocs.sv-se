@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Planera ATA-distributionen | Microsoft Advanced Threat Analytics
-description: Hjälper dig att planera distributionen och bestämma hur många ATA-servrar som krävs för nätverket
-keywords:
+description: "Hjälper dig att planera distributionen och bestämma hur många ATA-servrar som krävs för nätverket"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+
 
 ---
 
@@ -30,6 +24,8 @@ Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs f
 
 ## Storlek för ATA Center
 ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende. Nödvändigt diskutrymme för ATA-databasen per domänkontrollant anges nedan. Om du har flera domänkontrollanter beräknar du det fullständiga utrymmet som krävs för ATA-databasen genom att summera nödvändigt diskutrymme per domänkontrollant.
+> [!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|Databaslagring per dag (GB)|Databaslagring per månad (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -51,18 +47,38 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > -  Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
 
 ## Välja rätt gateway-typ för distributionen
-Vi rekommenderar att du använder en ATA Lightweight Gateway i stället för en ATA Gateway när det är möjligt, så länge domänkontrollanterna följer storlekstabellen nedan.
-De flesta domänkontrollanter kan och bör omfattas av ATA Lightweight Gateway förutom om domänkontrollanterna inte ryms inom kraven i [storlekstabellen för ATA Lightweight Gateway](#ata-lightweight-gateway-sizing).
-Följande är exempel på scenarier där alla domänkontrollanter bör omfattas av ATA Lightweight Gateway:
+I en ATA-distribution stöds valfri kombination av ATA Gateway-typer:
 
--   Avdelningskontor
--   Virtuella domänkontrollanter från valfri IaaS-leverantör
+- Endast ATA Gateway
+- Endast ATA Lightweight Gateway
+- En kombination av båda
+
+Tänk på följande när du bestämmer typ av Gateway-distribution:
+
+|Gateway-typ|Fördelar|Kostnad|Distributionstopologi|Användning av domänkontrollant|
+|----|----|----|----|-----|
+|ATA Gateway|Out-of-band-distribution gör det svårare för angripare att upptäcka ATA|Högre|Installeras tillsammans med domänkontrollanten (out-of-band)|Har stöd för upp till 50 000 paket per sekund|
+|ATA Lightweight Gateway|Kräver inte en dedikerad server och portspeglingskonfiguration|Lägre|Installerad på domänkontrollanten|Har stöd för upp till 10 000 paket per sekund|
+
+Följande är exempel på scenarier där domänkontrollanter bör omfattas av ATA Lightweight Gateway:
+
+
+- Avdelningskontor
+
+- Virtuella domänkontrollanter som är distribuerade i molnet (IaaS)
+
+
+Följande är exempel på scenarier där domänkontrollanter bör omfattas av ATA Gateway:
+
+
+- Datacenter på huvudkontor (med domänkontrollanter med fler än 10 000 paket per sekund)
 
 
 ## Storlek för ATA Lightweight Gateway
-Vi rekommenderar att du använder en ATA Lightweight Gateway i stället för en ATA Gateway när det är möjligt, så länge domänkontrollanterna följer storlekstabellen här.
 
 En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. 
+> [!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -75,16 +91,13 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 &#42;&#42;Totalt antal kärnor som inte är flertrådade som den här domänkontrollanten har installerat.<br>Även om flertrådsteknik är godkänd för ATA Lightweight Gateway bör du räkna antalet faktiska kärnor och inte flertrådade kärnor när du planerar kapaciteten.
 
 &#42;&#42;&#42;Total mängd minne som den här domänkontrollanten har installerat.
-> [!NOTE]   Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
+> [!NOTE]   
+> Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
 
 
 ## Storlek på ATA-gateway
 
 Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribueras.
-
-De flesta domänkontrollanter kan omfattas av en ATA Lightweight Gateway, som bör planeras enligt storlekstabellen för ATA Lightweight Gateway ovan.
-
-Om ATA Gateway fortfarande krävs avgör följande hur många ATA-gatewayer som krävs:<br>
 
 -   **Active Directory-skogar och domäner**<br>
     ATA kan övervaka trafik från flera domäner från en enda Active Directory-skog. För att övervaka flera Active Directory-skogar krävs separata ATA-distributioner. En enda ATA-distribution ska inte konfigureras för att övervaka nätverkstrafik från domänkontrollanter från olika skogar.
@@ -95,6 +108,9 @@ Om ATA Gateway fortfarande krävs avgör följande hur många ATA-gatewayer som 
 -   **Kapacitet**<br>
     En ATA Gateway har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik för de domänkontrollanter som övervakas. 
 <br>
+
+> [!NOTE] 
+> Dynamiskt minne stöds inte.
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|
 |---------------------------|-------------------------|---------------|
@@ -138,7 +154,8 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 
 7.  Expandera **Nätverkskort**, välj **Paket per sekund** och välj rätt instans. Om du inte är säker kan du välja **&lt;Alla instanser&gt;** och klicka på **Lägg till** och **OK**.
 
-    > [!NOTE] Om du vill göra det kör du `ipconfig /all` på en kommandorad så att nätverkskortets namn och konfiguration visas.
+    > [!NOTE]
+    > Om du vill göra det kör du `ipconfig /all` på en kommandorad så att nätverkskortets namn och konfiguration visas.
 
     ![Bild av hur du lägger till prestandaräknare](media/ATA-traffic-estimation-7.png)
 
@@ -163,9 +180,10 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 ## Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-arkitektur](ata-architecture.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

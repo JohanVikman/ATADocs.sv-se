@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vad är Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics
-description: Förklarar vad Microsoft Advanced Threat Analytics (ATA) är och vilka typer av misstänkta aktiviteter det kan upptäcka
-keywords:
+title: "Vad är Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics"
+description: "Förklarar vad Microsoft Advanced Threat Analytics (ATA) är och vilka typer av misstänkta aktiviteter det kan upptäcka"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4831e7a773b69a87bbcd505a8116230f14611250
+
 
 ---
 
@@ -69,7 +63,6 @@ I syfte att ge identifiering av avslöjade autentiseringsuppgifter använder ATA
 
 Genom att använda beteendeanalys och maskininlärning kan ATA identifiera misstänkta aktiviteter, t.ex. avvikande inloggningar, onormal resursåtkomst och onormal arbetstid, vilket kan tyda på avslöjade autentiseringsuppgifter.
 I syfte att skydda mot avslöjade autentiseringsuppgifter identifierar ATA följande kända skadliga attacker och tekniker:
-:
 
  - **Brute force** <br>Vid brute force-attacker försöker angripare gissa sig till autentiseringsuppgifter genom att prova flera användare och koppla ihop dem med flera lösenordsförsök. Angriparna använder ofta komplexa algoritmer eller ordböcker för att prova så många värden som ett system tillåter.
 
@@ -123,8 +116,7 @@ Vid Skeleton Key-attacker installeras skadlig kod på domänkontrollanten som g�
 Vid golden ticket-attacker stjäl en angripare KBTGT-autentiseringsuppgifterna, Kerberos Golden Ticket. Den biljetten gör det möjligt för angriparen att skapa en TGT-biljett offline, som används för att få åtkomst till resurser i nätverket.
 - **Fjärrkörning**<br>
 Angripare kan försöka få kontroll över nätverket genom att köra kod fjärrstyrt på domänkontrollanten.
--   **Skadliga replikeringsbegäranden**
-I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontrollanter. En angripare kan imitera en AD-replikeringsbegäran (ibland genom att utge sig för att vara domänkontrollant) vilket gör det möjligt för angriparen att hämta data som finns lagrad i AD, inklusive lösenordshashvärden, utan att använda mer påträngande tekniker som Volume Shadow Copy.
+-   **Skadliga replikeringsbegäranden** I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontrollanter. En angripare kan imitera en AD-replikeringsbegäran (ibland genom att utge sig för att vara domänkontrollant) vilket gör det möjligt för angriparen att hämta data som finns lagrad i AD, inklusive lösenordshashvärden, utan att använda mer påträngande tekniker som Volume Shadow Copy.
 
 ## Vad händer nu?
 
@@ -133,9 +125,10 @@ I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontr
 -   Komma igång med att distribuera ATA: [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata)
 
 ## Se även
-[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

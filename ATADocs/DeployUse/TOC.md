@@ -19,7 +19,7 @@
 #### [Ändra ATA Center-certifikat](modifying-ata-config-centercert.md)
 #### [Ändra IP-adressen för ATA-konsolen](modifying-ata-config-consoleip.md)
 #### [Ändra IIS-certifikat](modifying-ata-config-iiscert.md)
-#### [Ändra lösenord för domänkontrollant](modifying-ata-config-dcpassword.md)
+#### [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
 ### [Arbeta med ATA-konsolen](working-with-ata-console.md)
 ### [Ange ATA-aviseringar](setting-ata-alerts.md)
 ### [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
@@ -31,6 +31,6 @@
 # [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

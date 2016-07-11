@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Installera ATA – Steg 1 | Microsoft Advanced Threat Analytics
-description: Första steget för att installera ATA omfattar att hämta och installera ATA Center på den valda servern.
-keywords:
+title: "Installera ATA – Steg 1 | Microsoft Advanced Threat Analytics"
+description: "Första steget för att installera ATA omfattar att hämta och installera ATA Center på den valda servern."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+
 
 ---
 
@@ -33,14 +27,15 @@ ms.suite: ems
 
 Den här installationsproceduren innehåller anvisningar för att utföra en helt ny installation av ATA 1.6. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns i [ATA-migreringsguide för version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
 
-> [!IMPORTANT] Installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
+> [!IMPORTANT] 
+> Installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
 
 ## Steg 1. Hämta och installera ATA Center
 När du har kontrollerat att servern uppfyller kraven kan du fortsätta med installationen av ATA Center.
 
 På ATA Center-servern utför du följande steg.
 
-1.  Hämta ATA från [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) eller [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/) eller [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
+1.  Hämta ATA från [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx), [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) eller [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Logga in på datorn där du installerar ATA Center som en användare som är medlem i den lokala administratörsgruppen.
 
@@ -94,17 +89,20 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 
 
 
->[!div class="step-by-step"] [« Förinstallation](preinstall-ata.md)
-[Steg 2 »](install-ata-step2.md)
+>[!div class="step-by-step"]
+[«Förinstallation](preinstall-ata.md)
+[steg 2»](install-ata-step2.md)
 
 ## Se även
 
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA forumet!] (https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

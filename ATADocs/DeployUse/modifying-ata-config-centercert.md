@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ändra ATA-konfiguration – ATA Center-certifikat | Microsoft Advanced Threat Analytics
-description: Beskriver tvåstegsprocessen för att förnya eller ersätta certifikatet i det lokala datorarkivet på ATA Center-servern. 
-keywords:
+title: "Ändra ATA-konfiguration – ATA Center-certifikat | Microsoft Advanced Threat Analytics"
+description: "Beskriver tvåstegsprocessen för att förnya eller ersätta certifikatet i det lokala datorarkivet på ATA Center-servern."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+
 
 ---
 
 # Ändra ATA-konfiguration – ATA Center-certifikat
 
 >[!div class="step-by-step"]
-[« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
-[ATA-konsolens IP-adress »](modifying-ata-config-consoleip.md)
+[«ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
+[ATA-konsolens IP-adress»](modifying-ata-config-consoleip.md)
 
 ## Ändra ATA Center-certifikatet
 Om certifikaten löper ut och behöver förnyas eller ersättas när det nya certifikatet har installerats i det lokala datorarkivet på ATA Center-servern ersätter du certifikatet genom att följa denna metod i två steg:
@@ -66,15 +60,16 @@ Om certifikaten löper ut och behöver förnyas eller ersättas när det nya cer
 8.  Se till att alla ATA Gateways kan synkronisera sina konfigurationer efter att ändringen har aktiverats.
 
 >[!div class="step-by-step"]
-[« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
-[ATA-konsolens IP-adress »](modifying-ata-config-consoleip.md)
+[«ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
+[ATA-konsolens IP-adress»](modifying-ata-config-consoleip.md)
 
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

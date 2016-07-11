@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Verifiera portspegling | Microsoft Advanced Threat Analytics
 description: Beskriver hur du verifierar att portspegling har konfigurerats korrekt
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+
 
 ---
 
 # Verifiera portspegling
-> [!NOTE] Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Om du vill fastställa om du behöver använda ATA Gateway kan du se [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment)
+> [!NOTE] 
+> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
  
 Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. Om ATA ska fungera ordentligt måste ATA Gateway kunna se trafiken till och från domänkontrollanten. Den huvudsakliga datakälla som ATA använder är djup paketinspektion för nätverkstrafiken till och från dina domänkontrollanter. Om ATA ska kunna se nätverkstrafiken måste portspegling vara konfigurerad. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
 
@@ -208,7 +203,7 @@ Exempel på körning av skriptet:
 
         ![Bild för fliken skapa ny avbildning](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Ange följande filter i fönstret Visa filter: **KerberosV5 OR LDAP** och klicka sedan på **Verkställ**.
+3.  I fönstret Visa filter anger du filtret **KerberosV5 OR LDAP** och klickar sedan på **Verkställ**.
 
     ![Bild för att använda KerberosV5 or LDAP-filter](media/ATA-Port-Mirroring-filter-settings.jpg)
 
@@ -225,9 +220,10 @@ Exempel på körning av skriptet:
 ## Se även
 
 - [Konfigurera portspegling](configure-port-mirroring.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

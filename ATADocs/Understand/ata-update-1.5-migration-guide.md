@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Migreringsguide för ATA-uppdatering till 1.5 | Microsoft Advanced Threat Analytics
-description: Procedurer för att uppdatera ATA till version 1.5
-keywords:
+title: "Migreringsguide för ATA-uppdatering till 1.5 | Microsoft Advanced Threat Analytics"
+description: "Procedurer för att uppdatera ATA till version 1.5"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+
 
 ---
 
@@ -76,7 +70,7 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
 
     1.  På **Välkomstsidan** väljer du språk och klickar på **Nästa**.
 
-    2.  Läs licensavtalet, markera kryssrutan och klicka på **Nästa** om du godkänner licensvillkoren..
+    2.  Läs licensavtalet, markera kryssrutan och klicka på **Nästa** om du godkänner licensvillkoren.
 
     3.  Välj om du vill köra fullständig (standard) eller partiell migrering.
 
@@ -102,11 +96,11 @@ För att hämta ATA Gateway-paketet:
 
 1.  Ta bort alla versioner av ATA Gateway-paketet som du har hämtat tidigare.
 
-2.  Öppna en webbläsare på ATA Gateway-datorn och ange IP-adressen som du konfigurerade i ATA Center för ATA-konsolen. När ATA-konsolen öppnas klickar du på ikonen för inställningar och väljer **Konfiguration**.
+2.  Öppna en webbläsare på ATA Gateway-datorn och ange IP-adressen som du konfigurerade i ATA Center för ATA-konsolen. När ATA-konsolen öppnas klickar du på inställningsikonen och väljer **Konfiguration**.
 
     ![Ikon för konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-3.  På fliken **ATA Gateways** ska du klicka på **Hämta installationsprogram för ATA Gateway**.
+3.  På fliken **ATA Gateways** klickar du på **Hämta installationsprogram för ATA Gateway**.
 
 4.  Spara paketet lokalt.
 
@@ -136,9 +130,10 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 
 ## Se även
 
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

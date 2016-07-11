@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Felsöka ATA med prestandaräknarna | Microsoft Advanced Threat Analytics
-description: Beskriver hur du kan använda prestandaräknare för att felsöka problem med ATA
-keywords:
+title: "Felsöka ATA med prestandaräknarna | Microsoft Advanced Threat Analytics"
+description: "Beskriver hur du kan använda prestandaräknare för att felsöka problem med ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,17 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+
 
 ---
 
 # Felsöka ATA med prestandaräknarna
-ATA-prestandaräknarna ger information om hur bra varje komponent i ATA fungerar. Komponenterna i ATA bearbetar data i tur och ordning, så när ett problem uppstår orsakar det en kedjereaktion som orsakar förlorad trafik. För att åtgärda problemet måste du ta reda på vilken komponent som krånglar och åtgärda problemet i början av kedjan.
+ATA-prestandaräknarna ger information om hur bra varje komponent i ATA fungerar. Komponenterna i ATA bearbetar data i tur och ordning. Om ett problem uppstår kan det därför leda till förlorad trafik någonstans i komponentkedjan. För att åtgärda problemet måste du ta reda på vilken komponent som krånglar och åtgärda problemet i början av kedjan. Använd data i prestandaräknarna för att förstå hur varje komponent fungerar.
 Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture).
 
 **Process för ATA-komponenter**:
@@ -37,7 +31,6 @@ Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](/
 
 3.  Det inträffar ända tillbaka till den första NetworkListener-komponenten, som förlorar trafik när den inte längre kan vidarebefordra entiteter.
 
-4. Använd data i prestandaräknarna för att förstå hur varje komponent fungerar.
 
 ## Prestandaräknare i ATA Gateway
 
@@ -98,7 +91,7 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 |Logisk disk(&#42;)\Medel Disk s/skrivning|Genomsnittlig svarstid för att skriva data till disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontrollera med lagringsteamet/-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med en svarstid på mindre än 10 ms. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
 |\Logisk disk(&#42;)\Diskläsningar/s|Frekvensen för att utföra läsåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 |\Logisk disk(&#42;)\Disk - lästa byte/s|Antal byte per sekund som läses från disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
-|\Logisk disk(&#42;)\Diskskrivningar/s|Frekvensen för att utföra skrivåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning (kan ge information när du felsöker svarstiden för lagring)|
+|\Logisk disk&#42;\Diskskrivningar/s|Frekvensen för att utföra skrivåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning (kan ge information när du felsöker svarstiden för lagring)|
 |\Logisk disk(&#42;)\Disk - skrivna byte/s|Antal byte per sekund som skrivs till disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 
 ## Se även
@@ -106,9 +99,10 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
