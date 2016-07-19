@@ -1,9 +1,8 @@
 ---
 asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
 layout: HubPage
-
-title: Advanced Threat Analytics Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+title: "Dokumentation för Advanced Threat Analytics"
+description: "Teknisk dokumentation för Microsoft Intune – mobilenhet och programhantering"
 keywords: Advanced Threat Analytics Documentation, ATA documentation
 author: msstevenpo
 manager: stevenpo
@@ -14,31 +13,35 @@ ms.service: advanced-threat-analytics
 ms.technology: security
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: 91fe130cb37f40efd90d7e8023b93075f76a5ba4
+
 
 ---
-# Microsoft Advanced Threat Analytics Documentation
+# Dokumentation för Microsoft Advanced Threat Analytics
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Advanced Threat Analytics Documentation</h1>
-      <h2>Learn how to deploy and manage Microsoft Advanced Threat Analytics (ATA), an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks.</h2>
-      <h3>New to ATA? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visit our product page &rarr;</a></h3>
+      <h1>Dokumentation för Microsoft Advanced Threat Analytics</h1>
+      <h2>Lär dig hur du distribuerar och hanterar Microsoft Advanced Threat Analytics (ATA), en lokal produkt som hjälper IT-säkerhetsproffs att skydda företaget från avancerade riktade attacker.</h2>
+      <h3>Har du inte använt ATA förut? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Besök vår produktsida &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
-      <p>Ready to get hands-on?</p>
+      <p>Är du redo att sätta igång?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Prova nu</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">What is Advanced Threat Analytics?</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Frequently asked questions</a></li>
+          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Vad är Advanced Threat Analytics?</a></li>
+          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Vanliga frågor och svar</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA Architecture</a></li>
-          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA capacity planning</a></li>        </ul>
+          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA-arkitektur</a></li>
+          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA-kapacitetsplanering</a></li>        </ul>
       </div>
     </section>
     <div id="journeys">
@@ -49,9 +52,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Understand &amp; Explore</p>
+                  <p>Förstå &amp; utforska</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Microsoft Advanced Threat Analytics.
+                <p class="description column-two-thirds">Lär dig avancerade begrepp, funktioner och egenskaper i Microsoft Advanced Threat Analytics.
                 </p>
               </a>
             </header>
@@ -59,20 +62,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                    <h3>What is ATA?</h3>
-                    <p>Learn how ATA helps IT security professionals protect their enterprise from advanced targeted attacks.</p>
+                    <h3>Vad är ATA?</h3>
+                    <p>Lär dig hur ATA hjälper IT-säkerhetsproffs att skydda företaget från avancerade riktade attacker.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">
-                    <h3>Frequently asked questions</h3>
-                    <p>Get answers to all your technical questions about ATA.</p>
+                    <h3>Vanliga frågor och svar</h3>
+                    <p>Få svar på alla dina tekniska frågor om ATA.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
-                    <h3>ATA release notes</h3>
-                    <p>See a list of what was updated in the latest versions along with known issues and migration guides.</p>
+                    <h3>Versionsanmärkningar för ATA</h3>
+                    <p>Se en lista över vad som har uppdaterats i de senaste versionerna tillsammans med kända problem och migreringsguider.</p>
                   </a>
                 </li>
               </ul>
@@ -83,9 +86,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/plan-design/ata-architecture">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Plan &amp; Design</p>
+                  <p>Planera &amp; utforma</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design ATA.
+                <p class="description column-two-thirds">Planera och utforma ATA.
                 </p>
               </a>
             </header>
@@ -93,20 +96,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                    <h3>ATA Architecture</h3>
-                    <p>Understand what your architecture should look like to support ATA.</p>
+                    <h3>ATA-arkitektur</h3>
+                    <p>Förstå hur arkitekturen ska se ut för att stödja ATA.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>Capacity planning</h3>
-                    <p>Determine how many ATA servers will be needed to support your network.</p>
+                    <h3>Kapacitetsplanering</h3>
+                    <p>Avgör hur många ATA-servrar som behövs för nätverket.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA prerequisites</h3>
-                    <p>Plan the requirements for a successful deployment of ATA in your environment.</p>
+                    <h3>Krav för ATA</h3>
+                    <p>Planera kraven för en lyckad distribution av ATA i miljön.</p>
                   </a>
                 </li>
               </ul>
@@ -117,9 +120,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
                 <div class="title column-third">
                   <span class="step-number">3</span>
-                  <p>Deploy &amp; Use</p>
+                  <p>Distribuera &amp; använda</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use ATA.
+                <p class="description column-two-thirds">Distribuera och använda ATA.
                 </p>
               </a>
             </header>
@@ -127,20 +130,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                    <h3>Before you install ATA</h3>
-                    <p>Follow these steps before installing ATA.</p>
+                    <h3>Innan du installerar ATA</h3>
+                    <p>Följ dessa steg innan du installerar ATA.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/install-ata">
-                    <h3>Install ATA</h3>
-                    <p>Follow the detailed step-by-step installation guide.</p>
+                    <h3>Installera ATA</h3>
+                    <p>Följ den detaljerade installationsguiden steg för steg.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/operate-ata">
-                    <h3>Operate ATA</h3>
-                    <p>Modify ATA configuration and perform daily monitoring using ATA.</p>
+                    <h3>Driftsätta ATA</h3>
+                    <p>Ändra ATA-konfigurationen och utföra daglig övervakning med hjälp av ATA.</p>
                   </a>
                 </li>
             </section>
@@ -150,9 +153,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Troubleshoot</p>
+                  <p>Felsöka</p>
                 </div>
-                <p class="description column-two-thirds">Troubleshoot ATA.
+                <p class="description column-two-thirds">Felsöka ATA.
                 </p>
               </a>
             </header>
@@ -160,20 +163,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                    <h3>Troubleshoot ATA known errors</h3>
-                    <p>Review the steps to remedy ATA known errors.</p>
+                    <h3>Felsöka kända ATA-fel</h3>
+                    <p>Gå igenom stegen för att åtgärda kända ATA-fel.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs">
-                    <h3>Use logs to troubleshoot</h3>
-                    <p>Understand what each component of ATA is doing at any given point in time.</p>
+                    <h3>Använd loggarna för att felsöka</h3>
+                    <p>Förstå vad varje komponent i ATA gör vid en viss tidpunkt.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters">
-                    <h3>Use performance counters to troubleshoot</h3>
-                    <p>Understand how well each component of ATA is performing.</p>
+                    <h3>Använd prestandaräknare för att felsöka</h3>
+                    <p>Förstå prestanda för varje komponent i ATA.</p>
                   </a>
                 </li>
               </ul>
@@ -183,9 +186,15 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up with news about ATA</p>
+      <p>Håll dig uppdaterad med nyheter om ATA</p>
       <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">official Microsoft ATA blog</a></li>
+        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">den officiella Microsoft ATA-bloggen</a></li>
       </ol>
     </aside>
 </article>
+
+
+
+<!--HONumber=Jun16_HO5-->
+
+

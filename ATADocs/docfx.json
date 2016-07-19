@@ -41,5 +41,11 @@
       "layout": "Conceptual",
       "breadcrumb_path": "/enterprise-mobility/toc.json"
     }
-  }
+  },
+  "render": {
+    "theme": "hyde",
+    "dest": "_output"
+  },
+  "basepath": "/advanced-threat-analytics"
 }
+
