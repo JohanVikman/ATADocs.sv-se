@@ -1,5 +1,5 @@
 ---
-title: "Vad är nytt i ATA version 1.5 | Microsoft Advanced Threat Analytics"
+title: Nyheter i ATA version 1.5 | Microsoft ATA
 description: "Visar en lista över vad som är nytt i ATA version 1.5 tillsammans med kända problem"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 5836792bcfadb2585d05d4a195979bd6003c84cf
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 43e9d7af0eaa74abcb81ed9ade6b6a6fa452e6a4
 
 
 ---
@@ -74,6 +74,6 @@ Installera inte KB 3047154 på en virtualiseringsvärd. Det kan leda till att po
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Vanliga frågor och svar om ATA | Microsoft Advanced Threat Analytics"
+title: "Vanliga frågor om ATA | Microsoft ATA"
 description: "Visar en lista med vanliga frågor om ATA och tillhörande svar"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 1121dd059d70dfcf900db1e71c62c58c1080ad06
 
 
 ---
@@ -142,6 +142,6 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

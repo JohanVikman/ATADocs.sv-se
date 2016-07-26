@@ -1,5 +1,5 @@
 ---
-title: "Ändra ATA-konfiguration – lösenord för domänanslutning | Microsoft Advanced Threat Analytics"
+title: "Ändra ATA-konfiguration – lösenord för domänanslutning | Microsoft ATA"
 description: "Beskriver hur du ändrar lösenordet för domänanslutning på ATA-gatewayen."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 860a83aa4e6656480217a457bb2492431d73637a
 
 
 ---
@@ -59,6 +59,6 @@ Du åtgärdar det genom att följa den här proceduren för att uppdatera lösen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Felsöka ATA med ATA-databasen | Microsoft Advanced Threat Analytics"
+title: "Felsöka ATA med ATA-databasen | Microsoft ATA"
 description: "Beskriver hur du kan använda ATA-databasen som hjälp för att felsöka problem"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 7de189008765d24e88a224d027146bf44fb6abbf
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: d2d6549c731a90fb0cdd21ba910c1238d131bc43
 
 
 ---
@@ -64,6 +64,6 @@ Det går att återställa alla inställningar genom att köra följande kommando
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
