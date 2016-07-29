@@ -3,18 +3,18 @@ title: "Installera ATA – Steg 5 | Microsoft ATA"
 description: "Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3e9f68e9868dc9aaf20fe9d1c4fe2b8bdd685291
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3580e748d21db73b6fa8384d84e03b9954b823f8
 
 
 ---
@@ -36,10 +36,11 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
   - **Beskrivning**: <br>Ange en beskrivning av ATA Gateway (valfritt).
   - **Portspeglade domänkontrollanter (FQDN)** (krävs för ATA Gateway, detta kan inte konfigureras för ATA Lightweight Gateway): <br>Ange fullständig FQDN för domänkontrollanten och klicka på plustecknet för att lägga till den i listan. Till exempel  **dc01.contoso.com**<br /><br />![Bild med exempel på FDQN](media/ATAGWDomainController.png)
 
-Följande information gäller för alla servrar du anger i listan **Domänkontrollanter**: Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
-- Minst en domänkontrollant i listan måste vara en global katalogserver. Det gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
+Följande information gäller servrar som du anger i listan **Domänkontrollanter**:
 
- - **Avbilda nätverkskort** (krävs):<br>
+- Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
+- Minst en domänkontrollant i listan måste vara en global katalogserver. Det gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
+- **Avbilda nätverkskort** (krävs):<br>
      - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa tar emot trafiken för den speglade domänkontrollanten.
      - För en ATA Lightweight Gateway bör detta vara alla nätverkskort som används för kommunikation med andra datorer i organisationen.
 
@@ -92,6 +93,6 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
