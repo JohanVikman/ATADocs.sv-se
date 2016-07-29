@@ -3,18 +3,18 @@ title: "Ändra ATA-konfiguration – IP-adress för ATA-konsol | Microsoft ATA"
 description: "Beskriver hur du ändrar IP-adressen för ATA-konsolen, som används för att skapa en genväg till ATA-konsolen på ATA-gatewayerna."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3c02459e6a0cde359e632bf966948cf3a72170a2
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 03062652dd14183629ab1234f2d151931998c108
 
 
 ---
@@ -83,6 +83,6 @@ Följ de här stegen på ATA Center-servern om du behöver ändra IP-adressen so
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
