@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: aa1e44b4f41282fdee193c6205d22ba08718025b
+ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
+ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
 
 
 ---
@@ -24,7 +24,7 @@ Den här artikeln innehåller en lista med vanliga frågor om ATA och ger insikt
 
 
 ## Hur licensieras ATA?
-Licensieringsinformation finns i [Köpa Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+Licensieringsinformation finns i [Köpa Advanced Threat Analytics](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)
 
 
 ## Vad gör jag om ATA-gatewayen inte startar?
@@ -142,6 +142,6 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
