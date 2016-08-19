@@ -1,28 +1,45 @@
 ---
-title: Planera ATA-distributionen | Microsoft Advanced Threat Analytics
+title: Planera din ATA-distribution | Microsoft ATA
 description: "Hjälper dig att planera distributionen och bestämma hur många ATA-servrar som krävs för nätverket"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # ATA-kapacitetsplanering
-Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs för nätverket, inklusive att förstå hur många ATA-gatewayer och ATA Lightweight-gatewayer du behöver samt serverkapacitet för ATA Center och ATA Gateway.
+Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs för att övervaka nätverket, inklusive att förstå hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapaciteten för ATA Center och ATA Gateway.
 
-## Storlek för ATA Center
+##Använda storleksverktyget
+Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distributionen är genom att använda [ATA-storleksverktyget](http://aka.ms/atasizingtool). Kör ATA-storleksverktyget och använd följande fält från resultaten i Excel-filen för att avgöra vilken ATA-kapacitet du behöver:
+
+- ATA Center – CPU och minne: Matcha fältet **Upptagna paket/sek** i ATA Center-tabellen i resultatfilen med fältet **PAKET PER SEKUND** i tabellen [ATA Center](#ata-center-sizing).
+
+- ATA Center – Lagring: Matcha fältet **Gmsn paket/sek** i ATA Center-tabellen i resultatfilen med fältet **PAKET PER SEKUND** i tabellen [ATA Center](#ata-center-sizing).
+- ATA Gateway: Matcha fältet **Upptagna paket/sek** i tabellen ATA Gateway i resultatfilen med fältet **PAKET PER SEKUND** i [tabellen ATA Gateway](#ata-gateway-sizing) eller [tabellen ATA Lightweight Gateway](#ata-lightweight-gateway-sizing), beroende på vilken [gatewaytyp du väljer](#choosing-the-right-gateway-type-for-your-deployment).
+
+
+![Exempel på kapacitetsplaneringsverktyg](media/capacity tool.png)
+
+
+
+Om du av någon anledning inte kan använda ATA-storleksverktyget måste du manuellt samla in informationen om paket/sek från alla dina domänkontrollanter under 24 timmar med ett mycket lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
+I följande avsnitt finns anvisningar om hur du samlar in information om paket/sek från en domänkontrollant.
+
+
+
+### Storlek för ATA Center
 ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende. Nödvändigt diskutrymme för ATA-databasen per domänkontrollant anges nedan. Om du har flera domänkontrollanter beräknar du det fullständiga utrymmet som krävs för ATA-databasen genom att summera nödvändigt diskutrymme per domänkontrollant.
 > [!NOTE] 
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
@@ -74,7 +91,7 @@ Följande är exempel på scenarier där domänkontrollanter bör omfattas av AT
 - Datacenter på huvudkontor (med domänkontrollanter med fler än 10 000 paket per sekund)
 
 
-## Storlek för ATA Lightweight Gateway
+### Storlek för ATA Lightweight Gateway
 
 En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 > Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
 
 
-## Storlek på ATA-gateway
+### Storlek på ATA-gateway
 
 Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribueras.
 
@@ -184,6 +201,6 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,20 +1,20 @@
 ---
-title: ATA-databashantering | Microsoft Advanced Threat Analytics
+title: ATA-databashantering | Microsoft ATA
 description: "Metoder som hjälper dig att flytta, säkerhetskopiera eller återställa ATA-databasen."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
 
 
 ---
@@ -52,8 +52,7 @@ Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administratio
 
 8.  Kör följande kommando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
 
-
-    I stället för <New DB Location> där `&lt;New DB Location&gt;` är den nya mappsökvägen.
+   I stället för <New DB Location> där `&lt;New DB Location&gt;` är den nya mappsökvägen.
 
 9.  Uppdatera HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath till den nya mappsökvägen.
 
@@ -62,12 +61,11 @@ Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administratio
 ## Se även
 - [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Ta en titt i ATA forumet!] (https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

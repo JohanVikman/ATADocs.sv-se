@@ -1,20 +1,20 @@
 ---
-title: "Felsöka ATA-felloggen | Microsoft Advanced Threat Analytics"
+title: "Felsöka ATA-felloggen | Microsoft ATA"
 description: "Beskriver hur du kan felsöka vanliga fel i ATA"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e0745079465aecefd26571eea894d19b82cbc216
-ms.openlocfilehash: c72bca3cb1eef1f3fb59f666c6143cf5c095bde9
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
 
 
 ---
@@ -58,6 +58,6 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

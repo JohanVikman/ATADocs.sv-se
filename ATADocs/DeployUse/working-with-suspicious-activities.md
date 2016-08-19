@@ -1,20 +1,20 @@
 ---
-title: "Arbeta med misstänkta aktiviteter | Microsoft Advanced Threat Analytics"
+title: "Arbeta med misstänkta aktiviteter | Microsoft ATA"
 description: "Beskriver hur du granskar misstänkta aktiviteter som identifieras av ATA"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e07ab99454133eab0480277ec2e54a1c3253a621
 
 
 ---
@@ -113,6 +113,6 @@ Du kan ändra status för en misstänkt aktivitet genom att klicka på den misst
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

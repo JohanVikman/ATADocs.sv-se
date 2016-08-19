@@ -1,20 +1,20 @@
 ---
-title: "Ändra ATA-konfiguration – IIS-certifikat | Microsoft Advanced Threat Analytics"
+title: "Ändra ATA-konfiguration – IIS-certifikat | Microsoft ATA"
 description: "Beskriver hur du ändrar certifikatet som används av IIS för ATA Center."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 07888a46e26a7f87dc3b6424d97aba0813b43d02
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 18d3dfdc2262765d71d82f395273e2972118cbfb
 
 
 ---
@@ -62,6 +62,6 @@ Följ de här stegen från ATA Center-servern om du behöver ändra certifikatet
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

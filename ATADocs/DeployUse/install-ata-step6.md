@@ -1,20 +1,20 @@
 ---
-title: Installera ATA | Microsoft Advanced Threat Analytics
+title: Installera ATA | Microsoft ATA
 description: "I det sista steget i ATA-installationen konfigurerar du undernäten med kortsiktiga lån och honeytokenanvändaren."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: c9712b0ad8d67b1e618cb75b14785f8079020864
 
 
 ---
@@ -64,6 +64,6 @@ ATA startar sökning efter misstänkta aktiviteter omedelbart. En del aktivitete
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

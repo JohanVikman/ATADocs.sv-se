@@ -1,20 +1,20 @@
 ---
-title: "Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft Advanced Threat Analytics"
+title: "Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft ATA"
 description: "Beskriver hur du ändrar IP-adress, port eller certifikat för ett ATA Center."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
 
 
 ---
@@ -80,6 +80,6 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

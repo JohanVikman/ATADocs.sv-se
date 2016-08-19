@@ -1,20 +1,20 @@
 ---
-title: "Felsöka ATA med prestandaräknarna | Microsoft Advanced Threat Analytics"
+title: "Felsöka ATA med prestandaräknarna | Microsoft ATA"
 description: "Beskriver hur du kan använda prestandaräknare för att felsöka problem med ATA"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4b4ff22df77b904a654b57aca824c154ea935560
 
 
 ---
@@ -71,7 +71,7 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 |EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 |NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 |EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|CenterDatabase & #42; Blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|CenterDatabase &#42; Blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 
 
 > [!NOTE]
@@ -103,6 +103,6 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
