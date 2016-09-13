@@ -1,6 +1,9 @@
 # [Förstå och utforska](what-is-ata.md)
 ## [Vad är Microsoft Advanced Threat Analytics?](what-is-ata.md)
+## [Vilka hot identifierar ATA?](ata-threats.md)
 ## [Versionsanmärkningar för ATA](ata-release-notes.md)
+### [Nyheter i ATA version 1.7](whats-new-version-1.7.md)
+#### [Uppdatera till ATA 1.7 – migreringsguide](ata-update-1.7-migration-guide.md)
 ### [Nyheter i ATA version 1.6](whats-new-version-1.6.md)
 #### [Uppdatera till ATA 1.6 – migreringsguide](ata-update-1.6-migration-guide.md)
 ### [Nyheter i ATA version 1.5](whats-new-version-1.5.md)
@@ -12,6 +15,6 @@
 # [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

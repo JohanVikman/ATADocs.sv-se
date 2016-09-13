@@ -4,7 +4,7 @@ description: "I steg fyra av ATA-installationen får du hjälp att installera AT
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 6052a911c12f8dbb757ab8445f9e0c6ec09b530e
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Installera ATA – Steg 4
 
@@ -41,22 +45,32 @@ På ATA Gateway-servern utför du följande steg.
 > [!NOTE] 
 > Installation direkt från ZIP-filen misslyckas.
 
-2.  Kör **Microsoft ATA Gateway Setup.exe** från en upphöjd kommandotolk och följ installationsguiden.
+2.  Kör **Microsoft ATA Gateway Setup.exe** och följ installationsguiden.
 
 3.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
+4.  Installationsguiden kommer automatiskt att kontrollera om servern är en domänkontrollant eller en dedikerad server. Om den är en domänkontrollant kommer ATA Lightweight Gateway att installeras, om det är en dedikerad server, kommer ATA Gateway att installeras. 
+    
+    Till exempel vid en ATA Lightweight Gateway, visas följande skärmbild så att du vet att en ATA Lightweight Gateway kommer att installeras på domänkontrollanten:
+    
+    ![Installation av ATA Lightweight Gateway](media/ATA-lightweight-gateway-install-selected.png) klicka på **Nästa**.
+
+    > [!NOTE] 
+    > Om domänkontrollanten eller dedikerad server inte uppfyller maskinvarukraven för installation, får du en varning. Detta förhindrar inte att du klickar på **Nästa** och fortsätter med installationen. Detta kan vara rätt alternativ för installation av ATA i en liten labbtestmiljö där du inte behöver lika mycket utrymme för lagring av data. I produktionsmiljöer, rekommenderas det att arbeta med ATA:s guide för [kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning) för att se till att dina domänkontrollanter eller dedikerade servrar uppfyller de nödvändiga kraven.
+
 4.  Under **ATA Gateway-konfiguration** anger du följande information baserat på miljön:
 
-    ![Bild av ATA Gateway-konfiguration](media/ATA-Gateway-Configuration.JPG)
+    ![Bild av ATA Gateway-konfiguration](media/ATA-Gateway-Configuration.png)
 
     |Fält|Beskrivning|Kommentar|
     |---------|---------------|------------|
     |Installationssökväg|Det här är den plats där ATA Gateway kommer att installeras. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Gateway|Låt standardvärdet vara kvar|
-    |SSL-certifikat för ATA Gateway-tjänsten|Det här är det certifikat som kommer att användas av ATA Gateway.|Använd bara ett självsignerat certifikat för labbmiljöer.|
-    |ATA Gateway-registrering|Ange ATA-administratörens användarnamn och lösenord.|För att ATA-gatewayen ska registreras i ATA Center anger du användarnamn och lösenord för den användare som installerade ATA Center. Användaren måste vara medlem i någon av följande lokala grupper i ATA Center.<br /><br />-   Administratörer<br />-   Microsoft Advanced Threat Analytics-administratörer **Obs!** De här autentiseringsuppgifterna används enbart för registrering och lagras inte i ATA.|
-    Följande komponenter installeras och konfigureras under installationen av ATA Gateway:
+    |SSL-certifikat för Gateway-tjänsten|Det här är det certifikat som kommer att användas av ATA Gateway.|Använd bara ett självsignerat certifikat för labbmiljöer.|
+    |Gateway-registrering|Ange ATA-administratörens användarnamn och lösenord.|För att ATA-gatewayen ska registreras i ATA Center anger du användarnamn och lösenord för den användare som installerade ATA Center. Användaren måste vara medlem i någon av följande lokala grupper i ATA Center.<br /><br />-   Administratörer<br />-   Microsoft Advanced Threat Analytics-administratörer **Obs!** De här autentiseringsuppgifterna används enbart för registrering och lagras inte i ATA.|
+    
+5. Klicka på **Installera**. Följande komponenter installeras och konfigureras under installationen av ATA Gateway:
 
-    -   KB 3047154
+    -   KB 3047154 (endast för Windows Server 2012 R2)
 
         > [!IMPORTANT]
         > -   Installera inte KB 3047154 på en virtualiseringsvärd (värden som kör virtualiseringen, det går bra att köra den på en virtuell dator). Det kan leda till att portspegling slutar fungera ordentligt. 
@@ -84,6 +98,6 @@ På ATA Gateway-servern utför du följande steg.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Visar en lista med vanliga frågor om ATA och tillhörande svar"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,12 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
-ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
+ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
+ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
 
 
 ---
+*Gäller för: Advanced Threat Analytics version 1.7*
 
 # Vanliga frågor och svar om ATA
 Den här artikeln innehåller en lista med vanliga frågor om ATA och ger insikt och svar.
@@ -39,23 +40,26 @@ Du kan simulera misstänkta aktiviteter som är ett test slutpunkt till slutpunk
 Detta måste fjärrköras mot domänkontrollanten som övervakas och inte från ATA-gatewayen.
 
 ## Hur kan jag bekräfta vidarebefordran av Windows-händelser?
-Du kan köra följande från en kommandotolk i katalogen: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
+Du kan placera följande kod i en fil och sedan köra den från Kommandotolken i katalogen:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** enligt följande:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+mongo.exe ATA-filnamn
+
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## Fungerar ATA med krypterad trafik?
-Krypterad trafik analyseras inte (till exempel: LDAPS, IPSEC ESP).
+ATA förlitar sig på analys av flera nätverksprotokoll och även händelser som samlats in från SIEM eller via vidarebefordran av Windows-händelse, så även om krypterad trafik inte kan analyseras (till exempel LDAPS och IPSEC ESP), fungerar ATA fortfarande och de flesta identifieringarna påverkas inte
+
 ## Fungerar ATA med Kerberos Armoring?
 Aktivering av Kerberos Armoring, som även kallas Flexible Authentication Secure Tunneling (FAST), stöds av ATA, med undantag för identifiering av ”over-pass the hash” som inte fungerar.
 ## Hur många ATA-gatewayer behöver jag?
 
-Till att börja med rekommenderar vi att du använder ATA Lightweight Gateway på alla domänkontrollanter som kan hantera det. Information om att fastställa detta finns i [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-Om alla domänkontrollanter kan omfattas av ATA Lightweight Gateway behövs ingen ATA Gateway.
-
-Tänk på följande när du bestämmer hur många ATA-gatewayer du behöver för domänkontrollanter som inte omfattas av ATA Lightweight Gateway:
-
- - Den totala mängden trafik domänkontrollanterna producerar, samt nätverksarkitekturen (för att kunna konfigurera portspegling). Om du vill läsa mer om att avgöra hur mycket trafik som domänkontrollanterna producerar kan du se [Beräkning av trafik för domänkontrollanter](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation)
- - Driftbegränsningarna för portspegling avgör också hur många ATA-gatewayer du behöver för att stödja domänkontrollanterna, t.ex. per växel, per datacenter, per region – alla miljöer har egna överväganden. 
+Antalet ATA-gatewayer beror på nätverkslayout, volym av paket och volym av händelser som avbildas av ATA. För att avgöra exakt antal, se [Storlek för ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 ## Hur mycket lagringsutrymme måste jag ha för ATA?
 För varje hel dag med i genomsnitt 1 000 paket/sek behöver du 0,3 GB lagring.<br /><br />Mer information om storlek för ATA Center finns i [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -79,11 +83,10 @@ Om en virtuell domänkontrollant inte kan omfattas av ATA Lightweight Gateway ka
 Det finns två saker att säkerhetskopiera:
 
 -   Trafik och händelser som lagras av ATA, som kan säkerhetskopieras med valfri metod för databassäkerhetskopiering som stöds. Mer information finns i [ATA-databashantering](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Konfiguration av ATA, som lagras i databasen och säkerhetskopieras automatiskt varje timme. 
-
+-   Konfiguration av ATA. Detta lagras i databasen och säkerhetskopieras automatiskt varje timme i mappen **Säkerhetskopiering** på distributionsplatsen för ATA Center.  Se [ATA-databashantering](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) för mer information.
 ## Vad kan ATA identifiera?
 ATA identifierar kända skadliga attacker och tekniker, säkerhetsproblem och risker.
-En fullständig lista över ATA-identifieringar finns i [Vad är Microsoft Advanced Threat Analytics?](what-is-ata.md).
+En fullständig lista över ATA-identifieringar finns i [Vilka identifieringar utför ATA?](ata-threats.md).
 
 ## Vilken typ av lagring behöver jag för ATA?
 Vi rekommenderar snabb lagring (diskar med 7 200 RPM rekommenderas inte) som har diskåtkomst med låg latens (mindre än 10 ms). RAID-konfigurationen ska ha stöd för tung skrivbelastning (RAID-5/6 och tillhörande produkter rekommenderas inte).
@@ -126,8 +129,7 @@ Nej. ATA övervakar alla enheter i nätverket som utför autentiserings- och auk
 Ja. Eftersom datorkonton (samt eventuella andra entiteter) kan användas för att utföra skadliga aktiviteter övervakar ATA beteendet hos alla datorkonton och alla andra entiteter i miljön.
 
 ## ATA kan stödja flera domäner och flera skogar?
-Vid allmän tillgänglighet kommer Microsoft Advanced Threat Analytics att ha stöd för flera domäner med samma skogsgräns. Själva skogen är den faktiska ”säkerhetsgränsen”, vilket innebär att stöd för flera domäner gör det möjligt för våra kunder att ha 100 % täckning för sina miljöer med ATA.
-
+Microsoft Advanced Threat Analytics stöder miljöer med flera domäner i samma skogsgräns. Flera skogar kräver en ATA-distribution för varje skog.
 ## Går det att se den övergripande hälsan för distributionen?
 Ja, det går att se både den övergripande hälsan för distributionen och specifika problem som är relaterade till konfiguration, anslutning osv., och du får en avisering när de inträffar.
 
@@ -142,6 +144,6 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 
