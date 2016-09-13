@@ -1,6 +1,6 @@
 # [Förstå och utforska](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Planera och utforma](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Distribuera och använda](install-ata.md)
+# [Distribuera och använda](preinstall-ata.md)
 ## [Innan du installerar ATA](preinstall-ata.md)
 ### [Konfigurera portspegling](configure-port-mirroring.md)
 ### [Verifiera portspegling](validate-port-mirroring.md)
@@ -17,12 +17,12 @@
 ### [Ändra ATA-konfiguration](modifying-ata-configuration.md)
 #### [Ändra IP-adressen för ATA Center](modifying-ata-config-centerip.md)
 #### [Ändra ATA Center-certifikat](modifying-ata-config-centercert.md)
-#### [Ändra IP-adressen för ATA-konsolen](modifying-ata-config-consoleip.md)
-#### [Ändra IIS-certifikat](modifying-ata-config-iiscert.md)
+#### [Ändra ATA-konsolens URL](modifying-ata-config-consoleurl.md)
 #### [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
 ### [Arbeta med ATA-konsolen](working-with-ata-console.md)
-### [Ange ATA-aviseringar](setting-ata-alerts.md)
+### [ATA-rollgrupper](ata-role-groups.md)
 ### [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
+### [Ange ATA-aviseringar](setting-ata-alerts.md)
 ### [Arbeta med identifieringsinställningar](working-with-detection-settings.md)
 ### [ATA Health Center](ata-health-center.md)
 ### [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
@@ -31,6 +31,6 @@
 # [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

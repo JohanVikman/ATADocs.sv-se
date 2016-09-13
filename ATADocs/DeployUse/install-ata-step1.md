@@ -4,7 +4,7 @@ description: "Första steget för att installera ATA omfattar att hämta och ins
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,21 +13,25 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
-ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Installera ATA – Steg 1
 
 >[!div class="step-by-step"]
 [Steg 2 »](install-ata-step2.md)
 
-Den här installationsproceduren innehåller anvisningar för att utföra en helt ny installation av ATA 1.6. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns i [ATA-migreringsguide för version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+Den här installationsproceduren innehåller anvisningar för att utföra en helt ny installation av ATA 1.7. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns i [ATA-migreringsguide för version 1.7](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide).
 
 > [!IMPORTANT] 
-> Installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
+> Om du använder Windows 2012 R2 kan du installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
 
 ## Steg 1. Hämta och installera ATA Center
 När du har kontrollerat att servern uppfyller kraven kan du fortsätta med installationen av ATA Center.
@@ -57,19 +61,16 @@ På ATA Center-servern utför du följande steg.
     |---------|---------------|------------|
     |Installationssökväg|Det här är den plats där ATA Center kommer att installeras. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center|Låt standardvärdet vara kvar|
     |Datasökväg för databasen|Det här är den plats där MongoDB-databasfilerna kommer att finnas. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Ändra platsen till en plats där det finns utrymme att växa, baserat på storleken. **Obs!** <ul><li>I produktionsmiljöer bör du använda en enhet som har tillräckligt med utrymme baserat på kapacitetsplaneringen.</li><li>Vid stora distributioner bör databasen finnas på en separat fysisk enhet.</li></ul>Storleksinformation finns i [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning).|
-    |IP-adress för ATA Center-tjänsten: Port|Det här är den IP-adress som ATA Center-tjänsten kommer att lyssna på för kommunikation från ATA-gatewayerna.<br /><br />**Standardport:** 443|Klicka på nedåtpilen för att välja den IP-adress som ska användas av ATA Center-tjänsten.<br /><br />IP-adressen och porten för ATA Center-tjänsten får inte vara samma som IP-adressen och porten för ATA-konsolen. Tänk på att ändra porten för ATA-konsolen.|
-    |SSL-certifikat för ATA Center-tjänsten|Det här är det certifikat som kommer att användas av ATA Center-tjänsten.|Klicka på nyckelikonen om du vill välja ett installerat certifikat eller kontrollera ett självsignerat certifikat vid distribution i en labbmiljö.|
-    |ATA-konsolens IP-adress|Det här är den IP-adress som ska användas av IIS för ATA-konsolen.|Klicka på nedåtpilen för att välja den IP-adress som används av ATA-konsolen. **Obs!** Anteckna denna IP-adress för att göra det enklare att komma åt ATA-konsolen från ATA Gateway.|
-    |SSL-certifikat för ATA-konsolen|Det här är certifikatet som ska användas av IIS.|Klicka på nyckelikonen om du vill välja ett installerat certifikat eller kontrollera ett självsignerat certifikat vid distribution i en labbmiljö.|
-
-    ![Bild för konfiguration av ATA center](media/ATA-Center-Configuration.JPG)
+    |IP-adress för Center-tjänsten: Port|Det här är den IP-adress som ATA Center-tjänsten kommer att lyssna på för kommunikation från ATA-gatewayerna.<br /><br />**Standardport:** 443|Klicka på nedåtpilen för att välja den IP-adress som ska användas av ATA Center-tjänsten.<br /><br />IP-adressen och porten för ATA Center-tjänsten får inte vara samma som IP-adressen och porten för ATA-konsolen. Tänk på att ändra porten för ATA-konsolen.|
+    |SSL-certifikat för Center-tjänsten|Det här är det certifikat som kommer att användas av ATA-konsolen och ATA Center-tjänsten.|Klicka på nyckelikonen om du vill välja ett installerat certifikat eller kontrollera ett självsignerat certifikat vid distribution i en labbmiljö.|
+    |Konsolens IP-adress|Det här är den IP-adress som ska användas för ATA-konsolen.|Klicka på nedåtpilen för att välja den IP-adress som används av ATA-konsolen. **Obs!** Anteckna denna IP-adress för att göra det enklare att komma åt ATA-konsolen från ATA Gateway.|
+    
+    ![Bild för konfiguration av ATA center](media/ATA-Center-Configuration.png)
 
 10.  Klicka på **Installera** för att installera ATA Center och dess komponenter.
     Följande komponenter installeras och konfigureras under installationen av ATA Center:
 
-    -   IIS (Internet Information Services)
-
-    -   ATA Center-tjänsten och ATA-konsolens IIS-plats
+    -   ATA Center-tjänsten
 
     -   MongoDB
 
@@ -101,6 +102,6 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Beskriver hur du ändrar IP-adress, port eller certifikat för ett
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Ändra ATA-konfiguration – IP-adress för ATA Center
 
@@ -46,9 +50,9 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 
     ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-3.  Välj **Allmänt**.
+3.  Välj **Center**.
 
-4.  Under ** IP-adress för ATA Center-tjänst: port** väljer du någon av de befintliga IP-adresserna eller **Lägg till anpassad IP-adress** och anger en IP-adress.
+4.  Under ** IP-adress för Center-tjänst: port** väljer du någon av de befintliga IP-adresserna eller **Lägg till anpassad IP-adress** och anger en IP-adress.
 
 5.  Klicka på **Spara**.
 
@@ -76,10 +80,10 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
