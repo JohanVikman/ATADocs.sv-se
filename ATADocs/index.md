@@ -14,8 +14,8 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
+ms.sourcegitcommit: 1d610cead982b7a87a03339d960e6a2236a97932
+ms.openlocfilehash: 6cca68b7f0410c9b40ffdb2c97feaf0663b93ae0
 
 
 ---
@@ -36,6 +36,7 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
       <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NY</b></mark> <a href="/understand-explore/whats-new-version-1.7">version av ATA 1.7</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Vad är Advanced Threat Analytics?</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Vanliga frågor och svar</a></li>
         </ul>
@@ -195,6 +196,6 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
