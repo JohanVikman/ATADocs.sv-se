@@ -4,7 +4,7 @@ description: "Beskriver tvåstegsprocessen för att förnya eller ersätta certi
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
 
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
+
 # Ändra ATA-konfiguration – ATA Center-certifikat
 
 >[!div class="step-by-step"]
-[«ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
-[ATA-konsolens IP-adress»](modifying-ata-config-consoleip.md)
+[« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
+[ATA-konsolens URL»](modifying-ata-config-consoleurl.md)
 
 ## Ändra ATA Center-certifikatet
-Om certifikaten löper ut och behöver förnyas eller ersättas när det nya certifikatet har installerats i det lokala datorarkivet på ATA Center-servern ersätter du certifikatet genom att följa denna metod i två steg:
+Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas när det nya certifikatet har installerats i det lokala datorarkivet på ATA Center-servern ersätter du certifikatet genom att följa denna metod i två steg:
 
 -   Första steget – Uppdatera certifikatet som du vill att ATA Center-tjänsten ska använda. ATA Center-tjänsten är då fortfarande kopplad till det ursprungliga certifikatet. När ATA-gatewayerna synkar sin konfiguration har de två möjliga certifikat som är giltiga för ömsesidig autentisering. Så länge ATA-gatewayen kan ansluta med det ursprungliga certifikatet försöker den inte använda det nya.
 
@@ -35,6 +39,7 @@ Om certifikaten löper ut och behöver förnyas eller ersättas när det nya cer
 > [!NOTE]
 > -   Om en ATA Gateway var offline under det första steget och aldrig fick den uppdaterade konfigurationen måste du uppdatera konfigurationens JSON-fil manuellt på ATA Gatewayen.
 > -   Certifikatet som du använder måste vara betrott av ATA-gatewayerna.
+> -   Certifikatet används också för ATA-konsolen, så att det ska matcha ATA-konsolens adress för att undvika webbläsarvarningar
 > -   Om du behöver distribuera en ny ATA-gateway efter aktivering av det nya certifikatet måste du hämta ATA-gatewaykonfigurationspaketet igen.
 
 1.  Öppna ATA-konsolen.
@@ -43,7 +48,7 @@ Om certifikaten löper ut och behöver förnyas eller ersättas när det nya cer
 
     ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-3.  Välj **ATA Center**.
+3.  Välj **Center**.
 
 4.  Under **Certifikat** väljer du något av certifikaten i listan.
 
@@ -60,16 +65,16 @@ Om certifikaten löper ut och behöver förnyas eller ersättas när det nya cer
 8.  Se till att alla ATA Gateways kan synkronisera sina konfigurationer efter att ändringen har aktiverats.
 
 >[!div class="step-by-step"]
-[«ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
-[ATA-konsolens IP-adress»](modifying-ata-config-consoleip.md)
+[« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
+[ATA-konsolens URL»](modifying-ata-config-consoleurl.md)
 
 ## Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

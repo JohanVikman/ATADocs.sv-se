@@ -4,7 +4,7 @@ description: "Beskriver kraven för en lyckad distribution av ATA i din miljö"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87891f6ad683ed9536d3d3f27449feac9bd9dee1
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Krav för ATA
 Den här artikeln beskriver kraven för en lyckad distribution av ATA i din miljö.
@@ -27,6 +31,8 @@ Den här artikeln beskriver kraven för en lyckad distribution av ATA i din milj
 
 
 ATA består av ATA Center, ATA Gateway och/eller ATA Lightweight Gateway. Mer information om ATA-komponenterna finns i [ATA-arkitektur](ata-architecture.md).
+
+ATA-systemet fungerar på Active Directory-skogens gränser och stöder skogens funktionella nivå (FFL) för Windows 2003 och högre.
 
 
 [Innan du börjar](#before-you-start): Det här avsnittet innehåller information som du bör samla in samt konton och nätverksentiteter som du bör ha innan du börjar installera ATA.
@@ -50,11 +56,10 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
--   Ha en lista över alla undernät som används i nätverket för VPN och Wi-Fi, som omtilldelar IP-adresser mellan enheter inom en mycket kort tidsperiod (sekunder eller minuter).  Du bör identifiera de här undernäten med kortsiktiga lån så att ATA kan minska cachelivstiden för snabb omtilldelning mellan enheter. Information om konfiguration av undernät med kortsiktiga lån finns i [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata).
--   Kontrollera att Message Analyzer och Wire Shark inte är installerade på ATA Gateway eller ATA Center.
--    Valfritt: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt ** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-   Kontrollera att Message Analyzer och WireShark inte är installerade på ATA Gateway.
+-    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt ** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytoken-användaren behöver du användarkontots SID, inte användarnamnet.
+-   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytoken-användaren behöver du användarkontots SID, inte användarnamnet. Mer information finns i ämnet [Arbeta med identifieringsinställningar i ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
 
 -   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelse 4776 för att förbättra ATA Pass-the-Hash-identifiering ytterligare. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
@@ -62,13 +67,16 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 ## Krav för ATA Center
 Det här avsnittet innehåller kraven för ATA Center.
 ### Allmänt
-ATA Center har stöd för installation på en server med Windows Server 2012 R2. ATA Center kan installeras på en server som är medlem i en domän eller arbetsgrupp.
+ATA Center har stöd för installation på en server med Windows Server 2012 R2 eller Windows Server 2016. ATA Center kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 
-Innan du installerar ATA Center ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Innan du installerar ATA Center med Windows 2012 R2, ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 Installation av ATA Center som en virtuell dator stöds. 
+
+>[!NOTE] 
+> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du skapar en ny kontrollpunkt för att undvika att databasen skadas.
 ### Serverspecifikationer
@@ -76,8 +84,6 @@ När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar*
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
 Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs, mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
->[!NOTE] 
-> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -85,11 +91,11 @@ ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha ti
 
 ### Nätverkskort
 Du bör ha följande:
--   Minst ett nätverkskort
+-   Minst ett nätverkskort (om fysisk server i VLAN-miljö används, rekommenderar vi att två nätverkskort används)
 
 -   Två IP-adresser (rekommenderas men krävs inte)
 
-Kommunikation mellan ATA Center och ATA Gateway krypteras med SSL på port 443. Dessutom körs ATA-konsolen på IIS och skyddas med SSL på port 443. **Två IP-adresser** rekommenderas. ATA Center-tjänsten binder port 443 till den första IP-adressen och IIS binder port 443 till den andra IP-adressen.
+Kommunikation mellan ATA Center och ATA Gateway krypteras med SSL på port 443. Dessutom använder ATA-konsolen också SSL på port 443. **Två IP-adresser** rekommenderas. ATA Center-tjänsten binder port 443 till den första IP-adressen och ATA-konsolen binder port 443 till den andra IP-adressen.
 
 > [!NOTE]
 > En enda IP-adress med två olika portar kan användas, men två IP-adresser rekommenderas.
@@ -97,7 +103,7 @@ Kommunikation mellan ATA Center och ATA Gateway krypteras med SSL på port 443. 
 ### Portar
 I följande tabell visas de portar som minst måste öppnas för att ATA Center ska fungera korrekt.
 
-I den här tabellen är IP-adress 1 bunden till ATA Center-tjänsten och IP-adress 2 är bunden till IIS-tjänsten för ATA-konsolen:
+I den här tabellen är IP-adress 1 bunden till ATA Center-tjänsten och IP-adress 2 är bunden till ATA-konsolen:
 
 |Protokoll|Transport|Port|Till/från|Riktning|IP-adress|
 |------------|-------------|--------|-----------|-------------|--------------|
@@ -116,22 +122,20 @@ För att underlätta installationen av ATA Center kan du installera självsigner
 > Certifikatets providertyp måste vara kryptografiprovider (CSP).
 
 
-ATA Center kräver certifikat för följande tjänster:
+> Användning av automatisk certifikatförnyelse stöds inte.
 
--   IIS (Internet Information Services) – webbservercertifikat
-
--   ATA Center-tjänst – certifikat för serverautentisering
 
 > [!NOTE]
-> Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av IIS. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
+> Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
 
 ## Krav för ATA Gateway
 Det här avsnittet innehåller kraven för ATA Gateway.
 ### Allmänt
-ATA Gateway har stöd för installation på en server med Windows Server 2012 R2.
+ATA Gateway stöder installation på en server som kör Windows Server 2012 R2 eller Windows Server 2016 (inkludera server core).
 ATA Gateway kan installeras på en server som är medlem i en domän eller arbetsgrupp.
+ATA Gateway kan användas för att övervaka domänkontrollanter i domänens funktionella nivå för Windows 2003 och högre.
 
-Innan du installerar ATA Gateway ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Innan du installerar ATA Gateway med Windows 2012 R2, ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
 
@@ -143,6 +147,8 @@ En ATA-gateway har stöd för övervakning av flera domänkontrollanter, beroend
 
 >[!NOTE] 
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+
+Mer information om ATA Gateways maskinvarukrav finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -161,7 +167,7 @@ ATA- gatewayen kräver minst ett hanteringskort och minst ett avbildningskort:
         ![Konfigurera DNS-suffix i avancerade TCP/IP-inställningar](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
-        > Om ATA-gatewayen är medlem i domänen konfigureras det automatiskt.
+        > Om ATA Gateway är medlem i domänen kan den konfigureras automatiskt.
 
 -   **Avbildningskort** – används för att avbilda trafik till och från domänkontrollanterna.
 
@@ -184,14 +190,14 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
 |NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
-|SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />–   IP-adress för IIS|Utgående|
+|SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />- Konsolens IP-adress|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 
 > [!NOTE]
 > Som en del av lösningsprocessen som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA-gatewayerna.
 >
-> -   NTLM över RPC
-> -   NetBIOS
+> -   NTLM över RPC (TCP-Port 135)
+> -   NetBIOS (UDP-port 137)
 
 ### Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har Internetåtkomst följer du proceduren för att importera en CRL manuellt, och ser till att installera alla CRL-distributionsplatser för hela kedjan.<br>
@@ -205,11 +211,9 @@ Ett certifikat med stöd för **serverautentisering** måste vara installerat i 
 ## Krav för ATA Lightweight Gateway
 Det här avsnittet innehåller kraven för ATA Lightweight Gateway.
 ### Allmänt
-ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2.
+ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (inkludera Core men inte Nano).
 
 Domänkontrollanten kan vara en skrivskyddad domänkontrollant (RODC).
-
-Domänkontrollanten kan inte vara Server Core.
 
 Innan du installerar ATA Lightweight Gateway på en domänkontrollant som kör Windows Server 2012 R2 SP1 måste du bekräfta att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
@@ -223,6 +227,7 @@ ATA Lightweight Gateway kan distribueras på domänkontrollanter med olika belas
 >[!NOTE] 
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
+Mer information om ATA Lightweight Gateways maskinvarukrav finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ### Tidssynkronisering
 ATA Center-servern, ATA Lightweight Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -238,7 +243,7 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
 |NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
-|SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />–   IP-adress för IIS|Utgående|
+|SSL|TCP|443 eller enligt konfiguration för Center-tjänsten|ATA Center:<br /><br />–   IP-adress för Center-tjänsten<br />- Konsolens IP-adress|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 
 > [!NOTE]
@@ -260,6 +265,8 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 -   Internet Explorer version 10 och senare
 
+-   Microsoft Edge
+
 -   Google Chrome 40 och senare
 
 -   Minsta bredd för skärmupplösning på 1 700 bildpunkter
@@ -273,6 +280,7 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 
 
-<!--HONumber=Jul16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

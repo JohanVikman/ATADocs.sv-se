@@ -13,11 +13,15 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 3f357d2b21c453e0057370f3dfbbe45e39f3ba97
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 9f408d7c2cb9c14caee175a1dd1c9ddb1baf9faa
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # ATA Health Center
 Med ATA Health Center får du reda på hur ATA-tjänsten fungerar och blir informerad om problem.
@@ -45,6 +49,6 @@ Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Ce
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

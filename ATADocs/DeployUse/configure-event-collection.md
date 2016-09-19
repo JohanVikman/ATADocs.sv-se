@@ -13,11 +13,15 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.6 och 1.7*
+
+
 
 # Konfigurera händelseinsamling
 För att förbättra identifieringsfunktionerna behöver ATA Windows-händelselogg ID 4776. Den kan vidarebefordras till ATA Gateway på ett av två sätt, antingen genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att [Konfigurera vidarebefordran av Windows-händelser](#configuring-windows-event-forwarding).
@@ -28,7 +32,7 @@ Förutom att samla in och analysera nätverkstrafik till och från domänkontrol
 ### SIEM/Syslog
 För att ATA ska kunna använda data från en Syslog-server måste du göra följande:
 
--   Konfigurera en av ATA Gateway-servrarna så att den lyssnar på och godkänner händelser som vidarebefordras från SIEM/Syslog-servern.
+-   Konfigurera ATA Gateway-servrarna så att de lyssnar på och godkänner händelser som vidarebefordras från SIEM/Syslog-servern.
 
 -   Konfigurera SIEM/Syslog-servern så att den vidarebefordrar specifika händelser till ATA Gateway.
 
@@ -43,13 +47,11 @@ Om du inte använder en SIEM/Syslog-server kan du konfigurera Windows-domänkont
 
 ## Konfigurera ATA Gateway för att lyssna efter SIEM-händelser
 
-1.  På ATA Gateway-konfigurationen aktiverar du **Syslog Listener UDP**.
-
-    Ange IP-adressen som lyssnar på det sätt som beskrivs i bilden nedan. Standardporten är 514.
+1.  I ATA-konfigurationen, under fliken "Händelser", aktiverar du **Syslog** och trycker på **Spara**.
 
     ![Bild för att aktivera syslog listener UDP](media/ATA-enable-siem-forward-events.png)
 
-2.  Konfigurera SIEM- eller Syslog-servern för att vidarebefordra Windows händelse-ID 4776 till IP-adressen som valdes ovan. Ytterligare information om hur du konfigurerar SIEM finns onlinehjälpen för SIEM eller alternativ för teknisk support för specifika formateringskrav för varje SIEM-server.
+2.  Konfigurera SIEM- eller Syslog-servern för att vidarebefordra Windows-händelse-ID 4776 till IP-adressen för en av ATA-gatewayarna. Ytterligare information om hur du konfigurerar SIEM finns onlinehjälpen för SIEM eller alternativ för teknisk support för specifika formateringskrav för varje SIEM-server.
 
 ### Stöd för SIEM
 ATA har stöd för SIEM-händelser i följande format:
@@ -174,41 +176,107 @@ Se till att det finns \t mellan nyckel=värde-paren.
 > Användning av WinCollect för Windows-händelseinsamling stöds inte.
 
 ## Konfigurera vidarebefordran av Windows-händelser
-Om du inte har en SIEM-server kan du konfigurera domänkontrollanterna så att de vidarebefordrar Windows händelse-ID 4776 direkt till någon av dina ATA-gatewayer.
 
-1.  Logga in på alla domänkontrollanter och ATA Gateway-datorer med ett domänkonto som har administratörsbehörighet.
-2. Kontrollera att alla domänkontrollanter och ATA-gatewayer som du ansluter är kopplade till samma domän.
-3.  Skriv följande i en upphöjd kommandotolk på varje domänkontrollant:
-```
-winrm quickconfig
-```
-4.  Skriv följande i en upphöjd kommandotolk på ATA Gateway:
-```
-wecutil qc
-```
-5.  På varje domänkontrollant går du till **Active Directory – användare och datorer**, går till mappen **Builtin** och dubbelklickar på gruppen **Händelseloggläsare**.<br>
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
-Högerklicka på den och välj **Egenskaper**. På fliken **Medlemmar** lägger du till datorkontot för varje ATA Gateway.
-![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  På ATA Gateway öppnar du Loggboken och högerklickar på **Prenumerationer** och väljer **Skapa prenumeration**.  
+### WEF-konfiguration för ATA-gatewayar med portspegling
 
-    a. Under **Prenumerationstyp och källdatorer** klickar du på **Välj datorer** och lägger till domänkontrollanterna och testar anslutningen.
-    ![wef_subscription prop](media/wef_subscription-prop.png)
+När du konfigurerat portspegling från domänkontrollanter till ATA Gateway, följ anvisningarna nedan för att konfigurera vidarebefordran av Windows-händelse med källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
 
-    b. Under **Händelser som ska samlas in** klickar du på **Välj händelser**. Välj **Efter logg** och bläddra ned för att välja **Säkerhet**. I **Tar med/undantar händelse-ID** skriver du sedan **4776**.<br>
-    ![wef_4776](media/wef_4776.png)
+**Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp.** 
 
-    c. Under **Ändra användarkonto eller konfigurera avancerade inställningar** klickar du på **Avancerat**.
-Ställ in **Protokoll** på **HTTP** och **Port** på **5985**.<br>
-    ![wef_http](media/wef_http.png)
+I det här scenariot antar vi att ATA-gatewayen är medlem i domänen.
 
-7.  [Valfritt] Om du vill ha ett kortare avsökningsintervall anger du prenumerationens hjärtslag till 5 sekunder på ATA Gateway för att få ett kortare avsökningsintervall.
-    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
+1.  Öppna Active Directory-användare och -datorer, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
+2.  Välj **medlemmar**.
+4.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
 
-8. På konfigurationssidan för ATA Gateway aktiverar du **Insamling av vidarebefordran av Windows-händelser**.
+**Steg 2: Skapa en princip på domänkontrollanterna för att ställa in inställningen Konfigurera målprenumerationshanterare.** 
+> [!Note] 
+> Du kan skapa en grupprincip för de här inställningarna och använda grupprincipen till varje domänkontrollant som övervakas av ATA Gateway. Stegen nedan ändrar den lokala principen på domänkontrollanten.     
 
-> [!NOTE]
-> När den här inställningen aktiveras tittar ATA Gateway i loggen för vidarebefordrade händelser om det finns Windows-händelser som har vidarebefordrats till den från domänkontrollanterna.
+1.  Kör följande kommando på varje domänkontrollant: *winrm quickconfig*
+2.  Från en kommandotolk, ange *gpedit.msc*.
+3.  Expandera **Datorkonfiguration > Administrativa mallar > Windows-komponenter > Vidarebefordran av händelse**
+
+ ![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
+
+4.  Dubbelklicka på **Konfigurera målprenumerationshanterare**.
+   
+    1.  Välj **Aktiverad**.
+    2.  Under **Alternativ** klickar du på **Visa**.
+    3.  Under **SubscriptionManagers** anger du följande värde och klickar på **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+ 
+   ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
+   
+    5.  Klicka på **OK**.
+    6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
+
+**Steg 3: Utför följande steg på ATA-gatewayen** 
+
+1.  Öppna en upphöjd kommandotolk och skriv *wecutil qc*
+2.  Öppna **Loggboken**. 
+3.  Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
+
+   1.   Ange namn och beskrivning för prenumerationen. 
+   2.   För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
+   3.   Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
+        1.  Klicka på **Lägg till domändator**.
+        2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
+       
+        ![Loggboksbild](media/wef3 event viewer.png)
+   
+        
+        3.  Klicka på **OK**.
+   4.   Klicka på **Välj händelser**.
+
+        1. Klicka på **Av logg** och välj **Säkerhet**.
+        2. I fältet **Inkludera/exkludera händelse-ID**, skriv **4776** och klicka på **OK**. 
+
+ ![Frågefilterbild](media/wef 4 query filter.png)
+
+   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** för att se om det finns problem med statusen. 
+   6.   Kontrollera efter ett par minuter att händelse 4776 visas i vidarebefordrade händelser på ATA-gatewayen.
+
+
+### WEF-konfiguration för ATA Lightweight Gateway
+När du installerar ATA Lightweight Gateway på domänkontrollanterna kan du konfigurera att domänkontrollanterna vidarebefordrar händelserna till sig själva. Utför följande steg för att konfigurera vidarebefordran av Windows-händelser när du använder ATA Lightweight Gateway. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse.  
+
+**Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp** 
+
+1.  Öppna Active Directory-användare och -dator, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
+2.  Välj **medlemmar**.
+3.  Om **Nätverkstjänst** inte visas klickar du på **Lägg till** och skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
+
+**Steg 2: Utför följande steg på domänkontrollanten efter att ATA Lightweight Gateway har installerats** 
+
+1.  Öppna en upphöjd kommandotolk och skriv *winrm quickconfig* och *wecutil qc* 
+2.  Öppna **Loggboken**. 
+3.  Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
+
+   1.   Ange namn och beskrivning för prenumerationen. 
+   2.   För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara Vidarebefordrade händelser.
+
+        1.  Välj **Insamlarinitierad** och klicka på **Välj datorer**. Klicka sedan på **Lägg till domändator**.
+        2.  Ange namnet på domänkontrollanten i **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**.
+
+            ![Bild av prenumerationsegenskaper](media/wef 5 sub properties computers.png)
+
+        3.  Klicka på **OK**.
+   3.   Klicka på **Välj händelser**.
+
+        1.  Klicka på **Av logg** och välj **Säkerhet**.
+        2.  I **Inkludera/exkludera händelse-ID**, skriv *4776* och klicka på **OK**. 
+
+![Frågefilterbild](media/wef 4 query filter.png)
+
+
+  4.    Högerklicka på den skapade prenumerationen och välj **Körningsstatus** för att se om det finns problem med statusen. 
+
+> [!Note] 
+> Du kan behöva starta om domänkontrollanten innan inställningarna börjar gälla. 
+
+Kontrollera efter ett par minuter att händelse 4776 visas i vidarebefordrade händelser på ATA-gatewayen.
+
+
 
 Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)
 
@@ -218,6 +286,6 @@ Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

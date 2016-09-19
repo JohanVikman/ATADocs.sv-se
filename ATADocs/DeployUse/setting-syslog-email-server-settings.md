@@ -4,7 +4,7 @@ description: "Beskriver hur du får ATA att meddela dig (via e-post eller vidare
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 10a7f4c003bc974d344129756f30df990dadf13d
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 ## Ange e-postserverinställningar för ATA
 ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska kunna skicka e-postaviseringar måste du först konfigurera **E-postserverinställningar**.
@@ -30,15 +34,15 @@ ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska ku
 
     ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-4.  På fliken **Allmänt** anger du följande information under **E-postserver**:
+4.  I avsnittet **Meddelanden** under **E-postserver**, anger du följande information:
 
     |Fält|Beskrivning|Värde|
     |---------|---------------|---------|
-    |SMTP-serverslutpunkt (krävs)|Ange SMTP-serverns fullständiga domännamn.|Exempel:<br />smtp.contoso.com|
+    |SMTP-serverslutpunkt (krävs)|Ange det fullständiga domännamnet för SMTP-servern och du kan också ändra portnumret (standard 25).|Exempel:<br />smtp.contoso.com|
     |SSL|Växla SSL om SMTP-servern kräver SSL. **Obs!** Om du aktiverar SSL måste du också ändra portnumret.|Standardvärdet är inaktiverat|
     |Autentisering|Aktivera om SMTP-servern kräver autentisering. **Obs!** Om du aktiverar autentisering måste du ange ett användarnamn och lösenord för ett e-postkonto som har behörighet att ansluta till SMTP-servern.|Standardvärdet är inaktiverat|
     |Skicka från (krävs)|Ange en e-postadress som e-postmeddelandet ska skickas från.|Exempel:<br />ATA@contoso.com|
-    ![Bild för e-postserverinställningar i ATA](media/ATA-email-server.png)
+    ![Bild för e-postserverinställningar i ATA](media/ATA-email-server-1.7.png)
 
 ## Ange Syslog-serverinställningar för ATA
 ATA kan meddela dig när systemet identifierar misstänkt aktivitet genom att skicka aviseringen till Syslog-servern. Du kan ange följande om du aktiverar Syslog-aviseringar.
@@ -61,15 +65,15 @@ ATA kan meddela dig när systemet identifierar misstänkt aktivitet genom att sk
 
     ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-5.  Välj **Syslog-server** och ange följande information:
+5.  Under avsnittet Meddelanden, välj **Syslog-server** och ange följande information:
 
     |Fält|Beskrivning|
     |---------|---------------|
-    |Syslog-serverns slutpunkt|FQDN för Syslog-servern|
-    |Transport|Kan vara UDC, TCP eller TLS (skyddad Syslog)|
+    |Syslog-serverns slutpunkt|Det fullständiga domännamnet för Syslog-servern och du kan också ändra portnumret (standard 514)|
+    |Transport|Kan vara UDP, TCP eller TLS (skyddad Syslog)|
     |Format|Det här är formatet som ATA använder för att skicka händelser till SIEM-servern, antingen RFC 5424 eller RFC 3164.|
 
-
+ ![Avbildning av ATA Syslog-serverinställningar](media/ata-syslog-server-settings-1.7.png)
 
 
 
@@ -78,6 +82,6 @@ ATA kan meddela dig när systemet identifierar misstänkt aktivitet genom att sk
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
