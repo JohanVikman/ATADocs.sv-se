@@ -13,11 +13,15 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
+ms.sourcegitcommit: 5cd030f3b952d08c6617a6cda121c344a9c36f51
+ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # ATA-databashantering
 Om du behöver flytta, säkerhetskopiera eller återställa ATA-databasen kan du använda följande procedurer för att arbeta med MongoDB.
@@ -46,17 +50,18 @@ Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administratio
 
 6.  Starta tjänsten **MongoDB**.
 
-7.  Öppna en kommandotolk och kör Mongo-gränssnittet genom att köra `mongo.exe ATA` .
+7. Starta tjänsten **Microsoft Advanced Threat Analytics Center**.
 
-    Som standard finns mongo.exe på: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
+## ATA-konfigurationsfil
+Konfigurationen av ATA lagras i samlingen "SystemProfile" i databasen.
+Den här samlingen säkerhetskopieras varje timme av ATA Center-tjänsten till filer som heter: "SystemProfile_*timestamp*.json". De senaste 10 versionerna lagras.
+Den finns i en undermapp som heter "Backup". På standardplatsen för ATA-installation finns den här:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
 
-8.  Kör följande kommando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+**Obs**! Vi rekommenderar att du säkerhetskopierar den här filen någonstans när du gör större ändringar av ATA.
 
-   I stället för <New DB Location> där `&lt;New DB Location&gt;` är den nya mappsökvägen.
+Det går att återställa alla inställningar genom att köra följande kommando:
 
-9.  Uppdatera HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath till den nya mappsökvägen.
-
-9. Starta tjänsten **Microsoft Advanced Threat Analytics Center**.
+`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Se även
 - [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture)
@@ -66,6 +71,6 @@ Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administratio
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

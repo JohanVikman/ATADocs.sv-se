@@ -4,7 +4,7 @@ description: "Beskriver alternativ för portspegling och hur du konfigurerar dem
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,21 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 92d14179f9177aba824dd5c42c2ef5797af108cb
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 ---
 
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
+
 # Konfigurera portspegling
 > [!NOTE] 
-> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
+> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
-Den huvudsakliga datakälla som används av ATA är djup paketinspektion av nätverkstrafiken till och från domänkontrollanterna. Om ATA ska kunna se nätverkstrafiken måste du konfigurera portspegling eller använda en nätverks-TAP.
+Den huvudsakliga datakälla som ATA använder är djup paketinspektion för nätverkstrafiken till och från dina domänkontrollanter. Om ATA ska kunna se nätverkstrafiken måste du konfigurera portspegling eller använda en nätverks-TAP.
 
 För portspegling konfigurerar du **portspegling** för varje domänkontrollant som ska övervakas, som **källan** till nätverkstrafiken. Vanligtvis behöver du samarbeta med nätverks- eller virtualiseringsteamet när du vill konfigurera portspegling.
 Mer information finns i leverantörens dokumentation.
@@ -71,6 +75,6 @@ När du har konfigurerat portspegling ska du kontrollera att det fungerar innan 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

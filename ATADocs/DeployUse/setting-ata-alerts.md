@@ -4,7 +4,7 @@ description: "Beskriver hur du ställer in ATA-meddelanden så att du meddelas n
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 47796a385ce92217fe36040df0723f31e4cb8701
+ms.sourcegitcommit: 35fa7afeb673ec2b1aa295e576865cdd5c073c85
+ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Konfigurera ATA-meddelanden
 ATA kan meddela dig när det upptäcker misstänkt aktivitet, antingen via e-post eller genom att använda vidarebefordran av ATA-händelser och vidarebefordra händelsen till SIEM/syslog-servern. Innan du väljer vilka meddelanden du vill ta emot måste du [konfigurera e-postservern och Syslog-servern](setting-syslog-email-server-settings.md).
@@ -26,26 +30,30 @@ ATA kan meddela dig när det upptäcker misstänkt aktivitet, antingen via e-pos
 > -   E-postmeddelanden innehåller en länk som tar användaren direkt till den misstänkta aktivitet som har identifierats. Värdnamnsdelen i länken kommer från inställningen för ATA-konsolens URL på sidan för ATA Center. ATA-konsolens URL är som standard den IP-adress som väljs vid installation av ATA Center.  Om du ska konfigurera e-postaviseringar rekommenderar vi att du använder en FQDN som URL för ATA-konsolen.
 > -   Meddelanden skickas från ATA Center till antingen SMTP-servern eller Syslog-servern.
 
+## E-postaviseringar
 Ange följande för att ta emot e-postaviseringar:
 
 
 1. I ATA-konsolen väljer du inställningsalternativ i verktygsfältet och väljer **Konfiguration**.
 ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-2. Välj **Meddelanden**.
-3. Under **E-postaviseringar** använder du knapparna för att välja vilka meddelanden som ska skickas:
+2. Under sektionen **Meddelanden**, välj **Inställningar**.
+3. Under **E-postmottagare** ange vilka mottagare som ska ta emot aviseringar via e-post.
 
+    [Obs!] E-postaviseringar för misstänkta aktiviteter skickas endast när den misstänkta aktiviteten skapas.
+
+4. Under **Avisera bör:** använder du knapparna för att välja vilka meddelanden som ska skickas:
 
     - Ny misstänkt aktivitet har identifierats
     - Nytt hälsoproblem har identifierats
     - Ny programvaruuppdatering är tillgänglig
 
-4. Ange vilka mottagare som ska ta emot meddelanden via e-post.
-
-    [Obs!] E-postaviseringar för misstänkta aktiviteter skickas endast när den misstänkta aktiviteten skapas.
-
-
 5. Klicka på **Spara**.
+
+![Bild för inställning av ATA-e-postaviseringar](media/ATA-mail-notification-settings-1.7.png)
+
+
+## Syslog-meddelande
 
 Ange följande för att ta emot Syslog-aviseringar:
 
@@ -53,7 +61,7 @@ Ange följande för att ta emot Syslog-aviseringar:
 1. I ATA-konsolen väljer du inställningsalternativ i verktygsfältet och väljer **Konfiguration**.
 ![Ikon för ATA-konfigurationsinställningar](media/ATA-config-icon.JPG)
 
-2. Välj **Meddelanden**.
+2. Under sektionen **Meddelanden**, välj **Inställningar**.
 3. Under **Syslog-aviseringar** använder du knapparna för att välja vilka meddelanden som ska skickas:
 
 
@@ -61,7 +69,7 @@ Ange följande för att ta emot Syslog-aviseringar:
     - Befintlig misstänkt aktivitet har uppdaterats
     - Nytt hälsoproblem har identifierats
 5. Klicka på **Spara**.
-![Bild för inställning av ATA-meddelanden](media/ATA-notification-settings.png)
+![Bild för inställning av ATA-meddelanden](media/ATA-syslog-notification-settings-1.7.png)
 
 
 
@@ -71,6 +79,6 @@ Ange följande för att ta emot Syslog-aviseringar:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "I det sista steget i ATA-installationen konfigurerar du undernäte
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,36 +13,47 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9712b0ad8d67b1e618cb75b14785f8079020864
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 57fe1272e95f69ef9d614505bbef0bb6c1d8ccb6
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Installera ATA – Steg 6
 
 >[!div class="step-by-step"]
 [« Steg 5](install-ata-step5.md)
 
-## Steg 6. Konfigurera undernät med kortsiktiga lån och honeytokenanvändare
-Undernät med kortsiktiga lån är undernät där tilldelningen av IP-adresser ändras mycket snabbt – inom några sekunder eller minuter. Till exempel IP-adresser som används för VPN och IP-adresser i Wi-Fi. Ange listan med undernät med kortsiktiga lån som används i organisationen enligt följande:
+## Steg 6. Konfigurera undantag för IP-adress och Honeytoken-användare
+ATA aktiverar uteslutning av IP-adresser och IP-undernät från två typer av identifieringar: **DNS-rekognosering** och **Pass-the-Ticket**. 
 
-1.  Från ATA-konsolen på ATA Gateway-datorn klickar du på ikonen för inställningar och väljer **Konfiguration**.
+Till exempel kan ett **DNS-rekognoseringsundantag** vara en säkerhetsskanner som använder DNS som en skanningsmekanism. Undantaget hjälper ATA att ignorera dessa skannrar. Ett exempel på ett *Pass-the-Ticket*-undantag är en NAT-enhet.    
+
+ATA möjliggör också konfiguration av en Honeytoken-användare som används som en fälla för skadliga aktörer – all verifiering som är associerade med kontot (normalt vilande) ska utlösa en avisering.
+
+Följ de här stegen när du ska konfigurera ovan nämnda:
+
+1.  I ATA-konsolen klickar du på inställningsikonen och väljer **Konfiguration**.
 
     ![Konfigurationsinställningar för ATA](media/ATA-config-icon.JPG)
 
-2.  Under **Identifiering** anger du följande för undernät med kortsiktiga lån. Ange undernäten med kortsiktiga lån med snedstrecksnotation, till exempel `192.168.0.0/24`, och klicka på plustecknet.
+2.  Under **Identifieringsundantag**, anger du följande för IP-adresser för antingen *DNS-rekognosering* eller *Pass-the-Ticket*. Använda CIDR-format, till exempel:  `192.168.1.0/24` och klicka på *plus*-tecknet.
 
-3.  Som SID för honeytokenkontot anger du SID för det användarkonto som inte kommer att ha någon nätverksaktivitet och klickar på plustecknet. Till exempel: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+    ![Spara ändringar](media/ATA-exclusions.png)
+
+3.  Under **Identifieringsinställningar**, ange Honeytoken-kontots SID:er och klicka på plustecknet. Till exempel: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    ![Konfigurationsinställningar för ATA](media/ATA-honeytoken.png)
 
     > [!NOTE]
     > Om du vill hitta SID för en användare söker du efter användaren i ATA-konsolen och klickar sedan på fliken **Kontoinformation**. 
 
-4.  Konfigurera undantag: Du kan konfigurera IP-adresser som ska undantas från specifika misstänkta aktiviteter. Mer information finns i [Arbeta med identifieringsinställningar i ATA](working-with-detection-settings.md).
+4.  Klicka på **Spara**.
 
-5.  Klicka på **Spara**.
-
-![Spara ändringar](media/ATA-VPN-Subnets.JPG)
 
 Gratulerar, Microsoft Advanced Threat Analytics har distribuerats!
 
@@ -64,6 +75,6 @@ ATA startar sökning efter misstänkta aktiviteter omedelbart. En del aktivitete
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

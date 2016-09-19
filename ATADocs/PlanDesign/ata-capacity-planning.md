@@ -4,7 +4,7 @@ description: "Hjälper dig att planera distributionen och bestämma hur många A
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,11 +12,15 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # ATA-kapacitetsplanering
 Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs för att övervaka nätverket, inklusive att förstå hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapaciteten för ATA Center och ATA Gateway.
@@ -41,8 +45,7 @@ I följande avsnitt finns anvisningar om hur du samlar in information om paket/s
 
 ### Storlek för ATA Center
 ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende. Nödvändigt diskutrymme för ATA-databasen per domänkontrollant anges nedan. Om du har flera domänkontrollanter beräknar du det fullständiga utrymmet som krävs för ATA-databasen genom att summera nödvändigt diskutrymme per domänkontrollant.
-> [!NOTE] 
-> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+ 
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|Databaslagring per dag (GB)|Databaslagring per månad (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -59,9 +62,13 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > [!NOTE]
 > -   ATA Center kan hantera sammanlagt högst 400 000 bilder per sekund (FPS) från alla övervakade domänkontrollanter.
 > -   De mängder lagring som anges här är nettovärden. Du bör alltid räkna med framtida tillväxt och se till att disken som databasen ligger på har minst 20 % ledigt utrymme.
-> -   Om det lediga utrymmet når minst 20 % eller 100 GB tas den äldsta datasamlingen bort. Det fortsätter tills bara två dagars data eller 5 % eller 50 GB ledigt utrymme finns kvar. Då slutar datainsamlingen att fungera.
-> -  Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
-> -  Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
+> -   Om det lediga utrymmet når minst 20 % eller 100 GB tas den äldsta datasamlingen bort. Detta fortsätter att inträffa fram till det är 5 % eller 50 GB ledigt utrymme kvar då datainsamlingen slutar att fungera.
+> -   Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
+> -   Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
+> -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+> -   För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
+> -   När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas Node Interleaving i systemet. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Obs! Det här gäller inte när ATA Center körs på en virtuell server.
+
 
 ## Välja rätt gateway-typ för distributionen
 I en ATA-distribution stöds valfri kombination av ATA Gateway-typer:
@@ -94,8 +101,7 @@ Följande är exempel på scenarier där domänkontrollanter bör omfattas av AT
 ### Storlek för ATA Lightweight Gateway
 
 En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. 
-> [!NOTE] 
-> Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -108,8 +114,11 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 &#42;&#42;Totalt antal kärnor som inte är flertrådade som den här domänkontrollanten har installerat.<br>Även om flertrådsteknik är godkänd för ATA Lightweight Gateway bör du räkna antalet faktiska kärnor och inte flertrådade kärnor när du planerar kapaciteten.
 
 &#42;&#42;&#42;Total mängd minne som den här domänkontrollanten har installerat.
+
 > [!NOTE]   
-> Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
+> -   Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
+> -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
+> -   För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
 
 
 ### Storlek på ATA-gateway
@@ -126,8 +135,7 @@ Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribu
     En ATA Gateway har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik för de domänkontrollanter som övervakas. 
 <br>
 
-> [!NOTE] 
-> Dynamiskt minne stöds inte.
+
 
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|
 |---------------------------|-------------------------|---------------|
@@ -142,6 +150,9 @@ Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribu
 
 &#42;&#42;Hypertrådning måste vara inaktiverad.
 
+> [!NOTE] 
+> -   Dynamiskt minne stöds inte.
+> -   För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.
 
 
 ## Beräkning av trafik för domänkontrollanter
@@ -201,6 +212,6 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

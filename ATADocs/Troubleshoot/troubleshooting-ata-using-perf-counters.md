@@ -4,7 +4,7 @@ description: "Beskriver hur du kan använda prestandaräknare för att felsöka 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4b4ff22df77b904a654b57aca824c154ea935560
+ms.sourcegitcommit: 21f28848dd22cfbcbb4b4871300621203b445fb4
+ms.openlocfilehash: a6113c106653039ca3b4337d9250d9b9baca4611
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Felsöka ATA med prestandaräknarna
 ATA-prestandaräknarna ger information om hur bra varje komponent i ATA fungerar. Komponenterna i ATA bearbetar data i tur och ordning. Om ett problem uppstår kan det därför leda till förlorad trafik någonstans i komponentkedjan. För att åtgärda problemet måste du ta reda på vilken komponent som krånglar och åtgärda problemet i början av kedjan. Använd data i prestandaräknarna för att förstå hur varje komponent fungerar.
@@ -29,7 +33,7 @@ Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](/
 
 2.  Slutligen börjar föregående komponent öka **sin** egen storlek tills den blockerar komponenten före den från att skicka fler entiteter.
 
-3.  Det inträffar ända tillbaka till den första NetworkListener-komponenten, som förlorar trafik när den inte längre kan vidarebefordra entiteter.
+3.  Detta inträffar ända tillbaka till NetworkListener-komponenten som förlorar trafik när den inte längre kan vidarebefordra entiteter.
 
 
 ## Prestandaräknare i ATA Gateway
@@ -39,39 +43,60 @@ I det här avsnittet avser varje hänvisning till ATA Gateway också ATA Lightwe
 Du kan se prestandatillståndet i realtid för ATA-gatewayen genom att lägga till ATA-gatewayens prestandaräknare.
 Det gör du genom att öppna Prestandaövervakaren och lägga till alla räknare för ATA-gatewayen. Namnet på prestandaräknarobjektet är: "Microsoft ATA Gateway".
 
-![Bild av hur du lägger till prestandaräknare](media/ATA-performance-counters.png)
-
 Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medveten om:
 
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
-|NetworkListener PEF parsermeddelanden/sek|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
+|Microsoft ATA Gateway\NetworkListener PEF parsermeddelanden/sek|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
 |NetworkListener PEF förlorade händelser/sek|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|NetworkListener ETW förlorade händelser/sek|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|NetworkActivityTranslator – blockstorlek för meddelandedatanummer|Mängden trafik i kö för översättning till nätverksaktiviteter (NA).|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 100 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|EntityResolver – blockstorlek för aktivitet|Antal nätverksaktiviteter (NA) i kö för matchning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|EntitySender – blockstorlek för entitetsbatch|Antal nätverksaktiviteter (NA) i kö för att skickas till ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 1 000 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|EntitySender – sändningstid för batch|Tiden det tog att skicka den senaste batchen.|Bör oftast vara mindre än 1 000 millisekunder|Kontrollera om det finns några nätverksproblem mellan ATA Gateway och ATA Center.|
+|ATA GW – prestandaräknare/NetworkListener ETW förlorade händelser/sek|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|ATA GW – prestandaräknare/NetworkActivityTranslator – blockstorlek för meddelandedatanummer|Mängden trafik i kö för översättning till nätverksaktiviteter (NA).|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 100 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|ATA GW – prestandaräknare/EntityResolver – blockstorlek för aktivitet|Antal nätverksaktiviteter (NA) i kö för matchning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|ATA GW – prestandaräknare EntitySender – blockstorlek för entitetsbatch|Antal nätverksaktiviteter (NA) i kö för att skickas till ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 1 000 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|ATA GW – prestandaräknare/EntitySender – sändningstid för batch|Tiden det tog att skicka den senaste batchen.|Bör oftast vara mindre än 1 000 millisekunder|Kontrollera om det finns några nätverksproblem mellan ATA Gateway och ATA Center.|
 
 > [!NOTE]
 > -   Tidsinställda räknare anges i millisekunder.
 > -   Ibland är det mer praktiskt att övervaka hela listan med räknare med hjälp av diagramtypen Rapport (exempel: realtidsövervakning av alla räknare)
+
+## ATA Lightweight Gateway-prestandaräknare
+Prestandaräknare kan användas för kvothantering i Lightweight Gateway, för att se till att ATA inte tömmer för många resurser från domänkontrollanter som har installerats.
+Lägg till följande prestandaräknare för att mäta resursbegränsningar som ATA tillämpar på Lightweight-Gateway:
+
+Öppna "Performance Monitor" och lägg till alla prestandaräknare för ATA Lightweight Gateway. Namnet på prestandaräknarna är: "Microsoft ATA Gateway" och "Microsoft ATA Gateway Updater".
+
+
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
+|-----------|---------------|-------------|-------------------|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager maximal processortid i %|Den maximala mängden processortid (i procent) som Lightweight Gateway-processen kan använda. |Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager dedikera maximal minnesstorlek|Den maximala mängden dedikerat minne (i byte) som Lightweight Gateway-processen kan använda.|Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.| 
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager storleksgräns för arbetsminne|Den maximala mängden fysiskt minne (i byte) som Lightweight Gateway-processen kan använda.|Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.|
+
+
+
+Om du vill se din faktiska användning, se följande räknare:
+
+
+
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
+|-----------|---------------|-------------|-------------------|
+|Process(Microsoft.Tri.gateway)\%processortid|Mängden processortid (i procent) som Lightweight Gateway-processen faktiskt använder. |Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal processortid i % för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.|
+|Process(Microsoft.Tri.Gateway)\Privata byte|Mängden dedikerat minne (i byte) som Lightweight Gateway-processen faktiskt använder.|Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal storlek för dedikerat minne för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.| 
+|Process(Microsoft.Tri.Gateway)\Arbetsminne|Mängden fysiskt minne (i byte) som Lightweight Gateway-processen faktiskt använder.|Inget tröskelvärde. |Jämför resultatet från den här räknaren med gränsen i storleksgräns för arbetsminne i GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.|
 
 ## Prestandaräknare i ATA Center
 Du kan se prestandatillståndet i realtid för ATA Center genom att lägga till ATA Centers prestandaräknare.
 
 Det gör du genom att öppna Prestandaövervakaren och lägga till alla räknare för ATA Center. Namnet på prestandaräknarobjektet är: "Microsoft ATA Center".
 
-![Lägga till prestandaräknare i ATA Center](media/ATA-Gateway-perf-counters.png)
-
 Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten om:
 
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
-|EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|CenterDatabase &#42; Blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\CenterDatabase &#42; Blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 
 
 > [!NOTE]
@@ -103,6 +128,6 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Steg tre av ATA-installationen hjälper dig att hämta installatio
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
+ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
+ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Installera ATA – Steg 3
 
@@ -28,16 +32,18 @@ ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
 ## Steg 3. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet. ATA Gateway kan installeras på dedikerad server eller en domänkontrollant. Om du installerar den på en domänkontrollant kommer den att installeras som en ATA Lightweight Gateway. Mer information om ATA Lightweight Gateway finns i [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture). 
 
-Hämta ATA Gateway-paketet:
+Om det är första gången du hämtar en ATA Gateway visas följande skärm:
 
-1.  I ATA-konsolen klickar du på inställningsikonen och väljer **Konfiguration**.
+![Konfigurationsinställningar för ATA Gateway](media/ATA_1.7-welcome-download-gateway.PNG)
 
-    ![Konfigurationsinställningar för ATA Gateway](media/ATA-config-icon.JPG)
+Välkomstmeddelandet visas inte om det inte är första gången du hämtar en ATA Gateway.
 
-2.  På fliken **ATA Gateways** klickar du på **Hämta installationsprogram för ATA Gateway**.
+> [!NOTE] 
+> För att nå konfigurationsskärmen senare, klickar du på **inställningsikonen** (uppe till höger) och väljer **Konfiguration**, under **System**, klickar du sedan på **Gateways**.  
 
-3.  Spara paketet lokalt.
-4.  Kopiera paketet till den dedikerade servern eller domänkontrollanten där du installerar ATA Gateway. Du kan även öppna ATA-konsolen från den dedikerade servern eller domänkontrollanten och hoppa över detta steg.
+1.  Klicka på **"Hämta Gateway-installation"**.
+2.  Spara paketet lokalt.
+3.  Kopiera paketet till den dedikerade servern eller domänkontrollanten där du installerar ATA Gateway. Du kan även öppna ATA-konsolen från den dedikerade servern eller domänkontrollanten och hoppa över detta steg.
 
 ZIP-filen innehåller följande:
 
@@ -58,6 +64,6 @@ ZIP-filen innehåller följande:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

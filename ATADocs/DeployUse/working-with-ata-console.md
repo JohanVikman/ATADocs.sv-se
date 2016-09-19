@@ -4,7 +4,7 @@ description: "Beskriver hur man loggar in på ATA-konsolen och konsolens kompone
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Arbeta med ATA-konsolen
 
 Använd ATA-konsolen för att övervaka och svara på misstänkt aktivitet som identifieras av ATA.
 
 ## Aktivera åtkomst till ATA-konsolen
-Alla användare som är medlemmar i den lokala administratörsgruppen på ATA Center-servern har behörighet att logga in på ATA-konsolen och hantera ATA-inställningar.
-Om du vill tillåta att en användare loggar in på ATA-konsolen utan att göra personen till en lokal administratör kan du lägga till personen i den lokala gruppen: **Microsoft Advanced Threat Analytics-administratörer**.
+För att kunna logga in på ATA-konsolen måste du logga in med en användare som har tilldelats rätt ATA-roll för att komma åt ATA-konsolen. Mer information om rollbaserad åtkomstkontroll (RBAC) i ATA finns i [Arbeta med ATA-rollgrupper](ata-role-groups.md).
 
 ## Logga in på ATA-konsolen
 
@@ -38,10 +41,8 @@ Om du vill tillåta att en användare loggar in på ATA-konsolen utan att göra 
 
 2.  Ange ditt användarnamn och lösenord och klicka på **Logga in**.
 
-![Bild av ATA-inloggningssidan](media/ATA-log-in-screen.jpg)
+![Bild av ATA-inloggningssidan](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> Du måste logga in med en användare som är medlem i den lokala administratörsgruppen ELLER gruppen Microsoft Advanced Threat Analytics-administratörer.
 
 ## ATA-konsolen
 
@@ -54,7 +55,7 @@ Dessa är de viktigaste objekten i ATA-konsolen.
 
 Det här är den standardsida du kommer till när du loggar in på ATA-konsolen. Som standard visas alla öppna misstänkta aktiviteter på tidslinjen för attacker. Du kan filtrera tidslinjen för attacker för att visa alla, öppna, avvisade eller lösta misstänkta aktiviteter. Du kan också se allvarlighetsgrad som har tilldelats till varje aktivitet.
 
-![Bild för tidslinje för attacker i ATA](media/attack-timeline.png)
+![Bild för tidslinje för attacker i ATA](media/attack-timeline-1.7.png)
 
 Mer information finns i [Arbeta med misstänkta aktiviteter](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
@@ -62,7 +63,7 @@ Mer information finns i [Arbeta med misstänkta aktiviteter](/advanced-threat-an
 
 När en ny misstänkt aktivitet identifieras öppnas meddelandefältet automatiskt till höger. Om det finns nya misstänkta aktiviteter sedan den senaste gången du loggade in öppnas meddelandefältet när du har loggat in. Du kan klicka på pilen till höger när som helst för att öppna meddelandefältet.
 
-![Bild för meddelandefält i ATA](media/notification-bar.png)
+![Bild för meddelandefält i ATA](media/notification-bar-1.7.png)
 
 ### Filtreringspanel
 
@@ -78,7 +79,7 @@ Det finns ett sökfält i den översta menyn. Du kan söka efter en viss använd
 
 Health Center visar aviseringar om något inte fungerar korrekt i ATA-distributionen.
 
-![Bild för ATA health center](media/health-center.png)
+![Bild för ATA health center](media/ATA-Health-Issue.jpg)
 
 Om systemet upptäcker ett problem, t.ex. ett anslutningsfel eller en frånkopplad ATA Gateway, meddelar ikonen för Health Center detta genom att visa en röd punkt. ![Bild med röd punkt för ATA health center](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -124,6 +125,6 @@ Var som helst i konsolen där en enda entitet presenteras, t.ex. en användare e
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

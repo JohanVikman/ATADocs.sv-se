@@ -4,7 +4,7 @@ description: "Beskriver hur du kan använda ATA-databasen som hjälp för att fe
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Felsöka ATA med ATA-databasen
 ATA använder MongoDB som databas.
@@ -45,15 +49,6 @@ Följande exempel visar exempelkod med den syntax som anges ovan. Om du undersö
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Anteckna personens ID som anges med värdet "`_id`". I vårt exempel antar vi att ID är "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Sök sedan efter den samling som har det datum som är närmast före datumet du letar efter, i vårt exempel 20/10/2015.<br>Sök sedan efter NTLM-aktiviteter för John Bergs konto: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA-konfigurationsfil
-Konfigurationen av ATA lagras i samlingen "SystemProfile" i databasen.
-Den här samlingen säkerhetskopieras varje timme av ATA Center-tjänsten till en fil som heter: "SystemProfile.json". Den finns i en undermapp som heter "Backup". På standardplatsen för ATA-installation finns den här:  **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**. 
-
-**Obs**! Vi rekommenderar att du säkerhetskopierar den här filen någonstans när du gör större ändringar av ATA.
-
-Det går att återställa alla inställningar genom att köra följande kommando:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -64,6 +59,6 @@ Det går att återställa alla inställningar genom att köra följande kommando
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

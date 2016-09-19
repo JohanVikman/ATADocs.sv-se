@@ -4,7 +4,7 @@ description: "Beskriver hur du kan använda ATA-loggarna för att felsöka probl
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 2889a5ae78de0e65515fabff80d146198142a495
+ms.sourcegitcommit: ee5f60e43f50562e7a7309eafa3b52cf946b0d3b
+ms.openlocfilehash: 493f255ae09b51d27079a186bb802f0f3f9706bc
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Felsöka ATA med ATA-loggarna
 ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpunkt.
@@ -25,7 +29,7 @@ ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpu
 ## ATA Gateway-loggar
 I det här avsnittet gäller varje hänvisning till ATA Gateway också ATA Lightweight Gateway. 
 
-ATA Gateway-loggarna finns i undermappen **Logs**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är:  . På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway har följande loggar:
 
@@ -36,13 +40,17 @@ ATA Gateway har följande loggar:
 -   **Microsoft.Tri.Gateway-Errors.log** – den här loggfilen innehåller bara de fel som fångas av ATA Gateway. Den används huvudsakligen för att utföra hälsokontroller och undersöka problem som behöver korreleras till specifika tidpunkter.
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – den här loggfilen grupper alla liknande fel och undantag, och mäter deras antal.
-    Filen är tom från början varje gång ATA Gateway-tjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Gateway – eftersom felen grupperas är det lättare att läsa och se om det finns en ny typ av fel eller problem.
+    Den här filen startas tom varje gång ATA-Gateway-tjänsten startar och uppdateras varje minut. Dess viktigaste användningsområde är att förstå om det finns nya fel eller problem med ATA Gateway (eftersom felen grupperas är det lättare att läsa och förstå snabbt om det finns några nya problem).
+-   **Microsoft.Tri.Gateway.Updater.log** - Den här loggen används för gateway-uppdateringsprocessen som ansvarar för att uppdatera gatewayen om den konfigurerats att göra det automatiskt. För ATA Lightweight Gateway ansvarar också gateway- uppdateringsprocessen för resursbegränsningar av ATA Lightweight Gateway.
+-   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – Den här loggfilen grupper samman alla liknande fel och undantag, och mäter deras antal. Filen startar tom varje gång ATA Updater-tjänsten startar och uppdateras varje minut. Det gör att du kan förstå om det finns nya fel eller problem med ATA Updater. Felen grupperas för att göra det enklare att snabbt förstå om några nya fel eller problem har identifierats.
 
 > [!NOTE]
-> De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
+> De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn. Som standard tas den äldsta filen bort om det redan finns fler än 10 filer från samma typ.
 
 ## ATA Center-loggar
 ATA Center-loggarna finns i undermappen **Logs**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Center\Logs**".
+> [!Note]
+> ATA-konsolen loggar som tidigare var under IIS-loggar finns nu under ATA Center-loggar.
 
 ATA Center har följande loggar:
 
@@ -53,27 +61,11 @@ ATA Center har följande loggar:
 -   **Microsoft.Tri.Center-Errors.log** – den här loggfilen innehåller bara de fel som fångas av ATA Center. Den används huvudsakligen för att utföra hälsokontroller och undersöka problem som behöver korreleras till specifika tidpunkter.
 
 -   **Microsoft.Tri.Center-ExceptionStatistics.log** – den här loggfilen grupper alla liknande fel och undantag, och mäter deras antal.
-    Filen är tom från början varje gång ATA Center-tjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Center – eftersom felen grupperas är det lättare att läsa och se om det finns en ny typ av fel eller problem.
+    Filen är tom från början varje gång ATA Center-tjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Center – eftersom felen grupperas är det lättare förstå om det finns nya fel eller problem.
 
 > [!NOTE]
-> De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
+> De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn. Som standard tas den äldsta filen bort om det redan finns fler än 10 filer från samma typ.
 
-## ATA-konsolloggar
-ATA-konsolloggarna (hanterings-API-loggarna) finns i undermappen **Logs**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Management\Logs**.
-
-ATA-konsolen har följande loggar:
-
--   **w3wp.log** – den här loggfilen innehåller allt som händer i hanteringen (IIS).
-
-
--   **w3wp-Errors.log** – den här loggfilen innehåller bara de fel som fångas av hanteringen (IIS).
-
-
--   **8e75f9f1-ExceptionStatistics.log** – den här loggfilen grupper alla liknande fel och undantag, och mäter deras antal.
-    Filen är tom från början varje gång gatewaytjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Center – eftersom felen grupperas är det lättare att läsa och se om det finns en ny typ av fel eller problem.
-
-> [!NOTE]
-> De första två loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn.
 
 ## ATA-distributionsloggar
 ATA-distributionsloggarna finns i temp-katalogen för användaren som installerade produkten. På standardplatsen för installation finns den i: **C:\Användare\Administrator\AppData\Local\Temp** (eller en katalog över %temp%).
@@ -92,6 +84,7 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Gateway-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Gateway-binärfilerna.
 
+
 ## Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
@@ -101,6 +94,6 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

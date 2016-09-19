@@ -4,7 +4,7 @@ description: "Beskriver hur du konfigurerar en lista över IP-adresser och under
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,27 +13,39 @@ ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 692247420a849db5d77c3c035ee59c4a5c533686
+ms.sourcegitcommit: 28b6211599395317eb6336c37fd3461b8f5635f6
+ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
 
 
 ---
+
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
 
 # Arbeta med identifieringsinställningar i ATA
 På konfigurationssidan **Identifiering** kan du ange en lista över IP-adresser och undernät som har ovanliga omständigheter och bör hanteras lite annorlunda än andra entiteter i nätverket.
 
 ## Konfigurera identifiering
-På sidan **Identifiering** kan du definiera följande objekt:
-
--   **Undernät med kortsiktiga lån** – om organisationen har undernät där IP-adresserna är mycket kortsiktiga, till exempel undernät med IP-adresser för VPN eller Wi-Fi-undernät, är det viktigt att ange IP-adresserna och undernäten i ATA så att ATA lagrar associationen mellan en dator och en IP-adress från dessa intervall under kortare tid än för andra IP-adresser.
+I avsnittet **Identifiering** kan du definiera följande objekt:
 
 -   **Honeytokenkonto-SID** – det här är ett användarkonto som inte bör ha några nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om någon försöker använda det här användarkontot skapar ATA en misstänkt aktivitet. Det är en indikation på skadlig aktivitet. Om du vill konfigurera honeytokenanvändaren behöver du användarkontots SID, inte användarnamnet.
 
-Du kan undanta IP-adresser från följande identifieringar. Om du anger en IP-adress i en av de här listorna undantar ATA den IP-adressen från den här specifika typen av identifierad aktivitet.
+>[!NOTE]
+> Du kan hitta SID för användaren på fliken *Kontoinformation* i användarens profil i ATA-konsolen.
+
+
+![Honeytoken för ATA-identifieringsinställningar](media/ata-detection-settings-honeytoken-1.7.png)
+
+
+**Identifieringsundantag** - Du kan undanta IP-adresser från följande identifieringar. Om du anger en IP-adress i en av de här listorna undantar ATA den IP-adressen från den här specifika typen av identifierad aktivitet.
 
 -   Undantag för DNS Reconnaissance-IP-adresser
 
 -   Undantag för Pass-the-Ticket-IP-adresser
+
+![Undantag för ATA-identifieringsinställningar](media/ata-detection-settings-exclusions-1.7.png)
+
 
 ## Se även
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
@@ -42,6 +54,6 @@ Du kan undanta IP-adresser från följande identifieringar. Om du anger en IP-ad
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

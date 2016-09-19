@@ -4,7 +4,7 @@ description: Beskriver hur du verifierar att portspegling har konfigurerats korr
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,26 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 ---
 
+*Gäller för: Advanced Threat Analytics version 1.7*
+
+
+
 # Verifiera portspegling
 > [!NOTE] 
-> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
+> Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. Om ATA ska fungera ordentligt måste ATA Gateway kunna se trafiken till och från domänkontrollanten. Den huvudsakliga datakälla som ATA använder är djup paketinspektion för nätverkstrafiken till och från dina domänkontrollanter. Om ATA ska kunna se nätverkstrafiken måste portspegling vara konfigurerad. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
 
 ## Validera portspegling med ett Windows PowerShell-skript
 
-1. Spara texten i det här skriptet i en fil med namnet ATAdiag.ps1.
-2. Kör det här skriptet från ATA Gateway.
+1. Spara texten i det här skriptet i en fil med namnet *ATAdiag.ps1*.
+2. Kör skriptet på den ATA-gateway som du vill validera.
 Skriptet genererar ICMP-trafik från ATA Gateway till domänkontrollanten och söker efter den trafiken på avbildningsnätverkskortet på domänkontrollanten.
 Om ATA Gateway ser ICMP-trafik med en destinations-IP-adress som är samma som den DC IP-adress du angav i ATA-konsolen bedömer den att portspegling har konfigurerats. 
 
@@ -188,7 +192,7 @@ Exempel på körning av skriptet:
     
     
 ## Validera portspegling med Net Mon
-1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865).
+1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på den ATA-gateway som du vill validera.
 
     > [!IMPORTANT]
     > Installera inte Microsoft Analysverktyg för meddelanden eller någon annan programvara för trafikinsamling på ATA Gateway.
@@ -224,6 +228,6 @@ Exempel på körning av skriptet:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
