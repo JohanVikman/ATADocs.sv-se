@@ -13,8 +13,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
+ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
+ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 ---
@@ -54,7 +54,7 @@ Om du inte använder en SIEM/Syslog-server kan du konfigurera Windows-domänkont
 2.  Konfigurera SIEM- eller Syslog-servern för att vidarebefordra Windows-händelse-ID 4776 till IP-adressen för en av ATA-gatewayarna. Ytterligare information om hur du konfigurerar SIEM finns onlinehjälpen för SIEM eller alternativ för teknisk support för specifika formateringskrav för varje SIEM-server.
 
 ### Stöd för SIEM
-ATA har stöd för SIEM-händelser i följande format:
+ATA har stöd för SIEM-händelser i följande format:  
 
 #### RSA Security Analytics
 &lt;Syslog-rubrik&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -282,10 +282,10 @@ Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in 
 
 ## Se även
 - [Installera ATA](install-ata.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
