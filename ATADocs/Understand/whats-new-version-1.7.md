@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 579e49a8dd9a5cc67961af14259bb8bb27130de5
+ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
+ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
 
 
 ---
@@ -63,10 +63,53 @@ Följande kända problem finns i den här versionen.
 ### Det gick inte att uppdatera gatewayen automatiskt
 **Problem:** I miljöer med långsamma WAN-länkar, kan uppdateringen av ATA Gateway nå tidsgränsen för uppdatering (100 sekunder) och kan inte slutföras.
 I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en lång tid och misslyckas slutligen.
+
 **Lösning:** Undvik det här problemet, ladda ned det senaste ATA Gateway-paketet från ATA-konsolen och uppdatera ATA Gateway manuellt.
 
- > [!IMPORTANT]
- Automatisk certifikatförnyelse för de certifikat som används av ATA stöds inte. Användningen av dessa certifikat kan orsaka att ATA slutar att fungera när certifikatet förnyas automatiskt. 
+### Migreringsfel vid uppdatering från ATA 1.6
+Vid uppdatering till ATA 1.7 kan uppdateringen misslyckas med följande felkod *0x80070643*:
+
+![Fel vid uppdatering av ATA till 1.7](media/ata-update-error.png)
+
+Granska distributionsloggen för att ta reda på orsaken till felet. Distributionsloggen finns på följande plats: **% temp %\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log**. 
+
+I tabellen nedan visas olika fel du kan söka efter och det motsvarande Mongo-skriptet du kan använda för att åtgärda felet. Se exemplen i tabellen nedan som visar hur du kör Mongo-skriptet:
+
+| Fel i loggfilen för distribution                                                                                                                  | Mongo-skript                                                                                                                                                                         |
+|---|---|
+| System.FormatException: Storleken {size} är större än MaxDocumentSize 16777216 <br>Längre ned i filen:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: Undantag av typen ”System.OutOfMemoryException” uppstod<br>Längre ned i filen:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Felaktig längd<br>Längre ned i filen:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+
+Följ anvisningarna nedan för att köra det aktuella skriptet. 
+
+1.  Bläddra till följande plats från en upphöjd kommandotolk: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
+2.  Typ – **Mongo.exe ATA**   (*OBS*: ATA måste anges med versaler.)
+3.  Klistra in det skript som matchar felet i loggen för distribution från tabellen ovan.
+
+![ATA Mongo-skript](media/ATA-mongoDB-script.png)
+
+Du bör nu kunna starta om uppgraderingen.
+
+### ATA rapporterar ett stort antal misstänkta aktiviteter med ”*Reconnaissance using directory services enumerations*” (Rekognoscering med katalogtjänstuppräkning):
+ 
+Detta beror sannolikt på att ett skanningsverktyg för nätverk körs på alla (eller många) klientdatorer i organisationen. Om du ser det här problemet:
+
+1. Skicka ett e-postmeddelande till ATAEval på Microsoft.com med informationen om du kan identifiera orsaken eller det specifika program som körs på klientdatorerna.
+2. Använd följande mongo-skript för att avvisa dessa händelser (se ovan för hur du kör mongo-skriptet):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### ATA skickar meddelanden för avvisade misstänkta aktiviteter:
+Om meddelanden har konfigurerats kan ATA fortsätta skicka meddelanden (e-post, syslog och händelseloggar) om avvisade misstänkta aktiviteter.
+Det finns ingen lösning för det här problemet just nu. 
+
+### ATA Gateway kan inte registrera med ATA Center om TLS 1.0 och TLS 1.1 är inaktiverade:
+Om TLS 1.0 och TLS 1.1 är inaktiverade på ATA Gateway (eller Lightweight Gateway) kan gatewayen misslyckas med att registrera sig på ATA Center
+
+### Automatisk certifikatförnyelse för de certifikat som används av ATA stöds inte
+Användningen av automatisk certifikatförnyelse kan orsaka att ATA slutar att fungera när certifikatet förnyas automatiskt. 
 
 
 ## Se även
@@ -77,6 +120,6 @@ I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en l�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

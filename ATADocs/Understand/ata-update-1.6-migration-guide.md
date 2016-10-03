@@ -140,6 +140,6 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

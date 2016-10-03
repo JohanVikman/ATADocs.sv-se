@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ Om en virtuell domänkontrollant inte kan omfattas av ATA Lightweight Gateway ka
 Det finns två saker att säkerhetskopiera:
 
 -   Trafik och händelser som lagras av ATA, som kan säkerhetskopieras med valfri metod för databassäkerhetskopiering som stöds. Mer information finns i [ATA-databashantering](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Konfiguration av ATA. Detta lagras i databasen och säkerhetskopieras automatiskt varje timme i mappen **Säkerhetskopiering** på distributionsplatsen för ATA Center.  Se [ATA-databashantering](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) för mer information.
+-   Konfiguration av ATA. Detta lagras i databasen och säkerhetskopieras automatiskt varje timme i mappen **Säkerhetskopiering** på distributionsplatsen för ATA Center.  Se [ATA-databashantering](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) för mer information.
 ## Vad kan ATA identifiera?
 ATA identifierar kända skadliga attacker och tekniker, säkerhetsproblem och risker.
 En fullständig lista över ATA-identifieringar finns i [Vilka identifieringar utför ATA?](ata-threats.md).
@@ -144,6 +144,6 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
