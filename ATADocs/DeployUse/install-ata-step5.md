@@ -13,8 +13,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 168a41182128a1fc91d92a4ef11b873c04ecc6b7
+ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
+ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 ---
@@ -45,9 +45,9 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
   - **Beskrivning**: Ange en beskrivning av ATA Gateway (valfritt).
   - **Portspeglade domänkontrollanter (FQDN)** (krävs för ATA Gateway, detta kan inte ändras för ATA Lightweight Gateway): Ange fullständig FQDN för domänkontrollanten och klicka på plustecknet för att lägga till den i listan. Till exempel  **dc01.contoso.com**
 
-        The following information applies to the servers you enter in the **Domain Controllers** list:
-        - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-        - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      Följande information gäller servrar som du anger i listan **Domänkontrollanter**:
+      - Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
+      - Minst en domänkontrollant i listan bör vara en global katalog. Det gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
 
 - **Avbilda nätverkskort** (krävs):
   - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa tar emot trafiken för den speglade domänkontrollanten.
@@ -96,6 +96,6 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
