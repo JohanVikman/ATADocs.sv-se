@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
+ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
+ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
 
 
 ---
@@ -71,23 +71,25 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 
 2.  Kör installationsfilen, Microsoft ATA Center Setup.exe, och följ anvisningarna på skärmen för att installera uppdateringen.
 
-    1.  ATA 1.6 kräver att .Net Framework 4.6.1 är installerat. Om det inte redan är installerat kommer ATA-installationen att installera .Net Framework 4.6.1 som en del av installationen<br>
-    > [!NOTE]
-    > Installationen av .Net Framework 4.6.1 kan kräva att servern startas om. ATA-installationen fortsätter först efter att servern har startats om.
-5.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
+    1.  ATA 1.6 kräver att .Net Framework 4.6.1 är installerat. Om det inte redan är installerat kommer ATA-installationen att installera .Net Framework 4.6.1 som en del av installationen.
+    
+        > [!NOTE] 
+            Installationen av .Net Framework 4.6.1 kan kräva att servern startas om. ATA-installationen fortsätter först efter att servern har startats om.
+    
+    2.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
-    6.  Läs licensavtalet och klicka på **Nästa** om du godkänner licensvillkoren.
+    3.  Läs licensavtalet och klicka på **Nästa** om du godkänner licensvillkoren.
 
-    7.  Det är nu möjligt att använda Microsoft Update för att hålla ATA uppdaterat.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
+    4.  Det är nu möjligt att använda Microsoft Update för att hålla ATA uppdaterat.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
     ![Bild för att hålla ATA uppdaterat](media/ata_ms_update.png) Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
      ![Bild för automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
 
-    8.  ATA utför en beredskapskontroll innan installationen påbörjas. Granska resultaten av kontrollen för att se till att kraven har konfigurerats och du har det minsta tillgängliga diskutrymme som krävs. 
+    5.  ATA utför en beredskapskontroll innan installationen påbörjas. Granska resultaten av kontrollen för att se till att kraven har konfigurerats och du har det minsta tillgängliga diskutrymme som krävs. 
     ![Bild för ATA-beredskapskontroll](media/ata_install_readinesschecks.png)
 
-    3.  Klicka på **Uppdatera**. När du har klickat på Uppdatera är ATA offline tills uppdateringsproceduren har slutförts.
+    6.  Klicka på **Uppdatera**. När du har klickat på Uppdatera är ATA offline tills uppdateringsproceduren har slutförts.
 
-4.  När du har uppdaterat ATA Center rapporterar ATA Gateways att de nu är föråldrade.
+3.  När du har uppdaterat ATA Center rapporterar ATA Gateways att de nu är föråldrade.
 
     ![Bild av föråldrade gateways](media/ATA-center-outdated.png)
 
@@ -140,6 +142,6 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
