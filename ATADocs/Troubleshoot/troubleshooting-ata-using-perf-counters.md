@@ -4,7 +4,7 @@ description: "Beskriver hur du kan använda prestandaräknare för att felsöka 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/21/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 21f28848dd22cfbcbb4b4871300621203b445fb4
-ms.openlocfilehash: a6113c106653039ca3b4337d9250d9b9baca4611
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
 
 
 ---
@@ -47,13 +47,13 @@ Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medvete
 
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF parsermeddelanden/sek|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
-|NetworkListener PEF förlorade händelser/sek|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|ATA GW – prestandaräknare/NetworkListener ETW förlorade händelser/sek|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|ATA GW – prestandaräknare/NetworkActivityTranslator – blockstorlek för meddelandedatanummer|Mängden trafik i kö för översättning till nätverksaktiviteter (NA).|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 100 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|ATA GW – prestandaräknare/EntityResolver – blockstorlek för aktivitet|Antal nätverksaktiviteter (NA) i kö för matchning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|ATA GW – prestandaräknare EntitySender – blockstorlek för entitetsbatch|Antal nätverksaktiviteter (NA) i kö för att skickas till ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 1 000 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|ATA GW – prestandaräknare/EntitySender – sändningstid för batch|Tiden det tog att skicka den senaste batchen.|Bör oftast vara mindre än 1 000 millisekunder|Kontrollera om det finns några nätverksproblem mellan ATA Gateway och ATA Center.|
+|Microsoft ATA Gateway\NetworkListener – PEF-parsermeddelanden/s|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
+|NetworkListener PEF – förlorade händelser/s|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Gateway\NetworkListener – ETW-ignorerade händelser/s|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Gateway\NetworkActivityTranslator – blockstorlek för meddelandedatanummer|Mängden trafik i kö för översättning till nätverksaktiviteter (NA).|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 100 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Gateway\EntityResolver – blockstorlek för aktivitet|Antal nätverksaktiviteter (NA) i kö för matchning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Gateway\EntitySender – blockstorlek för entitetsbatch|Antal nätverksaktiviteter (NA) i kö för att skickas till ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 1 000 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Gateway\EntitySender – sändningstid för batch|Tiden det tog att skicka den senaste batchen.|Bör oftast vara mindre än 1 000 millisekunder|Kontrollera om det finns några nätverksproblem mellan ATA Gateway och ATA Center.|
 
 > [!NOTE]
 > -   Tidsinställda räknare anges i millisekunder.
@@ -112,12 +112,12 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 |System\Kontextbyten/s|Den sammanlagda hastigheten som alla processorer byter från en tråd till en annan.|Färre än 5 000&#42;kärnor (fysiska kärnor)|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
 |System\Kölängd för processor|Antal trådar som är redo att köra och väntar på att schemaläggas.|Färre än 5&#42;kärnor (fysiska kärnor)|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
 |Minne\Tillgängliga megabyte|Mängden fysiskt minne (RAM) som är tillgängligt för allokering.|Bör vara mer än 512|Kontrollera om det finns en särskild process som tar mycket mer fysiskt minne än den borde.<br /><br />Öka mängden fysiskt minne.<br /><br />Minska mängden trafik per server.|
-|Logisk disk(&#42;)\Medel Disk s/läsning|Genomsnittlig svarstid för att läsa data från disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontrollera med lagringsteamet/-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med en svarstid på mindre än 10 ms. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
-|Logisk disk(&#42;)\Medel Disk s/skrivning|Genomsnittlig svarstid för att skriva data till disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontrollera med lagringsteamet/-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med en svarstid på mindre än 10 ms. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
+|Logisk disk(&#42;)\Medel s/diskläsning|Genomsnittlig svarstid för att läsa data från disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontrollera med lagringsteamet/-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med en svarstid på mindre än 10 ms. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
+|Logisk disk(&#42;)\Medel s/diskskrivning|Genomsnittlig svarstid för att skriva data till disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Hör med ditt lagringsteam eller din lagringsleverantör om den här enheten kan leverera den nuvarande arbetsbelastningen med en svarstid på mindre än 10 ms. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
 |\Logisk disk(&#42;)\Diskläsningar/s|Frekvensen för att utföra läsåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
-|\Logisk disk(&#42;)\Disk - lästa byte/s|Antal byte per sekund som läses från disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
+|\Logisk disk(&#42;)\Disk – lästa byte/s|Antal byte per sekund som läses från disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 |\Logisk disk&#42;\Diskskrivningar/s|Frekvensen för att utföra skrivåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning (kan ge information när du felsöker svarstiden för lagring)|
-|\Logisk disk(&#42;)\Disk - skrivna byte/s|Antal byte per sekund som skrivs till disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
+|\Logisk disk(&#42;)\Disk – skrivna byte/s|Antal byte per sekund som skrivs till disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 
 ## Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -128,6 +128,6 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

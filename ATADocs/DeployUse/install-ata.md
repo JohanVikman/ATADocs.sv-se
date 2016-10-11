@@ -4,7 +4,7 @@ description: "Vägleder dig genom de nödvändiga stegen för att distribuera, k
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: c535ccfecafbd961167bac9c152bd6a1264ae17f
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 6e55fcbb1570e43b55eafd6aaeb67b037b508a96
 
 
 ---
@@ -40,7 +40,7 @@ Följ de här stegen när du ska konfigurera ATA:
 
 -   [Steg 5. Konfigurera inställningar för ATA Gateway](install-ata-step5.md)
 
--   [Steg 6. Konfigurera undernät med kortsiktiga lån och honeytokenanvändare](install-ata-step6.md)
+-   [Steg 6. Konfigurera en Honeytoken-användare](install-ata-step6.md)
 
 
 ## Se även
@@ -52,6 +52,6 @@ Följ de här stegen när du ska konfigurera ATA:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
