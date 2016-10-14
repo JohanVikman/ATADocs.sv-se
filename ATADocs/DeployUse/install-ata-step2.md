@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
+ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
+ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 ---
@@ -42,7 +42,7 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
     |**Användarnamn** (krävs)|Ange det skrivskyddade användarnamnet, till exempel: **ATA-användare**.|
     |**Lösenord** (krävs)|Ange lösenordet för den skrivskyddade användaren, till exempel: **Penna1**.|
     |**Domän** (krävs)|Ange domänen för den skrivskyddade användaren, till exempel: **contoso.com**. **Obs:** Det är viktigt att du anger det fullständiga FQDN för domänen där användaren finns. Om användarens konto exempelvis finns i domänen corp.contoso.com måste du ange `corp.contoso.com`, inte contoso.com|
-    |Uppdatera alla ATA-gatewayer automatiskt |Om du aktiverar den här inställningen kommer alla ATA-gatewayer att uppdateras automatiskt vid kommande versioner när du uppdaterar ATA Center.|
+    
 
     Välkomstmeddelandet i konsolen ändras till följande när det sparats: ![ATA - välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -62,6 +62,6 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
