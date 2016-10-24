@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en l�
 ### Inget webbläsarstöd för JIS-kodning
 **Problem:** ATA-konsolen kanske inte fungerar som förväntat i webbläsare som använder JIS-kodning **Lösning:** Ändra webbläsarens kodning till Unicode UTF-8.
  
+### Ignorerad portspeglingstrafik när VMware används
+
+Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware
+
+Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.
+
 ## Mindre ändringar
 
 - Nu använder ATA OWIN i stället för IIS för ATA-konsolen.
@@ -87,6 +93,6 @@ I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en l�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
