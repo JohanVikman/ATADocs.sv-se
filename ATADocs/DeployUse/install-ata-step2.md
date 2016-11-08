@@ -23,13 +23,13 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 
-# Installera ATA – Steg 2
+# <a name="install-ata-step-2"></a>Installera ATA – Steg 2
 
 >[!div class="step-by-step"]
 [« Steg 1](install-ata-step1.md)
 [Steg 3 »](install-ata-step3.md)
 
-## Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
 
 Första gången du öppnar ATA-konsolen visas följande skärmbild:
 
@@ -44,7 +44,7 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
     |**Domän** (krävs)|Ange domänen för den skrivskyddade användaren, till exempel: **contoso.com**. **Obs:** Det är viktigt att du anger det fullständiga FQDN för domänen där användaren finns. Om användarens konto exempelvis finns i domänen corp.contoso.com måste du ange `corp.contoso.com`, inte contoso.com|
     
 
-    Välkomstmeddelandet i konsolen ändras till följande när det sparats: ![ATA - välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
+    Välkomstmeddelandet i konsolen ändras till följande när det sparats: ![ATA – välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
 
 2. I administratörskonsolen, klicka på **Hämta Gateway-installationen och installera den första gatewayen** för att fortsätta.
 
@@ -54,7 +54,7 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 [Steg 3 »](install-ata-step3.md)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
@@ -62,6 +62,6 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 
