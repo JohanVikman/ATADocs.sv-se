@@ -1,9 +1,10 @@
 # [Förstå och utforska](/understand-explore/what-is-ata)
 # [Planera och utforma](/plan-design/ata-architecture)
-# [Distribuera och använda](/deploy-use/preinstall-ata)
+# [Distribuera](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Använda](/advanced-threat-analytics/deploy-use/operate-ata)
 # [Felsöka](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO5-->
 
 

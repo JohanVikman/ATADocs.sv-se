@@ -4,7 +4,7 @@ description: "Första steget för att installera ATA omfattar att hämta och ins
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 ---
@@ -43,6 +43,9 @@ På ATA Center-servern utför du följande steg.
 2.  Logga in på datorn där du installerar ATA Center som en användare som är medlem i den lokala administratörsgruppen.
 
 3.  Kör **Microsoft ATA Center Setup.EXE** och följ installationsguiden.
+
+> [!NOTE]   
+> Se till att köra installationsfilen från en lokal enhet och inte från en monterad ISO-fil för att undvika problem om en omstart krävs som en del av installationen.   
 
 4.  Om Microsoft .Net Framework inte är installerat uppmanas du att installera det när du startar installationen. Du kan uppmanas att starta om efter installationen av .NET Framework.
 5.  På sidan **Välkommen** väljer du det språk som ska användas för ATA-installationsskärmarna och klickar på **Nästa**.
@@ -102,6 +105,6 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

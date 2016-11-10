@@ -13,8 +13,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee5f60e43f50562e7a7309eafa3b52cf946b0d3b
-ms.openlocfilehash: 493f255ae09b51d27079a186bb802f0f3f9706bc
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 ---
@@ -29,7 +29,7 @@ ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpu
 ## ATA Gateway-loggar
 I det här avsnittet gäller varje hänvisning till ATA Gateway också ATA Lightweight Gateway. 
 
-ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är:  . På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway har följande loggar:
 
@@ -40,7 +40,7 @@ ATA Gateway har följande loggar:
 -   **Microsoft.Tri.Gateway-Errors.log** – den här loggfilen innehåller bara de fel som fångas av ATA Gateway. Den används huvudsakligen för att utföra hälsokontroller och undersöka problem som behöver korreleras till specifika tidpunkter.
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – den här loggfilen grupper alla liknande fel och undantag, och mäter deras antal.
-    Den här filen startas tom varje gång ATA-Gateway-tjänsten startar och uppdateras varje minut. Dess viktigaste användningsområde är att förstå om det finns nya fel eller problem med ATA Gateway (eftersom felen grupperas är det lättare att läsa och förstå snabbt om det finns några nya problem).
+    Filen är tom från början varje gång ATA Gateway-tjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Gateway (eftersom felen grupperas är det lättare att läsa och förstå snabbt om det finns nya problem).
 -   **Microsoft.Tri.Gateway.Updater.log** - Den här loggen används för gateway-uppdateringsprocessen som ansvarar för att uppdatera gatewayen om den konfigurerats att göra det automatiskt. För ATA Lightweight Gateway ansvarar också gateway- uppdateringsprocessen för resursbegränsningar av ATA Lightweight Gateway.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – Den här loggfilen grupper samman alla liknande fel och undantag, och mäter deras antal. Filen startar tom varje gång ATA Updater-tjänsten startar och uppdateras varje minut. Det gör att du kan förstå om det finns nya fel eller problem med ATA Updater. Felen grupperas för att göra det enklare att snabbt förstå om några nya fel eller problem har identifierats.
 
@@ -72,17 +72,17 @@ ATA-distributionsloggarna finns i temp-katalogen för användaren som installera
 
 ATA Center-distributionsloggar:
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra distributionsprocessen för ATA Center.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS.log** – Den här loggfilen innehåller stegen i distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra distributionsprocessen för ATA Center.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_0_MongoDBPackage.log** – den här loggfilen innehåller stegen i MongoDB-distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra MongoDB-distributionsprocessen.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** – Den här loggfilen innehåller stegen i MongoDB-distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra MongoDB-distributionsprocessen.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_1_MsiPackage.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Center-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Center-binärfilerna.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_1_MsiPackage.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Center-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Center-binärfilerna.
 
 Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Gateway. Den används huvudsakligen för att spåra distributionsprocessen för ATA Gateway.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** – Den här loggfilen innehåller stegen i distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra distributionsprocessen för ATA Gateway.
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** – den här loggfilen innehåller stegen i distributionsprocessen för ATA Gateway-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Gateway-binärfilerna.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** – Den här loggfilen innehåller stegen i distributionsprocessen för ATA Gateway-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Gateway-binärfilerna.
 
 
 ## Se även
@@ -94,6 +94,6 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

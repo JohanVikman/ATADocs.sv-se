@@ -13,8 +13,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 ---
@@ -117,7 +117,7 @@ I den här tabellen är IP-adress 1 bunden till ATA Center-tjänsten och IP-adre
 ### Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
 
-För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.<br>
+För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.<br>
 > [!NOTE]
 > Certifikatets providertyp måste vara kryptografiprovider (CSP).
 
@@ -201,7 +201,7 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 
 ### Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har Internetåtkomst följer du proceduren för att importera en CRL manuellt, och ser till att installera alla CRL-distributionsplatser för hela kedjan.<br>
-För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.
+För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.
 
 > [!NOTE]
 > Certifikatets providertyp måste vara kryptografiprovider (CSP).<br>
@@ -254,7 +254,7 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 
 ### Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA Lightweight-gatewayerna inte har Internetåtkomst följer du proceduren för att importera en CRL manuellt, och ser till att installera alla CRL-distributionsplatser för hela kedjan.
-För att underlätta installationen av ATA Center kan du installera självsignerade certifikat under installationen av ATA Center. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Lightweight Gateway.
+För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Lightweight Gateway.
 > [!NOTE]
 > Certifikatets providertyp måste vara kryptografiprovider (CSP).
 
@@ -281,6 +281,6 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

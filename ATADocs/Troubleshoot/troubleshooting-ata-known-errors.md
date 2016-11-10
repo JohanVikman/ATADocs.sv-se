@@ -4,7 +4,7 @@ description: "Beskriver hur du kan felsöka vanliga fel i ATA"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
-ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 ---
@@ -23,9 +23,9 @@ ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 
-# Felsöka ATA-felloggen
+# <a name="troubleshooting-the-ata-error-log"></a>Felsöka ATA-felloggen
 Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg som krävs för att felsöka dem.
-## ATA Gateway-fel
+## <a name="ata-gateway-errors"></a>ATA Gateway-fel
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Ett lokalt fel uppstod|ATA Gateway kunde inte autentiseras mot domänkontrollanten.|1. Bekräfta att domänkontrollantens DNS-post har konfigurerats korrekt i DNS-servern. <br>2. Kontrollera att tiden för ATA Gateway har synkroniserats med tiden för domänkontrollanten.|
@@ -44,12 +44,21 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.ApplicationException: Det går inte att starta ETW-session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Det finns en värdpost i HOSTS-filen som pekar på datorns kortnamn|Ta bort posten värden från C:\Windows\System32\drivers\etc\HOSTS-fil eller ändra den till ett fullständigt domännamn.|
 
 
-## ATA IIS-fel (gäller inte för ATA v1.7 och senare)
+
+## <a name="ata-lightweight-gateway-errors"></a>Fel för ATA Lightweight Gateway
+
+**Fel:** Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware
+
+**Beskrivning**: Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. 
+**Lösning**: För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.
+
+
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA IIS-fel (gäller inte för ATA v1.7 och senare)
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
 |HTTP-fel 500.19 – internt serverfel|IIS URL-modulen för omarbetning installerades inte korrekt.|Avinstallera och installera om IIS-URL-modulen för omarbetning.<br>[Hämta IIS-URL-modulen för omarbetning](http://go.microsoft.com/fwlink/?LinkID=615137)|
 
-## Distributionsfel
+## <a name="deployment-errors"></a>Distributionsfel
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
 |Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/kb/2919355) är installerade på servern innan ATA installeras.|
@@ -57,7 +66,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 ![Bild för ATA .NET-installationsfel](media/netinstallerror.png)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -66,6 +75,6 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
