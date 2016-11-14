@@ -10,11 +10,12 @@
 #### [Uppdatera till ATA 1.5 – migreringsguide](ata-update-1.5-migration-guide.md)
 ### [Nyheter i ATA version 1.4](whats-new-version-1.4.md)
 ## [Vanliga frågor och svar](ata-technical-faq.md)
-# [Planera och utforma](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Distribuera och använda](/advanced-threat-analytics/deploy-use/install-ata)
-# [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Planera och utforma](/advanced-threat-analytics/plan-design/ata-architecture)
+# [Distribuera](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Använda](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 

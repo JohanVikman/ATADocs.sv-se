@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: be23c15ce709b710dc48b333fc464aa190772573
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
 
 
 ---
@@ -44,7 +44,7 @@ Om du redan har distribuerat ATA version 1.4 vägleder den här proceduren dig i
 
 Följ dessa steg för att uppdatera till ATA-version 1.5:
 
-1.  [Hämta uppdateringen 1.5](http://aka.ms/ata1_5update)
+1.  Hämta ATA v1.5 från VLSC eller MSDN.
       > [!NOTE]
          Du kan även använda den uppdaterade fullständiga versionen av ATA för att uppdatera till version 1.5.
 
@@ -134,6 +134,6 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 
