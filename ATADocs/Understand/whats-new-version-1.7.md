@@ -4,7 +4,7 @@ description: "Visar en lista över nyheter i ATA version 1.7 tillsammans med kä
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,16 +13,16 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
-ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
 
 
 ---
 
-# Nyheter i ATA version 1.7
+# <a name="whats-new-in-ata-version-17"></a>Nyheter i ATA version 1.7
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
 
-## Vad är nytt i ATA 1.7-uppdateringen?
+## <a name="whats-new-in-the-ata-17-update"></a>Vad är nytt i ATA 1.7-uppdateringen?
 Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 
 -   Nya och uppdaterade identifieringar
@@ -36,7 +36,7 @@ Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 -   Mindre ändringar
 
 
-### Nya och uppdaterade identifieringar
+### <a name="new-updated-detections"></a>Nya och uppdaterade identifieringar
 
 
 - **Rekognosering med uppräkning av katalogtjänster** Som en del av rekognoseringsfasen samlar angripare in information om enheter i nätverket med olika metoder. Uppräkning av katalogtjänster med SAM-R-protokollet gör det möjligt för angripare att erhålla en lista över användare och grupper i en domän och förstå interaktionen mellan olika entiteter. 
@@ -50,19 +50,19 @@ Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 - **Förbättringar av onormal protokollimplementering** ATA identifierar nu ovanlig protokollimplementering i Kerberos-protokollet, tillsammans med ytterligare avvikelser i NTLM-protokollet. Dessa nya avvikelser för Kerberos används särskilt ofta i Over-pass-the-Hash-attacker.
 
 
-### Infrastruktur
+### <a name="infrastructure"></a>Infrastruktur
 
 - **Rollbaserad åtkomstkontroll** Förmåga för rollbaserad åtkomstkontroll (RBAC). ATA 1.7 innehåller tre roller: ATA-administratör, ATA-analytiker och ATA-chefer.
 
 - **Stöd för Windows Server 2016 och Windows Server Core** ATA 1.7 stöder distribution av Lightweight Gateways på domänkontrollanter som kör Server Core för Windows Server 2012 och Server Core för Windows Server 2012 R2. Den här versionen stöder dessutom Windows Server 2016 både för komponenterna ATA Center och ATA Gateway.
 
-### Användarens upplevelse
+### <a name="user-experience"></a>Användarens upplevelse
 - **Konfigurationsupplevelse** I den här versionen har konfigurationsupplevelsen för ATA gjorts om för en bättre användarupplevelse och bättre stöd för miljöer med flera ATA-gatewayar. Den här versionen beskriver även ATA Gateways uppdateringssida för enklare och bättre hantering av automatiska uppdateringar för olika gatewayar.
 
-## Kända problem
+## <a name="known-issues"></a>Kända problem
 Följande kända problem finns i den här versionen.
 
-### Det gick inte att uppdatera gatewayen automatiskt
+### <a name="gateway-automatic-update-may-fail"></a>Det gick inte att uppdatera gatewayen automatiskt
 **Problem:** I miljöer med långsamma WAN-länkar, kan uppdateringen av ATA Gateway nå tidsgränsen för uppdatering (100 sekunder) och kan inte slutföras.
 I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en lång tid och misslyckas slutligen.
 **Lösning:** Undvik det här problemet, ladda ned det senaste ATA Gateway-paketet från ATA-konsolen och uppdatera ATA Gateway manuellt.
@@ -70,22 +70,39 @@ I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en l�
  > [!IMPORTANT]
  Automatisk certifikatförnyelse för de certifikat som används av ATA stöds inte. Användningen av dessa certifikat kan orsaka att ATA slutar att fungera när certifikatet förnyas automatiskt. 
 
-### Inget webbläsarstöd för JIS-kodning
+### <a name="no-browser-support-for-jis-encoding"></a>Inget webbläsarstöd för JIS-kodning
 **Problem:** ATA-konsolen kanske inte fungerar som förväntat i webbläsare som använder JIS-kodning **Lösning:** Ändra webbläsarens kodning till Unicode UTF-8.
  
-### Ignorerad portspeglingstrafik när VMware används
+### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Ignorerad portspeglingstrafik när VMware används
 
 Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware
 
 Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.
 
-## Mindre ändringar
+### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Automatisk uppdatering av Gateway misslyckas vid uppdatering till 1.7 uppdatering 1
+
+Både den automatiska uppdateringen för ATA Gateway och den manuella installationen av Gateway med hjälp av Gateway-paketet kanske inte fungerar som förväntat när du uppdaterar från ATA 1.7 till ATA 1.7 uppdatering 1.
+Det här problemet uppstår om certifikatet som används av ATA Center har ändrats innan du uppdaterar ATA.
+Kontrollera det här problemet genom att granska **Microsoft.Tri.Gateway.Updater.log** på ATA Gateway och leta efter följande undantag: **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+
+![bugg vid uppdatering av ATA-gateway](media/17update_gatewaybug.png)
+
+För att lösa det här problemet kan du bläddra till följande plats från en upphöjd kommandotolk efter att du ändrat certifikatet: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** och köra följande:
+
+1. Mongo.exe ATA (ATA måste anges med versaler.) 
+
+2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+
+3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+
+
+## <a name="minor-changes"></a>Mindre ändringar
 
 - Nu använder ATA OWIN i stället för IIS för ATA-konsolen.
 - Om ATA Center-tjänsten har problem kan du inte komma åt ATA-konsolen.
 - Korta lån av undernät krävs inte längre på grund av ändringar i ATA NNR.
 
-## Se även
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Uppdatera ATA till version 1.7 – migreringsguide](ata-update-1.7-migration-guide.md)
@@ -93,6 +110,6 @@ Om du använder domänkontrollanter på virtuella VMware-datorer kan du få avis
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO5-->
 
 

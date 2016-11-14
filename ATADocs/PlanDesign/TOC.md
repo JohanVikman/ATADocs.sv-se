@@ -3,10 +3,11 @@
 ## [ATA-arkitektur](ata-architecture.md)
 ## [Planera ATA-kapaciteten](ata-capacity-planning.md)
 ## [Krav för ATA](ata-prerequisites.md)
-# [Distribuera och använda](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Distribuera](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Använda](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
