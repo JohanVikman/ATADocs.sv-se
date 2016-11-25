@@ -1,20 +1,21 @@
 ---
-title: "Driftsätta ATA – Fullständigt | Microsoft ATA"
+title: "Driftsätta ATA – Fullständigt | Microsoft Docs"
 description: "Vägleder dig genom att arbeta med ATA och dagliga aktiviteter."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+ms.assetid: cf6fcd3a-0295-450e-bd40-8cd4909f0cae
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23aea01f07de4fc52fa404304df7698370c75cb9
-ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 
 
 
-# Driftsätta ATA
+# <a name="operate-ata"></a>Driftsätta ATA
 
 Följande är åtgärder du kan utföra med ATA:
 
@@ -43,7 +44,7 @@ Följande är åtgärder du kan utföra med ATA:
 - [Hantera ATA-telemetri](manage-telemetry-settings.md)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
@@ -52,6 +53,6 @@ Följande är åtgärder du kan utföra med ATA:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
