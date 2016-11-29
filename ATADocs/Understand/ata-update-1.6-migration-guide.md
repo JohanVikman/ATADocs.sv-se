@@ -1,25 +1,26 @@
 ---
-title: "Migreringsguide för ATA-uppdatering till 1.6 | Microsoft ATA"
+title: "Migreringsguide för ATA-uppdatering till 1.6 | Microsoft Docs"
 description: "Procedurer för att uppdatera ATA till version 1.6"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
-ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: e361c1b659210934b9fcd70c7c438a47030eeeba
 
 
 ---
 
-# Migreringsguide för ATA-uppdatering till 1.6
+# <a name="ata-update-to-16-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.6
 Uppdateringen för ATA 1.6 ger förbättringar inom följande områden:
 
 -   Nya identifieringar
@@ -36,7 +37,7 @@ Uppdateringen för ATA 1.6 ger förbättringar inom följande områden:
 
 -   Stöd för IBM QRadar
 
-## Uppdatera ATA till version 1.6
+## <a name="updating-ata-to-version-16"></a>Uppdatera ATA till version 1.6
 > [!NOTE] 
 > Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.6, och följa standardproceduren för installation som beskrivs i [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -61,7 +62,7 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
     > [!IMPORTANT]
     > Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### Steg 1: Uppdatera ATA Center
+### <a name="step-1-update-the-ata-center"></a>Steg 1: Uppdatera ATA Center
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
@@ -81,11 +82,11 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
     3.  Läs licensavtalet och klicka på **Nästa** om du godkänner licensvillkoren.
 
     4.  Det är nu möjligt att använda Microsoft Update för att hålla ATA uppdaterat.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
-    ![Bild för att hålla ATA uppdaterat](media/ata_ms_update.png) Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
-     ![Bild för automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
+    ![Bild om att hålla ATA uppdaterat](media/ata_ms_update.png) Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
+     ![Bild om automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
 
     5.  ATA utför en beredskapskontroll innan installationen påbörjas. Granska resultaten av kontrollen för att se till att kraven har konfigurerats och du har det minsta tillgängliga diskutrymme som krävs. 
-    ![Bild för ATA-beredskapskontroll](media/ata_install_readinesschecks.png)
+    ![Bild om ATA-beredskapskontroll](media/ata_install_readinesschecks.png)
 
     6.  Klicka på **Uppdatera**. När du har klickat på Uppdatera är ATA offline tills uppdateringsproceduren har slutförts.
 
@@ -96,7 +97,7 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 > [!IMPORTANT] 
 > Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### Steg 2. Hämta installationspaketet för ATA Gateway
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Steg 2. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet.
 
 Hämta ATA Gateway-paketet:
@@ -117,7 +118,7 @@ ZIP-filen innehåller följande:
 
 -   Filen med konfigurationsinställningar som innehåller informationen som krävs för att ansluta till ATA Center
 
-### Steg 3: Uppdatera ATA Gateways
+### <a name="step-3-update-the-ata-gateways"></a>Steg 3: Uppdatera ATA Gateways
 
 1.  Extrahera filerna från ATA Gateway-paketet på varje ATA Gateway och kör filen **Microsoft ATA Gateway Setup.exe**.
 
@@ -136,12 +137,12 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 ![Bild av uppdaterade gateways](media/ATA-gw-updated.png)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

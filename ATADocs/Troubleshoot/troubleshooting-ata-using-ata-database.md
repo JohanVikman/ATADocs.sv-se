@@ -1,20 +1,21 @@
 ---
-title: "Felsöka ATA med ATA-databasen | Microsoft ATA"
+title: "Felsöka ATA med ATA-databasen | Microsoft Docs"
 description: "Beskriver hur du kan använda ATA-databasen som hjälp för att felsöka problem"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
-ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: bff3224736981f38616172a6b1717d7d125c3c0a
 
 
 ---
@@ -23,11 +24,11 @@ ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 
-# Felsöka ATA med ATA-databasen
+# <a name="troubleshooting-ata-using-the-ata-database"></a>Felsöka ATA med ATA-databasen
 ATA använder MongoDB som databas.
 Du kan interagera med databasen med hjälp av standardkommandoraden eller ett gränssnittsverktyg för att utföra avancerade åtgärder och felsökning.
 
-## Interagera med databasen
+## <a name="interacting-with-the-database"></a>Interagera med databasen
 Standardsättet, som är det mest grundläggande sättet, för att ställa frågor till databasen är att använda Mongo shell:
 
 1.  Öppna ett kommandoradsfönster och ändra sökvägen till MongoDB Bin-mappen. Standardsökvägen är: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
@@ -50,7 +51,7 @@ Följande exempel visar exempelkod med den syntax som anges ovan. Om du undersö
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -59,6 +60,6 @@ Följande exempel visar exempelkod med den syntax som anges ovan. Om du undersö
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
