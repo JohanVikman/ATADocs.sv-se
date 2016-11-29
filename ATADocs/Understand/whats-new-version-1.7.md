@@ -1,20 +1,21 @@
 ---
-title: Nyheter i ATA version 1.7 | Microsoft ATA
+title: Nyheter i ATA version 1.7 | Microsoft Docs
 description: "Visar en lista över nyheter i ATA version 1.7 tillsammans med kända problem"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 
+ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
 
 
 ---
@@ -75,9 +76,15 @@ I ATA-konsolen har ATA Gateway statusen "Uppdatera (hämta paketet)" under en l�
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Ignorerad portspeglingstrafik när VMware används
 
-Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware
+Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware.
 
-Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.
+Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade i den virtuella datorn:  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- IPv4 TSO Offload
+
+Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.
 
 ### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Automatisk uppdatering av Gateway misslyckas vid uppdatering till 1.7 uppdatering 1
 
@@ -110,6 +117,6 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
