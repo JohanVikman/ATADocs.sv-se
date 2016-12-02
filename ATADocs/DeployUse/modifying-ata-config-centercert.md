@@ -1,10 +1,11 @@
 ---
-title: "Ändra ATA-konfiguration – ATA-centercertifikat | Microsoft ATA"
+title: "Ändra ATA-konfiguration – ATA-centercertifikat | Microsoft Docs"
 description: "Beskriver tvåstegsprocessen för att förnya eller ersätta certifikatet i det lokala datorarkivet på ATA Center-servern."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 534b5f476e580919b11327ddbf9a35edad130515
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 
-# Ändra ATA-konfiguration – ATA Center-certifikat
+# <a name="change-ata-configuration---ata-center-certificate"></a>Ändra ATA-konfiguration – ATA Center-certifikat
 
 >[!div class="step-by-step"]
 [« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
 [ATA-konsolens URL»](modifying-ata-config-consoleurl.md)
 
-## Ändra ATA Center-certifikatet
+## <a name="change-the-ata-center-certificate"></a>Ändra ATA Center-certifikatet
 Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas när det nya certifikatet har installerats i det lokala datorarkivet på ATA Center-servern ersätter du certifikatet genom att följa denna metod i två steg:
 
 -   Första steget – Uppdatera certifikatet som du vill att ATA Center-tjänsten ska använda. ATA Center-tjänsten är då fortfarande kopplad till det ursprungliga certifikatet. När ATA-gatewayerna synkar sin konfiguration har de två möjliga certifikat som är giltiga för ömsesidig autentisering. Så länge ATA-gatewayen kan ansluta med det ursprungliga certifikatet försöker den inte använda det nya.
@@ -68,13 +69,12 @@ Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas n
 [« ATA Center-serverns IP-adress](modifying-ata-config-centerip.md)
 [ATA-konsolens URL»](modifying-ata-config-consoleurl.md)
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
-- [Installera ATA](install-ata.md)
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
