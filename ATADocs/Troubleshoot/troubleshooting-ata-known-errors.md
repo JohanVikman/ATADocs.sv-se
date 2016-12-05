@@ -1,8 +1,9 @@
 ---
-title: "Felsöka ATA-felloggen | Microsoft ATA"
+title: "Felsöka ATA-felloggen | Microsoft Docs"
 description: "Beskriver hur du kan felsöka vanliga fel i ATA"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
+ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
+ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
 
 
 ---
@@ -42,6 +43,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.InvalidOperationException: Instansen Microsoft.Tri.Gateway finns inte i den angivna kategorin.|PID:er har aktiverats för processnamn i ATA-gatewayen|Använd [KB281884](https://support.microsoft.com/en-us/kb/281884) för att inaktivera PID:er i processnamn|
 |System.InvalidOperationException: Kategorin finns inte.|Räknare kan vara inaktiverade i registret|Använd [KB2554336](https://support.microsoft.com/en-us/kb/2554336) för att återskapa prestandaräknare|
 |System.ApplicationException: Det går inte att starta ETW-session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Det finns en värdpost i HOSTS-filen som pekar på datorns kortnamn|Ta bort posten värden från C:\Windows\System32\drivers\etc\HOSTS-fil eller ändra den till ett fullständigt domännamn.|
+|System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverat på ATA-gatewayen men .Net är inställd att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .Net genom att ställa in registernycklarna att använda operativsystemets standarder för LLS och TLS enligt följande: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
 
 
 
@@ -75,6 +77,6 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO4-->
 
 
