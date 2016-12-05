@@ -5,14 +5,13 @@
 ### [Konfigurera portspegling](configure-port-mirroring.md)
 ### [Verifiera portspegling](validate-port-mirroring.md)
 ### [Konfigurera händelseinsamling](configure-event-collection.md)
-## [Installera ATA](install-ata.md)
-### [Steg 1](install-ata-step1.md)
-### [Steg 2](install-ata-step2.md)
-### [Steg 3](install-ata-step3.md)
-### [Steg 4](install-ata-step4.md)
-### [Steg 5](install-ata-step5.md)
-### [Steg 6](install-ata-step6.md)
-### [Tyst installation](ata-silent-installation.md)
+## [Installera ATA – Steg 1](install-ata-step1.md)
+## [Installera ATA – Steg 2](install-ata-step2.md)
+## [Installera ATA – Steg 3](install-ata-step3.md)
+## [Installera ATA – Steg 4](install-ata-step4.md)
+## [Installera ATA – Installera ATA – Steg 5](install-ata-step5.md)
+## [Installera ATA – Steg 6](install-ata-step6.md)
+## [Tyst installation](ata-silent-installation.md)
 # [Använd](modifying-ata-config-centerip.md)
 ## [Ändra IP-adressen för ATA Center](modifying-ata-config-centerip.md)
 ## [Ändra ATA Center-certifikat](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
 ## [ATA-rollgrupper](ata-role-groups.md)
 ## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
-## [Ange ATA-aviseringar](setting-ata-alerts.md)
+## [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
 ## [Arbeta med identifieringsinställningar](working-with-detection-settings.md)
 ## [ATA Health Center](ata-health-center.md)
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 ## [Databashantering i ATA](ata-database-management.md)
-## [ATA-konfigurationsfil](ata-configuration-file.md)
+## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
 ## [Hantera ATA-telemetri](manage-telemetry-settings.md)
 # [Felsöka](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

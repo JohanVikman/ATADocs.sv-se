@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: cf6fcd3a-0295-450e-bd40-8cd4909f0cae
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: 301169138f99bd523303ad703e868abbad94d71f
 
 
 ---
@@ -35,7 +35,7 @@ Följande är åtgärder du kan utföra med ATA:
   - [Ändra lösenord för domänkontrollant](modifying-ata-config-dcpassword.md)
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [ATA-rollgrupper](ata-role-groups.md)
-- [Ange ATA-aviseringar](setting-ata-alerts.md)
+- [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
 - [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
 - [Arbeta med identifieringsinställningar](working-with-detection-settings.md)
 - [ATA Health Center](ata-health-center.md)
@@ -53,6 +53,6 @@ Följande är åtgärder du kan utföra med ATA:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 
