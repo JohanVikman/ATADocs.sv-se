@@ -3,8 +3,9 @@ title: "Ändra ATA-konfiguration – IP-adress för ATA-konsolen | Microsoft Adv
 description: "Beskriver hur du ändrar IP-adressen för ATA-konsolen, som används för att skapa en genväg till ATA-konsolen på ATA-gatewayerna."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: stevenpo
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 8f816c8eda0a1b11a42314a18b1c8c39ac6a7ba8
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
 
 
 
-# Ändra ATA-konfiguration – URL för ATA-konsolen
+# <a name="change-ata-configuration---ata-console-url"></a>Ändra ATA-konfiguration – URL för ATA-konsolen
 
 >[!div class="step-by-step"]
 [« ATA Center-certifikat](modifying-ata-config-centercert.md)
 [Lösenord för domänanslutning »](modifying-ata-config-dcpassword.md)
 
-## Ändra ATA-konsolens URL
+## <a name="change-the-ata-console-url"></a>Ändra ATA-konsolens URL
 ATA-konsolens URL är som standard den IP-adress som valdes som IP-adress för ATA-konsolen när du installerade ATA Center.
 
 URL:en används i följande scenarier:
@@ -60,6 +61,9 @@ Följ de här stegen på ATA Center-servern om du behöver ändra URL för ATA-k
 5.  Under **Konsol-URL**, ändra webbadressen efter behov:
 
     ![ATA-konsolens URL](media/ATA-chge-center-URL.png)
+> [!NOTE]
+> Inkludera inte snedstreck / i slutet av URL:en.
+
 6.  Klicka på **Spara**.
 
 >[!div class="step-by-step"]
@@ -67,13 +71,12 @@ Följ de här stegen på ATA Center-servern om du behöver ändra URL för ATA-k
 [Lösenord för domänanslutning »](modifying-ata-config-dcpassword.md)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
-- [Installera ATA](install-ata.md)
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

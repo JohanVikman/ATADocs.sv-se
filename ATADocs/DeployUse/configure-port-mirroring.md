@@ -1,10 +1,11 @@
 ---
-title: Konfigurera portspegling | Microsoft ATA
+title: Konfigurera portspegling | Microsoft Docs
 description: "Beskriver alternativ för portspegling och hur du konfigurerar dem för ATA"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 
-# Konfigurera portspegling
+# <a name="configure-port-mirroring"></a>Konfigurera portspegling
 > [!NOTE] 
 > Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -43,7 +44,7 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 > [!NOTE]
 > Om domänkontrollanten som portspeglas är ansluten via en WAN-länk ska du kontrollera att WAN-länken kan hantera den ytterligare belastningen av ERSPAN-trafiken.
 
-## Alternativ för portspegling som stöds
+## <a name="supported-port-mirroring-options"></a>Alternativ för portspegling som stöds
 
 |ATA Gateway|Domänkontrollant|Överväganden|
 |---------------|---------------------|------------------|
@@ -68,13 +69,12 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 
 När du har konfigurerat portspegling ska du kontrollera att det fungerar innan du installerar ATA-gatewayen.
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Verifiera portspegling](validate-port-mirroring.md)
-- [Installera ATA](install-ata.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

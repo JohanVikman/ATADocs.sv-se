@@ -1,10 +1,11 @@
 ---
-title: "Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft ATA"
+title: "Ändra ATA-konfiguration – IP-adress för ATA Center | Microsoft Docs"
 description: "Beskriver hur du ändrar IP-adress, port eller certifikat för ett ATA Center."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 
-# Ändra ATA-konfiguration – IP-adress för ATA Center
+# <a name="change-ata-configuration---ata-center-ip-address"></a>Ändra ATA-konfiguration – IP-adress för ATA Center
 
 >[!div class="step-by-step"]
 [ATA Center-certifikat »](modifying-ata-config-centercert.md)
 
 Efter den första distributionen bör ändringar i ATA Center genomföras med försiktighet. Använd följande procedurer när du uppdaterar IP-adressen och porten eller certifikatet.
 
-## Ändra IP-adressen som används av ATA Center-servern
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>Ändra IP-adressen som används av ATA Center-servern
 Ta hänsyn till följande om du behöver ändra IP-adress och port eller certifikat för ATA Center.
 
 ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lokalt. De ansluter regelbundet till ATA Center och hämtar konfigurationsändringar. Det är en process i två steg att ändra hur en ATA Gateway ansluter till ATA Center.
@@ -77,13 +78,12 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 [Ändra ATA Center-certifikatet »](modifying-ata-config-centercert.md)
 
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
-- [Installera ATA](install-ata.md)
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
