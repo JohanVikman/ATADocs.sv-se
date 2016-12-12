@@ -14,17 +14,17 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 6d95045842d8bb19dba2e8d0fe13b1bf96e2e304
-ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
+ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
+ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 ---
-# Dokumentation för Microsoft Advanced Threat Analytics
+# <a name="microsoft-advanced-threat-analytics-documentation"></a>Dokumentation för Microsoft Advanced Threat Analytics
 <article id="main">
     <section id="hero-content">
       <h1>Dokumentation för Microsoft Advanced Threat Analytics</h1>
       <h2>Lär dig hur du distribuerar och hanterar Microsoft Advanced Threat Analytics (ATA), en lokal produkt som hjälper IT-säkerhetsproffs att skydda företaget från avancerade riktade attacker.</h2>
-      <h3>Har du inte använt ATA förut? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Besök vår produktsida &rarr;</a></h3>
+      <h3>Har du inte använt ATA förut? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Besök vår produktsida&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>Är du redo att sätta igång?</p>
@@ -136,7 +136,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
                     <h3>Installera ATA</h3>
                     <p>Följ den detaljerade installationsguiden steg för steg.</p>
                   </a>
@@ -196,6 +196,6 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

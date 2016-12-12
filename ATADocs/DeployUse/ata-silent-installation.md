@@ -1,8 +1,9 @@
 ---
-title: Installera ATA tyst | Microsoft ATA
+title: Installera ATA tyst | Microsoft Docs
 description: "Det här beskriver tyst installation av ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
+ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
+ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
 
 
 ---
@@ -23,9 +24,9 @@ ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 
-# Tyst installation av ATA
+# <a name="ata-silent-installation"></a>Tyst installation av ATA
 Den här artikeln innehåller instruktioner för tyst installation av ATA.
-## Krav
+## <a name="prerequisites"></a>Krav
 
 Microsoft ATA 1.7 kräver installation av Microsoft .NET Framework 4.6.1. 
 
@@ -36,7 +37,7 @@ När du installerar eller uppdaterar ATA kommer .Net Framework 4.6.1 att install
 När du använder metoden för tyst installation av ATA konfigureras installationsprogrammet automatiskt så att servern startas om i slutet av installationen (vid behov). Om du vill undvika att starta om servern som en del av installationen använder du flaggan `-NoRestart`. När du använder flaggan `-NoRestart` och omstart krävs som en del av installationen kommer installationsprogrammet att pausa tills servern har startats om. Följ distributionsförloppet genom att övervaka ATA-installationsloggarna som finns i **%AppData%\Local\Temp**.
 
 
-## Installera ATA Center
+## <a name="install-the-ata-center"></a>Installera ATA Center
 
 Använd följande kommando för att installera ATA Center.
 
@@ -77,7 +78,7 @@ Installera ATA Center med standardinstallationssökvägar, två IP-adresser och 
     “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
 
-## Uppdatera ATA Center
+## <a name="update-the-ata-center"></a>Uppdatera ATA Center
 
 Använd följande kommando för att uppdatera ATA Center.
 
@@ -102,7 +103,7 @@ När du uppdaterar ATA upptäcker installationsprogrammet automatiskt att ATA re
 
         “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
 
-## Avinstallera ATA Center tyst
+## <a name="uninstall-the-ata-center-silently"></a>Avinstallera ATA Center tyst
 
 Använd följande kommando för att utföra en tyst avinstallation av ATA Center: **Syntax**:
 
@@ -129,7 +130,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
 
     “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
 
-## Tyst installation av ATA Gateway
+## <a name="ata-gateway-silent-installation"></a>Tyst installation av ATA Gateway
 Använd följande kommando för att installera ATA Gateway:
 
 **Syntax**:
@@ -146,7 +147,6 @@ Använd följande kommando för att installera ATA Gateway:
 |NoRestart|/norestart|Nej|Hindrar alla försök att starta om. Gränssnittet frågar som standard före omstart.|
 |Hjälp|/help|Nej|Ger hjälp och snabbreferens. Visar rätt användning av installationskommandot, inklusive en lista över alla alternativ och beteenden.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ja|Anger parametrarna för installationen av .Net Framework. Måste anges för att tvinga fram den tysta installationen av .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Ja|Anger att licensen har lästs och godkänts. Måste anges för tyst installation.|
 
 **Installationsparametrar**:
 
@@ -162,7 +162,7 @@ Använd följande kommando för att installera ATA Gateway:
     ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
     
 
-## Uppdatera ATA Gateway
+## <a name="update-the-ata-gateway"></a>Uppdatera ATA Gateway
 
 Använd följande kommando för tyst uppdatering av ATA Gateway:
 
@@ -185,7 +185,7 @@ Använd följande kommando för tyst uppdatering av ATA Gateway:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Tyst avinstallation av ATA Gateway
+## <a name="uninstall-the-ata-gateway-silently"></a>Tyst avinstallation av ATA Gateway
 
 Använd följande kommando för att utföra en tyst avinstallation av ATA Gateway: **Syntax**:
 
@@ -214,13 +214,13 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Gatewa
 
 
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
