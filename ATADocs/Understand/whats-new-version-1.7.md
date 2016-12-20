@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 
 -   Rollbaserad åtkomstkontroll
 
--   Stöd för Windows Server 2016 och Windows Server Core
+-   Stöd för Windows Server 2016 och Windows Server 2016 Core
 
 -   Förbättringar av användarupplevelse
 
 -   Mindre ändringar
 
 
-### <a name="new-updated-detections"></a>Nya och uppdaterade identifieringar
+### <a name="new--updated-detections"></a>Nya och uppdaterade identifieringar
 
 
 - **Rekognosering med uppräkning av katalogtjänster** Som en del av rekognoseringsfasen samlar angripare in information om enheter i nätverket med olika metoder. Uppräkning av katalogtjänster med SAM-R-protokollet gör det möjligt för angripare att erhålla en lista över användare och grupper i en domän och förstå interaktionen mellan olika entiteter. 
@@ -55,7 +55,7 @@ Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 
 - **Rollbaserad åtkomstkontroll** Förmåga för rollbaserad åtkomstkontroll (RBAC). ATA 1.7 innehåller tre roller: ATA-administratör, ATA-analytiker och ATA-chefer.
 
-- **Stöd för Windows Server 2016 och Windows Server Core** ATA 1.7 stöder distribution av Lightweight Gateways på domänkontrollanter som kör Server Core för Windows Server 2012 och Server Core för Windows Server 2012 R2. Den här versionen stöder dessutom Windows Server 2016 både för komponenterna ATA Center och ATA Gateway.
+- **Stöd för Windows Server 2016 och Windows Server Core** ATA 1.7 stöder distribution av Lightweight Gateways på domänkontrollanter som kör Windows Server 2008 R2 SP1 (inkluderar inte Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (inkluderar Core men inte Nano). Den här versionen stöder dessutom Windows Server 2016 både för komponenterna ATA Center och ATA Gateway.
 
 ### <a name="user-experience"></a>Användarens upplevelse
 - **Konfigurationsupplevelse** I den här versionen har konfigurationsupplevelsen för ATA gjorts om för en bättre användarupplevelse och bättre stöd för miljöer med flera ATA-gatewayar. Den här versionen beskriver även ATA Gateways uppdateringssida för enklare och bättre hantering av automatiska uppdateringar för olika gatewayar.
@@ -102,6 +102,12 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Det kanske inte går att exportera information om misstänkt aktivitet till Excel
+Om du försöker exportera information om misstänkt aktivitet till en Excel-fil kanske åtgärden misslyckas och följande felmeddelande visas: *Fel [BsonClassMapSerializer`1] System.FormatException: Ett fel inträffade under deserialiseringen av egenskapen Activity av klassen Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+
+För att lösa det här problemet kan du bläddra till följande plats från en upphöjd kommandotolk: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** och köra följande:
+1.  **Mongo.exe ATA** (ATA måste anges med versaler)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Mindre ändringar
 
@@ -117,6 +123,6 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

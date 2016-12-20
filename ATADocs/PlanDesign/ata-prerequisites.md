@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-Ho
 
 Information om hur du använder virtuella datorer med ATA Gateway finns i [Konfigurera portspegling](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
+> [!NOTE]
+> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) och [prestandaloggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
+
 ### <a name="server-specifications"></a>Serverspecifikationer
 För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.<br>
 En ATA-gateway har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik till och från domänkontrollanterna.
@@ -212,12 +215,15 @@ Ett certifikat med stöd för **serverautentisering** måste vara installerat i 
 ## <a name="ata-lightweight-gateway-requirements"></a>Krav för ATA Lightweight Gateway
 Det här avsnittet innehåller kraven för ATA Lightweight Gateway.
 ### <a name="general"></a>Allmänt
-ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (inkludera Core men inte Nano).
+ATA Lightweight Gateway har stöd för installation på en domänkontrollant som kör Windows Server 2008 R2 SP1 (inkluderar inte Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (inkluderar Core men inte Nano).
 
 Domänkontrollanten kan vara en skrivskyddad domänkontrollant (RODC).
 
 Innan du installerar ATA Lightweight Gateway på en domänkontrollant som kör Windows Server 2012 R2 SP1 måste du bekräfta att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) och [prestandaloggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
@@ -282,6 +288,6 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
