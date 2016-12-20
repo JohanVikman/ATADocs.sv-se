@@ -1,10 +1,11 @@
 ---
-title: Planera din ATA-distribution | Microsoft ATA
+title: Planera din ATA-distribution | Microsoft Docs
 description: "Hjälper dig att planera distributionen och bestämma hur många ATA-servrar som krävs för nätverket"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/6/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
+ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
+ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
 
 
 ---
@@ -22,10 +23,10 @@ ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 
-# ATA-kapacitetsplanering
+# <a name="ata-capacity-planning"></a>ATA-kapacitetsplanering
 Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs för att övervaka nätverket, inklusive att förstå hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapaciteten för ATA Center och ATA Gateway.
 
-##Använda storleksverktyget
+##<a name="using-the-sizing-tool"></a>Använda storleksverktyget
 Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distributionen är genom att använda [ATA-storleksverktyget](http://aka.ms/atasizingtool). Kör ATA-storleksverktyget och använd följande fält från resultaten i Excel-filen för att avgöra vilken ATA-kapacitet du behöver:
 
 - ATA Center – CPU och minne: Matcha fältet **Upptagna paket/sek** i ATA Center-tabellen i resultatfilen med fältet **PAKET PER SEKUND** i tabellen [ATA Center](#ata-center-sizing).
@@ -43,22 +44,21 @@ I följande avsnitt finns anvisningar om hur du samlar in information om paket/s
 
 
 
-### Storlek för ATA Center
-ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende. Nödvändigt diskutrymme för ATA-databasen per domänkontrollant anges nedan. Om du har flera domänkontrollanter beräknar du det fullständiga utrymmet som krävs för ATA-databasen genom att summera nödvändigt diskutrymme per domänkontrollant.
+### <a name="ata-center-sizing"></a>Storlek för ATA Center
+ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende.
  
 
-|Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|Databaslagring per dag (GB)|Databaslagring per månad (GB)|IOPS&#42;&#42;&#42;|
+|Paket per sekund från alla domänkontrollanter|CPU (kärnor&#42;)|Minne (GB)|Databaslagring per dag (GB)|Databaslagring per månad (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0,3|9|30 (100)
 |10,000|4|48|3|90|200 (300)
 |40,000|8|64|12|360|500 (1,000)
 |100,000|12|96|30|900|1,000 (1,500)
 |400 000|40|128|120|1,800|2,000 (2,500)
-&#42;Totalt dagligt genomsnittligt antal paket per sekund från alla domänkontrollanter som övervakas av alla ATA-gatewayer.
 
-&#42;&#42;Det omfattar fysiska kärnor, inte hypertrådade kärnor.
+&#42;Detta omfattar fysiska kärnor, inte hypertrådade kärnor.
 
-&#42;&#42;&#42;Genomsnittligt antal (högsta antal)
+&#42;&#42;Genomsnittligt antal (högsta antal)
 > [!NOTE]
 > -   ATA Center kan hantera sammanlagt högst 400 000 bilder per sekund (FPS) från alla övervakade domänkontrollanter.
 > -   De mängder lagring som anges här är nettovärden. Du bör alltid räkna med framtida tillväxt och se till att disken som databasen ligger på har minst 20 % ledigt utrymme.
@@ -70,7 +70,7 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > -   När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas Node Interleaving i systemet. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Obs! Det här gäller inte när ATA Center körs på en virtuell server.
 
 
-## Välja rätt gateway-typ för distributionen
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Välja rätt gateway-typ för distributionen
 I en ATA-distribution stöds valfri kombination av ATA Gateway-typer:
 
 - Endast ATA Gateway
@@ -98,7 +98,7 @@ Följande är exempel på scenarier där domänkontrollanter bör omfattas av AT
 - Datacenter på huvudkontor (med domänkontrollanter med fler än 10 000 paket per sekund)
 
 
-### Storlek för ATA Lightweight Gateway
+### <a name="ata-lightweight-gateway-sizing"></a>Storlek för ATA Lightweight Gateway
 
 En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. 
 
@@ -119,9 +119,10 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 > -   Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
+> -   Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) och [prestandaloggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
-### Storlek på ATA-gateway
+### <a name="ata-gateway-sizing"></a>Storlek på ATA-gateway
 
 Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribueras.
 
@@ -153,9 +154,10 @@ Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribu
 > [!NOTE] 
 > -   Dynamiskt minne stöds inte.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.
+> -   Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) och [prestandaloggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
-## Beräkning av trafik för domänkontrollanter
+## <a name="domain-controller-traffic-estimation"></a>Beräkning av trafik för domänkontrollanter
 Det finns flera olika verktyg du kan använda för identifiering av genomsnittligt antal paket per sekund för domänkontrollanterna. Om du inte har några verktyg som spårar räknaren kan du samla in informationen som krävs med hjälp av Prestandaövervakaren.
 
 Fastställ antal paket per sekund genom att göra följande på varje domänkontrollant:
@@ -205,13 +207,13 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 
     ![Bild av räknaren Paket/s](media/ATA-traffic-estimation-14.png)
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-arkitektur](ata-architecture.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

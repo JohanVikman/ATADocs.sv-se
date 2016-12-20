@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
+ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
+ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
 
 
 ---
@@ -34,7 +34,8 @@ Förutom att samla in och analysera nätverkstrafik till och från domänkontrol
 För att ATA ska kunna använda data från en Syslog-server måste du göra följande:
 
 -   Konfigurera ATA Gateway-servrarna så att de lyssnar på och godkänner händelser som vidarebefordras från SIEM/Syslog-servern.
-
+> [!NOTE]
+> ATA lyssnar endast på IPv4 och inte på IPv6. 
 -   Konfigurera SIEM/Syslog-servern så att den vidarebefordrar specifika händelser till ATA Gateway.
 
 > [!IMPORTANT]
@@ -287,6 +288,6 @@ Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 
