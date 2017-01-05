@@ -1,8 +1,9 @@
 ---
-title: "Hantera telemetriinställningar | Microsoft ATA"
+title: "Hantera telemetriinställningar | Microsoft Docs"
 description: "Beskriver de data som samlas in av ATA och innehåller instruktioner för att inaktivera datainsamling."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
-ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c7366dcc2cbd7a9eba1503e5af3290ec4ac73c32
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 
-# Hantera telemetriinställningar
+# <a name="manage-telemetry-settings"></a>Hantera telemetriinställningar
 ATA (Advanced Threat Analytics) samlar in anonymiserade telemetridata om ATA och överför data via en HTTPS-anslutning till Microsoft-servrar.  Dessa data används av Microsoft för att förbättra kommande versioner av ATA.
 
-## Insamlade data
+## <a name="data-collected"></a>Insamlade data
 Insamlade anonymiserade data omfattar följande:
 
 -   Prestandaräknare från både ATA Center och ATA Gateway
@@ -82,19 +83,19 @@ Insamlade anonymiserade data omfattar följande:
 - ATA-konsolens URL-adresser - webbadresser vid användning av ATA-konsolen, d.v.s. vilka sidor i ATA-konsolen som besöks.
 
 
-### Inaktivera datainsamling
+### <a name="disable-data-collection"></a>Inaktivera datainsamling
 Utför följande steg om du vill sluta samla in och skicka telemetridata till Microsoft:
 
 1.  Logga in på ATA-konsolen, klicka på de tre punkterna i verktygsfältet och välj **Om**.
 
 2.  Avmarkera kryssrutan **Skicka användningsinformation till oss för att förbättra kundupplevelsen i framtiden**.
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Nyheter i version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

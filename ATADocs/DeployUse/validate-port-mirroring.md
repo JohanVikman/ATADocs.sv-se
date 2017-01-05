@@ -1,8 +1,9 @@
 ---
-title: Verifiera portspegling | Microsoft ATA
+title: Verifiera portspegling | Microsoft Docs
 description: Beskriver hur du verifierar att portspegling har konfigurerats korrekt
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: a836fca1fb11a980ca4d52a7e189f36aa37ffcd1
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 
-# Verifiera portspegling
+# <a name="validate-port-mirroring"></a>Verifiera portspegling
 > [!NOTE] 
 > Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. Om ATA ska fungera ordentligt måste ATA Gateway kunna se trafiken till och från domänkontrollanten. Den huvudsakliga datakälla som ATA använder är djup paketinspektion för nätverkstrafiken till och från dina domänkontrollanter. Om ATA ska kunna se nätverkstrafiken måste portspegling vara konfigurerad. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
 
-## Validera portspegling med ett Windows PowerShell-skript
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Validera portspegling med ett Windows PowerShell-skript
 
 1. Spara texten i det här skriptet i en fil med namnet *ATAdiag.ps1*.
 2. Kör skriptet på den ATA-gateway som du vill validera.
@@ -191,7 +192,7 @@ Exempel på körning av skriptet:
     [void][System.Console]::ReadKey($true)
     
     
-## Validera portspegling med Net Mon
+## <a name="validate-port-mirroring-using-net-mon"></a>Validera portspegling med Net Mon
 1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på den ATA-gateway som du vill validera.
 
     > [!IMPORTANT]
@@ -221,13 +222,13 @@ Exempel på körning av skriptet:
 
 5.  Om du bara ser trafik i en riktning bör du arbeta med nätverks- eller virtualiseringsteamen för att felsöka konfigurationen av portspeglingen.
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Konfigurera portspegling](configure-port-mirroring.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
