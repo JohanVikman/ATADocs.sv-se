@@ -22,7 +22,7 @@ ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 *Gäller för: Advanced Threat Analytics version 1.7*
 
-## <a name="what-threats-does-ata-look-for"></a>Vilka hot letar ATA efter?
+# <a name="what-threats-does-ata-look-for"></a>Vilka hot letar ATA efter?
 
 ATA ger identifiering för följande olika faser i en avancerad attack: rekognosering, avslöjade autentiseringsuppgifter, lateral förflyttning, eskalering av privilegier, domändominans med mera. Dessa identifieringar är avsedda att identifiera avancerade attacker och insiderhot innan de skadar organisationen.
 Identifieringen av varje fas ger flera misstänkta aktiviteter som är relevanta för fasen i fråga, där varje misstänkt aktivitet motsvarar olika varianter av möjliga attacker.
