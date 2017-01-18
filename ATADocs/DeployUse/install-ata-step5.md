@@ -1,8 +1,9 @@
 ---
-title: "Installera ATA – Steg 5 | Microsoft ATA"
+title: "Installera ATA – Steg 5 | Microsoft Docs"
 description: "Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
-ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: b30fe6bc977184fb8cc297e10724c7fe48ee6934
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 
-# Installera ATA – Steg 5
+# <a name="install-ata---step-5"></a>Installera ATA – Steg 5
 
 >[!div class="step-by-step"]
 [« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
 
-## Steg 5. Konfigurera inställningar för ATA Gateway
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Steg 5. Konfigurera inställningar för ATA Gateway
 När ATA Gateway har installerats gör du följande för att konfigurera inställningarna för ATA Gateway.
 
 1.  I ATA-konsolen, gå till **Konfiguration** och under **System**, väljer du **Gateways**.
@@ -67,7 +68,7 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
 3. Klicka på **Spara**.
 
 
-## Verifiera installationer
+## <a name="validate-installations"></a>Verifiera installationer
 Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Gateway** körs. Det kan ta några minuter innan tjänsten startar efter att du har sparat inställningarna för ATA Gateway.
@@ -87,7 +88,7 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 [« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
@@ -96,6 +97,6 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

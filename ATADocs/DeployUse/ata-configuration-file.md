@@ -1,8 +1,9 @@
 ---
-title: ATA-konfigurationsfil | Microsoft ATA
-description: "Säkerhetskopiera ATA-konfiguration."
+title: "Ändra ATA-konfiguration | Microsoft Docs"
+description: "Så här exporterar och importerar du ATA-konfigurationen."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: f0307ae2e8f222e7c58db234b0fb393072ac7444
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
 
 
 
-# <a name="ata-configuration-file"></a>ATA-konfigurationsfil
+# <a name="export-and-import-the-ata-configuration"></a>Exportera och importera ATA-konfigurationen
 Konfigurationen av ATA lagras i samlingen "SystemProfile" i databasen.
 Den här samlingen säkerhetskopieras varje timme av ATA Center-tjänsten till filer som heter: "SystemProfile_*timestamp*.json". De senaste 10 versionerna lagras.
 Den finns i en undermapp som heter "Backup". På standardplatsen för ATA-installation finns den här:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
@@ -42,6 +43,6 @@ Det går att återställa alla inställningar genom att köra följande kommando
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,8 +1,9 @@
 ---
-title: "Migreringsguide för ATA-uppdatering till 1.5 | Microsoft ATA"
+title: "Migreringsguide för ATA-uppdatering till 1.5 | Microsoft Docs"
 description: "Procedurer för att uppdatera ATA till version 1.5"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
 
 
 ---
 
-# Migreringsguide för ATA-uppdatering till 1.5
+# <a name="ata-update-to-15-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.5
 Uppdateringen till ATA 1.5 erbjuder förbättringar inom följande områden:
 
 -   Snabbare identifiering
@@ -36,7 +37,7 @@ Uppdateringen till ATA 1.5 erbjuder förbättringar inom följande områden:
 
 -   Ytterligare prestandaräknare för förbättrad övervakning och felsökning
 
-## Uppdatera ATA till version 1.5
+## <a name="updating-ata-to-version-15"></a>Uppdatera ATA till version 1.5
 > [!NOTE]
 > Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.5, och följa standardproceduren för installation som beskrivs i [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -58,7 +59,7 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
     > [!IMPORTANT]
     > Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### Steg 1: Uppdatera ATA Center
+### <a name="step-1-update-the-ata-center"></a>Steg 1: Uppdatera ATA Center
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
@@ -89,7 +90,7 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
 > [!IMPORTANT]
 > - Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### Steg 2. Hämta installationspaketet för ATA Gateways
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Steg 2. Hämta installationspaketet för ATA Gateways
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet.
 
 För att hämta ATA Gateway-paketet:
@@ -110,7 +111,7 @@ ZIP-filen innehåller följande:
 
 -   Filen med konfigurationsinställningar som innehåller informationen som krävs för att ansluta till ATA Center
 
-### Steg 3: Uppdatera ATA Gateways
+### <a name="step-3-update-the-ata-gateways"></a>Steg 3: Uppdatera ATA Gateways
 
 1.  Extrahera filerna från ATA Gateway-paketet på varje ATA Gateway och kör filen Microsoft ATA Gateway Setup.
 
@@ -128,12 +129,12 @@ Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways ra
 
 ![Bild av uppdaterade gateways](media/ATA-gw-updated.png)
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

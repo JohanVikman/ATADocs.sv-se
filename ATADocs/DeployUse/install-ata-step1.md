@@ -1,10 +1,11 @@
 ---
-title: "Installera ATA – Steg 1 | Microsoft ATA"
+title: "Installera ATA – Steg 1 | Microsoft Docs"
 description: "Första steget för att installera ATA omfattar att hämta och installera ATA Center på den valda servern."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: b73fb769438a7290053c27766c233010079dca78
+ms.openlocfilehash: 313ae02742d4acc68c52d5481fdc24c0aa508681
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 
-# Installera ATA – Steg 1
+# <a name="install-ata---step-1"></a>Installera ATA – Steg 1
 
 >[!div class="step-by-step"]
 [Steg 2 »](install-ata-step2.md)
@@ -33,7 +34,7 @@ Den här installationsproceduren innehåller anvisningar för att utföra en hel
 > [!IMPORTANT] 
 > Om du använder Windows 2012 R2 kan du installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
 
-## Steg 1. Hämta och installera ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Steg 1. Hämta och installera ATA Center
 När du har kontrollerat att servern uppfyller kraven kan du fortsätta med installationen av ATA Center.
 
 På ATA Center-servern utför du följande steg.
@@ -53,17 +54,17 @@ På ATA Center-servern utför du följande steg.
 6.  Läs igenom Licensvillkor för programvara från Microsoft och om du godkänner villkoren markerar du kryssrutan och klickar sedan på **Nästa**.
 
 7.  Vi rekommenderar att du konfigurerar ATA för att uppdateras automatiskt. Om Windows inte är inställt på att göra detta på datorn visas skärmen **Använd Microsoft Update så hjälper du till att hålla datorn säker och uppdaterad**. 
-    ![Bild för håll ATA uppdaterat](media/ata_ms_update.png)
+    ![Bild om att håll ATA uppdaterat](media/ata_ms_update.png)
 
 8. Markera **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**. Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
-    ![Bild för automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
+    ![Bild om automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
 
 8.  På sidan **ATA Center-konfiguration** anger du följande information baserat på miljön:
 
     |Fält|Beskrivning|Kommentar|
     |---------|---------------|------------|
     |Installationssökväg|Det här är den plats där ATA Center kommer att installeras. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center|Låt standardvärdet vara kvar|
-    |Datasökväg för databasen|Det här är den plats där MongoDB-databasfilerna kommer att finnas. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Ändra platsen till en plats där det finns utrymme att växa, baserat på storleken. **Obs!** <ul><li>I produktionsmiljöer bör du använda en enhet som har tillräckligt med utrymme baserat på kapacitetsplaneringen.</li><li>Vid stora distributioner bör databasen finnas på en separat fysisk enhet.</li></ul>Storleksinformation finns i [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning).|
+    |Datasökväg för databasen|Det här är den plats där MongoDB-databasfilerna kommer att finnas. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Ändra platsen till en plats där det finns utrymme att växa, baserat på storleken. **Obs:** <ul><li>I produktionsmiljöer bör du använda en enhet som har tillräckligt med utrymme baserat på kapacitetsplaneringen.</li><li>Vid stora distributioner bör databasen finnas på en separat fysisk enhet.</li></ul>Storleksinformation finns i [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning).|
     |IP-adress för Center-tjänsten: Port|Det här är den IP-adress som ATA Center-tjänsten kommer att lyssna på för kommunikation från ATA-gatewayerna.<br /><br />**Standardport:** 443|Klicka på nedåtpilen för att välja den IP-adress som ska användas av ATA Center-tjänsten.<br /><br />IP-adressen och porten för ATA Center-tjänsten får inte vara samma som IP-adressen och porten för ATA-konsolen. Tänk på att ändra porten för ATA-konsolen.|
     |SSL-certifikat för Center-tjänsten|Det här är det certifikat som kommer att användas av ATA-konsolen och ATA Center-tjänsten.|Klicka på nyckelikonen om du vill välja ett installerat certifikat eller kontrollera ett självsignerat certifikat vid distribution i en labbmiljö.|
     |Konsolens IP-adress|Det här är den IP-adress som ska användas för ATA-konsolen.|Klicka på nedåtpilen för att välja den IP-adress som används av ATA-konsolen. **Obs!** Anteckna denna IP-adress för att göra det enklare att komma åt ATA-konsolen från ATA Gateway.|
@@ -85,7 +86,7 @@ På ATA Center-servern utför du följande steg.
 Du kommer nu automatiskt till inställningssidan **Allmänt** där du fortsätter med konfigurationen och distributionen av ATA-gatewayer.
 Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad till certifikatet, detta är normalt och du ska klicka på **Fortsätt till denna webbplats**.
 
-### Verifiera installationen
+### <a name="validate-installation"></a>Verifiera installationen
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Center** körs.
 2.  På skrivbordet klickar du på genvägen för **Microsoft Advanced Threat Analytics** för att ansluta till ATA-konsolen. Logga in med samma autentiseringsuppgifter som du använde för att installera ATA Center.
@@ -93,10 +94,10 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 
 
 >[!div class="step-by-step"]
-[«Förinstallation](preinstall-ata.md)
+[«Förinstallation](configure-port-mirroring.md)
 [steg 2»](install-ata-step2.md)
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
@@ -105,6 +106,6 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 
