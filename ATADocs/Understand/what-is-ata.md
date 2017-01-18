@@ -1,8 +1,9 @@
 ---
-title: "Vad är Microsoft Advanced Threat Analytics (ATA)? | Microsoft ATA"
+title: "Vad är Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs"
 description: "Förklarar vad Microsoft Advanced Threat Analytics (ATA) är och vilka typer av misstänkta aktiviteter det kan upptäcka"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 
 
 ---
@@ -22,10 +23,10 @@ ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
-## Vad är Advanced Threat Analytics?
+# <a name="what-is-advanced-threat-analytics"></a>Vad är Advanced Threat Analytics?
 Advanced Threat Analytics (ATA) är en lokal plattform som skyddar ditt företag från flera typer av avancerade riktade cyberattacker och insiderhot.
 
-## Så här fungerar ATA
+## <a name="how-ata-works"></a>Så här fungerar ATA
 ATA tar information från flera datakällor från loggar och händelser i nätverket för att lära sig beteendet hos användare och andra entiteter i organisationen och skapar en beteendeprofil om dem.
 ATA kan ta emot händelser och loggar från:
 
@@ -39,7 +40,7 @@ Dessutom utnyttjar ATA en egen nätverkstolkningsmotor för att samla in och tol
 
 Läs mer om ATA-arkitektur under [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture).
 
-## Vad gör ATA?
+## <a name="what-does-ata-do"></a>Vad gör ATA?
 
 ATA-teknik identifierar flera misstänkta aktiviteter och fokuserar på flera faser av cyberattackkedjan, inklusive:
 
@@ -90,17 +91,17 @@ Du kan se misstänkta aktiviteter av den här typen på ATA-instrumentpanelen. I
   ![exempel på ATA-skärm för bruten förtroende](media/sample screen broken trust.png)
 
 
-## Vad händer nu?
+## <a name="whats-next"></a>Vad händer nu?
 
 -   Mer information om hur ATA passar in i nätverket: [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture)
 
 -   Komma igång med att distribuera ATA: [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata)
 
-## Se även
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

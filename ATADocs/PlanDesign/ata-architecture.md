@@ -1,8 +1,9 @@
 ---
-title: ATA-arkitektur | Microsoft ATA
+title: ATA-arkitektur | Microsoft Docs
 description: Beskriver arkitekturen i Microsoft Advance Threat Analytics (ATA)
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 06cc0de7e335a120d9e4c988dcc6a74087f027c6
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
 
 
 
-# ATA-arkitektur
+# <a name="ata-architecture"></a>ATA-arkitektur
 Arkitekturen för Advanced Threat Analytics beskrivs i det här diagrammet:
 
 ![Topologidiagram för ATA-arkitektur](media/ATA-architecture-topology.jpg)
@@ -35,7 +36,7 @@ Det här avsnittet beskriver flödet i nätverk och händelseinsamling och beskr
 
 ![Trafikflödesdiagram för ATA](media/ATA-traffic-flow.jpg)
 
-## ATA-komponenter
+## <a name="ata-components"></a>ATA-komponenter
 ATA består av följande:
 
 -   **ATA Center** <br>
@@ -48,7 +49,7 @@ ATA Lightweight Gateway installeras direkt på domänkontrollanterna och överva
 En ATA-distribution kan bestå av en enda ATA Center som är ansluten till alla ATA Gateway, alla ATA Lightweight Gateway eller en kombination av ATA Gateway och ATA Lightweight Gateway.
 
 
-## Distributionsalternativ
+## <a name="deployment-options"></a>Distributionsalternativ
 Du kan distribuera ATA med följande kombination av gatewayer:
 
 -   **Endast med ATA Gateway** <br>
@@ -63,7 +64,7 @@ I samtliga tre scenarier skickar alla gatewayer sina data till ATA Center.
 
 
 
-## ATA Center
+## <a name="ata-center"></a>ATA Center
 **ATA Center** utför följande funktioner:
 
 -   Hanterar konfigurationsinställningar för ATA Gateway och ATA Lightweight Gateway
@@ -97,9 +98,9 @@ Tänk på följande när du bestämmer hur många ATA Center som ska distribuera
 
 -    I mycket stora Active Directory-distributioner kanske inte ett enda ATA Center kan hantera all trafik för alla domänkontrollanter. I så fall krävs flera ATA-resurser. Antalet ATA Center bör avgöras genom [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
-## ATA Gateway och ATA Lightweight Gateway
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway och ATA Lightweight Gateway
 
-### Grundläggande funktioner för gateway
+### <a name="gateway-core-functionality"></a>Grundläggande funktioner för gateway
 **ATA Gateway** och **ATA Lightweight Gateway** har båda samma grundläggande funktioner:
 
 -   Samla in och inspektera domänkontrollantens nätverkstrafik (portspeglad trafik för ATA Gateway och lokal trafik på domänkontrollanten för ATA Lightweight Gateway) 
@@ -125,7 +126,7 @@ ATA Gateway tar emot nätverkstrafik och Windows-händelser från nätverket och
 |Entitetslösaren|Entitetslösaren tar tolkade data (nätverkstrafik och händelser) och löser dessa data med Active Directory för att hitta konto- och identitetsinformation. Den matchas sedan mot IP-adresser som finns i tolkade data. Entitetslösaren granskar paketrubriker på ett effektivt sätt för att möjliggöra tolkning av autentiseringspaket för datornamn, egenskaper och identiteter. Entitetslösaren kombinerar tolkade autentiseringspaket med data i det faktiska paketet.|
 |Entitetssändare|Entitetssändaren ansvarar för att skicka tolkade och matchade data till ATA Center.|
 
-## Funktioner för ATA Lightweight Gateway
+## <a name="ata-lightweight-gateway-features"></a>Funktioner för ATA Lightweight Gateway
 
 Följande funktioner fungerar på olika sätt beroende på om du kör ATA Gateway eller ATA Lightweight Gateway.
 
@@ -158,10 +159,10 @@ Om Active Directory behöver mer beräkning minskas kvoten som krävs av ATA Lig
 
 
 
-## Dina nätverkskomponenter
+## <a name="your-network-components"></a>Dina nätverkskomponenter
 Kontrollera följande för att de ska fungera med ATA:
 
-### Portspegling
+### <a name="port-mirroring"></a>Portspegling
 Om du använder ATA-gatewayer måste du konfigurera portspegling för de domänkontrollanter som ska övervakas och ange ATA Gateway som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. ATA fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringarna blir mindre effektiva.
 
 Även om portspegling speglar all domänkontrollantstrafik till ATA Gateway är det bara en liten andel av denna trafik som sedan skickas i komprimerat format till ATA Center för analys.
@@ -169,14 +170,14 @@ Om du använder ATA-gatewayer måste du konfigurera portspegling för de domänk
 Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella, mer information finns i [Konfigurera portspegling](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 
-### händelser
+### <a name="events"></a>händelser
 Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force och Honey Tokens behöver ATA Windows-händelselogg ID 4776. Den kan vidarebefordras till ATA Gateway på något av två sätt, antingen genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att använda vidarebefordran av Windows-händelser.
 
 -   Konfigurera ATA Gateway för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATA. ATA har stöd för ett antal SIEM-leverantörer. Mer information finns i [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection).
 
 -   Konfigurera vidarebefordran av Windows-händelser<br>ATA kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelse 4776 till din ATA Gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. Mer information om vidarebefordran av Windows-händelser i ATA finns i [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding).
 
-## Se även
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -186,6 +187,6 @@ Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force och Hon
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

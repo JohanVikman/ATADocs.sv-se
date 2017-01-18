@@ -1,8 +1,9 @@
 ---
-title: "Installera ATA – Steg 3 | Microsoft ATA"
+title: "Installera ATA – Steg 3 | Microsoft Docs"
 description: "Steg tre av ATA-installationen hjälper dig att hämta installationspaketet för ATA Gateway."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c8f3f5453757fbc7a95aa2377a84c3a133d38181
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 
-# Installera ATA – Steg 3
+# <a name="install-ata---step-3"></a>Installera ATA – Steg 3
 
 >[!div class="step-by-step"]
 [« Steg 2](install-ata-step2.md)
 [Steg 4 »](install-ata-step4.md)
 
-## Steg 3. Hämta installationspaketet för ATA Gateway
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Steg 3. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet. ATA Gateway kan installeras på dedikerad server eller en domänkontrollant. Om du installerar den på en domänkontrollant kommer den att installeras som en ATA Lightweight Gateway. Mer information om ATA Lightweight Gateway finns i [ATA-arkitektur](/advanced-threat-analytics/plan-design/ata-architecture). 
 
 Om det är första gången du hämtar en ATA Gateway visas följande skärm:
@@ -56,7 +57,7 @@ ZIP-filen innehåller följande:
 [« Steg 2](install-ata-step2.md)
 [Steg 4 »](install-ata-step4.md)
 
-## Se även
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
@@ -64,6 +65,6 @@ ZIP-filen innehåller följande:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

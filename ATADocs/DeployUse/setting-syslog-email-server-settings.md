@@ -24,7 +24,7 @@ ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 
-## <a name="provide-ata-with-up-your-email-server-settings"></a>Ange e-postserverinställningar för ATA
+# <a name="provide-ata-with-up-your-email-server-settings"></a>Ange e-postserverinställningar för ATA
 ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska kunna skicka e-postaviseringar måste du först konfigurera **E-postserverinställningar**.
 
 1.  På ATA Center-servern klickar du på ikonen **Microsoft Advanced Threat Analytics Management** på skrivbordet.
