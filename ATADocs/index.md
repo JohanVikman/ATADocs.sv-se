@@ -14,8 +14,8 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
-ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
+ms.sourcegitcommit: dc1bfcd10b1856a7b92189f5cfd3b7492cf15bcb
+ms.openlocfilehash: 22af8d46b375e86c203da1cadd89416b42c45db7
 
 
 ---
@@ -74,9 +74,9 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
+                  <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
                     <h3>Versionsanmärkningar för ATA</h3>
-                    <p>Se en lista över vad som har uppdaterats i de senaste versionerna tillsammans med kända problem och migreringsguider.</p>
+                    <p>Nyheter i de senaste versionerna, kända problem och migreringsguider.</p>
                   </a>
                 </li>
               </ul>
@@ -118,7 +118,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
           </li>
           <li class="journey-step">
             <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+              <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                 <div class="title column-third">
                   <span class="step-number">3</span>
                   <p>Distribuera &amp; använda</p>
@@ -130,7 +130,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                     <h3>Innan du installerar ATA</h3>
                     <p>Följ dessa steg innan du installerar ATA.</p>
                   </a>
@@ -142,7 +142,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/operate-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip">
                     <h3>Driftsätta ATA</h3>
                     <p>Ändra ATA-konfigurationen och utföra daglig övervakning med hjälp av ATA.</p>
                   </a>
@@ -196,6 +196,6 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
