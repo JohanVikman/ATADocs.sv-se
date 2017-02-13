@@ -18,14 +18,14 @@
 ## Förinstallationssteg
 ### [1. Konfigurera portspegling](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
 ### [2. Verifiera portspegling](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
-### [3. Konfigurera händelsesamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
+### [3. Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## Installera ATA
-### [Steg 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [Steg 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [Steg 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [Steg 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [Steg 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Steg 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Steg 1 Ladda ned och installera Center](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
+### [Steg 2 Anslut till AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
+### [Steg 3 Ladda ned GW-paketet](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
+### [Steg 4 Installera GW](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
+### [Steg 5 Konfigurera GW](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
+### [Steg 6 Uteslutningar och Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
 ### [Tyst installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Använda
 ## [Ändra IP-adressen för ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
@@ -49,6 +49,6 @@
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
