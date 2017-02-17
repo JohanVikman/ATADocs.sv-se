@@ -1,11 +1,11 @@
 ---
-title: Planera din ATA-distribution | Microsoft Docs
+title: Planera din Advanced Threat Analytics-distribution | Microsoft Docs
 description: "Hjälper dig att planera distributionen och bestämma hur många ATA-servrar som krävs för nätverket"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
-ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
+ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
+ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
 
 
 ---
@@ -54,13 +54,13 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 |10,000|4|48|3|90|200 (300)
 |40,000|8|64|12|360|500 (1,000)
 |100,000|12|96|30|900|1,000 (1,500)
-|400 000|40|128|120|1,800|2,000 (2,500)
+|400 000|40|128|120|3,600|4,000 (5,000)
 
 &#42;Detta omfattar fysiska kärnor, inte hypertrådade kärnor.
 
 &#42;&#42;Genomsnittligt antal (högsta antal)
 > [!NOTE]
-> -   ATA Center kan hantera sammanlagt högst 400 000 bilder per sekund (FPS) från alla övervakade domänkontrollanter.
+> -   ATA Center kan hantera sammanlagt högst 400 000 bilder per sekund (FPS) från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 400 000. Kontakta askcesec@microsoft.com för hjälp med sådana miljöer.
 > -   De mängder lagring som anges här är nettovärden. Du bör alltid räkna med framtida tillväxt och se till att disken som databasen ligger på har minst 20 % ledigt utrymme.
 > -   Om det lediga utrymmet når minst 20 % eller 100 GB tas den äldsta datasamlingen bort. Detta fortsätter att inträffa fram till det är 5 % eller 50 GB ledigt utrymme kvar då datainsamlingen slutar att fungera.
 > -   Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
@@ -115,7 +115,7 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 
 &#42;&#42;&#42;Total mängd minne som den här domänkontrollanten har installerat.
 
-> [!NOTE]   
+> [!NOTE]    
 > -   Domänkontrollantens prestanda kommer inte att påverkas om den inte har nödvändiga resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight Gateway kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
@@ -126,13 +126,13 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 
 Tänk på följande när du bestämmer hur många ATA-gatewayer som ska distribueras.
 
--   **Active Directory-skogar och domäner**<br>
+-    **Active Directory-skogar och domäner**<br>
     ATA kan övervaka trafik från flera domäner från en enda Active Directory-skog. För att övervaka flera Active Directory-skogar krävs separata ATA-distributioner. En enda ATA-distribution ska inte konfigureras för att övervaka nätverkstrafik från domänkontrollanter från olika skogar.
 
--   **Portspegling**<br>
+-    **Portspegling**<br>
 Överväganden för portspegling kan kräva att du distribuerar flera ATA-gatewayer per datacenter eller avdelningskontor.
 
--   **Kapacitet**<br>
+-    **Kapacitet**<br>
     En ATA Gateway har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik för de domänkontrollanter som övervakas. 
 <br>
 
@@ -214,6 +214,6 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Vanliga frågor om ATA | Microsoft Docs"
+title: "Vanliga frågor och svar om Advanced Threat Analytics | Microsoft Docs"
 description: "Visar en lista med vanliga frågor om ATA och tillhörande svar"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ Den här artikeln innehåller en lista med vanliga frågor om ATA och ger insikt
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Vad gör jag om ATA-gatewayen inte startar?
 Titta på det senaste felet i den aktuella felloggen (där ATA är installerat under mappen "Loggar").
+
 ## <a name="how-can-i-test-ata"></a>Hur kan jag testa ATA?
 Du kan simulera misstänkta aktiviteter som är ett test slutpunkt till slutpunkt på något av följande sätt:
 
@@ -54,6 +55,7 @@ ATA förlitar sig på analys av flera nätverksprotokoll och även händelser so
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Fungerar ATA med Kerberos Armoring?
 Aktivering av Kerberos Armoring, som även kallas Flexible Authentication Secure Tunneling (FAST), stöds av ATA, med undantag för identifiering av ”over-pass the hash” som inte fungerar.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>Hur många ATA-gatewayer behöver jag?
 
 Antalet ATA-gatewayer beror på nätverkslayout, volym av paket och volym av händelser som avbildas av ATA. För att avgöra exakt antal, se [Storlek för ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
@@ -81,7 +83,11 @@ Det finns två saker att säkerhetskopiera:
 
 -   Trafik och händelser som lagras av ATA, som kan säkerhetskopieras med valfri metod för databassäkerhetskopiering som stöds. Mer information finns i [ATA-databashantering](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   Konfiguration av ATA. Detta lagras i databasen och säkerhetskopieras automatiskt varje timme i mappen **Säkerhetskopiering** på distributionsplatsen för ATA Center.  Se [ATA-databashantering](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) för mer information.
+
+
+
 ## <a name="what-can-ata-detect"></a>Vad kan ATA identifiera?
+
 ATA identifierar kända skadliga attacker och tekniker, säkerhetsproblem och risker.
 En fullständig lista över ATA-identifieringar finns i [Vilka identifieringar utför ATA?](ata-threats.md).
 
@@ -98,7 +104,6 @@ ATA har en dubbelriktad integrering med SIEM enligt följande:
 2. ATA kan konfigureras för att ta emot Syslog-meddelanden för varje Windows-händelse med ID 4776, från [dessa SIEM-servrar](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Kan ATA övervaka domänkontrollanter som är visualiserade på IaaS-lösningen?
-
 Ja, du kan använda ATA Lightweight Gateway för att övervaka domänkontrollanter som finns i valfri IaaS-lösning.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>Är detta ett lokalt eller molnbaserat erbjudande?
@@ -127,6 +132,7 @@ Ja. Eftersom datorkonton (samt eventuella andra entiteter) kan användas för at
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>ATA kan stödja flera domäner och flera skogar?
 Microsoft Advanced Threat Analytics stöder miljöer med flera domäner i samma skogsgräns. Flera skogar kräver en ATA-distribution för varje skog.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Går det att se den övergripande hälsan för distributionen?
 Ja, det går att se både den övergripande hälsan för distributionen och specifika problem som är relaterade till konfiguration, anslutning osv., och du får en avisering när de inträffar.
 
@@ -141,6 +147,6 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
