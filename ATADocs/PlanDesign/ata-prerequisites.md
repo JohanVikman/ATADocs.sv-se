@@ -1,11 +1,11 @@
 ---
-title: "Krav för ATA | Microsoft Docs"
+title: "Krav för Advanced Threat Analytics | Microsoft Docs"
 description: "Beskriver kraven för en lyckad distribution av ATA i din miljö"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 2/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
-ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
+ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
+ms.openlocfilehash: eae08c573fafaa3fa8643a2e115f7fc710e4d3f9
 
 
 ---
@@ -219,8 +219,9 @@ ATA Lightweight Gateway har stöd för installation på en domänkontrollant som
 
 Domänkontrollanten kan vara en skrivskyddad domänkontrollant (RODC).
 
-Innan du installerar ATA Lightweight Gateway på en domänkontrollant som kör Windows Server 2012 R2 SP1 måste du bekräfta att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
-Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355]`.
+Innan du installerar ATA Lightweight-gatewayen på en domänkontrollant som kör Windows Server 2012 R2 SP1, måste du bekräfta att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/) och [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1,-windows-8.1,-and-windows-server-2012-r2) (i den ordningen). 
+
+Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-HotFix -Id kb2919355] [Get-HotFix -Id KB3000850]`.
 
 > [!NOTE]
 > Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) och [prestandaloggar](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
@@ -288,6 +289,6 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
