@@ -47,9 +47,9 @@
 ## [Felsöka med loggarna](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [Felsöka med prestandaräknarna](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Felsöka med databasen](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [Katastrofåterställning](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
 
-
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
