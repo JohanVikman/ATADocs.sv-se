@@ -49,6 +49,7 @@
 ## [Felsöka med databasen](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Katastrofåterställning](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+
+<!--HONumber=Feb17_HO3-->
 
 
