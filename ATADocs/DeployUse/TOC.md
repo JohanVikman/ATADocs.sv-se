@@ -20,12 +20,12 @@
 ### [2. Verifiera portspegling](validate-port-mirroring.md)
 ### [3. Konfigurera händelseinsamling](configure-event-collection.md)
 ## Installera ATA
-### [Steg 1 Ladda ned och installera Center](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
-### [Steg 2 Anslut till AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
-### [Steg 3 Ladda ned GW-paketet](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
-### [Steg 4 Installera GW](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
-### [Steg 5 Konfigurera GW](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
-### [Steg 6 Uteslutningar och Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
+### [Steg 1 Ladda ned och installera Center](install-ata-step1.md)
+### [Steg 2 Anslut till AD](install-ata-step2.md)
+### [Steg 3 Ladda ned GW-paketet](install-ata-step3.md)
+### [Steg 4 Installera GW](install-ata-step4.md)
+### [Steg 5 Konfigurera GW](install-ata-step5.md)
+### [Steg 6 Uteslutningar och Honeytoken](install-ata-step6.md)
 ### [Tyst installation](ata-silent-installation.md)
 # Använda
 ## [Ändra IP-adressen för ATA Center](modifying-ata-config-centerip.md)
@@ -49,6 +49,6 @@
 ## [Felsöka med databasen](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Katastrofåterställning](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
