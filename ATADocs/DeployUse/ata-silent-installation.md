@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 31fca93099bbd44f6429f9274c941ed65556d588
+ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
+ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
 
 
 ---
@@ -43,8 +43,8 @@ Använd följande kommando för att installera ATA Center.
 
 **Syntax**:
 
-    “Microsoft ATA Center Setup.exe” [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments=”/q”] [InstallationPath=“<InstallPath>”] [DatabaseDataPath= “<DBPath>”] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint=“<CertThumbprint>”] 
-    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint=”<CertThumbprint >”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Installationsalternativ**:
 
@@ -60,23 +60,23 @@ Använd följande kommando för att installera ATA Center.
 
 |Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
 |-------------|----------|---------|---------|
-|InstallationPath|InstallationPath=”<InstallPath>”|Nej|Anger sökvägen för installationen av ATA-binärfiler. Standardsökväg: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= ”<DBPath>”|Nej|Anger sökvägen till datamappen för ATA-databasen. Standardsökväg: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
+|InstallationPath|InstallationPath="<InstallPath>"|Nej|Anger sökvägen för installationen av ATA-binärfiler. Standardsökväg: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
+|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Nej|Anger sökvägen till datamappen för ATA-databasen. Standardsökväg: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ja|Anger IP-adressen för ATA Center-tjänsten|
 |CenterPort|CenterPort=<CenterPort>|Ja|Anger nätverksporten för ATA Center-tjänsten|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=”<CertThumbprint>”|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om det inte anges kommer installationen att generera ett självsignerat certifikat.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om det inte anges kommer installationen att generera ett självsignerat certifikat.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ja|Anger IP-adressen för ATA-konsolen|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|Nej|Anger certifikatets tumavtryck för ATA-konsolen. Det här certifikatet används för att verifiera identiteten för ATA-konsolens webbplats. Om inget anges genererar installationen ett självsignerat certifikat|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Nej|Anger certifikatets tumavtryck för ATA-konsolen. Det här certifikatet används för att verifiera identiteten för ATA-konsolens webbplats. Om inget anges genererar installationen ett självsignerat certifikat|
 
 **Exempel**:Installera ATA Center med standardinstallationssökvägar och en enda IP-adress:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
 Installera ATA Center med standardinstallationssökvägar, två IP-adresser och användardefinierade tumavtryck för certifikatet:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
-    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
 ## <a name="update-the-ata-center"></a>Uppdatera ATA Center
 
@@ -84,7 +84,7 @@ Använd följande kommando för att uppdatera ATA Center.
 
 **Syntax**:
 
-    Microsoft ATA Center Setup.exe” [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments=”/q”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installationsalternativ**:
@@ -101,7 +101,7 @@ När du uppdaterar ATA upptäcker installationsprogrammet automatiskt att ATA re
 
 **Exempel**: Uppdatera ATA Center tyst. I stora miljöer kan det ta en stund att slutföra ATA Center-uppdateringen. Övervaka ATA-loggar för att följa förloppet för uppdateringen.
 
-        “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>Avinstallera ATA Center tyst
 
@@ -128,7 +128,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
 **Exempel**:Tyst avinstallation av ATA Center från servern, som tar bort alla befintliga databasdata:
 
 
-    “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Tyst installation av ATA Gateway
 Använd följande kommando för att installera ATA Gateway:
@@ -136,8 +136,8 @@ Använd följande kommando för att installera ATA Gateway:
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint=”<CertThumbprint >”] [ConsoleAccountName=”<AccountName>”] 
-    [ConsoleAccountPassword=”<AccountPassword>”]
+    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountPassword="<AccountPassword>"]
 
 **Installationsalternativ**:
 
@@ -152,14 +152,14 @@ Använd följande kommando för att installera ATA Gateway:
 
 |Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om det inte anges kommer installationen att generera ett självsignerat certifikat.|
-|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Ja|Anger namnet på det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Ja|Anger lösenordet för det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om det inte anges kommer installationen att generera ett självsignerat certifikat.|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ja|Anger namnet på det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ja|Anger lösenordet för det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
 
 **Exempel**: Utföra tyst installation av ATA Gateway och registrera den med ATA Center med angivna autentiseringsuppgifter:
 
-    “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
-    ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
+    "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
 ## <a name="update-the-ata-gateway"></a>Uppdatera ATA Gateway
@@ -221,6 +221,6 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Gatewa
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
