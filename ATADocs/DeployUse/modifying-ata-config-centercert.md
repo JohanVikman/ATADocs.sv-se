@@ -1,11 +1,11 @@
 ---
-title: "Ändra ATA-konfiguration – ATA-centercertifikat | Microsoft Docs"
+title: "Ändra Advanced Threat Analytics-konfigurationen Center-certifikat | Microsoft Docs"
 description: "Beskriver tvåstegsprocessen för att förnya eller ersätta certifikatet i det lokala datorarkivet på ATA Center-servern."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/24/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 534b5f476e580919b11327ddbf9a35edad130515
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 9d3e4a76c37fcd3cd90afe068e904e64cd9f45b0
 
 
 ---
@@ -75,6 +75,6 @@ Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas n
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
