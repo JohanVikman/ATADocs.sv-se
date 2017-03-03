@@ -1,11 +1,11 @@
 ---
-title: "Konfigurera händelseinsamling | Microsoft Docs"
+title: "Konfigurera händelseinsamling i Advanced Threat Analytics | Microsoft Docs"
 description: "Beskriver alternativen för att konfigurera händelseinsamling med ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/08/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
-ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
+ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
+ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
 
 
 ---
@@ -187,56 +187,58 @@ När du konfigurerat portspegling från domänkontrollanter till ATA Gateway, f�
 
 I det här scenariot antar vi att ATA-gatewayen är medlem i domänen.
 
-1.  Öppna Active Directory-användare och -datorer, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
-2.  Välj **medlemmar**.
-4.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
+1.    Öppna Active Directory-användare och -datorer, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
+2.    Välj **medlemmar**.
+4.    Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
+
+Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händelseloggläsare** måste starta om domänkontrollanterna för att ändringen ska börja gälla.
 
 **Steg 2: Skapa en princip på domänkontrollanterna för att ställa in inställningen Konfigurera målprenumerationshanterare.** 
 > [!Note] 
 > Du kan skapa en grupprincip för de här inställningarna och använda grupprincipen till varje domänkontrollant som övervakas av ATA Gateway. Stegen nedan ändrar den lokala principen på domänkontrollanten.     
 
-1.  Kör följande kommando på varje domänkontrollant: *winrm quickconfig*
+1.    Kör följande kommando på varje domänkontrollant: *winrm quickconfig*
 2.  Från en kommandotolk, ange *gpedit.msc*.
-3.  Expandera **Datorkonfiguration > Administrativa mallar > Windows-komponenter > Vidarebefordran av händelse**
+3.    Expandera **Datorkonfiguration > Administrativa mallar > Windows-komponenter > Vidarebefordran av händelse**
 
  ![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
 
-4.  Dubbelklicka på **Konfigurera målprenumerationshanterare**.
+4.    Dubbelklicka på **Konfigurera målprenumerationshanterare**.
    
-    1.  Välj **Aktiverad**.
-    2.  Under **Alternativ** klickar du på **Visa**.
-    3.  Under **SubscriptionManagers** anger du följande värde och klickar på **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1.    Välj **Aktiverad**.
+    2.    Under **Alternativ** klickar du på **Visa**.
+    3.    Under **SubscriptionManagers** anger du följande värde och klickar på **OK**:    *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Till exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
    
-    5.  Klicka på **OK**.
-    6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
+    5.    Klicka på **OK**.
+    6.    Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
 
 **Steg 3: Utför följande steg på ATA-Gateway** 
 
-1.  Öppna en upphöjd kommandotolk och skriv *wecutil qc*
-2.  Öppna **Loggboken**. 
-3.  Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
+1.    Öppna en upphöjd kommandotolk och skriv *wecutil qc*
+2.    Öppna **Loggboken**. 
+3.    Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
 
-   1.   Ange namn och beskrivning för prenumerationen. 
-   2.   För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
-   3.   Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
-        1.  Klicka på **Lägg till domändator**.
-        2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
+   1.    Ange namn och beskrivning för prenumerationen. 
+   2.    För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
+   3.    Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
+        1.    Klicka på **Lägg till domändator**.
+        2.    Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
        
         ![Loggboksbild](media/wef3 event viewer.png)
    
         
-        3.  Klicka på **OK**.
-   4.   Klicka på **Välj händelser**.
+        3.    Klicka på **OK**.
+   4.    Klicka på **Välj händelser**.
 
         1. Klicka på **Av logg** och välj **Säkerhet**.
         2. I fältet **Inkludera/exkludera händelse-ID**, skriv **4776** och klicka på **OK**. 
 
  ![Frågefilterbild](media/wef 4 query filter.png)
 
-   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** för att se om det finns problem med statusen. 
-   6.   Kontrollera efter ett par minuter att händelse 4776 visas i vidarebefordrade händelser på ATA-gatewayen.
+   5.    Högerklicka på den skapade prenumerationen och välj **Körningsstatus** för att se om det finns problem med statusen. 
+   6.    Kontrollera efter ett par minuter att händelse 4776 visas i vidarebefordrade händelser på ATA-gatewayen.
 
 
 ### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>WEF-konfiguration för ATA Lightweight Gateway
@@ -244,29 +246,29 @@ När du installerar ATA Lightweight Gateway på domänkontrollanterna kan du kon
 
 **Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp** 
 
-1.  Öppna Active Directory-användare och -dator, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
-2.  Välj **medlemmar**.
-3.  Om **Nätverkstjänst** inte visas klickar du på **Lägg till** och skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
+1.    Öppna Active Directory-användare och -dator, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
+2.    Välj **medlemmar**.
+3.    Om **Nätverkstjänst** inte visas klickar du på **Lägg till** och skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
 
 **Steg 2: Utför följande steg på domänkontrollanten efter att ATA Lightweight Gateway har installerats** 
 
-1.  Öppna en upphöjd kommandotolk och skriv *winrm quickconfig* och *wecutil qc* 
-2.  Öppna **Loggboken**. 
-3.  Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
+1.    Öppna en upphöjd kommandotolk och skriv *winrm quickconfig* och *wecutil qc* 
+2.    Öppna **Loggboken**. 
+3.    Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
 
-   1.   Ange namn och beskrivning för prenumerationen. 
-   2.   För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara Vidarebefordrade händelser.
+   1.    Ange namn och beskrivning för prenumerationen. 
+   2.    För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara Vidarebefordrade händelser.
 
-        1.  Välj **Insamlarinitierad** och klicka på **Välj datorer**. Klicka sedan på **Lägg till domändator**.
-        2.  Ange namnet på domänkontrollanten i **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**.
+        1.    Välj **Insamlarinitierad** och klicka på **Välj datorer**. Klicka sedan på **Lägg till domändator**.
+        2.    Ange namnet på domänkontrollanten i **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**.
 
             ![Bild av prenumerationsegenskaper](media/wef 5 sub properties computers.png)
 
-        3.  Klicka på **OK**.
-   3.   Klicka på **Välj händelser**.
+        3.    Klicka på **OK**.
+   3.    Klicka på **Välj händelser**.
 
-        1.  Klicka på **Av logg** och välj **Säkerhet**.
-        2.  I **Inkludera/exkludera händelse-ID**, skriv *4776* och klicka på **OK**. 
+        1.    Klicka på **Av logg** och välj **Säkerhet**.
+        2.    I **Inkludera/exkludera händelse-ID**, skriv *4776* och klicka på **OK**. 
 
 ![Frågefilterbild](media/wef 4 query filter.png)
 
@@ -288,6 +290,6 @@ Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

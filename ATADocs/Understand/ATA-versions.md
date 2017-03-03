@@ -1,10 +1,10 @@
 ---
-title: ATA versioner | Microsoft Docs
+title: Advanced Threat Analytics-versioner | Microsoft Docs
 description: "Beskriver de olika supportalternativen för Microsoft Advanced Threat Analytics (ATA)-versioner."
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2acd894c46cdf242294f1cf8a8bdbf4b3fa69947
-ms.openlocfilehash: 8eebc5b37c7430825c20b7b0e15879e76a36e512
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: cae588383a7ea64a8e907e64cd2d7d15223feae3
 
 
 ---
@@ -36,13 +36,13 @@ Microsoft planerar att släppa uppdateringar för ATA några gånger per år dä
 
 |Version|Versionsnummer|Tillgänglighetsdatum| Slutdatum för support|
 |----|----|----|----|
-|1.4|1.4.2457|31 Aug 2015|30 Aug 2016|
-|1.5|1.5.2946|17 Dec 2015|16 Dec 2016|
-|1.6|1.6.4103|05 Maj 2016|04 Maj 2017|
-|1.6.1|1.6.4317|15 Jun 2016|14 Jun 2017|
-|1.7|1.7.5402|31 Aug 2016|30 Aug 2017|
-|1.7.1|1.7.5647|06 Okt 2016|05 Okt 2017|
-|1.7.2|1.7.5757|15 Nov 2016|14 Nov 2017|
+|1.4|1.4.2457|31 Aug&2015;|30 Aug&2016;|
+|1.5|1.5.2946|17 Dec&2015;|16 Dec&2016;|
+|1.6|1.6.4103|05 Maj&2016;|04 Maj&2017;|
+|1.6.1|1.6.4317|15 Jun&2016;|14 Jun&2017;|
+|1.7|1.7.5402|31 Aug&2016;|30 Aug&2017;|
+|1.7.1|1.7.5647|06 Okt&2016;|05 Okt&2017;|
+|1.7.2|1.7.5757|15 Nov&2016;|14 Nov&2017;|
 
 
 
@@ -53,6 +53,6 @@ Microsoft planerar att släppa uppdateringar för ATA några gånger per år dä
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
