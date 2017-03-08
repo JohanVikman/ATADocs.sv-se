@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 6ad9e90fc05ce284868542df7e61585f37324fad
-
-
+ms.openlocfilehash: c90f34b0567df43d977ca23e38319eafe01c51e3
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -81,9 +78,3 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 ## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
