@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
-ms.openlocfilehash: 7919c9658f2e05b448e3a773bd5ab4c6cb96625f
-
-
+ms.openlocfilehash: 69034316493b8783cbeaaae9aac6af237da39dc8
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -55,10 +52,4 @@ När användare försöker komma åt en sida som inte är tillgänglig för dera
 ## <a name="add--remove-users---ata-role-groups"></a>Lägg till\ta bort användare – ATA-rollgrupper 
 
 ATA använder lokala Windows-grupper som bas för rollgrupper. Om du vill lägga till eller ta bort användare, använd **Lokala användare och grupper** MMC (Lusrmgr.msc). Du kan lägga till domänkonton som lokala konton på en domänansluten dator. 
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
