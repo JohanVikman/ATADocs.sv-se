@@ -1,22 +1,15 @@
 ---
-title: "Felsök felloggen i Advanced Threat Analytics | Microsoft Docs"
-description: "Beskriver hur du kan felsöka vanliga fel i ATA"
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
+# <a name="required-metadata"></a>nödvändiga metadata
 
+Rubrik: Felsöka loggen avancerad hotanalys | Microsoft Docs beskrivning: Beskriver hur du kan felsöka vanliga fel i ATA-nyckelord: Författare: rkarlin ms.author: rkarlin ansvarig: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+
+# <a name="optional-metadata"></a>valfria metadata
+
+#<a name="robots"></a>ROBOTAR:
+#<a name="audience"></a>målgrupp:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 
@@ -74,9 +67,3 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
