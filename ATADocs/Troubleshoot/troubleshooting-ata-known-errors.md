@@ -1,14 +1,17 @@
----
+--
 # <a name="required-metadata"></a>nödvändiga metadata
 
-Rubrik: Felsöka loggen avancerad hotanalys | Microsoft Docs beskrivning: Beskriver hur du kan felsöka vanliga fel i ATA-nyckelord: Författare: rkarlin ms.author: rkarlin ansvarig: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+Rubrik: Felsöka loggen avancerad hotanalys | Microsoft Docs beskrivning: Beskriver hur du kan felsöka vanliga fel i ATA-nyckelord: Författare: rkarlin ms.author: rkarlin ansvarig: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # <a name="optional-metadata"></a>valfria metadata
 
 #<a name="robots"></a>ROBOTAR:
 #<a name="audience"></a>målgrupp:
 #<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+ms.reviewer: arzinger
+
+ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
 #<a name="mscustom"></a>ms.custom:
 
 ---
@@ -31,7 +34,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |Microsoft.Tri.Infrastructure.ContractException: Kontraktundantag|ATA Gateway kunde inte synkronisera konfigurationen från ATA Center.|Slutför konfigurationen av ATA Gateway i ATA-konsolen.|
 |System.Reflection.ReflectionTypeLoadException: Det gick inte att läsa in en eller flera av de begärda typerna. Hämta egenskapen LoaderExceptions för mer information.|Message Analyzer har installerats på ATA Gateway.| Avinstallera Message Analyzer.|
 |Error [Layout] System.OutOfMemoryException: Undantag av typen ”System.OutOfMemoryException” uppstod.|ATA Gateway har inte tillräckligt med minne.|Öka mängden minne på domänkontrollanten.|
-|Kunde inte starta livekonsumenten  ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS-händelseprovidern är inte redo|PEF (Message Analyzer) har inte installerats korrekt.|Om du använder Hyper-V, försök att uppgradera Hyper-V-integreringstjänsterna. Kontakta annars support för en lösning.|
+|Kunde inte starta livekonsumenten  ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS-händelseprovidern är inte redo|PEF (Message Analyzer) har inte installerats korrekt.|Om du använder Hyper-V kan du försöka uppgradera Hyper-V-integreringstjänsterna. Kontakta annars supporten för hjälp.|
 |Installationen misslyckades med felet: 0x80070652|Det finns andra väntande installationer på datorn.|Vänta tills de andra installationerna har slutförts och starta om datorn vid behov.|
 |System.InvalidOperationException: Instansen Microsoft.Tri.Gateway finns inte i den angivna kategorin.|PID:er har aktiverats för processnamn i ATA-gatewayen|Använd [KB281884](https://support.microsoft.com/en-us/kb/281884) för att inaktivera PID:er i processnamn|
 |System.InvalidOperationException: Kategorin finns inte.|Räknare kan vara inaktiverade i registret|Använd [KB2554336](https://support.microsoft.com/en-us/kb/2554336) för att återskapa prestandaräknare|
