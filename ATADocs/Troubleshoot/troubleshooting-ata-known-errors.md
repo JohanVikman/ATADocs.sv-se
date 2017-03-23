@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>nödvändiga metadata
-
-Rubrik: Felsöka loggen avancerad hotanalys | Microsoft Docs beskrivning: Beskriver hur du kan felsöka vanliga fel i ATA-nyckelord: Författare: rkarlin ms.author: rkarlin ansvarig: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>valfria metadata
-
-#<a name="robots"></a>ROBOTAR:
-#<a name="audience"></a>målgrupp:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: "Felsök felloggen i Advanced Threat Analytics | Microsoft Docs"
+description: "Beskriver hur du kan felsöka vanliga fel i ATA"
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>Felsöka ATA-felloggen
+
 Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg som krävs för att felsöka dem.
+
 ## <a name="ata-gateway-errors"></a>ATA Gateway-fel
+
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Ett lokalt fel uppstod|ATA Gateway kunde inte autentiseras mot domänkontrollanten.|1. Bekräfta att domänkontrollantens DNS-post har konfigurerats korrekt i DNS-servern. <br>2. Kontrollera att tiden för ATA Gateway har synkroniserats med tiden för domänkontrollanten.|
