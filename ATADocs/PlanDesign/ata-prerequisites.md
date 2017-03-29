@@ -55,7 +55,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
 -   Kontrollera att Message Analyzer och WireShark inte är installerade på ATA Gateway.
--    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt ** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 -   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytoken-användaren behöver du användarkontots SID, inte användarnamnet. Mer information finns i ämnet [Arbeta med identifieringsinställningar i ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
 

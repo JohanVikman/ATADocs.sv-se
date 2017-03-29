@@ -50,7 +50,7 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 
 3.  Välj **Center**.
 
-4.  Under ** IP-adress för Center-tjänst: port** väljer du någon av de befintliga IP-adresserna eller **Lägg till anpassad IP-adress** och anger en IP-adress.
+4.  Under **IP-adress för Center-tjänst: port** väljer du någon av de befintliga IP-adresserna eller **Lägg till anpassad IP-adress** och anger en IP-adress.
 
 5.  Klicka på **Spara**.
 

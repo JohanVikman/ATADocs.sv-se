@@ -27,7 +27,7 @@ ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpu
 ## <a name="ata-gateway-logs"></a>ATA Gateway-loggar
 I det här avsnittet gäller varje hänvisning till ATA Gateway också ATA Lightweight Gateway. 
 
-ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i:**C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway har följande loggar:
 
