@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 35949dfc81ed3753bf1e449a2de06bdf0403fe78
-
-
+ms.openlocfilehash: 7ce25b89542cfb5dd380a50adb65d2435b2977d7
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -102,10 +99,4 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

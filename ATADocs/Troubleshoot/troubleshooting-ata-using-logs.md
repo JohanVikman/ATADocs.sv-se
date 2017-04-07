@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
-
-
+ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -30,7 +27,7 @@ ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpu
 ## <a name="ata-gateway-logs"></a>ATA Gateway-loggar
 I det här avsnittet gäller varje hänvisning till ATA Gateway också ATA Lightweight Gateway. 
 
-ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i:**C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway har följande loggar:
 
@@ -42,8 +39,8 @@ ATA Gateway har följande loggar:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – den här loggfilen grupper alla liknande fel och undantag, och mäter deras antal.
     Filen är tom från början varje gång ATA Gateway-tjänsten startar och uppdateras varje minut. Den används huvudsakligen för att förstå om det finns nya fel eller problem med ATA Gateway (eftersom felen grupperas är det lättare att läsa och förstå snabbt om det finns nya problem).
--   **Microsoft.Tri.Gateway.Updater.log** - Den här loggen används för gateway-uppdateringsprocessen som ansvarar för att uppdatera gatewayen om den konfigurerats att göra det automatiskt. För ATA Lightweight Gateway ansvarar också gateway- uppdateringsprocessen för resursbegränsningar av ATA Lightweight Gateway.
--   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – Den här loggfilen grupper samman alla liknande fel och undantag, och mäter deras antal. Filen startar tom varje gång ATA Updater-tjänsten startar och uppdateras varje minut. Det gör att du kan förstå om det finns nya fel eller problem med ATA Updater. Felen grupperas för att göra det enklare att snabbt förstå om några nya fel eller problem har identifierats.
+-    **Microsoft.Tri.Gateway.Updater.log** - Den här loggen används för gateway-uppdateringsprocessen som ansvarar för att uppdatera gatewayen om den konfigurerats att göra det automatiskt. För ATA Lightweight Gateway ansvarar också gateway- uppdateringsprocessen för resursbegränsningar av ATA Lightweight Gateway.
+-    **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – Den här loggfilen grupper samman alla liknande fel och undantag, och mäter deras antal. Filen startar tom varje gång ATA Updater-tjänsten startar och uppdateras varje minut. Det gör att du kan förstå om det finns nya fel eller problem med ATA Updater. Felen grupperas för att göra det enklare att snabbt förstå om några nya fel eller problem har identifierats.
 
 > [!NOTE]
 > De första tre loggfilerna har en maximal storlek på upp till 50 MB. När den storleken nås öppnas en ny loggfil och namnet på den tidigare ändras till "&lt;ursprungligt filnamn&gt;-arkiverad-00000", där talet ökar varje gång den får ett nytt namn. Som standard tas den äldsta filen bort om det redan finns fler än 10 filer från samma typ.
@@ -92,9 +89,3 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

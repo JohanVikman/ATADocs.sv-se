@@ -12,20 +12,17 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: cae588383a7ea64a8e907e64cd2d7d15223feae3
-
-
+ms.openlocfilehash: 21c7486061b6945d557a42d3964b70637829f4b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Stöd för Microsoft Advanced Threat Analytics (ATA)-versioner
 
 Microsoft planerar att släppa uppdateringar för ATA några gånger per år där varje uppdateringsversion stöds i tolv (12) månader från datumet för allmän tillgänglighet (GA). Teknisk support kommer att tillhandahållas för hela tolv (12)-månadersperioden. Dock är vår support-struktur nu dynamisk och utvecklas mot två distinkta servicefaser som beror på tillgängligheten för den senaste versionen.
 
--   Servicefasen säkerhet och viktiga uppdateringar – När du kör den senaste versionen av ATA får du både säkerhetsuppdateringar och viktiga uppdateringar.
+-    Servicefasen säkerhet och viktiga uppdateringar – När du kör den senaste versionen av ATA får du både säkerhetsuppdateringar och viktiga uppdateringar.
 
--   Servicefasen säkerhetsuppdateringar (enbart) – när en ny version av ATA släpps, minskar stödet för äldre versioner till enbart säkerhetuppdateringar för den kvarvarande tolv (12)-månaders supportlivscykeln (visas i exemplet på versionsservice-support nedan).
+-    Servicefasen säkerhetsuppdateringar (enbart) – när en ny version av ATA släpps, minskar stödet för äldre versioner till enbart säkerhetuppdateringar för den kvarvarande tolv (12)-månaders supportlivscykeln (visas i exemplet på versionsservice-support nedan).
  
 ![Exempel på versionsservice-support](media/versions.png)
 
@@ -50,9 +47,3 @@ Microsoft planerar att släppa uppdateringar för ATA några gånger per år dä
 
 ## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

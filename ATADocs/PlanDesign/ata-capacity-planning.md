@@ -5,26 +5,26 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
-ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
-
-
+ms.openlocfilehash: ce017adf26e30a5fde3c89a30c33f87d71716a4c
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA-kapacitetsplanering
 Det här avsnittet hjälper dig att avgöra hur många ATA-servrar som behövs för att övervaka nätverket, inklusive att förstå hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapaciteten för ATA Center och ATA Gateway.
+
+> [!NOTE] 
+> ATA Center kan distribueras hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
 
 ##<a name="using-the-sizing-tool"></a>Använda storleksverktyget
 Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distributionen är genom att använda [ATA-storleksverktyget](http://aka.ms/atasizingtool). Kör ATA-storleksverktyget och använd följande fält från resultaten i Excel-filen för att avgöra vilken ATA-kapacitet du behöver:
@@ -63,6 +63,7 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > -   ATA Center kan hantera sammanlagt högst 400 000 bilder per sekund (FPS) från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 400 000. Kontakta askcesec@microsoft.com för hjälp med sådana miljöer.
 > -   De mängder lagring som anges här är nettovärden. Du bör alltid räkna med framtida tillväxt och se till att disken som databasen ligger på har minst 20 % ledigt utrymme.
 > -   Om det lediga utrymmet når minst 20 % eller 100 GB tas den äldsta datasamlingen bort. Detta fortsätter att inträffa fram till det är 5 % eller 50 GB ledigt utrymme kvar då datainsamlingen slutar att fungera.
+> - Det går att distribuera ATA Center hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
 > -   Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
 > -   Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
@@ -211,9 +212,3 @@ Fastställ antal paket per sekund genom att göra följande på varje domänkont
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-arkitektur](ata-architecture.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

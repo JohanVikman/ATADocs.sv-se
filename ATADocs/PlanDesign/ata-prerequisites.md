@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f61bbb895e4a2f239f91328f8d8b2b5260452cc2
-ms.openlocfilehash: 764d20fd113b8d40d359a8976c175e889f554dba
-
-
+ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -58,7 +55,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
 -   Kontrollera att Message Analyzer och WireShark inte är installerade på ATA Gateway.
--    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt ** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt** i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 -   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytoken-användaren behöver du användarkontots SID, inte användarnamnet. Mer information finns i ämnet [Arbeta med identifieringsinställningar i ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
 
@@ -288,11 +285,5 @@ Ett certifikat med stöd för serverautentisering måste vara installerat i dato
 - [ATA-arkitektur](ata-architecture.md)
 - [Installera ATA](/advanced-threat-analytics/deploy-use/install-ata)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-
-<!--HONumber=Feb17_HO3-->
 
 

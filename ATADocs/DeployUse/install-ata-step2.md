@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
-
-
+ms.openlocfilehash: fea114b062a7861ac284b4bf746fff68c5c1bd52
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -44,7 +41,7 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
     |**Lösenord** (krävs)|Ange lösenordet för den skrivskyddade användaren, till exempel: **Penna1**.|
     |**Domän** (krävs)|Ange domänen för den skrivskyddade användaren, till exempel: **contoso.com**. **Obs:** Det är viktigt att du anger det fullständiga FQDN för domänen där användaren finns. Om användarens konto exempelvis finns i domänen corp.contoso.com måste du ange `corp.contoso.com`, inte contoso.com|
 
-2. Alternativt kan du klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Detta fungerar endast om ATA Center kan ansluta till domänen.   
+2. Alternativt kan du klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Detta fungerar endast om ATA Center kan ansluta till domänen.     
 
     Välkomstmeddelandet i konsolen ändras till följande när det sparats: ![ATA – välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -61,9 +58,3 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

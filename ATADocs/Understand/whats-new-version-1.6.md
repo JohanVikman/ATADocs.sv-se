@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: e31dabc43ada8eac4ebed86af0ac4b43dc410246
-
-
+ms.openlocfilehash: ac10d24c443e0278a1d0995598fb9c1cf0fb4de6
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
 
@@ -108,21 +105,21 @@ Om du ser något av dessa fel kör du följande lösning.
 
 **Lösning**: 
 
-1.  Flytta mappen "data_old" till en tillfällig mapp (finns normalt i %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
-2.  Avinstallera ATA Center v1.5 och ta bort alla databasdata.
+1.    Flytta mappen "data_old" till en tillfällig mapp (finns normalt i %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
+2.    Avinstallera ATA Center v1.5 och ta bort alla databasdata.
 ![Avinstallera ATA 1.5](http://i.imgur.com/x4nJycx.png)
-3.  Installera om ATA Center v1.5. Se till att använda samma konfiguration som den tidigare installationen av ATA 1.5 (certifikat, IP-adresser, databassökväg osv.).
-4.  Stoppa tjänsterna i följande ordning:
-    1.  Microsoft Advanced Threat Analytics Center
-    2.  MongoDB
-5.  Ersätt MongoDB-databasfilerna med filerna i mappen "data_old".
-6.  Starta dessa tjänster i följande ordning:
-    1.  MongoDB
-    2.  Microsoft Advanced Threat Analytics Center
-7.  Granska loggarna om du vill verifiera att produkten körs utan fel.
-8.  [Hämta](http://aka.ms/ataremoveduplicateprofiles "Hämta") verktyget "RemoveDuplicateProfiles.exe" och kopiera det till den huvudsakliga installationssökvägen (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
-9.  Kör "RemoveDuplicateProfiles.exe" från en upphöjd kommandotolk och vänta tills den har slutförts.
-10. Skriv följande kommando härifrån:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**:
+3.    Installera om ATA Center v1.5. Se till att använda samma konfiguration som den tidigare installationen av ATA 1.5 (certifikat, IP-adresser, databassökväg osv.).
+4.    Stoppa tjänsterna i följande ordning:
+    1.    Microsoft Advanced Threat Analytics Center
+    2.    MongoDB
+5.    Ersätt MongoDB-databasfilerna med filerna i mappen "data_old".
+6.    Starta dessa tjänster i följande ordning:
+    1.    MongoDB
+    2.    Microsoft Advanced Threat Analytics Center
+7.    Granska loggarna om du vill verifiera att produkten körs utan fel.
+8.    [Hämta](http://aka.ms/ataremoveduplicateprofiles "Hämta") verktyget "RemoveDuplicateProfiles.exe" och kopiera det till den huvudsakliga installationssökvägen (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+9.    Kör "RemoveDuplicateProfiles.exe" från en upphöjd kommandotolk och vänta tills den har slutförts.
+10.    Skriv följande kommando härifrån:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**:
 
     db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
@@ -145,8 +142,3 @@ Uppdateringsprocessen för ATA exporterar data, om du vill ha den för framtida 
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Uppdatera ATA till version 1.6 – migreringsguide](ata-update-1.6-migration-guide.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 2c4ae574b3ce7346ba05abb357c23cfdab6482a4
-
-
+ms.openlocfilehash: 489d85e7e8250dffe8d40225b31ed308a9a79969
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -52,11 +49,11 @@ En ATA-distribution kan bestå av en enda ATA Center som är ansluten till alla 
 ## <a name="deployment-options"></a>Distributionsalternativ
 Du kan distribuera ATA med följande kombination av gatewayer:
 
--   **Endast med ATA Gateway** <br>
+-    **Endast med ATA Gateway** <br>
 Om ATA-distributionen endast innehåller ATA-gatewayer, utan någon ATA Lightweight Gateway, måste alla domänkontrollanter konfigureras för att aktivera portspegling till en ATA Gateway eller så måste det finnas nätverks-TAP.
--   **Endast med ATA Lightweight Gateway**<br>
+-    **Endast med ATA Lightweight Gateway**<br>
 Om ATA-distributionen endast innehåller ATA Lightweight-gatewayer distribueras ATA Lightweight Gateway på varje domänkontrollant och inga ytterligare servrar eller konfiguration av portspegling krävs.
--   **Med både ATA Gateway och ATA Lightweight Gateway**<br>
+-    **Med både ATA Gateway och ATA Lightweight Gateway**<br>
 Om ATA-distributionen omfattar både ATA-gatewayer och ATA Lightweight-gatewayer, där ATA Lightweight Gateway är installerad på vissa av dina domänkontrollanter (till exempel alla domänkontrollanter hos avdelningskontor) medan andra domänkontrollanter övervakas av ATA-gatewayer (till exempel de större domänkontrollanterna i huvuddatacentren).
 
 I samtliga tre scenarier skickar alla gatewayer sina data till ATA Center.
@@ -130,7 +127,7 @@ ATA Gateway tar emot nätverkstrafik och Windows-händelser från nätverket och
 
 Följande funktioner fungerar på olika sätt beroende på om du kör ATA Gateway eller ATA Lightweight Gateway.
 
--   **Kandidat för domänsynkronisering**<br>
+-    **Kandidat för domänsynkronisering**<br>
 Domänsynkroniseringsgateway ansvarar för att proaktivt synkronisera alla entiteter från en specifik Active Directory-domän (liknar mekanismen som används av själva domänkontrollanterna för replikering). En gateway väljs slumpmässigt från listan över kandidater för att fungera som domänsynkroniserare. <br><br>
 Om synkroniseraren är offline i mer än 30 minuter väljs en annan kandidat i stället. Om det inte finns någon domänsynkroniserare tillgänglig för en specifik domän kan inte ATA synkronisera entiteter och deras ändringar proaktivt, men ATA kan reaktivt hämta nya entiteter när de hittas i övervakad trafik. 
 <br>Om det inte finns någon domänsynkroniserare tillgänglig och du söker efter en entitet som inte har någon trafik relaterad till sig visas inga sökresultat.<br><br>
@@ -138,7 +135,7 @@ Som standard är alla ATA-gatewayer synkroniseringskandidater.<br><br>
 Eftersom alla ATA Lightweight-gatewayer mer troligt distribueras på avdelningskontor och på små domänkontrollanter är de som standard inte synkroniseringskandidater.
 
 
--   **Resursbegränsningar**<br>
+-    **Resursbegränsningar**<br>
 ATA Lightweight Gateway innehåller en övervakningskomponent som utvärderar den tillgängliga beräknings- och minneskapaciteten på den domänkontrollant där den körs. Övervakningsprocessen körs var 10:e sekund och uppdaterar dynamiskt processor- och minnesanvändningskvoten på ATA Lightweight Gateway-processen för att se till att domänkontrollanten vid varje given tidpunkt har minst 15 % lediga beräknings- och minnesresurser.<br><br>
 Oavsett vad som händer på domänkontrollanten frigör den här processen alltid resurser för att se till att domänkontrollantens grundläggande funktioner inte påverkas.<br><br>
 Om detta leder till att ATA Lightweight Gateway får slut på resurser övervakas endast delar av trafiken och övervakningsvarningen "Dropped port mirrored network traffic" (Släppt portspeglad nätverkstrafik) visas på hälsosidan.
@@ -183,10 +180,4 @@ Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force och Hon
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

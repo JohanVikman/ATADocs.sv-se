@@ -13,11 +13,9 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
-ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
-
-
+ms.openlocfilehash: 95513a7170df28529c85ccc3c8d65446c4770bbc
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
 *Gäller för: Advanced Threat Analytics version 1.7*
 
@@ -143,10 +141,4 @@ Ja, det går att se både den övergripande hälsan för distributionen och spec
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
