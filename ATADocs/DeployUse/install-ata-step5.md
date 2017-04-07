@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 5856a5e658ed18cbf82d25247f8c39e48ccd2185
-
-
+ms.openlocfilehash: e6436d2eef9aeccb6182135ef76a072501f3e5a8
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -93,10 +90,4 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

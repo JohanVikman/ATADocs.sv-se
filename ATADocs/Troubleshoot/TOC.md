@@ -48,7 +48,3 @@
 ## [Felsöka med prestandaräknarna](troubleshooting-ata-using-perf-counters.md)
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
 ## [Katastrofåterställning](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
-
-<!--HONumber=Feb17_HO2-->
-
-

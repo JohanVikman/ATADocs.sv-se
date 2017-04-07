@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: a909388cfcd35af45ccd4eac35f81e55938db086
-
-
+ms.openlocfilehash: 5c4662cd2d83135227cf86e339d5e30f9713f022
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *Gäller för: Advanced Threat Analytics version 1.7*
 
 
@@ -35,6 +32,16 @@ Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](/
 2.  Slutligen börjar föregående komponent öka **sin** egen storlek tills den blockerar komponenten före den från att skicka fler entiteter.
 
 3.  Detta inträffar ända tillbaka till NetworkListener-komponenten som förlorar trafik när den inte längre kan vidarebefordra entiteter.
+
+
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Hämta prestandaövervakningsfiler för felsökning
+
+Så här hämtar du prestandaövervakningsfilerna (BLG) från de olika ATA-komponenterna:
+1.  Öppna perfmon.
+2.  Stoppa datainsamlaruppsättningen som heter ”Microsoft ATA Gateway” eller ”Microsoft ATA Center”.
+3.  Gå till mappen för datainsamlaruppsättningen (som standard är det ”C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets” eller ”C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”).
+4.  Kopiera den BLG-fil som senast ändrades.
+5.  Starta om datainsamlaruppsättningen som heter ”Microsoft ATA Gateway” eller ”Microsoft ATA Center”.
 
 
 ## <a name="ata-gateway-performance-counters"></a>Prestandaräknare i ATA Gateway
@@ -126,9 +133,3 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurera vidarebefordran av Windows-händelser](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

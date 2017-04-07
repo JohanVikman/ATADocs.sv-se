@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
-ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
-
-
+ms.openlocfilehash: b9ba013c76c785290649037c8a01af1cd2feced5
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-17"></a>Nyheter i ATA version 1.7
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
 
@@ -106,8 +103,8 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 Om du försöker exportera information om misstänkt aktivitet till en Excel-fil kanske åtgärden misslyckas och följande felmeddelande visas: *Fel [BsonClassMapSerializer`1] System.FormatException: Ett fel inträffade under deserialiseringen av egenskapen Activity av klassen Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 För att lösa det här problemet kan du bläddra till följande plats från en upphöjd kommandotolk: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** och köra följande:
-1.  **Mongo.exe ATA** (ATA måste anges med versaler)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+1.    **Mongo.exe ATA** (ATA måste anges med versaler)
+2.    **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Mindre ändringar
 
@@ -119,10 +116,4 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Uppdatera ATA till version 1.7 – migreringsguide](ata-update-1.7-migration-guide.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
