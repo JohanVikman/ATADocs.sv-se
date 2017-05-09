@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 04/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 4a5b48f490a13cfb990f49b864462b556e36c3ce
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: sv-SE
 ---
 *Gäller för: Advanced Threat Analytics version 1.7*
 
@@ -27,7 +28,7 @@ ATA-loggarna ger information om vad varje komponent i ATA gör vid en viss tidpu
 ## <a name="ata-gateway-logs"></a>ATA Gateway-loggar
 I det här avsnittet gäller varje hänvisning till ATA Gateway också ATA Lightweight Gateway. 
 
-ATA Gateway-loggar finns i undermappen **Loggar** där ATA är installerat; standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i:**C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+ATA Gateway-loggar finns i en undermapp som heter **Loggar** där ATA är installerat. standardplatsen är: **C:\Program Files\Microsoft Advanced Threat Analytics\**. På standardplatsen för installation finns den i: **C:\Program\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway har följande loggar:
 
@@ -81,6 +82,10 @@ Distributionsloggar för ATA Gateway och ATA Lightweight Gateway:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** – Den här loggfilen innehåller stegen i distributionsprocessen för ATA Center. Den används huvudsakligen för att spåra distributionsprocessen för ATA Gateway.
 
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** – Den här loggfilen innehåller stegen i distributionsprocessen för ATA Gateway-binärfilerna. Den används huvudsakligen för att spåra distributionen av ATA Gateway-binärfilerna.
+
+
+> [!NOTE] 
+> Förutom de distributionsloggar som nämns här finns det även andra loggar som börjar med "Microsoft Advanced Threat Analytics" och som kan ge ytterligare information om distributionsprocessen.
 
 
 ## <a name="see-also"></a>Se även

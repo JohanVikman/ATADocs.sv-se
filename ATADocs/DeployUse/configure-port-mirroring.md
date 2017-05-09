@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f91c728614cbe03f794fd0ad45ccc19af712cf54
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: ff27dbe4b2b5e44add5dfd93e0a71419ba818ea6
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: sv-SE
 ---
 *Gäller för: Advanced Threat Analytics version 1.7*
 
@@ -40,6 +41,7 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 
 > [!NOTE]
 > Om domänkontrollanten som portspeglas är ansluten via en WAN-länk ska du kontrollera att WAN-länken kan hantera den ytterligare belastningen av ERSPAN-trafiken.
+> ATA stöder endast trafiköverföring när trafiken når nätverkskortet och domänkontrollanten på samma sätt. ATA stöder inte trafikövervakning om trafiken har brutits ut till olika portar.
 
 ## <a name="supported-port-mirroring-options"></a>Alternativ för portspegling som stöds
 
