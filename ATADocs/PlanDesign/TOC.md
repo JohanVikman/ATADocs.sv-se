@@ -42,7 +42,7 @@
 ## [Databashantering i ATA](/advanced-threat-analytics/deploy-use/ata-database-management)
 ## [Exportera/importera ATA-konfiguration](/advanced-threat-analytics/deploy-use/ata-configuration-file)
 ## [Hantera ATA-telemetri](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
-## [Utreda förfalskade PAC-attacker](/use-case-forged-pac)
+## [Utreda förfalskade PAC-attacker](/advanced-threat-analytics/deploy-use/use-case-forged-pac)
 # Felsöka
 ## [Felsöka med kända fel](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 ## [Felsöka med loggarna](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
