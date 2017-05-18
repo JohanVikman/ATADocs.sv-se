@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
-ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
-translationtype: HT
+ms.openlocfilehash: a87fed6bf8ce69ea3391e729c57217d1cff8ffc2
+ms.sourcegitcommit: a1595b51c95235eede3d3b34a02f24bedd5dfc5a
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 05/14/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.7*
 
@@ -43,7 +45,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.InvalidOperationException: Instansen Microsoft.Tri.Gateway finns inte i den angivna kategorin.|PID:er har aktiverats för processnamn i ATA-gatewayen|Använd [KB281884](https://support.microsoft.com/en-us/kb/281884) för att inaktivera PID:er i processnamn|
 |System.InvalidOperationException: Kategorin finns inte.|Räknare kan vara inaktiverade i registret|Använd [KB2554336](https://support.microsoft.com/en-us/kb/2554336) för att återskapa prestandaräknare|
 |System.ApplicationException: Det går inte att starta ETW-session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Det finns en värdpost i HOSTS-filen som pekar på datorns kortnamn|Ta bort posten värden från C:\Windows\System32\drivers\etc\HOSTS-fil eller ändra den till ett fullständigt domännamn.|
-|System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverat på ATA-gatewayen men .Net är inställd att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .Net genom att ställa in registernycklarna att använda operativsystemets standarder för LLS och TLS enligt följande: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
+|System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverat på ATA-gatewayen men .Net är inställd att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .Net genom att ställa in registernycklarna att använda operativsystemets standarder för LLS och TLS enligt följande: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 
 
 
