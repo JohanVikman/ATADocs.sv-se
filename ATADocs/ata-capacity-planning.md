@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2017
+ms.date: 7/9/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3a313ba032a43bff90e37908909830f7c741c39c
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: af88c02c6e2e5f679aca75b17a288c72ab300069
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -56,17 +56,17 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 |Paket per sekund från alla domänkontrollanter|CPU (kärnor&#42;)|Minne (GB)|Databaslagring per dag (GB)|Databaslagring per månad (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0,3|9|30 (100)
-|10,000|4|48|3|90|200 (300)
-|40,000|8|64|12|360|500 (1,000)
-|100,000|12|96|30|900|1,000 (1,500)
-|200,000|24|112|60|1,800|2,000 (3,000)
-|400 000|40|128|120|3,600|4,000 (5,000)
+|40,000|4|48|12|360|500 (750)
+|200,000|8|64|60|1,800|1,000 (1,500)
+|400 000|12|96|120|3,600|2,000 (2,500)
+|750 000|24|112|225|6 750|2 500 (3 000)
+|1 000 000|40|128|300|9,000|4,000 (5,000)
 
 &#42;Detta omfattar fysiska kärnor, inte hypertrådade kärnor.
 
 &#42;&#42;Genomsnittligt antal (högsta antal)
 > [!NOTE]
-> -   ATA Center kan hantera sammanlagt högst 400 000 paket per sekund (FPS) från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 400 000. Kontakta askcesec@microsoft.com för hjälp med den här typen av miljöer.
+> -   ATA Center kan hantera sammanlagt högst 1 miljon paket per sekund från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 400 000. Kontakta askcesec@microsoft.com för hjälp med den här typen av miljöer.
 > -   Mängden lagringsutrymme som anges här är nettovärden. Du bör alltid ta med framtida tillväxt i beräkningen och kontrollera att disken som databasen finns på har minst 20 % ledigt utrymme.
 > -   Om det lediga utrymmet sjunker till 20 % eller 100 GB tas den äldsta datasamlingen bort. Borttagningen fortsätter tills det finns 5 % eller 50 GB ledigt utrymme kvar, då datainsamlingen slutar fungera.
 > - Det går att distribuera ATA Center hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.

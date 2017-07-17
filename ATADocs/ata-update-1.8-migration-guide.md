@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 07/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1042f464f424d2805542a8145d2e09d592fe8a51
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: ff61d12eefaf6fb0a6b3d92568ef8c25c9d4c49b
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/10/2017
 ---
 # Uppdatera ATA till version 1.8
 <a id="updating-ata-to-version-18" class="xliff"></a>
@@ -58,9 +58,8 @@ I migreringsversionen kan filen bara användas för uppdatering från ATA 1.7. I
     -  Om du inte aktiverade automatiska uppdateringar i version 1.7 uppmanas du att konfigurera ATA att använda Microsoft Update så att tjänsten hålls uppdaterad.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
     ![Bild om att håll ATA uppdaterat](media/ata_ms_update.png)
      
-     Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
-    ![Bild om automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
-
+     Detta justerar Windows-inställningar så att uppdateringar för ATA aktiveras. 
+    
     -  På skärmen **Datamigrering** väljer du om du vill migrera alla eller partiella data. Om du väljer att endast migrera partiella data fungerar alla identifieringar omedelbart med undantag för identifieringen för onormalt beteende, som behöver tre veckor för att skapa en fullständig profil.  
     
     Migrering av **partiella** data går mycket snabbare att installera. Om du väljer **fullständig** datamigrering, kan det ta väldigt lång tid att slutföra installationen. Notera den uppskattade tiden och det nödvändiga diskutrymmet som visas på skärmen **Datamigrering**. Dessa siffror beror på mängden tidigare insamlad nätverkstrafik som du har sparat i tidigare versioner av ATA. Skärmen nedan visar ett exempel på en datamigrering från en mycket stor databas:
