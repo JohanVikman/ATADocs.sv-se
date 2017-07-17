@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 436b96f679836060cfaf40f6be3b92cf96dc0e04
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
+ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -55,7 +55,7 @@ ATA visar namnet på källdatorn samt ytterligare information om själva DNS-fr�
 För att undersöka rekognosering med DNS måste du först ta reda på orsaken till frågorna. Dessa kan identifieras i någon av följande kategorier: 
 -   Korrekta positiva identifieringar – Det finns en angripare eller skadlig kod i ditt nätverk. Detta kan antingen vara en angripare som har gjort intrång i nätverket, eller ett insiderhot.
 -   Harmlösa korrekta positiva identifieringar – Dessa identifieringar kan vara aviseringar som har utlösts av penetrationstestning, aktiviteter av granskningsteamet, säkerhetsgenomsökningar, en nästa generations brandvägg eller IT-administratörer som utför sanktionerade aktiviteter.
--   Falska positiva identifieringar – Du kan få aviseringar som beror på en felkonfiguration, t.ex. om port 53 är blockerad mellan ATA-gatewayen och din DNS-server (eller ett annat nätverksproblem).
+-   Falska positiva identifieringar – Du kan få aviseringar som beror på en felkonfiguration, t.ex. om UDP-port 53 är blockerad mellan ATA-gatewayen och din DNS-server (eller ett annat nätverksproblem).
 
 Följande diagram gör det enklare att avgöra vilka undersökningssteg du bör vidta:
 
@@ -63,10 +63,10 @@ Följande diagram gör det enklare att avgöra vilka undersökningssteg du bör 
  
 1.  Det första steget är att identifiera den dator som aviseringen kommer från, som du ser nedan:
  
-    ![Visa misstänkt aktivitet med DNS-rekognosering i ATA](./media/dns-recon-2.png)
+    ![Visa misstänkt aktivitet med DNS-rekognosering i ATA](./media/dns-recon.png)
 2.  Fastställ vad det är för typ av dator. Är det en arbetsstation, server, arbetsstation, penetrationstestningsstation eller liknande?
 3.  Om datorn är en DNS-server och har behörighet att begära en sekundär kopia av zonen, så är det en falsk positiv identifiering. När du hittar en falsk positiv identifiering kan du använda alternativet **Undanta** så att du inte får den här specifika aviseringen för den här datorn mer.
-4. Kontrollera att port 53 är öppen mellan ATA-gatewayen och din DNS-server.
+4. Kontrollera att UDP-port 53 är öppen mellan ATA-gatewayen och din DNS-server.
 4.  Om datorn används för administrativt arbete eller penetrationstestning rör det sig om en harmlös korrekt positiv identifiering, och datorn i fråga kan konfigureras som ett undantag.
 5.  Om datorn inte används för penetrationstestning kontrollerar du om den kör en säkerhetsgenomsökning eller en nästa generations brandvägg, vilket kan involvera DNS-förfrågningar med AXFR-typen.
 6.  Om inga av dessa kriterier är uppfyllda är det möjligt att datorn har komprometterats, vilket i så fall måste utredas noggrant. 
