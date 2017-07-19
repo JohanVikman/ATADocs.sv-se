@@ -23,8 +23,7 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Exkludera entiteter från att identifieras
-<a id="excluding-entities-from-detections" class="xliff"></a>
+# <a name="excluding-entities-from-detections"></a>Exkludera entiteter från att identifieras
 Det här avsnittet beskriver hur du exkludera entiteter från att utlösa aviseringar, så att du minimerar de ofarliga positiva träffarna samtidigt som du ser till att identifiera de sanna positiva träffarna. Om du vill undvika ATA gör för mycket onödigt väsen av aktiviteter, som för vissa användare kan vara naturliga inslag i den dagliga verksamheten, så kan du tysta, eller exkludera, vissa entiteter, så att de inte genererar några aviseringar.
 
 Det kan t.ex. handla om att du har en säkerhetsskanner som gör DNS-rekognoseringar eller en administratör som fjärrkör skript på domänkontrollanten, och att dessa aktiviteter är sanktionerade som ett naturligt inslag i det normala IT-arbetet i din organisation.
@@ -58,7 +57,6 @@ När du har möjlighet att exkludera en IP-adress eller en dator, räcker det at
 > Konfigurationssidorna kan bara ändras av ATA-administratörer.
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändra ATA-konfiguration](modifying-ata-center-configuration.md)

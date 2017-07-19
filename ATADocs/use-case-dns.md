@@ -21,13 +21,11 @@ ms.lasthandoff: 07/11/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
-# Undersöka rekognosering med DNS
-<a id="investigating-reconnaissance-using-dns" class="xliff"></a>
+# <a name="investigating-reconnaissance-using-dns"></a>Undersöka rekognosering med DNS
 
 Om ATA identifierar **rekognosering med DNS** i ditt nätverk och aviserar dig om det, kan du använda informationen i den här artikeln för att undersöka aviseringen och se hur du åtgärdar problemet.
 
-## Vad är rekognosering med DNS?
-<a id="what-is-reconnaissance-using-dns" class="xliff"></a>
+## <a name="what-is-reconnaissance-using-dns"></a>Vad är rekognosering med DNS?
 
 Aviseringen om **rekognosering med DNS** anger att misstänkta DNS-frågor (Domain Name System) görs från en ovanlig värd för att rekognosera ditt interna nätverk.
 
@@ -35,13 +33,11 @@ DNS (Domain Name System) är en tjänst som implementeras som en hierarkisk, dis
 För en angripare innehåller ditt DNS-system värdefull information om mappningen i ett internt nätverk, inklusive en lista över alla servrar och ofta alla klienter och deras mappningar till IP-adresser. Den här informationen är dessutom värdefull eftersom den anger värdnamn som ofta är beskrivande i en viss nätverksmiljö. Genom att samla in den här informationen kan en angripare bättre prioritera sitt arbete på relevanta entiteter under en attack. Verktyg som [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) och inbyggda verktyg som [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) innehåller funktioner för värdidentifiering med DNS-rekognosering.
 Identifieringen av rekognosering med DNS-frågor från en intern värd bör inte tas lättvindigt eftersom det kan vara tecken på att en befintlig värd eller ett större nätverk har komprometterats, eller tyda på ett insiderhot.
 
-## DNS-frågetyper
-<a id="dns-query-types" class="xliff"></a>
+## <a name="dns-query-types"></a>DNS-frågetyper
 
 Det finns flera frågetyper i DNS-protokollet. ATA identifierar AXFR-förfrågningarna (Transfer) och skapar en avisering när de observeras. Den här typen av fråga bör endast komma från DNS-servrar.
 
-## Identifiera angreppet
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>Identifiera angreppet
 
 När en angripare försöker utföra rekognosering med DNS identifieras detta av ATA och märks med medelhög allvarlighetsgrad.
 
@@ -49,8 +45,7 @@ När en angripare försöker utföra rekognosering med DNS identifieras detta av
  
 ATA visar namnet på källdatorn samt ytterligare information om själva DNS-frågan som kördes. Det kan till exempel hända att flera försök görs från samma värd.
 
-## Undersöka
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>Undersöka
 
 För att undersöka rekognosering med DNS måste du först ta reda på orsaken till frågorna. Dessa kan identifieras i någon av följande kategorier: 
 -   Korrekta positiva identifieringar – Det finns en angripare eller skadlig kod i ditt nätverk. Detta kan antingen vara en angripare som har gjort intrång i nätverket, eller ett insiderhot.
@@ -75,8 +70,7 @@ Följande diagram gör det enklare att avgöra vilka undersökningssteg du bör 
     2.  Genomför värdbaserade analyser. 
     3.  Om aktiviteten inte är från en misstänkt användare bör en kriminalteknisk analys utföras på datorn för att avgöra om den har komprometterats med skadlig kod.
 
-## Efter undersökningen
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>Efter undersökningen
 
 Skadlig kod som används för att kompromettera värden kan innehålla trojaner med bakdörrar. I de fall då lyckade laterala förflyttningar har identifierats från den komprometterade värden bör reparationsåtgärderna även omfatta dessa värdar, och alla lösenord och autentiseringsuppgifter som används på värden och på alla värdar i den laterala förflyttningen bör ändras. 
 
@@ -84,14 +78,12 @@ Om den komprometterade värden inte kan bekräftas som ren efter reparationsåtg
 
 Microsoft rekommenderar att du använder ett professionellt team för incidentsvar och återställning, som kan nås via ditt Microsoft-kontoteam, för att få hjälp med att identifiera om en angripare har distribuerat ihållande metoder i nätverket.
 
-## Lösningar
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>Lösningar
 
 Du kan skydda en intern DNS-server för att förhindra rekognosering med DNS genom att inaktivera eller begränsa zonöverföringar till endast angivna IP-adresser. Mer information om hur du begränsar zonöverföringar finns i Windows Server Technet-artikeln [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) (Begränsa zonöverföringar). Du kan ytterligare begränsa begränsade zonöverföringar genom att [skydda zonöverföringar med IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Ändringar av zonöverföringar är en av uppgifterna i en checklista som bör utföras för att [skydda DNS-servrar från både interna och externa attacker](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

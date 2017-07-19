@@ -23,14 +23,12 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Installera ATA – steg 7
-<a id="install-ata---step-7" class="xliff"></a>
+# <a name="install-ata---step-7"></a>Installera ATA – steg 7
 
 >[!div class="step-by-step"]
 [« Steg 6 ](install-ata-step6.md)
 
-## Steg 7. Konfigurera undantag för IP-adress och Honeytoken-användare
-<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
+## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>Steg 7. Konfigurera undantag för IP-adress och Honeytoken-användare
 Du kan utesluta specifika IP-adresser eller användare från ett antal identifieringar i ATA. 
 
 Till exempel kan ett **DNS-rekognoseringsundantag** vara en säkerhetsskanner som använder DNS som en skanningsmekanism. Undantaget hjälper ATA att ignorera dessa skannrar. Ett exempel på ett *Pass-the-Ticket*-undantag är en NAT-enhet.    
@@ -73,8 +71,7 @@ I [ATA-boken med simulerade attacker](https://docs.microsoft.com/enterprise-mobi
 [« Steg 6 ](install-ata-step6.md)
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
