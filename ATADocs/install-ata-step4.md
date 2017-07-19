@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installera ATA – Steg 4
-<a id="install-ata---step-4" class="xliff"></a>
+# <a name="install-ata---step-4"></a>Installera ATA – Steg 4
 
 >[!div class="step-by-step"]
 [« Steg 3](install-ata-step3.md)
 [Steg 5 »](install-ata-step5.md)
 
-## Steg 4. Installera ATA Gateway
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
+## <a name="step-4-install-the-ata-gateway"></a>Steg 4. Installera ATA Gateway
 
 Innan du installerar ATA Gateway på en dedikerad server ska du kontrollera att portspegling är korrekt konfigurerad och att ATA-gatewayen kan se trafik till och från domänkontrollanterna. Mer information finns i [Verifiera portspegling](validate-port-mirroring.md).
 
@@ -90,8 +88,7 @@ På ATA Gateway-servern utför du följande steg.
 [« Steg 3](install-ata-step3.md)
 [Steg 5 »](install-ata-step5.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

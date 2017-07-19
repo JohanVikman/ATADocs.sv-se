@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Verifiera portspegling
-<a id="validate-port-mirroring" class="xliff"></a>
+# <a name="validate-port-mirroring"></a>Verifiera portspegling
 > [!NOTE] 
 > Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
 Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. Om ATA ska fungera ordentligt måste ATA Gateway kunna se trafiken till och från domänkontrollanten. Den huvudsakliga datakälla som ATA använder är djup paketinspektion för nätverkstrafiken till och från dina domänkontrollanter. Om ATA ska kunna se nätverkstrafiken måste portspegling vara konfigurerad. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
 
-## Validera portspegling med ett Windows PowerShell-skript
-<a id="validate-port-mirroring-using-a-windows-powershell-script" class="xliff"></a>
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Validera portspegling med ett Windows PowerShell-skript
 
 1. Spara texten i det här skriptet i en fil med namnet *ATAdiag.ps1*.
 2. Kör skriptet på den ATA-gateway som du vill validera.
@@ -193,8 +191,7 @@ Exempel på körning av skriptet:
     [void][System.Console]::ReadKey($true)
     
     
-## Validera portspegling med Net Mon
-<a id="validate-port-mirroring-using-net-mon" class="xliff"></a>
+## <a name="validate-port-mirroring-using-net-mon"></a>Validera portspegling med Net Mon
 1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på den ATA-gateway som du vill validera.
 
     > [!IMPORTANT]
@@ -224,8 +221,7 @@ Exempel på körning av skriptet:
 
 5.  Om du bara ser trafik i en riktning bör du arbeta med nätverks- eller virtualiseringsteamen för att felsöka konfigurationen av portspeglingen.
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Konfigurera portspegling](configure-port-mirroring.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

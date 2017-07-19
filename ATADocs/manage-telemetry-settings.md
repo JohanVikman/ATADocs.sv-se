@@ -23,12 +23,10 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Hantera telemetriinställningar
-<a id="manage-telemetry-settings" class="xliff"></a>
+# <a name="manage-telemetry-settings"></a>Hantera telemetriinställningar
 ATA (Advanced Threat Analytics) samlar in anonymiserade telemetridata om ATA och överför data via en HTTPS-anslutning till Microsoft-servrar.  Dessa data används av Microsoft för att förbättra kommande versioner av ATA.
 
-## Insamlade data
-<a id="data-collected" class="xliff"></a>
+## <a name="data-collected"></a>Insamlade data
 Insamlade anonymiserade data omfattar följande:
 
 -   Prestandaräknare från både ATA Center och ATA Gateway
@@ -84,15 +82,13 @@ Insamlade anonymiserade data omfattar följande:
 - ATA-konsolens URL-adresser - webbadresser vid användning av ATA-konsolen, d.v.s. vilka sidor i ATA-konsolen som besöks.
 
 
-### Inaktivera datainsamling
-<a id="disable-data-collection" class="xliff"></a>
+### <a name="disable-data-collection"></a>Inaktivera datainsamling
 Utför följande steg om du vill sluta samla in och skicka telemetridata till Microsoft:
 
 1.  Logga in på ATA-konsolen, klicka på de tre punkterna i verktygsfältet och välj **Om**.
 
 2.  Avmarkera kryssrutan **Skicka användningsinformation till oss för att förbättra kundupplevelsen i framtiden**.
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Felsöka ATA med händelseloggen](troubleshooting-ata-using-logs.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

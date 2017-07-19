@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installera ATA – Steg 3
-<a id="install-ata---step-3" class="xliff"></a>
+# <a name="install-ata---step-3"></a>Installera ATA – Steg 3
 
 >[!div class="step-by-step"]
 [« Steg 2](install-ata-step2.md)
 [Steg 4 »](install-ata-step4.md)
 
-## Steg 3. Hämta installationspaketet för ATA Gateway
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Steg 3. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet. ATA Gateway kan installeras på dedikerad server eller en domänkontrollant. Om du installerar den på en domänkontrollant kommer den att installeras som en ATA Lightweight Gateway. Mer information om ATA Lightweight Gateway finns i [ATA-arkitektur](ata-architecture.md). 
 
 Gå till sidan Gatewayer genom att klicka på Download Gateway Setup (Hämta konfiguration för gateway) i listan med steg överst på sidan:
@@ -57,8 +55,7 @@ ZIP-filen innehåller följande:
 [« Steg 2](install-ata-step2.md)
 [Steg 4 »](install-ata-step4.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

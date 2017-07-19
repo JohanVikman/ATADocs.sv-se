@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Ange e-postserverinställningar för ATA
-<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
+# <a name="provide-ata-with-your-email-server-settings"></a>Ange e-postserverinställningar för ATA
 ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska kunna skicka e-postaviseringar måste du först konfigurera **E-postserverinställningar**.
 
 1.  På ATA Center-servern klickar du på ikonen **Microsoft Advanced Threat Analytics Management** på skrivbordet.
@@ -45,8 +44,7 @@ ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska ku
     |Skicka från (krävs)|Ange en e-postadress som e-postmeddelandet ska skickas från.|Exempel:<br />ATA@contoso.com|
     ![Bild för e-postserverinställningar i ATA](media/ata-email-server.png)
 
-## Ange Syslog-serverinställningar för ATA
-<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
+## <a name="provide-ata-with-your-syslog-server-settings"></a>Ange Syslog-serverinställningar för ATA
 ATA kan meddela dig när systemet identifierar misstänkt aktivitet genom att skicka aviseringen till Syslog-servern. Du kan ange följande om du aktiverar Syslog-aviseringar.
 
 1.  Innan du konfigurerar Syslog-aviseringar arbetar du med SIEM-administratören för att ta reda på följande information:
@@ -79,6 +77,5 @@ ATA kan meddela dig när systemet identifierar misstänkt aktivitet genom att sk
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

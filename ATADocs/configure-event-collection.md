@@ -23,16 +23,14 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Konfigurera vidarebefordran av Windows-händelser
-<a id="configuring-windows-event-forwarding" class="xliff"></a>
+# <a name="configuring-windows-event-forwarding"></a>Konfigurera vidarebefordran av Windows-händelser
 
 För att kunna förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller, om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA-gatewayen på något av två sätt, genom att ATA Gateway konfigureras att lyssna efter SIEM-händelser eller genom att [vidarebefordran av Windows-händelser konfigureras](#configuring-windows-event-forwarding).
 
 > [!NOTE]
 > För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
 
-### WEF-konfiguration för ATA-gatewayar med portspegling
-<a id="wef-configuration-for-ata-gateways-with-port-mirroring" class="xliff"></a>
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>WEF-konfiguration för ATA-gatewayar med portspegling
 
 När du konfigurerat portspegling från domänkontrollanter till ATA Gateway, följ anvisningarna nedan för att konfigurera vidarebefordran av Windows-händelse med källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
 
@@ -96,7 +94,6 @@ Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händ
 
 Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Installera ATA](install-ata-step1.md)
 - [Ta en titt i ATA-forumet!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

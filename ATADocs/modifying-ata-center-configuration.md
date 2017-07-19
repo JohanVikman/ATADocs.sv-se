@@ -23,14 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Ändra konfigurationen för ATA Center
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
+# <a name="modifying-the-ata-center-configuration"></a>Ändra konfigurationen för ATA Center
 
 
 Efter den första distributionen bör ändringar i ATA Center genomföras med försiktighet. Följ stegen nedan när du uppdaterar IP-adressen och porten, konsolens URL och certifikatet.
 
-## IP-adressen för ATA Center
-<a id="the-ata-center-ip-address" class="xliff"></a>
+## <a name="the-ata-center-ip-address"></a>IP-adressen för ATA Center
 
 ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lokalt. De ansluter regelbundet till ATA Center och hämtar konfigurationsändringar. Det är en process i två steg att ändra hur en ATA Gateway ansluter till ATA Center.
 
@@ -43,8 +41,7 @@ ATA Gateways lagrar IP-adressen till det ATA Center de behöver ansluta till lok
 > -   Om den nya IP-adressen är installerad på ATA Center-servern kan du välja den i listan med IP-adresser när ändringen genomförs. Om du av någon anledning inte kan installera IP-adressen på ATA Center-servern kan du välja en anpassad IP-adress och lägga till denna manuellt. Du kan inte aktivera den nya IP-adressen innan den har installerats på servern.
 > -   Om du behöver distribuera en ny ATA Gateway efter aktivering av den nya IP-adressen måste du hämta konfigurationspaketet för ATA Gateway igen.
 
-## Konsolens URL
-<a id="the-console-url" class="xliff"></a>
+## <a name="the-console-url"></a>Konsolens URL
 
 URL:en används i följande scenarier:
 
@@ -59,8 +56,7 @@ URL:en används i följande scenarier:
 > [!NOTE]
 > När du har ändrat ATA-konsolens URL bör du ladda ned installationspaketet för ATA Gateway innan du installerar nya ATA-gatewayer.
 
-## Certifikatet för ATA Center
-<a id="the-ata-center-certificate" class="xliff"></a>
+## <a name="the-ata-center-certificate"></a>Certifikatet för ATA Center
 Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas när det nya certifikatet har installerats i det lokala datorarkivet på ATA Center-servern ersätter du certifikatet genom att följa denna metod i två steg:
 
 -   Första steget – Uppdatera certifikatet som du vill att ATA Center-tjänsten ska använda. ATA Center-tjänsten är då fortfarande kopplad till det ursprungliga certifikatet. När ATA-gatewayerna synkar sin konfiguration har de två möjliga certifikat som är giltiga för ömsesidig autentisering. Så länge ATA-gatewayen kan ansluta med det ursprungliga certifikatet försöker den inte använda det nya.
@@ -73,8 +69,7 @@ Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas n
 > -   Certifikatet används också för ATA-konsolen, så att det ska matcha ATA-konsolens adress för att undvika webbläsarvarningar
 > -   Om du behöver distribuera en ny ATA-gateway efter aktivering av det nya certifikatet måste du hämta ATA-gatewaykonfigurationspaketet igen.
 
-## Ändra konfigurationen för ATA Center
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
+## <a name="changing-the-ata-center-configuration"></a>Ändra konfigurationen för ATA Center
 
 1.  Öppna ATA-konsolen.
 
@@ -106,7 +101,6 @@ Om certifikaten håller på att löpa ut och behöver förnyas eller ersättas n
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Ta en titt i ATA-forumet!](https://aka.ms/ata-forum)

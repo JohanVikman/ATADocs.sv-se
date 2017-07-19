@@ -20,8 +20,7 @@ ms.lasthandoff: 07/03/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
-# Stöd för Microsoft Advanced Threat Analytics (ATA)-versioner
-<a id="support-for-microsoft-advanced-threat-analytics-ata-versions" class="xliff"></a>
+# <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Stöd för Microsoft Advanced Threat Analytics (ATA)-versioner
 
 Microsoft planerar att släppa ATA-uppdateringar några gånger per år där varje uppdateringsversion stöds i 12 månader från utgivningsdatumet för allmän tillgänglighet (GA). Teknisk support erbjuds under hela 12-månadsperioden. Dock är vår support-struktur nu dynamisk och utvecklas mot två distinkta servicefaser som beror på tillgängligheten för den senaste versionen.
 
@@ -34,8 +33,7 @@ Microsoft planerar att släppa ATA-uppdateringar några gånger per år där var
 > [!Note]
 > Den senaste ATA-versionen är alltid i servicefasen säkerhet och viktiga uppdateringar. Det innebär att om du upptäcker ett fel i koden som kräver en viktig uppdatering så behöver du ha den senaste current branch-versionen installerade för att få en snabbkorrigering. Alla andra versioner som stöds kommer bara att vara berättigade till säkerhetsuppdateringar. All support upphör när 12-månaderslivscykeln för en version går ut. Då måste kunderna uppdatera till en version som stöds.
 
-## Versionshistorik
-<a id="version-history" class="xliff"></a>
+## <a name="version-history"></a>Versionshistorik
 
 |Version|Versionsnummer|Tillgänglighetsdatum| Slutdatum för support|
 |----|----|----|----|
@@ -51,6 +49,5 @@ Microsoft planerar att släppa ATA-uppdateringar några gånger per år där var
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

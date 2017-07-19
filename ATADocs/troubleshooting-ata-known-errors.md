@@ -23,13 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Felsöka kända problem i ATA
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
+# <a name="troubleshooting-ata-known-issues"></a>Felsöka kända problem i ATA
 
 Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg som krävs för att felsöka dem.
 
-## Fel i ATA Gateway och ATA Lightweight Gateway
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Fel i ATA Gateway och ATA Lightweight Gateway
 
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
@@ -52,8 +50,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware|Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. |För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.|
 
 
-## Distributionsfel
-<a id="deployment-errors" class="xliff"></a>
+## <a name="deployment-errors"></a>Distributionsfel
 |Fel|Beskrivning|Lösning|
 |-------------|----------|---------|
 |Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/kb/2919355) är installerade på servern innan ATA installeras.|
@@ -65,8 +62,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

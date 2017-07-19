@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Ändra ATA-konfiguration – lösenord för domänanslutning
-<a id="change-ata-configuration---domain-connectivity-password" class="xliff"></a>
+# <a name="change-ata-configuration---domain-connectivity-password"></a>Ändra ATA-konfiguration – lösenord för domänanslutning
 
 
 
-## Ändra lösenord för domänanslutning
-<a id="change-the-domain-connectivity-password" class="xliff"></a>
+## <a name="change-the-domain-connectivity-password"></a>Ändra lösenord för domänanslutning
 Om du ändrar lösenordet för domänanslutning ska du se till att lösenordet du anger stämmer. Om det inte stämmer stoppas ATA Gateway-tjänsten på ATA-gatewayerna.
 
 Om du misstänker att det har inträffat tittar du efter följande i filen Microsoft.Tri.Gateway Errors.log på ATA-gatewayen: `The supplied credential is invalid.`
@@ -56,7 +54,6 @@ Du åtgärdar det genom att följa den här proceduren för att uppdatera lösen
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Arbeta med ATA-konsolen](working-with-ata-console.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -23,16 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Installera ATA – Steg 5
-<a id="install-ata---step-5" class="xliff"></a>
+# <a name="install-ata---step-5"></a>Installera ATA – Steg 5
 
 >[!div class="step-by-step"]
 [« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
 
-## Steg 5. Konfigurera inställningar för ATA Gateway
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Steg 5. Konfigurera inställningar för ATA Gateway
 När ATA Gateway har installerats gör du följande för att konfigurera inställningarna för ATA Gateway.
 
 1.  I ATA-konsolen, gå till **Konfiguration** och under **System**, väljer du **Gateways**.
@@ -70,8 +68,7 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
 5. Klicka på **Spara**.
 
 
-## Verifiera installationer
-<a id="validate-installations" class="xliff"></a>
+## <a name="validate-installations"></a>Verifiera installationer
 Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Gateway** körs. Det kan ta några minuter innan tjänsten startar efter att du har sparat inställningarna för ATA Gateway.
@@ -91,8 +88,7 @@ Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
 [« Steg 4](install-ata-step4.md)
 [Steg 6 »](install-ata-step6.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

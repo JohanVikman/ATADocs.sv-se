@@ -24,8 +24,7 @@ ms.lasthandoff: 07/05/2017
 
 
 
-# ATA-arkitektur
-<a id="ata-architecture" class="xliff"></a>
+# <a name="ata-architecture"></a>ATA-arkitektur
 Arkitekturen för Advanced Threat Analytics beskrivs i det här diagrammet:
 
 ![Topologidiagram för ATA-arkitekturen](media/ATA-architecture-topology.jpg)
@@ -36,8 +35,7 @@ Det här avsnittet beskriver nätverkstrafik- och händelseinsamlingsflödet sam
 
 ![Trafikflödesdiagram för ATA](media/ATA-traffic-flow.jpg)
 
-## ATA-komponenter
-<a id="ata-components" class="xliff"></a>
+## <a name="ata-components"></a>ATA-komponenter
 ATA består av följande komponenter:
 
 -   **ATA Center** <br>
@@ -50,8 +48,7 @@ ATA Lightweight Gateway installeras direkt på domänkontrollanterna och överva
 En ATA-distribution kan bestå av ett enda ATA Center som är anslutet till alla ATA-gatewayer, alla ATA Lightweight-gatewayer eller en kombination av ATA-gatewayer och ATA Lightweight-gatewayer.
 
 
-## Distributionsalternativ
-<a id="deployment-options" class="xliff"></a>
+## <a name="deployment-options"></a>Distributionsalternativ
 Du kan distribuera ATA med följande kombination av gatewayer:
 
 -   **Endast med ATA Gateway** <br>
@@ -66,8 +63,7 @@ I alla dessa scenarier skickar alla gatewayer sina data till ATA Center.
 
 
 
-## ATA Center
-<a id="ata-center" class="xliff"></a>
+## <a name="ata-center"></a>ATA Center
 **ATA Center** utför följande funktioner:
 
 -   Hanterar konfigurationsinställningar för ATA Gateway och ATA Lightweight Gateway
@@ -101,11 +97,9 @@ Tänk på följande när du bestämmer hur många ATA Center som ska distribuera
 
 -    I mycket stora Active Directory-distributioner kanske inte ett enda ATA Center kan hantera all trafik för alla domänkontrollanter. I så fall krävs flera ATA Center. Antalet ATA Center bör avgöras genom [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
-## ATA Gateway och ATA Lightweight Gateway
-<a id="ata-gateway-and-ata-lightweight-gateway" class="xliff"></a>
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway och ATA Lightweight Gateway
 
-### Grundläggande funktioner för gateway
-<a id="gateway-core-functionality" class="xliff"></a>
+### <a name="gateway-core-functionality"></a>Grundläggande funktioner för gateway
 **ATA Gateway** och **ATA Lightweight Gateway** har båda samma grundläggande funktioner:
 
 -   Samla in och inspektera nätverkstrafik på domänkontrollanter. Det här är portspeglad trafik för ATA-gatewayer och lokal trafik för domänkontrollanten i ATA Lightweight-gatewayer. 
@@ -131,8 +125,7 @@ ATA Gateway tar emot nätverkstrafik och Windows-händelser från nätverket och
 |Entitetslösaren|Entitetslösaren tar tolkade data (nätverkstrafik och händelser) och löser dessa data med Active Directory för att hitta konto- och identitetsinformation. Den matchas sedan mot IP-adresser som finns i tolkade data. Entitetslösaren granskar paketrubriker på ett effektivt sätt för att möjliggöra tolkning av autentiseringspaket för datornamn, egenskaper och identiteter. Entitetslösaren kombinerar tolkade autentiseringspaket med data i det faktiska paketet.|
 |Entitetssändare|Entitetssändaren skickar parsade och matchade data till ATA Center.|
 
-## Funktioner för ATA Lightweight Gateway
-<a id="ata-lightweight-gateway-features" class="xliff"></a>
+## <a name="ata-lightweight-gateway-features"></a>Funktioner för ATA Lightweight Gateway
 
 Följande funktioner fungerar på olika sätt beroende på om du kör ATA Gateway eller ATA Lightweight Gateway.
 
@@ -167,12 +160,10 @@ Om Active Directory behöver mer beräkning minskas kvoten som krävs av ATA Lig
 
 
 
-## Dina nätverkskomponenter
-<a id="your-network-components" class="xliff"></a>
+## <a name="your-network-components"></a>Dina nätverkskomponenter
 Kontrollera följande för att de ska fungera med ATA:
 
-### Portspegling
-<a id="port-mirroring" class="xliff"></a>
+### <a name="port-mirroring"></a>Portspegling
 Om du använder ATA-gatewayer måste du konfigurera portspegling för de domänkontrollanter som ska övervakas och ange ATA Gateway som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. ATA fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringarna blir mindre effektiva.
 
 Även om portspegling speglar all domänkontrollantstrafik till ATA Gateway är det bara en liten andel av denna trafik som sedan skickas i komprimerat format till ATA Center för analys.
@@ -180,16 +171,14 @@ Om du använder ATA-gatewayer måste du konfigurera portspegling för de domänk
 Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella, mer information finns i [Konfigurera portspegling](configure-port-mirroring.md).
 
 
-### händelser
-<a id="events" class="xliff"></a>
+### <a name="events"></a>händelser
 Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force, Ändring av känsliga grupper och Honey tokens behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller, om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt genom att ATA Gateway konfigureras att lyssna efter SIEM-händelser eller genom att [vidarebefordran av Windows-händelser konfigureras](#configuring-windows-event-forwarding).
 
 -   Konfigurera ATA Gateway för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATA. ATA har stöd för ett antal SIEM-leverantörer. Mer information finns i [Konfigurera händelseinsamling](configure-event-collection.md).
 
 -   Konfigurera vidarebefordran av Windows-händelser<br>ATA kan även hämta händelser genom att dina domänkontrollanter konfigureras så att de vidarebefordrar Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 till din ATA-gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. Mer information om vidarebefordran av Windows-händelser i ATA finns i [Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md#configuring-windows-event-forwarding). Observera att detta endast gäller för fysisk ATA-gatewayer – inte ATA Lightweight Gateway.
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

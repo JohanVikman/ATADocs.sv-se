@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA-katastrofåterställning
-<a id="ata-disaster-recovery" class="xliff"></a>
+# <a name="ata-disaster-recovery"></a>ATA-katastrofåterställning
 Den här artikeln beskriver hur du snabbt återställer ditt ATA-center och återställer ATA-funktioner när ATA Center-funktionen försvinner, men ATA-gatewayerna fortfarande fungerar. 
 
 >[!NOTE]
 > Processen som beskrivs kan inte återställa tidigare identifierade misstänkta aktiviteter men återställer ATA Center i fullt fungerande skick. Inlärningsperioden som behövs för viss beteendeidentifiering kommer även att startas om, men det mesta av identifieringen som ATA erbjuder fungerar direkt efter att ATA Center har återställts. 
 
-## Säkerhetskopiera ATA Center-konfiguration
-<a id="back-up-your-ata-center-configuration" class="xliff"></a>
+## <a name="back-up-your-ata-center-configuration"></a>Säkerhetskopiera ATA Center-konfiguration
 
 1. ATA Center-konfigurationen säkerhetskopieras till en fil varje timme. Leta upp den senaste säkerhetskopian av ATA Center-konfigurationen och spara den till en annan dator. En fullständig förklaring på hur du hittar de här filerna finns i [Exportera och importera ATA-konfigurationen](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Exportera ATA Center-certifikatet.
@@ -44,8 +42,7 @@ Den här artikeln beskriver hur du snabbt återställer ditt ATA-center och åte
   > [!NOTE] 
   > Om du inte kan exportera den privata nyckeln, måste du skapa ett nytt certifikat, distribuera det till ATA, som det beskrivs i [Ändra ATA Center-certifikatet](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert) och sedan exportera det. 
 
-## Återställa ATA Center
-<a id="recover-your-ata-center" class="xliff"></a>
+## <a name="recover-your-ata-center"></a>Återställa ATA Center
 
 1. Skapa en ny Windows Server-dator med samma IP-adress och datornamn som den tidigare ATA Center-datorn.
 4. Importera det säkerhetskopierade certifikatet till den nya servern.
@@ -66,8 +63,7 @@ Den här artikeln beskriver hur du snabbt återställer ditt ATA-center och åte
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA-kapacitetsplanering](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurera händelseinsamling](/advanced-threat-analytics/deploy-use/configure-event-collection)

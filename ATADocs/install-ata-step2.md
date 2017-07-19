@@ -23,15 +23,13 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Installera ATA – Steg 2
-<a id="install-ata---step-2" class="xliff"></a>
+# <a name="install-ata---step-2"></a>Installera ATA – Steg 2
 
 >[!div class="step-by-step"]
 [« Steg 1](install-ata-step1.md)
 [Steg 3 »](install-ata-step3.md)
 
-## Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
-<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
 
 Första gången du öppnar ATA-konsolen visas följande skärmbild:
 
@@ -57,8 +55,7 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 [Steg 3 »](install-ata-step3.md)
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

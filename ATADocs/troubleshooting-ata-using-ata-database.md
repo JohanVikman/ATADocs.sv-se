@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Felsöka ATA med ATA-databasen
-<a id="troubleshooting-ata-using-the-ata-database" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-ata-database"></a>Felsöka ATA med ATA-databasen
 ATA använder MongoDB som databas.
 Du kan interagera med databasen med hjälp av standardkommandoraden eller ett gränssnittsverktyg för att utföra avancerade åtgärder och felsökning.
 
-## Interagera med databasen
-<a id="interacting-with-the-database" class="xliff"></a>
+## <a name="interacting-with-the-database"></a>Interagera med databasen
 Standardsättet, som är det mest grundläggande sättet, för att ställa frågor till databasen är att använda Mongo shell:
 
 1.  Öppna ett kommandoradsfönster och ändra sökvägen till MongoDB Bin-mappen. Standardsökvägen är: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
@@ -51,8 +49,7 @@ Följande exempel visar exempelkod med den syntax som anges ovan. Om du undersö
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
