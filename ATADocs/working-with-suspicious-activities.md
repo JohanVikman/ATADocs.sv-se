@@ -23,12 +23,10 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Arbeta med misstänkta aktiviteter
-<a id="working-with-suspicious-activities" class="xliff"></a>
+# <a name="working-with-suspicious-activities"></a>Arbeta med misstänkta aktiviteter
 Det här avsnittet förklarar grunderna för hur du arbetar med Advanced Threat Analytics.
 
-## Granska misstänkta aktiviteter på attacktidslinjen
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Granska misstänkta aktiviteter på attacktidslinjen
 När du loggar in på ATA-konsolen kommer du automatiskt till den öppna **tidslinjen med misstänkta aktiviteter**. Misstänkta aktiviteter visas i kronologisk ordning med de senaste misstänkta aktiviteterna längst upp i tidslinjen.
 Varje misstänkt aktivitet har följande information:
 
@@ -58,8 +56,7 @@ Varje misstänkt aktivitet har följande information:
 
 ![Tidslinjebild för misstänkta aktiviteter i ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtrera lista med misstänkta aktiviteter
-<a id="filter-suspicious-activities-list" class="xliff"></a>
+## <a name="filter-suspicious-activities-list"></a>Filtrera lista med misstänkta aktiviteter
 Filtrera listan med misstänkta aktiviteter:
 
 1.  I rutan **Filtrera efter** till vänster på skärmen väljer du något av följande: **Alla**, **Öppet**, **Löst** eller **Avvisat**.
@@ -83,8 +80,7 @@ Filtrera listan med misstänkta aktiviteter:
 
 
 
-## Åtgärda misstänkta aktiviteter
-<a id="remediating-suspicious-activities" class="xliff"></a>
+## <a name="remediating-suspicious-activities"></a>Åtgärda misstänkta aktiviteter
 Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktivitetens aktuella status och välja något av följande: **Öppen**, **Ignorerad**, **Stängd** eller **Borttagen**.
 Du gör det genom att klicka på de tre punkterna i det övre högra hörnet för en specifik misstänkt aktivitet så att listan över tillgängliga åtgärder visas.
 
@@ -108,7 +104,6 @@ Du gör det genom att klicka på de tre punkterna i det övre högra hörnet fö
 > Konfigurationssidorna kan bara ändras av ATA-administratörer.
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändra ATA-konfiguration](modifying-ata-center-configuration.md)

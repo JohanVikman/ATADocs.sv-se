@@ -19,8 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/10/2017
 ---
-# Uppdatera ATA till version 1.8
-<a id="updating-ata-to-version-18" class="xliff"></a>
+# <a name="updating-ata-to-version-18"></a>Uppdatera ATA till version 1.8
 
 > [!NOTE] 
 > Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.8, och följa standardproceduren för installation som beskrivs i [Installera ATA](install-ata-step1.md).
@@ -42,8 +41,7 @@ I migreringsversionen kan filen bara användas för uppdatering från ATA 1.7. I
     > [!IMPORTANT]
     > Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### Steg 1: Uppdatera ATA Center
-<a id="step-1-update-the-ata-center" class="xliff"></a>
+### <a name="step-1-update-the-ata-center"></a>Steg 1: Uppdatera ATA Center
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
@@ -84,7 +82,6 @@ I migreringsversionen kan filen bara användas för uppdatering från ATA 1.7. I
 > Om du vill installera nya ATA-gatewayer går du till skärmen **Gatewayer** och klickar på **Download Gateway Setup** (Hämta konfiguration för gateway) för att ladda ned ATA Gateway 1.8 -installationspaketet och följer sedan anvisningarna för den nya gatewayinstallationen, som beskrivs i [Steg 4. Installera ATA Gateway](install-ata-step4.md).
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

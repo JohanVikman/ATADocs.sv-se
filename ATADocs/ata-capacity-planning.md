@@ -22,15 +22,13 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# ATA-kapacitetsplanering
-<a id="ata-capacity-planning" class="xliff"></a>
+# <a name="ata-capacity-planning"></a>ATA-kapacitetsplanering
 Det här avsnittet hjälper dig att avgöra hur många ATA-servrar du behöver för att övervaka ditt nätverk. Du får också hjälp med att räkna ut hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver, samt serverkapaciteten för ditt ATA Center och dina ATA-gatewayer.
 
 > [!NOTE] 
 > ATA Center kan distribueras hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
 
-##Använda storleksverktyget
-<a id="using-the-sizing-tool" class="xliff"></a>
+##<a name="using-the-sizing-tool"></a>Använda storleksverktyget
 Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distributionen är genom att använda [ATA-storleksverktyget](http://aka.ms/atasizingtool). Kör ATA-storleksverktyget och använd följande fält från resultaten i Excel-filen för att avgöra vilken ATA-kapacitet du behöver:
 
 - ATA Center – Processor och minne: Matcha fältet **Upptagna paket/sek** i ATA-Center-tabellresultatfilen med fältet **PAKET PER SEKUND** i [ATA Center-tabellen](#ata-center-sizing).
@@ -48,8 +46,7 @@ I följande avsnitt finns anvisningar om hur du samlar in information om paket/s
 
 
 
-### Storlek för ATA Center
-<a id="ata-center-sizing" class="xliff"></a>
+### <a name="ata-center-sizing"></a>Storlek för ATA Center
 ATA Center kräver minst 30 dagars data enligt rekommendation för analys av användarbeteende.
  
 
@@ -77,8 +74,7 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > -   När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas för Node Interleaving i ditt system. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Detta gäller inte om ATA Center körs på en virtuell server.
 
 
-## Välja rätt gateway-typ för distributionen
-<a id="choosing-the-right-gateway-type-for-your-deployment" class="xliff"></a>
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Välja rätt gateway-typ för distributionen
 I en ATA-distribution stöds valfri kombination av ATA Gateway-typer:
 
 - Endast ATA-gatewayer
@@ -106,8 +102,7 @@ Följande är exempel på scenarier där domänkontrollanter bör omfattas av AT
 - Datacenter på huvudkontor (med domänkontrollanter med fler än 10 000 paket per sekund)
 
 
-### Storlek för ATA Lightweight Gateway
-<a id="ata-lightweight-gateway-sizing" class="xliff"></a>
+### <a name="ata-lightweight-gateway-sizing"></a>Storlek för ATA Lightweight Gateway
 
 En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. 
 
@@ -131,8 +126,7 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 > -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfilerna, [ATA-loggarna](troubleshooting-ata-using-logs.md) och [prestandaloggarna](troubleshooting-ata-using-perf-counters.md).
 
 
-### Storlek på ATA-gateway
-<a id="ata-gateway-sizing" class="xliff"></a>
+### <a name="ata-gateway-sizing"></a>Storlek på ATA-gateway
 
 Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribueras.
 
@@ -167,8 +161,7 @@ Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribue
 > -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfilerna, [ATA-loggarna](troubleshooting-ata-using-logs.md) och [prestandaloggarna](troubleshooting-ata-using-perf-counters.md).
 
 
-## Beräkning av trafik för domänkontrollanter
-<a id="domain-controller-traffic-estimation" class="xliff"></a>
+## <a name="domain-controller-traffic-estimation"></a>Beräkning av trafik för domänkontrollanter
 Det finns flera olika verktyg du kan använda för identifiering av genomsnittligt antal paket per sekund för domänkontrollanterna. Om du inte har några verktyg som spårar räknaren kan du samla in informationen som krävs med hjälp av Prestandaövervakaren.
 
 Fastställ antal paket per sekund genom att utföra följande steg på varje domänkontrollant:
@@ -218,8 +211,7 @@ Fastställ antal paket per sekund genom att utföra följande steg på varje dom
 
     ![Bild av räknaren Paket/s](media/ATA-traffic-estimation-14.png)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-arkitektur](ata-architecture.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

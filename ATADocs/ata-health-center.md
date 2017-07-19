@@ -13,30 +13,26 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-# Arbeta med systemhälsa och händelser i ATA
-<a id="working-with-ata-system-health-and-events" class="xliff"></a>
+# <a name="working-with-ata-system-health-and-events"></a>Arbeta med systemhälsa och händelser i ATA
 
-## ATA Health Center
-<a id="ata-health-center" class="xliff"></a>
+## <a name="ata-health-center"></a>ATA Health Center
 Med ATA Health Center får du reda på hur ATA-tjänsten fungerar och blir informerad om problem.
 
-## Arbeta med ATA Health Center
-<a id="working-with-the-ata-health-center" class="xliff"></a>
+## <a name="working-with-the-ata-health-center"></a>Arbeta med ATA Health Center
 Med ATA Health Center får du reda på att det finns ett problem genom att en avisering (en röd punkt) visas ovanför Health Center-ikonen på menyraden.
 
 ![Verktygsfält med röd punkt för ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
 
-### Hantera ATA-hälsa
-<a id="managing-ata-health" class="xliff"></a>
+### <a name="managing-ata-health"></a>Hantera ATA-hälsa
 Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Center-ikonen på menyraden ![ATA Health Center-ikon](media/ATA-red-dot.png)
 
 -   Alla öppna aviseringar kan hanteras genom att ställa in dem på **Löst** eller **Avvisat**. I aviseringen klickar du på **Öppna** och rullar ned till **Löst** eller **Avvisat**.
@@ -52,8 +48,7 @@ Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Ce
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
-- [Arbeta med identifieringsinställningar i ATA](working-with-detection-settings.md)
+## <a name="see-also"></a>Se även
+
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
