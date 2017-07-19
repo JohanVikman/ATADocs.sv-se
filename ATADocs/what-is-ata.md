@@ -22,12 +22,10 @@ ms.lasthandoff: 07/03/2017
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-# Vad är Advanced Threat Analytics?
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
+# <a name="what-is-advanced-threat-analytics"></a>Vad är Advanced Threat Analytics?
 Advanced Threat Analytics (ATA) är en lokal plattform som skyddar ditt företag från flera typer av avancerade riktade cyberattacker och insiderhot.
 
-## Så här fungerar ATA
-<a id="how-ata-works" class="xliff"></a>
+## <a name="how-ata-works"></a>Så här fungerar ATA
 
 ATA använder en egen nätverksparsningsmotor för att samla in och parsa nätverkstrafiken för flera protokoll (till exempel Kerberos, DNS, RPC, NTLM med flera) för autentisering, auktorisering och insamling av information. Den här informationen samlas in av ATA via:
 
@@ -44,8 +42,7 @@ ATA kan ta emot händelser och loggar från:
 
 Läs mer om ATA-arkitektur under [ATA-arkitektur](ata-architecture.md).
 
-## Vad gör ATA?
-<a id="what-does-ata-do" class="xliff"></a>
+## <a name="what-does-ata-do"></a>Vad gör ATA?
 
 ATA-teknik identifierar flera misstänkta aktiviteter och fokuserar på flera faser av cyberattackkedjan, inklusive:
 
@@ -97,21 +94,18 @@ Du kan se misstänkta aktiviteter av den här typen på ATA-instrumentpanelen. I
   ![exempel på ATA-skärm för bruten förtroende](media/broken-trust-sa.png)
 
 
-## Kända problem
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>Kända problem
 
 - Om du uppdaterar till ATA 1.7 och sedan omedelbart till ATA 1.8 utan att först uppdatera ATA-gatewayerna, kan du inte migrera till ATA 1.8. Du måste uppdatera alla gatewayer till version 1.7.1 eller 1.7.2 innan du uppdaterar ATA Center till version 1.8.
 
 - Om du väljer att utföra en fullständig migrering kan det ta lång tid, beroende på databasens storlek. När du väljer migreringsalternativ visas den beräknade tiden – notera tiden innan du bestämmer vilket alternativ du ska välja. 
 
 
-## Vad händer nu?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Vad händer nu?
 
 -   Mer information om hur ATA passar in i nätverket: [ATA-arkitektur](ata-architecture.md)
 
 -   Komma igång med att distribuera ATA: [Installera ATA](install-ata-step1.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

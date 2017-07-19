@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Felsöka starten av ATA Center-tjänsten
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
+# <a name="troubleshooting-ata-center-service-startup"></a>Felsöka starten av ATA Center-tjänsten
 
 Om ATA Center inte startar utför du följande felsökningssteg:
 
@@ -37,8 +36,7 @@ Om tjänsten kan starta är plattformen förmodligen okej, om inte rör det sig 
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

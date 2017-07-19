@@ -23,19 +23,16 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Arbeta med ATA-konsolen
-<a id="working-with-the-ata-console" class="xliff"></a>
+# <a name="working-with-the-ata-console"></a>Arbeta med ATA-konsolen
 
 Använd ATA-konsolen för att övervaka och svara på misstänkt aktivitet som identifieras av ATA.
 
 Om du skriver ? visas tangentbordsgenvägar för ATA-portalens hjälpmedelsfunktioner. 
 
-## Aktivera åtkomst till ATA-konsolen
-<a id="enabling-access-to-the-ata-console" class="xliff"></a>
+## <a name="enabling-access-to-the-ata-console"></a>Aktivera åtkomst till ATA-konsolen
 För att kunna logga in på ATA-konsolen måste du logga in med en användare som har tilldelats rätt ATA-roll för att komma åt ATA-konsolen. Mer information om rollbaserad åtkomstkontroll (RBAC) i ATA finns i [Arbeta med ATA-rollgrupper](ata-role-groups.md).
 
-## Logga in på ATA-konsolen
-<a id="logging-into-the-ata-console" class="xliff"></a>
+## <a name="logging-into-the-ata-console"></a>Logga in på ATA-konsolen
 
 1. I ATA Center-servern klickar du på ikonen **Microsoft ATA Console** på skrivbordet och bläddrar till ATA-konsolen.
 
@@ -56,16 +53,14 @@ Om du vill logga in med enkel inloggning kontrollerar du att ATA-konsolen har de
 
 
 
-## ATA-konsolen
-<a id="the-ata-console" class="xliff"></a>
+## <a name="the-ata-console"></a>ATA-konsolen
 
 ATA-konsolen ger en snabb överblick över alla misstänkta aktiviteter i kronologisk ordning. Den gör det möjligt att visa detaljer om alla aktiviteter och utföra åtgärder baserat på dessa aktiviteter. Konsolen visar även meddelanden och aviseringar som belyser problem med ATA-nätverket eller nya aktiviteter som bedöms som misstänkta.
 
 Dessa är de viktigaste objekten i ATA-konsolen.
 
 
-### Tidslinje för attacker
-<a id="attack-time-line" class="xliff"></a>
+### <a name="attack-time-line"></a>Tidslinje för attacker
 
 Det här är den standardsida du kommer till när du loggar in på ATA-konsolen. Som standard visas alla öppna misstänkta aktiviteter på tidslinjen för attacker. Du kan filtrera tidslinjen för attacker för att visa alla, öppna, avvisade eller lösta misstänkta aktiviteter. Du kan också se allvarlighetsgrad som har tilldelats till varje aktivitet.
 
@@ -73,27 +68,23 @@ Det här är den standardsida du kommer till när du loggar in på ATA-konsolen.
 
 Mer information finns i [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md).
 
-### Meddelandefält
-<a id="notification-bar" class="xliff"></a>
+### <a name="notification-bar"></a>Meddelandefält
 
 När en ny misstänkt aktivitet identifieras öppnas meddelandefältet automatiskt till höger. Om det finns nya misstänkta aktiviteter sedan den senaste gången du loggade in öppnas meddelandefältet när du har loggat in. Du kan klicka på pilen till höger när som helst för att öppna meddelandefältet.
 
 ![Bild för meddelandefält i ATA](media/notification-bar-1.7.png)
 
-### Filtreringspanel
-<a id="filtering-panel" class="xliff"></a>
+### <a name="filtering-panel"></a>Filtreringspanel
 
 Du kan filtrera vilka misstänkta aktiviteter som visas i tidslinjen för attacker eller som visas på entitetsprofilens flik för misstänkta aktiviteter baserat på status och allvarlighetsgrad.
 
-### Sökfält
-<a id="search-bar" class="xliff"></a>
+### <a name="search-bar"></a>Sökfält
 
 Det finns ett sökfält i den översta menyn. Du kan söka efter en viss användare, dator eller grupp i ATA. Om du vill prova är det bara att börja skriva.
 
 ![Bild för sökning i ATA-konsolen](media/ATA-console-search.png)
 
-### Health Center
-<a id="health-center" class="xliff"></a>
+### <a name="health-center"></a>Health Center
 
 Health Center visar aviseringar om något inte fungerar korrekt i ATA-distributionen.
 
@@ -103,8 +94,7 @@ Om systemet upptäcker ett problem, t.ex. ett anslutningsfel eller en frånkoppl
 
 Health Center-aviseringar kan avvisas eller lösas och de kategoriseras som Hög, Medel eller Låg beroende på deras allvarlighetsgrad. Om du löser en avisering som ATA-tjänsten identifierar som fortfarande aktiv flyttas den automatiskt till listan med öppna aviseringar. Om systemet upptäcker att det inte längre finns någon orsak till en avisering (situationen har åtgärdats) flyttas den automatiskt till listan med lösta aviseringar.
 
-### Användar- och datorprofiler
-<a id="user-and-computer-profiles" class="xliff"></a>
+### <a name="user-and-computer-profiles"></a>Användar- och datorprofiler
 
 ATA skapar en profil för alla användare och datorer i nätverket. I användarprofilen visar ATA allmän information, t.ex. gruppmedlemskap, senaste inloggningar och resurser som har använts nyligen. Den innehåller också en lista med platser där användaren har anslutit via VPN. En lista över gruppmedlemskap som ATA betraktar som känsliga finns nedan.
 
@@ -121,8 +111,7 @@ En profil som ATA inte har kunnat lösa helt visas med en halvfull cirkelformad 
 
 ![Bild för olöst profil i ATA](media/ATA-Unresolved-Profile.jpg)
 
-### Känsliga grupper
-<a id="sensitive-groups" class="xliff"></a>
+### <a name="sensitive-groups"></a>Känsliga grupper
 
 Följande lista med grupper betraktas som **känsliga** av ATA. Dessa är grupper som flaggas som grupper med administrativa privilegier och genererar aviseringar för känsliga konton:
 
@@ -146,8 +135,7 @@ Följande lista med grupper betraktas som **känsliga** av ATA. Dessa är gruppe
 - DNS-administratörer 
 
 
-### Miniprofil
-<a id="mini-profile" class="xliff"></a>
+### <a name="mini-profile"></a>Miniprofil
 
 Var som helst i konsolen där en enda entitet presenteras, t.ex. en användare eller dator, kan du placera pekaren över entiteten så öppnas en miniprofil automatiskt som visar följande information, om tillgängligt:
 
@@ -165,6 +153,5 @@ Var som helst i konsolen där en enda entitet presenteras, t.ex. en användare e
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

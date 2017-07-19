@@ -21,8 +21,7 @@ ms.lasthandoff: 07/03/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
-# Vilka hot letar ATA efter?
-<a id="what-threats-does-ata-look-for" class="xliff"></a>
+# <a name="what-threats-does-ata-look-for"></a>Vilka hot letar ATA efter?
 
 ATA ger identifiering för följande olika faser i en avancerad attack: rekognosering, avslöjade autentiseringsuppgifter, lateral förflyttning, eskalering av privilegier, domändominans med mera. Dessa identifieringar är avsedda att identifiera avancerade attacker och insiderhot innan de skadar organisationen.
 Identifieringen av varje fas ger flera misstänkta aktiviteter som är relevanta för fasen i fråga, där varje misstänkt aktivitet motsvarar olika varianter av möjliga attacker.
@@ -31,8 +30,7 @@ Faserna i attackkedjan där ATA för närvarande identifierar hot är markerade 
 ![ATA fokuserar på lateral aktivitet i attackkedjan](media/attack-kill-chain-small.jpg)
 
 
-### Rekognosering
-<a id="reconnaissance" class="xliff"></a>
+### <a name="reconnaissance"></a>Rekognosering
 
 ATA identifierar rekognosering på flera sätt. Dessa identifieringar omfattar:
 
@@ -45,8 +43,7 @@ ATA identifierar rekognosering på flera sätt. Dessa identifieringar omfattar:
 -   **Rekognosering med uppräkning av katalogtjänster**<br></br>Identifierar rekognosering för entiteter (användare, grupper osv.) som utförts med hjälp av protokollet SAM-remote för att köra frågor mot domänkontrollanterna. Den här rekognoseringsmetoden är vanlig i många typer av skadlig kod som syns i verkliga attackscenarier. 
 
 
-### Avslöjade autentiseringsuppgifter
-<a id="compromised-credentials" class="xliff"></a>
+### <a name="compromised-credentials"></a>Avslöjade autentiseringsuppgifter
 
 I syfte att ge identifiering av avslöjade autentiseringsuppgifter använder ATA både maskininlärningsbaserad analys samt kända skadliga attacker och teknikidentifiering.
 Genom att använda beteendeanalys och maskininlärning kan ATA identifiera misstänkta aktiviteter, t.ex. avvikande inloggningar, onormal resursåtkomst och onormal arbetstid, vilket kan tyda på avslöjade autentiseringsuppgifter. I syfte att skydda mot avslöjade autentiseringsuppgifter identifierar ATA följande kända skadliga attacker och tekniker:
@@ -67,8 +64,7 @@ Genom att använda beteendeanalys och maskininlärning kan ATA identifiera misst
 
 -   **Onormalt beteende**<br></br>Vid insiderhot och avancerade attacker kan ofta kontoautentiseringsuppgifterna avslöjas med sociala manipulationsmetoder eller nya och än så länge okända metoder och tekniker. ATA kan identifiera dessa typer av avslöjanden genom att analysera entitetens beteende och identifiera och varna vid avvikelser i de åtgärder som utförs av entiteten.
 
-### Lateral förflyttning
-<a id="lateral-movement" class="xliff"></a>
+### <a name="lateral-movement"></a>Lateral förflyttning
 
 När användare använder autentiseringsuppgifter som ger åtkomst till resurser som de ska ha åtkomst till använder ATA både maskininlärningsbaserad beteendeanalys samt identifiering av skadliga attacker och tekniker för att ge skydd mot lateral förflyttning.
 Med hjälp av beteendeanalys och maskininlärning identifierar ATA onormal resursåtkomst, onormala enheter som används eller andra indikatorer som tyder på lateral förflyttning.
@@ -82,8 +78,7 @@ Dessutom kan ATA identifiera lateral förflyttning genom att upptäcka de teknik
 
 -   **Onormalt beteende**<br></br>Lateral förflyttning är en teknik som angripare ofta använder för att gå mellan enheter och områden i offrets nätverk för att få åtkomst till autentiseringsuppgifter eller känslig information som är intressant för angriparen. ATA kan identifiera lateral förflyttning genom att analysera beteendet för användare, enheter och deras förhållande i företagsnätverket, och identifiera eventuella onormala åtkomstmönster som kan tyda på att en lateral förflyttning utförs av en angripare.
 
-### Eskalering av privilegier
-<a id="privilege-escalation" class="xliff"></a>
+### <a name="privilege-escalation"></a>Eskalering av privilegier
 
 ATA identifierar lyckade och testade attacker med eskalering av privilegier, där angripare försöker öka befintliga privilegier och använda dem flera gånger för att så småningom få fullständig kontroll över offrets miljö.
 ATA möjliggör identifiering av eskalering av privilegier genom att kombinera beteendeanalys för att identifiera avvikande beteende samt identifiering av kända och skadliga attacker och tekniker som ofta används för att eskalera privilegier, t.ex.:
@@ -94,8 +89,7 @@ ATA möjliggör identifiering av eskalering av privilegier genom att kombinera b
 
 -   **Onormal ändring av känsliga grupper**  <br></br>Som en del av behörighetseskaleringsfasen ändrar angripare grupper med höga privilegier för att få åtkomst till känsliga resurser. Nu identifierar ATA onormala ändringar i grupper med höga privilegier.
 
-### Domändominans
-<a id="domain-dominance" class="xliff"></a>
+### <a name="domain-dominance"></a>Domändominans
 
 ATA identifierar angripare som försöker eller lyckas uppnå fullständig kontroll eller dominans över offrets miljö genom att utföra identifiering via kända tekniker som används av angripare, till exempel:
 
@@ -110,13 +104,11 @@ ATA identifierar angripare som försöker eller lyckas uppnå fullständig kontr
 -   **Skadliga replikeringsbegäranden** <br></br>I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontrollanter. En angripare kan imitera en AD-replikeringsbegäran (ibland genom att utge sig för att vara domänkontrollant) vilket gör det möjligt för angriparen att hämta data som finns lagrad i AD, inklusive lösenordshashvärden, utan att använda mer påträngande tekniker som Volume Shadow Copy.
 
 
-## Vad händer nu?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Vad händer nu?
 
 -   Mer information om hur ATA passar in i nätverket: [ATA-arkitektur](ata-architecture.md)
 
 -   Komma igång med att distribuera ATA: [Installera ATA](install-ata-step1.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

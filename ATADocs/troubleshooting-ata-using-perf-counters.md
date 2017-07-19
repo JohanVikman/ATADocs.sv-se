@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Felsöka ATA med prestandaräknarna
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Felsöka ATA med prestandaräknarna
 ATA-prestandaräknarna ger information om hur bra varje komponent i ATA fungerar. Komponenterna i ATA bearbetar data i tur och ordning. Om ett problem uppstår kan det därför leda till förlorad trafik någonstans i komponentkedjan. För att åtgärda problemet måste du ta reda på vilken komponent som krånglar och åtgärda problemet i början av kedjan. Använd data i prestandaräknarna för att förstå hur varje komponent fungerar.
 Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](ata-architecture.md).
 
@@ -37,8 +36,7 @@ Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](a
 3.  Detta inträffar ända tillbaka till NetworkListener-komponenten som förlorar trafik när den inte längre kan vidarebefordra entiteter.
 
 
-## Hämta prestandaövervakningsfiler för felsökning
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Hämta prestandaövervakningsfiler för felsökning
 
 Så här hämtar du prestandaövervakningsfilerna (BLG) från de olika ATA-komponenterna:
 1.  Öppna perfmon.
@@ -48,8 +46,7 @@ Så här hämtar du prestandaövervakningsfilerna (BLG) från de olika ATA-kompo
 5.  Starta om datainsamlaruppsättningen som heter ”Microsoft ATA Gateway” eller ”Microsoft ATA Center”.
 
 
-## Prestandaräknare i ATA Gateway
-<a id="ata-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-gateway-performance-counters"></a>Prestandaräknare i ATA Gateway
 
 I det här avsnittet avser varje hänvisning till ATA Gateway också ATA Lightweight Gateway.
 
@@ -72,8 +69,7 @@ Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medvete
 > -   Tidsinställda räknare anges i millisekunder.
 > -   Ibland är det mer praktiskt att övervaka hela listan med räknare med hjälp av diagramtypen Rapport (exempel: realtidsövervakning av alla räknare)
 
-## ATA Lightweight Gateway-prestandaräknare
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-lightweight-gateway-performance-counters"></a>ATA Lightweight Gateway-prestandaräknare
 Prestandaräknare kan användas för kvothantering i Lightweight Gateway, för att se till att ATA inte tömmer för många resurser från domänkontrollanter som har installerats.
 För att mäta de resursbegränsningar som ATA framtvingar på Lightweight-gatewayen, lägger du till de här räknarna.
 
@@ -98,8 +94,7 @@ Om du vill se din faktiska användning, se följande räknare:
 |Process(Microsoft.Tri.Gateway)\Privata byte|Mängden dedikerat minne (i byte) som Lightweight Gateway-processen faktiskt använder.|Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal storlek för dedikerat minne för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.| 
 |Process(Microsoft.Tri.Gateway)\Arbetsminne|Mängden fysiskt minne (i byte) som Lightweight Gateway-processen faktiskt använder.|Inget tröskelvärde. |Jämför resultatet från den här räknaren med gränsen i storleksgräns för arbetsminne i GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.|
 
-## Prestandaräknare i ATA Center
-<a id="ata-center-performance-counters" class="xliff"></a>
+## <a name="ata-center-performance-counters"></a>Prestandaräknare i ATA Center
 Du kan se prestandatillståndet i realtid för ATA Center genom att lägga till ATA Centers prestandaräknare.
 
 Det gör du genom att öppna Prestandaövervakaren och lägga till alla räknare för ATA Center. Namnet på prestandaräknarobjektet är: "Microsoft ATA Center".
@@ -118,8 +113,7 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 > -   Tidsinställda räknare anges i millisekunder
 > -   Ibland är det mer praktiskt att övervaka hela listan med räknare med hjälp av diagramtypen för Rapport (exempel: realtidsövervakning av alla räknare).
 
-## Operativsystemsräknare
-<a id="operating-system-counters" class="xliff"></a>
+## <a name="operating-system-counters"></a>Operativsystemsräknare
 Följande är listan med de viktigaste operativsystemsräknarna som du bör vara medveten om:
 
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
@@ -135,8 +129,7 @@ Följande är listan med de viktigaste operativsystemsräknarna som du bör vara
 |\Logisk disk&#42;\Diskskrivningar/s|Frekvensen för att utföra skrivåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning (kan ge information när du felsöker svarstiden för lagring)|
 |\Logisk disk(&#42;)\Disk – skrivna byte/s|Antal byte per sekund som skrivs till disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

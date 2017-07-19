@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Exportera och importera ATA-konfigurationen
-<a id="export-and-import-the-ata-configuration" class="xliff"></a>
+# <a name="export-and-import-the-ata-configuration"></a>Exportera och importera ATA-konfigurationen
 Konfigurationen av ATA lagras i samlingen "SystemProfile" i databasen.
 Den här samlingen säkerhetskopieras varje timme av ATA Center-tjänsten till filer som heter: "SystemProfile_*timestamp*.json". De senaste 10 versionerna lagras.
 Den finns i en undermapp som heter "Backup". På standardplatsen för ATA-installation finns den här:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
@@ -35,8 +34,7 @@ Det går att återställa alla inställningar genom att köra följande kommando
 
 `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [ATA-arkitektur](ata-architecture.md)
 - [Krav för ATA](ata-prerequisites.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

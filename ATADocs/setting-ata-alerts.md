@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Konfigurera ATA-meddelanden
-<a id="set-ata-notifications" class="xliff"></a>
+# <a name="set-ata-notifications"></a>Konfigurera ATA-meddelanden
 ATA kan meddela dig när det upptäcker misstänkt aktivitet, antingen via e-post eller genom att använda vidarebefordran av ATA-händelser och vidarebefordra händelsen till SIEM/syslog-servern. Innan du väljer vilka meddelanden du vill ta emot måste du [konfigurera e-postservern och Syslog-servern](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
@@ -51,6 +50,5 @@ Om du vill få aviseringar anger du följande:
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -22,8 +22,7 @@ ms.lasthandoff: 07/03/2017
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-# Installera ATA – Steg 1
-<a id="install-ata---step-1" class="xliff"></a>
+# <a name="install-ata---step-1"></a>Installera ATA – Steg 1
 
 >[!div class="step-by-step"]
 [Steg 2 »](install-ata-step2.md)
@@ -33,8 +32,7 @@ Den här installationsproceduren innehåller anvisningar som beskriver hur du ut
 > [!IMPORTANT] 
 > Om du använder Windows 2012 R2 kan du installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars kommer ATA-installationen att installera denna uppdatering och kräva en omstart mitt i ATA-installationen.
 
-## Steg 1. Hämta och installera ATA Center
-<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+## <a name="step-1-download-and-install-the-ata-center"></a>Steg 1. Hämta och installera ATA Center
 När du har kontrollerat att servern uppfyller kraven kan du fortsätta med installationen av ATA Center.
     
 > [!NOTE]
@@ -88,8 +86,7 @@ På ATA Center-servern utför du följande steg.
 Du kommer nu automatiskt till inställningssidan **Allmänt** där du fortsätter med konfigurationen och distributionen av ATA-gatewayer.
 Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad till certifikatet, detta är normalt och du ska klicka på **Fortsätt till denna webbplats**.
 
-### Verifiera installationen
-<a id="validate-installation" class="xliff"></a>
+### <a name="validate-installation"></a>Verifiera installationen
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Center** körs.
 2.  På skrivbordet klickar du på genvägen för **Microsoft Advanced Threat Analytics** för att ansluta till ATA-konsolen. Logga in med samma autentiseringsuppgifter som du använde för att installera ATA Center.
@@ -100,8 +97,7 @@ Eftersom du loggar in på platsen med en IP-adress får du en varning relaterad 
 [«Förinstallation](configure-port-mirroring.md)
 [steg 2»](install-ata-step2.md)
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

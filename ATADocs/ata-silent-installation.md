@@ -23,11 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Tyst installation av ATA
-<a id="ata-silent-installation" class="xliff"></a>
+# <a name="ata-silent-installation"></a>Tyst installation av ATA
 Den här artikeln innehåller instruktioner för tyst installation av ATA.
-## Förutsättningar
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Förutsättningar
 
 ATA version 1.8 kräver installation av Microsoft .NET Framework 4.6.1. 
 
@@ -40,8 +38,7 @@ När du använder metoden för tyst installation av ATA konfigureras installatio
 Följ distributionsförloppet genom att övervaka ATA-installationsloggarna som finns i **%AppData%\Local\Temp**.
 
 
-## Installera ATA Center
-<a id="install-the-ata-center" class="xliff"></a>
+## <a name="install-the-ata-center"></a>Installera ATA Center
 
 Använd följande kommando för att installera ATA Center.
 
@@ -81,8 +78,7 @@ Installera ATA Center med standardinstallationssökvägar, två IP-adresser och 
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## Uppdatera ATA Center
-<a id="update-the-ata-center" class="xliff"></a>
+## <a name="update-the-ata-center"></a>Uppdatera ATA Center
 
 Använd följande kommando för att uppdatera ATA Center.
 
@@ -106,8 +102,7 @@ När du uppdaterar ATA upptäcker installationsprogrammet automatiskt att ATA re
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## Avinstallera ATA Center tyst
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-center-silently"></a>Avinstallera ATA Center tyst
 
 Använd följande kommando för att utföra en tyst avinstallation av ATA Center: **Syntax**:
 
@@ -133,8 +128,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## Tyst installation av ATA Gateway
-<a id="ata-gateway-silent-installation" class="xliff"></a>
+## <a name="ata-gateway-silent-installation"></a>Tyst installation av ATA Gateway
 Använd följande kommando för att installera ATA Gateway:
 
 **Syntax**:
@@ -169,8 +163,7 @@ Använd följande kommando för att installera ATA Gateway:
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## Uppdatera ATA Gateway
-<a id="update-the-ata-gateway" class="xliff"></a>
+## <a name="update-the-ata-gateway"></a>Uppdatera ATA Gateway
 
 Använd följande kommando för tyst uppdatering av ATA Gateway:
 
@@ -192,8 +185,7 @@ Använd följande kommando för tyst uppdatering av ATA Gateway:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Tyst avinstallation av ATA Gateway
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-gateway-silently"></a>Tyst avinstallation av ATA Gateway
 
 Använd följande kommando för att utföra en tyst avinstallation av ATA Gateway: **Syntax**:
 
@@ -221,8 +213,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Gatewa
 
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

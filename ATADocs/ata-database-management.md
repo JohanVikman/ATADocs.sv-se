@@ -23,20 +23,16 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA-databashantering
-<a id="ata-database-management" class="xliff"></a>
+# <a name="ata-database-management"></a>ATA-databashantering
 Om du behöver flytta, säkerhetskopiera eller återställa ATA-databasen kan du använda följande procedurer för att arbeta med MongoDB.
 
-## Säkerhetskopiera ATA-databasen
-<a id="backing-up-the-ata-database" class="xliff"></a>
+## <a name="backing-up-the-ata-database"></a>Säkerhetskopiera ATA-databasen
 Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administration/backup/).
 
-## Återställa ATA-databasen
-<a id="restoring-the-ata-database" class="xliff"></a>
+## <a name="restoring-the-ata-database"></a>Återställa ATA-databasen
 Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administration/backup/).
 
-## Flytta ATA-databasen till en annan enhet
-<a id="moving-the-ata-database-to-another-drive" class="xliff"></a>
+## <a name="moving-the-ata-database-to-another-drive"></a>Flytta ATA-databasen till en annan enhet
 
 1.  Stoppa tjänsten **Microsoft Advanced Threat Analytics Center**.
 > [!Important] 
@@ -58,8 +54,7 @@ Se [relevant MongoDB-dokumentation](http://docs.mongodb.org/manual/administratio
 
 7. Starta tjänsten **Microsoft Advanced Threat Analytics Center**.
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [ATA-arkitektur](ata-architecture.md)
 - [Krav för ATA](ata-prerequisites.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

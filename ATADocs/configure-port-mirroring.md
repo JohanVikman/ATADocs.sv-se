@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Konfigurera portspegling
-<a id="configure-port-mirroring" class="xliff"></a>
+# <a name="configure-port-mirroring"></a>Konfigurera portspegling
 > [!NOTE] 
 > Den här artikeln gäller bara om du distribuerar ATA Gateway i stället för ATA Lightweight Gateway. Mer information om hur du tar reda på om du behöver använda ATA Gateway finns i [Välja rätt gatewayer för distributionen](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -45,8 +44,7 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 > Om domänkontrollanten som portspeglas är ansluten via en WAN-länk ska du kontrollera att WAN-länken kan hantera den ytterligare belastningen av ERSPAN-trafiken.
 > ATA stöder endast trafiköverföring när trafiken når nätverkskortet och domänkontrollanten på samma sätt. ATA stöder inte trafikövervakning om trafiken har brutits ut till olika portar.
 
-## Alternativ för portspegling som stöds
-<a id="supported-port-mirroring-options" class="xliff"></a>
+## <a name="supported-port-mirroring-options"></a>Alternativ för portspegling som stöds
 
 |ATA Gateway|Domänkontrollant|Överväganden|
 |---------------|---------------------|------------------|
@@ -71,7 +69,6 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 
 När du har konfigurerat portspegling ska du kontrollera att det fungerar innan du installerar ATA-gatewayen.
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Verifiera portspegling](validate-port-mirroring.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

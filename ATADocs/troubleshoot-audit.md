@@ -21,8 +21,7 @@ ms.lasthandoff: 07/05/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
-# Arbeta med ATA-granskningsloggar
-<a id="working-with-ata-audit-logs" class="xliff"></a>
+# <a name="working-with-ata-audit-logs"></a>Arbeta med ATA-granskningsloggar
 
 ATA-granskningsloggarna sparas i Windows-händelseloggarna under **Program och tjänster** och sedan **Microsoft ATA** både på ATA Center- och ATA Gateway-datorerna.
 
@@ -40,7 +39,6 @@ ATA Gateway-granskningsloggen innehåller:
 * Granskningsloggen för konfigurationsändringar innehåller både den tidigare konfigurationen och den nya konfigurationen.
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

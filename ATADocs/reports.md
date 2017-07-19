@@ -22,8 +22,7 @@ ms.lasthandoff: 06/30/2017
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-# ATA-rapporter
-<a id="ata-reports" class="xliff"></a>
+# <a name="ata-reports"></a>ATA-rapporter
 
 I avsnittet för ATA-rapporter i konsolen kan du generera rapporter som ger dig information om systemstatus, både systemhälsa och en rapport över misstänkta aktiviteter som har identifierats i din miljö.
 
@@ -55,8 +54,7 @@ Så här genererar du en schemalagd rapport:
 > Schemalagda rapporter levereras via e-post och kan endast skickas om du redan har konfigurerat en e-postserver under **Konfiguration** och sedan väljer **E-postserver** under Notifications and Reports (Meddelanden och rapporter).
 
 
-## Se även
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Se även
 - [Krav för ATA](ata-prerequisites.md)
 - [ATA-kapacitetsplanering](ata-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
