@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -146,6 +146,7 @@ Om detta leder till att ATA Lightweight Gateway får slut på resurser övervaka
 
 Följande tabell innehåller ett exempel på en domänkontrollant med tillräckligt med beräkningsresurser tillgängliga som möjliggör en större kvot än vad som krävs för närvarande, så att all trafik övervakas:
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Diverse (andra processer) |Kvot för ATA Lightweight Gateway|Släppt av gateway|
@@ -153,6 +154,7 @@ Följande tabell innehåller ett exempel på en domänkontrollant med tillräckl
 
 Om Active Directory behöver mer beräkning minskas kvoten som krävs av ATA Lightweight Gateway. I följande exempel behöver ATA Lightweight Gateway mer än den tilldelade kvoten och släpper en del av trafiken (övervakar endast delvis trafik):
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Diverse (andra processer) |Kvot för ATA Lightweight Gateway|Släpper gateway|
