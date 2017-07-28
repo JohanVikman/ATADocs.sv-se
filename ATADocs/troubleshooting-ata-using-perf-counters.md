@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -55,6 +55,7 @@ Det gör du genom att öppna Prestandaövervakaren och lägga till alla räknare
 
 Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medveten om:
 
+> [!div class="mx-tableFixed"]
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF parsade meddelanden\Sek|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
@@ -75,7 +76,7 @@ För att mäta de resursbegränsningar som ATA framtvingar på Lightweight-gatew
 
 Du gör det genom att öppna ”prestandaövervakaren” och lägga till alla räknare för ATA Lightweight-gateway. Namnet på prestandaräknarna är: "Microsoft ATA Gateway" och "Microsoft ATA Gateway Updater".
 
-
+> [!div class="mx-tableFixed"]
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager maximal processortid i %|Den maximala mängden processortid (i procent) som Lightweight Gateway-processen kan använda. |Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.|
@@ -87,7 +88,7 @@ Du gör det genom att öppna ”prestandaövervakaren” och lägga till alla r�
 Om du vill se din faktiska användning, se följande räknare:
 
 
-
+> [!div class="mx-tableFixed"]
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.gateway)\%processortid|Mängden processortid (i procent) som Lightweight Gateway-processen faktiskt använder. |Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal processortid i % för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.|
@@ -101,6 +102,7 @@ Det gör du genom att öppna Prestandaövervakaren och lägga till alla räknare
 
 Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten om:
 
+> [!div class="mx-tableFixed"]
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
@@ -116,6 +118,7 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 ## <a name="operating-system-counters"></a>Operativsystemsräknare
 Följande är listan med de viktigaste operativsystemsräknarna som du bör vara medveten om:
 
+> [!div class="mx-tableFixed"]
 |Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Processor(_total)\% Processortid|Procentandelen av förfluten tid som processorn använder för att köra en icke-inaktiv tråd.|Mindre än 80 % i genomsnitt|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
