@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -34,19 +34,22 @@ För att kunna logga in på ATA-konsolen måste du logga in med en användare so
 
 ## <a name="logging-into-the-ata-console"></a>Logga in på ATA-konsolen
 
+>[!NOTE]
+ > Från och med ATA 1.8 sker inloggningen till ATA-konsolen med hjälp av enkel inloggning.
+
 1. I ATA Center-servern klickar du på ikonen **Microsoft ATA Console** på skrivbordet och bläddrar till ATA-konsolen.
 
     ![ATA-serverikon](media/ata-server-icon.png)
 
->[!NOTE]
-> Du kan även öppna en webbläsare från antingen ATA Center eller ATA Gateway och bläddra till den IP-adress du har konfigurerat i ATA Center-installationen för ATA-konsolen.    
+ >[!NOTE]
+ > Du kan även öppna en webbläsare från antingen ATA Center eller ATA Gateway och bläddra till den IP-adress du har konfigurerat i ATA Center-installationen för ATA-konsolen.    
 
 2.  Om både den dator som ATA Center är installerat på och den dator som du försöker komma åt ATA-konsolen från är domänanslutna har ATA stöd för enkel inloggning integrerat med Windows-autentisering – om du redan har loggat in på datorn använder ATA den token för att logga in dig till ATA-konsolen. Du kan också logga in med ett smartkort. Dina behörigheter i ATA motsvarar din [administratörsroll](ata-role-groups.md).
 
-> [!NOTE]
-> Var noga med att logga in på datorn som du vill komma åt ATA-konsolen från med ditt administratörsanvändarnamn och ditt administratörslösenord för ATA. Du kan också köra webbläsaren som en annan användare eller logga ut från Windows och logga in med ditt administratörsanvändarnamn för ATA. Om du vill att ATA Console ska uppmana dig att ange dina autentiseringsuppgifter ansluter du till konsolen med hjälp av en IP-adress, så uppmanas du att ange autentiseringsuppgifter.
+ > [!NOTE]
+ > Var noga med att logga in på datorn som du vill komma åt ATA-konsolen från med ditt administratörsanvändarnamn och ditt administratörslösenord för ATA. Du kan också köra webbläsaren som en annan användare eller logga ut från Windows och logga in med ditt administratörsanvändarnamn för ATA. Om du vill att ATA Console ska uppmana dig att ange dina autentiseringsuppgifter ansluter du till konsolen med hjälp av en IP-adress, så uppmanas du att ange autentiseringsuppgifter.
 
-Om du vill logga in med enkel inloggning kontrollerar du att ATA-konsolen har definierats som en lokal intranätplats i webbläsaren och ansluter till konsolen med ett kortnamn eller en localhost.
+3. Om du vill logga in med enkel inloggning kontrollerar du att ATA-konsolen har definierats som en lokal intranätplats i webbläsaren och ansluter till konsolen med ett kortnamn eller en localhost.
 
 > [!NOTE]
 > Förutom att logga varje avisering om misstänkt aktivitet och hälsorelaterade problem, loggas varje konfigurationsändring som du gör i ATA-konsolen i Windows-händelseloggen på ATA Center-datorn i **loggen för program och tjänster** och sedan **Microsoft ATA**. Alla inloggningar till ATA-konsolen loggas också.<br></br>  All konfiguration som påverkar ATA Gateway loggas också i Windows-händelseloggen på ATA Gateway-datorn. 
@@ -113,7 +116,7 @@ En profil som ATA inte har kunnat lösa helt visas med en halvfull cirkelformad 
 
 ### <a name="sensitive-groups"></a>Känsliga grupper
 
-Följande lista med grupper betraktas som **känsliga** av ATA. Dessa är grupper som flaggas som grupper med administrativa privilegier och genererar aviseringar för känsliga konton:
+Följande lista med grupper betraktas som **känsliga** av ATA. En entitet som är medlem i dessa grupper betraktas som känslig:
 
 - Skrivskyddade företagsdomänkontrollanter 
 - Domänadministratörer 
