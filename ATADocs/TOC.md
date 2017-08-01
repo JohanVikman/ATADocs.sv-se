@@ -1,7 +1,7 @@
 # Förstå och utforska
 ## [Vad är Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Vilka hot identifierar ATA?](ata-threats.md)
-## Versionsanmärkningar för ATA
+## Vad är nytt i ATA?
 ### [Nyheter i ATA version 1.8](whats-new-version-1.8.md)
 #### [Uppdatera till ATA 1.8 – migreringsguide](ata-update-1.8-migration-guide.md)
 ### [Nyheter i ATA version 1.7](whats-new-version-1.7.md)
@@ -28,19 +28,19 @@
 ### [Steg 4 installera ATA Gateway](install-ata-step4.md)
 ### [Steg 5 konfigurera ATA Gateway](install-ata-step5.md)
 ### [Steg 6 händelseinsamling och VPN](install-ata-step6.md)
-### [Steg 6 Uteslutningar och Honeytoken](install-ata-step6.md)
+### [Steg 7 undantag och Honeytoken](install-ata-step7.md)
 ### [Tyst installation](ata-silent-installation.md)
-# Använda
-## [Ändra konfigurationen för ATA Center](modifying-ata-center-configuration.md)
-## [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
+# Använd
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
-## [ATA-rollgrupper](ata-role-groups.md)
-## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
+## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
+###[Exkludera entiteter från identifieringar](excluding-entities-from-detections.md)
 ## [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
-## [Arbeta med identifieringsinställningar](working-with-detection-settings.md)
 ## [ATA-rapporter](reports.md)
 ## [ATA Health Center](ata-health-center.md)
-## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
+## [ATA-rollgrupper](ata-role-groups.md)
+## [Ändra konfigurationen för ATA Center](modifying-ata-center-configuration.md)
+## [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
+## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
 ## [Databashantering i ATA](ata-database-management.md)
 ## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
 ## [Hantera ATA-telemetri](manage-telemetry-settings.md)
