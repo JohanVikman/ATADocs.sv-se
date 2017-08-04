@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -51,6 +51,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware|Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. |För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.|
 |System.Net.WebException: Fjärrservern returnerade ett fel: (407) Proxyautentisering krävs|ATA Gateway-kommunikationen med ATA Center störs av en proxyserver.|Inaktivera proxyservern på ATA Gateway-datorn. <br></br>Observera att proxyinställningarna kan vara per konto.|
 |System.IO.DirectoryNotFoundException: Systemet kan inte hitta den angivna sökvägen. (Undantag från HRESULT: 0x80070003)|En eller flera av tjänsterna som krävs för att ATA ska fungera startade inte.|Starta följande tjänster: <br></br>Prestandaloggar och aviseringar (PLA), Schemaläggaren (schema).|
+|System.Net.WebException: Fjärrservern returnerade ett fel: (403) nekad|ATA Gateway eller Lightweight Gateway kunde var förbjuden från att upprätta en HTTP-anslutning eftersom ATA Center inte är betrodd.|Lägg till NetBIOS-namnet och FQDN för ATA Center i listan med betrodda webbplatser och rensa cachen på internt Explorer (eller namnet på ATA Center som angetts i konfigurationen om den konfigurerade skiljer sig NetBIOS/FQDN).|
 
 ## <a name="deployment-errors"></a>Distributionsfel
 > [!div class="mx-tableFixed"]

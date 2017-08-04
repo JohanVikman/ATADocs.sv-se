@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -51,12 +51,12 @@ ATA-systemet fungerar på Active Directory-skogens gränser och stöder skogens 
 Det här avsnittet innehåller information som du bör samla in och konton och nätverksentiteter som du bör ha innan du börjar installera ATA.
 
 
--   Användarkonto och lösenord med läsbehörighet till alla objekt i de domäner som ska övervakas.
+-   Användarkonto och lösenord med läsbehörighet till alla objekt i de övervakade domänerna.
 
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
--   Installera inte Analysverktyg för meddelanden på en ATA-gateway eller ATA Lightweight-gateway. Drivrutinen för Analysverktyg för meddelanden är inte kompatibel med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Annars kommer gatewayen inte längre att samla in någon trafik. Observera att ATA Lightweight Gateway inte påverkas om du kör Wireshark på en ATA Lightweight-gateway.
+-   Installera inte Microsoft analysverktyg för meddelanden på en ATA Gateway eller Lightweight Gateway. Drivrutinen för Analysverktyg för meddelanden är inte kompatibel med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Om inte gatewayen slutar att fånga in trafik. Observera att ATA Lightweight Gateway inte påverkas om du kör Wireshark på en ATA Lightweight-gateway.
 
 -    Rekommenderat: Användaren bör ha läsbehörighet till behållaren Borttagna objekt. Det gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i avsnittet **Ändra behörigheter för en behållare för borttagna objekt**  i artikeln [Visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
@@ -94,7 +94,7 @@ ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha ti
 Du bör ha följande:
 -   Minst ett nätverkskort (om fysisk server i VLAN-miljö används, rekommenderar vi att två nätverkskort används)
 
--   En IP-adress för kommunikation mellan ATA Center och ATA Gateway har krypterats med SSL på port 443. 
+-   En IP-adress för kommunikation mellan ATA Center och ATA Gateway har krypterats med SSL på port 443. (ATA-tjänsten Binder till alla IP-adresser som ATA Center har på port 443.)
 
 ### <a name="ports"></a>Portar
 I följande tabell visas de portar som minst måste öppnas för att ATA Center ska fungera korrekt.
@@ -114,19 +114,23 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**Netlogon** (valfritt om domänansluten)|TCP och UDP|445|Domänkontrollanter|Utgående|
 |**Windows Time** (valfritt om domänansluten)|UDP|123|Domänkontrollanter|Utgående|
 
+> [!NOTE]
+> LDAP krävs för att testa autentiseringsuppgifter mellan ATA-gatewayer och domänkontrollanterna. Testis utföras från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av normal kommunikation.
+
+
 ### <a name="certificates"></a>Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
 
 För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.<br>
-> [!NOTE]
-> Certifikatets providertyp kan vara Kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP).
 
-
-> Användning av automatisk certifikatförnyelse stöds inte.
+> [!WARNING]
+> - Processen för att förnya ett befintligt certifikat stöds inte. Det enda sättet att förnya ett certifikat är genom att skapa ett nytt certifikat och hur du konfigurerar ATA för att använda det nya certifikatet.
 
 
 > [!NOTE]
-> Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
+> - Certifikatets providertyp kan vara Kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP).
+> - ATA Center-certifikatet får inte vara renewe. Innan den upphör är det korrekta sättet att förnya det att skapa ett nytt certifikat och välja det nya certifikatet. 
+> - Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
 
 ## <a name="ata-gateway-requirements"></a>Krav för ATA Gateway
 Det här avsnittet innehåller kraven för ATA Gateway.
