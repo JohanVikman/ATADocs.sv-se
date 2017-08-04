@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/3/2017
+ms.date: 08/2/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5beabd2617f55ecbcc717338dc40d9f597cc25d4
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 05853aecf8f8aa075d66c5a755cf89ffd7727739
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -73,7 +73,7 @@ mongo.exe ATA-filnamn
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>Fungerar ATA med krypterad trafik?
-ATA förlitar sig på analysen av flera nätverksprotokoll, och händelser som samlas in från SIEM eller via vidarebefordran av Windows-händelser så att även om krypterad trafik inte analyseras (till exempel LDAPS och IPSEC ESP), så fungerar ATA fortfarande och de flesta identifieringar påverkas inte.
+ATA använder analysera flera nätverksprotokoll, samt händelser som samlas in från SIEM eller via vidarebefordran av Windows-händelser så att även om krypterad trafik inte fungerar fortfarande analyserade (till exempel LDAPS och IPSEC) ATA och de flesta av identifieringarna påverkas inte.
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Fungerar ATA med Kerberos Armoring?
 Aktivering av Kerberos Armoring, som även kallas Flexible Authentication Secure Tunneling (FAST), stöds av ATA, med undantag för identifiering av ”over-pass the hash” som inte fungerar.

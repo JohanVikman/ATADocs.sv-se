@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/9/2017
+ms.date: 7/25/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: af88c02c6e2e5f679aca75b17a288c72ab300069
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -65,7 +65,7 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 > [!NOTE]
 > -   ATA Center kan hantera sammanlagt högst 1 miljon paket per sekund från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 400 000. Kontakta askcesec@microsoft.com för hjälp med den här typen av miljöer.
 > -   Mängden lagringsutrymme som anges här är nettovärden. Du bör alltid ta med framtida tillväxt i beräkningen och kontrollera att disken som databasen finns på har minst 20 % ledigt utrymme.
-> -   Om det lediga utrymmet sjunker till 20 % eller 100 GB tas den äldsta datasamlingen bort. Borttagningen fortsätter tills det finns 5 % eller 50 GB ledigt utrymme kvar, då datainsamlingen slutar fungera.
+> -   Om det lediga utrymmet når minst 20% eller 200 GB tas den äldsta Datasamlingen bort. Borttagningen fortsätter tills det finns 5 % eller 50 GB ledigt utrymme kvar, då datainsamlingen slutar fungera.
 > - Det går att distribuera ATA Center hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
 > -   Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
 > -   Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
