@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/30/2017
+ms.date: 8/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
-ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
+ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -46,7 +46,8 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.InvalidOperationException: Instansen Microsoft.Tri.Gateway finns inte i den angivna kategorin.|PID:er har aktiverats för processnamn i ATA-gatewayen|Använd [KB281884](https://support.microsoft.com/kb/281884) för att inaktivera PID:er i processnamn|
 |System.InvalidOperationException: Kategorin finns inte.|Räknare kan vara inaktiverade i registret|Använd [KB2554336](https://support.microsoft.com/kb/2554336) för att återskapa prestandaräknare|
 |System.ApplicationException: Det går inte att starta ETW-session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Det finns en värdpost i HOSTS-filen som pekar på datorns kortnamn|Ta bort posten värden från C:\Windows\System32\drivers\etc\HOSTS-fil eller ändra den till ett fullständigt domännamn.|
-|System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverat på ATA-gatewayen men .Net är inställd att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .Net genom att ställa in registernycklarna att använda operativsystemets standarder för LLS och TLS enligt följande: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
+|System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverad på ATA Gateway, men .net är konfigurerad att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .net genom att ange registernycklar för att använda operativsystemet standardvärdena för SSL och TLS, enligt följande: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>
+`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: Det gick inte att läsa in typen 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' från sammansättningen 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|ATA Gateway kunde inte läsa in de nödvändiga parsningsfilerna.|Kontrollera om Analysverktyg för meddelanden är installerat. Analysverktyg för meddelanden kan inte installeras med ATA Gateway/ATA Lightweight Gateway. Avinstallera Analysverktyg för meddelanden och starta om gatewaytjänsten.|
 |Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware|Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. |För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.|
 |System.Net.WebException: Fjärrservern returnerade ett fel: (407) Proxyautentisering krävs|ATA Gateway-kommunikationen med ATA Center störs av en proxyserver.|Inaktivera proxyservern på ATA Gateway-datorn. <br></br>Observera att proxyinställningarna kan vara per konto.|
@@ -60,6 +61,8 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/kb/2919355) är installerade på servern innan ATA installeras.|
 |System.Threading.Tasks.TaskCanceledException: En uppgift avbröts|Tidsgränsen för distributionsprocessen gick ut eftersom det inte gick att nå ATA Center.|1.    Kontrollera nätverksanslutningen till ATA Center genom att ansluta till tjänsten med hjälp av dess IP-adress. <br></br>2.    Kontrollera proxy- eller brandväggskonfigurationerna.|
 |System.Net.Http.HttpRequestException: Ett fel uppstod när begäran skickades. ---> System.Net.WebException: Fjärrservern returnerade ett fel: 407 - Proxy-autentisering krävs.|Tidsgränsen för distributionsprocessen gick ut eftersom det inte gick att nå ATA Center på grund av en felaktig proxykonfiguration.|Inaktivera proxykonfigurationen före distributionen och aktivera sedan proxykonfigurationen igen. Du kan också konfigurera ett undantag i proxyn.|
+|System.Net.Sockets.SocketException: En befintlig anslutning avslutades av fjärrvärden|Använd ett av följande alternativ: </br>Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .net genom att ange registernycklar för att använda operativsystemet standardvärdena för SSL och TLS, enligt följande:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`
+
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problem i ATA Gateway och Lightweight Gateway
 
@@ -67,7 +70,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |Problem|Beskrivning|Lösning|
 |-------------|----------|---------|
 |Ingen trafik togs emot från domänkontrollanten, men övervakningsaviseringar observeras|    Ingen trafik togs emot från en domänkontrollant med hjälp av portspegling via en ATA-gateway|Inaktivera följande funktioner i **Avancerade inställningar** på ATA-gatewayens nätverkskort för datainsamling:<br></br>Sammanslagning av mottagna segment, RSC (IPv4)<br></br>Sammanslagning av mottagna segment, RSC (IPv6)|
-
+|Den här övervakningsavisering visas: **analyseras inte nätverkstrafik**|Om du har en ATA Gateway eller Lightweight Gateway på virtuella VMware-datorer kan få du aviseringen för övervakning. Detta inträffar på grund av ett matchningsfel i VMware.|Ange följande inställningar till **0** eller **inaktiverad** i konfigurationen av virtuella nätverkskort: TsoEnable, LargeSendOffload, Systemansvarig avlastning, Giant Systemansvarig avlastning|TLS 1.0 är inaktiverad på ATA Gateway men .net är konfigurerad att använda TLS 1.2|
 
 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 8/8/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: b4754c749cad25a6aa4da94563df29f9f99e2a20
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: a067dbaaac9ed115baa7ee13bf5dd1099f038eaf
+ms.sourcegitcommit: 5fd505fac6b69b6c732bb2da121eff23c5eb303e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nyheter i ATA version 1.8
 
@@ -78,6 +78,9 @@ Den här versionsinformationen innehåller information om uppdateringar, nya fun
 - Rekommendationer för hur du minimerar misstänkta aktiviteter har tagits bort från i tidslinjen för misstänkta aktiviteter.
 
 ## <a name="known-issues"></a>Kända problem
+
+> [!WARNING]
+> För att undvika kända problem du uppdateringen eller distribueras med hjälp av uppdatering 1.8 1.
 
 ### <a name="ata-gateway-on-windows-server-core"></a>ATA Gateway på Windows Server Core
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -115,8 +115,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**Windows Time** (valfritt om domänansluten)|UDP|123|Domänkontrollanter|Utgående|
 
 > [!NOTE]
-> LDAP krävs för att testa autentiseringsuppgifter mellan ATA-gatewayer och domänkontrollanterna. Testis utföras från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av normal kommunikation.
-
+> LDAP krävs för att testa autentiseringsuppgifterna som ska användas mellan ATA-gatewayer och domänkontrollanterna. Testet utförs från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av dess normala lösningsprocessen.
 
 ### <a name="certificates"></a>Certifikat
 Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
