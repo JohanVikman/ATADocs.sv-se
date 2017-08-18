@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9fa0b9162aabdaa9a42c532cf69af37decf3e05
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -68,7 +68,7 @@ URL:en används i följande scenarier:
 
 Ersätter du certifikatet genom att följa den här processen:
 
-1. Innan det aktuella certifikatet upphör att gälla, skapa ett nytt certifikat och kontrollera att den är installerad på ATA Center-servern. 
+1. Innan det aktuella certifikatet upphör att gälla, skapa ett nytt certifikat och kontrollera att den är installerad på ATA Center-servern. <br></br>Det rekommenderas att välja ett certifikat från en intern certifikatutfärdare, men det är också möjligt att skapa ett nytt självsignerat certifikat. Mer information finns i [ny SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. I ATA-inställningarna under **Center**, Välj nyligen skapade certifikatet. ATA Center-tjänsten är nu fortfarande kopplad till det ursprungliga certifikatet. 
 

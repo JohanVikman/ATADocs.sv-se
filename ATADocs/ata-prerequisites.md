@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -118,9 +118,12 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 > LDAP krävs för att testa autentiseringsuppgifterna som ska användas mellan ATA-gatewayer och domänkontrollanterna. Testet utförs från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av dess normala lösningsprocessen.
 
 ### <a name="certificates"></a>Certifikat
-Kontrollera att ATA Center har åtkomst till CRL-distributionsplatsen. Om ATA-gatewayerna inte har internetåtkomst följer du [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser för hela kedjan.
 
-För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen kan du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Gateway.<br>
+För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen bör du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Center.
+
+
+Kontrollera att ATA Center och ATA-Gatewayerna har åtkomst till CRL-distributionsplatsen. Om de inte har Internetåtkomst följer [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser pekar för hela kedjan.
+
 
 > [!WARNING]
 > - Processen för att förnya ett befintligt certifikat stöds inte. Det enda sättet att förnya ett certifikat är genom att skapa ett nytt certifikat och hur du konfigurerar ATA för att använda det nya certifikatet.
@@ -128,8 +131,8 @@ För att underlätta installationen av ATA kan du installera självsignerade cer
 
 > [!NOTE]
 > - Certifikatets providertyp kan vara Kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP).
-> - ATA Center-certifikatet får inte vara renewe. Innan den upphör är det korrekta sättet att förnya det att skapa ett nytt certifikat och välja det nya certifikatet. 
 > - Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
+> - Från och med ATA version 1.8 ATA-gatewayer och Lightweight-gatewayer hanterar sina egna certifikat och behöver ingen åtgärd av administratör ska kunna hanteras.
 
 ## <a name="ata-gateway-requirements"></a>Krav för ATA Gateway
 Det här avsnittet innehåller kraven för ATA Gateway.
