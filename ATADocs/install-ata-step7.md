@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/9/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: 527e62553913dc12b2b0d5ff149f765002de7946
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -71,8 +71,14 @@ I [ATA-boken med simulerade attacker](https://docs.microsoft.com/enterprise-mobi
 [« Steg 6 ](install-ata-step6.md)
 
 
-## <a name="see-also"></a>Se även
 
+## <a name="related-videos"></a>Relaterade videor
+- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>Se även
+- [ATA POC Distributionsguide](http://aka.ms/atapoc)
+- [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](ata-prerequisites.md)

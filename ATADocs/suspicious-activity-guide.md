@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c93f4485998bbb1b2b440f01fed8d96ad4e2842
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -204,7 +204,13 @@ irectory services rekognosering är en teknik som används av angripare för att
 |------|----|------|----------|
 | ATA genererar den här aviseringen om mer än 5 % av alla konton tas bort. Detta kräver läsbehörighet till behållaren för borttagna objekt. | Ta reda på varför 5 % av alla konton plötsligt togs bort. | Ta bort behörigheter för användare som kan ta bort konton i Active Directory. Mer information finns i [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Visa eller ange behörigheter för ett katalogobjekt). | Låg |
 
+## <a name="related-videos"></a>Relaterade videor
+- [Koppla säkerhets-community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## <a name="see-also"></a>Se även
+- [ATA misstänkt aktivitet playbook](http://aka.ms/ataplaybook)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 - [Utreda attacker med förfalskat PAC](use-case-forged-pac.md)
 - [Felsöka kända ATA-fel](troubleshooting-ata-known-errors.md)

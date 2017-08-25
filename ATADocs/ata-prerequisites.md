@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 313ee78070ab991d3d1b30441be8a4cee990eace
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -276,8 +276,12 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 
 -   Minsta bredd för skärmupplösning på 1 700 bildpunkter
 
-## <a name="see-also"></a>Se även
+## <a name="related-videos"></a>Relaterade videor
+- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## <a name="see-also"></a>Se även
+- [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [ATA-arkitektur](ata-architecture.md)
 - [Installera ATA](install-ata-step1.md)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
