@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
+ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -53,7 +53,9 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.Net.WebException: Fjärrservern returnerade ett fel: (407) Proxyautentisering krävs|ATA Gateway-kommunikationen med ATA Center störs av en proxyserver.|Inaktivera proxyservern på ATA Gateway-datorn. <br></br>Observera att proxyinställningarna kan vara per konto.|
 |System.IO.DirectoryNotFoundException: Systemet kan inte hitta den angivna sökvägen. (Undantag från HRESULT: 0x80070003)|En eller flera av tjänsterna som krävs för att ATA ska fungera startade inte.|Starta följande tjänster: <br></br>Prestandaloggar och aviseringar (PLA), Schemaläggaren (schema).|
 |System.Net.WebException: Fjärrservern returnerade ett fel: (403) nekad|ATA Gateway eller Lightweight Gateway kunde var förbjuden från att upprätta en HTTP-anslutning eftersom ATA Center inte är betrodd.|Lägg till NetBIOS-namnet och FQDN för ATA Center i listan med betrodda webbplatser och rensa cachen på internt Explorer (eller namnet på ATA Center som angetts i konfigurationen om den konfigurerade skiljer sig NetBIOS/FQDN).|
+|System.Net.Http.HttpRequestException: Det gick inte att PostAsync [requestTypeName = StopNetEventSessionRequest]|Stoppa det går inte att och starta ETW-sessionen som samlar in nätverkstrafik på grund av ett problem med WMI ATA Gateway eller ATA Lightweight Gateway|Följ instruktionerna i [WMI: återskapa WMI-lagringsplatsen](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) WMI problemet|
 
+ 
 ## <a name="deployment-errors"></a>Distributionsfel
 > [!div class="mx-tableFixed"]
 |Fel|Beskrivning|Lösning|
