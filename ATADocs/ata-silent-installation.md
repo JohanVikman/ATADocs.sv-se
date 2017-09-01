@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 08/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
+ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/29/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-
 # <a name="ata-silent-installation"></a>Tyst installation av ATA
 Den här artikeln innehåller instruktioner för tyst installation av ATA.
+
 ## <a name="prerequisites"></a>Förutsättningar
 
 ATA version 1.8 kräver installation av Microsoft .NET Framework 4.6.1. 
@@ -134,6 +134,11 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Tyst installation av ATA Gateway
+
+> [!NOTE]
+> När du distribuerar tyst ATA Lightweight Gateway via System Center Configuration Manager eller andra system för distribution av programvara, rekommenderas det att skapa två distributionspaket:</br>-Net Framework 4.6.1 inklusive domänkontrollanten att startas om</br>-ATA Gateway. </br>Gör ATA Gateway-paketet som är beroende av distributionen av .net Framework paketdistributionen. </br>Hämta den [.Net Framework 4.6.1 offline distributionspaketet](https://www.microsoft.com/download/details.aspx?id=49982). 
+
+
 Använd följande kommando för att installera ATA Gateway:
 
 **Syntax**:
