@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: cdd046eeaca1d8aeb7ea3afa001b34b82cb468b0
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -35,11 +35,20 @@ Med ATA Health Center får du reda på att det finns ett problem genom att en av
 ### <a name="managing-ata-health"></a>Hantera ATA-hälsa
 Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Center-ikonen på menyraden ![ATA Health Center-ikon](media/ATA-red-dot.png)
 
--   Alla öppna aviseringar kan hanteras genom att ställa in dem på **Löst** eller **Avvisat**. I aviseringen klickar du på **Öppna** och rullar ned till **Löst** eller **Avvisat**.
+-   Alla öppna aviseringar kan hanteras genom att ange dem **Stäng**, **utelämna**, eller **ta bort** genom att klicka på de tre punkterna i hörnet av aviseringen och göra valet.
 
--   Om du har löst ett problem och ATA upptäcker att problemet kvarstår flyttas problemet automatiskt tillbaka till problemlistan **Öppna**. Om ATA upptäcker att ett öppet problem är löst flyttas det automatiskt till problemlistan **Löst**.
+-   **Öppna**: Alla nya misstänkta aktiviteter visas i den här listan.
 
--   **Avvisade** problem är problem som du inte vill att ATA ska fortsätta kontrollera – om du till exempel informeras om ett problem som du vet finns och inte planerar att lösa problemet, men inte vill fortsätta få meddelanden om det och inte längre vill se det i problemlistan **Öppna**, kan du ändra det till **Avvisat**.
+-   **Stäng**: Används för att spåra misstänkta aktiviteter som du har identifierat, undersökt och åtgärdat.
+
+    > [!NOTE]
+    > ATA kan öppna en stängd aktivitet om det samma aktivitet identifieras igen under en kort tidsperiod.
+
+-   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär att om det finns en liknande avisering så öppnas den inte igen av ATA. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, så aviseras du igen.
+
+- **Ta bort**: Om du tar bort en avisering tas den bort från systemet och från databasen och du kan INTE återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+
+
 
 ![Bild av ATA Health Center-problem](media/ATA-Health-Issue.JPG)
 
