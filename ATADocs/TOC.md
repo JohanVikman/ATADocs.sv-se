@@ -1,7 +1,7 @@
 # Förstå och utforska
 ## [Vad är Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Vilka hot identifierar ATA?](ata-threats.md)
-## Vad är nytt i ATA?
+## Nyheter i ATA
 ### [Nyheter i ATA version 1.8](whats-new-version-1.8.md)
 #### [Uppdatera till ATA 1.8 – migreringsguide](ata-update-1.8-migration-guide.md)
 ### [Nyheter i ATA version 1.7](whats-new-version-1.7.md)
@@ -17,19 +17,18 @@
 ## [Planera ATA-kapaciteten](ata-capacity-planning.md)
 ## [Krav för ATA](ata-prerequisites.md)
 # Distribuera
-## Förinstallationssteg
+## [1 Ladda ned och installera Center](install-ata-step1.md)
+## [2 Anslut till AD](install-ata-step2.md)
+## [3 Ladda ned ATA Gateway-paketet](install-ata-step3.md)
+## [4 Installera ATA Gateway](install-ata-step4.md)
+## [5 Konfigurera ATA Gateway](install-ata-step5.md)
+## [6 Händelseinsamling och VPN](install-ata-step6.md)
+## [7 Undantag och Honeytoken](install-ata-step7.md)
+## [Tyst installation](ata-silent-installation.md)
+## Ytterligare steg för ATA Gateway
 ### [1. Konfigurera portspegling](configure-port-mirroring.md)
 ### [2. Verifiera portspegling](validate-port-mirroring.md)
 ### [3. Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md)
-## Installera ATA
-### [Steg 1 Ladda ned och installera Center](install-ata-step1.md)
-### [Steg 2 Anslut till AD](install-ata-step2.md)
-### [Steg 3 Ladda ner ATA Gateway-paketet](install-ata-step3.md)
-### [Steg 4 installera ATA Gateway](install-ata-step4.md)
-### [Steg 5 konfigurera ATA Gateway](install-ata-step5.md)
-### [Steg 6 händelseinsamling och VPN](install-ata-step6.md)
-### [Steg 7 undantag och Honeytoken](install-ata-step7.md)
-### [Tyst installation](ata-silent-installation.md)
 # Använd
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
