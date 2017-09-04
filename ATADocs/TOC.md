@@ -16,6 +16,7 @@
 ## [ATA-arkitektur](ata-architecture.md)
 ## [Planera ATA-kapaciteten](ata-capacity-planning.md)
 ## [Krav för ATA](ata-prerequisites.md)
+## [Rekommenderad uppgraderingsmetod](upgrade-path.md)
 # Distribuera
 ## [1 Ladda ned och installera Center](install-ata-step1.md)
 ## [2 Anslut till AD](install-ata-step2.md)
