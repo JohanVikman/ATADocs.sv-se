@@ -45,8 +45,7 @@
 ## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
 ## [Hantera ATA-telemetri](manage-telemetry-settings.md)
 # Undersök
-## [Dataattacker med eskalering av privilegier med hjälp av en förfalskad auktorisering](use-case-forged-pac.md)
-## [Rekognosering med DNS](use-case-dns.md)
+## [Guide för misstänkt aktivitet](suspicious-activity-guide.md)
 # Felsöka
 ## [Arbeta med granskningsloggar](troubleshoot-audit.md)
 ## [Felsök vanliga problem](troubleshooting-ata-known-errors.md)
