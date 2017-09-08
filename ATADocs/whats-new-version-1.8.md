@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nyheter i ATA version 1.8
 
@@ -126,6 +126,14 @@ Felet kanske inte visas i Windows Server 2016 Core, men processen kommer att mis
 **Beskrivning**: Från och med ATA 1.8 kommunicerar ATA Gateway med ATA Center med hjälp av HTTP-protokollet. Om datorn där du installerade ATA Gateway använder en proxyserver för att ansluta till ATA Center kan kommunikationen avbrytas. 
 
 **Lösning**: Inaktivera användningen av en proxyserver på ATA Gateway-tjänstkontot. En framtida version kommer att innehålla en uppdatering för att åtgärda det här problemet.
+
+### <a name="report-settings-reset"></a>Rapporten inställningar för återställning
+
+**Symptom**: alla inställningar som har gjorts för schemalagda rapporter raderas när du uppdaterar till 1,8 uppdatering 1.
+
+**Beskrivning**: uppdatering till 1,8 uppdatering 1 från 1,8 återställer rapporterna schemainställningar.
+
+**Lösning**: innan du uppdaterar till 1,8 uppdatering 1 gör en kopia av rapportinställningarna och ange dem, det kan också vara göras via ett skript, mer information finns i [exportera och importera ATA-konfiguration](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Se även
