@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -124,13 +124,19 @@ För att underlätta installationen av ATA kan du installera självsignerade cer
 
 Kontrollera att ATA Center och ATA-Gatewayerna har åtkomst till CRL-distributionsplatsen. Om de inte har Internetåtkomst följer [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera alla CRL-distributionsplatser pekar för hela kedjan.
 
+Certifikatet måste ha:
+-   En privat nyckel
+-   En providertyp kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP)
+-   En offentlig nyckellängd på 2 048 bitar
+-   Ange ett värde för KeyEncipherment och ServerAuthentication för flaggorna för attributsyntax
+
+Du kan till exempel använda standarden **webbservern** eller **datorn** mallar.
 
 > [!WARNING]
 > - Processen för att förnya ett befintligt certifikat stöds inte. Det enda sättet att förnya ett certifikat är genom att skapa ett nytt certifikat och hur du konfigurerar ATA för att använda det nya certifikatet.
 
 
 > [!NOTE]
-> - Certifikatets providertyp kan vara Kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP).
 > - Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
 > - Från och med ATA version 1.8 ATA-gatewayer och Lightweight-gatewayer hanterar sina egna certifikat och behöver ingen åtgärd av administratör ska kunna hanteras.
 

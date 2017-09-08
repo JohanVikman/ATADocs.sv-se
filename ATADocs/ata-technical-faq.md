@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/15/2017
+ms.date: 09/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90a4c656d42d02c89cbb31b0e46c33fe495e19aa
-ms.sourcegitcommit: 9c7f173efb076ef9a8664d50b2333a10ddaf7401
+ms.openlocfilehash: f0cef288b36bb070d632c78d773c769f7862ff19
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -45,19 +45,11 @@ Detta måste fjärrköras mot domänkontrollanten som övervakas och inte från 
 
 ## <a name="which-ata-build-corresponds-to-each-version"></a>Vilken build-version av ATA motsvarar varje version?
 
-|Version|Versionsnr|
-|----|----|
-|1.6|1.6.4103|
-|1.6 Update 1|1.6.4317|
-|1.7|1.7.5402| 
-|1.7 Update 1|1.7.5647|
-|1.7 Update 2|1.7.5757|
-|1.8|1.8.6645|
-|1.8 uppdatering 1|1.8.6765|
+Uppgradera versionsinformation finns [ATA uppgraderingssökväg](upgrade-path.md).
 
 ## <a name="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version"></a>Vilken version ska jag använda för att uppgradera min aktuella ATA-distribution till den senaste versionen?
 
-![Uppgraderingstabell för ATA-versioner](./media/version-matrix.png)
+Uppgradera matrisen ATA version finns [ATA uppgraderingssökväg](upgrade-path.md).
 
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Hur kan jag bekräfta vidarebefordran av Windows-händelser?

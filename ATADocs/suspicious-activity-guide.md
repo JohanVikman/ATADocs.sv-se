@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/2/2017
+ms.date: 09/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,196 +13,475 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
+ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 09/08/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
-# <a name="introduction"></a>Introduktion
+# <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Avancerad Hotanalys misstänkt aktivitet guide
 
-ATA ger identifiering för följande olika faser i en avancerad attack: rekognosering, avslöjade autentiseringsuppgifter, lateral förflyttning, eskalering av privilegier, domändominans med mera.
+Följande rätt undersökningen eventuell misstänkt aktivitet kan klassificeras som:
 
-Faser i kill-kedjan där ATA innehåller identifieringar som för närvarande är markerade i det här diagrammet.
+-   **True positiva**: en skadlig åtgärd som identifieras av ATA.
 
-![ATA fokuserar på lateral aktivitet i attackkedjan](media/attack-kill-chain-small.jpg)
+-   **Ofarlig true positiva**: en åtgärd som identifieras av ATA är verkliga men inte skadlig, till exempel ett intrång test.
 
-Den här artikeln innehåller information om varje misstänkt aktivitet per fas.
+-   **Falsklarm**: ett larm som false, vilket betyder att aktiviteten inte inträffa.
 
+Mer information om hur du arbetar med ATA-aviseringar finns [arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md).
 
-## <a name="reconnaissance-using-account-enumeration"></a>Rekognosering med kontouppräkning
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Attacker med kontouppräkning är en teknik som angripare använder för att gissa sig fram till olika kontonamn, med hjälp av Kerberos-autentiseringsförsök, för att ta reda på om en användare finns i nätverket. Konton som identifieras på det här sättet kan användas i efterföljande steg i attacken. | Undersök datorn i fråga och försök avgöra om det finns en bra anledning till varför den startar så många Kerberos-autentiseringsprocesser. Det här är processer som försökte och misslyckades med att identifiera flera konton eftersom användaren inte finns (felet Client_Principal_Unknown), och där minst ett åtkomstförsök lyckades. <br></br>**Undantag:** Den här identifieringen letar efter flera konton som inte finns och autentiseringsförsök från samma dator. Om en användare skriver fel när han eller hon manuellt anger ett användarnamn eller en domän, identifieras autentiseringsförsöket som ett försök att logga in på ett konto som inte finns. Terminalservrar som kräver att många användare loggar in kan ha ett stort antal felaktiga inloggningsförsök, utan att det beror på ett intrångsförsök. |Undersök processen som ansvarar för att generera dessa förfrågningar.  Hjälp med att identifiera processer baserat på källport finns i [Have you ever wanted to see which Windows process sends a certain packet out to network?](https://blogs.technet.microsoft.com/nettracer/2010/08/02/have-you-ever-wanted-to-see-which-windows-process-sends-a-certain-packet-out-to-network/) (Vill du veta vilken Windows-process som skickar ut ett visst paket i nätverket?)|Medel|
-
-## <a name="reconnaissance-using-directory-services-enumeration-sam-r"></a>Rekognosering med uppräkning av katalogtjänster (SAM-R)
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-irectory services rekognosering är en teknik som används av angripare för att mappa katalogstrukturen och rikta Privilegierade konton för senare steg i angrepp. SAM-R-protokollet (Security Account Manager Remote) är en av metoderna som används för att fråga katalogen. | Ta reda på varför datorn i fråga kör Security Accounts Manager - Remote (MS-SAMR). Detta görs på ett onormalt sätt och antagligen körs frågor mot känsliga entiteter. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av det normala beteendet för användare som skickar SAM-R-frågor, och varnar dig när en onormal fråga observeras. Känsliga användare som loggar in på datorer som de inte äger kan utlösa en SAM-R-fråga som identifieras som onormal, även om det är en del av den normala arbetsprocessen. Detta är vanligt för medlemmar i IT-teamet. Om händelsen flaggas som misstänkt, men är resultatet av normal användning, beror det på att beteendet inte tidigare har observerats av ATA. | I detta fall rekommenderar vi en längre inlärningsperiod och bättre täckning av ATA i domänen, per Active Directory-skog.<br></br>[Ladda ned och kör verktyget ”SAMRi10”](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b). SAMRi10 gavs ut av ATA-teamet och skyddar din miljö mot SAM-R-frågor. | Medel|
-
-## <a name="reconnaissance-using-dns"></a>Rekognosering med DNS
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Din DNS-server innehåller en karta över alla datorer, IP-adresser och tjänster i ditt nätverk. Den här informationen används av angripare för att mappa din nätverksinfrastruktur och för att angripa intressanta datorer i efterföljande steg i attacken. | Ta reda på varför datorn i fråga kör en Full Transfer Zone-fråga (AXFR) för att hämta alla poster i DNS-domänen. <br></br>**Undantag:** Den här identifieringen identifierar icke-DNS-servrar som skickar DNS-zonöverföringsförfrågningar. Det finns flera säkerhetsgenomsökningslösningar som är kända för att skicka den här typen av förfrågningar till DNS-servrar. <br></br>Kontrollera också att ATA kan kommunicera via port 53 från ATA-gatewayerna till DNS-servrarna för att undvika scenarier med falsk positiv identifiering.| Begränsa zonöverföringar genom att noggrant välja vilka värdar som kan begära det. Mer information finns i [Säkra DNS](https://technet.microsoft.com/library/cc770474(v=ws.11).aspx) och [Checklista: Säkra din DNS-server](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx). |Medel|
-
-## <a name="reconnaissance-using-smb-session-enumeration"></a>Rekognosering med SMB-sessionsuppräkning
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Med SMB-uppräkning (Server Message Block) kan en angripare få information om vilka IP-adresser som användare i ditt nätverk nyligen har loggat in från. När en angripare har fått tag i den här informationen kan den användas för att angripa specifika konton och för att flytta i sidled i nätverket. | Ta reda på varför datorn i fråga kör SMB-sessionsuppräkningar.<br></br>**Undantag:** Den här identifieringen arbetar under antagandet att SMB-sessionsuppräkningen inte har någon legitim funktion i ett företagsnätverk, men vissa säkerhetsgenomsökningslösningar (till exempel Websense) skickar den här typen av förfrågningar. | [Använd verktyget net cease för att stärka din miljö](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) | Medel   |
-
-## <a name="brute-force-ldap-kerberos-ntlm"></a>Brute-force (LDAP, Kerberos, NTLM)
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| I en brute-force-attack, eller råstyrkeattack som det också kallas, provar angriparen många lösenord och hoppas att så småningom gissa rätt. Angriparen kontrollerar systematiskt alla möjliga lösenord (eller ett stort antal möjliga lösenord) tills rätt lösenord hittas. När en angripare har gissat sig fram till rätt lösenord kan han eller hon logga in i nätverket som användaren i fråga. ATA stöder för närvarande horisontell (flera konton) brute-force med hjälp av Kerberos- eller NTLM-protokollet och horisontell och vertikal (ett konto, flera lösenordsförsök) brute-force med enkel LDAP-bindning. | Ta reda på varför datorn i fråga inte kan autentisera flera användarkonton (med ungefär samma antal autentiseringsförsök för flera användare) eller varför det finns ett stort antal misslyckade autentiseringsförsök för en enskild användare. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av det normala beteendet för konton som autentiserar till olika resurser, och utlöser en avisering när ett onormalt mönster observeras. Det här mönstret är inte ovanligt i skript som autentiserar automatiskt men som kanske använder inaktuella autentiseringsuppgifter (dvs. fel lösenord eller användarnamn). | Komplexa och lång lösenord utgör en nödvändig första säkerhetsnivå mot brute-force-attacker. | Medel   |
-
-## <a name="sensitive-account-exposed-in-plain-text-authentication-and-service-exposing-accounts-in-plain-text-authentication"></a>Känsligt konto som exponerats i klartextautentisering och tjänst som exponerar konton i klartextautentisering
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Vissa tjänster på en dator skickar autentiseringsuppgifter i klartext, även för känsliga konton. Angripare som övervakar din trafik kan få tag på dessa autentiseringsuppgifter för skadliga syften. Alla lösenord i klartext för ett känsligt konto utlöser aviseringen. | Lokalisera den aktuella datorn och ta reda på varför den använder enkla LDAP-bindningar. | Kontrollera konfigurationen på källdatorerna och se till att du inte använder enkel LDAP-bindning. Använd LDAP SALS eller LDAPS i stället för enkla LDAP-bindningar. Följ Security Tiered Framework och begränsa åtkomsten på de olika nivåerna för att förhindra behörighetseskalering. | Låg för tjänstexponering; Medel för känsliga konton |
-
-## <a name="honey-token-account-suspicious-activities"></a>Misstänkt aktivitet för Honung Token-konto
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Honey token-konton är attrappkonton som skapas för att fånga, identifiera och spåra skadliga aktiviteter i nätverket där dessa konton används. Det här är konton som inte används och som är vilande i nätverket. Om ett honey token-konto plötsligt uppvisar aktivitet, kan det vara ett tecken på att en illvillig användare försöker använda kontot. | Ta reda på varför ett honey token-konto autentiserar från den här datorn. | Bläddra igenom ATA-profilsidorna för andra känsliga (privilegierade) konton i din miljö för att se om det finns potentiellt misstänkta aktiviteter. | Medel   |
-
-## <a name="unusual-protocol-implementation"></a>Onormal protokollimplementering
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-|Angripare kan använda verktyg som implementerar SMB-/Kerberos-protokoll på ett sätt som gör det möjligt för dem att få kontroll över ditt nätverk. Det här är en indikation på skadliga tekniker som används för over-pass-the-hash- eller brute force-attacker. | Ta reda på varför datorn i fråga använder ett autentiseringsprotokoll eller SMB på ett onormalt sätt. <br></br>Så här avgör du om det rör sig om en WannaCry-attack:<br></br> 1.    Ladda ned Excel-exporten av den misstänkta aktiviteten.<br></br>2.    Öppna fliken för nätverksaktivitet och gå till fältet ”Json” för att kopiera de relaterade JSON-objekten Smb1SessionSetup och Ntlm<br></br>3.   Om Smb1SessionSetup.OperatingSystem är ”Windows 2000 2195” och Smb1SessionSetup.IsEmbeddedNtlm är ”true” och om Ntlm.SourceAccountId är ”null”, så rör det sig om ett WannaCry-angrepp.<br></br><br></br>**Undantag:** Den här identifieringen kan utlösas i sällsynta fall när legitima verktyg används som inte implementerar protokollen på vanligt sätt. Vissa penetrationstestningsprogram är kända för att göra detta. | Samla in nätverkstrafik och identifiera vilken process som genererar trafik med den onormala protokollimplementeringen.| Medel|
-
-## <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-|DPAPI (Data Protection API) används av flera komponenter i Windows för att lagra lösenord, krypteringsnycklar och andra känsliga data på ett säkert sätt. Domänkontrollanter lagrar en reservhuvudnyckel som kan användas för att dekryptera alla hemligheter som krypterats med DPAPI av domänanslutna Windows-datorer. Angripare kan använda reservhuvudnyckeln för DPAPI-domäner för att dekryptera alla hemligheter på alla domänanslutna datorer (lösenord för webbläsare, krypterade filer osv.).| Ta reda på varför datorn har gjort en förfrågan med det här odokumenterade API-anropet för huvudnyckeln för DPAPI.|Mer information om DPAPI finns i avsnittet om [Windows Data Protection](https://msdn.microsoft.com/library/ms995355.aspx).|Hög|
-
-## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Misstanke om identitetsstöld baserat på onormalt beteende
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| När du har skapat en beteendemodell (det krävs minst 50 aktiva konton under tre veckor för att bygga en beteendemodell) kommer alla onormala beteenden att utlösa en avisering. Beteenden som inte matchar modellen som byggts för ett specifikt användarkonto kan vara ett tecken på identitetsstöld. | Ta reda på varför användaren i fråga inte beter sig normalt. <br></br>**Undantag:** Om ATA inte har fullständig täckning (alla domänkontrollanter dirigeras inte till en ATA-gateway) kommer tjänsten endast att lära sig partiell aktivitet för en specifik användare. Om ATA plötsligt, efter mer än tre veckor, börjar täcka all din trafik kan fullständig aktivitet av användaren utlösa aviseringen. | Kontrollera att ATA har distribuerats på alla domänkontrollanter. <br></br>1.  Kontrollera om användaren har en ny roll i organisationen.<br></br>2.  Kontrollera om användaren är en säsongsarbetare.<br></br>3.  Kontrollera om användaren precis har kommit tillbaka efter en längre tids frånvaro.| Medel för alla användare och Hög för känsliga användare |
-
-
-## <a name="pass-the-ticket"></a>Pass the Ticket
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| En Pass-the-Ticket-attack är en teknik för lateral förflyttning där angriparen stjäl en Kerberos-biljett från en dator och använder den för att få åtkomst till en annan dator genom att personifiera en entitet i ditt nätverk. | Den här identifieringen bygger på användningen av samma Kerberos-biljetter på två (eller fler) olika datorer. I vissa fall, om IP-adresserna ändras snabbt, kanske ATA inte kan avgöra om olika IP-adresser används av samma dator eller av olika datorer. Det här är ett vanligt problem med DHCP-pooler som är för små (VPN, WiFi osv.) och med delade IP-adresser (NAT-enheter). | Följ Security Tiered Framework och begränsa åtkomsten på de olika nivåerna för att förhindra behörighetseskalering. | Hög     |
-
-## <a name="pass-the-hash"></a>Pass the hash
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| I en pass-the-hash-attack autentiserar angriparen mot en fjärrserver eller en fjärrtjänst med hjälp av den underliggande NTLM-hashen för en användares lösenord, i stället för det associerade lösenordet i klartext vilket normalt är fallet. | Kontrollera om kontot utförde några onormala aktiviteter runt tidpunkten då den här aviseringen genererades. | Implementera rekommendationerna som beskrivs i [Pass the Hash](http://aka.ms/PtH). Följ Security Tiered Framework och begränsa åtkomsten på de olika nivåerna för att förhindra behörighetseskalering. | Hög|
-
-## <a name="over-pass-the-hash"></a>Over-pass the hash
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| En over-pass-the-hash-attack utnyttjar en implementeringssårbarhet i Kerberos-autentiseringsprotokollet, där en NTLM-hash används för att skapa en Kerberos-biljett, vilket gör att en angripare kan autentisera mot tjänster i nätverket utan användarens lösenord. | Nedgradering av kryptering: Ta reda på varför kontot i fråga använder RC4 i Kerberos efter att det har lärt sig att använda AES. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av de krypteringsmetoder som används i domänen, och aviserar dig om en onormal och svagare metod observeras. I vissa fall används en svagare krypteringsmetod och ATA identifierar den som onormal, även om det kan vara en del av den normala arbetsprocessen (även om det är ovanligt). Detta kan hända om sådant beteende inte tidigare observerats av ATA. Du kan undvika detta genom bättre ATA-täckning i domänen. | Implementera rekommendationerna som beskrivs i [Pass the Hash](http://aka.ms/PtH). Följ Security Tiered Framework och begränsa åtkomsten på de olika nivåerna för att förhindra behörighetseskalering. | Hög     |
-
-## <a name="privilege-escalation-using-forged-authorization-data-ms14-068-exploit-forged-pac--ms11-013-exploit-silver-pac"></a>Behörighetseskalering med förfalskade auktoriseringsdata (MS14-068-kryphål (förfalskat PAC) / MS11-013-kryphål (Silver PAC))
-
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Kända sårbarheter i äldre versioner av Windows Server gör att angripare kan manipulera PAC (Privileged Attribute Certificate), ett fält i Kerberos-biljetten som innehåller en användares auktoriseringsdata (i Active Directory är detta gruppmedlemskap), så att angriparen beviljas ytterligare behörigheter. | Kontrollera om det finns en särskild tjänst som körs på den berörda datorn, som kanske använder en annan auktoriseringsmetod än PAC. <br></br>**Undantag:** I vissa specifika scenarier implementerar resurser sin egen auktoriseringsmekanism och kan utlösa en avisering i ATA. | Kontrollera att alla domänkontrollanter med operativsystem upp till Windows Server 2012 R2 är installerade med [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) och att alla medlemsservrar och domänkontrollanter upp till 2012 R2 är uppdaterade med KB2496930. Mer information finns i avsnitten om [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) och [förfalskat PAC](https://technet.microsoft.com/library/security/ms14-068.aspx). | Hög     |
+För frågor eller kommentarer, kontaktar du oss på [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
 
 ## <a name="abnormal-sensitive-group-modification"></a>Onormal modifiering av känslig grupp
 
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-|Som en del av behörighetseskaleringsfasen ändrar angripare grupper med höga privilegier för att få åtkomst till känsliga resurser.| Kontrollera att gruppändringen är legitim. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av det normala beteendet för användare som ändrar känsliga grupper, och varnar dig när en onormal ändring observeras. Legitima ändringar kan utlösa en avisering när sådant beteende inte tidigare observerats av ATA. Längre inlärningstid och bättre täckning av ATA i din domän hjälper. | Minimera gruppen med personer som har behörighet att ändra känsliga grupper. Använd just-in-time-behörigheter om möjligt. | Medel   |
+**Beskrivning**
 
-## <a name="encryption-downgrade---skeleton-key-malware"></a>Nedgradering av kryptering – Skeleton Key-kod
+Angripare kan du lägga till användare i mycket Privilegierade grupper. De gör att få tillgång till fler resurser och få lagring. Identifieringen är beroende av profilering av ändring gruppaktiviteter för användare och avisering när ett onormalt tillägg till en känslig grupp visas. Profilering utförs kontinuerligt av ATA. Minsta tid innan en avisering kan utlösas är en månad per varje domänkontrollant.
 
-
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Skeleton Key är skadlig kod som körs på domänkontrollanter och gör det möjligt att autentisera mot domänen med ett konto utan tillgång till lösenordet. Den skadliga koden använder ofta svagare krypteringsalgoritmer för att chiffrera användarens lösenord på domänkontrollanten. | Nedgradering av kryptering: Ta reda på varför kontot i fråga använder RC4 i Kerberos efter att det har lärt sig att använda AES. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av de krypteringsmetoder som används i domänen. I vissa fall används en svagare krypteringsmetod och ATA identifierar den som onormal, även om det är en del av den normala arbetsprocessen (även om det är ovanligt). | Du kan kontrollera om Skeleton Key har påverkat domänkontrollanterna med hjälp av [genomsökningsverktyget som utvecklats av ATA-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). | Hög |
-
-## <a name="golden-ticket"></a>Golden ticket
+En definition av känsliga grupper i ATA finns [arbeta med ATA-konsolen](working-with-ata-console.md#sensitive-groups).
 
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Om en angripare har administratörsrättigheter i domänen kan han eller hon skapa biljettbeviljande biljetter (TGT) för Kerberos som ger behörighet till alla resurser i nätverket, och angriparen kan fritt välja biljettens förfallotid. Detta gör att angripare kan tillskansa sig beständighet i nätverket. | Nedgradering av kryptering: Ta reda på varför kontot i fråga använder RC4 i Kerberos efter att det har lärt sig att använda AES. <br></br>**Undantag:** Den här identifieringen baseras på profileringen av de krypteringsmetoder som används i domänen, och aviserar dig om en onormal och svagare metod observeras. I vissa fall används en svagare krypteringsmetod och ATA identifierar den som onormal, även om det är en del av den normala arbetsprocessen (även om det är ovanligt). Detta kan hända om sådant beteende inte tidigare observerats av ATA. Kontrollera att ATA har full täckning i din domän. | Skydda huvudnyckeln för biljettbeviljande biljetter för Kerberos (KRBTGT) på ett så säkert sätt som möjligt, på följande sätt:<br></br>1.  Fysisk säkerhet<br></br>2.  Fysisk säkerhet för virtuella datorer<br></br>3. Härda domänkontrollanterna<br></br>4.  LSA-isolering (Local Security Authority)/Credential Guard<br></br>Om Golden ticket-biljetter identifieras måste en mer ingående undersökning utföras för att avgöra om taktisk återställning krävs.<br></br>Ändra biljettbeviljande biljetter för Kerberos (KRBTGT) två gånger regelbundet genom att följa anvisningarna i [Microsoft-bloggen KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) och genom att använda [verktyget för återställning av lösenord/nycklar för krbtgt-kontot](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). <br></br>Implementera dessa [pass-the-hash-rekommendationer](http://aka.ms/PtH). | Medel   |
+Identifieringen förlitar sig på [händelser granskas på domänkontrollanter](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
+Använd verktyget som refereras i [ATA granskning (AuditPol, avancerad granska inställningar tvingande, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog) för att kontrollera din domän granska nödvändiga händelser från domänkontrollanter.
+
+**Undersökning**
+
+1. Är den grupp ändringen legitima? </br>Legitima grupp ändringar som sällan inträffar och inte lärt dig som ”normal”, kan leda till en avisering som kan betraktas som ett ofarlig true positivt.
+
+2. Om objektet lagts till ett användarkonto, ska du kontrollera vilka åtgärder som användarkonton som tog efter att den lagts till i administratörsgruppen. Gå till sidan för användaren i ATA att få mer kontext. Misstänkta aktiviteter som är associerat med kontot före eller efter det att det har andra ägde rum? Hämta den **känsliga grupp ändras** rapporten för att se vad andra ändringar har gjorts och av vem under samma tidsperiod.
+
+**Reparation**
+
+Minimera antalet användare som har behörighet att ändra känsliga grupper.
+
+Ställ in [Privileged Access Management för Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) om tillämpligt.
+
+## <a name="broken-trust-between-computers-and-domain"></a>Brutet förtroende mellan datorer och domän
+
+**Beskrivning**
+
+Brutet förtroende innebär att Active Directory säkerhetskrav inte kanske gäller för datorer i fråga. Detta betraktas ofta som ett grundläggande säkerhets- och efterlevnadsfel och ett enkelt mål för angripare. I denna identifiering aktiveras en varning om mer än 5 Kerberos-autentiseringsfel ses från ett datorkonto i 24 timmar.
+
+**Undersökning**
+
+Är datorn i fråga tillåter användare att logga in? 
+- Om Ja, kan du ignorera den här datorn i steg.
+
+**Reparation**
+
+Ansluta datorn till domänen, vid behov eller återställa lösenord för den datorn.
+
+## <a name="brute-force-attack-using-ldap-simple-bind"></a>Nyckelsökningsangrepp med enkla LDAP-bindning
+
+**Beskrivning**
+
+>[!NOTE]
+> Den största skillnaden mellan **misstänkta autentiseringsfel** och denna identifiering är att ATA i denna identifiering kan avgöra om olika lösenord användes.
+
+En angripare försöker autentisera med många olika lösenord för olika konton förrän rätt lösenord hittades för minst ett konto i en brute force-attacker. En gång hittades kan en angripare logga in med det kontot.
+
+I denna identifiering utlöses en avisering när ATA identifierar många olika lösenord används. Detta kan vara antingen *vågrätt* med en liten uppsättning lösenord för många användare, eller *lodrätt ”* med ett stort utbud av lösenord på bara några få användare; eller en kombination av de här två alternativen.
+
+**Undersökning**
+
+1. Om det finns många konton som ingår, klickar du på **hämta information** att visa en lista i Excel.
+
+2. Klicka på aviseringen för att gå till en särskild sida. Kontrollera om alla inloggningsförsök avslutades med en lyckad autentisering. Försöker visas som **gissa konton** på höger sida av infographic. Om Ja, är några av de **gissa konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
+
+3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja,**utelämna** misstänkt aktivitet.
+
+**Reparation**
+
+[Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
+
+## <a name="encryption-downgrade-activity"></a>Kryptering för nedgradering av aktiviteten
+
+**Beskrivning**
+
+Olika metoder för attack använda svaga produktidentifieringsförteckning för Kerberos-kryptering. I denna identifiering ATA lär sig Kerberos krypteringstyper som används av datorer och användare och varnar dig när en svagare korrekt är att använda den: (1) är ovanligt för källdatorn och/eller användare. och (2) matchar kända attacker tekniker.
+
+Det finns tre typer av identifiering:
+
+1.  Skadlig Skeleton Key – är skadlig kod som körs på domänkontrollanter och tillåter autentisering i domänen med ett konto utan att känna till lösenordet. Den skadliga koden använder ofta svagare krypteringsalgoritmer till chiffrering lösenord på domänkontrollanten. I denna identifiering har kryptering för att KRB_ERR meddelandet från källdatorn nedgraderas jämfört med tidigare inlärda beteende.
+
+2.  Guld biljett – i en [Golden Ticket](#golden-ticket) aviseringen krypteringsmetod i fältet TGT för TGS_REQ (service request) meddelande från källdatorn har nedgraderas jämfört med tidigare inlärda beteende. Observera att detta inte är baserad på en gång avvikelseidentifiering (som andra Golden Ticket identifieringen). Dessutom kan det fanns ingen begäran om Kerberos-autentisering som är associerade med ovan tjänstbegäran som identifieras av ATA.
+
+3.  Overpass-the-Hash-AS_REQ kryptering meddelandetypen från källdatorn har nedgraderas jämfört med tidigare inlärda beteendet (det vill säga datorn var med AES).
+
+**Undersökning**
+
+Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanstående tre identifiering typer du hantera.
+
+1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av [skannern skrivs av ATA-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
+    Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
+
+2.  Golden Ticket – är det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. I så fall, är förmodligen ett ofarlig true positivt och kan förhindras.
+
+3.  Overpass-the-Hash – finns det fall där den här aviseringen kan utlösas när användare som har konfigurerats med smartkort krävs för interaktiv inloggning och den här inställningen inaktiveras och därefter aktiveras. Kontrollera om det fanns ändringar så här för konton ingår. I så fall, detta är troligen ett ofarlig true positivt och kan förhindras.
+
+**Reparation**
+
+1.  Stommen Key – ta bort den skadliga koden. Mer information finns i [Skeleton Key skadlig kod Analysis](https://www.secureworks.com/research/skeleton-key-malware-analysis) av SecureWorks.
+
+2.  Gyllene biljett – Följ instruktionerna för den [Golden Ticket](#golden-ticket) misstänkta aktiviteter.   
+    Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+3.  Overpass-the-Hash – återställa om kontot ingår inte är skiftlägeskänslig, sedan lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Se vägledningen i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Se även med hjälp av den [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+## Golden Ticket<a name="golden-ticket"></a>
+
+**Beskrivning**
+
+Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som ger behörighet till en resurs och som helst godtycklig biljett upphör att gälla. Den här falska TGT kallas ”Golden Ticket” och tillåter angripare att uppnå lagring i nätverket.
+
+I denna identifiering en avisering ska utlösas när en Kerberos-biljett beviljande biljetter används för mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
+
+**Undersökning**
+
+1. Det har alla nyligen (inom de senaste några timmarna) ändringar på den **högsta livstid för användarbiljett** i Grupprincip? Om Ja, sedan **Stäng** aviseringen (den var ett falsklarm).
+
+2. Är ATA Gateway ingår i en virtuell dator för den här aviseringen? Om Ja, den nyligen återupptas från ett sparat tillstånd? Om Ja, sedan **Stäng** aviseringen.
+
+3. Om svaret på dessa frågor är Nej, förutsätter att det här är skadliga.
+
+**Reparation**
+
+Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger.  
+Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+## <a name="honeytoken-activity"></a>Honeytoken-aktivitet
 
 
+**Beskrivning**
 
-## <a name="remote-execution"></a>Fjärrkörning
+Honeytoken-konton är decoy konton som skapas för att identifiera och spåra skadliga aktiviteter som omfattar dessa konton. Honeytoken-konton ska lämnas oanvända, samtidigt som du har en bra namn till locka angripare (till exempel SQL-administratör). Alla aktiviteter från dem kan tyda på skadligt beteende.
 
+Mer information om honeytoken konton finns [installera ATA – steg 7](install-ata-step7.md).
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Angripare som komprometterat administratörsautentiseringsuppgifter kan köra fjärrkommandon på din domänkontrollant. Detta kan användas för att tillskansa sig beständighet, samla in information, DOS-attacker (Denial Of Service) eller i annat syfte. | Ta reda på om kontot i fråga har tillåtelse att utföra den här fjärrkörningen mot din domänkontrollant. <br></br>**Undantag:** Behöriga användare som ibland kör kommandon på domänkontrollanten kan utlösa den här aviseringen, även om det är en del av den normala administrationsprocessen. Detta är vanligast för IT-teammedlemmar eller tjänstkonton som utför administrativa uppgifter mot domänkontrollanterna. | Begränsa fjärråtkomst till domänkontrollanter från datorer som inte är Nivå 0-datorer. Ta bort alla misstänkta och inaktuella filer och mappar och filer och mappar som inte behövs. Implementera starka UAC-principer (User Account Control). Implementera [PAW](https://technet.microsoft.com/en-us/windows-server-docs/security/securing-privileged-access/securing-privileged-access) så att endast härdade datorer kan ansluta till domänkontrollanter för administratörer. | Låg      |
+**Undersökning**
+
+1.  Kontrollera om honeytokenkonto används ägaren av källdatorn för att autentisera, med den metod som beskrivs i sidan misstänkt aktivitet (exempelvis Kerberos, LDAP, NTLM).
+
+2.  Bläddra till datakällan datorer profilsidor och kontrollera vilka konton som autentiseras från dem. Kontrollera med ägarna av dessa konton om de används i honeytokenkonto.
+
+3.  Detta kan vara en icke-interaktiv inloggning, så se till att söka efter program eller skript som körs på källdatorn.
+
+Om när du utför steg 1 till 3, om det inte finns några tecken på ofarlig användning måste anta att detta är skadliga.
+
+**Reparation**
+
+Se till att Honeytoken konton används endast för deras syfte, annars många aviseringar kan genereras.
+
+## <a name="identity-theft-using-pass-the-hash-attack"></a>Identitetsstöld med Pass-the-Hash-attack
+
+**Beskrivning**
+
+Pass the Hash är en lateral förflyttning teknik där angriparen stjäl en användares NTLM-hash från en dator och använda den för att få åtkomst till en annan dator. 
+
+**Undersökning**
+
+Användes hash från en dator som den aktuella användaren äger eller regelbundet använder? Om Ja, det är ett falsklarm. Om inte, är förmodligen ett true positivt.
+
+**Reparation**
+
+1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. 
+
+2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+## <a name="identity-theft-using-pass-the-ticket-attack"></a>Identitetsstöld med Pass-the-Ticket-attacker
+
+**Beskrivning**
+
+Pass the Ticket är en lateral förflyttning teknik som stjäl angriparen en Kerberos-biljett från en dator och använda den för att få åtkomst till en annan dator genom att återanvända den stulna biljetten. I denna identifiering visas en Kerberos-biljett används på två (eller fler) olika datorer.
+
+**Undersökning**
+
+1. Klicka på den **hämta information** för att visa en fullständig lista över IP-adresser som ingår. Lagrar IP-adressen för en eller båda datorerna hör till ett undernät som allokeras från en DHCP-adresspool som inte uppfyller till exempel VPN eller Wi-Fi? Delas IP-adress Till exempel genom en NAT-enhet? Om svaret på någon av dessa frågor är Ja, är det ett falsklarm.
+
+2. Finns det ett anpassat program som vidarebefordrar biljetter åt användare? I så fall, är ett ofarlig true positivt.
+
+**Reparation**
+
+1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla.  
+
+2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Eftersom det är en teknik som lateral förflyttning, följ rekommenderade metoder i [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+## <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
+
+**Beskrivning**
+
+Data Protection API (DPAPI) används av Windows för att skydda lösenord som sparas av webbläsare, krypterade filer och andra känsliga data på ett säkert sätt. Domänkontrollanter håller en säkerhetskopiering huvudnyckel som kan användas för att dekryptera alla hemligheter som krypterats med DPAPI på domänanslutna Windows-datorer. Angripare kan använda den huvudnyckeln för att dekryptera alla hemligheter som skyddas av DPAPI på alla domänanslutna datorer.
+I den här identifieringen kommer en avisering utlöses när av DPAPI används för att hämta huvudnyckeln för säkerhetskopiering.
+
+**Undersökning**
+
+1. Källdator som kör en organisation godkända är en avancerad säkerhetsskannern mot Active Directory?
+
+2. Om Ja och den bör alltid att göra det, **Stäng och utelämna** misstänkt aktivitet.
+
+3. Om Ja och den bör inte göra detta, **Stäng** misstänkt aktivitet.
+
+**Reparation**
+
+Om du vill använda DPAPI måste en angripare administratörsrättigheter i domänen. Implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
 ## <a name="malicious-replication-requests"></a>Skadliga replikeringsbegäranden
 
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Active Directory-replikering är en process som synkroniserar ändringarna som görs på en domänkontrollant med alla andra domänkontrollanter i domänen eller skogen som lagrar kopior av samma data. Med rätt behörighet kan angripare initiera en replikeringsbegäran som om de vore en domänkontrollant, och hämta data som lagras i Active Directory, inklusive lösenords-hashar. | Ta reda på varför datorn använder API:et för replikering av domänkontrollanter. Den här identifieringen kräver att ATA använder konfigurationspartitionen i katalogskogen för att förstå om en dator är en domänkontrollant. <br></br>**Undantag:** Azure AD Dir-synkroniseringar kan ge upphov till den här aviseringen. | Verifiera följande behörigheter: - Replikera katalogändringar <br></br>- Replikera katalogändringar Al<br></br>Mer information finns i avsnittet om hur du [beviljar Active Directory Domain Services-behörigheter för profilsynkronisering i SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx)<br></br>Du kan använda [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett PowerShell-skript för att ta reda på vem i domänen som har dessa behörigheter. | Medel   |
+**Beskrivning**
 
+Active Directory-replikering är en process som synkroniseras ändringar som gjorts på en domänkontrollant med andra domänkontrollanter. Ges behörighet kan angripare initiera en replikeringsbegäran så att de kan hämta data som lagras i Active Directory, inklusive lösenordshashvärden.
 
+I denna identifiering utlöses en avisering när en replikeringsbegäran om initieras från en dator som inte är en domänkontrollant.
 
-## <a name="broken-trust-between-domain-and-computers"></a>Brutet förtroende mellan domän och datorer
+**Undersökning**
 
+1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderat domänkontrollant som hade replikeringsproblem. Om Ja, **Stäng och utelämna** misstänkt aktivitet.  
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| Brutet förtroende innebär att Active Directorys säkerhetskrav kanske inte tillämpas. Detta betraktas ofta som ett grundläggande säkerhets- och efterlevnadsfel och ett enkelt mål för angripare. Detta utlöser en avisering i ATA om mer än fem efterföljande Kerberos-autentiseringsfel registreras från ett datorkonto under ett 24-timmarsintervall. Eftersom datorn inte kommunicerar med domänkontrollanten (1) har den ingen uppdaterad grupprincip och (2) loggningen är begränsad till de cachelagrade autentiseringsuppgifterna. | Kontrollera att datorförtroendet med domänen är felfritt genom att granska händelseloggarna. | Anslut datorn till domänen igen om det behövs eller återställ datorns lösenord. | Låg      |
+2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
+
+**Reparation**
+
+Verifiera följande behörigheter: 
+
+- Replikera katalogändringar   
+
+- Replikera alla katalogändringar  
+
+Mer information finns i [bevilja Active Directory Domain Services-behörigheter för profilsynkronisering i SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
+Du kan utnyttja [AD Åtkomstkontrollista Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
 
 ## <a name="massive-object-deletion"></a>Massiv objektborttagning
 
+**Beskrivning**
 
-> [!div class="mx-tableFixed"]
-|Beskrivning|Undersökning|Rekommendation|Allvarlighetsgrad|
-|------|----|------|----------|
-| ATA genererar den här aviseringen om mer än 5 % av alla konton tas bort. Detta kräver läsbehörighet till behållaren för borttagna objekt. | Ta reda på varför 5 % av alla konton plötsligt togs bort. | Ta bort behörigheter för användare som kan ta bort konton i Active Directory. Mer information finns i [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Visa eller ange behörigheter för ett katalogobjekt). | Låg |
+I vissa situationer kan utföra angripare en denial of service (DoS) i stället för bara stjäla information. Om du tar bort ett stort antal konton är en DoS-teknik.
+
+I denna identifiering utlöses en avisering när mer än 5% av alla konton tas bort. Identifieringen kräver läsbehörighet till behållaren för borttagna objekt.  
+Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i **ändra behörigheter för en behållare för borttagna objekt** i [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+
+**Undersökning**
+
+Granska listan över borttagna konton och förstå om det finns ett mönster eller ett affärsskäl som kan motivera massiv borttagningen.
+
+**Reparation**
+
+Ta bort behörigheter för användare som kan ta bort konton i Active Directory. Mer information finns i [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+
+## <a name="privilege-escalation-using-forged-authorization-data"></a>Privilegiet eskalering med förfalskad auktoriseringsdata
+
+**Beskrivning**
+
+Kända säkerhetsproblem i äldre versioner av Windows Server göra att angripare kan manipulera den privilegierade Attribute Certificate (PAC), ett fält i Kerberos-biljetten som innehåller en auktoriseringsdata för användare (i Active Directory är detta gruppmedlemskap), bevilja angripare ytterligare behörighet.
+
+**Undersökning**
+
+1. Klicka på aviseringen för att komma åt dess informationssidan.
+
+2. Är måldatorn (under den **ACCESSED** kolumn) korrigeras med MS14-068 (domänkontrollanten) eller MS11-013 (server)? Om Ja, **Stäng** misstänkt aktivitet (det är ett falsklarm).
+
+3. Om inte, har källdatorn (under den **FROM** kolumn) ett program eller det OS känt att ändra PAC? Om Ja, **utelämna** misstänkt aktivitet (det är ett ofarlig true positivt).
+
+4. Om svaret var inte förutsätter detta är skadliga att dessa två frågor.
+
+**Reparation**
+
+Kontrollera att alla domänkontrollanter med operativsystem upp till Windows Server 2012 R2 är installerade med [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) och att alla medlemsservrar och domänkontrollanter upp till 2012 R2 är uppdaterade med KB2496930. Mer information finns i avsnitten om [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) och [förfalskat PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## <a name="reconnaissance-using-directory-services-queries"></a>Rekognosering med kontotjänstfrågor
+
+**Beskrivning**
+
+Directory services rekognosering används av angripare att mappa katalogstrukturen och rikta Privilegierade konton för senare steg i en attack. Fjärråtkomst för hanteraren för kontosäkerhet (SAM-R)-protokollet är en av metoderna som används för att fråga katalogen om du vill utföra sådan mappning.
+
+Inga aviseringar skulle aktiveras i den första månaden när ATA har distribuerats i denna identifiering. Under learning tiden ATA profilerna där SAM-R-frågor kommer från vilka datorer både uppräkningen och enskilda frågor för känsliga konton.
+
+**Undersökning**
+
+1. Klicka på aviseringen för att komma åt dess informationssidan. Kontrollera vilka frågor som har utförts (till exempel, Företagsadministratörer eller administratör) och om de lyckades.
+
+2. Sådana frågor ska göras från källdatorn i fråga?
+
+3. Om Ja och aviseringen uppdateras **utelämna** misstänkt aktivitet.
+
+4. Om Ja och den bör inte detta längre **Stäng** misstänkt aktivitet.
+
+5. Om det finns information om kontot ingår: sådana frågor ska göras av det kontot eller har kontot normalt logga in på källdatorn?
+
+ - Om Ja och aviseringen uppdateras **utelämna** misstänkt aktivitet.
+
+ - Om Ja och den bör inte detta längre **Stäng** misstänkt aktivitet.
+
+ - Om svaret var inte till alla anges ovan förutsätter att det här är skadliga.
+
+**Reparation**
+
+Använd den [SAMRi10 verktyget](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) att skydda din miljö mot den här tekniken.
+
+## <a name="reconnaissance-using-dns"></a>Rekognosering med DNS
+
+**Beskrivning**
+
+DNS-servern innehåller en karta över alla datorer, IP-adresser och tjänster i nätverket. Den här informationen används av angripare för att mappa din nätverksinfrastruktur och för att angripa intressanta datorer i efterföljande steg i attacken.
+
+Det finns flera frågetyper i DNS-protokollet. ATA identifierar AXFR (Transfer) begäran kommer från icke-DNS-servrar.
+
+**Undersökning**
+
+1. Är källdatorn (**härstammar från...** ) en DNS-server? Om Ja, är detta troligen ett falsklarm. Om du vill validera, klickar du på aviseringen till dess informationssidan. I tabellen, under **frågan**, kontrollera vilka domäner frågades. Är de befintliga domänerna? Om Ja, sedan **Stäng** misstänkt aktivitet (det är ett falsklarm). Kontrollera dessutom att UDP-port 53 är öppen mellan ATA-gatewayer och källdatorn för att förhindra framtida falska positiva identifieringar.
+
+2. Körs på källdatorn en säkerhetsskannern? Om Ja, **undanta entiteterna** i ATA, antingen direkt med **Stäng och utelämna** eller via den **undantag** sida (under **Configuration** – tillgängligt för ATA-administratörer).
+
+3. Om svaret på alla ovanstående är förutsätter Nej, detta är skadliga.
+
+**Reparation**
+
+Du kan skydda en intern DNS-server för att förhindra rekognosering med DNS genom att inaktivera eller begränsa zonöverföringar till endast angivna IP-adresser. Mer information om hur du begränsar zonöverföringar finns [begränsa zonöverföringar](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
+Ändra zonöverföringar är en aktivitet i en checklista som bör åtgärdas för [Skydda DNS-servrar från både interna och externa attacker](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+
+## <a name="reconnaissance-using-smb-session-enumeration"></a>Rekognosering med SMB-sessionsuppräkning
+
+
+**Beskrivning**
+
+Uppräkning av Server Message Block (SMB) gör det möjligt för angripare att få information om där användare nyligen har loggat in. När angripare har den här informationen kan kan de flytta sidled i nätverket till en specifik känsligt konto.
+
+I denna identifiering utlöses en avisering när en SMB-sessionsuppräkningen utförs mot en domänkontrollant, eftersom det inte borde ske.
+
+**Undersökning**
+
+1. Klicka på aviseringen för att komma åt dess informationssidan. Kontrollera vilket konto/s utförs igen och vilka konton som exponerats eventuella.
+
+ - Finns det någon typ av säkerhetsskannern som körs på källdatorn? Om Ja, **Stäng och utelämna** misstänkt aktivitet.
+
+2. Kontrollera vilka berörda användare/s utföra åtgärden. Gör de normalt logga in på källdatorn, eller kan de administratörer som ska utföra dessa åtgärder?  
+
+3. Om Ja och aviseringen uppdateras **utelämna** misstänkt aktivitet.  
+
+4. Om Ja och den bör inte detta längre **Stäng** misstänkt aktivitet.
+
+5. Om svaret på alla ovanstående är förutsätter Nej, detta är skadliga.
+
+**Reparation**
+
+Använd den [Net upphöra verktyget](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) att skydda din miljö mot angrepp.
+
+## <a name="remote-execution-attempt-detected"></a>Fjärrkörning försök upptäcktes
+
+**Beskrivning**
+
+Angripare som angripa administratörsbehörighet eller använder ett noll-dagars utnyttja kan köra fjärrkommandon på domänkontrollanten. Detta kan användas för att tillskansa sig beständighet, samla in information, DOS-attacker (Denial Of Service) eller i annat syfte. ATA identifierar PSexec och fjärr-WMI-anslutningar.
+
+**Undersökning**
+
+1. Detta är vanligt för administrativa arbetsstationer och IT-gruppmedlemmar och tjänstkonton som kan utför administrativa uppgifter mot domänkontrollanter. Om detta är det här fallet och aviseringen uppdateras eftersom samma administratören och/eller datorn utför sedan aktiviteten, **utelämna** aviseringen.
+
+2. Är den **datorn** i fråga tillåtelse för att utföra den här fjärrkörning mot domänkontrollanten?
+
+ - Är den **konto** i fråga tillåtelse för att utföra den här fjärrkörning mot domänkontrollanten?
+
+ - Om svaret på båda frågor är *Ja*, sedan **Stäng** aviseringen.
+
+3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
+
+**Reparation**
+
+1. Begränsa fjärråtkomst till domänkontrollanter från datorer som inte är Nivå 0-datorer.
+
+2. Implementera [privilegierad åtkomst](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) så att endast förstärkt datorer att ansluta till domänkontrollanterna för administratörer.
+
+## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Känsligt kontoautentiseringsuppgifter exponerade & tjänster exponering av autentiseringsuppgifter
+
+**Beskrivning**
+
+Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även bero på känsliga konton. Övervaka nätverkstrafik angripare kan fånga och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. Alla lösenord i klartext för känsligt konto ska utlösa aviseringen, medan för icke-känsliga konton aviseringen utlöses om fem eller fler olika konton skickar rena textlösenord från samma källdator. 
+
+**Undersökning**
+
+Klicka på aviseringen för att komma åt dess informationssidan. Se vilka konton som exponerats. Om det finns många konton, klickar du på **hämta information** att visa en lista i Excel.
+
+Det är vanligtvis ett skript eller äldre program på källdatorer som använder enkel LDAP-bindning.
+
+**Reparation**
+
+Kontrollera konfigurationen på källdatorerna och se till att du inte använder enkel LDAP-bindning. Du kan använda LDAP sal eller LDAPS istället för att använda enkla LDAP-bindningar.
+
+## <a name="suspicious-authentication-failures"></a>Misstänkt autentiseringsfel
+
+**Beskrivning**
+
+En angripare försöker autentisera med många olika lösenord för olika konton förrän rätt lösenord hittades för minst ett konto i en brute force-attacker. En gång hittades kan en angripare logga in med det kontot.
+
+En avisering utlöses när många autentiseringsfel inträffade i denna identifiering, detta kan antingen vara vågrätt med en liten uppsättning lösenord för många användare. eller lodrätt med en stor uppsättning lösenord på bara några användare. eller en kombination av de här två alternativen.
+
+**Undersökning**
+
+1. Om det finns många konton som ingår, klickar du på **hämta information** att visa en lista i Excel.
+
+2. Klicka på aviseringen för att gå till sidan dess information. Kontrollera om alla inloggningsförsök avslutades med en lyckad autentisering, dessa skulle visas som **gissa konton** på höger sida av infographic. Om Ja, är några av de **gissa konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
+
+3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
+
+**Reparation**
+
+[Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
+
+## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Misstanke om identitetsstöld baserat på onormalt beteende
+
+**Beskrivning**
+
+ATA lär sig entitetsbeteende för användare, datorer och resurser via ett glidande tre veckor. Modellen beteende baserat på följande aktiviteter: datorerna entiteterna loggat in, resurser entiteten begärt åtkomst till och den tid som dessa åtgärder ägde rum. ATA skickar en avisering när det finns en avvikelse från entitetens beteende baserat på maskininlärningsalgoritmer. 
+
+**Undersökning**
+
+1. Den aktuella användaren ska att utföra dessa åtgärder?
+
+2. Överväg följande fall som potentiellt falska positiva identifieringar: en användare som returnerades från semester, IT-personal som utför överdriven åtkomst som en del av sin användning (till exempel en topp i antal helpdesk-stöd i en viss dag eller en vecka), remote desktop program. + Om du **Stäng och utelämna** aviseringen av användaren kommer inte längre vara en del av identifieringen
+
+
+**Reparation**
+
+Beroende på vad som orsakade det här onormalt beteende ska ske, vidtas olika åtgärder. Till exempel om det är på grund av genomsökning av nätverket ska datorn från vilken det här inträffar blockeras från nätverket (om den är godkänd).
+
+## <a name="unusual-protocol-implementation"></a>Onormal protokollimplementering
+
+
+**Beskrivning**
+
+Angripare använda verktyg som implementerar olika protokoll (SMB, Kerberos, NTLM) på sätt som inte är standard. När den här typen av nätverkstrafik har normalt accepteras av Windows utan varningar, kan ATA identifiera potentiella skadliga åtgärder. Beteendet är jämförbar olika tekniker, till exempel Over-Pass-the-Hash och brute force och som används av avancerade är en utpressningstrojan som, till exempel WannaCry kryphål.
+
+**Undersökning**
+
+Identifiera det protokoll som är ovanligt – från i tidslinjen för misstänkt aktivitet, klickar du på den misstänkta aktiviteten till dess informationssidan; protokollet visas ovanför på pilen: Kerberos eller NTLM.
+
+- **Kerberos**: detta ofta utlöses om en hackningsförsök verktyget som Mimikatz har använts potentiellt utför en Overpass-the-Hash-attack. Kontrollera om ett program som implementerar sin egen Kerberos-stacken inte överensstämmer med Kerberos RFC körs på källdatorn. Om så är fallet, är det en ofarlig true positiv och du kan **Stäng** aviseringen. Om varningen fortsätter att utlösas och det fortfarande är fallet, kan du **utelämna** aviseringen.
+
+- **NTLM**: kan vara WannaCry eller verktyg som Metasploit, Medusa och Hydra.  
+
+Utför följande steg för att avgöra om detta är en attack med WannaCry:
+
+1. Kontrollera om en attack verktyg som till exempel Metasploit, Medusa eller Hydra körs på källdatorn.
+
+2. Om inga attack verktyg påträffas, kontrollera källdatorn körs som ett program som implementerar sin egen NTLM eller SMB-stacken.
+
+3. Om det inte kontrollera om det här orsakas av WannaCry genom att köra ett WannaCry skanner skript, till exempel [skannern](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) mot källdatorn ingår i den misstänkta aktiviteten. Om skannern konstaterar att datorn som infekterade eller sårbara, arbete på korrigeringar på datorn och ta bort den skadliga koden och blockerar den från nätverket.
+
+4. Om skriptet inte kan hitta att datorn är infekterade eller sårbara, sedan den fortfarande vara angripna men SMBv1 kan ha inaktiverats eller har konfigurerats för datorn, vilket påverkar genomsökningsverktyget.
+
+**Reparation**
+
+Korrigera alla datorer, särskilt användning av säkerhetsuppdateringar.
+
+1. [Inaktivera SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+2. [Ta bort WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+
+3. WanaKiwi kan dekryptera data i händerna på vissa ransom program, men endast om användaren inte har startats om eller stängas av datorn. Mer information finns i [vill Cry är en utpressningstrojan som](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Koppla säkerhets-community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
@@ -212,6 +491,3 @@ irectory services rekognosering är en teknik som används av angripare för att
 - [ATA misstänkt aktivitet playbook](http://aka.ms/ataplaybook)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
-- [Utreda attacker med förfalskat PAC](use-case-forged-pac.md)
-- [Felsöka kända ATA-fel](troubleshooting-ata-known-errors.md)
-- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
