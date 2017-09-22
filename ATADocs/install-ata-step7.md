@@ -1,11 +1,11 @@
 ---
-title: "Installera Advanced Threat Analytics – steg 7 | Microsoft Docs"
+title: Installera Advanced Threat Analytics - steg 8 | Microsoft Docs
 description: "I det sista ATA-installationssteget konfigurerar du Honeytoken-användaren."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,22 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5cb87148741c92dc7832da16cc37a749fa72fae
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
 
-# <a name="install-ata---step-7"></a>Installera ATA – steg 7
+# <a name="install-ata---step-8"></a>Installera ATA – steg 8
 
 >[!div class="step-by-step"]
-[« Steg 6 ](install-ata-step6.md)
+[«Steg 7](vpn-integration-install-step.md)
 
-## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>Steg 7. Konfigurera undantag för IP-adress och Honeytoken-användare
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Steg 8. Konfigurera undantag för IP-adress och Honeytoken-användare
 Du kan utesluta specifika IP-adresser eller användare från ett antal identifieringar i ATA. 
 
 Till exempel kan ett **DNS-rekognoseringsundantag** vara en säkerhetsskanner som använder DNS som en skanningsmekanism. Undantaget hjälper ATA att ignorera dessa skannrar. Ett exempel på ett *Pass-the-Ticket*-undantag är en NAT-enhet.    
@@ -64,7 +64,7 @@ I [ATA-boken med simulerade attacker](https://docs.microsoft.com/enterprise-mobi
 
 
 >[!div class="step-by-step"]
-[« Steg 6 ](install-ata-step6.md)
+[«Steg 7](vpn-integration-install-step.md)
 
 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ac591d960028268f6c1ebd74706839a3b91597da
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 068c3ca2858934f68beea9d092fbeb113b77ba2a
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -27,8 +27,9 @@ ms.lasthandoff: 08/29/2017
 
 >[!div class="step-by-step"]
 [« Steg 5](install-ata-step5.md)
+[Steg 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection-and-vpn"></a>Steg 6. Konfigurera händelseinsamling och VPN
+## <a name="step-6-configure-event-collection"></a>Steg 6. Konfigurera händelseinsamling
 ### <a name="configure-event-collection"></a>Konfigurera händelseinsamling
 För att kunna förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller, om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt, genom att ATA Gateway konfigureras att lyssna efter SIEM-händelser eller genom att [vidarebefordran av Windows-händelser konfigureras](configure-event-collection.md).
 
@@ -184,26 +185,10 @@ Se till att det finns \t mellan nyckel=värde-paren.
 > Användning av WinCollect för Windows-händelseinsamling stöds inte.
 
 
-### <a name="configuring-vpn"></a>Konfigurera VPN
-
-ATA samlar in VPN-data som hjälper till att profilera de platser som datorerna ansluter till nätverket från.
-
-Om du vill konfigurera VPN-data går du till **Konfiguration** > **VPN** och anger **den delade hemligheten för Radius-kontot**  för ditt VPN.
-
-![Konfigurera VPN](./media/vpn.png)
-
-Information om hur du hämtar den delade nyckeln finns i VPN-dokumentationen. Följande VPN-leverantörer stöds:
-
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
-
-
 
 >[!div class="step-by-step"]
 [« Steg 5](install-ata-step5.md)
-[Steg 7 »](install-ata-step7.md)
+[Steg 7 »](vpn-integration-install-step.md)
 
 
 

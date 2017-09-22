@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/23/2017
+ms.date: 9/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 174918812562b9bfe892fcde90d92e208b26ffc3
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: f88dcf9b2c3bb9db5d81a039e7e7ae8818c48137
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -41,7 +41,6 @@ Standardsättet, som är det mest grundläggande sättet, för att ställa fråg
 |Hämta information om en användare/dator/grupp (UniqueEntity), t.ex. användar-ID.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
 |Hitta Kerberos-autentiseringstrafik som kommer från en viss dator en viss dag.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|Om du vill hämta &lt;ID för källdatorn&gt; kan du fråga UniqueEntity-samlingarna på det sätt som visas i exemplet.<br /><br />Varje aktivitetstyp, till exempel Kerberos-autentiseringar, har en egen samling per UTC-datum.|
 |Hitta NTLM-trafik från en viss dator som är relaterad till ett visst konto en viss dag.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|Om du vill hämta &lt;ID för källdatorn&gt; och &lt;ID för kontot&gt; kan du fråga UniqueEntity-samlingarna på det sätt som visas i exemplet.<br /><br />Varje aktivitetstyp, till exempel NTLM-autentiseringar, har en egen samling per UTC-datum.|
-|Sök efter avancerade egenskaper, till exempel aktiva datum för ett konto. |`db.UniqueEntityProfile.find({UniqueEntityId: "<Id of the account>")`|Om du vill hämta &lt;ID för kontot&gt; kan du fråga UniqueEntity-samlingarna på det sätt som visas i exemplet.<br>Egenskapsnamnet som visar de datum då kontot har varit aktivt heter: "ActiveDates". Du kanske vill veta om ett konto har minst 21 dagars aktivitet för att maskininlärningsalgoritmen för onormalt beteende ska kunna köras på den.|
 |Gör avancerade konfigurationsändringar. I det här exemplet ändrar vi sändningsköstorleken för alla ATA-gatewayer till 10 000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 Följande exempel visar exempelkod med den syntax som anges ovan. Om du undersöker en misstänkt aktivitet som inträffade 20/10/2015 och vill veta mer om de NTLM-aktiviteter som "John Berg" har utfört den dagen:<br /><br />Hitta först ID för "John Berg"
