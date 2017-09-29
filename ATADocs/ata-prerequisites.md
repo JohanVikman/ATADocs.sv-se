@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
+ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/24/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -62,7 +62,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 
 -   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytokenanvändaren behöver du SID för användarkontot, inte användarnamnet. Mer information finns i [arbeta med identifieringsinställningar i ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) avsnittet.
 
--   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 för att ytterligare förbättra identifieringar av typen Pass-the-Hash, Brute Force, Ändring av känsliga grupper och Honey Token i ATA. Dessa kan hämtas från din SIEM-server eller genom vidarebefordran av Windows-händelser från din domänkontrollant. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
+-   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser 4776, 4732, 4733, 4728, 4729, 4756 och 4757 att ytterligare förbättra ATA Pass-the-Hash, Brute Force, ändring av känsliga grupper och Honung token identifieringar. Dessa kan hämtas från din SIEM-server eller genom vidarebefordran av Windows-händelser från din domänkontrollant. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
 
 ## <a name="ata-center-requirements"></a>Krav för ATA Center
@@ -81,9 +81,9 @@ Installation av ATA Center som en virtuell dator stöds.
 
 Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du skapar en ny kontrollpunkt för att undvika att databasen skadas.
 ### <a name="server-specifications"></a>Serverspecifikationer
-När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. NUMA kan kallas Node Interleaving i systemet. I så fall måste du **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Obs! Det här gäller inte när ATA Center körs på en virtuell server.<br>
+När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Detta gäller inte om ATA Center körs på en virtuell server.<br>
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
-Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs, mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
+Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs. Mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Tidssynkronisering
@@ -94,7 +94,7 @@ ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha ti
 Du bör ha följande:
 -   Minst ett nätverkskort (om fysisk server i VLAN-miljö används, rekommenderar vi att två nätverkskort används)
 
--   En IP-adress för kommunikation mellan ATA Center och ATA Gateway har krypterats med SSL på port 443. (ATA-tjänsten Binder till alla IP-adresser som ATA Center har på port 443.)
+-   En IP-adress för kommunikation mellan ATA Center och ATA Gateway som krypteras med SSL på port 443. (ATA-tjänsten Binder till alla IP-adresser som ATA Center har på port 443.)
 
 ### <a name="ports"></a>Portar
 I följande tabell visas de portar som minst måste öppnas för att ATA Center ska fungera korrekt.
@@ -112,7 +112,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**DNS**|TCP och UDP|53|DNS-servrar|Utgående|
 |**Kerberos** (valfritt om domänansluten)|TCP och UDP|88|Domänkontrollanter|Utgående|
 |**Netlogon** (valfritt om domänansluten)|TCP och UDP|445|Domänkontrollanter|Utgående|
-|**Windows Time** (valfritt om domänansluten)|UDP|123|Domänkontrollanter|Utgående|
+|**Windows tidstjänst** (valfritt om datorn är domänansluten)|UDP|123|Domänkontrollanter|Utgående|
 
 > [!NOTE]
 > LDAP krävs för att testa autentiseringsuppgifterna som ska användas mellan ATA-gatewayer och domänkontrollanterna. Testet utförs från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av dess normala lösningsprocessen.
@@ -137,7 +137,7 @@ Du kan till exempel använda standarden **webbservern** eller **datorn** mallar.
 
 
 > [!NOTE]
-> - Om du kommer att ansluta till ATA-konsolen från andra datorer ska du se till att de datorerna litar på certifikatet som används av ATA Center. Annars visas en varningssida om att det finns ett problem med webbplatsens säkerhetscertifikat innan du kommer till inloggningssidan.
+> - Om du ska ansluta till ATA-konsolen från andra datorer, se till att de datorerna litar på certifikatet som används av ATA Center annars får du en varningssida att det finns ett problem med webbplatsens säkerhetscertifikat innan du hämtar till inloggningssidan.
 > - Från och med ATA version 1.8 ATA-gatewayer och Lightweight-gatewayer hanterar sina egna certifikat och behöver ingen åtgärd av administratör ska kunna hanteras.
 
 ## <a name="ata-gateway-requirements"></a>Krav för ATA Gateway
@@ -155,7 +155,7 @@ Du kan kontrollera genom att köra följande Windows PowerShell-cmdlet: `[Get-Ho
 Information om hur du använder virtuella datorer med ATA Gateway finns i [Konfigurera portspegling](configure-port-mirroring.md).
 
 > [!NOTE]
-> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](troubleshooting-ata-using-logs.md) och [prestandaloggar](troubleshooting-ata-using-perf-counters.md).
+> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för ATA-binärfiler [ATA-loggarna och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.<br>
@@ -164,7 +164,7 @@ En ATA-gateway har stöd för övervakning av flera domänkontrollanter, beroend
 >[!NOTE] 
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
-Mer information om ATA Gateways maskinvarukrav finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
+Mer information om maskinvarukrav för ATA Gateway finns [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Tidssynkronisering
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -172,7 +172,7 @@ ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha ti
 ### <a name="network-adapters"></a>Nätverkskort
 ATA- gatewayen kräver minst ett hanteringskort och minst ett avbildningskort:
 
--   **Hanteringskort** – används för kommunikation i företagsnätverket. Kortet ska konfigureras med följande:
+-   **Hanteringskortet** – används för kommunikation i företagsnätverket. Det här kortet ska konfigureras med följande inställningar:
 
     -   Statisk IP-adress, inklusive standardgateway
 
@@ -188,8 +188,8 @@ ATA- gatewayen kräver minst ett hanteringskort och minst ett avbildningskort:
 -   **Avbildningskort** – används för att avbilda trafik till och från domänkontrollanterna.
 
     > [!IMPORTANT]
-    > -   Konfigurera portspegling för avbildningskortet som mål för domänkontrollantens nätverkstrafik. Mer information finns i [Konfigurera portspegling](configure-port-mirroring.md). Vanligtvis behöver du samarbeta med nätverks- eller virtualiseringsteamet när du vill konfigurera portspegling.
-    > -   Konfigurera en statisk icke-dirigerbar IP-adress för miljön utan standardgateway och utan DNS-serveradresser. Exempel: 1.1.1.1/32. Det garanterar att avbildningsnätverkskortet kan avbilda maximal mängd trafik och att hanteringsnätverkskortet används för att skicka och ta emot nödvändig nätverkstrafik.
+    > -   Konfigurera portspegling för avbildningskortet som mål för domänkontrollantens nätverkstrafik. Mer information finns i [Konfigurera portspegling](configure-port-mirroring.md). Normalt behöver arbeta med nätverks- eller -teamet för att konfigurera portspegling.
+    > -   Konfigurera en statisk icke-dirigerbar IP-adress för miljön utan standardgateway och utan DNS-serveradresser. Exempel: 1.1.1.1/32. Detta garanterar att avbildningsnätverkskortet kan avbilda maximal mängd trafik och att hanteringsnätverkskortet används för att skicka och ta emot nödvändig nätverkstrafik.
 
 ### <a name="ports"></a>Portar
 I följande tabell visas de portar som ATA Gateway som minst kräver är konfigurerade på hanteringskortet:
@@ -235,18 +235,18 @@ Under installationen installeras .Net Framework 4.6.1 och det kan göra att dom�
 
 
 > [!NOTE]
-> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymmet som krävs för ATA-binärfiler, [ATA-loggar](troubleshooting-ata-using-logs.md) och [prestandaloggar](troubleshooting-ata-using-perf-counters.md).
+> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för ATA-binärfiler [ATA-loggarna och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
-ATA Lightweight Gateway kräver att minst 2 kärnor och 6 GB RAM är installerat på domänkontrollanten.
+ATA Lightweight Gateway kräver minst två kärnor och 6 GB RAM-minne på domänkontrollanten.
 För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
 ATA Lightweight Gateway kan distribueras på domänkontrollanter med olika belastningar och storlekar, beroende på mängden nätverkstrafik till och från domänkontrollanterna och mängden resurser som finns installerade på den domänkontrollanten.
 
 >[!NOTE] 
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
-Mer information om ATA Lightweight Gateways maskinvarukrav finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
+Mer information om maskinvarukrav för ATA Lightweight Gateway finns [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Tidssynkronisering
 ATA Center-servern, ATA Lightweight Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
@@ -272,7 +272,7 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 > -   NetBIOS
 
 ## <a name="ata-console"></a>ATA-konsolen
-Åtkomst till ATA-konsolen sker via en webbläsare. Följande stöds:
+Åtkomst till ATA-konsolen sker via en webbläsare som stöder webbläsare och inställningar:
 
 -   Internet Explorer version 10 och senare
 
