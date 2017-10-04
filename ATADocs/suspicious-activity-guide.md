@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
-ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
+ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
+ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/01/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -285,7 +285,7 @@ Kända säkerhetsproblem i äldre versioner av Windows Server göra att angripar
 
 2. Är måldatorn (under den **ACCESSED** kolumn) korrigeras med MS14-068 (domänkontrollanten) eller MS11-013 (server)? Om Ja, **Stäng** misstänkt aktivitet (det är ett falsklarm).
 
-3. Om inte, har källdatorn (under den **FROM** kolumn) ett program eller det OS känt att ändra PAC? Om Ja, **utelämna** misstänkt aktivitet (det är ett ofarlig true positivt).
+3. Om inte, körs på källdatorn (under den **FROM** kolumn) ett program eller det OS känt att ändra PAC? Om Ja, **utelämna** misstänkt aktivitet (det är ett ofarlig true positivt).
 
 4. Om svaret var inte förutsätter detta är skadliga att dessa två frågor.
 
