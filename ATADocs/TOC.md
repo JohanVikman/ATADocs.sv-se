@@ -38,14 +38,16 @@
 ## [ATA-rollgrupper](ata-role-groups.md)
 ## [Ändra konfigurationen för ATA Center](modifying-ata-center-configuration.md)
 ## [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
-###[Exkludera entiteter från identifieringar](excluding-entities-from-detections.md)
+## [Exkludera entiteter från identifieringar](excluding-entities-from-detections.md)
 ## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
 ## [Hantera ATA-telemetri](manage-telemetry-settings.md)
 ## [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
 ## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
-## [Referens: Loggar från ATA till SIEM](cef-format-sa.md)
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
+## [ATA Referensinformation]
+### [Referens: Loggar från ATA till SIEM](cef-format-sa.md)
+### [Händelse-ID-referens](event-id-reference.md)
 # Undersök
 ## [Guide för misstänkt aktivitet](suspicious-activity-guide.md)
 # Felsöka
