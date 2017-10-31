@@ -45,7 +45,7 @@
 ## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
-## [ATA Referensinformation]
+## ATA Referensinformation
 ### [Referens: Loggar från ATA till SIEM](cef-format-sa.md)
 ### [Händelse-ID-referens](event-id-reference.md)
 # Undersök
