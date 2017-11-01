@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -48,12 +48,11 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.ApplicationException: Det går inte att starta ETW-session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Det finns en värdpost i HOSTS-filen som pekar på datorns kortnamn|Ta bort posten värden från C:\Windows\System32\drivers\etc\HOSTS-fil eller ändra den till ett fullständigt domännamn.|
 |System.IO.IOException: Autentiseringen misslyckades eftersom den fjärranslutna parten har stängt transportströmmen.|TLS 1.0 är inaktiverad på ATA Gateway, men .net är konfigurerad att använda TLS 1.2|Använd ett av följande alternativ: </br> Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .net genom att ange registernycklar för att använda operativsystemet standardvärdena för SSL och TLS, enligt följande: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: Det gick inte att läsa in typen 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' från sammansättningen 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|ATA Gateway kunde inte läsa in de nödvändiga parsningsfilerna.|Kontrollera om Analysverktyg för meddelanden är installerat. Analysverktyg för meddelanden kan inte installeras med ATA Gateway/ATA Lightweight Gateway. Avinstallera Analysverktyg för meddelanden och starta om gatewaytjänsten.|
-|Aviseringar om ignorerad portspeglingstrafik när Lightweight Gateway används på VMware|Om du använder domänkontrollanter på virtuella VMware-datorer kan du få aviseringar om **ignorerad portspeglingstrafik**. Detta kan inträffa på grund av ett konfigurationsmatchningsfel i VMware. |För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.|
 |System.Net.WebException: Fjärrservern returnerade ett fel: (407) Proxyautentisering krävs|ATA Gateway-kommunikationen med ATA Center störs av en proxyserver.|Inaktivera proxyservern på ATA Gateway-datorn. <br></br>Observera att proxyinställningarna kan vara per konto.|
 |System.IO.DirectoryNotFoundException: Systemet kan inte hitta den angivna sökvägen. (Undantag från HRESULT: 0x80070003)|En eller flera av tjänsterna som krävs för att ATA ska fungera startade inte.|Starta följande tjänster: <br></br>Prestandaloggar och aviseringar (PLA), Schemaläggaren (schema).|
 |System.Net.WebException: Fjärrservern returnerade ett fel: (403) nekad|ATA Gateway eller Lightweight Gateway kunde var förbjuden från att upprätta en HTTP-anslutning eftersom ATA Center inte är betrodd.|Lägg till NetBIOS-namnet och FQDN för ATA Center i listan med betrodda webbplatser och rensa cachen på internt Explorer (eller namnet på ATA Center som angetts i konfigurationen om den konfigurerade skiljer sig NetBIOS/FQDN).|
 |System.Net.Http.HttpRequestException: Det gick inte att PostAsync [requestTypeName = StopNetEventSessionRequest]|Stoppa det går inte att och starta ETW-sessionen som samlar in nätverkstrafik på grund av ett problem med WMI ATA Gateway eller ATA Lightweight Gateway|Följ instruktionerna i [WMI: återskapa WMI-lagringsplatsen](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) WMI problemet|
-
+|System.Net.Sockets.SocketException: Ett försök gjordes att komma åt en socket på ett sätt som tillåts inte av åtkomstbehörigheterna|Ett annat program använder port 514 på ATA Gateway|Använd `netstat -o` att fastställa vilken process som använder den porten.|
  
 ## <a name="deployment-errors"></a>Distributionsfel
 > [!div class="mx-tableFixed"]
