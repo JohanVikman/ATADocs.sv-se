@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/24/2017
+ms.date: 10/25/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
-ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
+ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
+ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/24/2017
+ms.lasthandoff: 10/25/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -60,7 +60,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 
 -    Rekommenderat: Användare ska ha läsbehörighet till behållaren för borttagna objekt. Detta gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i **ändra behörigheter för en behållare för borttagna objekt** under den [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) avsnittet.
 
--   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytokenanvändaren behöver du SID för användarkontot, inte användarnamnet. Mer information finns i [arbeta med identifieringsinställningar i ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) avsnittet.
+-   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytokenanvändaren behöver du SID för användarkontot, inte användarnamnet. Mer information finns i [undantag konfigurera IP-adresser och honeytokenanvändare](install-ata-step7.md).
 
 -   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser 4776, 4732, 4733, 4728, 4729, 4756 och 4757 att ytterligare förbättra ATA Pass-the-Hash, Brute Force, ändring av känsliga grupper och Honung token identifieringar. Dessa kan hämtas från din SIEM-server eller genom vidarebefordran av Windows-händelser från din domänkontrollant. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
