@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7bd0f90acbb6a2d8eb84fd09bc4d859fff082273
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 3ef6322a4c63c15bbdae0669a7d116dfd80756db
+ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/06/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -74,7 +74,7 @@ Händelserna som finns här:
 
 1022 – ATA Center externa IP-adress upplösning hälsa avisering 
  
-## <a name="ata-suspicious-ctivity-events"></a>ATA misstänkta ctivity händelser
+## <a name="ata-suspicious-activity-events"></a>ATA misstänkt aktivitetshändelser
 
 2001 – onormalt beteende misstänkt aktivitet 
 
@@ -98,7 +98,7 @@ Händelserna som finns här:
 
 2014 – Honeytoken aktivitet misstänkt aktivitet 
 
-2015 – LDAP klartext lösenord misstänkt aktivitet 
+2015 – LDAP Rensa text lösenord misstänkt aktivitet 
 
 2016 – omfattande objektet tas bort misstänkt aktivitet 
 
@@ -114,9 +114,9 @@ Händelserna som finns här:
 
 2022 – golden ticket misstänkt aktivitet 
 
-2023 – onormal känsliga gruppmedlemskap ändra misstänkt aktivitet 
-
 2023 – brute force misstänkt aktivitet 
+
+2024 - onormal känsliga gruppmedlemskap ändra misstänkt aktivitet  
 
 ## <a name="ata-auditing-events"></a>ATA-granskningshändelser
 
