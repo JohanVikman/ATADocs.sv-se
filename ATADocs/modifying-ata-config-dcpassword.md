@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/12/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 19eee0466269bbc2255d3a83e2f8c073057ba356
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: b05b7a6d01c99595b0877d633872716b115b4f51
+ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/06/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 

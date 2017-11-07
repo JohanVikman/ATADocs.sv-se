@@ -4,7 +4,7 @@ description: "Beskriver de olika supportalternativen för Microsoft Advanced Thr
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/3/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,11 +12,11 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f1092e1cf6c991785dbf8bad3b197b68a21c0833
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: a7b7d95289cc997a647c2d6703315c283e8a9328
+ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 11/06/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
