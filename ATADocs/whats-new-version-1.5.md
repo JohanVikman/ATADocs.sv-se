@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 08da33114bc3f0c9aafb9914b9d77a88fac009f4
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nyheter i ATA version 1.5
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
@@ -50,10 +50,10 @@ När du har uppdaterat ATA-distributionen till ATA version 1.5 visas följande f
 <b>Lösning:</b> Skicka ett e-postmeddelande till <ataeval@microsoft.com> för att begära lösningssteg.
 ### <a name="deployment"></a>distribution
 Mappen som anges för "Datasökväg för databasen" och "Journalsökväg för databasen" måste vara tom (inga filer eller undermappar).
-Distributionen kan inte gå vidare om mappen inte är tom.
+Distributionen inte gå vidare om det inte är tom.
 
 ### <a name="installation-from-zip-file"></a>Installation från ZIP-fil
-Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från ZIP-filen eftersom installationen då misslyckas.
+Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från zip-filen eller misslyckas installationen.
 
 ### <a name="configuration"></a>Konfiguration
 När konfigurationen för en ATA Gateway är klar och ATA Gateway startar för första gången visas etiketten "Ej synkroniserad" tills tjänsten har startats helt, vilket kan ta upp till 10 minuter första gången tjänsten startar.

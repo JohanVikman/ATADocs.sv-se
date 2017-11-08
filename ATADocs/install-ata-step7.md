@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -33,9 +33,9 @@ Du kan utesluta specifika IP-adresser eller användare från ett antal identifie
 
 Till exempel kan ett **DNS-rekognoseringsundantag** vara en säkerhetsskanner som använder DNS som en skanningsmekanism. Undantaget hjälper ATA att ignorera dessa skannrar. Ett exempel på ett *Pass-the-Ticket*-undantag är en NAT-enhet.    
 
-ATA möjliggör också konfiguration av en Honeytoken-användare som används som en fälla för skadliga aktörer – all verifiering som är associerade med kontot (normalt vilande) ska utlösa en avisering.
+ATA möjliggör också konfiguration av honeytokenanvändaren som används som en trap för skadliga aktörer - någon autentisering som är associerade med kontot (normalt vilande) utlöser en varning.
 
-Följ de här stegen när du ska konfigurera ovan nämnda:
+Följ dessa steg om du vill konfigurera detta:
 
 1.  I ATA-konsolen klickar du på inställningsikonen och väljer **Konfiguration**.
 
@@ -43,7 +43,7 @@ Följ de här stegen när du ska konfigurera ovan nämnda:
 
 2.  Klicka på **Allmänt** under **Identifiering**.
 
-2. Ange namnet på Honeytoken-kontot under **Honeytoken-konton**. Fältet Honeytoken-konton är sökbart och visar automatiskt entiteter i ditt nätverk.
+2. Ange namnet på Honeytoken-kontot under **Honeytoken-konton**. Fältet Honeytoken konton är sökbar och visar automatiskt entiteter i nätverket.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -58,7 +58,7 @@ Gratulerar, Microsoft Advanced Threat Analytics har distribuerats!
 
 På tidslinjen för attacker kan du visa identifierade misstänkta aktiviteter och söka efter användare eller datorer och visa deras profiler.
 
-ATA startar sökning efter misstänkta aktiviteter omedelbart. En del aktiviteter, t.ex. vissa av aktiviteterna för misstänkt beteende, är inte tillgängliga förrän ATA har fått tid att skapa beteendeprofiler (minst tre veckor).
+ATA startar sökning efter misstänkta aktiviteter omedelbart. Vissa aktiviteter, t.ex vissa aktiviteter med misstänkt beteende är inte tillgängliga förrän ATA har fått tid att skapa beteendeprofiler (minst tre veckor).
 
 I [ATA-boken med simulerade attacker](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook) kan du kontrollera att ATA är igång ordentligt och identifierar överträdelser i nätverket.
 

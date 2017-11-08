@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a2e559f5aef382230476dde44e8118f2f26b3cf
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: c4cd30446193ff2d9ab4069b1312593a2102282a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -43,9 +43,9 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
     |**Lösenord** (krävs)|Ange lösenordet för den skrivskyddade användaren, till exempel: **Penna1**.|
     |**Domän** (krävs)|Ange domänen för den skrivskyddade användaren, till exempel: **contoso.com**. **Obs:** Det är viktigt att du anger det fullständiga FQDN för domänen där användaren finns. Om användarens konto exempelvis finns i domänen corp.contoso.com måste du ange `corp.contoso.com`, inte contoso.com|
 
-2. Du kan klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Detta fungerar endast om ATA Center kan ansluta till domänen.   
+2. Du kan klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Det fungerar ATA Center är ansluten till domänen.    
 
-    Välkomstmeddelandet i konsolen ändras till följande när det sparats: ![ATA – välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
+    När den har sparats välkomstmeddelandet i konsolen ändras till följande meddelande: ![ATA Välkommen fas 1 klar](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. I administratörskonsolen, klicka på **Hämta Gateway-installationen och installera den första gatewayen** för att fortsätta.
 

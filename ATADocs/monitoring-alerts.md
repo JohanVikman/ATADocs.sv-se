@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b39014499d77c2671f946a693b47be5b8db0f38
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 0d3b57e852a18bf9602d3a75ab627c23496f7285
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -29,16 +29,16 @@ Den här artikeln beskriver övervakningsaviseringarna för varje komponent, sam
 ### <a name="center-running-out-of-disk-space"></a>Center få slut på diskutrymme
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Det lediga utrymmet på ATA Center-disken som används för att lagra ATA-databasen börjar ta slut.|Det betyder att hårddisken har mindre än 200 GB ledigt utrymme eller att det finns mindre än 20 % ledigt utrymme kvar, beroende på vilket som är minst. När ATA märker att enheten börjar få slut på lagringsutrymme börjar tjänsten ta bort gamla data från databasen. Den här aviseringen genereras om det inte går att ta bort gamla data eftersom tjänsten fortfarande behöver dem för identifieringsmotorn. Om du får den här aviseringen betyder det att ATA har slutat att spåra nya aktiviteter.|Öka diskens storlek eller frigör utrymme på disken.|Hög|
+|Det lediga utrymmet på ATA Center-disken som används för att lagra ATA-databasen börjar ta slut.|Det betyder att hårddisken har mindre än 200 GB ledigt utrymme eller att det finns mindre än 20 % ledigt utrymme kvar, beroende på vilket som är minst. När ATA märker att enheten börjar få slut på lagringsutrymme börjar tjänsten ta bort gamla data från databasen. Om det går inte att ta bort gamla data eftersom den fortfarande behöver dessa data för identifieringsmotorn, får den här aviseringen. Om du får den här aviseringen betyder det att ATA har slutat att spåra nya aktiviteter.|Öka diskens storlek eller frigör utrymme på disken.|Hög|
 ### <a name="failure-sending-mail"></a>Fel som skickar e-post
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA kunde inte skicka en e-postavisering till den angivna e-postservern.|Inga e-postmeddelanden skickas från ATA.|Kontrollera SMTP-serverkonfigurationen.|Låg|
+|ATA kunde inte skicka en e-postavisering till den angivna e-postservern.|Ingen e-postmeddelanden skickas från ATA.|Kontrollera SMTP-serverkonfigurationen.|Låg|
 
 ### <a name="center-overloaded"></a>Center överbelastad
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA Center kan inte hantera mängden data som överförs från ATA-gatewayerna. |ATA Center slutar att analysera ny nätverkstrafik och nya händelser. Det innebär att identifieringarnas och profilernas exakthet minskar när den här övervakningsaviseringen är aktiv.|Kontrollera att ATA Center har tilldelats tillräckligt med resurser. Mer information om hur du planerar kapaciteten för ATA Center finns i avsnittet om [kapacitetsplanering för ATA](ata-capacity-planning.md). Undersök ATA Centers prestanda med hjälp av informationen i avsnittet [Felsöka ATA med prestandaräknarna](troubleshooting-ata-using-perf-counters.md).|Hög|
+|ATA Center kan inte hantera mängden data som överförs från ATA-gatewayerna. |ATA Center stoppar analysera nya nätverkstrafik och händelser. Det innebär att identifieringarnas och profilernas exakthet minskar när den här övervakningsaviseringen är aktiv.|Kontrollera att ATA Center har tilldelats tillräckligt med resurser. Mer information om hur du ska planera för ATA Center-kapacitet finns [ATA-kapacitetsplanering](ata-capacity-planning.md). Undersök ATA Centers prestanda med hjälp av informationen i avsnittet [Felsöka ATA med prestandaräknarna](troubleshooting-ata-using-perf-counters.md).|Hög|
 
 ### <a name="failure-connecting-to-the-siem-server-using-syslog"></a>Det går inte att ansluta till SIEM-servern med hjälp av Syslog
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
@@ -47,37 +47,37 @@ Den här artikeln beskriver övervakningsaviseringarna för varje komponent, sam
 ### <a name="center-certificate-is-about-to-expire"></a>Center-certifikat upphör snart att gälla
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA Center-certifikatet går ut inom tre veckor.|När certifikatet har gått ut misslyckas anslutningar från ATA-gatewayer till ATA Center. ATA Center-processen kraschar och alla ATA-funktioner stoppas.|[Ersätt ATA Center-certifikatet](modifying-ata-center-configuration.md)|Medel|
+|ATA Center-certifikatet går ut inom tre veckor.|När certifikatet har gått ut misslyckas anslutningar från ATA-gatewayer till ATA Center. ATA Center processen att krascha och alla ATA-funktioner kommer att stoppas.|[Ersätt ATA Center-certifikatet](modifying-ata-center-configuration.md)|Medel|
 ### <a name="ata-center-certificate-expired"></a>ATA Center-certifikatet har upphört att gälla
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA Center-certifikatet har gått ut.|När certifikatet har gått ut misslyckas anslutningar från ATA-gatewayerna till ATA Center. ATA Center-processen kraschar och alla ATA-funktioner stoppas.|[Ersätt ATA Center-certifikatet](modifying-ata-center-configuration.md)|Hög|
+|ATA Center-certifikatet har gått ut.|När certifikatet upphör att gälla: misslyckas anslutningen från ATA-gatewayer till ATA Center. Process för ATA Center kraschar och stoppar alla ATA-funktioner.|[Ersätt ATA Center-certifikatet](modifying-ata-center-configuration.md)|Hög|
 ## <a name="ata-gateway-issues"></a>Problem med ATA Gateway
 ### <a name="read-only-user-password-to-expire-shortly"></a>Skrivskyddad användarens lösenord upphör snart att
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Det skrivskyddade användarlösenordet som används för att matcha enheter mot Active Directory går ut inom 30 dagar.|Om lösenordet för den här användaren går ut slutar alla ATA-gatewayer att köra och inga nya data samlas in.|[Ändra lösenordet för domänanslutningar](modifying-ata-config-dcpassword.md) och uppdatera sedan lösenordet i ATA-konsolen.|Medel|
+|Det skrivskyddade användarlösenordet som används för att matcha enheter mot Active Directory går ut inom 30 dagar.|Om den här användarens lösenord upphör att gälla, stoppas alla ATA-gatewayer och inga nya data som samlas in.|[Ändra lösenordet för domänanslutningar](modifying-ata-config-dcpassword.md) och uppdatera sedan lösenordet i ATA-konsolen.|Medel|
 ### <a name="read-only-user-password-expired"></a>Det skrivskyddade lösenordet har upphört att gälla
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Det skrivskyddade användarlösenordet som används för att hämta katalogdata har gått ut.|Alla ATA-gatewayer slutar att köra (eller gör det snart) och inga nya data samlas in.|[Ändra lösenordet för domänanslutningar](modifying-ata-config-dcpassword.md) och uppdatera sedan lösenordet i ATA-konsolen.|Hög|
+|Det skrivskyddade användarlösenordet som används för att hämta katalogdata har gått ut.|Alla ATA-gatewayer stoppas (eller stoppas snart) och inga nya data som samlas in.|[Ändra lösenordet för domänanslutningar](modifying-ata-config-dcpassword.md) och uppdatera sedan lösenordet i ATA-konsolen.|Hög|
 ### <a name="gateway-certificate-about-to-expire"></a>Gateway-certifikat snart upphör att gälla
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA Gateway-certifikatet går ut inom tre veckor.|Anslutningar från den specifika ATA-gatewayen till ATA Center misslyckas. Inga data från den aktuella ATA-gatewayen skickas.|ATA Gateway-certifikatet borde ha förnyats automatiskt. Granska loggarna för ATA Gateway och ATA Center för att ta reda på varför certifikatet inte förnyades automatiskt.|Medel|
+|ATA Gateway-certifikatet går ut inom tre veckor.|Det går inte att ansluta den specifika ATA-gatewayen till ATA Center. Inga data från att ATA-Gateway skickas.|ATA Gateway-certifikatet borde ha förnyats automatiskt. Granska loggarna för ATA Gateway och ATA Center för att ta reda på varför certifikatet inte förnyades automatiskt.|Medel|
 
 ### <a name="gateway-certificate-expired"></a>Gateway-certifikat har upphört att gälla
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA Gateway-certifikatet har gått ut.|Det finns ingen anslutning från den här ATA-gatewayen till ATA Center. Inga data från den aktuella ATA-gatewayen skickas.|[Avinstallera och installera om ATA Gateway](install-ata-step3.md).|Hög|
+|ATA Gateway-certifikatet har gått ut.|Det finns ingen anslutning från den här ATA-gatewayen till ATA Center. Inga data från att ATA-Gateway skickas.|[Avinstallera och installera om ATA Gateway](install-ata-step3.md).|Hög|
 ### <a name="domain-synchronizer-not-assigned"></a>Ingen domänsynkroniserare har tilldelats
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Inga ATA-gatewayer har tilldelats en domänsynkroniserare. Detta kan inträffa om det inte finns någon ATA-gateway som har konfigurerats som kandidat för domänsynkronisering.|När domänen inte synkroniseras kan entitetsändringar resultera i att entitetsinformation i ATA blir inaktuell eller saknas, men identifieringen påverkas inte.|Kontrollera att minst en ATA-gateway har angetts som en [domänsynkroniserare](install-ata-step5.md).|Låg|
+|Inga ATA-gatewayer har tilldelats en domänsynkroniserare. Detta kan inträffa om det inte finns någon ATA-gateway som har konfigurerats som kandidat för domänsynkronisering.|När domänen inte har synkroniserats entitetsändringar orsaka entitetsinformation i ATA att bli inaktuell eller saknas men påverkar inte någon identifiering.|Kontrollera att minst en ATA-gateway har angetts som en [domänsynkroniserare](install-ata-step5.md).|Låg|
 ### <a name="allsome-of-the-capture-network-adapters-on-a-gateway-are-not-available"></a>Alla/vissa avbilda nätverkskort på en Gateway är inte tillgängliga
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Alla/vissa av de valda insamlingsnätverkskorten på ATA-gatewayen är inaktiverade eller frånkopplade.|Nätverkstrafik för vissa/alla domänkontrollanter samlas inte längre in av ATA-gatewayen. Detta påverkar möjligheten att identifiera misstänkta aktiviteter relaterade till dessa domänkontrollanter.|Kontrollera att dessa valda insamlingsnätverkskort på ATA-gatewayen är aktiverade och anslutna.|Medel|
+|Alla/vissa av de valda insamlingsnätverkskorten på ATA-gatewayen är inaktiverade eller frånkopplade.|Nätverkstrafik för vissa/alla domänkontrollanter samlas inte längre in av ATA-gatewayen. Detta påverkar möjligheten att identifiera misstänkta aktiviteter som rör dessa domänkontrollanter.|Kontrollera att dessa valda insamlingsnätverkskort på ATA-gatewayen är aktiverade och anslutna.|Medel|
 ### <a name="some-domain-controllers-are-unreachable-by-a-gateway"></a>Vissa domänkontrollanter inte kan nås av en Gateway
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
@@ -85,11 +85,11 @@ Den här artikeln beskriver övervakningsaviseringarna för varje komponent, sam
 ### <a name="all-domain-controllers-are-unreachable-by-a-gateway"></a>Alla domänkontrollanter inte kan nås av en Gateway
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA-gatewayen är för närvarande frånkopplad på grund av anslutningsproblem med alla konfigurerade domänkontrollanter.|Detta påverkar ATA:s möjlighet att identifiera misstänkta aktiviteter relaterade till domänkontrollanter som övervakas av den här ATA-gatewayen.| Kontrollera att domänkontrollanterna körs och att ATA-gatewayen kan öppna LDAP-anslutningar till dem.|Medel|
+|ATA-gatewayen är för närvarande frånkopplad på grund av anslutningsproblem med alla konfigurerade domänkontrollanter.|Detta påverkar ATA: s möjlighet att identifiera misstänkta aktiviteter relaterade till domänkontrollanter som övervakas av ATA-gatewayen.| Kontrollera att domänkontrollanterna körs och att ATA-gatewayen kan öppna LDAP-anslutningar till dem.|Medel|
 ### <a name="gateway-stopped-communicating"></a>Gateway stoppats kommunikation
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Det har inte skett någon kommunikation från ATA-gatewayen. Standardtidsintervallet för den här aviseringen är fem minuter.|Nätverkstrafik samlas inte längre in av nätverkskortet på ATA-gatewayen. Detta påverkar ATA:s möjlighet att identifiera misstänkta aktiviteter eftersom nätverkstrafiken inte kan nå ATA Center.|Kontrollera att porten som används för kommunikation mellan ATA Gateway- och ATA Center-tjänsten inte blockeras av några routrar eller brandväggar.|Medel|
+|Det har inte skett någon kommunikation från ATA-gatewayen. Standardtidsintervallet för den här aviseringen är fem minuter.|Nätverkstrafik samlas inte längre in av nätverkskortet på ATA-gatewayen. Detta påverkar ATA: s möjlighet att identifiera misstänkta aktiviteter eftersom nätverkstrafik inte kommer att kunna nå ATA Center.|Kontrollera att porten som används för kommunikation mellan ATA Gateway- och ATA Center-tjänsten inte blockeras av några routrar eller brandväggar.|Medel|
 ### <a name="no-traffic-received-from-domain-controller"></a>Ingen trafik togs emot från domänkontrollanten
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
@@ -101,7 +101,7 @@ Den här artikeln beskriver övervakningsaviseringarna för varje komponent, sam
 ### <a name="some-network-traffic-is-not-being-analyzed"></a>En del nätverkstrafik analyseras inte
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|ATA-gatewayen tar emot mer trafik än den kan bearbeta.|En del nätverkstrafik analyseras inte, vilket kan påverka möjligheten att identifiera misstänkta aktiviteter från domänkontrollanter som övervakas av ATA-gatewayen.|Överväg att [lägga till fler processorer och mer minne](ata-capacity-planning.md) om det behövs. Om detta är en fristående ATA-gateway kan du minska antalet domänkontrollanter som övervakas.<br></br>Detta kan också inträffa om du använder domänkontrollanter på virtuella VMware-datorer. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade i den virtuella datorn:<br></br>-TsoEnable<br></br>-LargeSendOffload(IPv4)<br></br>-IPv4 Systemansvarig avlastning<br></br>Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen om VMware.|Medel|
+|ATA-gatewayen tar emot mer trafik än den kan bearbeta.|En del nätverkstrafik analyseras inte, vilket kan påverka möjligheten att identifiera misstänkta aktiviteter från domänkontrollanter som övervakas av ATA-gatewayen.|Överväg att [lägga till fler processorer och mer minne](ata-capacity-planning.md) om det behövs. Om detta är en fristående ATA-gateway kan du minska antalet domänkontrollanter som övervakas.<br></br>Detta kan också inträffa om du använder domänkontrollanter på virtuella VMware-datorer. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade i den virtuella datorn:<br></br>-TsoEnable<br></br>-LargeSendOffload(IPv4)<br></br>-IPv4 Systemansvarig avlastning<br></br>Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen till VMware.|Medel|
 
 ### <a name="gateway-version-outdated"></a>Gatewayversionen inaktuell
 |Varning|Beskrivning|Lösning|Allvarlighetsgrad|

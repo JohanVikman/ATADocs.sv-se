@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c60e577ed5df2beecd9737a4637c7a3162a9e706
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Nyheter i ATA version 1.4
 Dessa versionsanmärkningar innehåller information om kända problem i version 1.4 av Advanced Threat Analytics.
@@ -58,23 +58,23 @@ Dessa versionsanmärkningar innehåller information om kända problem i version 
 Följande kända problem finns i den här versionen.
 
 ### <a name="network-capture-software"></a>Programvara för nätverksavbildning
-Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Om annan programvara installeras kommer ATA Gateway att sluta fungera korrekt.
+Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Annan programvara installeras kommer ATA Gateway att sluta fungera korrekt.
 
 ### <a name="installation-from-zip-file"></a>Installation från ZIP-fil
-Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från ZIP-filen eftersom installationen då misslyckas.
+Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från zip-filen eller misslyckas installationen.
 
 ### <a name="uninstalling-previous-versions-of-ata"></a>Avinstallera tidigare versioner av ATA
 Om du har installerat en tidigare version av ATA, en offentlig förhandsversion eller en privat förhandsversion måste du avinstallera ATA Center och ATA-gatewayerna innan du installerar den här versionen av ATA.
 
 Du måste även ta bort databasfilerna och loggfilerna. Databaserna från tidigare versioner av ATA är inte kompatibla med GA-versionen av ATA.
 
-Om ATA-installationen öppnas i stället för avinstallationen när du försöker avinstallera ATA Center eller ATA Gateway behöver du lägga till följande registernyckel och sedan avinstallera ATA igen.
+Om ATA-installationen öppnas i stället för avinstallationen när du försöker avinstallera ATA Center eller ATA Gateway, måste du lägga till följande registernyckel och sedan avinstallera ATA igen.
 
 **ATA Center**
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Lägg till ett nytt strängvärde med namnet `InstallationPath` och värdet `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Det är standardinstallationsmappen. Om du har ändrat installationsmappen anger du sökvägen där ATA har installerats.
+-   Lägg till ett nytt strängvärde med namnet `InstallationPath` och värdet `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Det är standardinstallationsmappen. Om du har ändrat installationsmappen anger du sökvägen där ATA är installerat.
 
     ![Registereditorn för installationssökvägen för ATA Center](media/ATA-uninstall-center-bug.jpg)
 
@@ -82,14 +82,14 @@ Om ATA-installationen öppnas i stället för avinstallationen när du försöke
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Lägg till ett nytt strängvärde med namnet `InstallationPath` och värdet `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Det är standardinstallationsmappen.  Om du har ändrat installationsmappen anger du sökvägen där ATA har installerats.
+-   Lägg till ett nytt strängvärde med namnet `InstallationPath` och värdet `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Det är standardinstallationsmappen.  Om du har ändrat installationsmappen anger du sökvägen där ATA är installerat.
 
     ![Registereditorn för installationssökvägen för ATA Gateway](media/ATA-GW-uninstall-bug.jpg)
 
 Ta bort installationsmappen på både ATA Center och ATA Gateway efter avinstallationen.  Om du har installerat databasen i en separat mapp tar du bort databasmappen på ATA Center.
 
 ### <a name="health-alert---disconnected-ata-gateway"></a>Hälsoavisering – frånkopplad ATA-gateway
-Om du har fler än en ATA-gateway och har aviseringar om frånkopplad ATA-gateway fungerar automatisk matchning bara på en av dem. Resten lämnas med öppen status. Du måste manuellt bekräfta att ATA-gatewayen är tillgänglig och att tjänsten körs och lösa aviseringen manuellt.
+Om du har fler än en ATA Gateway och har aviseringar om frånkopplad ATA-Gateway, lösa automatiskt fungerar bara på en av dem. resten lämnas med öppen status. Manuellt bekräfta att ATA Gateway är igång och att tjänsten körs och lösa aviseringen manuellt.
 
 ### <a name="kb-on-virtualization-host"></a>KB på virtualiseringsvärd
 Installera inte KB 3047154 på en virtualiseringsvärd. Det kan leda till att portspegling slutar fungera ordentligt.

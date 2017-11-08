@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68dda1254757d9633119cbb8b486c3042c612d5b
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/06/2017
 # <a name="modifying-the-ata-center-configuration"></a>Ändra konfigurationen för ATA Center
 
 
-Efter den första distributionen bör ändringar i ATA Center genomföras med försiktighet. Använd följande procedurer när du uppdaterar den konsolen URL-Adressen och certifikatet.
+Efter den första distributionen bör ändringar i ATA Center genomföras med försiktighet. Använd följande procedurer när du uppdaterar konsolen URL-Adressen och certifikatet.
 
 ## <a name="the-ata-console-url"></a>ATA-konsolens URL
 
@@ -44,7 +44,7 @@ URL:en används i följande scenarier:
 
 1. Kontrollera att den nya URL som du vill använda matchar IP-adressen för ATA-konsolen.
 
-2. I ATA-inställningarna under **Center**, ange den nya URL. Nu använder ATA Center-tjänsten fortfarande den ursprungliga URL: en. 
+2. I ATA-inställningarna under **Center**, ange den nya URL. Nu kan ATA Center-tjänsten fortfarande använder den ursprungliga URL: en. 
 
  ![Ändra ATA-konfiguration](media/change-center-config.png)
 
@@ -68,7 +68,7 @@ URL:en används i följande scenarier:
 
 Ersätter du certifikatet genom att följa den här processen:
 
-1. Innan det aktuella certifikatet upphör att gälla, skapa ett nytt certifikat och kontrollera att den är installerad på ATA Center-servern. <br></br>Det rekommenderas att välja ett certifikat från en intern certifikatutfärdare, men det är också möjligt att skapa ett nytt självsignerat certifikat. Mer information finns i [ny SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Innan det aktuella certifikatet upphör att gälla, skapa ett nytt certifikat och kontrollera att den är installerad på ATA Center-servern. <br></br>Vi rekommenderar att du väljer ett certifikat från en intern certifikatutfärdare, men det är också möjligt att skapa ett nytt självsignerat certifikat. Mer information finns i [ny SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. I ATA-inställningarna under **Center**, Välj nyligen skapade certifikatet. ATA Center-tjänsten är nu fortfarande kopplad till det ursprungliga certifikatet. 
 
@@ -76,7 +76,7 @@ Ersätter du certifikatet genom att följa den här processen:
 
 3. Vänta tills ATA-gatewayer att synkronisera. Det har två möjliga certifikat som är giltiga för ömsesidig autentisering. Så länge ATA Gateway kan ansluta med det ursprungliga certifikatet kan försöker den inte den nya servern.
 
-4. När alla ATA-gatewayer synkroniseras med den uppdaterade konfigurationen, kan du aktivera det nya certifikatet som ATA Center-tjänsten är bunden till. När du aktiverar det nya certifikatet Binder ATA Center-tjänsten till det nya certifikatet. ATA-gatewayer använder nu det nya certifikatet för att autentisera med ATA Center. Efter anslutning till ATA Center-tjänsten, ATA Gateway kommer att hämta den senaste konfigurationen och har det nya certifikatet för ATA Center. 
+4. När alla ATA-gatewayer synkroniseras med den uppdaterade konfigurationen, kan du aktivera det nya certifikatet som ATA Center-tjänsten är bunden till. När du aktiverar det nya certifikatet Binder ATA Center-tjänsten till det nya certifikatet. ATA-gatewayer nu använda det nya certifikatet för autentisering med ATA Center. Efter anslutning till ATA Center-tjänsten, ATA Gateway kommer att hämta den senaste konfigurationen och har det nya certifikatet för ATA Center. 
 
 > [!NOTE]
 > -   Om en ATA Gateway var offline när du har aktiverat det nya certifikatet och aldrig fick den uppdaterade konfigurationen, manuellt uppdatera konfigurationens JSON-fil på ATA Gateway.

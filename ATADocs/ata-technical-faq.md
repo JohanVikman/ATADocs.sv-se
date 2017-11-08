@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8369b6d90268e2886eb6e3e8dbe2c2795195839d
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 25c2defd02e260248d30eb76f6ae297c1b36325f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -87,7 +87,7 @@ Om du vill förstå varför ett konto är känsligt kan du granska dess gruppmed
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>Hur övervakar jag en virtuell domänkontrollant med ATA?
 De flesta virtuella domänkontrollanter kan omfattas av ATA Lightweight Gateway. Information för att fastställa om ATA Lightweight Gateway är lämpligt för din miljö finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
-Om en virtuell domänkontrollant inte kan omfattas av ATA Lightweight Gateway kan du ha antingen en virtuell eller fysisk ATA Gateway enligt beskrivningen i [Konfigurera portspegling](configure-port-mirroring.md).  <br />Det enklaste sättet är att ha en virtuell ATA-gateway på varje värd där det finns en virtuell domänkontrollant.<br />Om de virtuella domänkontrollanterna flyttas mellan olika värdar måste du göra följande:
+Om en virtuell domänkontrollant inte kan omfattas av ATA Lightweight Gateway, du kan ha antingen en virtuell eller fysisk ATA-Gateway som beskrivs i [konfigurera portspegling](configure-port-mirroring.md).  <br />Det enklaste sättet är att ha en virtuell ATA-gateway på varje värd där det finns en virtuell domänkontrollant.<br />Om de virtuella domänkontrollanterna flyttas mellan olika värdar, måste du göra något av följande steg:
 
 -   När den virtuella domänkontrollanten flyttar till en annan värd ska ATA-gatewayen på den värden förkonfigureras för att ta emot trafiken från den virtuella domänkontrollant som precis har flyttats.
 -   Se till att du kopplar den virtuella ATA-gatewayen till den virtuella domänkontrollanten, så att om den flyttas följer ATA-gatewayen med.
@@ -105,7 +105,7 @@ ATA identifierar kända skadliga attacker och tekniker, säkerhetsproblem och ri
 En fullständig lista över ATA-identifieringar finns i [Vilka identifieringar utför ATA?](ata-threats.md).
 
 ## <a name="what-kind-of-storage-do-i-need-for-ata"></a>Vilken typ av lagring behöver jag för ATA?
-Vi rekommenderar snabb lagring (diskar med 7 200 RPM rekommenderas inte) som har diskåtkomst med låg latens (mindre än 10 ms). RAID-konfigurationen ska ha stöd för tung skrivbelastning (RAID-5/6 och tillhörande produkter rekommenderas inte).
+Vi rekommenderar snabb lagring (diskar med 7 200 RPM rekommenderas inte) med åtkomst till disken låg latens (mindre än 10 ms). RAID-konfigurationen ska ha stöd för tung skrivbelastning (RAID-5/6 och tillhörande produkter rekommenderas inte).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>Hur många nätverkskort kräver ATA-gatewayen?
 ATA-gatewayen måste ha minst två nätverkskort:<br>1. Ett nätverkskort för att ansluta till det interna nätverket och ATA Center<br>2. Ett nätverkskort som används för att avbilda domänkontrollantens nätverkstrafik via portspegling.<br>* Det här gäller inte för ATA Lightweight Gateway, som internt använder alla nätverkskort som domänkontrollanten använder.
@@ -113,7 +113,7 @@ ATA-gatewayen måste ha minst två nätverkskort:<br>1. Ett nätverkskort för a
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>Vilken typ av integrering har ATA med SIEM?
 ATA har en dubbelriktad integrering med SIEM enligt följande:
 
-1. ATA kan konfigureras för att skicka en Syslog-avisering vid misstänkt aktivitet till valfri SIEM-server som använder CEF-formatet.
+1. ATA kan konfigureras för att skicka en Syslog-avisering till valfri SIEM-server som använder CEF-formatet när en misstänkt aktivitet har upptäckts.
 2. ATA kan konfigureras att ta emot Syslog-meddelanden för Windows-händelser från [dessa SIEM-servrar](install-ata-step6.md).
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Kan ATA övervaka domänkontrollanter som är visualiserade på IaaS-lösningen?
@@ -128,7 +128,7 @@ Den här lösningen är för närvarande ett fristående erbjudande, det är int
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Måste man skriva sina egna regler och skapa en tröskel/baslinje?
 Med Microsoft Advanced Threat Analytics behöver du inte skapa regler, trösklar eller baslinjer och sedan finjustera. ATA analyserar beteende hos användare, enheter och resurser, samt deras förhållande till varandra, och kan identifiera misstänkt beteende och kända attacker snabbt. Tre veckor efter distributionen börjar ATA att identifiera misstänkta aktiviteter baserat på beteende. ATA börjar dock identifiera kända skadliga attacker och säkerhetsproblem direkt efter distributionen.
 
-## <a name="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior"></a>Kan Microsoft Advanced Threat Analytics identifiera onormalt beteende om det redan har skett ett intrång?
+## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Om du är redan utsatts för intrång, kan Microsoft Advanced Threat Analytics identifiera onormalt beteende?
 Ja, även om ATA installeras efter att ett intrång har skett kan ATA identifiera misstänkta aktiviteter hos hackaren. ATA tittar inte bara på användarens beteenden utan jämför också med andra användare på organisationens säkerhetskarta. Under den inledande analystiden identifieras angriparens beteende, om det är onormalt, som en ”avvikare” och ATA fortsätter att rapportera det onormala beteendet. Dessutom kan ATA identifiera en misstänkt aktivitet om hackaren försöker stjäla en annan användares autentiseringsuppgifter, t.ex. vid Pass-the-Ticket, eller försök att utföra en fjärrkörning av en av domänkontrollanterna.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>Använder detta endast trafik från Active Directory?
@@ -141,13 +141,13 @@ Portspegling kallas även SPAN (Switched Port Analyzer) och är en metod för at
 Nej. ATA övervakar alla enheter i nätverket som utför autentiserings- och auktoriseringsförfrågningar mot Active Directory, inklusive enheter som inte har Windows och mobila enheter.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Övervakar ATA både datorkonton och användarkonton?
-Ja. Eftersom datorkonton (samt eventuella andra entiteter) kan användas för att utföra skadliga aktiviteter övervakar ATA beteendet hos alla datorkonton och alla andra entiteter i miljön.
+Ja. Eftersom datorn konton (samt eventuella andra entiteter) kan användas för att utföra skadliga aktiviteter, övervakar ATA alla datorn konton beteende och alla andra entiteter i miljön.
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>ATA kan stödja flera domäner och flera skogar?
 Microsoft Advanced Threat Analytics stöder miljöer med flera domäner i samma skogsgräns. Flera skogar kräver en ATA-distribution för varje skog.
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Går det att se den övergripande hälsan för distributionen?
-Ja, det går att se både den övergripande hälsan för distributionen och specifika problem som är relaterade till konfiguration, anslutning osv., och du får en avisering när de inträffar.
+Ja, du kan visa den övergripande hälsan för distributionen samt specifika problem relaterade till konfiguration, anslutning osv., och du meddelas när de inträffar.
 
 
 ## <a name="see-also"></a>Se även

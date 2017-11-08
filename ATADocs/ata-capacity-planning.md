@@ -5,25 +5,25 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA-kapacitetsplanering
-Det här avsnittet hjälper dig att avgöra hur många ATA-servrar du behöver för att övervaka ditt nätverk. Du får också hjälp med att räkna ut hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver, samt serverkapaciteten för ditt ATA Center och dina ATA-gatewayer.
+Den här artikeln hjälper dig att avgöra hur många ATA-servrar behövs för att övervaka nätverket. Det hjälper dig att ta reda på hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapacitet för ATA Center och ATA-gatewayer.
 
 > [!NOTE] 
 > ATA Center kan distribueras hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
@@ -123,7 +123,7 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 > -   Domänkontrollantens prestanda påverkas inte om den inte har de resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight-gatewayen kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
-> -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfilerna, [ATA-loggarna](troubleshooting-ata-using-logs.md) och [prestandaloggarna](troubleshooting-ata-using-perf-counters.md).
+> -   Minst 5 GB utrymme som krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Storlek på ATA-gateway
@@ -158,7 +158,7 @@ Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribue
 > [!NOTE] 
 > -   Dynamiskt minne stöds inte.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.
-> -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfilerna, [ATA-loggarna](troubleshooting-ata-using-logs.md) och [prestandaloggarna](troubleshooting-ata-using-perf-counters.md).
+> -   Minst 5 GB utrymme som krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Beräkning av trafik för domänkontrollanter
@@ -197,7 +197,7 @@ Fastställ antal paket per sekund genom att utföra följande steg på varje dom
 
 9. Ange den plats där du vill att data ska sparas.
 
-10. Under **Vill du skapa datainsamlaruppsättningen?** väljer du **Starta datainsamlaruppsättningen nu** och klickar på **Slutför**.
+10. Under **skapa datainsamlaruppsättningen**väljer **starta datainsamlaruppsättningen nu**, och klicka på **Slutför**.
 
     Nu bör du se datainsamlaruppsättningen som du skapade med en grön triangel som anger att den fungerar.
 

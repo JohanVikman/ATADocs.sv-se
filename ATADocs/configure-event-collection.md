@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ebf3165973c14c45d33c95769f0e6ae47e3e795
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -35,17 +35,17 @@ För att kunna förbättra identifieringsfunktionerna behöver ATA följande Win
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>WEF-konfiguration för ATA-gatewayar med portspegling
 
-När du konfigurerat portspegling från domänkontrollanter till ATA Gateway, följ anvisningarna nedan för att konfigurera vidarebefordran av Windows-händelse med källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
+När du har konfigurerat portspegling från domänkontrollanterna till ATA Gateway, följer du följande instruktioner för att konfigurera vidarebefordran av Windows-händelse med källan initierade konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
 
 **Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp** 
 
-I det här scenariot antar vi att ATA-gatewayen är medlem i domänen.
+I det här scenariot förutsätter att ATA-gatewayen är medlem i domänen.
 
-1.  Öppna Active Directory-användare och -datorer, navigera till mappen **BuiltIn** och dubbelklicka på **händelseloggläsare**. 
+1.  Öppna Active Directory-användare och datorer, navigera till den **BuiltIn** mappen och dubbelklickar på **Händelseloggläsare**. 
 2.  Välj **medlemmar**.
 4.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
 
-Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händelseloggläsare** måste starta om domänkontrollanterna för att ändringen ska börja gälla.
+När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare** och starta om domänkontrollanterna för att ändringarna ska börja gälla.
 
 **Steg 2: Skapa en princip på domänkontrollanterna för att ställa in inställningen Konfigurera målprenumerationshanterare.** 
 > [!Note] 
@@ -57,11 +57,11 @@ Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händ
 
  ![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
 
-4.  Dubbelklicka på **Konfigurera målprenumerationshanterare**.
+4.  Dubbelklicka på **konfigurera mål prenumeration Manager**.
    
     1.  Välj **Aktiverad**.
-    2.  Under **Alternativ** klickar du på **Visa**.
-    3.  Under **SubscriptionManagers** anger du följande värde och klickar på **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    2.  Under **alternativ**, klickar du på **visa**.
+    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, uppdatera = 10* () Till exempel: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, uppdatera = 10)
  
    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
    
@@ -72,10 +72,10 @@ Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händ
 
 1.  Öppna en upphöjd kommandotolk och skriv *wecutil qc*
 2.  Öppna **Loggboken**. 
-3.  Högerklicka på **Prenumerationer** och välj **Skapa prenumeration**. 
+3.  Högerklicka på **prenumerationer** och välj **skapa prenumeration**. 
 
    1.   Ange namn och beskrivning för prenumerationen. 
-   2.   För **Målloggen**, bekräfta att **Vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
+   2.   För **mål loggen**, bekräftar du att **vidarebefordrade händelser** är markerad. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
    3.   Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
         1.  Klicka på **Lägg till domändator**.
         2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
@@ -91,12 +91,12 @@ Observera att du efter att ha lagt till **nätverkstjänsten** i gruppen **Händ
 
  ![Frågefilterbild](media/wef 4 query filter.png)
 
-   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** för att se om det finns problem med statusen. 
+   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det uppstår några problem med status. 
    6.   Efter några minuter kontrollerar du att de händelser som du har konfigurerat för vidarebefordran visas i Vidarebefordrade händelser på ATA-gatewayen.
 
 
-Mer information finns i: [Konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)
+Mer information finns: [konfigurera datorerna att vidarebefordra och samla händelser](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Se även
 - [Installera ATA](install-ata-step1.md)
-- [Ta en titt i ATA-forumet!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

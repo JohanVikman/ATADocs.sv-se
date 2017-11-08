@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b4621aa4deb8ba06bdc5ff3b038fbb26398fce45
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: c0105b940e97a5854d45e147b724f1169c73ad65
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -192,7 +192,7 @@ Exempel på körning av skriptet:
     
     
 ## <a name="validate-port-mirroring-using-net-mon"></a>Validera portspegling med Net Mon
-1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på den ATA-gateway som du vill validera.
+1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på ATA Gateway som du vill validera.
 
     > [!IMPORTANT]
     > Installera inte Microsoft Analysverktyg för meddelanden eller någon annan programvara för trafikinsamling på ATA Gateway.

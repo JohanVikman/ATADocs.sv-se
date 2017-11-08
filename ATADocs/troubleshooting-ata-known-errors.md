@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -62,7 +62,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 |System.Threading.Tasks.TaskCanceledException: En uppgift avbröts|Tidsgränsen för distributionsprocessen gick ut eftersom det inte gick att nå ATA Center.|1.    Kontrollera nätverksanslutningen till ATA Center genom att ansluta till tjänsten med hjälp av dess IP-adress. <br></br>2.    Kontrollera proxy- eller brandväggskonfigurationerna.|
 |System.Net.Http.HttpRequestException: Ett fel uppstod när begäran skickades. ---> System.Net.WebException: Fjärrservern returnerade ett fel: 407 - Proxy-autentisering krävs.|Tidsgränsen för distributionsprocessen gick ut eftersom det inte gick att nå ATA Center på grund av en felaktig proxykonfiguration.|Inaktivera proxykonfigurationen före distributionen och aktivera sedan proxykonfigurationen igen. Du kan också konfigurera ett undantag i proxyn.|
 |System.Net.Sockets.SocketException: En befintlig anslutning avslutades av fjärrvärden||Använd ett av följande alternativ: </br>Aktivera TLS 1.0 på ATA-gatewayen </br>Aktivera TLS 1.2 på .net genom att ange registernycklar för att använda operativsystemet standardvärdena för SSL och TLS, enligt följande:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|Fel [\[] DeploymentModel [\]] misslyckades hanteringsautentiseringstypen [\[] CurrentlyLoggedOnUser =<domain>\<användarnamn > Status = FailedAuthentication undantag = [\]]|Distributionsprocessen för ATA Gateway eller ATA Lightweight Gateway kunde har inte autentisera mot ATA Center|Öppna en webbläsare på datorn där distributionen misslyckades och se om du till ATA-konsolen. </br>Om du inte starta felsökning om du vill se varför webbläsaren kan inte autentiseras mot ATA Center. </br>Saker att kontrollera:</br>Proxykonfiguration</br>Problem med nätverk</br>Grupprincipinställningar för autentisering på den dator som skiljer sig från ATA Center.|
+|Fel [\[] DeploymentModel [\]] misslyckades hanteringsautentiseringstypen [\[] CurrentlyLoggedOnUser =<domain>\<användarnamn > Status = FailedAuthentication undantag = [\]]|Distributionsprocessen för ATA Gateway eller ATA Lightweight Gateway kunde har inte autentisera mot ATA Center|Öppna en webbläsare på datorn där distributionen misslyckades och se om du till ATA-konsolen. </br>Om du inte starta felsökning om du vill se varför webbläsaren kan inte autentiseras mot ATA Center. </br>Saker att kontrollera: </br>Proxykonfiguration</br>Problem med nätverk</br>Grupprincipinställningar för autentisering på den dator som skiljer sig från ATA Center.|
 
 
 

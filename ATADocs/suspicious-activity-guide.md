@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 32fe3fa2f5464b0b771491186d0775e9474e5483
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -34,7 +34,7 @@ Följande rätt undersökningen eventuell misstänkt aktivitet kan klassificeras
 
 Mer information om hur du arbetar med ATA-aviseringar finns [arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md).
 
-För frågor eller kommentarer, kontaktar du oss på [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
+För frågor eller kommentarer, kontakta ATA-teamet på [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
 
 ## <a name="abnormal-sensitive-group-modification"></a>Onormal modifiering av känslig grupp
 
@@ -47,7 +47,7 @@ En definition av känsliga grupper i ATA finns [arbeta med ATA-konsolen](working
 
 
 Identifieringen förlitar sig på [händelser granskas på domänkontrollanter](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-Använd verktyget som refereras i [ATA granskning (AuditPol, avancerad granska inställningar tvingande, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog) för att kontrollera din domän granska nödvändiga händelser från domänkontrollanter.
+Kontrollera att domänkontrollanterna granska nödvändiga händelser genom att använda verktyget refereras i [ATA granskning (AuditPol, avancerad granska inställningar tvingande, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog).
 
 **Undersökning**
 
@@ -109,7 +109,7 @@ Det finns tre typer av identifiering:
 
 1.  Skadlig Skeleton Key – är skadlig kod som körs på domänkontrollanter och tillåter autentisering i domänen med ett konto utan att känna till lösenordet. Den skadliga koden använder ofta svagare krypteringsalgoritmer till chiffrering lösenord på domänkontrollanten. I denna identifiering har kryptering för att KRB_ERR meddelandet från källdatorn nedgraderas jämfört med tidigare inlärda beteende.
 
-2.  Guld biljett – i en [Golden Ticket](#golden-ticket) aviseringen krypteringsmetod i fältet TGT för TGS_REQ (service request) meddelande från källdatorn har nedgraderas jämfört med tidigare inlärda beteende. Observera att detta inte är baserad på en gång avvikelseidentifiering (som andra Golden Ticket identifieringen). Dessutom kan det fanns ingen begäran om Kerberos-autentisering som är associerade med ovan tjänstbegäran som identifieras av ATA.
+2.  Guld biljett – i en [Golden Ticket](#golden-ticket) aviseringen krypteringsmetod i fältet TGT för TGS_REQ (service request) meddelande från källdatorn har nedgraderas jämfört med tidigare inlärda beteende. Detta baseras inte på en gång avvikelseidentifiering (som andra Golden Ticket identifieringen). Dessutom kan det fanns ingen begäran om Kerberos-autentisering som är associerade med den tidigare tjänstbegäran som identifieras av ATA.
 
 3.  Overpass-the-Hash-AS_REQ kryptering meddelandetypen från källdatorn har nedgraderas jämfört med tidigare inlärda beteendet (det vill säga datorn var med AES).
 
@@ -131,7 +131,7 @@ Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanståe
 2.  Gyllene biljett – Följ instruktionerna för den [Golden Ticket](#golden-ticket) misstänkta aktiviteter.   
     Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
-3.  Overpass-the-Hash – återställa om kontot ingår inte är skiftlägeskänslig, sedan lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Se vägledningen i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Se även med hjälp av den [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
+3.  Overpass-the-Hash – återställa om kontot ingår inte är skiftlägeskänslig, sedan lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Se vägledningen i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Se även med hjälp av den [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
 
 ## Golden Ticket<a name="golden-ticket"></a>
 
@@ -139,7 +139,7 @@ Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanståe
 
 Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som ger behörighet till en resurs och som helst godtycklig biljett upphör att gälla. Den här falska TGT kallas ”Golden Ticket” och tillåter angripare att uppnå lagring i nätverket.
 
-I denna identifiering en avisering ska utlösas när en Kerberos-biljett beviljande biljetter används för mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
+I denna identifiering en avisering utlöses när en Kerberos-biljett beviljande biljetter används för mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
 
 **Undersökning**
 
@@ -151,7 +151,7 @@ I denna identifiering en avisering ska utlösas när en Kerberos-biljett bevilja
 
 **Reparation**
 
-Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger.  
+Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det.  
 Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
 ## <a name="honeytoken-activity"></a>Honeytoken-aktivitet
@@ -189,9 +189,9 @@ Användes hash från en dator som den aktuella användaren äger eller regelbund
 
 **Reparation**
 
-1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. 
+1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. 
 
-2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
+2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Identitetsstöld med Pass-the-Ticket-attacker
 
@@ -207,16 +207,16 @@ Pass the Ticket är en lateral förflyttning teknik som stjäl angriparen en Ker
 
 **Reparation**
 
-1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angriparen att skapa nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla.  
+1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla.  
 
-2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Alla Kerberos biljetter i den här domänen så planerar innan du gör det kommer att upphäva om du återställer KRBTGT två gånger. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Eftersom det är en teknik som lateral förflyttning, följ rekommenderade metoder i [skicka hash-rekommendationer](http://aka.ms/PtH).
+2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Eftersom det är en teknik som lateral förflyttning, följ rekommenderade metoder i [skicka hash-rekommendationer](http://aka.ms/PtH).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
 
 **Beskrivning**
 
 Data Protection API (DPAPI) används av Windows för att skydda lösenord som sparas av webbläsare, krypterade filer och andra känsliga data på ett säkert sätt. Domänkontrollanter håller en säkerhetskopiering huvudnyckel som kan användas för att dekryptera alla hemligheter som krypterats med DPAPI på domänanslutna Windows-datorer. Angripare kan använda den huvudnyckeln för att dekryptera alla hemligheter som skyddas av DPAPI på alla domänanslutna datorer.
-I den här identifieringen kommer en avisering utlöses när av DPAPI används för att hämta huvudnyckeln för säkerhetskopiering.
+I denna identifiering utlöses en avisering när av DPAPI används för att hämta huvudnyckeln för säkerhetskopiering.
 
 **Undersökning**
 
@@ -399,7 +399,7 @@ Angripare som angripa administratörsbehörighet eller använder ett noll-dagars
 
 **Beskrivning**
 
-Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även bero på känsliga konton. Övervaka nätverkstrafik angripare kan fånga och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. Alla lösenord i klartext för känsligt konto ska utlösa aviseringen, medan för icke-känsliga konton aviseringen utlöses om fem eller fler olika konton skickar rena textlösenord från samma källdator. 
+Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även bero på känsliga konton. Övervaka nätverkstrafik angripare kan fånga och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. Alla lösenord i klartext för känsligt konto utlöser aviseringen medan för icke-känsliga konton aviseringen utlöses om fem eller fler olika konton skickar rena textlösenord från samma källdator. 
 
 **Undersökning**
 
@@ -453,7 +453,7 @@ Beroende på vad som orsakade det här onormalt beteende ska ske, vidtas olika �
 
 **Beskrivning**
 
-Angripare använda verktyg som implementerar olika protokoll (SMB, Kerberos, NTLM) på sätt som inte är standard. När den här typen av nätverkstrafik har normalt accepteras av Windows utan varningar, kan ATA identifiera potentiella skadliga åtgärder. Beteendet är jämförbar olika tekniker, till exempel Over-Pass-the-Hash och brute force och som används av avancerade är en utpressningstrojan som, till exempel WannaCry kryphål.
+Angripare använda verktyg som implementerar olika protokoll (SMB, Kerberos, NTLM) på sätt som inte är standard. När den här typen av nätverkstrafik godkänns av Windows utan varningar, kan ATA identifiera potentiella skadliga åtgärder. Beteendet är jämförbar olika tekniker, till exempel Over-Pass-the-Hash och brute force och som används av avancerade är en utpressningstrojan som, till exempel WannaCry kryphål.
 
 **Undersökning**
 

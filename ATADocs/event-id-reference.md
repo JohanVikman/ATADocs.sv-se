@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 3ef6322a4c63c15bbdae0669a7d116dfd80756db
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -64,7 +64,7 @@ Händelserna som finns här:
 
 1017 – center inte tar emot trafik hälsoavisering 
 
-1018 – ATA-gatewayen startar hälsa avisering 
+1018 – hälsoavisering för ATA Gateway-startfel 
 
 1 019 – ATA Gateway minnesbrist hälsoavisering 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a164179261dd5a50df973fab89be7ddce99f8c47
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 2f5db3fad62b0fe2243b5bbd82677426ee6fe90c
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/06/2017
 ATA (Advanced Threat Analytics) samlar in anonymiserade telemetridata om ATA och överför data via en HTTPS-anslutning till Microsoft-servrar.  Dessa data används av Microsoft för att förbättra kommande versioner av ATA.
 
 ## <a name="data-collected"></a>Insamlade data
-Insamlade anonymiserade data omfattar följande:
+Insamlade anonymiserade data omfattar följande parametrar:
 
 -   Prestandaräknare från både ATA Center och ATA Gateway
 
@@ -79,7 +79,7 @@ Insamlade anonymiserade data omfattar följande:
 
     -   Start- och sluttid
 
-- ATA-konsolens URL-adresser - webbadresser vid användning av ATA-konsolen, d.v.s. vilka sidor i ATA-konsolen som besöks.
+- ATA-konsolens URL-adresser – URL-adresser när du använder ATA-konsolen, det vill säga vilka sidor i ATA-konsolen som besöks.
 
 
 ### <a name="disable-data-collection"></a>Inaktivera datainsamling
