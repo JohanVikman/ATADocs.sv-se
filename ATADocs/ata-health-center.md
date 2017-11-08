@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00576915776e495c1c0229e3632ef4390919d017
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: e5009d126f3c1b9d73f064787049068b071c5319
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -39,14 +39,14 @@ Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Ce
 
 -   **Öppna**: Alla nya misstänkta aktiviteter visas i den här listan.
 
--   **Stäng**: Används för att spåra misstänkta aktiviteter som du har identifierat, undersökt och åtgärdat.
+-   **Stäng**: används för att spåra misstänkta aktiviteter som du identifierat, undersökt och åtgärdat för begränsade.
 
     > [!NOTE]
-    > ATA kan öppna en stängd aktivitet om det samma aktivitet identifieras igen under en kort tidsperiod.
+    > ATA kan öppna en stängd aktivitet om samma aktivitet identifieras igen inom en kort tidsperiod.
 
--   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär att om det finns en liknande avisering så öppnas den inte igen av ATA. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, så aviseras du igen.
+-   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen slutar i sju dagar och sedan visas igen, du meddelas igen.
 
-- **Ta bort**: Om du tar bort en avisering tas den bort från systemet och från databasen och du kan INTE återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+- **Ta bort**: Om du tar bort en avisering, tas bort från systemet från databasen och du kommer inte att kunna återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
 
 
 

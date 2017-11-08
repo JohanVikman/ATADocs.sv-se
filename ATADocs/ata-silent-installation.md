@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 16a8eb868448cc43244d3cf3c933e2e539b08d07
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -29,13 +29,13 @@ Den här artikeln innehåller instruktioner för tyst installation av ATA.
 
 ATA version 1.8 kräver installation av Microsoft .NET Framework 4.6.1. 
 
-När du installerar eller uppdaterar ATA kommer .Net Framework 4.6.1 att installeras automatiskt som en del av distributionen av Microsoft ATA.
+När du installerar eller uppdaterar ATA kommer .net Framework 4.6.1 är automatiskt installeras som en del av distributionen av Microsoft ATA.
 
 > [!Note] 
 > Installationen av .Net Framework 4.6.1 kan kräva att servern startas om. När du installerar ATA Gateway på domänkontrollanter kan du överväga att schemalägga en underhållsperiod för dessa domänkontrollanter.
-När du använder metoden för tyst installation av ATA konfigureras installationsprogrammet automatiskt så att servern startas om i slutet av installationen (vid behov). På grund av en bugg i Windows Installer kan norestart-flaggan inte användas på ett tillförlitligt sätt för att se till att servern inte startas om. Kör därför endast obevakade installationer under en underhållsperiod.
+När du använder metoden för tyst installation av ATA konfigureras installationsprogrammet automatiskt så att servern startas om i slutet av installationen (vid behov). På grund av ett Windows Installer-fel norestart flaggan inte kan användas på ett tillförlitligt sätt att kontrollera att servern inte startar om, så se till att endast köra tyst installation under en underhållsperiod.
 
-Följ distributionsförloppet genom att övervaka ATA-installationsloggarna som finns i **%AppData%\Local\Temp**.
+Om du vill spåra förloppet för distributionen, övervaka ATA-installationsloggarna som finns i **%AppData%\Local\Temp**.
 
 
 ## <a name="install-the-ata-center"></a>Installera ATA Center
@@ -66,9 +66,9 @@ Använd följande kommando för att installera ATA Center.
 |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Nej|Anger sökvägen till datamappen för ATA-databasen. Standardsökväg: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ja|Anger IP-adressen för ATA Center-tjänsten|
 |CenterPort|CenterPort=<CenterPort>|Ja|Anger nätverksporten för ATA Center-tjänsten|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om det inte anges kommer installationen att generera ett självsignerat certifikat.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Nej|Anger certifikatets tumavtryck för ATA Center-tjänsten. Det här certifikatet används för att skydda kommunikationen mellan ATA Center och ATA Gateway. Om du inte ange installationen genererar ett självsignerat certifikat.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ja|Anger IP-adressen för ATA-konsolen|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Nej|Anger certifikatets tumavtryck för ATA-konsolen. Det här certifikatet används för att verifiera identiteten för ATA-konsolens webbplats. Om inget anges genererar installationen ett självsignerat certifikat|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Nej|Anger certifikatets tumavtryck för ATA-konsolen. Det här certifikatet används för att verifiera identiteten för webbplatsen ATA-konsolen. Om inget anges genererar installationen ett självsignerat certifikat|
 
 **Exempel**:Installera ATA Center med standardinstallationssökvägar och en enda IP-adress:
 
@@ -168,7 +168,7 @@ Använd följande kommando för att installera ATA Gateway:
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ja|Anger namnet på det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ja|Anger lösenordet för det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
 
-**Exempel**: Om du vill köra en obevakad installation av ATA Gateway loggar du in på den domänanslutna datorn med dina ATA-administratörsautentiseringsuppgifter, så behöver du inte ange autentiseringsuppgifter. Annars registrerar du den med ATA Center med hjälp av de angivna autentiseringsuppgifterna:
+**Exempel**: Om du vill installera ATA Gateway, logga in på domänen ansluten dator med dina administratörsautentiseringsuppgifter för ATA så att du inte behöver ange autentiseringsuppgifter som en del av installationen. Annars registrerar du den med ATA Center med hjälp av de angivna autentiseringsuppgifterna:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

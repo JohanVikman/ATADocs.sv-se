@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4455be4f300b698b2ba8b53529e894700a282147
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -30,7 +30,7 @@ Om ATA identifierar **rekognosering med DNS** i ditt nätverk och aviserar dig o
 Aviseringen om **rekognosering med DNS** anger att misstänkta DNS-frågor (Domain Name System) görs från en ovanlig värd för att rekognosera ditt interna nätverk.
 
 DNS (Domain Name System) är en tjänst som implementeras som en hierarkisk, distribuerad databas som kan matcha värdnamn och domännamn. Namnen i en DNS-databas bildar en hierarkisk trädstruktur kallad domänens namnområde.
-För en angripare innehåller ditt DNS-system värdefull information om mappningen i ett internt nätverk, inklusive en lista över alla servrar och ofta alla klienter och deras mappningar till IP-adresser. Den här informationen är dessutom värdefull eftersom den anger värdnamn som ofta är beskrivande i en viss nätverksmiljö. Genom att samla in den här informationen kan en angripare bättre prioritera sitt arbete på relevanta entiteter under en attack. Verktyg som [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) och inbyggda verktyg som [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) innehåller funktioner för värdidentifiering med DNS-rekognosering.
+För en angripare innehåller ditt DNS-system värdefull information om mappningen i ett internt nätverk, inklusive en lista över alla servrar och ofta alla klienter och deras mappningar till IP-adresser. Den här informationen är dessutom värdets eftersom visas en lista med värdnamn, som ofta är beskrivande i en given nätverksmiljö. Genom att samla in den här informationen kan en angripare bättre prioritera sitt arbete på relevanta entiteter under en attack. Verktyg som [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) och inbyggda verktyg som [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) innehåller funktioner för värdidentifiering med DNS-rekognosering.
 Identifieringen av rekognosering med DNS-frågor från en intern värd bör inte tas lättvindigt eftersom det kan vara tecken på att en befintlig värd eller ett större nätverk har komprometterats, eller tyda på ett insiderhot.
 
 ## <a name="dns-query-types"></a>DNS-frågetyper
@@ -56,7 +56,7 @@ Följande diagram gör det enklare att avgöra vilka undersökningssteg du bör 
 
 ![Matcha DNS-rekognosering med ATA](./media/dns-recon-diagram.png)
  
-1.  Det första steget är att identifiera den dator som aviseringen kommer från, som du ser nedan:
+1.  Det första steget är att identifiera den datorn aviseringen kommer från, som beskrivs i följande skärmbild:
  
     ![Visa misstänkt aktivitet med DNS-rekognosering i ATA](./media/dns-recon.png)
 2.  Fastställ vad det är för typ av dator. Är det en arbetsstation, server, arbetsstation, penetrationstestningsstation eller liknande?
@@ -80,7 +80,7 @@ Microsoft rekommenderar att du använder ett professionellt team för incidentsv
 
 ## <a name="mitigation"></a>Lösningar
 
-Du kan skydda en intern DNS-server för att förhindra rekognosering med DNS genom att inaktivera eller begränsa zonöverföringar till endast angivna IP-adresser. Mer information om hur du begränsar zonöverföringar finns i Windows Server Technet-artikeln [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) (Begränsa zonöverföringar). Du kan ytterligare begränsa begränsade zonöverföringar genom att [skydda zonöverföringar med IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Ändringar av zonöverföringar är en av uppgifterna i en checklista som bör utföras för att [skydda DNS-servrar från både interna och externa attacker](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Du kan skydda en intern DNS-server för att förhindra rekognosering med DNS genom att inaktivera eller begränsa zonöverföringar till endast angivna IP-adresser. Mer information om hur du begränsar zonöverföringar finns [begränsa zonöverföringar](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Du kan ytterligare begränsa begränsade zonöverföringar genom att [skydda zonöverföringar med IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Ändringar av zonöverföringar är en av uppgifterna i en checklista som bör utföras för att [skydda DNS-servrar från både interna och externa attacker](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 

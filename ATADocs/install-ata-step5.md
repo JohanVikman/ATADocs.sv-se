@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 518153d03f41956871ec5e7bf680f72187e4919c
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -47,29 +47,29 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
 
       Följande information gäller servrar som du anger i listan **Domänkontrollanter**:
       - Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
-      - Minst en domänkontrollant i listan bör vara en global katalog. Det gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
+      - Minst en domänkontrollant i listan bör vara en global katalog. Detta gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
 
   - **Avbilda nätverkskort** (krävs):
-  - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa tar emot trafiken för den speglade domänkontrollanten.
+  - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa ta emot speglad domain controller trafik.
   - För en ATA Lightweight Gateway bör detta vara alla nätverkskort som används för kommunikation med andra datorer i organisationen.
 
 
-  - **Kandidat för domänsynkronisering**: Eventuell ATA Gateway som har konfigurerats som kandidat för domänsynkronisering kan ansvara för synkronisering mellan ATA och Active Directory-domänen. Den första synkroniseringen kan ta en stund beroende på storleken på domänen och är resurskrävande. Som standard anges endast ATA-gatewayar som kandidater för domänsynkronisering.
-   Vi rekommenderar att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.
+  - **Kandidat för domänsynkronisering**: Eventuell ATA Gateway som har konfigurerats som kandidat för domänsynkronisering kan ansvara för synkronisering mellan ATA och Active Directory-domänen. Beroende på domänens storlek på den första synkroniseringen kan ta lite tid och är resurskrävande. Som standard anges endast ATA-gatewayar som kandidater för domänsynkronisering.
+   Det rekommenderas att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.
    Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Mer information finns i [ATA-arkitektur](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > Det tar några minuter för ATA Gateway-tjänsten att startas första gången efter installation eftersom den bygger upp cache för tolkar för nätverksavbildning.
-  > Konfigurationsändringarna verkställs på ATA Gateway vid nästa schemalagda synkronisering mellan ATA Gateway och ATA Center.
+  > Ändringar i konfigurationen tillämpas på ATA Gateway vid nästa schemalagda synkronisering mellan ATA Gateway och ATA Center.
 
 3. Du kan välja att ange [Syslog listener och Windows Event Forwarding Collection](configure-event-collection.md). 
-4. Aktivera **Uppdatera ATA Gateway automatiskt** så att denna ATA Gateway uppdateras automatiskt när du uppdaterar ATA Center med kommande versioner.
+4. Aktivera **uppdatera ATA Gateway automatiskt** så att med kommande versioner när du uppdaterar ATA Center, ATA-Gateway uppdateras automatiskt.
 
 5. Klicka på **Spara**.
 
 
 ## <a name="validate-installations"></a>Verifiera installationer
-Kontrollera följande om du vill verifiera att ATA-gatewayen har distribuerats:
+Om du vill verifiera att ATA Gateway har distribuerats, kontrollerar du följande steg:
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Gateway** körs. Det kan ta några minuter innan tjänsten startar efter att du har sparat inställningarna för ATA Gateway.
 

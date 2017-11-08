@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1494f0428593ee58c7e1da64192b45c6d006c15
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 891ba71bcb8c1ee362b92be2404c65c7b5158055
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.7
 Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
@@ -30,9 +30,9 @@ Uppdateringen för ATA 1.7 ger förbättringar inom följande områden:
 ## <a name="updating-ata-to-version-17"></a>Uppdatera ATA till version 1.7
 
 > [!NOTE] 
-> Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.7, och följa standardproceduren för installation som beskrivs i [Installera ATA](install-ata-step1.md).
+> Om ATA inte är installerat i din miljö kan du hämta den fullständiga versionen av ATA, som innehåller version 1.7 och följa standardproceduren för installation som beskrivs i [installera ATA](install-ata-step1.md).
 
-Om du redan har distribuerat ATA version 1.6 vägleder den här proceduren dig igenom de steg som krävs för att uppdatera distributionen.
+Om du redan har ATA version 1.6 distribueras vägleder dig genom stegen för att uppdatera distributionen i den här proceduren.
 
 > [!NOTE] 
 > Du kan inte installera ATA version 1.7 direkt på ATA version 1.4 eller 1.5. Du måste först installera ATA version 1.6. 
@@ -53,7 +53,7 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
-    -   Om ATA Center körs som en virtuell dator och du vill göra en kontrollpunkt ska du först stänga av den virtuella datorn.
+    -   Om ATA Center körs som en virtuell dator och du vill ta en kontrollpunkt, stänga av den virtuella datorn först.
 
     -   Om ATA Center körs på en fysisk server ska du följa den rekommenderade proceduren för att [säkerhetskopiera MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -61,11 +61,11 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 
     -  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
-    -  Om du inte aktiverat automatiska uppdateringar i version 1.6, uppmanas du att ställa in ATA till att använda Microsoft Update för att ATA ska hållas uppdaterad.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
-    ![Bild om att hålla ATA uppdaterat](media/ata_ms_update.png) Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
+    -  Om du inte aktiverar automatiska uppdateringar i version 1.6, uppmanas du att ange ATA att använda Microsoft Update för ATA för att hålla dig informerad.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
+    ![Hålla ATA uppdaterat avbildningen](media/ata_ms_update.png) detta justerar Windows-inställningar för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), som visas här. 
      ![Bild om automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
 
-    -  På skärmen **Datamigrering** väljer du om du vill migrera alla eller partiella data. Om du väljer att migrera endast partiella data migreras inte din tidigare avbildade nätverkstrafik och beteendeprofiler kommer inte att migreras. Detta innebär att det tar tre veckor innan identifieringen av onormalt beteende har en klar profil för att aktivera identifiering av onormal aktivitet. Under dessa tre veckor kommer alla andra ATA-identifieringar att fungera korrekt. Migrering av **partiella** data tar mycket kortare tid att installera. Om du väljer **fullständig** datamigrering, kan det ta väldigt lång tid att slutföra installationen. Den uppskattade mängden tid och det nödvändiga diskutrymmet, som visas på skärmen **Datamigrering**, beror på mängden tidigare avbildad nätverkstrafik som du sparat i tidigare versioner av ATA. Innan du väljer **partiell** eller **fullständig**, se till att kontrollera kraven.  
+    -  På skärmen **Datamigrering** väljer du om du vill migrera alla eller partiella data. Om du väljer att migrera endast partiella data migreras inte din tidigare avbildade nätverkstrafik och beteendeprofiler kommer inte att migreras. Det innebär att det tar tre veckor innan identifieringen onormalt beteende har en fullständig profil att aktivera identifiering av avvikande aktivitet. Under dessa tre veckor fungerar andra ATA-identifieringar korrekt. Migrering av **partiella** data tar mycket kortare tid att installera. Om du väljer **fullständig** datamigrering, kan det ta väldigt lång tid att slutföra installationen. Den uppskattade mängden tid och det nödvändiga diskutrymmet, som visas på skärmen **Datamigrering**, beror på mängden tidigare avbildad nätverkstrafik som du sparat i tidigare versioner av ATA. Innan du väljer **partiell** eller **fullständig**, se till att kontrollera kraven.  
     
     ![ATA-datamigrering](media/migration-data-migration17.png)
 
@@ -74,7 +74,7 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 4.  När ATA Center-uppdateringen är klar klickar du på **Starta** för att öppna skärmen **Uppdatera** i ATA-konsolen för ATA-gatewayar.
     ![Skärm för lyckad uppdatering](media/migration-center-success17.png)
 
-5.  På skärmen **Uppdateringar**, om du har angett att ATA-gatewayer automatiskt ska uppdateras, kommer de att uppdateras nu, om inte, klicka på **Uppdatera** bredvid varje ATA Gateway.
+5.  I den **uppdateringar** skärmen, om du redan angett ATA-gatewayer för att automatiskt uppdatera de Uppdatera nu, om inte, klicka på **uppdatera** bredvid varje ATA Gateway.
   ![Bild av uppdatera gatewayar](media/migration-update-gw-17.png)
 
   
@@ -83,7 +83,7 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 > Den konfigurerade Syslog-lyssnarporten på alla gatewayar ändras till 514.
  
 > [!NOTE] 
-> Om du vill installera nya ATA-gatewayer går du till skärmen **Gatewayer** och klickar på alternativet för att **ladda ned gateway-konfigurationer**. Hämta ATA 1.7-installationspaketet och följ anvisningarna för den nya gateway-installationen som beskrivs i [Steg 4. Installera ATA-gatewayen](install-ata-step4.md) .
+> Om du vill installera nya ATA-gatewayer går du till skärmen **Gatewayer** och klickar på alternativet för att **ladda ned gateway-konfigurationer**. Hämta ATA 1.7-installationspaketet och följ anvisningarna för den nya gateway-installationen som beskrivs i [Steg 4. Installera ATA Gateway](install-ata-step4.md).
 
 
 

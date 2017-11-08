@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8979b7a032e8f44f2da3844cbcb975d4f3f5c84
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.6
 Uppdateringen för ATA 1.6 ger förbättringar inom följande områden:
@@ -38,12 +38,12 @@ Uppdateringen för ATA 1.6 ger förbättringar inom följande områden:
 
 ## <a name="updating-ata-to-version-16"></a>Uppdatera ATA till version 1.6
 > [!NOTE] 
-> Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.6, och följa standardproceduren för installation som beskrivs i [Installera ATA](install-ata-step1.md).
+> Om ATA inte är installerat i din miljö kan du hämta den fullständiga versionen av ATA, som innehåller version 1.6 och följa standardproceduren för installation som beskrivs i [installera ATA](install-ata-step1.md).
 
-Om du redan har distribuerat ATA version 1.5 vägleder den här proceduren dig igenom de steg som krävs för att uppdatera distributionen.
+Om du redan har distribuerat ATA version 1.5 vägleder dig genom stegen för att uppdatera distributionen i den här proceduren.
 
 > [!NOTE] 
-> Du kan inte installera ATA version 1.6 direkt på ATA version 1.4. Du måste först installera ATA version 1.5. Om du av misstag har försökt installera ATA 1.6 utan att installera ATA 1.5 visas ett fel som säger att **En nyare version är redan installerad på datorn.** Du måste avinstallera resterna av ATA 1.6 som är kvar på datorn, trots att installationen misslyckades, innan du installerar ATA version 1.5.
+> Du kan inte installera ATA version 1.6 direkt på ATA version 1.4. Du måste först installera ATA version 1.5. Om du av misstag har försökt installera ATA 1.6 utan att installera ATA 1.5, du får ett felmeddelande som säger att **en nyare version är redan installerad på datorn.** Du måste avinstallera resterna av ATA 1.6 som finns kvar på din dator - trots att installationen misslyckades, innan du installerar ATA version 1.5.
 
 Följ dessa steg för att uppdatera till ATA version 1.6:
 
@@ -65,26 +65,26 @@ I den här versionen används samma installationsfil (Microsoft ATA Center Setup
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
-    -   Om ATA Center körs som en virtuell dator och du vill göra en kontrollpunkt ska du först stänga av den virtuella datorn.
+    -   Om ATA Center körs som en virtuell dator och du vill ta en kontrollpunkt, stänga av den virtuella datorn först.
 
     -   Om ATA Center körs på en fysisk server ska du följa den rekommenderade proceduren för att [säkerhetskopiera MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
 2.  Kör installationsfilen, Microsoft ATA Center Setup.exe, och följ anvisningarna på skärmen för att installera uppdateringen.
 
-    1.  ATA 1.6 kräver att .Net Framework 4.6.1 är installerat. Om det inte redan är installerat kommer ATA-installationen att installera .Net Framework 4.6.1 som en del av installationen.
+    1.  ATA 1.6 kräver att .Net Framework 4.6.1 är installerat. Om du inte redan är installerat, ATA-installationen installerar .net Framework 4.6.1 som en del av installationen.
     
         > [!NOTE] 
         > Installationen av .Net Framework 4.6.1 kan kräva att servern startas om. ATA-installationen fortsätter först efter att servern har startats om.
     
     2.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
-    3.  Läs licensavtalet och klicka på **Nästa** om du godkänner licensvillkoren.
+    3.  Läs licensavtalet och om du accepterar villkoren klickar du på **nästa**.
 
     4.  Det är nu möjligt att använda Microsoft Update för att hålla ATA uppdaterat.  På sidan Microsoft Update markerar du **Använd Microsoft Update när jag söker efter uppdateringar (rekommenderas)**.
-    ![Bild om att hålla ATA uppdaterat](media/ata_ms_update.png) Detta justerar Windows-inställningarna för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), på det sätt som visas här. 
+    ![Hålla ATA uppdaterat avbildningen](media/ata_ms_update.png) detta justerar Windows-inställningar för att aktivera uppdateringar för andra Microsoft-produkter (inklusive ATA), som visas här. 
      ![Bild om automatisk uppdatering av Windows](media/ata_installupdatesautomatically.png)
 
-    5.  ATA utför en beredskapskontroll innan installationen påbörjas. Granska resultaten av kontrollen för att se till att kraven har konfigurerats och du har det minsta tillgängliga diskutrymme som krävs. 
+    5.  Innan installationen påbörjas utför ATA en beredskapskontroll. Granska resultatet av kontrollen för att kontrollera att kraven har konfigurerats och att du har minst den minsta mängden ledigt diskutrymme. 
     ![Bild om ATA-beredskapskontroll](media/ata_install_readinesschecks.png)
 
     6.  Klicka på **Uppdatera**. När du har klickat på Uppdatera är ATA offline tills uppdateringsproceduren har slutförts.
@@ -111,7 +111,7 @@ Hämta ATA Gateway-paketet:
 
 4.  Spara paketet lokalt.
 
-ZIP-filen innehåller följande:
+Zip-filen innehåller följande filer:
 
 -   Installationsprogram för ATA Gateway
 
@@ -124,14 +124,14 @@ ZIP-filen innehåller följande:
     > [!NOTE] 
     > Du kan också använda det här ATA Gateway-paketet för att installera nya ATA Gateways.
 
-2.  De tidigare inställningarna bevaras, men det kan ta några minuter för tjänsten att startas om.
+2.  De tidigare inställningarna bevaras, men det kan ta några minuter innan tjänsten startas om.
 
 3.  Upprepa det här steget för alla andra distribuerade ATA Gateways.
 
 > [!NOTE] 
 > När en uppdatering av en ATA Gateway är klar försvinner meddelandet om att den är föråldrad på den specifika ATA-gatewayen.
 
-Du vet att uppdateringen av alla ATA Gateways är klar när alla ATA Gateways rapporterar att synkroniseringen är klar och genom att meddelandet om att det finns ett uppdaterat ATA Gateway-paket inte längre visas.
+Vet du att alla ATA-gatewayer har uppdaterats när alla ATA Gateways rapporterar att synkroniseringen är klar och meddelandet att ett uppdaterat ATA Gateway-paketet är tillgänglig visas inte längre.
 
 ![Bild av uppdaterade gateways](media/ATA-gw-updated.png)
 

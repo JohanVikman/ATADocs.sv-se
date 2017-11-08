@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 748121a709ac05756edf34e04e13b996190e9711
-ms.sourcegitcommit: b951c64228d4f165ee1fcc5acc0ad6bb8482d6a2
+ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="step-7-integrate-vpn"></a>Steg 7. Integrera VPN
 
-Microsoft Advanced Threat Analytics (ATA) version 1.8 kan samla in redovisningsinformation från VPN-lösningar. När konfigurerats tas användarens profilsida information från VPN-anslutningar, till exempel IP-adresser och platser där anslutningar har sitt ursprung. Detta kompletterar undersökningsprocessen ger ytterligare information om användaraktivitet. Anrop att matcha en extern IP-adress till en plats är anonym. Ingen personligt ID skickas i det här anropet.
+Microsoft Advanced Threat Analytics (ATA) version 1.8 kan samla in redovisningsinformation från VPN-lösningar. När konfigurerats omfattar användarens profilsida information från VPN-anslutningar, till exempel IP-adresser och platser där anslutningar har sitt ursprung. Detta kompletterar undersökningsprocessen ger ytterligare information om användaraktivitet. Anrop att matcha en extern IP-adress till en plats är anonym. Ingen personligt ID skickas i det här anropet.
 
 ATA kan integreras med din VPN-lösning genom att lyssna på RADIUS-redovisningshändelser som vidarebefordras till ATA-gatewayer. Den här mekanismen baseras på standard RADIUS-redovisning ([RFC 2866](https://tools.ietf.org/html/rfc2866)), och följande leverantörer stöds:
 
@@ -42,19 +42,19 @@ ATA kan integreras med din VPN-lösning genom att lyssna på RADIUS-redovisnings
 
 ## <a name="prerequisites"></a>Förutsättningar
 
-Om du vill aktivera VPN integration måste du ange följande:
+Om du vill aktivera VPN-integrering, se till att ange följande parametrar:
 
 -   Öppna porten UDP 1813 på ATA-gatewayer och ATA Lightweight-gatewayer.
 
 -   Ansluta ATA Center till Internet så att den kan fråga platsen för inkommande IP-adresser.
 
-I exemplet nedan använder vi Microsoft Routing and Remote Access Server (RRAS) för att beskriva den VPN-konfigurationen.
+Exemplet nedan använder Microsoft Routing and Remote Access Server (RRAS) för att beskriva den VPN-konfigurationen.
 
-Om du använder en 3 part VPN-lösning dokumentationen sina anvisningar om hur du aktiverar RADIUS-redovisning.
+Om du använder en VPN-lösning från tredje part dokumentationen sina anvisningar om hur du aktiverar RADIUS-redovisning.
 
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>Konfigurera RADIUS-redovisning på VPN-system
 
-Utför följande på RRAS-servern.
+Utför följande steg på RRAS-servern.
  
 1.  Öppna konsolen Routning och fjärråtkomst.
 2.  Högerklicka på namnet på servern och på **egenskaper**.
@@ -76,7 +76,7 @@ Konfigurera VPN-data i ATA:
  
   ![ATA config-menyn](./media/config-menu.png)
 
-2.  Aktivera **RADIUS-redovisning** på, och Skriv den **delad hemlighet** du tidigare konfigurerat på RRAS VPN-servern. Klicka sedan på **Spara**.
+2.  Aktivera **RADIUS-redovisning**, och Skriv den **delad hemlighet** du tidigare konfigurerat på RRAS VPN-servern. Klicka sedan på **Spara**.
  
 
   ![Konfigurera ATA VPN](./media/vpn.png)
@@ -84,7 +84,7 @@ Konfigurera VPN-data i ATA:
 
 När den är aktiverad, lyssna alla ATA-gatewayer och Lightweight-gatewayer på porten 1813 för RADIUS-redovisningshändelser. 
 
-Installationen är klar och du ser nu VPN-aktivitet i användarnas profilsida:
+Installationen är klar och du kan nu se VPN-aktivitet i användarnas profilsida:
  
    ![VPN-konfiguration](./media/vpn-user.png)
 

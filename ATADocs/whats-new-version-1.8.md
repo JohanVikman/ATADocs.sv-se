@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nyheter i ATA version 1.8
 
@@ -133,7 +133,7 @@ Felet kanske inte visas i Windows Server 2016 Core, men processen kommer att mis
 
 **Beskrivning**: uppdatering till 1,8 uppdatering 1 från 1,8 återställer rapporterna schemainställningar.
 
-**Lösning**: innan du uppdaterar till 1,8 uppdatering 1 gör en kopia av rapportinställningarna och ange dem, det kan också vara göras via ett skript, mer information finns i [exportera och importera ATA-konfiguration](ata-configuration-file.md).
+**Lösning**: innan du uppdaterar till 1,8 uppdatering 1 gör en kopia av rapportinställningarna och ange dem, det kan också vara via ett skript, mer information finns i [exportera och importera ATA-konfiguration](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Se även

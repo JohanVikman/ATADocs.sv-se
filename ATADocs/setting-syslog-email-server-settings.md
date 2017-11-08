@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5ba7d030a82c1c7515f0e71a865d727b0e675044
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 70e076dea5b1ff200b1b9f2a6529a76c175c7a88
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -39,8 +39,8 @@ ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska ku
     |Fält|Beskrivning|Värde|
     |---------|---------------|---------|
     |SMTP-serverslutpunkt (krävs)|Ange det fullständiga domännamnet för SMTP-servern och du kan också ändra portnumret (standard 25).|Exempel:<br />smtp.contoso.com|
-    |SSL|Växla SSL om SMTP-servern kräver SSL. **Obs!** Om du aktiverar SSL måste du också ändra portnumret.|Standardvärdet är inaktiverat|
-    |Autentisering|Aktivera om SMTP-servern kräver autentisering. **Obs!** Om du aktiverar autentisering måste du ange ett användarnamn och lösenord för ett e-postkonto som har behörighet att ansluta till SMTP-servern.|Standardvärdet är inaktiverat|
+    |SSL|Växla SSL om SMTP-servern kräver SSL. **Obs:** om du aktiverar SSL måste du också behöva ändra portnumret.|Standardvärdet är inaktiverat|
+    |Autentisering|Aktivera om SMTP-servern kräver autentisering. **Obs:** om du aktiverar autentisering måste du ange ett användarnamn och lösenord för ett e-postkonto som har behörighet att ansluta till SMTP-servern.|Standardvärdet är inaktiverat|
     |Skicka från (krävs)|Ange en e-postadress som e-postmeddelandet ska skickas från.|Exempel:<br />ATA@contoso.com|
     ![Bild för e-postserverinställningar i ATA](media/ata-email-server.png)
 

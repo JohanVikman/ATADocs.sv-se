@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
@@ -103,7 +103,7 @@ Vid uppdatering till ATA 1.6 kan uppdateringen misslyckas med följande felkod:
 
 Du kan också se felet: System.ArgumentNullException: Värdet får inte vara null.
     
-Om du ser något av dessa fel kör du följande lösning.
+Om du ser något av dessa fel, kör du följande lösning:
 
 **Lösning**: 
 
@@ -120,19 +120,19 @@ Om du ser något av dessa fel kör du följande lösning.
     2.  Microsoft Advanced Threat Analytics Center
 7.  Granska loggarna om du vill verifiera att produkten körs utan fel.
 8.  [Hämta](http://aka.ms/ataremoveduplicateprofiles "Hämta") verktyget "RemoveDuplicateProfiles.exe" och kopiera det till den huvudsakliga installationssökvägen (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
-9.  Kör "RemoveDuplicateProfiles.exe" från en upphöjd kommandotolk och vänta tills den har slutförts.
+9.  Från en upphöjd kommandotolk kör `RemoveDuplicateProfiles.exe` och vänta tills den har slutförts.
 10. Skriv följande kommando härifrån:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**:
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![Lösning för uppdatering](http://i.imgur.com/Nj99X2f.png)
 
-Detta bör returnera en WriteResult({ "nRemoved" : XX }) där ”XX” är antalet misstänkta aktiviteter som har tagits bort. Om antalet är större än 0 avslutar du kommandotolken och fortsätter med uppdateringsprocessen.
+Detta bör returnera en `WriteResult({ "nRemoved" : XX })` där ”XX” är antalet misstänkta aktiviteter som har tagits bort. Om antalet är större än 0 avslutar du kommandotolken och fortsätter med uppdateringsprocessen.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1 kräver att servern startas om
 
-I vissa fall kan installationen av .Net Framework 4.6.1 kräva att du startar om servern. Tänk på att om du klickar på OK i dialogrutan **Installation av Microsoft Advanced Threat Analytics Center** startas servern om automatiskt. Detta är särskilt viktigt när du installerar ATA Lightweight Gateway på en domänkontrollant, eftersom du kanske vill planera en underhållsperiod före installationen.
+I vissa fall kan installationen av .Net Framework 4.6.1 kräva att du startar om servern. Observera att klicka på OK i den **Microsoft Advanced Threat Analytics Center Setup** dialogrutan automatiskt startar om servern. Detta är särskilt viktigt när du installerar ATA Lightweight Gateway på en domänkontrollant, eftersom du kanske vill planera en underhållsperiod före installationen.
     ![Omstart av .NET Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historiska nätverksaktiviteter migreras inte längre

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -27,7 +27,7 @@ Advanced Threat Analytics (ATA) är en lokal plattform som skyddar ditt företag
 
 ## <a name="how-ata-works"></a>Så här fungerar ATA
 
-ATA använder en egen nätverksparsningsmotor för att samla in och parsa nätverkstrafiken för flera protokoll (till exempel Kerberos, DNS, RPC, NTLM med flera) för autentisering, auktorisering och insamling av information. Den här informationen samlas in av ATA via:
+ATA använder egna nätverket parsning av motorn för att samla in och analysera nätverkstrafik för flera protokoll (till exempel Kerberos, DNS, RPC, NTLM och andra) för autentisering, auktorisering och insamling av information. Den här informationen samlas in av ATA via:
 
 -   Portspegling från domänkontrollanter och DNS-servrar mot ATA-gatewayen och/eller
 -   Distribuera en ATA Lightweight Gateway (LGW) direkt på domänkontrollanter
@@ -40,18 +40,18 @@ ATA kan ta emot händelser och loggar från:
 -   Direkt från Windows Event Collector (för Lightweight Gateway)
 
 
-Läs mer om ATA-arkitektur under [ATA-arkitektur](ata-architecture.md).
+Mer information om ATA-arkitektur finns [ATA-arkitektur](ata-architecture.md).
 
 ## <a name="what-does-ata-do"></a>Vad gör ATA?
 
 ATA-teknik identifierar flera misstänkta aktiviteter och fokuserar på flera faser av cyberattackkedjan, inklusive:
 
--   Rekognosering under vilken angripare samlar in information om hur miljön har skapats, vilka olika tillgångarna och enheter som finns och vanligtvis planerar för angreppets nästkommande faser.
+-   Rekognosering, då angripare samla in information om hur miljön skapas, vilka de olika tillgångarna är och vilka entiteter finns. De bygger vanligtvis deras plan för nästa faser för angrepp.
 -   Lateral rörelsecykel då en angripare investerar tid och möda i spridning av sin angreppsyta i nätverket.
--   Domändominans (persistence) då en angripare samlar information för att kunna återuppta sina kampanjer med olika startpunkter, autentiseringsuppgifter och tekniker. 
+-   Domändominans (beständiga) under vilka en angripare fångar information så att de kan återuppta sina kampanj med olika uppsättningar med startpunkter, autentiseringsuppgifter och tekniker. 
 
 Faserna för en cyberattack är liknande och förutsägbara, oavsett vilken typ av företag som är utsatt för en attack eller vilken typ av information som bearbetas.
-ATA söker efter tre typer av angrepp: skadliga attacker, onormalt beteende och säkerhetsfrågor och risker.
+ATA söker efter tre typer av attacker: skadliga attacker, onormalt beteende och säkerhetsproblem och risker.
 
 **Skadliga attacker** upptäcks deterministiskt, genom att söka efter en fullständig lista över kända angreppstyper inklusive:
 
@@ -65,7 +65,8 @@ ATA söker efter tre typer av angrepp: skadliga attacker, onormalt beteende och 
 -   Brute force
 -   Fjärrkörning
 
-En fullständig lista över identifieringar och deras beskrivningar finns i [Vilka misstänkta aktiviteter kan ATA identifiera?](ata-threats.md)
+En fullständig lista över identifieringarna och deras beskrivningar finns [vad misstänkta aktiviteter kan ATA identifiera?](ata-threats.md). 
+
 ATA identifierar dessa misstänkta aktiviteter och hämtar information i ATA-konsolen, inklusive en överblick av Vem, Vad, När och Hur. Som ser på den här enkla och användarvänliga instrumentpanelen informeras du om att ATA misstänker att ett Pass-the-Ticket-angrepp gjorts på Client 1- och Client 2-datorer i nätverket.
 
  ![Exempel på ATA-skärm för pass-the-ticket](media/pass_the_ticket_sa.png)
@@ -79,7 +80,7 @@ ATA identifierar dessa misstänkta aktiviteter och hämtar information i ATA-kon
 -   Ändring av känsliga grupper
 
 
-Du kan se misstänkta aktiviteter av den här typen på ATA-instrumentpanelen. I följande exempel aviserar ATA när en användare ansluter till 4 datorer som normalt inte kan nås av den här användaren, vilken kan vara en anledning till larm.
+Du kan se misstänkta aktiviteter av den här typen på ATA-instrumentpanelen. I följande exempel varnar ATA dig när en användare ansluter till fyra datorer som normalt inte kan nås av denna användare som kan vara en orsak till larm.
 
  ![exempel på ATA-skärm för onormalt beteende](media/abnormal-behavior-sa.png) 
 
@@ -96,9 +97,9 @@ Du kan se misstänkta aktiviteter av den här typen på ATA-instrumentpanelen. I
 
 ## <a name="known-issues"></a>Kända problem
 
-- Om du uppdaterar till ATA 1.7 och sedan omedelbart till ATA 1.8 utan att först uppdatera ATA-gatewayerna, kan du inte migrera till ATA 1.8. Du måste uppdatera alla gatewayer till version 1.7.1 eller 1.7.2 innan du uppdaterar ATA Center till version 1.8.
+- Om du uppdaterar ATA 1.7 och omedelbart ATA 1.8 utan att först uppdatera ATA Gateways, kan du inte migrera till ATA 1.8. Du måste uppdatera alla gatewayer till version 1.7.1 eller 1.7.2 innan du uppdaterar ATA Center till version 1.8.
 
-- Om du väljer att utföra en fullständig migrering kan det ta lång tid, beroende på databasens storlek. När du väljer migreringsalternativ visas den beräknade tiden – notera tiden innan du bestämmer vilket alternativ du ska välja. 
+- Om du väljer att utföra en fullständig migrering kan det ta lång tid, beroende på databasens storlek. Beräknad tid visas när du väljer migreringsalternativ - anteckna detta innan du bestämmer vilket alternativ att välja. 
 
 
 ## <a name="whats-next"></a>Vad händer nu?

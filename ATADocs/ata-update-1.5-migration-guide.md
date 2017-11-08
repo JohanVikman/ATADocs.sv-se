@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.5
 Uppdateringen till ATA 1.5 erbjuder förbättringar inom följande områden:
@@ -38,9 +38,9 @@ Uppdateringen till ATA 1.5 erbjuder förbättringar inom följande områden:
 
 ## <a name="updating-ata-to-version-15"></a>Uppdatera ATA till version 1.5
 > [!NOTE]
-> Om ATA inte är installerat i miljön kan du hämta den fullständiga versionen av ATA, som innehåller version 1.5, och följa standardproceduren för installation som beskrivs i [Installera ATA](install-ata-step1.md).
+> Om ATA inte är installerat i din miljö kan du hämta den fullständiga versionen av ATA, som innehåller version 1.5 och följa standardproceduren för installation som beskrivs i [installera ATA](install-ata-step1.md).
 
-Om du redan har distribuerat ATA version 1.4 vägleder den här proceduren dig igenom de steg spm krävs för att uppdatera installationen.
+Om du redan har distribuerat ATA version 1.4 vägleder dig genom stegen för att uppdatera installationen i den här proceduren.
 
 Följ dessa steg för att uppdatera till ATA-version 1.5:
 
@@ -62,7 +62,7 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
 
 1.  Säkerhetskopiera databasen: (valfritt)
 
-    -   Om ATA Center körs som en virtuell dator och du vill göra en kontrollpunkt ska du först stänga av den virtuella datorn.
+    -   Om ATA Center körs som en virtuell dator och du vill ta en kontrollpunkt, stänga av den virtuella datorn först.
 
     -   Om ATA Center körs på en fysisk server ska du följa den rekommenderade proceduren för att [säkerhetskopiera MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -70,15 +70,15 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
 
     1.  På **Välkomstsidan** väljer du språk och klickar på **Nästa**.
 
-    2.  Läs licensavtalet, markera kryssrutan och klicka på **Nästa** om du godkänner licensvillkoren.
+    2.  Läs licensavtalet och om du accepterar villkoren klickar du på kryssrutan och klickar på **nästa**.
 
     3.  Välj om du vill köra fullständig (standard) eller partiell migrering.
 
         ![Välj fullständig eller partiell migrering](media/ATA-center-fullpartial.png)
 
-        -   Om du väljer **partiell** migrering raderas all nätverkstrafik som samlats in och vidarebefordrade Windows-händelser som analyserats av ATA. Profiler över användarbeteende måste då läras in på nytt, vilket tar minst tre veckor. Om du har ont om ledigt diskutrymme så är det bra att köra en **partiell** migrering.
+        -   Om du väljer **partiella** migreringen all nätverkstrafik som samlas in och vidarebefordrade Windows-händelser som analyserats av ATA tas bort och profiler över användarbeteende måste vara relearned, vilket tar minst tre veckor. Om du har ont om ledigt diskutrymme så är det bra att köra en **partiella** migrering.
 
-        -   Om du kör en **fullständig** migrering behöver du ytterligare diskutrymme, som beräknas åt dig på sidan för uppgradering, och migreringen kan ta längre tid beroende på nätverkstrafiken. Vid fullständig migrering behålls alla tidigare insamlade data och användarbeteendeprofiler bevaras, vilket innebär att det inte tar någon extra tid för ATA lära in beteendeprofiler och avvikande beteenden kan upptäckas omedelbart efter uppdateringen.
+        -   Om du kör en **fullständig** migrering, behöver du ytterligare diskutrymme, som beräknas åt dig på sidan uppgradering och migrering kan ta längre tid beroende på nätverkstrafiken. Vid fullständig migrering behålls alla tidigare insamlade data och användarbeteendeprofiler bevaras, vilket innebär att det inte tar någon extra tid för ATA lära in beteendeprofiler och avvikande beteenden kan upptäckas omedelbart efter uppdateringen.
 
 3.  Klicka på **Uppdatera**. När du klickar på Uppdatera är ATA offline tills uppdateringsproceduren har slutförts.
 
@@ -89,10 +89,10 @@ Följ dessa steg för att uppdatera till ATA-version 1.5:
 > [!IMPORTANT]
 > - Uppdatera alla ATA Gateways för att säkerställa att ATA fungerar korrekt.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Steg 2. Hämta installationspaketet för ATA Gateways
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Steg 2. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet.
 
-För att hämta ATA Gateway-paketet:
+Hämta ATA Gateway-paketet:
 
 1.  Ta bort alla versioner av ATA Gateway-paketet som du har hämtat tidigare.
 
@@ -104,7 +104,7 @@ För att hämta ATA Gateway-paketet:
 
 4.  Spara paketet lokalt.
 
-ZIP-filen innehåller följande:
+Zip-filen innehåller följande filer:
 
 -   Installationsprogram för ATA Gateway
 

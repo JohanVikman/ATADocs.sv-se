@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f8eb271ec3ebcdff9dd4845a0269423560a445b5
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: d9e226f06c407cb16a3486f81658e05433b00fb1
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -34,7 +34,7 @@ Följande fält och deras värden vidarebefordras till din SIEM-server:
 -   shost – källdatorn för aviseringen
 -   outcome – anger om aktiviteten som utfördes lyckades/misslyckades i aviseringen  
 -   msg – en beskrivning av aviseringen
--   cnt – anger antalet gånger som aviseringen inträffade (till exempel antalet gissade lösenord vid råstyrkeattacker)
+-   cnt – för aviseringar som har ett antal gånger som Avisera har hänt (till exempel brute-force som har en del av att gissa lösenord)
 -   app – protokollet som används i aviseringen
 -   externalId – händelse-ID:t som ATA skriver till händelseloggen för aviseringen
 -   cs#label & cs# – det här är kundsträngarna som CEF tillåter; cs#label är namnet på det nya fältet och cs# är värdet, t.ex.: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f488536341f96f66aac17e23f6938a83060a1116
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
 
 # <a name="working-with-suspicious-activities"></a>Arbeta med misstänkta aktiviteter
-Det här avsnittet förklarar grunderna för hur du arbetar med Advanced Threat Analytics.
+Den här artikeln förklarar grunderna för hur du arbetar med Advanced Threat Analytics.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Granska misstänkta aktiviteter på attacktidslinjen
 När du loggar in på ATA-konsolen kommer du automatiskt till den öppna **tidslinjen med misstänkta aktiviteter**. Misstänkta aktiviteter visas i kronologisk ordning med de senaste misstänkta aktiviteterna längst upp i tidslinjen.
@@ -52,16 +52,16 @@ Varje misstänkt aktivitet har följande information:
 
 > [!NOTE]
 > -   När du håller muspekaren över en användare eller dator visas en entitetsminiprofil som innehåller ytterligare information om entiteten och som innehåller antalet misstänkta aktiviteter som entiteten är kopplad till.
-> -   Om du klickar på en entitet kommer du till entitetsprofilen för användaren eller datorn.
+> -   Om du klickar på en enhet går du till entitetsprofilen för användaren eller datorn.
 
 ![Tidslinjebild för misstänkta aktiviteter i ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrera lista med misstänkta aktiviteter
 Filtrera listan med misstänkta aktiviteter:
 
-1.  I den **filtrera efter** till vänster på skärmen väljer du något av följande: **alla**, **öppna**, **stängd**, eller  **Ignorerade**.
+1.  I den **filtrera efter** till vänster på skärmen väljer du något av följande alternativ: **alla**, **öppna**, **stängd**, eller **Ignorerade**.
 
-2.  Om du vill filtrera listan ytterligare väljer du **Hög**, **Medel** eller **Låg**.
+2.  Om du vill filtrera listan ytterligare väljer **hög**, **medel**, eller **låg**.
 
 **Allvarlighetsgrad för misstänkt aktivitet**
 
@@ -75,13 +75,13 @@ Filtrera listan med misstänkta aktiviteter:
 
 -   **Hög**
 
-    Visar misstänkta aktiviteter som kan leda till identitetsstöld, eskalering av privilegier eller andra attacker med stor effekt
+    Visar misstänkta aktiviteter som kan leda till identitetsstöld, eskalering eller andra attacker med stor effekt
 
 
 
 
 ## <a name="remediating-suspicious-activities"></a>Åtgärda misstänkta aktiviteter
-Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktivitetens aktuella status och välja något av följande: **Öppen**, **Ignorerad**, **Stängd** eller **Borttagen**.
+Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktiviteten aktuella status och välja något av följande **öppna**, **Suppressed**, **stängd**, eller **bort**.
 Du gör det genom att klicka på de tre punkterna i det övre högra hörnet för en specifik misstänkt aktivitet så att listan över tillgängliga åtgärder visas.
 
 ![ATA-åtgärder för misstänkta aktiviteter](./media/sa-actions.png)
@@ -90,14 +90,14 @@ Du gör det genom att klicka på de tre punkterna i det övre högra hörnet fö
 
 -   **Öppna**: Alla nya misstänkta aktiviteter visas i den här listan.
 
--   **Stäng**: Används för att spåra misstänkta aktiviteter som du har identifierat, undersökt och åtgärdat.
+-   **Stäng**: används för att spåra misstänkta aktiviteter som du identifierat, undersökt och åtgärdat för begränsade.
 
     > [!NOTE]
-    > ATA kan öppna en stängd aktivitet om det samma aktivitet identifieras igen under en kort tidsperiod.
+    > Om samma aktivitet identifieras igen under en kort tidsperiod, kan ATA öppna en stängd aktivitet.
 
--   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär att om det finns en liknande avisering så öppnas den inte igen av ATA. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, så aviseras du igen.
+-   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär som om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen slutar i sju dagar och sedan visas igen, du meddelas igen.
 
-- **Ta bort**: Om du tar bort en avisering tas den bort från systemet och från databasen och du kan INTE återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+- **Ta bort**: Om du tar bort en avisering, tas bort från systemet från databasen och du kommer inte att kunna återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
 
 - **Undanta**: Möjligheten att undanta en entitet så att den inte genererar fler aviseringar av en viss typ. Du kan till exempel ange att ATA ska undanta en specifik entitet (användare eller dator) så att den inte utlöser aviseringar igen för en viss typ av misstänkt aktivitet, t.ex. en specifik administratör som kör fjärrkod eller ett säkerhetsgenomsökningsverktyg som utför en DNS-rekognosering. Förutom att lägga till undantag direkt för den misstänkta aktiviteten när den identifieras på tidslinjen kan du även gå till **Undantag** från sidan Konfiguration och, för varje misstänkt aktivitet, manuellt lägga till och ta bort undantagna enheter eller undernät (till exempel för Pass-the-Ticket). 
 > [!NOTE]

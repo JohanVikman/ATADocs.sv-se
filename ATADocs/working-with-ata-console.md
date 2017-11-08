@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e6570ee1e35631a3dba90466b31542e9fd0cd66
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -27,10 +27,10 @@ ms.lasthandoff: 11/06/2017
 
 Använd ATA-konsolen för att övervaka och svara på misstänkt aktivitet som identifieras av ATA.
 
-Om du skriver ? visas tangentbordsgenvägar för ATA-portalens hjälpmedelsfunktioner. 
+Att skriva den `?` nyckeln innehåller kortkommandon för hjälpmedel för ATA-portalen. 
 
 ## <a name="enabling-access-to-the-ata-console"></a>Aktivera åtkomst till ATA-konsolen
-För att kunna logga in på ATA-konsolen måste du logga in med en användare som har tilldelats rätt ATA-roll för att komma åt ATA-konsolen. Mer information om rollbaserad åtkomstkontroll (RBAC) i ATA finns i [Arbeta med ATA-rollgrupper](ata-role-groups.md).
+Om du vill logga in till ATA-konsolen, måste du logga in med en användare som har tilldelats rollen rätt ATA för att komma åt ATA-konsolen. Mer information om rollbaserad åtkomstkontroll (RBAC) i ATA finns [arbeta med ATA rollgrupper](ata-role-groups.md).
 
 ## <a name="logging-into-the-ata-console"></a>Logga in på ATA-konsolen
 
@@ -44,12 +44,12 @@ För att kunna logga in på ATA-konsolen måste du logga in med en användare so
  >[!NOTE]
  > Du kan även öppna en webbläsare från antingen ATA Center eller ATA Gateway och bläddra till den IP-adress du har konfigurerat i ATA Center-installationen för ATA-konsolen.    
 
-2.  Om både den dator som ATA Center är installerat på och den dator som du försöker komma åt ATA-konsolen från är domänanslutna har ATA stöd för enkel inloggning integrerat med Windows-autentisering – om du redan har loggat in på datorn använder ATA den token för att logga in dig till ATA-konsolen. Du kan också logga in med ett smartkort. Dina behörigheter i ATA motsvarar din [administratörsroll](ata-role-groups.md).
+2.  Om datorn där ATA Center är installerat och den dator som du försöker komma åt ATA-konsolen som både domänen ansluten ATA har stöd för enkel inloggning integrerad med Windows-autentisering - om du redan har loggat in på datorn, ATA använder den token som används för att logga in på ATA-konsolen. Du kan också logga in med ett smartkort. Din behörighet i ATA motsvarar dina [administratörsroll](ata-role-groups.md).
 
  > [!NOTE]
- > Var noga med att logga in på datorn som du vill komma åt ATA-konsolen från med ditt administratörsanvändarnamn och ditt administratörslösenord för ATA. Du kan också köra webbläsaren som en annan användare eller logga ut från Windows och logga in med ditt administratörsanvändarnamn för ATA. Om du vill att ATA Console ska uppmana dig att ange dina autentiseringsuppgifter ansluter du till konsolen med hjälp av en IP-adress, så uppmanas du att ange autentiseringsuppgifter.
+ > Se till att logga in på datorn som du vill komma åt ATA-konsolen med ATA admin användarnamn och lösenord. Du kan också köra webbläsaren som en annan användare eller logga ut från Windows och logga in med ditt administratörsanvändarnamn för ATA. Om du vill fråga ATA-konsolen för att fråga om autentiseringsuppgifter, åtkomst till konsolen med en IP uppmanas-adress och du att ange autentiseringsuppgifter.
 
-3. Om du vill logga in med enkel inloggning kontrollerar du att ATA-konsolen har definierats som en lokal intranätplats i webbläsaren och ansluter till konsolen med ett kortnamn eller en localhost.
+3. Kontrollera att platsen för ATA-konsolen har definierats som en lokal intranätplats i webbläsaren och att du åtkomst till den med hjälp av en kort filnamn eller en localhost för att logga in med enkel inloggning.
 
 > [!NOTE]
 > Förutom att logga varje avisering om misstänkt aktivitet och hälsorelaterade problem, loggas varje konfigurationsändring som du gör i ATA-konsolen i Windows-händelseloggen på ATA Center-datorn i **loggen för program och tjänster** och sedan **Microsoft ATA**. Alla inloggningar till ATA-konsolen loggas också.<br></br>  All konfiguration som påverkar ATA Gateway loggas också i Windows-händelseloggen på ATA Gateway-datorn. 
@@ -83,7 +83,7 @@ Du kan filtrera vilka misstänkta aktiviteter som visas i tidslinjen för attack
 
 ### <a name="search-bar"></a>Sökfält
 
-Det finns ett sökfält i den översta menyn. Du kan söka efter en viss användare, dator eller grupp i ATA. Om du vill prova är det bara att börja skriva.
+Du kan hitta ett sökfält i den översta menyn. Du kan söka efter en viss användare, dator eller grupp i ATA. Om du vill prova är det bara att börja skriva.
 
 ![Bild för sökning i ATA-konsolen](media/ATA-console-search.png)
 
@@ -93,11 +93,11 @@ Health Center visar aviseringar om något inte fungerar korrekt i ATA-distributi
 
 ![Bild för ATA health center](media/ATA-Health-Issue.jpg)
 
-Om systemet upptäcker ett problem, t.ex. ett anslutningsfel eller en frånkopplad ATA Gateway, meddelar ikonen för Health Center detta genom att visa en röd punkt. ![Bild med röd punkt för ATA health center](media/ATA-Health-Center-Alert-red-dot.png)
+Varje gång systemet upptäcker ett problem, till exempel ett anslutningsfel eller en frånkopplad ATA-Gateway med hjälp av ikonen för Health Center får du reda på genom att visa en röd punkt. ![Bild med röd punkt för ATA health center](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### <a name="user-and-computer-profiles"></a>Användar- och datorprofiler
 
-ATA skapar en profil för alla användare och datorer i nätverket. I användarprofilen visar ATA allmän information, t.ex. gruppmedlemskap, senaste inloggningar och resurser som har använts nyligen. Den innehåller också en lista med platser där användaren har anslutit via VPN. En lista över gruppmedlemskap som ATA betraktar som känsliga finns nedan.
+ATA skapar en profil för alla användare och datorer i nätverket. I användarprofilen visar ATA allmän information, t.ex. gruppmedlemskap, senaste inloggningar och resurser som har använts nyligen. Den innehåller också en lista över platser där användaren är ansluten via VPN. En lista över gruppmedlemskap som ATA anser vara känsliga, finns i listan nedan.
 
 ![Användarprofil](media/user-profile.png)
 
@@ -107,7 +107,7 @@ I datorprofilen visar ATA allmän information, t.ex. de senaste inloggningarna o
 
 ATA tillhandahåller ytterligare information om entiteter (datorer, enheter, användare) på följande sidor: Sammanfattning, Aktiviteter och Misstänkta aktiviteter.
 
-En profil som ATA inte har kunnat lösa helt visas med en halvfull cirkelformad ikon.
+En profil som ATA inte har kunnat lösa helt identifieras med en halvfull cirkelformad ikon.
 
 
 ![Bild för olöst profil i ATA](media/ATA-Unresolved-Profile.jpg)
@@ -138,7 +138,7 @@ Följande lista med grupper betraktas som **känsliga** av ATA. En entitet som �
 
 ### <a name="mini-profile"></a>Miniprofil
 
-Var som helst i konsolen där en enda entitet presenteras, t.ex. en användare eller dator, kan du placera pekaren över entiteten så öppnas en miniprofil automatiskt som visar följande information, om tillgängligt:
+Om du håller muspekaren över en entitet, var som helst i konsolen där det finns en enda entitet presenteras, t.ex en användare eller en dator, öppnas en miniprofil automatiskt visar följande information om de är tillgängliga:
 
 ![Bild för miniprofil i ATA](media/ATA-mini-profile.jpg)
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
-ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
+ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -56,13 +56,13 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
--   Installera inte Microsoft analysverktyg för meddelanden på en ATA Gateway eller Lightweight Gateway. Drivrutinen för Analysverktyg för meddelanden är inte kompatibel med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Om inte gatewayen slutar att fånga in trafik. Observera att ATA Lightweight Gateway inte påverkas om du kör Wireshark på en ATA Lightweight-gateway.
+-   Installera inte Microsoft analysverktyg för meddelanden på en ATA Gateway eller Lightweight Gateway. Drivrutinen för Analysverktyg för meddelanden är inte kompatibel med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Om inte gatewayen slutar att fånga in trafik. Kör Wireshark på en ATA Lightweight Gateway stör inte ATA Lightweight Gateway.
 
--    Rekommenderat: Användare ska ha läsbehörighet till behållaren för borttagna objekt. Detta gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i **ändra behörigheter för en behållare för borttagna objekt** under den [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) avsnittet.
+-    Rekommenderat: Användare ska ha läsbehörighet till behållaren för borttagna objekt. Detta gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i **ändra behörigheter för en behållare för borttagna objekt** under den [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) artikel.
 
 -   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytokenanvändaren behöver du SID för användarkontot, inte användarnamnet. Mer information finns i [undantag konfigurera IP-adresser och honeytokenanvändare](install-ata-step7.md).
 
--   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser 4776, 4732, 4733, 4728, 4729, 4756 och 4757 att ytterligare förbättra ATA Pass-the-Hash, Brute Force, ändring av känsliga grupper och Honung token identifieringar. Dessa kan hämtas från din SIEM-server eller genom vidarebefordran av Windows-händelser från din domänkontrollant. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
+-   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser 4776, 4732, 4733, 4728, 4729, 4756 och 4757 att ytterligare förbättra ATA Pass-the-Hash, Brute Force, ändring av känsliga grupper och Honung token identifieringar. Dessa händelser kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
 
 ## <a name="ata-center-requirements"></a>Krav för ATA Center
@@ -188,7 +188,7 @@ ATA- gatewayen kräver minst ett hanteringskort och minst ett avbildningskort:
 -   **Avbildningskort** – används för att avbilda trafik till och från domänkontrollanterna.
 
     > [!IMPORTANT]
-    > -   Konfigurera portspegling för avbildningskortet som mål för domänkontrollantens nätverkstrafik. Mer information finns i [Konfigurera portspegling](configure-port-mirroring.md). Normalt behöver arbeta med nätverks- eller -teamet för att konfigurera portspegling.
+    > -   Konfigurera portspegling för avbildningskortet som mål för domänkontrollantens nätverkstrafik. Mer information finns i [konfigurera portspegling](configure-port-mirroring.md). Normalt behöver arbeta med nätverks- eller -teamet för att konfigurera portspegling.
     > -   Konfigurera en statisk icke-dirigerbar IP-adress för miljön utan standardgateway och utan DNS-serveradresser. Exempel: 1.1.1.1/32. Detta garanterar att avbildningsnätverkskortet kan avbilda maximal mängd trafik och att hanteringsnätverkskortet används för att skicka och ta emot nödvändig nätverkstrafik.
 
 ### <a name="ports"></a>Portar
@@ -239,7 +239,7 @@ Under installationen installeras .Net Framework 4.6.1 och det kan göra att dom�
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
-ATA Lightweight Gateway kräver minst två kärnor och 6 GB RAM-minne på domänkontrollanten.
+ATA Lightweight Gateway kräver att minst 2 kärnor och 6 GB RAM är installerat på domänkontrollanten.
 För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
 ATA Lightweight Gateway kan distribueras på domänkontrollanter med olika belastningar och storlekar, beroende på mängden nätverkstrafik till och från domänkontrollanterna och mängden resurser som finns installerade på den domänkontrollanten.
 

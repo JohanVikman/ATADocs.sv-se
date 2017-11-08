@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3798f7faeb62e44d3877880c2d594332502e76c5
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 2f38ee3b8a50a4776709f1a5aa1f37af869a916b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -36,10 +36,10 @@ För att kunna förbättra identifieringsfunktionerna behöver ATA följande Win
 > [!NOTE]
 > För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
 
-Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser för att förbättra identifieringarna ytterligare. Tjänsten använder händelse 4776 för NTLM som förbättrar olika identifieringar, och händelserna 4732, 4733, 4728, 4729, 4756 och 4757 för att förbättra identifieringen av ändringar av känsliga grupper. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
+Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser för att förbättra identifieringarna ytterligare. Den använder händelse 4776 för NTLM, vilket förbättrar olika identifieringar och händelser 4732, 4733, 4728, 4729, 4756 och 4757 för att förbättra identifiera känsliga grupp ändringar. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-För att ATA ska kunna använda data från en Syslog-server måste du göra följande:
+Om ATA ska kunna använda data från en Syslog-server måste du utföra följande steg:
 
 -   Konfigurera ATA Gateway-servrarna så att de lyssnar på och godkänner händelser som vidarebefordras från SIEM/Syslog-servern.
 > [!NOTE]
@@ -61,7 +61,7 @@ Se SIEM/Syslog-serverns produktdokumentation för information om hur du konfigur
 
     ![Bild för att aktivera syslog listener UDP](media/ATA-enable-siem-forward-events.png)
 
-2.  Konfigurera SIEM- eller Syslog-servern för att vidarebefordra Windows-händelse-ID 4776 till IP-adressen för en av ATA-gatewayarna. Ytterligare information om hur du konfigurerar SIEM finns onlinehjälpen för SIEM eller alternativ för teknisk support för specifika formateringskrav för varje SIEM-server.
+2.  Konfigurera SIEM- eller Syslog-servern för att vidarebefordra Windows-händelse-ID 4776 till IP-adressen för en av ATA-gatewayarna. Mer information om hur du konfigurerar SIEM finns i din onlinehjälpen för SIEM eller alternativ för teknisk support för specifika formateringskrav för varje SIEM-server.
 
 ATA har stöd för SIEM-händelser i följande format:  
 
@@ -76,7 +76,7 @@ ATA har stöd för SIEM-händelser i följande format:
 
     1.  RsaSA-konstant (måste visas).
 
-    2.  Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst med en noggrannhet på millisekunder, detta är mycket viktigt.
+    2.  Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst noggrannhet på millisekunder är detta viktigt.
 
     3.  Windows-händelse-ID
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Dom�
 
     -   externalId = Windows händelse-ID
 
-    -   rt = Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst med en noggrannhet på millisekunder, detta är mycket viktigt.
+    -   rt = tidsstämpel för den faktiska händelsen (se till att den inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst noggrannhet på millisekunder är detta viktigt.
 
     -   cat = Loggnamn för Windows-händelse
 
@@ -152,7 +152,7 @@ Felkod:         0x0
 
     -   SourceName = Providernamn för Windows-händelse
 
-    -   TimeGenerated = Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst med en noggrannhet på millisekunder, detta är mycket viktigt.
+    -   TimeGenerated = Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst noggrannhet på millisekunder, detta är viktigt.
 
     -   ComputerName = Källans värdnamn
 
@@ -175,7 +175,7 @@ De obligatoriska fälten är:
 - Domänkontrollantens fullständiga kvalificerade domännamn
 - Windows-händelse-ID
 
-TimeGenerated är tidsstämpeln för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst med en noggrannhet på millisekunder, detta är mycket viktigt.
+TimeGenerated är tidsstämpeln för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst noggrannhet på millisekunder, detta är viktigt.
 
 Message är den ursprungliga händelsetexten från Windows-händelsen
 
