@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -40,23 +40,25 @@ Den här artikeln beskriver hur du snabbt återställer ditt ATA-center och åte
     4. Säkerhetskopiera den exporterade certifikatfilen på en annan dator.
 
   > [!NOTE] 
-  > Om du inte kan exportera den privata nyckeln, måste du skapa ett nytt certifikat, distribuera det till ATA, som det beskrivs i [Ändra ATA Center-certifikatet](modifying-ata-center-configuration#the-ata-center-certificate) och sedan exportera det. 
+  > Om du inte kan exportera den privata nyckeln, måste du skapa ett nytt certifikat, distribuera det till ATA, som det beskrivs i [Ändra ATA Center-certifikatet](modifying-ata-center-configuration.md) och sedan exportera det. 
 
 ## <a name="recover-your-ata-center"></a>Återställa ATA Center
 
 1. Skapa en ny Windows Server-dator med samma IP-adress och datornamn som den tidigare ATA Center-datorn.
-4. Importera certifikatet som du har säkerhetskopierat tidigare, till den nya servern.
-5. Följ anvisningarna för att [Distribuera ATA Center](install-ata-step1.md) på den Windows Server du nyss skapade. Du behöver inte distribuera ATA-gatewayerna igen. När du uppmanas att ange ett certifikat, anger du det certifikat som du exporterade när du säkerhetskopierade ATA Center-konfigurationen . 
+2. Importera certifikatet som du har säkerhetskopierat tidigare, till den nya servern.
+3. Följ anvisningarna för att [Distribuera ATA Center](install-ata-step1.md) på den Windows Server du nyss skapade. Du behöver inte distribuera ATA-gatewayerna igen. När du uppmanas att ange ett certifikat, anger du det certifikat som du exporterade när du säkerhetskopierade ATA Center-konfigurationen . 
 ![ATA Center-återställning](media/disaster-recovery-deploymentss.png)
-6. Importera säkerhetskopierade ATA Center-konfiguration:
+4. Stoppa tjänsten ATA Center.
+5. Importera säkerhetskopierade ATA Center-konfiguration:
     1. Ta bort standardsystemprofildokumentet för ATA Center från MongoDB: 
         1. Gå till **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Kör `mongo.exe ATA` 
-        3. Kör följande kommando för att ta bort standardsystemprofilen: `db.SystemProfile.remove({})`
+        3. Starta ATA Center-tjänsten.
+        4. Kör följande kommando för att ta bort standardsystemprofilen: `db.SystemProfile.remove({})`
     2. Kör kommandot: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` med säkerhetskopian från steg 1.</br>
     En fullständig förklaring på hur du hittar och importerar säkerhetskopior finns i [Exportera och importera ATA-konfigurationen](ata-configuration-file.md). 
     3. Öppna ATA-konsolen. Du borde se alla ATA-gatewayer länkade under fliken konfiguration/gatewayer. 
-    5. Se till att definiera en [**Directory Services-användare**](install-ata-step2.md) och välja en [**Domänkontrollant-synkroniserare**](install-ata-step5.md). 
+    4. Se till att definiera en [**Directory Services-användare**](install-ata-step2.md) och välja en [**Domänkontrollant-synkroniserare**](install-ata-step5.md). 
 
 
 

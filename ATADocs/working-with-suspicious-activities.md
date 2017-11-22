@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/112017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 62bc4ad19e632550261e8cf90df53d82d878f8fc
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -47,8 +47,6 @@ Varje misstänkt aktivitet har följande information:
     -   Lägga till en anteckning till den misstänkta aktiviteten.
 
     -   Ange kommentarer om den misstänkta aktiviteten.
-
--   Innehåller rekommendationer för hur man kan reagera på den misstänkta aktiviteten.
 
 > [!NOTE]
 > -   När du håller muspekaren över en användare eller dator visas en entitetsminiprofil som innehåller ytterligare information om entiteten och som innehåller antalet misstänkta aktiviteter som entiteten är kopplad till.
