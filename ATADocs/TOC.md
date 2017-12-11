@@ -56,4 +56,5 @@
 ## [Felsöka med loggarna](troubleshooting-ata-using-logs.md)
 ## [Felsöka med prestandaräknarna](troubleshooting-ata-using-perf-counters.md)
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
+## [Felsöka start av tjänsten](troubleshooting-service-startup.md)
 ## [Katastrofåterställning](disaster-recovery.md)
