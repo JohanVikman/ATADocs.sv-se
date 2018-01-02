@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
-ms.translationtype: MT
+ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
+ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/17/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -292,6 +292,34 @@ Kända säkerhetsproblem i äldre versioner av Windows Server göra att angripar
 **Reparation**
 
 Kontrollera att alla domänkontrollanter med operativsystem upp till Windows Server 2012 R2 är installerade med [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) och att alla medlemsservrar och domänkontrollanter upp till 2012 R2 är uppdaterade med KB2496930. Mer information finns i avsnitten om [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) och [förfalskat PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## <a name="reconnaissance-using-account-enumeration"></a>Rekognosering med kontouppräkning
+
+**Beskrivning**
+
+En ordlista använder med tusentals användarnamn eller verktyg, till exempel KrbGuess en angripare konto uppräkningen rekognosering, för att försöka gissa användarnamn i din domän. Angriparen gör Kerberos-begäranden som använder dessa namn för att försöka hitta ett giltigt användarnamn i din domän. Om en viss avgör har ett användarnamn, får angriparen Kerberos-fel **förautentisering krävs** i stället för **säkerhetsobjekt okänd**. 
+
+I denna identifiering kan ATA identifiera var angreppet kommer ifrån, det totala antalet gissning försök och hur många matchade. Om det finns för många okända användare kan identifiera ATA den som en misstänkt aktivitet. 
+
+**Undersökning**
+
+1. Klicka på aviseringen för att komma åt dess informationssidan. 
+
+2. Den här värddatorn ska fråga domänkontrollanten att om konton finns (till exempel Exchange-servrar)? <br></br>
+Finns det ett skript eller ett program som körs på värden som kan generera det här problemet? <br></br>
+Om svaret på någon av dessa frågor är Ja, **Stäng** misstänkt aktivitet (det är ett ofarlig true positivt) och utelämna som värd för från den misstänkta aktiviteten.
+
+3. Hämta information om aviseringen i ett Excel-kalkylblad för att visa listan över konto försök indelat i befintliga och icke-befintliga konton. Om du tittar på det icke befintliga konton blad i kalkylbladet och kontona känner, de kan vara inaktiverade konton eller medarbetare som lämnar företaget. I det här fallet är det osannolikt att försöket kommer från en uppslagslista. Det är troligen ett program eller skript som kontrollerar om du vill se vilka konton fortfarande finns i Active Directory, vilket innebär att det är ett ofarlig true positivt.
+
+3. Matchade någon gissning försöker befintliga kontonamn i Active Directory om namnen inte är i stort sett bekant? Om det finns inga matchningar, gick futile, men du bör du vara uppmärksam på aviseringen för att se om den uppdateras med tiden.
+
+4. Om någon av gissning försöker matcha befintliga kontonamn angriparen känner av att finns konton i din miljö och försöka använda brute-force för att få åtkomst till din domän med hjälp av de identifierade namn. Kontrollera att gissa kontonamn för ytterligare misstänkta aktiviteter. Kontrollera om något av de matchade kontona är känsliga konton.
+
+
+**Reparation**
+
+[Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
+
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Rekognosering med kontotjänstfrågor
 
