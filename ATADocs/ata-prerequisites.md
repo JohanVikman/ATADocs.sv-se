@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 12/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
-ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
+ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
+ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -249,10 +249,15 @@ ATA Lightweight Gateway kan distribueras på domänkontrollanter med olika belas
 Mer information om maskinvarukrav för ATA Lightweight Gateway finns [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Tidssynkronisering
+
 ATA Center-servern, ATA Lightweight Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
+
 ### <a name="network-adapters"></a>Nätverkskort
+
 ATA Lightweight Gateway övervakar lokal trafik på alla nätverkskort för domänkontrollanten. <br>
 Efter distributionen kan använda du ATA-konsolen om du vill ändra vilka nätverkskort som ska övervakas.
+
+Lightweight Gateway stöds inte på domän aktiverad för domänkontrollanter som kör Windows 2008 R2 med Broadcom kombination för nätverkskort.
 
 ### <a name="ports"></a>Portar
 I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver:

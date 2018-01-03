@@ -1,11 +1,11 @@
 ---
-title: "Felsök Advanced Threat Analytics med hjälp av loggarna | Microsoft Docs"
-description: "Beskriver hur du kan använda ATA-loggarna för att felsöka problem"
+title: "Felsökning av Advanced Threat Analytics startades | Microsoft Docs"
+description: "Beskriver hur du felsöker problem med start av ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,19 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 125376b1e3530481a3b9f62c4661dd10dce13f22
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
 
 
-# <a name="troubleshooting-ata-center-service-startup"></a>Felsöka starten av ATA Center-tjänsten
+# <a name="troubleshooting-service-startup"></a>Felsöka startades
+
+## <a name="troubleshooting-ata-center-service-startup"></a>Felsöka starten av ATA Center-tjänsten
 
 Om ATA Center inte startar, gör du följande felsökning:
 
@@ -42,6 +44,22 @@ Om det går att starta är plattformen troligtvis inte skadad. Om inte, det bero
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
+## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Felsöka ATA Lightweight Gateway Start
+
+**Symtom**
+
+ATA-gatewayen startar inte och du får detta fel:<br></br>
+*System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte lyckade: 500 (Internt serverfel)*
+
+**Beskrivning**
+
+Detta inträffar eftersom som en del av installationen av Lightweight Gateway, ATA allokerar en CPU-tröskel som gör det möjligt för Lightweight Gateway att använda processor med en buffert på 15%. Om du oberoende av varandra har angett ett tröskelvärde med registernyckeln: konflikten hindrar Lightweight Gateway från att starta. 
+
+**Lösning**
+
+1. Under registret nycklar, om det finns en DWORD-värdet kallas **Inaktivera prestandaräknare** Kontrollera att den är inställd på **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+ 
+2. Starta sedan om tjänsten Pla. ATA Lightweight Gateway upptäcks ändringen automatiskt och starta om tjänsten.
 
 
 ## <a name="see-also"></a>Se även
