@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
-ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
-ms.translationtype: HT
+ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -350,6 +350,9 @@ Inga aviseringar skulle aktiveras i den första månaden när ATA har distribuer
 **Reparation**
 
 Använd den [SAMRi10 verktyget](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) att skydda din miljö mot den här tekniken.
+Om verktyget inte är tillämplig på en Domänkontrollant:
+1. Datorn som kör en säkerhetsrisk genomsökning verktyget?  
+2. Undersök om efterfrågade användare och grupper i angrepp är Privilegierade eller hög värdekonton (d.v.s. VD, Ekonomichef, IT-hantering, osv.).  I så fall, kontrollera andra aktiviteter på slutpunkten samt och övervaka datorer som de efterfrågade kontona är inloggad på, eftersom de är förmodligen mål för lateral förflyttning.
 
 ## <a name="reconnaissance-using-dns"></a>Rekognosering med DNS
 
