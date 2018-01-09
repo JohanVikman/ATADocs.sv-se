@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
-ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
+ms.openlocfilehash: 54c738a63f47280c91f72812476b559b773e9b97
+ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -80,17 +80,21 @@ Installation av ATA Center som en virtuell dator stöds.
 > Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 
 Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du skapar en ny kontrollpunkt för att undvika att databasen skadas.
+
 ### <a name="server-specifications"></a>Serverspecifikationer
+
 När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Detta gäller inte om ATA Center körs på en virtuell server.<br>
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
 Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs. Mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Tidssynkronisering
+
 ATA Center-servern, ATA Gateway-servrarna och domänkontrollanterna måste ha tidsinställningen synkroniserad högst 5 minuter från varandra.
 
 
 ### <a name="network-adapters"></a>Nätverkskort
+
 Du bör ha följande:
 -   Minst ett nätverkskort (om fysisk server i VLAN-miljö används, rekommenderar vi att två nätverkskort används)
 

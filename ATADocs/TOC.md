@@ -58,3 +58,4 @@
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
 ## [Felsöka start av tjänsten](troubleshooting-service-startup.md)
 ## [Katastrofåterställning](disaster-recovery.md)
+# [Resurser](ata-resources.md)

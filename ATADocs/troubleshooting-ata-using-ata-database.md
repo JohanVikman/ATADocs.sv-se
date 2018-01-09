@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4c8de5a12c06b9c20f4bd665f472ed622079bf83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a08c3175c5b7d7d6006189f858b38026344decac
+ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 01/08/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -35,10 +35,10 @@ Standardsättet, som är det mest grundläggande sättet, för att ställa fråg
 2.  Kör: `mongo.exe ATA`. Tänk på att skriva ATA med versaler.
 
 > [!div class="mx-tableFixed"]
-|Gör så här...|Syntax|Anteckningar|
+|Gör så här...|Syntax|Obs!|
 |-------------|----------|---------|
 |Kontrollera om det finns samlingar i databasen.|`show collections`|Det kan användas som ett test för slutpunkt till slutpunkt för att se att trafiken skrivs till databasen och att händelsen 4776 tas emot av ATA.|
-|Hämta information om en användare/dator/grupp (UniqueEntity), t.ex. användar-ID.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
+|Hämta information om en användare/dator/grupp (UniqueEntity), t.ex. användar-ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
 |Hitta Kerberos-autentiseringstrafik som kommer från en viss dator en viss dag.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|Om du vill hämta &lt;ID för källdatorn&gt; kan du fråga UniqueEntity-samlingarna på det sätt som visas i exemplet.<br /><br />Varje aktivitetstyp, till exempel Kerberos-autentiseringar, har en egen samling per UTC-datum.|
 |Hitta NTLM-trafik från en viss dator som är relaterad till ett visst konto en viss dag.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|Om du vill hämta &lt;ID för källdatorn&gt; och &lt;ID för kontot&gt; kan du fråga UniqueEntity-samlingarna på det sätt som visas i exemplet.<br /><br />Varje aktivitetstyp, till exempel NTLM-autentiseringar, har en egen samling per UTC-datum.|
 |Gör avancerade konfigurationsändringar. I det här exemplet ändra sändningsköstorleken för alla ATA-gatewayer till 10 000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
