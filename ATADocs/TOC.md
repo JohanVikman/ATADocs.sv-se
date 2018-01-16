@@ -31,7 +31,7 @@
 ### [1. Konfigurera portspegling](configure-port-mirroring.md)
 ### [2. Verifiera portspegling](validate-port-mirroring.md)
 ### [3. Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md)
-# Använd
+# Använda
 ## [Databashantering i ATA](ata-database-management.md)
 ## [ATA Health Center](ata-health-center.md)
 ## [ATA-rapporter](reports.md)
@@ -58,4 +58,4 @@
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
 ## [Felsöka start av tjänsten](troubleshooting-service-startup.md)
 ## [Katastrofåterställning](disaster-recovery.md)
-# [Resurser](ata-resources.md)
+# [Översikt över ATA-beredskap](ata-resources.md)
