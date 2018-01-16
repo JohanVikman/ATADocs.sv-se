@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
+ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 01/15/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -37,16 +37,15 @@ ATA kan integreras med din VPN-lösning genom att lyssna på RADIUS-redovisnings
 
 -   Microsoft
 -   F5
--   Check Point
 -   Cisco ASA
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Om du vill aktivera VPN-integrering, se till att ange följande parametrar:
 
 -   Öppna porten UDP 1813 på ATA-gatewayer och ATA Lightweight-gatewayer.
 
--   Ansluta ATA Center till Internet så att den kan fråga platsen för inkommande IP-adresser.
+-   ATA Center måste kunna komma åt *ti.ata.azure.com* med hjälp av HTTPS (port 443) så att den kan fråga platsen för inkommande IP-adresser.
 
 Exemplet nedan använder Microsoft Routing and Remote Access Server (RRAS) för att beskriva den VPN-konfigurationen.
 
@@ -68,7 +67,7 @@ Utför följande steg på RRAS-servern.
      
 ### <a name="configure-vpn-in-ata"></a>Konfigurera VPN i ATA
 
-ATA samlar in VPN som hjälper profil platser från vilka datorer ansluta till nätverket och för att kunna identifiera onormalt VPN-anslutningar.
+ATA samlar in data för VPN- och identifierar när och var autentiseringsuppgifter används via VPN och integrerar dessa data i din undersökning. Detta ger ytterligare information som hjälper dig att undersöka aviseringar som rapporterats av ATA.
 
 Konfigurera VPN-data i ATA:
 
@@ -88,8 +87,7 @@ Installationen är klar och du kan nu se VPN-aktivitet i användarnas profilsida
  
    ![VPN-konfiguration](./media/vpn-user.png)
 
-När ATA-gatewayen tar emot VPN-händelser och skickar dem till ATA Center för bearbetning, behöver ATA Center Internet-anslutning för HTTPS-port 443 för att kunna matcha de externa IP-adresserna i VPN-händelser till deras geolokalisering.
-
+När ATA-gatewayen tar emot VPN-händelser och skickar dem till ATA Center för bearbetning, ATA Center behöver åtkomst till *ti.ata.azure.com* med hjälp av HTTPS (port 443) för att kunna matcha de externa IP-adresserna i VPN-händelser till deras geografiska plats.
 
 
 
