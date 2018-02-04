@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -39,6 +39,9 @@ Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distrib
 
 ![Exempel på kapacitetsplaneringsverktyg](media/capacity tool.png)
 
+
+> [!NOTE]
+> Eftersom olika miljöer variera och har flera nätverk för särskilda och oväntat trafikmönster när du först distribuera ATA och kör storleksverktyget, kan du behöva justera och finjustera din distribution för kapacitet.
 
 
 Om du av någon anledning inte kan använda ATA-storleksverktyget samlar du manuellt in informationen om paket/sek från alla dina domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
@@ -145,7 +148,7 @@ Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribue
 |Paket per sekund&#42;|CPU (kärnor&#42;&#42;)|Minne (GB)|
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|
-|5 000|2|10|
+|5,000|2|10|
 |10,000|3|12|
 |20,000|6|24|
 |50 000|16|48|

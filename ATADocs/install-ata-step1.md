@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f35c495193806f1c1ccc00800402d9b0aca36982
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 7a5dd2c722244ec94ebf49555483ddd201b5ba54
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -63,7 +63,7 @@ På ATA Center-servern utför du följande steg.
 
 8.  Ange följande information på sidan **Configure the Center** (Konfigurera Center) baserat på din miljö:
 
-    |Fält|Beskrivning|Kommentar|
+    |Fält|Description|Kommentar|
     |---------|---------------|------------|
     |Installationssökväg|Det här är den plats där ATA Center är installerat. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center|Låt standardvärdet vara kvar|
     |Datasökväg för databasen|Det här är den plats där MongoDB-databasfilerna finns. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Ändra platsen till en plats där det finns utrymme att växa, baserat på storleken. **Obs:** <ul><li>I produktionsmiljöer, bör du använda en enhet som har tillräckligt med utrymme baserat på kapacitetsplaneringen.</li><li>Vid stora distributioner bör databasen finnas på en separat fysisk enhet.</li></ul>Storleksinformation finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).|
@@ -90,6 +90,10 @@ Eftersom du loggar in på platsen med en IP-adress, visas en varning relaterad t
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Center** körs.
 2.  På skrivbordet klickar du på genvägen för **Microsoft Advanced Threat Analytics** för att ansluta till ATA-konsolen. Logga in med samma autentiseringsuppgifter som du använde för att installera ATA Center.
+
+### <a name="set-anti-virus-exclusions"></a>Ange ett virusskyddsprogram undantag
+
+När du har installerat ATA Center bör du utesluta databaskatalogen MongoDB från att genomsökas kontinuerligt av ditt antivirusprogram. I databasen lagras som standard: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 
 
