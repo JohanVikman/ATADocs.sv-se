@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/15/2018
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05be0f1a696bab215f35521e0c719ddf45238a37
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/01/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -83,7 +83,7 @@ Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du s
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
-När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. Detta gäller inte om ATA Center körs på en virtuell server.<br>
+När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. <br>
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
 Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs. Mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
