@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: f8a4e3ce06e775706f9bf05f5511d6b5ee53e8cc
+ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/21/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.8*
 
@@ -105,7 +105,7 @@ När ATA-gatewayen tar emot VPN-händelser och skickar dem till ATA Center för 
 
 ## <a name="see-also"></a>Se även
 - [ATA POC Distributionsguide](http://aka.ms/atapoc)
-- [ATA-storleksverktyget](http://aka.ms/atasizingtool)
+- [ATA-storleksverktyget](http://aka.ms/aatpsizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för ATA](ata-prerequisites.md)
