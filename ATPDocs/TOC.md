@@ -1,1 +1,41 @@
-# [Index](index.md)
+# Förstå och utforska – förhandsversionen!
+## [Vad är Azure Advanced Threat Protection?](what-is-atp.md)
+## [Vanliga frågor och svar](atp-technical-faq.md)
+# Planera och utforma
+## [Krav för Azure ATP](atp-prerequisites.md)
+## [Azure ATP-arkitektur](atp-architecture.md)
+## [Planera din Azure ATP-kapacitet](atp-capacity-planning.md)
+# Distribuera
+## [1. Skapa en arbetsyta i arbetsytehanteringsportalen](install-atp-step1.md)
+## [2 Anslut till AD](install-atp-step2.md)
+## [3. Ladda ned Azure ATP-sensorpaketet](install-atp-step3.md)
+## [4. Installera Azure ATP-sensorn](install-atp-step4.md)
+## [5. Konfigurera Azure ATP-sensorn](install-atp-step5.md)
+## [6. VPN-integrering](install-atp-step6-vpn.md)
+## [7. Undantag och Honeytoken-konton](install-atp-step7.md)
+### [8. Konfigurera SAM-R obligatoriska behörigheter](install-atp-step8-samr.md)
+## [Tyst installation](ATP-silent-installation.md)
+## Ytterligare steg för Azure ATP-sensorn
+### [Konfigurera portspegling](configure-port-mirroring.md)
+### [Konfigurera händelseinsamling](configure-event-collection.md)
+### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md)
+### [Konfigurera proxyn för att aktivera kommunikation](configure-proxy.md)
+# Använda
+## [Azure ATP-hälsocenter](atp-health-center.md)
+## [Azure ATP-rapporter](reports.md)
+## [Azure ATP-rollgrupper](atp-role-groups.md)
+## [Ändra lösenord för domänanslutning](modifying-atp-config-dcpassword.md)
+## [Exkludera entiteter från identifieringar](excluding-entities-from-detections.md)
+## [Integrera med Windows Defender ATP](integrate-wd-atp.md)
+## [Övervaka aviseringar](monitoring-alerts.md)
+## [Ange Azure ATP-aviseringar](notifications.md)
+## [Integrera med Syslog](setting-syslog.md)
+## [Arbeta med känsliga konton](sensitive-accounts.md)
+## [Arbeta med Azure ATP-arbetsyteportalen](workspace-portal.md)
+## Azure ATP-referensinformation
+### [Referens: Loggar från ATA till SIEM](cef-format-sa.md)
+# Undersök
+## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
+## [Guide för misstänkt aktivitet](suspicious-activity-guide.md)
+## [Undersöka laterala förflyttningssökvägar med Azure ATP](use-case-lateral-movement-path.md)
+## [Undersöka entiteter](entity-profiles.md)
