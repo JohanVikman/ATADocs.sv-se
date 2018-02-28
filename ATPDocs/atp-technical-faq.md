@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c37b46f66715a34145b6123a9278fbc53d4f0d15
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 6a6a34b9a2aae0e507fe18872a31368cf3f3e9d0
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -27,7 +27,7 @@ Den här artikeln innehåller en lista med vanliga frågor och svar om Azure ATP
 
 ## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Var hittar jag en licens för Azure Advanced Threat Protection (ATP)?
 
-Om du har skaffat en licens för Enterprise Mobility + Security 5 (EMS 5) direkt via Office 365-portalen eller via molnet lösning Partner (CSP) licensieringsmodell och du har inte åtkomst till Azure ATP via Microsoft Volume Licensing Center (VLSC), kontakta Microsofts kundsupport att hämta processen för att aktivera Azure Advanced Threat Protection (ATP).
+Om du har skaffat en licens för Enterprise Mobility + Security 5 (EMS E5) direkt via Office 365-portalen eller via molnet lösning Partner (CSP) licensieringsmodell och du har inte åtkomst till Azure ATP via Microsoft Volume Licensing Center (VLSC), kontakta Microsofts kundsupport att hämta processen för att aktivera Azure Advanced Threat Protection (ATP).
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Vad gör jag om Azure ATP-sensor eller fristående sensor inte startar?
 Titta på det senaste fel i den aktuella felloggen (där Azure ATP är installerat under mappen ”loggar”).
