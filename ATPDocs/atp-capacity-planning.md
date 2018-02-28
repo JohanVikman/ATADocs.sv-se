@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3939cba25f262991b000dbdd09bdfbf78f5102e7
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -82,7 +82,7 @@ En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat 
 |75k - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Totalt antal icke-flertrådade kärnor som den här domänkontrollanten har installerat.<br>Även om flertrådsteknik är godkänd för Azure ATP-sensor vid planeringen av kapacitet, bör du räkna antalet faktiska kärnor och inte flertrådade kärnor.
+> - Totalt antal kärnor som den här domänkontrollanten har installerat.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.
 > - Total mängd minne som den här domänkontrollanten har installerat.
 > -   Om domänkontrollanten inte har de resurser som krävs av Azure ATP sensorn domänkontrollantens prestanda genomförs inte, men Azure ATP-sensor kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 819eeb73c57e7b1de5e7e5e837aa2d6db2e0848d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
+ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -51,7 +51,7 @@ Varje arbetsyta i Azure ATP stöder en gräns för Active Directory-skog och sko
 Det här avsnittet innehåller information som du bör samla in och konton och nätverksentiteter som du bör ha innan du börjar installera Azure ATP.
 
 
--   En **lokalt** Azure AD-användarkonto och lösenord med läsbehörighet till alla objekt i de övervakade domänerna.
+-   En **lokalt** AD användarkonto och lösenord med läsbehörighet till alla objekt i de övervakade domänerna.
 
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
