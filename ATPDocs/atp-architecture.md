@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09f82fa21bbaf61573b39fbe7a051db5c5e3b92a
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -71,6 +71,9 @@ Hanteringsportalen för Azure ATP arbetsytan kan du:
 -   Integrera med andra Microsoft-säkerhetstjänster
 
 Ange huvudsakliga arbetsytan som **primära**. Endast en arbetsyta kan anges som primär. Ange en arbetsyta som primär effekter integreringar - kan du endast integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. Du kan ändra vilken arbetsyta är primära senare, men för att kunna göra så du måste ta bort alla integreringar som redan angetts för den aktuella primära arbetsytan.
+
+> [!NOTE]
+> Azure ATP stöder för närvarande skapandet av två arbetsytor. Vi rekommenderar att du skapar en primära arbetsytan för produktionsmiljön och en ytterligare arbetsyta som en fristående miljö.
 
 ### <a name="azure-atp-workspace-portal"></a>Azure portal för ATP-arbetsytan
 
