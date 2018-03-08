@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Det rekommenderade och enklaste sättet att avgöra kapaciteten för din Azure A
 Om du inte kan använda Azure ATP-Storleksverktyget av någon anledning, manuellt samla in informationen om räknaren paket/sek från alla domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
 I följande avsnitt finns anvisningar om hur du samlar in information om paket/sek från en domänkontrollant.
 
-## <a name="choosing-the-right-sensor-type-for-your-deployment"></a>Välja rätt sensor-typ för distributionen
+## Välja rätt sensor-typ för distributionen<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 I en Azure ATP-distribution stöds valfri kombination av Azure ATP fristående sensor typer:
 
 - Endast Azure ATP fristående sensorer

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47fa5ad5d6fb7800c7df4b878d16ec335e2b70e5
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -29,7 +29,7 @@ För domänkontrollanterna att kommunicera med Molntjänsten, måste du öppna: 
  
 1.  Bekräfta att den **aktuell användare** har åtkomst till processorn slutpunkten med hjälp av Internet Explorer, genom att bläddra till följande URL från domänkontrollanten: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (för USA) som du bör få fel 503:
 
- ![tjänsten är inte tillgänglig](/media/service-unavailable.png)
+ ![tjänsten är inte tillgänglig](./media/service-unavailable.png)
  
 2.  Om du inte får ett felmeddelande 503, kontrollera proxykonfigurationen och försök igen.
 
@@ -39,11 +39,11 @@ För domänkontrollanterna att kommunicera med Molntjänsten, måste du öppna: 
 
 Om du får felet ”fel: Det gick inte att hitta den angivna registernyckeln eller registervärdet”. Det innebär att ingen proxyserver har angetts för den **LOCAL_SYSTEM** nivå
  
- ![lokalt system proxyfel](/media/proxy-local-system-error.png)
+ ![lokalt system proxyfel](./media/proxy-local-system-error.png)
 
 Om resultatet är ”resultatet Compared: olika” detta innebär att proxy är inställd för den **LOCAL_SYSTEM** men det är inte samma som den **CURRENT_USER**:
  
-  ![Proxy resultatet jämfört med](/media/proxy-result-compared.png)
+  ![Proxy resultatet jämfört med](./media/proxy-result-compared.png)
 
 5.  Om den **LOCAL_SYSTEM** har inte rätt proxyinställningar (antingen inte konfigurerats eller skiljer sig från den **CURRENT_USER**), och du kan behöva kopiera proxyinställning från den **CURRENT_ ANVÄNDAREN** till den **LOCAL_SYSTEM**. Se till att säkerhetskopiera den här registernyckeln innan du ändrar den:
 
