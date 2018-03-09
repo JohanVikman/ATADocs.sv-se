@@ -13,12 +13,13 @@
 ## [5. Konfigurera Azure ATP-sensorn](install-atp-step5.md)
 ## [6. VPN-integrering](install-atp-step6-vpn.md)
 ## [7. Undantag och Honeytoken-konton](install-atp-step7.md)
-### [8. Konfigurera SAM-R obligatoriska behörigheter](install-atp-step8-samr.md)
+## [8. Konfigurera SAM-R obligatoriska behörigheter](install-atp-step8-samr.md)
 ## [Tyst installation](ATP-silent-installation.md)
 ## Ytterligare steg för Azure ATP-sensorn
 ### [Konfigurera portspegling](configure-port-mirroring.md)
+### [Verifiera portspegling](validate-port-mirroring.md)
 ### [Konfigurera händelseinsamling](configure-event-collection.md)
-### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md)
+### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md))
 ### [Konfigurera proxyn för att aktivera kommunikation](configure-proxy.md)
 # Använda
 ## [Azure ATP-hälsocenter](atp-health-center.md)
@@ -39,3 +40,5 @@
 ## [Guide för misstänkt aktivitet](suspicious-activity-guide.md)
 ## [Undersöka laterala förflyttningssökvägar med Azure ATP](use-case-lateral-movement-path.md)
 ## [Undersöka entiteter](entity-profiles.md)
+# Felsökning
+## [Felsök vanliga problem](troubleshooting-atp-known-issues.md)
