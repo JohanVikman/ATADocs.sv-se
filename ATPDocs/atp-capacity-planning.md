@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -68,8 +68,9 @@ Tänk på följande när du bestämmer hur många Azure ATP fristående sensorer
 
 ## Azure ATP sensor och fristående sensor storlek <a name="sizing"></a>
 
-En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. I följande tabell är en uppskattning är det belopp som slutligen som Parsar sensorn beroende på hur mycket trafik som du har. 
-
+En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. I följande tabell är en uppskattning är det belopp som slutligen som Parsar sensorn beroende på mängden trafik och distribution av trafik. 
+> [!NOTE]
+> Följande CPU och minne kapaciteten avser sensor's egen förbrukning – inte domänkontrollantens kapacitet.
 
 |Paket per sekund *|CPU (kärnor)|Minne (GB)|
 |----|----|-----|
@@ -82,12 +83,12 @@ En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat 
 |75k - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Totalt antal kärnor som den här domänkontrollanten har installerat.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.
-> - Total mängd minne som den här domänkontrollanten har installerat.
-> -   Om domänkontrollanten inte har de resurser som krävs av Azure ATP sensorn domänkontrollantens prestanda genomförs inte, men Azure ATP-sensor kanske inte fungerar som förväntat.
+> - Totalt antal kärnor som ska användas av sensor-tjänsten.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.
+> - Total mängd minne som ska användas av sensor-tjänsten.
+> -   Om domänkontrollanten inte har de resurser som krävs av Azure ATP sensorn domänkontrollantens prestanda påverkas inte, men Azure ATP-sensor kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 > -   För optimala prestanda ställer du in den **Energialternativ** av Azure ATP sensor till **högpresterande**.
-> -   Minst 2 kärnor och 6 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för Azure ATP-binärfiler.
+> -   Minst 2 kärnor och 6 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymmet som krävs för Azure ATP binärfiler och loggar.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Beräkning av trafik för domänkontrollanter
