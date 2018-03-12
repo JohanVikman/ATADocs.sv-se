@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa5f1af43a77d37ba8635fba10628d1720174393
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -29,7 +29,10 @@ ms.lasthandoff: 02/21/2018
 
 Den här installationsproceduren innehåller anvisningar för att skapa och hantera en arbetsyta i hanteringsportalen för Azure ATP-arbetsytan. Mer information om Azure ATP arkitektur finns [Azure ATP arkitektur](atp-architecture.md).
 
-Du har möjlighet att hantera och övervaka flera arbetsytor i Azure ATP. Detta är särskilt användbart om du vill skapa en demo-arbetsyta och en test-arbetsyta där du kan POC Azure ATP innan den distribueras ut till hela organisationen. Det krävs också stöd för distributioner med flera skogar. En enda arbetsyta kan endast övervaka flera domäner från en enda skog.
+Du har möjlighet att hantera och övervaka flera arbetsytor i Azure ATP. Detta är särskilt användbart om du vill skapa en demo-arbetsyta och en test-arbetsyta där du kan POC Azure ATP innan den distribueras ut till hela organisationen. Det krävs också stöd för distributioner med flera skogar. En enda arbetsyta kan endast övervaka flera domäner från en enda skog. 
+
+> [!NOTE]
+> Du kan ha högst två aktiva arbetsytor. När du har tagit bort en arbetsyta kan du kontakta supporten om du vill återaktivera den. Du en har en mazimum tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet sparade, borttagna arbetsytor.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Steg 1. Ange arbetsytan management portal
 

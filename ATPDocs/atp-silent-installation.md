@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 862420fb6914dbf9ee57c36bc21103cc7dddf7af
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -31,7 +31,10 @@ Azure ATP kräver installation av Microsoft .NET Framework 4.7.
 
 När du installerar Azure ATP .net Framework 4.7 är automatiskt installeras som en del av distributionen av Azure ATP.
 
-> [!Note] 
+> [!IMPORTANT] 
+> Se till att du har den senaste versionen av .net Framework installerat. Om en tidigare version av .net har installerats kommer fastna i en slinga din Azure ATP tyst installation och inte installeras. 
+
+> [!NOTE] 
 > Installationen av .net framework 4.7 kan kräva att servern startas om. När du installerar Azure ATP sensor på domänkontrollanter, bör du schemalägga en underhållsperiod för dessa domänkontrollanter.
 När du använder metoden för tyst installation av Azure ATP konfigureras installationsprogrammet automatiskt starta om servern i slutet av installationen (vid behov). På grund av ett Windows Installer-fel i *norestart* flaggan kan inte användas på ett tillförlitligt sätt att kontrollera att servern inte startar om, så se till att endast köra tyst installation under en underhållsperiod.
 
