@@ -1,6 +1,7 @@
-# Förstå och utforska – förhandsversionen!
+# Förstå och utforska
 ## [Vad är Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Vanliga frågor och svar](atp-technical-faq.md)
+## [Nyheter i Azure ATP](atp-whats-new.md)
 # Planera och utforma
 ## [Krav för Azure ATP](atp-prerequisites.md)
 ## [Azure ATP-arkitektur](atp-architecture.md)
@@ -19,7 +20,7 @@
 ### [Konfigurera portspegling](configure-port-mirroring.md)
 ### [Verifiera portspegling](validate-port-mirroring.md)
 ### [Konfigurera händelseinsamling](configure-event-collection.md)
-### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md))
+### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md)
 ### [Konfigurera proxyn för att aktivera kommunikation](configure-proxy.md)
 # Använda
 ## [Azure ATP-hälsocenter](atp-health-center.md)
