@@ -43,3 +43,4 @@
 ## [Undersöka entiteter](entity-profiles.md)
 # Felsökning
 ## [Felsök vanliga problem](troubleshooting-atp-known-issues.md)
+## [Support och information](atp-support.md)
