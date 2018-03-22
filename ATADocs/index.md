@@ -2,11 +2,11 @@
 layout: LandingPage
 description: "Läs om hur du använder Advanced Threat Analytics."
 ms.topic: landing-page
-ms.openlocfilehash: 2091c0c3de5e4509570985ab9bad014075eebdd7
-ms.sourcegitcommit: 72520128141a98771a62d68785703ef1c2130c19
+ms.openlocfilehash: a966ebda6f23dc367b5e5108faf262480073879f
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Dokumentation för Advanced Threat Analytics
 
@@ -14,7 +14,7 @@ ATA (Advanced Threat Analytics) är en lokal plattform som hjälper dig att skyd
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/whats-new-version-1.8">
+        <a href="/advanced-threat-analytics/whats-new-version-1.9">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -77,6 +77,10 @@ När en ny misstänkt aktivitet identifieras öppnas meddelandefältet automatis
 
 ![Bild för meddelandefält i ATA](media/notification-bar-1.7.png)
 
+### <a name="whats-new"></a>Nyheter
+
+När en ny version av ATA släpps, den **nyheter** visas i övre högra så att du vet vad har lagts till i den senaste versionen. Det ger dig också med en länk till version hämtningen.
+
 ### <a name="filtering-panel"></a>Filtreringspanel
 
 Du kan filtrera vilka misstänkta aktiviteter som visas i tidslinjen för attacker eller som visas på entitetsprofilens flik för misstänkta aktiviteter baserat på status och allvarlighetsgrad.
@@ -94,23 +98,6 @@ Health Center visar aviseringar om något inte fungerar korrekt i ATA-distributi
 ![Bild för ATA health center](media/ATA-Health-Issue.jpg)
 
 Varje gång systemet upptäcker ett problem, till exempel ett anslutningsfel eller en frånkopplad ATA-Gateway med hjälp av ikonen för Health Center får du reda på genom att visa en röd punkt. ![Bild med röd punkt för ATA health center](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="user-and-computer-profiles"></a>Användar- och datorprofiler
-
-ATA skapar en profil för alla användare och datorer i nätverket. I användarprofilen visar ATA allmän information, t.ex. gruppmedlemskap, senaste inloggningar och resurser som har använts nyligen. Den innehåller också en lista över platser där användaren är ansluten via VPN. En lista över gruppmedlemskap som ATA anser vara känsliga, finns i listan nedan.
-
-![Användarprofil](media/user-profile.png)
-
-I datorprofilen visar ATA allmän information, t.ex. de senaste inloggningarna och resurser som har använts nyligen.
-
-![Datorprofil](media/computer-profile.png)
-
-ATA tillhandahåller ytterligare information om entiteter (datorer, enheter, användare) på följande sidor: Sammanfattning, Aktiviteter och Misstänkta aktiviteter.
-
-En profil som ATA inte har kunnat lösa helt identifieras med en halvfull cirkelformad ikon.
-
-
-![Bild för olöst profil i ATA](media/ATA-Unresolved-Profile.jpg)
 
 ### <a name="sensitive-groups"></a>Känsliga grupper
 

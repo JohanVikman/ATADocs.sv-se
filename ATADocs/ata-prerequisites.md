@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -68,7 +68,12 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 ## <a name="ata-center-requirements"></a>Krav för ATA Center
 Det här avsnittet innehåller kraven för ATA Center.
 ### <a name="general"></a>Allmänt
-ATA Center har stöd för installation på en server med Windows Server 2012 R2 eller Windows Server 2016. ATA Center kan installeras på en server som är medlem i en domän eller arbetsgrupp.
+ATA Center har stöd för installation på en server med Windows Server 2012 R2 eller Windows Server 2016. 
+
+ > [!NOTE]
+ > ATA Center har inte stöd för Windows Server core.
+
+ATA Center kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 
 Innan du installerar ATA Center med Windows 2012 R2, ska du kontrollera att följande uppdatering har installerats: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
@@ -83,7 +88,8 @@ Om du kör ATA Center som en virtuell dator ska du stänga av servern innan du s
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
-När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen. <br>
+När du arbetar på en fysisk server kräver ATA-databasen att du **inaktiverar** NUMA (Non-Uniform Memory Access) i BIOS. Systemet kan referera till NUMA kallas Node Interleaving i vilket fall du behöver **aktivera** Node Interleaving för att inaktivera NUMA. Mer information finns i BIOS-dokumentationen.<br>
+
 För optimala prestanda ställer du in **Energialternativ** för ATA Center på **Höga prestanda**.<br>
 Antalet domänkontrollanter som du övervakar och belastningen på var och en av domänkontrollanterna avgör serverspecifikationerna som krävs. Mer information finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
@@ -117,6 +123,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**Kerberos** (valfritt om domänansluten)|TCP och UDP|88|Domänkontrollanter|Utgående|
 |**Netlogon** (valfritt om domänansluten)|TCP och UDP|445|Domänkontrollanter|Utgående|
 |**Windows tidstjänst** (valfritt om datorn är domänansluten)|UDP|123|Domänkontrollanter|Utgående|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP och UDP|445|Gateways och enheter|Inkommande och utgående|
 
 > [!NOTE]
 > LDAP krävs för att testa autentiseringsuppgifterna som ska användas mellan ATA-gatewayer och domänkontrollanterna. Testet utförs från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av dess normala lösningsprocessen.
@@ -147,7 +154,7 @@ Du kan till exempel använda standarden **webbservern** eller **datorn** mallar.
 ## <a name="ata-gateway-requirements"></a>Krav för ATA Gateway
 Det här avsnittet innehåller kraven för ATA Gateway.
 ### <a name="general"></a>Allmänt
-ATA Gateway stöder installation på en server som kör Windows Server 2012 R2 eller Windows Server 2016 (inkludera server core).
+ATA Gateway har stöd för installation på en server som kör Windows Server 2012 R2 eller Windows Server 2016 (inklusive server core).
 ATA Gateway kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 ATA Gateway kan användas för att övervaka domänkontrollanter i domänens funktionella nivå för Windows 2003 och högre.
 

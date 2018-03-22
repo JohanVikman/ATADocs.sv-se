@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 8d7d53222c4eb98fba554b59f14d8728a88c9d95
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 11/07/2017
 
 >[!div class="step-by-step"]
 [«Steg 7](vpn-integration-install-step.md)
+[steg 9»](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Steg 8. Konfigurera undantag för IP-adress och Honeytoken-användare
 Du kan utesluta specifika IP-adresser eller användare från ett antal identifieringar i ATA. 
@@ -65,7 +66,7 @@ I [ATA-boken med simulerade attacker](https://docs.microsoft.com/enterprise-mobi
 
 >[!div class="step-by-step"]
 [«Steg 7](vpn-integration-install-step.md)
-
+[steg 9»](install-ata-step9-samr.md)
 
 
 ## <a name="related-videos"></a>Relaterade videor

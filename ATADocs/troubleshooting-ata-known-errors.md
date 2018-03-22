@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -30,7 +30,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 ## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Fel i ATA Gateway och ATA Lightweight Gateway
 
 > [!div class="mx-tableFixed"]
-|Fel|Beskrivning|Lösning|
+|Fel|Description|Lösning|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Ett lokalt fel uppstod|ATA Gateway kunde inte autentiseras mot domänkontrollanten.|1. Bekräfta att domänkontrollantens DNS-post har konfigurerats korrekt i DNS-servern. <br>2. Kontrollera att tiden för ATA Gateway har synkroniserats med tiden för domänkontrollanten.|
 |System.IdentityModel.Tokens.SecurityTokenValidationException: Kunde inte verifiera certifikatkedja|ATA Gateway kunde inte verifiera certifikatet för ATA Center.|1. Kontrollera att certifikatet från rotcertifikatutfärdaren har installerats i certifikatarkivet för betrodd certifikatutfärdare på ATA Gateway. <br>2. Verifiera att listan över återkallade certifikat (CRL) är tillgänglig och att det går att utföra verifiering av certifikatåterkallning.|
@@ -56,7 +56,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
  
 ## <a name="deployment-errors"></a>Distributionsfel
 > [!div class="mx-tableFixed"]
-|Fel|Beskrivning|Lösning|
+|Fel|Description|Lösning|
 |-------------|----------|---------|
 |Installationen av .Net Framework 4.6.1 misslyckas med fel 0x800713ec|Kraven för .Net Framework 4.6.1 är inte installerade på servern. |Kontrollera att Windows-uppdateringarna [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) och [KB2919355](https://support.microsoft.com/kb/2919355) är installerade på servern innan ATA installeras.|
 |System.Threading.Tasks.TaskCanceledException: En uppgift avbröts|Tidsgränsen för distributionsprocessen gick ut eftersom det inte gick att nå ATA Center.|1.    Kontrollera nätverksanslutningen till ATA Center genom att ansluta till tjänsten med hjälp av dess IP-adress. <br></br>2.    Kontrollera proxy- eller brandväggskonfigurationerna.|
@@ -71,7 +71,7 @@ Det här avsnittet beskriver möjliga fel i distributionen av ATA och de steg so
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problem i ATA Gateway och Lightweight Gateway
 
 > [!div class="mx-tableFixed"]
-|Problem|Beskrivning|Lösning|
+|Problem|Description|Lösning|
 |-------------|----------|---------|
 |Ingen trafik togs emot från domänkontrollanten, men övervakningsaviseringar observeras|    Ingen trafik togs emot från en domänkontrollant med hjälp av portspegling via en ATA-gateway|Inaktivera följande funktioner i **Avancerade inställningar** på ATA-gatewayens nätverkskort för datainsamling:<br></br>Sammanslagning av mottagna segment, RSC (IPv4)<br></br>Sammanslagning av mottagna segment, RSC (IPv6)|
 |Den här övervakningsavisering visas: **analyseras inte nätverkstrafik**|Om du har en ATA Gateway eller Lightweight Gateway på virtuella VMware-datorer kan få du aviseringen för övervakning. Detta inträffar på grund av ett matchningsfel i VMware.|Ange följande inställningar till **0** eller **inaktiverad** i konfigurationen av virtuella nätverkskort: TsoEnable, LargeSendOffload, Systemansvarig avlastning, Giant Systemansvarig avlastning|TLS 1.0 är inaktiverad på ATA Gateway men .net är konfigurerad att använda TLS 1.2|

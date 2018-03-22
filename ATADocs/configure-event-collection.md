@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/07/2017
 > För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
 
 
-För att kunna förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller om ATA Lightweight Gateway inte har distribuerats, den kan vidarebefordras till ATA Gateway i ett av två sätt, genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att konfigurera Windows-händelse Vidarebefordran.
+För att förbättra identifieringsfunktionerna behöver ATA Windows följande händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller om ATA Lightweight Gateway inte har distribuerats, den kan vidarebefordras till ATA Gateway i ett av två sätt, genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att konfigurera Windows-händelse Vidarebefordran.
 
 
 
@@ -61,7 +61,7 @@ När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare*
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, uppdatera = 10* () Till exempel: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, uppdatera = 10)
+    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, uppdatera = 10* () Till exempel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, uppdatera = 10)
  
    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
    

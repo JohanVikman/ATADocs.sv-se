@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/10/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: da225af4578d4673040315f8814b9067a46517ce
-ms.sourcegitcommit: d41dcc40196a165026fd27db7bbd74d87b8fedda
+ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 # <a name="ata-frequently-asked-questions"></a>Vanliga frågor och svar om ATA
 Den här artikeln innehåller en lista med vanliga frågor om ATA och ger insikt och svar.
@@ -83,7 +83,9 @@ För varje hel dag med i genomsnitt 1 000 paket/sek behöver du 0,3 GB lagring.
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Varför anses vissa konton känsliga?
 Detta inträffar när ett konto är medlem i vissa grupper som vi anser vara känsliga (t.ex. "Domänadministratörer").
 
-Om du vill förstå varför ett konto är känsligt kan du granska dess gruppmedlemskap för att förstå vilka känsliga grupper det tillhör (den grupp det tillhör kan också vara känslig till följd av en annan grupp, så samma process bör utföras tills du hittar den känsliga grupp som har högst nivå).
+Om du vill förstå varför ett konto är känsligt kan du granska dess gruppmedlemskap för att förstå vilka känsliga grupper det tillhör (den grupp det tillhör kan också vara känslig till följd av en annan grupp, så samma process bör utföras tills du hittar den känsliga grupp som har högst nivå). 
+
+Dessutom kan du manuellt tagga en användare, grupp eller dator som känslig. Mer information finns i [tagga känsliga konton](tag-sensitive-accounts.md).
 
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>Hur övervakar jag en virtuell domänkontrollant med ATA?
 De flesta virtuella domänkontrollanter kan omfattas av ATA Lightweight Gateway. Information för att fastställa om ATA Lightweight Gateway är lämpligt för din miljö finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).

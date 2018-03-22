@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Avancerad Hotanalys misstänkt aktivitet guide
@@ -63,6 +63,8 @@ Ställ in [Privileged Access Management för Active Directory](https://docs.micr
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Brutet förtroende mellan datorer och domän
 
+> ! [OBS] Den här misstänkt aktivitet togs bort och visas bara i ATA-versioner före 1.9.
+
 **Beskrivning**
 
 Brutet förtroende innebär att Active Directory säkerhetskrav inte kanske gäller för datorer i fråga. Detta betraktas ofta som ett grundläggande säkerhets- och efterlevnadsfel och ett enkelt mål för angripare. I denna identifiering aktiveras en varning om mer än 5 Kerberos-autentiseringsfel ses från ett datorkonto i 24 timmar.
@@ -76,6 +78,7 @@ Brutet förtroende innebär att Active Directory säkerhetskrav inte kanske gäl
 
 Ansluta datorn till domänen, vid behov eller återställa lösenord för den datorn.
 
+
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Nyckelsökningsangrepp med enkla LDAP-bindning
 
 **Beskrivning**
@@ -85,7 +88,7 @@ Ansluta datorn till domänen, vid behov eller återställa lösenord för den da
 
 En angripare försöker autentisera med många olika lösenord för olika konton förrän rätt lösenord hittades för minst ett konto i en brute force-attacker. En gång hittades kan en angripare logga in med det kontot.
 
-I denna identifiering utlöses en avisering när ATA identifierar många olika lösenord används. Detta kan vara antingen *vågrätt* med en liten uppsättning lösenord för många användare, eller *lodrätt ”* med ett stort utbud av lösenord på bara några få användare; eller en kombination av de här två alternativen.
+I denna identifiering utlöses en avisering när ATA identifierar ett stort antal enkel bindning autentiseringar. Detta kan vara antingen *vågrätt* med en liten uppsättning lösenord för många användare, eller *lodrätt ”* med ett stort utbud av lösenord på bara några få användare; eller en kombination av de här två alternativen.
 
 **Undersökning**
 
@@ -103,15 +106,15 @@ I denna identifiering utlöses en avisering när ATA identifierar många olika l
 
 **Beskrivning**
 
-Olika metoder för attack använda svaga produktidentifieringsförteckning för Kerberos-kryptering. I denna identifiering ATA lär sig Kerberos krypteringstyper som används av datorer och användare och varnar dig när en svagare korrekt är att använda den: (1) är ovanligt för källdatorn och/eller användare. och (2) matchar kända attacker tekniker.
+Nedgradering av kryptering är en metod för lägre Kerberos av nedgradera krypteringsnivån för olika fält i protokollet som vanligtvis är krypterade med den högsta nivån av kryptering. En lägre krypterade fältet kan vara ett enklare mål offline brute force försöken. Olika metoder för attack använda svaga produktidentifieringsförteckning för Kerberos-kryptering. I denna identifiering ATA lär sig Kerberos krypteringstyper som används av datorer och användare och varnar dig när en svagare korrekt är att använda den: (1) är ovanligt för källdatorn och/eller användare. och (2) matchar kända attacker tekniker.
 
 Det finns tre typer av identifiering:
 
-1.  Skadlig Skeleton Key – är skadlig kod som körs på domänkontrollanter och tillåter autentisering i domänen med ett konto utan att känna till lösenordet. Den skadliga koden använder ofta svagare krypteringsalgoritmer till chiffrering lösenord på domänkontrollanten. I denna identifiering har kryptering för att KRB_ERR meddelandet från källdatorn nedgraderas jämfört med tidigare inlärda beteende.
+1.  Skadlig Skeleton Key – är skadlig kod som körs på domänkontrollanter och tillåter autentisering i domänen med ett konto utan att känna till lösenordet. Den här skadliga koden använder ofta svagare krypteringsalgoritmer till hash-lösenord på domänkontrollanten. I denna identifiering har kryptering för att KRB_ERR-meddelande från domänkontrollanten till det konto som ber om en tjänstbiljett nedgraderas jämfört med tidigare inlärda beteende.
 
 2.  Guld biljett – i en [Golden Ticket](#golden-ticket) aviseringen krypteringsmetod i fältet TGT för TGS_REQ (service request) meddelande från källdatorn har nedgraderas jämfört med tidigare inlärda beteende. Detta baseras inte på en gång avvikelseidentifiering (som andra Golden Ticket identifieringen). Dessutom kan det fanns ingen begäran om Kerberos-autentisering som är associerade med den tidigare tjänstbegäran som identifieras av ATA.
 
-3.  Overpass-the-Hash-AS_REQ kryptering meddelandetypen från källdatorn har nedgraderas jämfört med tidigare inlärda beteendet (det vill säga datorn var med AES).
+3.  Overpass-the-Hash – en angripare kan använda en svag stulen hash för att skapa en stark biljett med en Kerberos-AS-begäran. I denna identifiering AS_REQ kryptering meddelandetypen från källdatorn har nedgraderas jämfört med tidigare inlärda beteendet (det vill säga datorn var med AES).
 
 **Undersökning**
 
@@ -347,6 +350,8 @@ Inga aviseringar skulle aktiveras i den första månaden när ATA har distribuer
 
  - Om svaret var inte till alla anges ovan förutsätter att det här är skadliga.
 
+6. Om det finns ingen information om det konto som är involverad, kan du gå till slutpunkten och kontrollera vilket konto som har loggats i vid tidpunkten för aviseringen.
+
 **Reparation**
 
 Använd den [SAMRi10 verktyget](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) att skydda din miljö mot den här tekniken.
@@ -428,6 +433,9 @@ Angripare som angripa administratörsbehörighet eller använder ett noll-dagars
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Känsligt kontoautentiseringsuppgifter exponerade & tjänster exponering av autentiseringsuppgifter
 
+> [!NOTE]
+> Den här misstänkt aktivitet togs bort och visas bara i ATA-versioner före 1.9. ATA 1,9 och senare finns [rapporter](reports.md).
+
 **Beskrivning**
 
 Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även bero på känsliga konton. Övervaka nätverkstrafik angripare kan fånga och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. Alla lösenord i klartext för känsligt konto utlöser aviseringen medan för icke-känsliga konton aviseringen utlöses om fem eller fler olika konton skickar rena textlösenord från samma källdator. 
@@ -448,7 +456,7 @@ Kontrollera konfigurationen på källdatorerna och se till att du inte använder
 
 En angripare försöker autentisera med många olika lösenord för olika konton förrän rätt lösenord hittades för minst ett konto i en brute force-attacker. En gång hittades kan en angripare logga in med det kontot.
 
-En avisering utlöses när många autentiseringsfel inträffade i denna identifiering, detta kan antingen vara vågrätt med en liten uppsättning lösenord för många användare. eller lodrätt med en stor uppsättning lösenord på bara några användare. eller en kombination av de här två alternativen.
+En avisering utlöses när många autentiseringsfel med Kerberos eller NTLM uppstod i denna identifiering, detta kan antingen vara vågrätt med en liten uppsättning lösenord för många användare. eller lodrätt med en stor uppsättning lösenord på bara några användare. eller en kombination av de här två alternativen. Minsta tid innan en avisering kan utlösas är en vecka.
 
 **Undersökning**
 
@@ -461,6 +469,30 @@ En avisering utlöses när många autentiseringsfel inträffade i denna identifi
 **Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
+
+## Skapa en misstänkt tjänst <a name="suspicious-service-creation"></a>
+
+**Beskrivning**
+
+Angripare försöka köra misstänkta tjänster i nätverket. ATA skapar en avisering när en ny tjänst som verkar misstänkt har skapats på en domänkontrollant. Den här aviseringen är beroende av händelsen 7045 och det upptäcks från varje domänkontrollant som omfattas av en ATA Gateway eller Lightweight Gateway.
+
+**Undersökning**
+
+1. Om datorn i fråga är en administrativ dator eller en dator på vilken IT gruppmedlemmar och tjänsten konton för att utföra administrativa uppgifter, det kan bero på ett falsklarm och du kan behöva **utelämna** aviseringen och lägger till den i den Undantagslistan om det behövs.
+
+2. Är tjänsten något du känner igen på den här datorn?
+
+ - Är den **konto** i fråga tillåts för att installera den här tjänsten?
+
+ - Om svaret på båda frågor är *Ja*, sedan **Stäng** aviseringen eller lägga till den i undantagslistan.
+
+3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
+
+**Reparation**
+
+- Implementera mindre privilegierad åtkomst på datorer i domänen så att bara vissa användare behörighet att skapa nya tjänster.
+
+
 
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Misstanke om identitetsstöld baserat på onormalt beteende
 
@@ -484,7 +516,7 @@ Beroende på vad som orsakade det här onormalt beteende ska ske, vidtas olika �
 
 **Beskrivning**
 
-Angripare använda verktyg som implementerar olika protokoll (SMB, Kerberos, NTLM) på sätt som inte är standard. När den här typen av nätverkstrafik godkänns av Windows utan varningar, kan ATA identifiera potentiella skadliga åtgärder. Beteendet är jämförbar olika tekniker, till exempel Over-Pass-the-Hash och brute force och som används av avancerade är en utpressningstrojan som, till exempel WannaCry kryphål.
+Angripare använda verktyg som implementerar olika protokoll (SMB, Kerberos, NTLM) på sätt som inte är standard. När den här typen av nätverkstrafik godkänns av Windows utan varningar, kan ATA identifiera potentiella skadliga åtgärder. Beteendet är jämförbar olika tekniker, till exempel Over-Pass-the-Hash, samt kryphål som används av avancerade är en utpressningstrojan som, till exempel WannaCry.
 
 **Undersökning**
 
@@ -513,6 +545,10 @@ Korrigera alla datorer, särskilt användning av säkerhetsuppdateringar.
 2. [Ta bort WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi kan dekryptera data i händerna på vissa ransom program, men endast om användaren inte har startats om eller stängas av datorn. Mer information finns i [vill Cry är en utpressningstrojan som](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> Kontakta supporten om du vill inaktivera en misstänkt aktivitet.
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Koppla säkerhets-community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

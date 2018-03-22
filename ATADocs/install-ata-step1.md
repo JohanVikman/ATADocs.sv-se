@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7a5dd2c722244ec94ebf49555483ddd201b5ba54
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 27a016fe71d08dd8e8852fc44d5dea142f914d9e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 # <a name="install-ata---step-1"></a>Installera ATA – Steg 1
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 >[!div class="step-by-step"]
 [Steg 2 »](install-ata-step2.md)
 
-Den här installationsproceduren innehåller anvisningar som beskriver hur du utför en helt ny installation av ATA 1.8. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns i [ATA-migreringsguide för version 1.8](ata-update-1.8-migration-guide.md).
+Den här installationsproceduren innehåller anvisningar som beskriver hur du utför en helt ny installation av ATA 1.8. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns [ATA-Migreringsguide för version 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
 > Om du använder Windows 2012 R2, du kan installera KB2934520 på ATA Center-servern och på ATA-gatewayservrarna innan du påbörjar installationen, annars ATA-installationen installerar uppdateringen och kräver en omstart mitt i ATA-installationen.
