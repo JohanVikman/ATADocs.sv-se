@@ -2,6 +2,8 @@
 ## [Vad är Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Vilka hot identifierar ATA?](ata-threats.md)
 ## Nyheter i ATA
+### [Nyheter i ATA version 1.9](whats-new-version-1.9.md)
+#### [Uppdatera till ATA 1.9 – migreringsguide](ata-update-1.9-migration-guide.md)
 ### [Nyheter i ATA version 1.8](whats-new-version-1.8.md)
 #### [Uppdatera till ATA 1.8 – migreringsguide](ata-update-1.8-migration-guide.md)
 ### [Nyheter i ATA version 1.7](whats-new-version-1.7.md)
@@ -26,6 +28,7 @@
 ## [6 Händelseinsamling](install-ata-step6.md)
 ## [7 VPN-integrering](vpn-integration-install-step.md)
 ## [8 Undantag och Honeytoken](install-ata-step7.md)
+## [9 Konfigurera SAM-R](install-ata-step9-samr.md)
 ## [Tyst installation](ata-silent-installation.md)
 ## Ytterligare steg för ATA Gateway
 ### [1. Konfigurera portspegling](configure-port-mirroring.md)
@@ -42,9 +45,12 @@
 ## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
 ## [Hantera ATA-telemetri](manage-telemetry-settings.md)
 ## [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
-## [Ange Syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
+## [Ange syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
+## [Tagga känsliga konton](tag-sensitive-accounts.md)
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 ## [Arbeta med ATA-konsolen](working-with-ata-console.md)
+### [Entitetsprofiler](entity-profiles.md)
+##[Förhindra lateral förflyttning](use-case-lateral-movement-path.md)
 ## ATA Referensinformation
 ### [Referens: Loggar från ATA till SIEM](cef-format-sa.md)
 ### [Händelse-ID-referens](event-id-reference.md)
