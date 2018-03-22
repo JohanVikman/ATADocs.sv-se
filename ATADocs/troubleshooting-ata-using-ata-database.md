@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/31/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a08c3175c5b7d7d6006189f858b38026344decac
-ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
+ms.openlocfilehash: 7bd17d6ac340f1acf0166aadbfcbb7f3ef164fc3
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -45,7 +45,7 @@ Standardsättet, som är det mest grundläggande sättet, för att ställa fråg
 
 I följande exempel visar exempelkod med den syntax som anges ovan. Om du undersöker en misstänkt aktivitet som inträffade 20/10/2015 och vill veta mer om de NTLM-aktiviteter som "John Berg" har utfört den dagen:<br /><br />Hitta först ID för "John Berg"
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>Anteckna ID som anges med värdet för `_id` anta att ID som är`123bdd24-b269-h6e1-9c72-7737as875351`<br>Sök sedan efter samlingen med det närmaste datum som infaller före datumet du letar efter, i exempel 20/10/2015.<br>Sök sedan efter NTLM-aktiviteter för John Bergs konto: 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>Anteckna ID som anges med värdet för `_id` anta att ID som är `123bdd24-b269-h6e1-9c72-7737as875351`<br>Sök sedan efter samlingen med det närmaste datum som infaller före datumet du letar efter, i exempel 20/10/2015.<br>Sök sedan efter NTLM-aktiviteter för John Bergs konto: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 

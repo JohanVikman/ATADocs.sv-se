@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/20/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/20/2017
 Om ATA Center inte startar, gör du följande felsökning:
 
 1.  Kör följande Windows PowerShell-kommandot: `Get-Service Pla | Select Status` att säkerställa prestandaräknartjänsten körs. Om den inte körs rör det sig om ett plattformsproblem, och du måste få tjänsten att köra igen.
-2.  Om den kördes försök att starta om den och se om det löser problemet:`Restart-Service Pla`
+2.  Om den kördes försök att starta om den och se om det löser problemet: `Restart-Service Pla`
 3.  Prova att skapa en ny datainsamlare manuellt (vilken som helst fungerar, till exempel bara insamling av datorns CPU-användning).
 Om det går att starta är plattformen troligtvis inte skadad. Om inte, det beror på fortfarande plattform.
 
@@ -46,7 +46,7 @@ Om det går att starta är plattformen troligtvis inte skadad. Om inte, det bero
 
 ## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Felsöka ATA Lightweight Gateway Start
 
-**Symtom**
+**Symptom**
 
 ATA-gatewayen startar inte och du får detta fel:<br></br>
 *System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte lyckade: 500 (Internt serverfel)*
@@ -57,7 +57,7 @@ Detta inträffar eftersom som en del av installationen av Lightweight Gateway, A
 
 **Lösning**
 
-1. Under registret nycklar, om det finns en DWORD-värdet kallas **Inaktivera prestandaräknare** Kontrollera att den är inställd på **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. Under registret nycklar, om det finns en DWORD-värdet kallas **Inaktivera prestandaräknare** Kontrollera att den är inställd på **0**:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Starta sedan om tjänsten Pla. ATA Lightweight Gateway upptäcks ändringen automatiskt och starta om tjänsten.
 

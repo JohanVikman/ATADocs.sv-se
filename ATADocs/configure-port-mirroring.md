@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fb9c6aa3962f7fc121f3737a32c9a5cfb2fcfb8e
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 9ed585d37363fbae2604fe0ea705a0ea30b9b283
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -51,7 +51,7 @@ Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella. Neda
 |Virtuell|Virtuell på samma värd|Den virtuella växeln måste ha stöd för portspegling.<br /><br />Portspeglingen kan sluta fungera om en av de virtuella datorerna flyttas till en annan värd själv.|
 |Virtuell|Virtuell på olika värdar|Kontrollera att den virtuella växeln har stöd för det här scenariot.|
 |Virtuell|Fysiskt|Kräver ett dedikerat nätverkskort annars ATA ser all trafik som kommer in och ut för värden, även den trafik som skickas till ATA Center.|
-|Fysiskt|Virtuell|Kontrollera att den virtuella växeln har stöd för det här scenariot – och konfiguration av portspegling på de fysiska växlarna baserat på scenariot:<br /><br />Om den virtuella värden finns på samma fysiska växel, måste du konfigurera på växelnivå.<br /><br />Om den virtuella värden finns på en annan växel, måste du konfigurera RSPAN eller ERSPAN &#42;.|
+|Fysiskt|Virtuell|Kontrollera att den virtuella växeln har stöd för det här scenariot – och konfiguration av portspegling på de fysiska växlarna baserat på scenariot:<br /><br />Om den virtuella värden finns på samma fysiska växel, måste du konfigurera på växelnivå.<br /><br />Om den virtuella värden finns på en annan växel, måste du konfigurera RSPAN eller ERSPAN&#42;.|
 |Fysiskt|Fysisk på samma växel|Fysisk växel måste ha stöd för SPAN/portspegling.|
 |Fysiskt|Fysisk på en annan växel|Kräver att fysiska växlar har stöd för RSPAN eller ERSPAN&#42;.|
 &#42; ERSPAN stöds endast när avkapsling utförs innan trafiken analyseras av ATA.

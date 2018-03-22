@@ -5,21 +5,20 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
-ms.topic: article
+ms.date: 3/21/2018
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 294b9204f9ca6a40a835e5360a7011947e3255b4
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 
@@ -53,7 +52,9 @@ URL:en används i följande scenarier:
     
 3. Vänta tills ATA-gatewayer att synkronisera. Det har två möjliga URL: er via vilken du kan komma åt ATA-konsolen. Så länge ATA Gateway kan ansluta med hjälp av den ursprungliga URL: en kan försöker den inte den nya servern.
 
-4. När alla ATA-gatewayer synkroniseras med den uppdaterade konfigurationen, aktivera den nya URL. När du aktiverar den nya URL ATA-gatewayer nu att använda den nya URL till ATA Center. Efter anslutning till ATA Center-tjänsten, ATA Gateway kommer att hämta den senaste konfigurationen och har bara den nya URL för ATA-konsolen. 
+4. När alla ATA-gatewayer synkroniseras med den uppdaterade konfigurationen i konfigurationssidan Center klickar du på den **aktivera** för att aktivera den nya URL. När du aktiverar den nya URL ATA-gatewayer nu att använda den nya URL till ATA Center. Efter anslutning till ATA Center-tjänsten, ATA Gateway kommer att hämta den senaste konfigurationen och har bara den nya URL för ATA-konsolen. 
+5. 
+ ![Aktivera certifikatet](media/center-activation.png)
 
 > [!NOTE]
 > -   Om en ATA Gateway var offline när du aktiverat den nya URL och aldrig fick den uppdaterade konfigurationen, manuellt uppdatera konfigurationens JSON-fil på ATA Gateway.

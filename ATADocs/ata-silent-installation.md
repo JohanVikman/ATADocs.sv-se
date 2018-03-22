@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,19 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 44002cc41abc39f3c70b7a2f5ff131604fd703ba
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 # <a name="ata-silent-installation"></a>Tyst installation av ATA
 Den här artikeln innehåller instruktioner för tyst installation av ATA.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 ATA version 1.8 kräver installation av Microsoft .NET Framework 4.6.1. 
 
@@ -50,7 +50,7 @@ Använd följande kommando för att installera ATA Center.
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst installation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör installationsprogrammet utan att visa användargränssnitt och prompter.|
 |Hjälp|/help|Nej|Ger hjälp och snabbreferens. Visar rätt användning av installationskommandot, inklusive en lista över alla alternativ och beteenden.|
@@ -92,7 +92,7 @@ Använd följande kommando för att uppdatera ATA Center.
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst installation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör installationsprogrammet utan att visa användargränssnitt och prompter.|
 |Hjälp|/help|Nej|Ger hjälp och snabbreferens. Visar rätt användning av installationskommandot, inklusive en lista över alla alternativ och beteenden.|
@@ -115,7 +115,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör avinstallationsprogrammet utan att visa användargränssnitt och prompter.|
 |Avinstallera|/uninstall|Ja|Kör en tyst avinstallation av ATA Center från servern.|
@@ -124,7 +124,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Center
 **Installationsparametrar**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Description|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Nej|Tar bort alla filer i den befintliga databasen.|
 
@@ -154,7 +154,7 @@ Använd följande kommando för att installera ATA Gateway:
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst installation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör installationsprogrammet utan att visa användargränssnitt och prompter.|
 |Hjälp|/help|Nej|Ger hjälp och snabbreferens. Visar rätt användning av installationskommandot, inklusive en lista över alla alternativ och beteenden.|
@@ -163,7 +163,7 @@ Använd följande kommando för att installera ATA Gateway:
 **Installationsparametrar**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst installation?|Description|
 |-------------|----------|---------|---------|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ja|Anger namnet på det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ja|Anger lösenordet för det användarkonto (user@domain.com) som används för att registrera ATA Gateway med ATA Center.|
@@ -186,7 +186,7 @@ Använd följande kommando för tyst uppdatering av ATA Gateway:
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst installation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst installation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör installationsprogrammet utan att visa användargränssnitt och prompter.|
 |Hjälp|/help|Nej|Ger hjälp och snabbreferens. Visar rätt användning av installationskommandot, inklusive en lista över alla alternativ och beteenden.|
@@ -206,7 +206,7 @@ Använd följande kommando för att utföra en tyst avinstallation av ATA Gatewa
 **Installationsalternativ**:
 
 > [!div class="mx-tableFixed"]
-|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Beskrivning|
+|Namn|Syntax|Obligatoriskt för tyst avinstallation?|Description|
 |-------------|----------|---------|---------|
 |Tyst|/quiet|Ja|Kör avinstallationsprogrammet utan att visa användargränssnitt och prompter.|
 |Avinstallera|/uninstall|Ja|Kör en tyst avinstallation av ATA Gateway från servern.|

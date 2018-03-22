@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Gäller för: Advanced Threat Analytics version 1.8*
+*Gäller för: Advanced Threat Analytics version 1.9.*
 
 
 # <a name="ata-event-id-reference"></a>ID-referens för ATA-händelse
@@ -84,8 +84,6 @@ Händelserna som finns här:
 
 2004 – LDAP brute force misstänkt aktivitet 
 
-2005 – datorn förautentisering misslyckades misstänkt aktivitet 
-
 2006 – directory services replikering misstänkt aktivitet 
 
 2007 – DNS-rekognosering misstänkt aktivitet 
@@ -97,8 +95,6 @@ Händelserna som finns här:
 2013 – förfalskad PAC misstänkt aktivitet 
 
 2014 – Honeytoken aktivitet misstänkt aktivitet 
-
-2015 – LDAP Rensa text lösenord misstänkt aktivitet 
 
 2016 – omfattande objektet tas bort misstänkt aktivitet 
 
