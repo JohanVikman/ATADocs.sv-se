@@ -1,23 +1,23 @@
 ---
 title: Advanced Threat Analytics uppdateringen till 1,9 Migreringsguide | Microsoft Docs
-description: "Procedurer för att uppdatera ATA till version 1.9."
-keywords: 
+description: Procedurer för att uppdatera ATA till version 1.9.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99865293dd5aa6648516fbebbf61977176b1de36
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0bd4bca536facb9ad4b7fea627f2ef512949728e
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="updating-ata-to-version-19"></a>Uppdatera ATA till version 1.9.
 
@@ -31,7 +31,7 @@ Om du redan har ATA version 1.8 distribueras vägleder dig genom stegen för att
 
 Följ dessa steg för att uppdatera till ATA version 1.9:
 
-1.  [Hämta den uppdaterade versionen av ATA 1,9 från Download Center](https://www.microsoft.com/download/details.aspx?id=55536) eller den fullständiga versionen från den [utvärdering center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
+1.  [Hämta den uppdaterade versionen av ATA 1,9 från Download Center](https://www.microsoft.com/download/details.aspx?id=56725) eller den fullständiga versionen från den [utvärdering center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Filen kan användas endast för uppdatering från ATA 1.8 i migreringen-versionen. I versionen från Evaluation Center används samma installationsfil (Microsoft ATA Center Setup.exe) för att installera en ny distribution av ATA och för att uppgradera befintliga distributioner.
 
 2.  Uppdatera ATA Center

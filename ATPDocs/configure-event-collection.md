@@ -1,23 +1,23 @@
 ---
 title: Installera Azure Advanced Threat Protection | Microsoft Docs
-description: "I det här steget av installationen ATP konfigurerar du datakällor."
-keywords: 
+description: I det här steget av installationen ATP konfigurerar du datakällor.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 060ebd048fddacfb276ae32e4e589d7c8b70cbb6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
+ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -38,8 +38,10 @@ Förutom att samla in och analysera nätverkstrafik till och från domänkontrol
 För Azure ATP för att kunna använda data från en Syslog-server, måste du utföra följande steg:
 
 -   Konfigurera Azure ATP sensor-servrar för att lyssna på och godkänner händelser som vidarebefordras från SIEM/Syslog-servern.
-> [!NOTE]
-> Azure ATP lyssnar bara på IPv4 och IPv6 inte. 
+
+ > [!NOTE]
+ > Azure ATP lyssnar bara på IPv4 och IPv6 inte. 
+
 -   Konfigurera SIEM/Syslog-servern för att vidarebefordra specifika händelser till Azure ATP-sensor.
 
 > [!IMPORTANT]
@@ -159,7 +161,7 @@ Felkod:         0x0
 -   Ordningen är inte viktig för paren nyckel=värde.
 
 ### <a name="qradar"></a>QRadar
-QRadar aktiverar händelseinsamling via en agent. Om data samlas in med hjälp av en agent samlas tidsformatet in utan data för millisekunder. Eftersom Azure ATP kräver data för millisekunder är det nödvändigt att konfigurera QRadar att använda Windows-händelseinsamling utan Agent. Mer information finns i [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Windows-händelseinsamling utan agent med MSRPC-protokollet").
+QRadar aktiverar händelseinsamling via en agent. Om data samlas in med hjälp av en agent samlas tidsformatet in utan data för millisekunder. Eftersom Azure ATP kräver data för millisekunder är det nödvändigt att konfigurera QRadar att använda Windows-händelseinsamling utan Agent. Mer information finns i [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: utan Agent insamling av Windows-händelser med MSRPC-protokollet").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

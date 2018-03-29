@@ -1,23 +1,23 @@
 ---
 title: Referens till Azure ATP SIEM | Microsoft Docs
-description: "Innehåller exempel på misstänkt aktivitetsloggar som skickas från Azure ATP till din SIEM."
-keywords: 
+description: Innehåller exempel på misstänkt aktivitetsloggar som skickas från Azure ATP till din SIEM.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5d466014d96edb2deecf0c5d7b937d9e576a57b0
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 0a632473490d157e2b85a30bdb82947982da9551
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -37,7 +37,7 @@ Följande fält och deras värden vidarebefordras till din SIEM-server:
 -   cnt – för aviseringar som har ett antal gånger som Avisera har hänt (till exempel brute-force som har en del av att gissa lösenord)
 -   app – protokollet som används i aviseringen
 -   externalId – händelse-ID Azure ATP skrivs till händelseloggen som motsvarar den här aviseringen
--   cs#label & cs# – det här är kundsträngarna som CEF tillåter; cs#label är namnet på det nya fältet och cs# är värdet, t.ex.: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+-   CS #label & cs # – dessa är kund-strängar att CEF tillåter för att använda cs #label är namnet på det nya fältet och cs # värde, till exempel: cs1Label = url cs1 =https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
 
 I det här exemplet är cs1 ett fält som innehåller en URL till aviseringen.
 
@@ -91,7 +91,7 @@ Prioriteter:
 2018-02-21 16:21:07 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:54.145833 + 00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | EncryptionDowngradeSecurityAlert | Kryptering för nedgradering av aktiviteten | 5 | start = 2018-02-21T14:19:41.8737870Z app = Kerberos ignorerad = krypteringsmetod i fältet ETYPE_INFO2 för KRB_ERR meddelande från KLIENT1 har sjunkit baserat på tidigare inlärda beteende. Detta kan bero på en stommen nyckel på DC1. externalId=2011 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2
 
 ### <a name="unusual-protocol-implementation"></a>Onormal protokollimplementering
-02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. This may be a result of malicious tools used to execute attacks such as Pass-the-Hash and brute force. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs1=https://192.168.0.220/suspiciousActivity/5909cce38ca1ec04d05f4ab4
+02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. This may be a result of malicious tools used to execute attacks such as Pass-the-Hash and brute force. externalId = 2002 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs1 =https://192.168.0.220/suspiciousActivity/5909cce38ca1ec04d05f4ab4
 
 ### <a name="malicious-service-creation"></a>Skapa en skadlig tjänst
 2018-02-21 16:20:06 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:54.254930 + 00:00 CENTER CEF 6076 MaliciousServiceCreationSecurity ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | MaliciousServiceCreationSecurityAlert | Skapa misstänkta tjänster | 5 | start = 2018-02-21T14:19:41.7897808Z app = ServiceInstalledEvent shost = KLIENT1 ignorerad = Användare1 skapade MaliciousService för att kunna köra potentiellt skadliga kommandon på KLIENT1. externalId=2026 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c

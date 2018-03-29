@@ -1,23 +1,23 @@
 ---
 title: Arbeta med ATA-rapporter | Microsoft Docs
-description: "Beskriver hur du kan generera rapporter i ATA för att övervaka ditt nätverk."
-keywords: 
+description: Beskriver hur du kan generera rapporter i ATA för att övervaka ditt nätverk.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b7f921bb2eb655a929eb19c849788c1bf9f64527
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 9a113d8d090c5a90a07043a0ef75e1be0fc840c3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -51,6 +51,9 @@ Så här genererar du en schemalagd rapport:
 1. På sidan **Rapporter** klickar du på **Set scheduled reports** (Skapa schemalagda rapporter). Du kan också klicka på **Schemalagda rapporter** under Notifications and Reports (Meddelanden och rapporter) på konfigurationssidan i ATA-konsolen.
 
    ![Schemalägga rapporter](./media/ata-sched-reports.png)
+
+  > [!NOTE]
+  > De dagliga rapporterna som är utformade för att skickas strax efter midnatt UTC-tid.
 
 2. Klicka på **schema** bredvid ditt valda rapporttyp Ange frekvens och e-postadress för leverans av rapporterna Klicka på plustecknet för att lägga till dem och klicka på e-postadresser **spara**.
 

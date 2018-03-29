@@ -1,28 +1,37 @@
 ---
-title: "Vad är nytt i Azure ATP | Microsoft Docs"
-description: "Beskriver de senaste versionerna av Azure ATP och innehåller information om vad är nytt i varje version."
-keywords: 
+title: Vad är nytt i Azure ATP | Microsoft Docs
+description: Beskriver de senaste versionerna av Azure ATP och innehåller information om vad är nytt i varje version.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 3/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b3c9ddd1873b3139009a44e9c1f7a85ea3b6901
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+## <a name="azure-atp-release-226"></a>Azure ATP versionen 2,26
+
+Publicerat 25 mars 2018
+
+- När Azure ATP varnar dig för en misstänkt aktivitet som du identifierar som ett ofarlig positivt (en giltig åtgärd som inte är en misstänkt aktivitet) har du möjlighet att undanta datorer och IP-adresser för flera identifieringar, inklusive: nedgradering av kryptering, LDAP Brute force, förfalskad PAC, Brute force och Pass-the-hash.
+-   Azure ATP sensor prestanda har förbättrats.
+-   En ny region har lagts till för arbetsytan distribution, du kan nu distribuera en arbetsyta i Asien. 
+
 
 ## <a name="azure-atp-release-225"></a>Azure ATP versionen 2,25
 
