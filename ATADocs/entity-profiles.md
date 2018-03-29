@@ -1,23 +1,23 @@
 ---
 title: Arbeta med entitetsprofiler i konsolen Advanced Threat Analytics | Microsoft Docs
-description: "Beskriver hur du undersöker entiteter från skärmen användaren profiler i ATA-konsolen"
-keywords: 
+description: Beskriver hur du undersöker entiteter från skärmen användaren profiler i ATA-konsolen
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9e19a1d033238f506fc0523bf50af6e204ba0cf
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f2fd6f28eb6bf11aa3705f5320fcdae01d02f6d0
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -46,6 +46,8 @@ Du kan visa sammanfattning paneler som ger en snabb överblick över vad du beh�
 - Hur många resurser som användaren används
 - Från vilka platser som användaren loggat in VPN
 
+  ![entitet-menyn](media/entity-menu.png)
+
 För datorer som kan du se:
 - Hur många öppna misstänkta aktiviteter som finns för datorn
 - Hur många användare är inloggad på datorn
@@ -53,7 +55,7 @@ För datorer som kan du se:
 - Hur många platser VPN öppnade från på datorn
 - En lista som IP-adresser och datorn har använt
 
-![entitet-menyn](media/entity-menu.png)
+  ![entiteten menyn dator](media/entity-computer.png)
 
 Med hjälp av den **filtrera efter** knappen ovanför tidslinjen aktivitet kan du filtrera aktiviteter efter aktivitetstyp. Du kan också filtrera ut en specifik (störningar) typ av aktivitet. Detta är mycket användbart för undersökning när du vill förstå grunderna för en entitet gör i nätverket. Du kan även gå till ett visst datum och du kan exportera aktiviteter som filtrerats till Excel. Den exporterade filen innehåller en sida för directory services-ändringar (sådant som ändrats i Active Directory för kontot) och en separat sida för aktiviteter. 
 

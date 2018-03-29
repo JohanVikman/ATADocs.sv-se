@@ -1,23 +1,23 @@
 ---
 title: Arbeta med Azure ATP rapporter | Microsoft Docs
-description: "Beskriver hur du kan generera rapporter i Azure ATP att övervaka nätverket."
-keywords: 
+description: Beskriver hur du kan generera rapporter i Azure ATP att övervaka nätverket.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ebc0d9bb860bd93f14c4c511b034c740b59dffb
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -25,6 +25,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="azure-atp-reports"></a>Azure ATP rapporter
 
 Avsnittet Azure ATP rapporter på arbetsytan portalen kan du generera rapporter som ger dig information om systemstatus, både systemhälsa och en rapport med misstänkta aktiviteter som identifierats i din miljö.
+
 
 Du kommer åt rapportsidan genom att klicka på rapportikonen på menyraden: ![rapportikon](./media/atp-report-icon.png).
 Följande rapporter är tillgängliga: 
@@ -51,6 +52,9 @@ Så här genererar du en schemalagd rapport:
 1. I den **rapporter** klickar du på **ange schemalagda rapporter**, eller i Azure ATP arbetsytan Portalkonfiguration sidan under meddelanden och rapporter, klickar du på **schemalagda rapporter**.
 
    ![Schemalägga rapporter](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > De dagliga rapporterna som är utformade för att skickas strax efter midnatt UTC-tid.
 
 2. Klicka på **schema** bredvid ditt valda rapporttyp Ange frekvens och e-postadress för leverans av rapporterna Klicka på plustecknet för att lägga till dem och klicka på e-postadresser **spara**.
 

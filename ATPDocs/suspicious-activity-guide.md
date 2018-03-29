@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP misstänkt aktivitet guide | Microsoft Docs"
+title: Azure ATP misstänkt aktivitet guide | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee8e45b6ef2da2d8866a1795bdab3987180acefe
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -54,7 +54,7 @@ Kontrollera att din domän granska domänkontrollanter nödvändiga händelser.
 
 2. Om objektet lagts till ett användarkonto, ska du kontrollera vilka åtgärder som användarkonton som tog efter att den lagts till i administratörsgruppen. Gå till sidan för användaren i Azure ATP få mer kontext. Misstänkta aktiviteter som är associerat med kontot före eller efter det att det har andra ägde rum? Hämta den **känsliga grupp ändras** rapporten för att se vad andra ändringar har gjorts och av vem under samma tidsperiod.
 
-Reparation
+**Reparation**
 
 Minimera antalet användare som har behörighet att ändra känsliga grupper.
 
@@ -80,7 +80,7 @@ I denna identifiering utlöses en avisering när Azure ATP identifierar ett stor
 
 3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
 
-Reparation
+**Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
 
@@ -109,7 +109,7 @@ Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanståe
 
 3.  Overpass-the-Hash – finns det fall där den här aviseringen kan utlösas när användare som har konfigurerats med smartkort krävs för interaktiv inloggning och den här inställningen inaktiveras och därefter aktiveras. Kontrollera om det fanns ändringar så här för konton ingår. I så fall, detta är troligen ett ofarlig true positivt och kan förhindras.
 
-Reparation
+**Reparation**
 
 1.  Stommen Key – ta bort den skadliga koden. Mer information finns i [Skeleton Key skadlig kod Analysis](https://www.secureworks.com/research/skeleton-key-malware-analysis) av SecureWorks.
 
@@ -134,7 +134,7 @@ I denna identifiering en avisering utlöses när en Kerberos-biljett beviljande 
 
 3. Om svaret på dessa frågor är Nej, förutsätter att det här är skadliga.
 
-Reparation
+**Reparation**
 
 Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
@@ -157,7 +157,7 @@ Mer information om honeytoken konton finns [installera Azure ATP - steg 7](insta
 
 Om när du utför steg 1 till 3, om det inte finns några tecken på ofarlig användning måste anta att detta är skadliga.
 
-Reparation
+**Reparation**
 
 Se till att Honeytoken konton används endast för deras syfte, annars många aviseringar kan genereras.
 
@@ -171,7 +171,7 @@ Pass the Hash är en lateral förflyttning teknik där angriparen stjäl en anv�
 
 Användes hash från en dator som den aktuella användaren äger eller regelbundet använder? Om Ja, det är ett falsklarm. Om inte, är förmodligen ett true positivt.
 
-Reparation
+**Reparation**
 
 1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. 
 
@@ -189,7 +189,7 @@ Pass the Ticket är en lateral förflyttning teknik som stjäl angriparen en Ker
 
 2. Finns det ett anpassat program som vidarebefordrar biljetter åt användare? I så fall, är ett ofarlig true positivt.
 
-Reparation
+**Reparation**
 
 1. Om kontot ingår inte är känslig sedan återställa lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla.  
 
@@ -210,7 +210,7 @@ I denna identifiering utlöses en avisering när av DPAPI används för att häm
 
 3. Om Ja och den bör inte göra detta, **Stäng** misstänkt aktivitet.
 
-Reparation
+**Reparation**
 
 Om du vill använda DPAPI måste en angripare administratörsrättigheter i domänen. Implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
@@ -229,7 +229,7 @@ I denna identifiering utlöses en avisering när en replikeringsbegäran om init
 
 2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
 
-Reparation
+**Reparation**
 
 Verifiera följande behörigheter: 
 
@@ -240,6 +240,21 @@ Verifiera följande behörigheter:
 Mer information finns i [bevilja Active Directory Domain Services-behörigheter för profilsynkronisering i SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Du kan utnyttja [AD Åtkomstkontrollista Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
 
+
+## <a name="password-exposed-in-cleartext-report"></a>Lösenord i klartext rapport
+
+**Beskrivning**
+
+Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även inträffa för användarkonton. Övervaka nätverkstrafik angripare kan fånga och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. 
+
+**Undersökning**
+
+Klicka på sidan rapporter och hämta lösenordet i klartext rapporten. Se vilka konton som exponerats i Excel-kalkylblad.
+Det är vanligtvis ett skript eller äldre program på källdatorer som använder enkel LDAP-bindning.
+
+**Reparation**
+
+Kontrollera konfigurationen på källdatorerna och se till att du inte använder enkel LDAP-bindning. Du kan använda LDAP sal eller LDAPS istället för att använda enkla LDAP-bindningar.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Privilegiet eskalering med förfalskad auktoriseringsdata
 
@@ -257,7 +272,7 @@ Kända säkerhetsproblem i äldre versioner av Windows Server göra att angripar
 
 4. Om svaret var inte förutsätter detta är skadliga att dessa två frågor.
 
-Reparation
+**Reparation**
 
 Kontrollera att alla domänkontrollanter med operativsystem upp till Windows Server 2012 R2 är installerade med [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) och att alla medlemsservrar och domänkontrollanter upp till 2012 R2 är uppdaterade med KB2496930. Mer information finns i avsnitten om [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) och [förfalskat PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
@@ -284,7 +299,7 @@ Om svaret på någon av dessa frågor är Ja, **Stäng** misstänkt aktivitet (d
 4. Om någon av gissning försöker matcha befintliga kontonamn angriparen känner av att finns konton i din miljö och försöka använda brute-force för att få åtkomst till din domän med hjälp av de identifierade namn. Kontrollera att gissa kontonamn för ytterligare misstänkta aktiviteter. Kontrollera om något av de matchade kontona är känsliga konton.
 
 
-Reparation
+**Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
 
@@ -317,7 +332,7 @@ Inga aviseringar skulle aktiveras i den första månaden när Azure ATP har dist
 
 6. Om det finns ingen information om det konto som är involverad, kan du gå till slutpunkten och kontrollera vilket konto som har loggats i vid tidpunkten för aviseringen.
 
-Reparation
+**Reparation**
 
 Skydda din miljö mot den här tekniken på följande sätt:
 1. Datorn som kör en säkerhetsrisk genomsökning verktyget?  
@@ -339,7 +354,7 @@ Det finns flera frågetyper i DNS-protokollet. Azure ATP identifierar AXFR (Tran
 
 3. Om svaret på alla föregående frågor är Nej, förutsätter att det är skadliga.
 
-Reparation
+**Reparation**
 
 Du kan skydda en intern DNS-server för att förhindra rekognosering med DNS genom att inaktivera eller begränsa zonöverföringar till endast angivna IP-adresser. Mer information om hur du begränsar zonöverföringar finns [begränsa zonöverföringar](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
 Ändra zonöverföringar är en aktivitet i en checklista som bör åtgärdas för [Skydda DNS-servrar från både interna och externa attacker](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
@@ -367,7 +382,7 @@ I denna identifiering utlöses en avisering när en SMB-sessionsuppräkningen ut
 
 5. Om svaret på alla ovanstående är förutsätter Nej, detta är skadliga.
 
-Reparation
+**Reparation**
 
 Använd den [Net upphöra verktyget](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) att skydda din miljö mot angrepp.
 
@@ -389,7 +404,7 @@ Angripare som angripa administratörsbehörighet eller använder ett noll-dagars
 
 3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
 
-Reparation
+**Reparation**
 
 1. Begränsa fjärråtkomst till domänkontrollanter från datorer som inte är Nivå 0-datorer.
 
@@ -411,7 +426,7 @@ En avisering utlöses när många autentiseringsfel med Kerberos eller NTLM upps
 
 3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
 
-Reparation
+**Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
 
@@ -433,7 +448,7 @@ En misstänkt tjänst har skapats på en domänkontrollant i din organisation. D
 
 3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
 
-Reparation
+**Reparation**
 
 - Implementera mindre privilegierad åtkomst på datorer i domänen så att bara vissa användare behörighet att skapa nya tjänster.
 
@@ -462,7 +477,7 @@ Utför följande steg för att avgöra om detta är en attack med WannaCry:
 
 4. Om skriptet inte kan hitta att datorn är infekterade eller sårbara, sedan den fortfarande vara angripna men SMBv1 kan ha inaktiverats eller har konfigurerats för datorn, vilket påverkar genomsökningsverktyget.
 
-Reparation
+**Reparation**
 
 Korrigera alla datorer, särskilt användning av säkerhetsuppdateringar.
 

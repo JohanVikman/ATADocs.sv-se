@@ -1,23 +1,23 @@
 ---
 title: Installera Azure Advanced Threat Protection - steg 4 | Microsoft Docs
-description: "Steg fyra av Azure ATP-installationen hjälper dig att installera Azure ATP fristående sensorn."
-keywords: 
+description: Steg fyra av Azure ATP-installationen hjälper dig att installera Azure ATP fristående sensorn.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7b003882f21f22b3427fb95534ca2bde255b14e6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -35,11 +35,16 @@ Innan du installerar Azure ATP fristående sensor på en dedikerad server att ve
 
 
 > [!IMPORTANT]
->Se till att .net Framework 4.7 är installerat på datorn. Om .net Framework 4.7 är inte installerat installationspaketet för Azure ATP sensor installerar den, vilket kräver en omstart av servern. Kontrollera att datorn är ansluten till Azure ATP molnet tjänstslutpunkten: https://triprd1wceuw1sensorapi.atp.azure.com (för Europa) eller https://triprd1wcuse1sensorapi.atp.azure.com (för USA).
+>Se till att .net Framework 4.7 är installerat på datorn. Om .net Framework 4.7 är inte installerat installationspaketet för Azure ATP sensor installerar den, vilket kräver en omstart av servern.
 
 Utför följande steg på Azure ATP sensor servern eller domänkontrollanten.
 
-1.  Extrahera filerna från ZIP-filen. 
+1. Kontrollera att datorn har nätverksanslutning till relevanta ATP Azure cloud service slutpunkten:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (för Europa)  
+  - https://triprd1wcuse1sensorapi.atp.azure.com (för USA)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (för Asien)
+
+2. Extrahera installationsfilerna från zip-filen. 
 > [!NOTE] 
 > Det går inte att installera direkt från zip-filen.
 

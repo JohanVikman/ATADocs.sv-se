@@ -1,23 +1,23 @@
 ---
 title: Azure Advanced Threat Protection-arkitektur | Microsoft Docs
-description: "Här beskrivs arkitekturen i Azure Advanced Threat Analytics (ATP)"
-keywords: 
+description: Här beskrivs arkitekturen i Azure Advanced Threat Analytics (ATP)
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -74,7 +74,7 @@ Ange huvudsakliga arbetsytan som **primära**. Endast en arbetsyta kan anges som
 
 > [!NOTE]
 > Azure ATP stöder för närvarande skapandet av två arbetsytor. Vi rekommenderar att du skapar en primära arbetsytan för produktionsmiljön och en ytterligare arbetsyta som en fristående miljö.
-> När du har tagit bort en arbetsyta kan du kontakta supporten om du vill återaktivera den. Du en har en mazimum tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet sparade, borttagna arbetsytor.
+> När du har tagit bort en arbetsyta kan du kontakta supporten om du vill återaktivera den. Du en högst bestå av tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet sparade, borttagna arbetsytor.
 
 
 ### <a name="azure-atp-workspace-portal"></a>Azure portal för ATP-arbetsytan
@@ -122,7 +122,7 @@ Den **Azure ATP sensor** och **Azure ATP sensor** har båda samma grundläggande
 
 -   Övervaka flera domänkontrollanter från en enda Azure ATP fristående sensor eller övervaka en enda domänkontrollant för en Azure ATP sensor.
 
-Azure ATP stöder upp till 100 sensorer. Kontakta Azure ATP-supporten om du vill installera fler.
+Som standard stöder Azure ATP upp till 100 sensorer. Kontakta Azure ATP-supporten om du vill installera fler.
 
 Azure ATP fristående sensor tar emot nätverkstrafik och Windows-händelser från nätverket och bearbetar dessa i följande huvudkomponenter:
 

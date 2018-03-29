@@ -1,23 +1,23 @@
 ---
-title: "Krav för Azure Advanced Threat Protection | Microsoft Docs"
-description: "Beskriver kraven för en lyckad distribution av Azure ATP i din miljö"
-keywords: 
+title: Krav för Azure Advanced Threat Protection | Microsoft Docs
+description: Beskriver kraven för en lyckad distribution av Azure ATP i din miljö
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/25/2018
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
-ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
+ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -131,11 +131,13 @@ I följande tabell visas de portar som minst kräver Azure ATP fristående senso
 
 |Protokoll|Transport|Port|Till/från|Riktning|
 |------------|-------------|--------|-----------|-------------|
+|**Internet-portar**|||||
+|SSL (*.atp.azure.com)|TCP|443|Molntjänsten Azure ATP|Utgående|
+|**Interna portar**|||||
 |LDAP|TCP och UDP|389|Domänkontrollanter|Utgående|
 |Säkert LDAP (LDAPS)|TCP|636|Domänkontrollanter|Utgående|
 |LDAP till global katalog|TCP|3268|Domänkontrollanter|Utgående|
 |LDAPS till global katalog|TCP|3269|Domänkontrollanter|Utgående|
-|SSL (*.atp.azure.com)|TCP|443|Molntjänsten Azure ATP|Utgående|
 |Kerberos|TCP och UDP|88|Domänkontrollanter|Utgående|
 |Netlogon (SMB, CIFS, SAM-R)|TCP och UDP|445|Domänkontrollanter|Utgående|
 |Windows Time|UDP|123|Domänkontrollanter|Utgående|
@@ -195,7 +197,9 @@ I följande tabell visas de portar som Azure ATP-sensor kräver minst:
 
 |Protokoll|Transport|Port|Till/från|Riktning|
 |------------|-------------|--------|-----------|-------------|
+|**Internet-portar**|||||
 |SSL (*.atp.azure.com)|TCP|443|Molntjänsten Azure ATP|Utgående|
+|**Interna portar**|||||
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domänkontrollanter|Utgående|
