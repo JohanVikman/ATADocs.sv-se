@@ -1,23 +1,23 @@
 ---
 title: Installera Azure Advanced Threat Protection - steg 1 | Microsoft Docs
-description: "Första steget för att installera Azure ATP innebär att du skapar en arbetsyta för Azure ATP-distribution."
-keywords: 
+description: Första steget för att installera Azure ATP innebär att du skapar en arbetsyta för Azure ATP-distribution.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -32,7 +32,8 @@ Den här installationsproceduren innehåller anvisningar för att skapa och hant
 Du har möjlighet att hantera och övervaka flera arbetsytor i Azure ATP. Detta är särskilt användbart om du vill skapa en demo-arbetsyta och en test-arbetsyta där du kan POC Azure ATP innan den distribueras ut till hela organisationen. Det krävs också stöd för distributioner med flera skogar. En enda arbetsyta kan endast övervaka flera domäner från en enda skog. 
 
 > [!NOTE]
-> Du kan ha högst två aktiva arbetsytor. När du har tagit bort en arbetsyta kan du kontakta supporten om du vill återaktivera den. Du en har en mazimum tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet sparade, borttagna arbetsytor.
+> - Du kan ha högst två aktiva arbetsytor. När du har tagit bort en arbetsyta kan du kontakta supporten om du vill återaktivera den. Du en högst bestå av tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet sparade, borttagna arbetsytor.
+> - För närvarande har Azure ATP Datacenter distribuerats i Europa, Nordamerika/centrala Nordamerika/Västindien och Asien.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Steg 1. Ange arbetsytan management portal
 
