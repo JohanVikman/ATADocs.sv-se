@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -100,14 +100,20 @@ Det finns tre typer av identifiering:
 
 **Undersökning**
 
-Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanstående tre identifiering typer du hantera.
+Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanstående tre identifiering typer du hantera. Undersökningen först kontrollera beskrivningen av aviseringen för att se vilken av ovanstående tre identifiering typer du hantera. För ytterligare information, hämta Excel-kalkylblad.
 
-1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av [skannern skrivs av Azure ATP-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
+1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av [skannern skrivs av Azure ATP-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
 
-2.  Golden Ticket – är det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. I så fall, är förmodligen ett ofarlig true positivt och kan förhindras.
+2.  Golden Ticket – i excel-kalkylblad, gå till fliken nätverk aktivitet. Du ser att relevanta nedgraderat fältet är **begära biljett krypteringstyp**, och **källa stöds kryptering datortyper** innehåller starkare kryptering.
 
-3.  Overpass-the-Hash – finns det fall där den här aviseringen kan utlösas när användare som har konfigurerats med smartkort krävs för interaktiv inloggning och den här inställningen inaktiveras och därefter aktiveras. Kontrollera om det fanns ändringar så här för konton ingår. I så fall, detta är troligen ett ofarlig true positivt och kan förhindras.
+  1. Kontrollera käll- och kontot, eller om det finns flera källdatorer och konton kontrollerar du om de har något gemensam (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Finns det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. I så fall, är förmodligen ett ofarlig true positivt och kan förhindras.
+  
+  2. Kontrollera resursen via dessa biljetter, om det finns en resurs som de alla använder, verifiera den, kontrollera att den är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark kryptering. Du kan kontrollera detta i Active Directory genom att kontrollera det attributet msDS-SupportedEncryptionTypes-namn, för resurs-tjänstkontot.
+
+3.  Overpass-the-Hash – i excel-kalkylblad, gå till fliken nätverk aktivitet. Du ser att relevanta nedgraderat fältet är **krypterade tidsstämpel krypteringstyp** och **källa stöds kryptering datortyper** innehåller starkare kryptering.
+
+  1. Finns det fall där den här aviseringen kan utlösas när användare loggar in med smartkort om smartkort konfigurationen ändrades senast. Kontrollera om det fanns ändringar så här för konton ingår. I så fall, detta är troligen ett ofarlig true positivt och kan förhindras.
+  2. Kontrollera resursen via dessa biljetter, om det finns en resurs som de alla använder, verifiera den, kontrollera att den är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark kryptering. Du kan kontrollera detta i Active Directory genom att kontrollera det attributet msDS-SupportedEncryptionTypes-namn, för resurs-tjänstkontot.
 
 **Reparation**
 
@@ -225,9 +231,10 @@ I denna identifiering utlöses en avisering när en replikeringsbegäran om init
 
 **Undersökning**
 
-1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderat domänkontrollant som hade replikeringsproblem. Om Ja, **Stäng och utelämna** misstänkt aktivitet.  
+1.  Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderat domänkontrollant som hade replikeringsproblem. Om Ja, **Stäng** misstänkt aktivitet. 
+2.  Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
+3.  Klicka på källdatorn igen eller konto för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt replikering, söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integration klickar du på Windows Defender ATP-skylt ![Windows Defender ATP-skylt](./media/wd-badge.png) ytterligare undersöka datorn. I Windows Defender ATP ser du vilka processer och -varningar uppstod vid ungefär samma tidpunkt för aviseringen. 
 
-2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
 
 **Reparation**
 
@@ -352,7 +359,7 @@ Det finns flera frågetyper i DNS-protokollet. Azure ATP identifierar AXFR (Tran
 
 2. Körs på källdatorn en säkerhetsskannern? Om Ja, **undanta entiteterna** i ATP, antingen direkt med **Stäng och utelämna** eller via den **undantag** sida (under **Configuration** – tillgängligt för Azure ATP-administratörer).
 
-3. Om svaret på alla föregående frågor är Nej, förutsätter att det är skadliga.
+3. Om svaret på alla föregående frågor är Nej, hålla undersöker fokusera på källdatorn. Klicka på källdatorn för att gå till sidan sin profil. Kontrollera vad inträffat runt samma tid för begäran, söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integration klickar du på Windows Defender ATP-skylt ![Windows Defender ATP-skylt](./media/wd-badge.png) ytterligare undersöka datorn. I Windows Defender ATP ser du vilka processer och -varningar uppstod vid ungefär samma tidpunkt för aviseringen. 
 
 **Reparation**
 
@@ -386,7 +393,7 @@ I denna identifiering utlöses en avisering när en SMB-sessionsuppräkningen ut
 
 Använd den [Net upphöra verktyget](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) att skydda din miljö mot angrepp.
 
-## <a name="remote-execution-attempt-detected"></a>Fjärrkörning försök upptäcktes
+## <a name="remote-execution-attempt"></a>Fjärrkörning försök
 
 **Beskrivning**
 
@@ -402,7 +409,7 @@ Angripare som angripa administratörsbehörighet eller använder ett noll-dagars
 
  - Om svaret på båda frågor är *Ja*, sedan **Stäng** aviseringen.
 
-3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
+3. Om svaret på antingen frågor är Nej, sedan detta ska betraktas som ett true positivt. Försök att hitta källan till försöket genom att kontrollera att datorn och kontoinformation profiler. Klicka på källdatorn igen eller konto för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt dessa försök söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. Om du har aktiverat Windows Defender ATPintegration klickar du på Windows Defender ATP-skylt ![Windows Defender ATP-skylt](./media/wd-badge.png) ytterligare undersöka datorn. I Windows Defender ATPyou kan se vilka processer och -varningar uppstod vid ungefär samma tidpunkt för aviseringen. 
 
 **Reparation**
 
@@ -420,21 +427,25 @@ En avisering utlöses när många autentiseringsfel med Kerberos eller NTLM upps
 
 **Undersökning**
 
-1. Om det finns många konton som ingår, klickar du på **hämta information** att visa en lista i Excel.
+1.  Klicka på **hämta information** Visa fullständig information i ett Excel-kalkylblad. Du kan få följande information: 
+   -    Lista över angripna konton
+   -    Lista över att gissa konton i vilken inloggningsförsök avslutades med lyckad autentisering
+   -    Om autentiseringsförsök utfördes med hjälp av NTLM, ser du relevanta händelseaktiviteter 
+   -    Om autentiseringsförsök utfördes med Kerberos, ser du relevanta Nätverksaktiviteter
 
-2. Klicka på aviseringen för att gå till sidan dess information. Kontrollera om alla inloggningsförsök avslutades med en lyckad autentisering, dessa skulle visas som **gissa konton** på höger sida av infographic. Om Ja, är några av de **gissa konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
+2.  Klicka på källdatorn för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt dessa försök söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integration klickar du på Windows Defender ATP-skylt ![Windows Defender ATP-skylt](./media/wd-badge.png) ytterligare undersöka datorn. I Windows Defender ATP ser du vilka processer och -varningar uppstod vid ungefär samma tidpunkt för aviseringen. 
 
-3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
+3.  Om autentiseringen har utförts med hjälp av NTLM och du ser att aviseringen uppstår flera gånger, och det finns inte tillräckligt med information om den server som källdatorn försökte få åtkomst till, bör du aktivera **NTLM granskning** på ingår domänkontrollanter. Gör detta genom att aktivera händelsen 8004. Detta är händelsen NTLM-autentisering som innehåller information om källdatorn användarkonto och **server** som källdatorn försökte få åtkomst till. När du vet vilken server skickas valideringen av autentisering, bör du undersöka servern genom att markera en händelse som 4624 att bättre förstå autentiseringsprocessen. 
 
 **Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
 
-## <a name="suspicious-service-creation---preview-feature"></a>Skapa en misstänkt tjänst - förhandsgranskningsfunktion!
+## <a name="suspicious-service-creation"></a>Skapa en misstänkt tjänst
 
 **Beskrivning**
 
-En misstänkt tjänst har skapats på en domänkontrollant i din organisation. Den här aviseringen förlitar sig på händelsen 7045 för att identifiera den här misstänkt aktivitet på dina slutpunkter. Händelsen 7045 ska vidarebefordras från slutpunkterna till ATP genom att konfigurera [vidarebefordran av Windows-händelse](configure-event-forwarding.md) eller genom att vidarebefordra 7045 händelser till SIEM och [hur du konfigurerar SIEM](configure-event-collection.md) som en datakälla som vidarebefordrar händelser att ATP.
+En misstänkt tjänst har skapats på en domänkontrollant i din organisation. Den här aviseringen förlitar sig på händelsen 7045 för att identifiera den här misstänkt aktivitet på dina slutpunkter. 
 
 **Undersökning**
 
@@ -488,7 +499,8 @@ Korrigera alla datorer, särskilt användning av säkerhetsuppdateringar.
 3. WanaKiwi kan dekryptera data i händerna på vissa ransom program, men endast om användaren inte har startats om eller stängas av datorn. Mer information finns i [vill Cry är en utpressningstrojan som](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
->! [OBS] Kontakta supporten om du vill inaktivera en misstänkt aktivitet.
+> [!NOTE]
+> Kontakta supporten om du vill inaktivera en misstänkt aktivitet.
 
 
 ## <a name="see-also"></a>Se även
