@@ -1,57 +1,75 @@
 ---
-title: "Konfigurera proxyservern eller brandväggen för att aktivera Azure ATP kommunikation med sensorn | Microsoft Docs"
-description: "Beskriver hur du ställer in din brandvägg eller proxyserver för att tillåta kommunikation mellan Azure ATP-Molntjänsten och Azure ATP sensorer"
-keywords: 
+title: Konfigurera proxyservern eller brandväggen för att aktivera Azure ATP kommunikation med sensorn | Microsoft Docs
+description: Beskriver hur du ställer in din brandvägg eller proxyserver för att tillåta kommunikation mellan Azure ATP-Molntjänsten och Azure ATP sensorer
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 4/11/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 1e5e0d0665dfcf5251954cd8b0916c7cf80a722c
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
 
 
-# <a name="configure-your-proxy-to-allow-communication-between-azure-atp-sensors-and-the-azure-atp-cloud-service"></a>Konfigurera proxyservern för att tillåta kommunikation mellan Azure ATP sensorer och Molntjänsten Azure ATP
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurera endpoint proxy och inställningar för Internet-anslutning för din Azure ATP-temperatursensor
 
-För domänkontrollanterna att kommunicera med Molntjänsten, måste du öppna: *. atp.azure.com port 443 i din brandvägg eller proxyserver. Konfigurationen måste vara på datornivå (= datorkonto) och inte på nivån för kontot. Du kan testa din konfiguration med följande steg:
+Varje Azure Advanced Threat Protection (ATP) sensor kräver Internet-anslutning till Azure ATP-Molntjänsten att fungera korrekt. I vissa organisationer domänkontrollanterna inte är direkt ansluten till Internet, men är anslutna via en proxy-anslutning för webbprogram. Varje Azure ATP sensor kräver att du använder Microsoft Windows Internet (WinINET) proxy conifguration till sensor rapportdata och kommunicera med tjänsten Azure ATP. Om du använder WinHTTP för proxykonfiguration behöver du fortfarande konfigurera proxyinställningar för Windows Internet (WinINet) webbläsaren för kommunikation mellan sensorn och Azure ATP-Molntjänsten.
+
+
+När du konfigurerar proxyservern, behöver du veta att inbäddade Azure ATP sensor tjänsten körs i kontexten med hjälp av **LocalService** kontot och tjänsten Azure ATP Sensor Updater körs i systemkontexten med **LocalSystem** konto. 
+
+> [!NOTE]
+> Om du använder Transparent proxy eller WPAD i din nätverkstopologi, behöver du inte konfigurera WinINET för proxyservern.
+
+## <a name="configure-the-proxy"></a>Konfigurera proxy 
+
+Konfigurera proxy-servern manuellt med hjälp av en registerbaserade statisk proxy, Tillåt Azure ATP sensor till rapporten diagnostikdata och kommunicera med Azure ATP molntjänst när en dator inte har behörighet att ansluta till Internet.
+
+> [!NOTE]
+> Registerändringar bör tillämpas endast på LocalService och lokalt system.
+
+Statisk proxy kan konfigureras via registret. Localsystem och localservice måste du kopiera proxykonfigurationen som du använder i en användarkontext. Så här kopierar proxyinställningarna kontexten för användaren:
+
+1.   Se till att säkerhetskopiera registernycklar innan du ändrar dem.
+
+2. Sök efter värdet i registret, `DefaultConnectionSetting` som REG_BINARY under registernyckeln `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` och kopiera den.
  
-1.  Bekräfta att den **aktuell användare** har åtkomst till processorn slutpunkten med hjälp av Internet Explorer, genom att bläddra till följande URL från domänkontrollanten: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (för USA) som du bör få fel 503:
+2.  Om LocalSystem inte har rätt proxy-inställningar (de inte konfigurerats eller de skiljer sig från Current_User), kopiera proxyinställning från Current_User till LocalSystem. Under registernyckeln `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
- ![tjänsten är inte tillgänglig](./media/service-unavailable.png)
- 
-2.  Om du inte får ett felmeddelande 503, kontrollera proxykonfigurationen och försök igen.
+3.  Klistra in värdet från Current_user `DefaultConnectionSetting` som REG_BINARY.
 
-3.  Om proxykonfigurationen fungerar för den **CURRENT_USER** (det vill säga du se 503-fel), kontrollera om WinInet-proxyinställningarna är aktiverade för den **LOCAL_SYSTEM** konto (används av sensor updater tjänsten) genom att köra följande kommando i en kommandotolk med förhöjd behörighet:
- 
-    Reg jämför ”HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections” ”HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections” /v DefaultConnectionSettings
+4.  Om LocalService inte har rätt proxyinställningar, kopierar du proxyinställning från Current_User till LocalService. Under registernyckeln `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
-Om du får felet ”fel: Det gick inte att hitta den angivna registernyckeln eller registervärdet”. Det innebär att ingen proxyserver har angetts för den **LOCAL_SYSTEM** nivå
- 
- ![lokalt system proxyfel](./media/proxy-local-system-error.png)
+5.  Klistra in värdet från Current_User `DefaultConnectionSetting` som REG_BINARY.
 
-Om resultatet är ”resultatet Compared: olika” detta innebär att proxy är inställd för den **LOCAL_SYSTEM** men det är inte samma som den **CURRENT_USER**:
- 
-  ![Proxy resultatet jämfört med](./media/proxy-result-compared.png)
+> [!NOTE]
+> Detta påverkar alla program, inklusive Windows-tjänster som använder WinINET med LocalService LocalSytem kontext.
 
-5.  Om den **LOCAL_SYSTEM** har inte rätt proxyinställningar (antingen inte konfigurerats eller skiljer sig från den **CURRENT_USER**), och du kan behöva kopiera proxyinställning från den **CURRENT_ ANVÄNDAREN** till den **LOCAL_SYSTEM**. Se till att säkerhetskopiera den här registernyckeln innan du ändrar den:
 
- Den aktuella användaren nyckeln: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings ”lokalt systemnyckel: HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\ DefaultConnectionSettings ”
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Aktivera åtkomst till Azure ATP webbadresserna i proxyservern
 
- 
-6.  Slutför steg 4 och 5 för den**Local_Service** konto (det är samma som **Local_System** men bör vara S-1-5-19 i stället för S-1-5-18.
+Om en proxyserver eller brandvägg blockerar all trafik som standard och så att bara vissa domäner via eller HTTPS genomsökning (SSL-kontroll) är aktiverat, kontrollera att följande webbadresser är tomt anges att tillåta kommunikation med Windows Defender ATP-tjänsten i porten 443:
 
+|Tjänstlokalisering|. Atp.Azure.com DNS-post|
+|----|----|
+|OSS |triprd1wcusw1sensorapi.ATP.Azure.com<br>triprd1wcuswb1sensorapi.ATP.Azure.com<br>triprd1wcuse1sensorapi.ATP.Azure.com|
+|Europa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
+|Asien|triprd1wcasse1sensorapi.ATP.Azure.com|
+
+> [!NOTE]
+> När du utför SSL-kontroll på Azure ATP nätverkstrafik (mellan sensorn och tjänsten Azure ATP), måste SSL-kontroll stödja ömsesidig kontroll.
 
 
 ## <a name="see-also"></a>Se även

@@ -1,29 +1,29 @@
 ---
-title: "Förstå Azure ATP övervakning notifieringar | Microsoft Docs"
-description: "Beskriver hur du kan använda Azure ATP-loggarna för att felsöka problem"
-keywords: 
+title: Förstå Azure ATP övervakning notifieringar | Microsoft Docs
+description: Beskriver hur du kan använda Azure ATP-loggarna för att felsöka problem
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cdb440e92aef0f9d09d3aa9411d0ce65435469d1
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Förstå Azure ATP sensor och fristående sensor övervaka aviseringar
 
-Azure ATP Health Center får du veta när det uppstår ett problem med någon av dina Azure ATP worksapces genom att en övervakningsavisering. Den här artikeln beskriver övervakningsaviseringarna för varje komponent, samt orsaken och de steg som krävs för att åtgärda problemet.
+Azure ATP Health Center får du veta när det uppstår ett problem med någon av dina Azure ATP arbetsytor genom att en övervakningsavisering. Den här artikeln beskriver övervakningsaviseringarna för varje komponent, samt orsaken och de steg som krävs för att åtgärda problemet.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Skrivskyddad användarens lösenord upphör snart att
 
@@ -83,7 +83,7 @@ Azure ATP Health Center får du veta när det uppstår ett problem med någon av
 
 |Varning|Description|Lösning|Allvarlighetsgrad|
 |----|----|----|----|
-|Azure ATP-sensor tar emot mer trafik än vad som kan bearbetas.|Nätverkstrafik analyseras inte, vilket kan påverka möjligheten att identifiera misstänkta aktiviteter från domänkontrollanter som övervakas av den här Azure ATP sensorn.|Överväg att [lägga till fler processorer och mer minne](atp-capacity-planning.md) om det behövs. Om detta är en fristående Azure ATP sensor kan minska antalet domänkontrollanter som övervakas.<br></br>Detta kan också inträffa om du använder domänkontrollanter på virtuella VMware-datorer. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade i den virtuella datorn:<br></br>-TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>-IPv4 Systemansvarig avlastning<br></br>Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen för VMware.|Medel|
+|Azure ATP-sensor tar emot mer trafik än vad som kan bearbetas.|Nätverkstrafik analyseras inte, vilket kan påverka möjligheten att identifiera misstänkta aktiviteter från domänkontrollanter som övervakas av den här Azure ATP sensorn.|Överväg att [lägga till fler processorer och mer minne](atp-capacity-planning.md) om det behövs. Om detta är en fristående Azure ATP sensor kan minska antalet domänkontrollanter som övervakas.<br></br>Detta kan också inträffa om du använder domänkontrollanter på virtuella VMware-datorer. För att undvika dessa aviseringar kan du kontrollera att följande inställningar är inställda på 0 eller inaktiverade i den virtuella datorn:<br></br>-TsoEnable<br></br>-LargeSendOffload(IPv4)<br></br>-IPv4 Systemansvarig avlastning<br></br>Du kan även inaktivera IPv4 Giant TSO Offload. Mer information finns i dokumentationen för VMware.|Medel|
 
 ## <a name="sensor-service-failed-to-start"></a>sensor-tjänsten kunde inte startas
 
