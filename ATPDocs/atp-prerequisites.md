@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -88,7 +88,7 @@ För domänkontrollanterna att kommunicera med Molntjänsten, måste du öppna p
 Information om hur du använder virtuella datorer med Azure ATP fristående sensor finns [konfigurera portspegling](configure-port-mirroring.md).
 
 > [!NOTE]
-> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för Azure ATP binärfiler, Azure ATP loggar och prestanda loggar.
+> Minst 5 GB ledigt diskutrymme krävs och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för Azure ATP binärfiler, Azure ATP loggar och prestanda loggar.
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 För optimala prestanda ställer du in den **Energialternativ** av Azure ATP fristående sensor till **högpresterande**.<br>
@@ -107,9 +107,9 @@ Servrar och domänkontrollanter som sensorn har installerats måste ha tidsinst�
 ### <a name="network-adapters"></a>Nätverkskort
 Azure ATP fristående sensor kräver minst ett hanteringskort och minst ett avbildningskort:
 
--   **Hanteringskortet** – används för kommunikation i företagsnätverket. Det här kortet ska konfigureras med följande inställningar:
+-   **Hanteringskortet** – används för kommunikation i företagsnätverket. Sensorn använder det här nätverkskortet för att fråga DC den skyddar och matchning till datorkonton. <br>Det här kortet ska konfigureras med följande inställningar:
 
-    -   Statisk IP-adress, inklusive standard-temperatursensor
+    -   Statisk IP-adress, inklusive standardgateway
 
     -   Primära och sekundära DNS-servrar
 
@@ -164,11 +164,11 @@ Domänkontrollanten kan vara en skrivskyddad domänkontrollant (RODC).
 
 För domänkontrollanterna att kommunicera med Molntjänsten, måste du öppna port 443 i dina brandväggar och proxyservrar till *. atp.azure.com.
 
-Under installationen av .net Framework 4.7 har installerats och kan orsaka en omstart av domänkontrollanten.
+Under installationen av .net Framework 4.7 har installerats och kan kräva en omstart av domänkontrollanten om en omstart pågår redan.
 
 
 > [!NOTE]
-> Det krävs minst 5 GB utrymme och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för Azure ATP binärfiler, Azure ATP loggar och prestanda loggar.
+> Minst 5 GB ledigt diskutrymme krävs och 10 GB rekommenderas. Detta inkluderar utrymme som krävs för Azure ATP binärfiler, Azure ATP loggar och prestanda loggar.
 
 ### <a name="server-specifications"></a>Serverspecifikationer
 
