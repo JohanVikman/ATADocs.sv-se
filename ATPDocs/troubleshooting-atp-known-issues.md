@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -28,6 +28,24 @@ ms.lasthandoff: 04/16/2018
 ## <a name="deployment-log-location"></a>Platsen för distribution
  
 Azure ATP-distributionsloggar finns i temp-katalogen för den användare som installerade produkten. På standardplatsen för installation finns på: C:\Users\Administrator\AppData\Local\Temp (eller en katalog över % temp %).
+
+## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problem med autentisering i proxy presenteras som licensieringsfel
+
+Under installationen av sensor du följande felmeddelande: **sensorn kunde inte registreras på grund av problem.**
+
+Distribution loggposter: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 C 60: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 felsöka SensorBootstrapperApplication Engine.Quit [\[] deploymentResultStatus = 1602 isRestartRequired = False [\]] [1 C 60: 15B8] [2018-03-25T00:27:56] i500: avslutas, slutkod: 0x642
+
+
+**Orsak:**
+
+I vissa fall, när de kommunicerar via en proxyserver under autentiseringen kan den svara på Azure ATP sensor med fel 401 eller 403 i stället för fel 407. Azure ATP-sensor tolkar fel 401 eller 403 som ett licensiering problem och inte som en proxy-autentiseringsproblem. 
+
+**Lösning:**
+
+Se till att sensorn kan bläddra till *. atp.azure.com via den konfigurerade proxyn utan autentisering. Mer information finns i [konfigurera proxy för att aktivera kommunikation](configure-proxy.md).
+
+
+
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Azure ATP sensor NIC-teamindelning problemet
 

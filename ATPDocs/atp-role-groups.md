@@ -1,23 +1,23 @@
 ---
-title: "Azure Advanced Threat Protection rollgrupper för access management | Microsoft Docs"
-description: "Vägleder dig genom att arbeta med Azure ATP rollgrupper."
-keywords: 
+title: Azure Advanced Threat Protection rollgrupper för access management | Microsoft Docs
+description: Vägleder dig genom att arbeta med Azure ATP rollgrupper.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 4/30/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86cb55fd2b5ce81460dead4b8b753c88f79edd7b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -46,10 +46,9 @@ Azure ATP introducerar tre typer av säkerhetsgrupp: Azure ATP *Arbetsytenamn* a
 |Aktivitet |Azure ATP *Arbetsytenamn* administratörer|Azure ATP *Arbetsytenamn* användare|Azure ATP *Arbetsytenamn* visningsprogram|
 |----|----|----|----|
 |Inloggning|Tillgänglig|Tillgänglig|Tillgänglig|
-|Ange kommentarer angående misstänkta aktiviteter|Tillgänglig|Tillgänglig|Saknas|
 |Ändra status för misstänkta aktiviteter|Tillgänglig|Tillgänglig|Saknas|
-|Dela/exportera misstänkt aktivitet via e-post/get-länk|Tillgänglig|Tillgänglig|Saknas|
-|Ändra status för Övervaka aviseringar|Tillgänglig|Tillgänglig|Saknas|
+|Dela/exportera misstänkt aktivitet via e-post/get-länk|Tillgänglig|Tillgänglig|Tillgänglig|
+|Ändra status för Övervaka aviseringar|Tillgänglig|Saknas|Saknas|
 |Uppdatera konfigurationen av Azure ATP|Tillgänglig|Saknas|Saknas|
 |temperatursensor – Lägg till|Tillgänglig|Saknas|Saknas|
 |temperatursensor – ta bort |Tillgänglig|Saknas|Saknas|
@@ -62,7 +61,7 @@ När användare försöker komma åt en sida som inte är tillgänglig för sin 
 
 ## <a name="add-and-remove-users"></a>Lägga till och ta bort användare 
 
-Azure ATP använder Azure AD-säkerhetsgrupper som bas för rollgrupper. Rollgrupper kan hanteras från [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupper](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  AAD-användare kan läggas till eller tas bort från säkerhetsgrupper. 
+Azure ATP använder Azure AD-säkerhetsgrupper som bas för rollgrupper. Rollgrupper kan hanteras från [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupper](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  AAD-användare kan läggas till eller tas bort från säkerhetsgrupper. 
 
 
 ## <a name="see-also"></a>Se även

@@ -1,23 +1,23 @@
 ---
-title: "Konfigurera SAM-R för att aktivera identifiering av lateral förflyttning sökväg i Azure ATP | Microsoft Docs"
-description: "Beskriver hur du konfigurerar SAM-R för att aktivera identifiering av lateral förflyttning sökväg i Azure ATP"
-keywords: 
+title: Konfigurera SAM-R för att aktivera identifiering av lateral förflyttning sökväg i Azure ATP | Microsoft Docs
+description: Beskriver hur du konfigurerar SAM-R för att aktivera identifiering av lateral förflyttning sökväg i Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0e2ac4fb68fb1429610a0416582c871c9ae704df
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 24b42c5425933d8931a85e0ba454a69e0ca94a21
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/21/2018
 
 Den [lateral förflyttning sökvägen](use-case-lateral-movement-path.md) identifiering förlitar sig på frågor som identifierar lokala administratörer på specifika datorer. De här frågorna utförs via SAM-R-protokollet via Azure ATP kontot skapas i [steg 2. Anslut till AD](install-atp-step2.md).
  
-En ändring av en grupprincip måste göras för att säkerställa att Azure ATP tjänstekonto för att utföra åtgärden SAM-R Windows-klienter och servrar.
+Se till att Windows-klienter och servrar Tillåt Azure ATP-konto för att utföra åtgärden SAM-R en ändring av **Grupprincip** måste göras för att lägga till tjänstkontot Azure ATP förutom konfigurerade kontona i  **Nätverksåtkomst** princip.
 
 1. Leta upp principen:
 

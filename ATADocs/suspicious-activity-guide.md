@@ -1,23 +1,23 @@
 ---
-title: "Guide för misstänkt aktivitet i ATA | Microsoft Docs"
+title: Guide för misstänkt aktivitet i ATA | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a5e93ab47f454acc3157a9c6ee4053255be59f23
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -118,14 +118,14 @@ Det finns tre typer av identifiering:
 
 **Undersökning**
 
-Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanstående tre identifiering typer du hantera.
-
-1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av [skannern skrivs av ATA-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
-
-2.  Golden Ticket – är det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. I så fall, är förmodligen ett ofarlig true positivt och kan förhindras.
-
-3.  Overpass-the-Hash – finns det fall där den här aviseringen kan utlösas när användare som har konfigurerats med smartkort krävs för interaktiv inloggning och den här inställningen inaktiveras och därefter aktiveras. Kontrollera om det fanns ändringar så här för konton ingår. I så fall, detta är troligen ett ofarlig true positivt och kan förhindras.
+Kontrollera först beskrivningen av aviseringen för att se vilken av ovanstående tre identifiering typer du hantera. För ytterligare information, hämta Excel-kalkylblad.
+1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av skannern skrivs av ATA-teamet. Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
+2.  Golden Ticket – i Excel-kalkylblad, gå till den **nätverksaktivitet** fliken. Du ser att relevanta nedgraderat fältet är **begära biljett krypteringstyp**, och **källa stöds kryptering datortyper** innehåller starkare kryptering.
+  a.    Kontrollera käll- och kontot, eller om det finns flera källdatorer och konton kontrollerar du om de har något gemensam (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Finns det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. Om så är det förmodligen ett ofarlig true positivt och du kan **utelämna** den.
+  b.    Kontrollera resursen via dessa biljetter, om det finns en resurs som de alla använder, verifiera den, kontrollera att den är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark kryptering. Du kan kontrollera detta i Active Directory genom att kontrollera attributet `msDS-SupportedEncryptionTypes`, för resurs-tjänstkontot.
+3.  Overpass-the-Hash – i Excel-kalkylblad, gå till den **nätverksaktivitet** fliken. Du ser att relevanta nedgraderat fältet är **krypterade tidsstämpel krypteringstyp** och **källa stöds kryptering datortyper** innehåller starkare kryptering.
+  a.    Finns det fall där den här aviseringen kan utlösas när användare loggar in med smartkort om smartkort konfigurationen ändrades senast. Kontrollera om det fanns ändringar så här för konton ingår. Om detta är troligen ett ofarlig true positivt så, och du kan **utelämna** den.
+  b.    Kontrollera resursen via dessa biljetter, om det finns en resurs som de alla använder, verifiera den, kontrollera att den är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark kryptering. Du kan kontrollera detta i Active Directory genom att kontrollera attributet `msDS-SupportedEncryptionTypes`, för resurs-tjänstkontot.
 
 **Reparation**
 
@@ -244,9 +244,10 @@ I denna identifiering utlöses en avisering när en replikeringsbegäran om init
 
 **Undersökning**
 
-1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderat domänkontrollant som hade replikeringsproblem. Om Ja, **Stäng och utelämna** misstänkt aktivitet.  
+1.  Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderat domänkontrollant som hade replikeringsproblem. Om Ja, **Stäng** misstänkt aktivitet. 
+2.  Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
+3.  Klicka på källdatorn igen eller konto för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt replikering, söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. 
 
-2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och utelämna** misstänkt aktivitet.
 
 **Reparation**
 
@@ -369,11 +370,10 @@ Det finns flera frågetyper i DNS-protokollet. ATA identifierar AXFR (Transfer) 
 
 **Undersökning**
 
-1. Är källdatorn (**härstammar från...** ) en DNS-server? Om Ja, är detta troligen ett falsklarm. Om du vill validera, klickar du på aviseringen till dess informationssidan. I tabellen, under **frågan**, kontrollera vilka domäner frågades. Är de befintliga domänerna? Om Ja, sedan **Stäng** misstänkt aktivitet (det är ett falsklarm). Kontrollera dessutom att UDP-port 53 är öppen mellan ATA-gatewayer och källdatorn för att förhindra framtida falska positiva identifieringar.
+1. Är källdatorn (**härstammar från...** ) en DNS-server? Om Ja, är detta troligen ett falsklarm. Om du vill validera, klickar du på aviseringen till dess informationssidan. I tabellen, under **frågan**, kontrollera vilka domäner frågades. Är de befintliga domänerna? Om Ja, sedan **Stäng** misstänkt aktivitet (det är ett falsklarm). Kontrollera dessutom att UDP-port 53 är öppen mellan ATA Gateway och källdatorn för att förhindra framtida falska positiva identifieringar.
+2.  Körs på källdatorn en säkerhetsskannern? Om Ja, **undanta** entiteter i ATA, antingen direkt med **Stäng och utelämna** eller via den **undantag** sida (under **Configuration** – tillgängligt för ATA-administratörer).
+3.  Om svaret på alla föregående frågor är Nej, hålla undersöker fokusera på källdatorn. Klicka på källdatorn för att gå till sidan sin profil. Kontrollera vad inträffat runt samma tid för begäran, söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås.
 
-2. Körs på källdatorn en säkerhetsskannern? Om Ja, **undanta entiteterna** i ATA, antingen direkt med **Stäng och utelämna** eller via den **undantag** sida (under **Configuration** – tillgängligt för ATA-administratörer).
-
-3. Om svaret på alla ovanstående är förutsätter Nej, detta är skadliga.
 
 **Reparation**
 
@@ -411,19 +411,16 @@ Använd den [Net upphöra verktyget](https://gallery.technet.microsoft.com/Net-C
 
 **Beskrivning**
 
-Angripare som angripa administratörsbehörighet eller använder ett noll-dagars utnyttja kan köra fjärrkommandon på domänkontrollanten. Detta kan användas för att tillskansa sig beständighet, samla in information, DOS-attacker (Denial Of Service) eller i annat syfte. ATA identifierar PSexec och fjärr-WMI-anslutningar.
+Angripare som angripa administratörsbehörighet eller använder ett noll-dagars utnyttja kan köra fjärrkommandon på domänkontrollanten. Detta kan användas för att få beständiga, insamling av information, denial of service (DOS)-attacker eller någon annan anledning. ATA identifierar PSexec och fjärr-WMI-anslutningar.
 
 **Undersökning**
 
-1. Detta är vanligt för administrativa arbetsstationer och IT-gruppmedlemmar och tjänstkonton som kan utför administrativa uppgifter mot domänkontrollanter. Om detta är det här fallet och aviseringen uppdateras eftersom samma administratören och/eller datorn utför sedan aktiviteten, **utelämna** aviseringen.
+1. Detta är vanligt för såväl administrativa arbetsstationer för IT-gruppmedlemmar och tjänstkonton som kan utför administrativa uppgifter mot domänkontrollanter. Om detta är fallet, och aviseringen uppdateras eftersom samma admin eller datorn utför aktiviteten, sedan **utelämna** aviseringen.
+2.  Är datorn i fråga tillåtet att utföra den här fjärrkörning mot domänkontrollanten?
+  - Det aktuella kontot får utföra den här fjärrkörning mot domänkontrollanten?
+  - Om svaret på båda frågor är Ja, sedan **Stäng** aviseringen.
+3.  Om svaret på antingen frågor är Nej, sedan detta ska betraktas som ett true positivt. Försök att hitta källan till försöket genom att kontrollera att datorn och kontoinformation profiler. Klicka på källdatorn igen eller konto för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt dessa försök söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås.
 
-2. Är den **datorn** i fråga tillåtelse för att utföra den här fjärrkörning mot domänkontrollanten?
-
- - Är den **konto** i fråga tillåtelse för att utföra den här fjärrkörning mot domänkontrollanten?
-
- - Om svaret på båda frågor är *Ja*, sedan **Stäng** aviseringen.
-
-3. Om svaret på antingen frågor är *inga*, och sedan detta ska betraktas som ett true positivt.
 
 **Reparation**
 
@@ -460,11 +457,14 @@ En avisering utlöses när många autentiseringsfel med Kerberos eller NTLM upps
 
 **Undersökning**
 
-1. Om det finns många konton som ingår, klickar du på **hämta information** att visa en lista i Excel.
+1.  Klicka på **hämta information** Visa fullständig information i ett Excel-kalkylblad. Du kan få följande information: 
+  - Lista över angripna konton
+  - Lista över att gissa konton i vilken inloggningsförsök avslutades med lyckad autentisering
+  - Om autentiseringsförsök utfördes med hjälp av NTLM, ser du relevanta händelseaktiviteter 
+  - Om autentiseringsförsök utfördes med Kerberos, ser du relevanta Nätverksaktiviteter
+2.  Klicka på källdatorn för att gå till sidan sin profil. Kontrollera vad hände vid ungefär samma tidpunkt dessa försök söka efter ovanliga aktiviteter, t.ex: som loggades i vilka resurser där nås. 
+3.  Om autentiseringen har utförts med hjälp av NTLM och du ser att aviseringen uppstår flera gånger, och det finns inte tillräckligt med information om källdatorn försökte få åtkomst till servern, bör du aktivera **NTLM granskning** på den ingår domänkontrollanter. Gör detta genom att aktivera händelsen 8004. Detta är händelsen NTLM-autentisering som innehåller information om källdatorn användarkontot och **server** källdatorn försökte komma åt. När du vet vilken server skickas valideringen av autentisering, bör du undersöka servern genom att markera en händelse som 4624 att bättre förstå autentiseringsprocessen. 
 
-2. Klicka på aviseringen för att gå till sidan dess information. Kontrollera om alla inloggningsförsök avslutades med en lyckad autentisering, dessa skulle visas som **gissa konton** på höger sida av infographic. Om Ja, är några av de **gissa konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
-
-3. Om det finns inga **gissa konton**, är några av de **angripna konton** normalt används från källdatorn? Om Ja, **utelämna** misstänkt aktivitet.
 
 **Reparation**
 

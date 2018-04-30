@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -30,6 +30,8 @@ Azure Advanced Threat Protection-arkitekturen beskrivs i det här diagrammet:
 Azure ATP övervakar dina domänkontrollantens nätverkstrafik genom att använda portspegling till en Azure ATP fristående sensor använder fysiska eller virtuella växlar. Om du distribuerar Azure ATP-sensor direkt på domänkontrollanterna undanröjer behovet för portspegling. Azure ATP kan dessutom dra nytta av Windows-händelser (vidarebefordras direkt från domänkontrollanterna eller från en SIEM-server) och analysera data beträffande attacker och hot. Azure ATP tar emot tolkad trafik från Azure ATP fristående sensor och Azure ATP sensor. Därefter genomför tjänsten profilering, kör deterministisk identifiering, och kör maskininlärnings- och beteendealgoritmer för att lära sig om ditt nätverk, identifierar avvikelser samt varnar dig för misstänkta aktiviteter.
 
 Det här avsnittet beskriver flödet i nätverk och händelseinsamling och beskriver funktionerna för huvudkomponenterna i ATP: Azure ATP fristående sensor, Azure ATP-temperatursensor (som har samma grundfunktioner som Azure ATP fristående sensor) och Azure ATP-Molntjänsten. 
+
+När den installeras direkt på domänkontrollanterna, sensorn har åtkomst till nödvändiga händelseloggarna direkt från domänkontrollanten. När dessa loggar och nätverkstrafiken har tolkats av sensorn, skickar Azure ATP endast denna parsade information till tjänsten Azure ATP (inte alla loggar).
 
 ## <a name="azure-atp-components"></a>Azure ATP-komponenter
 Azure ATP består av följande komponenter:

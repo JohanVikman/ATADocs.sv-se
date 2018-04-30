@@ -1,23 +1,23 @@
 ---
-title: "Arbeta med misstänkta aktiviteter i Advanced Threat Analytics | Microsoft Docs"
-description: "Beskriver hur du granskar misstänkta aktiviteter som identifieras av ATA"
-keywords: 
+title: Arbeta med misstänkta aktiviteter i Advanced Threat Analytics | Microsoft Docs
+description: Beskriver hur du granskar misstänkta aktiviteter som identifieras av ATA
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7da26a8e308839573b055e235469145ef239ac38
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: fdc83443c30db4278ccffde35e070e8b17b423bb
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -43,10 +43,6 @@ Varje misstänkt aktivitet har följande information:
     -   Dela misstänkta aktiviteter med andra personer i organisationen via e-post.
 
     -   Exportera den misstänkta aktiviteten till Excel.
-
-    -   Lägga till en anteckning till den misstänkta aktiviteten.
-
-    -   Ange kommentarer om den misstänkta aktiviteten.
 
 > [!NOTE]
 > -   När du håller muspekaren över en användare eller dator visas en entitetsminiprofil som innehåller ytterligare information om entiteten och som innehåller antalet misstänkta aktiviteter som entiteten är kopplad till.
