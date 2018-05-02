@@ -6,6 +6,7 @@
 ## [Krav för Azure ATP](atp-prerequisites.md)
 ## [Azure ATP-arkitektur](atp-architecture.md)
 ## [Planera din Azure ATP-kapacitet](atp-capacity-planning.md)
+### [Konfigurera proxyn för att aktivera kommunikation](configure-proxy.md)
 # Distribuera
 ## [1. Skapa en arbetsyta i arbetsytehanteringsportalen](install-atp-step1.md)
 ## [2 Anslut till AD](install-atp-step2.md)
@@ -21,7 +22,6 @@
 ### [Verifiera portspegling](validate-port-mirroring.md)
 ### [Konfigurera händelseinsamling](configure-event-collection.md)
 ### [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md)
-### [Konfigurera proxyn för att aktivera kommunikation](configure-proxy.md)
 # Använda
 ## [Azure ATP-hälsocenter](atp-health-center.md)
 ## [Azure ATP-rapporter](reports.md)
@@ -44,3 +44,4 @@
 # Felsökning
 ## [Felsök vanliga problem](troubleshooting-atp-known-issues.md)
 ## [Support och information](atp-support.md)
+## [Översikt över Azure ATP-beredskap](atp-resources.md)
