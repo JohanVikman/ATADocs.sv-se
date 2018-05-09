@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/8/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
+ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -139,21 +139,21 @@ I följande tabell visas de portar som minst kräver Azure ATP fristående senso
 |LDAP till global katalog|TCP|3268|Domänkontrollanter|Utgående|
 |LDAPS till global katalog|TCP|3269|Domänkontrollanter|Utgående|
 |Kerberos|TCP och UDP|88|Domänkontrollanter|Utgående|
-|Netlogon (SMB, CIFS, SAM-R)|TCP och UDP|445|Domänkontrollanter|Utgående|
+|Netlogon (SMB, CIFS, SAM-R)|TCP och UDP|445|Alla enheter på nätverket|Utgående|
 |Windows Time|UDP|123|Domänkontrollanter|Utgående|
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
 |NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
 |Syslog (valfritt)|TCP/UDP|514, beroende på konfiguration|SIEM-server|Inkommande|
 |RADIUS|UDDP|1813|RADIUS|Inkommande|
+|RDP|TCP|3389|Alla enheter på nätverket|Utgående|
 
 > [!NOTE]
 > - Med Directory service-användarkonto sensorn frågar slutpunkter i din organisation för lokala administratörer använda SAM-R (nätverksinloggning) för att skapa den [lateral förflyttning sökväg diagram](use-case-lateral-movement-path.md). Mer information finns i [konfigurera SAM-R nödvändiga behörigheter](install-atp-step8-samr.md).
 > - Följande portar måste vara öppna för inkommande på enheter i nätverket från Azure ATP fristående sensorer:
 >   -   NTLM över RPC (TCP-Port 135) för framtida bruk
 >   -   NetBIOS (UDP-port 137) för framtida bruk
->   -   SAM-R-frågor (TCP/UDP-port 445) för identifiering
-
+>   -   RDP (TCP-port 3389), bara första paketet av *klientens hälsning*, för framtida bruk<br> Observera att ingen autentisering utförs på någon av portarna.
 
 ## <a name="azure-atp-sensor-requirements"></a>Krav för Azure ATP-temperatursensor
 Det här avsnittet innehåller kraven för Azure ATP sensorn.
@@ -202,18 +202,18 @@ I följande tabell visas de portar som Azure ATP-sensor kräver minst:
 |**Interna portar**|||||
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domänkontrollanter|Utgående|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Alla enheter på nätverket|Utgående|
 |NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
 |Syslog (valfritt)|TCP/UDP|514, beroende på konfiguration|SIEM-server|Inkommande|
 |RADIUS|UDDP|1813|RADIUS|Inkommande|
+|TLS ska RDP-porten|TCP|3389|Alla enheter på nätverket|Utgående|
 
 > [!NOTE]
-> - Med Directory service-användarkonto sensorn frågar slutpunkter i din organisation för lokala administratörer använda SAM-R (nätverksinloggning) för att skapa den [lateral förflyttning sökväg diagram](use-case-lateral-movement-path.md).
-> - Följande portar måste vara öppna för inkommande på enheter i nätverket från Azure ATP sensorer:
+> - Med Directory service-användarkonto sensorn frågar slutpunkter i din organisation för lokala administratörer använda SAM-R (nätverksinloggning) för att skapa den [lateral förflyttning sökväg diagram](use-case-lateral-movement-path.md). Mer information finns i [konfigurera SAM-R nödvändiga behörigheter](install-atp-step8-samr.md).
+> - Följande portar måste vara öppna för inkommande på enheter i nätverket från Azure ATP fristående sensorer:
 >   -   NTLM över RPC (TCP-Port 135) för framtida bruk
 >   -   NetBIOS (UDP-port 137) för framtida bruk
->   -   SAM-R-frågor (TCP/UDP-port 445) för identifiering
-
+>   -   RDP (TCP-port 3389), bara första paketet av *klientens hälsning*, för framtida bruk<br> Observera att ingen autentisering utförs på någon av portarna.
 
 
 

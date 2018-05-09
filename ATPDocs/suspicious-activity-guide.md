@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -124,26 +124,6 @@ Kontrollera först beskrivningen av aviseringen, för att se vilken av ovanståe
 
 3.  Overpass-the-Hash – återställa om kontot ingår inte är skiftlägeskänslig, sedan lösenordet för kontot. Detta förhindrar att angripare skapar nya Kerberos-biljetter från lösenords-hash, även om befintliga biljetter kan fortfarande användas tills de upphör att gälla. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Se vägledningen i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Se även med hjälp av den [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Eftersom det är en teknik som lateral förflyttning följer bästa praxis för [skicka hash-rekommendationer](http://aka.ms/PtH).
 
-## Golden Ticket<a name="golden-ticket"></a>
-
-**Beskrivning**
-
-Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som ger behörighet till en resurs och som helst godtycklig biljett upphör att gälla. Den här falska TGT kallas ”Golden Ticket” och tillåter angripare att uppnå lagring i nätverket.
-
-I denna identifiering en avisering utlöses när en Kerberos-biljett beviljande biljetter används för mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
-
-**Undersökning**
-
-1. Det har alla nyligen (inom de senaste några timmarna) ändringar på den **högsta livstid för användarbiljett** i Grupprincip? Om Ja, sedan **Stäng** aviseringen (den var ett falsklarm).
-
-2. Är Azure ATP fristående sensor ingår i en virtuell dator för den här aviseringen? Om Ja, den nyligen återupptas från ett sparat tillstånd? Om Ja, sedan **Stäng** aviseringen.
-
-3. Om svaret på dessa frågor är Nej, förutsätter att det här är skadliga.
-
-**Reparation**
-
-Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
-
 ## <a name="honeytoken-activity"></a>Honeytoken-aktivitet
 
 
@@ -201,6 +181,26 @@ Pass the Ticket är en lateral förflyttning teknik som stjäl angriparen en Ker
 
 2. Om det är känsligt konto bör du återställa KRBTGT-kontot två gånger som Golden Ticket misstänkt aktivitet. Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Finns i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), även finns med i [återställa verktyget KRBTGT-kontot lösenord/nycklar](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Eftersom det är en teknik som lateral förflyttning, följ rekommenderade metoder i [skicka hash-rekommendationer](http://aka.ms/PtH).
 
+## Guld Kerberos-biljett<a name="golden-ticket"></a>
+
+**Beskrivning**
+
+Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som ger behörighet till en resurs och som helst godtycklig biljett upphör att gälla. Den här falska TGT kallas ”Golden Ticket” och tillåter angripare att uppnå lagring i nätverket.
+
+I denna identifiering en avisering utlöses när en Kerberos-biljett beviljande biljetter används för mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
+
+**Undersökning**
+
+1. Det har alla nyligen (inom de senaste några timmarna) ändringar på den **högsta livstid för användarbiljett** i Grupprincip? Om Ja, sedan **Stäng** aviseringen (den var ett falsklarm).
+
+2. Är Azure ATP fristående sensor ingår i en virtuell dator för den här aviseringen? Om Ja, den nyligen återupptas från ett sparat tillstånd? Om Ja, sedan **Stäng** aviseringen.
+
+3. Om svaret på dessa frågor är Nej, förutsätter att det här är skadliga.
+
+**Reparation**
+
+Ändra Kerberos-biljett beviljande biljetter (KRBTGT) lösenord två gånger enligt riktlinjerna i [KRBTGT-kontot lösenord återställa skript finns nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Återställer KRBTGT två gånger upphäver alla Kerberos biljetter i den här domänen så planerar innan du gör det. Dessutom eftersom skapar Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
+
 ## <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
 
 **Beskrivning**
@@ -220,7 +220,7 @@ I denna identifiering utlöses en avisering när av DPAPI används för att häm
 
 Om du vill använda DPAPI måste en angripare administratörsrättigheter i domänen. Implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
 
-## <a name="malicious-replication-requests"></a>Skadliga replikeringsbegäranden
+## <a name="malicious-replication-of-directory-services"></a>Skadlig replikering av katalogtjänster
 
 
 **Beskrivning**
@@ -445,7 +445,7 @@ En avisering utlöses när många autentiseringsfel med Kerberos eller NTLM upps
 
 **Beskrivning**
 
-En misstänkt tjänst har skapats på en domänkontrollant i din organisation. Den här aviseringen förlitar sig på händelsen 7045 för att identifiera den här misstänkt aktivitet på dina slutpunkter. 
+En misstänkt tjänst har skapats på en domänkontrollant i din organisation. Den här aviseringen förlitar sig på händelsen 7045 för att identifiera den här misstänkt aktivitet. 
 
 **Undersökning**
 

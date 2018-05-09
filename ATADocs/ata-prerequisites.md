@@ -1,23 +1,23 @@
 ---
-title: "Krav för Advanced Threat Analytics | Microsoft Docs"
-description: "Beskriver kraven för en lyckad distribution av ATA i din miljö"
-keywords: 
+title: Krav för Advanced Threat Analytics | Microsoft Docs
+description: Beskriver kraven för en lyckad distribution av ATA i din miljö
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -121,9 +121,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**LDAPS** (valfritt)|TCP|636|Domänkontrollanter|Utgående|
 |**DNS**|TCP och UDP|53|DNS-servrar|Utgående|
 |**Kerberos** (valfritt om domänansluten)|TCP och UDP|88|Domänkontrollanter|Utgående|
-|**Netlogon** (valfritt om domänansluten)|TCP och UDP|445|Domänkontrollanter|Utgående|
 |**Windows tidstjänst** (valfritt om datorn är domänansluten)|UDP|123|Domänkontrollanter|Utgående|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP och UDP|445|Gateways och enheter|Inkommande och utgående|
 
 > [!NOTE]
 > LDAP krävs för att testa autentiseringsuppgifterna som ska användas mellan ATA-gatewayer och domänkontrollanterna. Testet utförs från ATA Center till en domänkontrollant för att testa giltigheten hos autentiseringsuppgifterna, efter vilken ATA-gatewayen använder LDAP som en del av dess normala lösningsprocessen.
@@ -212,7 +210,7 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 |LDAP till global katalog|TCP|3268|Domänkontrollanter|Utgående|
 |LDAPS till global katalog|TCP|3269|Domänkontrollanter|Utgående|
 |Kerberos|TCP och UDP|88|Domänkontrollanter|Utgående|
-|Netlogon|TCP och UDP|445|Domänkontrollanter|Utgående|
+|Netlogon (SMB, CIFS, SAM-R)|TCP och UDP|445|Alla enheter på nätverket|Utgående|
 |Windows Time|UDP|123|Domänkontrollanter|Utgående|
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
@@ -225,6 +223,10 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 >
 > -   NTLM över RPC (TCP-Port 135)
 > -   NetBIOS (UDP-port 137)
+> - Med Directory service-användarkonto kan ATA Gateway frågar slutpunkter i din organisation för lokala administratörer använda SAM-R (nätverksinloggning) för att skapa den [lateral förflyttning sökväg diagram](use-case-lateral-movement-path.md). Mer information finns i [konfigurera SAM-R nödvändiga behörigheter](install-ata-step9-samr.md).
+> - Följande portar måste vara öppna för inkommande på enheter i nätverket från ATA Gateway:
+>   -   NTLM över RPC (TCP-Port 135) för framtida bruk
+>   -   NetBIOS (UDP-port 137) för framtida bruk
 
 ## <a name="ata-lightweight-gateway-requirements"></a>Krav för ATA Lightweight Gateway
 Det här avsnittet innehåller kraven för ATA Lightweight Gateway.
@@ -280,12 +282,17 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 |NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
 |SSL|TCP|443|ATA Center|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
+|Netlogon (SMB, CIFS, SAM-R)|TCP och UDP|445|Alla enheter på nätverket|Utgående|
 
 > [!NOTE]
 > Som en del av lösningsåtgärden som utförs av ATA Gateway måste följande portar vara öppna för inkommande på enheter i nätverket från ATA Lightweight-gatewayerna.
 >
 > -   NTLM över RPC
 > -   NetBIOS
+> - Med hjälp av Directory service-användarkonto, ATA Lightweight Gateway frågar slutpunkter i din organisation för lokala administratörer använda SAM-R (nätverksinloggning) för att skapa den [lateral förflyttning sökväg diagram](use-case-lateral-movement-path.md). Mer information finns i [konfigurera SAM-R nödvändiga behörigheter](install-ata-step9-samr.md).
+> - Följande portar måste vara öppna för inkommande på enheter i nätverket från ATA Gateway:
+>   -   NTLM över RPC (TCP-Port 135) för framtida bruk
+>   -   NetBIOS (UDP-port 137) för framtida bruk
 
 ## <a name="ata-console"></a>ATA-konsolen
 Åtkomst till ATA-konsolen sker via en webbläsare som stöder webbläsare och inställningar:
