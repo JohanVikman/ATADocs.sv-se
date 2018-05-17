@@ -1,23 +1,23 @@
 ---
 title: Azure Advanced Threat Protection-integrering med Windows Defender ATP | Microsoft Docs
-description: "Integrera Azure Advanced Threat Protection med Windows Defender ATP för fullständig threat detection täckning"
-keywords: 
+description: Integrera Azure Advanced Threat Protection med Windows Defender ATP för fullständig threat detection täckning
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -96,8 +96,10 @@ Om du klickar på skylt förs till Windows Defender ATP-portalen där du kan vis
  ![Windows Defender ATP grå](./media/wd-grey.png)
 
 När du klickar på en slutpunkt i Windows Defender ATP-portalen kan du visa Azure ATP aviseringar. Om du klickar på aviseringar för den här entiteten i Windows Defender ATP öppnas entitetens profilen i Azure ATP. 
+ 
+ > ! [OBS] För närvarande Azure ATP integrering med Windows Defender ATP stöder endast användare och datorer från lokalt AD. Användare från Azure AD och virtuella datorer som hanteras i Azure visas inte som en del av integrering 
 
- ![Windows Defender ATP-aviseringar](./media/wd-atp-alerts.png)
+![Windows Defender ATP-aviseringar](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Se även

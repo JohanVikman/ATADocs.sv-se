@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/23/2018
 
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurera endpoint proxy och inställningar för Internet-anslutning för din Azure ATP-temperatursensor
 
-Varje Azure Advanced Threat Protection (ATP) sensor kräver Internet-anslutning till Azure ATP-Molntjänsten att fungera korrekt. I vissa organisationer domänkontrollanterna inte är direkt ansluten till Internet, men är anslutna via en proxy-anslutning för webbprogram. Varje Azure ATP sensor kräver att du använder Microsoft Windows Internet (WinINET) proxy conifguration till sensor rapportdata och kommunicera med tjänsten Azure ATP. Om du använder WinHTTP för proxykonfiguration behöver du fortfarande konfigurera proxyinställningar för Windows Internet (WinINet) webbläsaren för kommunikation mellan sensorn och Azure ATP-Molntjänsten.
+Varje Azure Advanced Threat Protection (ATP) sensor kräver Internet-anslutning till Azure ATP-Molntjänsten att fungera korrekt. I vissa organisationer domänkontrollanterna inte är direkt ansluten till Internet, men är anslutna via en proxy-anslutning för webbprogram. Varje Azure ATP sensor kräver att du använder Microsoft Windows Internet (WinINET) proxykonfigurationen till sensor rapportdata och kommunicera med tjänsten Azure ATP. Om du använder WinHTTP för proxykonfiguration behöver du fortfarande konfigurera Windows (WinINet) proxy webbläsarinställningar för kommunikation mellan sensorn och Azure ATP-Molntjänsten.
 
 
 När du konfigurerar proxyservern, behöver du veta att inbäddade Azure ATP sensor tjänsten körs i kontexten med hjälp av **LocalService** kontot och tjänsten Azure ATP Sensor Updater körs i systemkontexten med **LocalSystem** konto. 
@@ -68,6 +68,11 @@ Om en proxyserver eller brandvägg blockerar all trafik som standard och så att
 |Europa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
 |Asien|triprd1wcasse1sensorapi.ATP.Azure.com|
 
+
+Du kan även skydda brandvägg eller proxyserver regler för en viss arbetsyta du skapade genom att skapa en regel för DNS-poster av följande:
+- < Arbetsytenamn >. atp.azure.com – för konsolen anslutning
+- < Arbetsytenamn > sensorapi.atp.azure.com – sensor-anslutningen
+ 
 > [!NOTE]
 > När du utför SSL-kontroll på Azure ATP nätverkstrafik (mellan sensorn och tjänsten Azure ATP), måste SSL-kontroll stödja ömsesidig kontroll.
 
