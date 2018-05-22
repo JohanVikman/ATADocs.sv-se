@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: db63df945bf218f384c9f9dac6f111f5290aa138
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
+ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
@@ -119,7 +119,7 @@ Det finns tre typer av identifiering:
 **Undersökning**
 
 Kontrollera först beskrivningen av aviseringen för att se vilken av ovanstående tre identifiering typer du hantera. För ytterligare information, hämta Excel-kalkylblad.
-1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av skannern skrivs av ATA-teamet. Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
+1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key påverkar domänkontrollanter med hjälp av den [skannern skrivs av ATA-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Om skannern hittar skadlig kod på 1 eller flera domänkontrollanter, är det ett true positivt.
 2.  Golden Ticket – i Excel-kalkylblad, gå till den **nätverksaktivitet** fliken. Du ser att relevanta nedgraderat fältet är **begära biljett krypteringstyp**, och **källa stöds kryptering datortyper** innehåller starkare kryptering.
   a.    Kontrollera käll- och kontot, eller om det finns flera källdatorer och konton kontrollerar du om de har något gemensam (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Finns det fall där ett anpassat program som används sällan autentiseras med hjälp av en lägre kryptering cipher. Kontrollera om det finns några anpassade appar på källdatorn. Om så är det förmodligen ett ofarlig true positivt och du kan **utelämna** den.
   b.    Kontrollera resursen via dessa biljetter, om det finns en resurs som de alla använder, verifiera den, kontrollera att den är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark kryptering. Du kan kontrollera detta i Active Directory genom att kontrollera attributet `msDS-SupportedEncryptionTypes`, för resurs-tjänstkontot.

@@ -44,7 +44,7 @@
 ## [Ändra lösenord för domänanslutning](modifying-ata-config-dcpassword.md)
 ## [Exkludera entiteter från identifieringar](excluding-entities-from-detections.md)
 ## [Exportera/importera ATA-konfiguration](ata-configuration-file.md)
-## [Hantera ATA-telemetri](manage-telemetry-settings.md)
+## [Hantera systemgenererade loggar](manage-telemetry-settings.md)
 ## [Konfigurera ATA-meddelanden](setting-ata-alerts.md)
 ## [Ange syslog- och e-postserverinställningar](setting-syslog-email-server-settings.md)
 ## [Tagga känsliga konton](tag-sensitive-accounts.md)

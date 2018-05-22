@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 5/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 15c857085fb7d003f783981a89fe02e920a8e49a
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -47,7 +47,7 @@ Se till att sensorn kan bläddra till *. atp.azure.com via den konfigurerade pro
 
 
 
-## <a name="azure-atp-sensor-nic-teaming-issue"></a>Azure ATP sensor NIC-teamindelning problemet
+## Azure ATP sensor NIC-teamindelning problemet <a name="nic-teaming"></a>
 
 Om du försöker installera ATP-sensor på en dator som har konfigurerats med ett NIC-Teamindelning kort får ett fel vid installation. Om du vill installera ATP-sensor på en dator som har konfigurerats med NIC-teamindelning, följer du dessa anvisningar:
 

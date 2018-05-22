@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/8/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
-ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
+ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -58,7 +58,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 
 -   Om du kör Wireshark på Azure ATP fristående sensor kommer du måste starta om Azure Advanced Threat Protection-sensor tjänsten när du har stoppat Wireshark avbildningen. Om inte, sensorn slutar att fånga in trafik.
 
-- Om du försöker installera ATP-sensor på en dator som har konfigurerats med ett NIC-Teamindelning kort får ett fel vid installation. Kontakta din Azure ATP supportrepresentant om du vill installera ATP-sensor på en dator som har konfigurerats med NIC-teamindelning.
+- Om du försöker installera ATP-sensor på en dator som har konfigurerats med ett NIC-Teamindelning kort får ett fel vid installation. Om du vill installera ATP-sensor på en dator som har konfigurerats med NIC-teamindelning, se [Azure ATP sensor NIC-teamindelning problemet](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Rekommenderat: Användare ska ha läsbehörighet till behållaren för borttagna objekt. Detta gör att Azure ATP kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i **ändra behörigheter för en behållare för borttagna objekt** under den [vy eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) artikel.
 
