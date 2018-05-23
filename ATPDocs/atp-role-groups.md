@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 77a2464634b4286d2f6d35504e9ab7512cf7b612
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -25,6 +25,11 @@ ms.lasthandoff: 04/30/2018
 
 
 # <a name="azure-atp-role-groups"></a>Azure ATP rollgrupper
+
+Azure ATP erbjuder rollbaserad säkerhet för att skydda data efter behov för organisationens specifika säkerhet och efterlevnad. Azure ATP stöder tre separata roller: administratörer, användare och användare. 
+
+> [!NOTE]
+> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 Rollgrupper kan åtkomsthantering för Azure ATP. Genom att använda rollgrupper kan du särskilja uppgifter inom din säkerhetsgrupp och endast ge den mängd åtkomst som användare behöver att utföra sitt arbete. Den här artikeln förklarar åtkomsthantering och Azure ATP auktorisering av roller och hjälper du komma igång med rollgrupper i ATP.
 

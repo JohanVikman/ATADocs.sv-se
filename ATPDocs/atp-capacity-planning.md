@@ -1,22 +1,22 @@
 ---
 title: Planera distributionen Azure Advanced Threat Protection | Microsoft Docs
-description: "Hjälper dig att planera distributionen och bestämma hur många Azure ATP-servrar som behövs för nätverket"
-keywords: 
+description: Hjälper dig att planera distributionen och bestämma hur många Azure ATP-servrar som behövs för nätverket
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Det rekommenderade och enklaste sättet att avgöra kapaciteten för din Azure A
 Om du inte kan använda Azure ATP-Storleksverktyget av någon anledning, manuellt samla in informationen om räknaren paket/sek från alla domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
 I följande avsnitt finns anvisningar om hur du samlar in information om paket/sek från en domänkontrollant.
 
-## Välja rätt sensor-typ för distributionen<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Välja rätt sensor-typ för distributionen<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 I en Azure ATP-distribution stöds valfri kombination av Azure ATP fristående sensor typer:
 
 - Endast Azure ATP fristående sensorer
@@ -74,13 +74,13 @@ En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat 
 
 |Paket per sekund *|CPU (kärnor)|Minne (GB)|
 |----|----|-----|
-|0-1 k|0.25|2.50|
-|1k-5k|0.75|6.00|
-|5k - 10k|1.00|6.50|
-|10k - 20k|2.00|9.00|
-|20k-50k|3.50|9.50|
-|50k-75k |3.50|9.50|
-|75k - 100k|3.50 |9.50|
+|0-1 k|0.25|2,50|
+|1 kB - 5k|0,75|6.00|
+|5k - 10k|1,00|6.50|
+|10k - 20k|2,00|9,00|
+|20k - 50k|3.50|9,50|
+|50k - 75k |3.50|9,50|
+|75k - 100k|3.50 |9,50|
 
 > [!NOTE]
 > - Totalt antal kärnor som ska användas av sensor-tjänsten.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.

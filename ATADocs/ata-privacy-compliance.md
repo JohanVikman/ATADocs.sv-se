@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,17 +13,18 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: cf08f2d46eaa939f414d1e3793446384cd22100b
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
-# <a name="ata-data-security"></a>Datasäkerhet i ATA 
+# <a name="ata-data-security-and-privacy"></a>ATA datasäkerhet och sekretess
 
-Information om ATA förtroende och kompatibilitet finns i [Service förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) och [webbplatsen Microsoft 365 Enterprise BNPR efterföljande](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+> [!NOTE]
+> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Söker efter och identifiera personliga data 
 
@@ -38,7 +39,7 @@ Personliga data om användare och enheter i ATA härleds från användarens obje
 ## <a name="deleting-personal-data"></a>Ta bort personliga data 
 
 > [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i avsnittet [BNPR på webbplatsen Microsoft 365 Enterprise efterföljande] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Även om data i ATA replikeras och alltid uppdateras från AD, när en enhet tas bort i AD upprätthålls entitetsdata i ATA för tillämpning av säkerhet undersökning. 
@@ -74,7 +75,7 @@ Det här skriptet tar bort alla data för alla aktiviteter som entiteten och sä
 ## <a name="exporting-personal-data"></a>Exportera personliga data 
 
 > [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i avsnittet [BNPR på webbplatsen Microsoft 365 Enterprise efterföljande] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Eftersom de data som rör entiteter i ATA är härledd från AD, lagras bara en delmängd av dessa data i ATA-databasen. Därför ska du exportera entitet-relaterade data från AD. 
@@ -85,7 +86,7 @@ ATA kan du exportera till Excel alla säkerhetsrelaterad information som kan inn
 ## <a name="opt-out-of-system-generated-logs"></a>CEIP systemgenererade loggar 
 
 > [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i avsnittet [BNPR på webbplatsen Microsoft 365 Enterprise efterföljande] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA samlar in anonymiserade systemgenererade loggar för varje distribution och överför dessa data via HTTPS till Microsoft-servrar. Dessa data används av Microsoft för att förbättra kommande versioner av ATA. 
 
@@ -104,10 +105,4 @@ Inaktivera datainsamling:
 
 ## <a name="additional-resources"></a>Ytterligare resurser
 
-[Microsoft Security Channel 9 sida](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## <a name="community-resources"></a>Gruppresurser
-
-[ATA-bloggen](https://aka.ms/ATABlog)
-[ATA community](https://aka.ms/ATACommunity)
-[ge feedback om ATA](https://aka.ms/ATAUserVoice)
+- Information om ATA förtroende och kompatibilitet finns i [Service förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) och [webbplatsen Microsoft 365 Enterprise BNPR efterföljande](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

@@ -1,23 +1,23 @@
 ---
-title: "Arbeta med misstänkta aktiviteter i Azure Advanced Threat Protection | Microsoft Docs"
-description: "Beskriver hur du granskar misstänkta aktiviteter som identifieras av Azure ATP"
-keywords: 
+title: Arbeta med misstänkta aktiviteter i Azure Advanced Threat Protection | Microsoft Docs
+description: Beskriver hur du granskar misstänkta aktiviteter som identifieras av Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5e7598e94e1d6d4b09c827770e062be9fefd1c4
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="working-with-suspicious-activities"></a>Arbeta med misstänkta aktiviteter
 Den här artikeln förklarar grunderna för hur du arbetar med Azure Advanced Threat Protection.
 
-## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Granska misstänkta aktiviteter på attacktidslinjen
+## Granska misstänkta aktiviteter på tidslinjen <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 När du loggar in på Azure ATP arbetsytan portal kommer du automatiskt till öppen **tidslinje för misstänkta aktiviteter**. Misstänkta aktiviteter visas i kronologisk ordning med de senaste misstänkta aktiviteterna längst upp i tidslinjen.
 Varje misstänkt aktivitet har följande information:
 
@@ -101,5 +101,5 @@ Du gör det genom att klicka på de tre punkterna i det övre högra hörnet fö
 
 ## <a name="see-also"></a>Se även
 
-- [Arbeta med Azure ATP arbetsytan portal](workspace-portal.md)
+- [Arbeta med Azure ATP-arbetsyteportalen](workspace-portal.md)
 - [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)

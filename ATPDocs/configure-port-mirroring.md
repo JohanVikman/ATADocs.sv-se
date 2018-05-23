@@ -1,23 +1,23 @@
 ---
-title: "Konfigurera portspegling när du distribuerar Azure Advanced Threat Protection | Microsoft Docs"
-description: "Beskriver alternativ för portspegling och hur du konfigurerar dem för Azure ATP"
-keywords: 
+title: Konfigurera portspegling när du distribuerar Azure Advanced Threat Protection | Microsoft Docs
+description: Beskriver alternativ för portspegling och hur du konfigurerar dem för Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1cc622f1a8306530423920873e5efa05e8c87064
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1f59f02f73507fe29b41fd13c96a359dee2e88fc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
@@ -51,10 +51,10 @@ Dina domänkontrollanter och Azure ATP fristående sensor kan vara antingen fysi
 |Virtuell|Virtuell på samma värd|Den virtuella växeln måste ha stöd för portspegling.<br /><br />Portspeglingen kan sluta fungera om en av de virtuella datorerna flyttas till en annan värd själv.|
 |Virtuell|Virtuell på olika värdar|Kontrollera att den virtuella växeln har stöd för det här scenariot.|
 |Virtuell|Fysiskt|Kräver ett dedikerat nätverkskort annars Azure ATP ser all trafik som kommer till och från värden, även den trafik som skickas till Azure ATP-Molntjänsten.|
-|Fysiskt|Virtuell|Kontrollera att den virtuella växeln har stöd för det här scenariot – och konfiguration av portspegling på de fysiska växlarna baserat på scenariot:<br /><br />Om den virtuella värden finns på samma fysiska växel, måste du konfigurera på växelnivå.<br /><br />Om den virtuella värden finns på en annan växel, måste du konfigurera RSPAN eller ERSPAN &#42;.|
+|Fysiskt|Virtuell|Kontrollera att den virtuella växeln har stöd för det här scenariot – och konfiguration av portspegling på de fysiska växlarna baserat på scenariot:<br /><br />Om den virtuella värden finns på samma fysiska växel, måste du konfigurera på växelnivå.<br /><br />Om den virtuella värden finns på en annan växel, måste du konfigurera RSPAN eller ERSPAN&#42;.|
 |Fysiskt|Fysisk på samma växel|Fysisk växel måste ha stöd för SPAN/portspegling.|
 |Fysiskt|Fysisk på en annan växel|Kräver att fysiska växlar har stöd för RSPAN eller ERSPAN&#42;.|
-&#42; ERSPAN stöds endast när avkapsling utförs innan trafiken analyseras av ATP.
+&#42;ERSPAN stöds endast när avkapsling utförs innan trafiken analyseras av ATP.
 
 > [!NOTE]
 > Se till att domänkontrollanter och de ansluter Azure ATP fristående sensorn har tidsinställningen synkroniserad högst 5 minuter från varandra.
