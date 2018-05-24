@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 1e890491b44bcf97a7f0f19d825155072ac1a2f4
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: d6bf11d55743b7422985577f512f16af93159618
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 *Gäller för: Azure Advanced Threat Protection*
 
 # <a name="azure-atp-data-security-and-privacy"></a>Azure ATP datasäkerhet och sekretess
 
-> [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="search-for-and-identify-personal-data"></a>Söka efter och identifiera personliga data 
 
@@ -49,12 +48,8 @@ I Azure ATP har du möjlighet att [export]((working-with-suspicious-activities.m
  
 ## <a name="audit-personal-data"></a>Gransknings-och personliga data
 
- 
 Azure ATP implementerar granskning av ändringar av personliga data, inklusive den tas bort och export av personuppgifter poster. Granska spår kvarhållningstiden är 90 dagar. Granskning i Azure ATP är en backend-funktion och inte tillgängliga för kunder.
  
-
- 
-
 ## <a name="additional-resources"></a>Ytterligare resurser
 
 - Information om Azure ATP förtroende och kompatibilitet finns i [Service förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) och [webbplatsen Microsoft 365 Enterprise BNPR efterföljande](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

@@ -14,7 +14,7 @@
 #### [Uppdatera till ATA 1.5 – migreringsguide](ata-update-1.5-migration-guide.md)
 ### [Nyheter i ATA version 1.4](whats-new-version-1.4.md)
 ## [Vanliga frågor och svar](ata-technical-faq.md)
-## [ATA – kompatibilitet, förtroende, datasäkerhet och sekretess](ata-privacy-compliance.md)
+## [Datasäkerhet och sekretess i ATA](ata-privacy-compliance.md)
 # Planera och utforma
 ## [ATA-arkitektur](ata-architecture.md)
 ## [Planera ATA-kapaciteten](ata-capacity-planning.md)
