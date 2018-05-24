@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: b89e841412385c9eca20e40d78ff10be342c6b22
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 
 # <a name="ata-data-security-and-privacy"></a>ATA datasäkerhet och sekretess
 
-> [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Söker efter och identifiera personliga data 
 
@@ -37,9 +36,6 @@ Använd sökfältet från ATA Center, för att visa identifierbar personlig info
 Personliga data om användare och enheter i ATA härleds från användarens objekt i din organisation har AD. Därmed visas alla ändringar i användarprofilen i AD i ATA. 
 
 ## <a name="deleting-personal-data"></a>Ta bort personliga data 
-
-> [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Även om data i ATA replikeras och alltid uppdateras från AD, när en enhet tas bort i AD upprätthålls entitetsdata i ATA för tillämpning av säkerhet undersökning. 
@@ -74,19 +70,12 @@ Det här skriptet tar bort alla data för alla aktiviteter som entiteten och sä
 
 ## <a name="exporting-personal-data"></a>Exportera personliga data 
 
-> [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
-
 Eftersom de data som rör entiteter i ATA är härledd från AD, lagras bara en delmängd av dessa data i ATA-databasen. Därför ska du exportera entitet-relaterade data från AD. 
 
 ATA kan du exportera till Excel alla säkerhetsrelaterad information som kan innehålla personuppgifter. 
 
  
 ## <a name="opt-out-of-system-generated-logs"></a>CEIP systemgenererade loggar 
-
-> [!NOTE]
-> Om du vill visa eller ta bort personliga data, läser du riktlinjerna för Microsofts i den [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) och i den [BNPR avsnitt på webbplatsen Microsoft 365 Enterprise efterföljande](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Om du letar efter allmän information om BNPR finns i [BNPR avsnitt av tjänsten förtroende portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA samlar in anonymiserade systemgenererade loggar för varje distribution och överför dessa data via HTTPS till Microsoft-servrar. Dessa data används av Microsoft för att förbättra kommande versioner av ATA. 
 
@@ -96,12 +85,6 @@ Inaktivera datainsamling:
 
 1. Logga in på ATA-konsolen, klicka på de tre punkterna i verktygsfältet och välj **Om**. 
 2. Avmarkera kryssrutan **Skicka användningsinformation till oss för att förbättra kundupplevelsen i framtiden**. 
-
- 
-
- 
-
- 
 
 ## <a name="additional-resources"></a>Ytterligare resurser
 
