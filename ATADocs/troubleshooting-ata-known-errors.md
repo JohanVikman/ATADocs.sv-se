@@ -1,15 +1,15 @@
 ---
-title: "Felsöka kända problem i ATA | Microsoft Docs"
-description: "Beskriver hur du kan felsöka kända problem i Advanced Threat Analytics"
-keywords: 
+title: Felsöka kända problem i ATA | Microsoft Docs
+description: Beskriver hur du kan felsöka kända problem i Advanced Threat Analytics
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010490"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

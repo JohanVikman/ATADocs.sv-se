@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics-rollgrupper för åtkomsthantering | Microsoft Docs"
-description: "Vägleder dig i att arbeta med ATA-rollgrupper."
-keywords: 
+title: Advanced Threat Analytics-rollgrupper för åtkomsthantering | Microsoft Docs
+description: Vägleder dig i att arbeta med ATA-rollgrupper.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010201"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

@@ -1,15 +1,15 @@
 ---
-title: "Ställ in inställningar för e-postmeddelanden i Advanced Threat Analytics | Microsoft Docs"
-description: "Beskriver hur du får ATA att meddela dig (via e-post eller vidarebefordran av ATA-händelser) när det upptäcker misstänkta aktiviteter"
-keywords: 
+title: Ställ in inställningar för e-postmeddelanden i Advanced Threat Analytics | Microsoft Docs
+description: Beskriver hur du får ATA att meddela dig (via e-post eller vidarebefordran av ATA-händelser) när det upptäcker misstänkta aktiviteter
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010167"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

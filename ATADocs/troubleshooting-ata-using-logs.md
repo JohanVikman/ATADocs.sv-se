@@ -1,15 +1,15 @@
 ---
-title: "Felsök Advanced Threat Analytics med hjälp av loggarna | Microsoft Docs"
-description: "Beskriver hur du kan använda ATA-loggarna för att felsöka problem"
-keywords: 
+title: Felsök Advanced Threat Analytics med hjälp av loggarna | Microsoft Docs
+description: Beskriver hur du kan använda ATA-loggarna för att felsöka problem
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010364"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

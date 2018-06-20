@@ -1,14 +1,14 @@
 ---
-title: "Ändra konfigurationen för ATA Center (Advanced Threat Analytics ) | Microsoft Docs"
-description: "Beskriver hur du ändrar IP-adress, port, konsol-URL eller certifikat för ATA Center."
-keywords: 
+title: Ändra konfigurationen för ATA Center (Advanced Threat Analytics ) | Microsoft Docs
+description: Beskriver hur du ändrar IP-adress, port, konsol-URL eller certifikat för ATA Center.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010048"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

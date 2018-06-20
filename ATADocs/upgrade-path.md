@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics rekommenderas uppgraderingsväg | Microsoft Docs"
-description: "Innehåller instruktioner för att uppgradera din version av Advanced Threat Analytics (ATA)."
-keywords: 
+title: Advanced Threat Analytics rekommenderas uppgraderingsväg | Microsoft Docs
+description: Innehåller instruktioner för att uppgradera din version av Advanced Threat Analytics (ATA).
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009980"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

@@ -1,15 +1,15 @@
 ---
-title: "Exkludera entiteter från identifieringar i Azure Advanced Threat Protection | Microsoft Docs"
-description: "Beskriver hur du stoppar Azure ATP inte kan identifiera specifika enheten aktiviteter som misstänkt"
-keywords: 
+title: Exkludera entiteter från identifieringar i Azure Advanced Threat Protection | Microsoft Docs
+description: Beskriver hur du stoppar Azure ATP inte kan identifiera specifika enheten aktiviteter som misstänkt
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446031"
 ---
 *Gäller för: Azure Advanced Threat Protection*
 

@@ -1,15 +1,15 @@
 ---
 title: Azure-supporten om ATP | Microsoft Docs
-description: "Beskriver processen för att få hjälp med stöd för Azure ATP."
-keywords: 
+description: Beskriver processen för att få hjälp med stöd för Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/19/2018
+ms.locfileid: "29977581"
 ---
 *Gäller för: Azure Advanced Threat Protection*
 

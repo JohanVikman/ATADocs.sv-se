@@ -1,15 +1,15 @@
 ---
-title: "Förstå Advanced Threat Analytics-konsolen | Microsoft Docs"
-description: "Beskriver hur man loggar in på ATA-konsolen och konsolens komponenter"
-keywords: 
+title: Förstå Advanced Threat Analytics-konsolen | Microsoft Docs
+description: Beskriver hur man loggar in på ATA-konsolen och konsolens komponenter
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009861"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

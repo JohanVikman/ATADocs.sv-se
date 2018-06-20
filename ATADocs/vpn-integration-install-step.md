@@ -1,15 +1,15 @@
 ---
-title: "Installera Advanced Threat Analytics – steg 7 | Microsoft Docs"
-description: "I det här steget av ATA-installationen kan du integrera din VPN."
-keywords: 
+title: Installera Advanced Threat Analytics – steg 7 | Microsoft Docs
+description: I det här steget av ATA-installationen kan du integrera din VPN.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010337"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

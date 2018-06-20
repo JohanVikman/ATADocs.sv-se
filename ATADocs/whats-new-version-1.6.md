@@ -1,15 +1,15 @@
 ---
 title: Nyheter i Advanced Threat Analytics version 1.6 | Microsoft Docs
-description: "Visar en lista över nyheter i ATA version 1.6 tillsammans med kända problem"
-keywords: 
+description: Visar en lista över nyheter i ATA version 1.6 tillsammans med kända problem
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018566"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.

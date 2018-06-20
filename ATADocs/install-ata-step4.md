@@ -1,15 +1,15 @@
 ---
 title: Installera Advanced Threat Analytics steg 4 | Microsoft Docs
-description: "I steg fyra av ATA-installationen får du hjälp att installera ATA Gateway."
-keywords: 
+description: I steg fyra av ATA-installationen får du hjälp att installera ATA Gateway.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009680"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

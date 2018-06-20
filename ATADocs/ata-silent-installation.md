@@ -1,15 +1,15 @@
 ---
 title: Installera Advanced Threat Analytics tyst | Microsoft Docs
-description: "Det här beskriver tyst installation av ATA."
-keywords: 
+description: Det här beskriver tyst installation av ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009844"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

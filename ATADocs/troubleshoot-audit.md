@@ -1,15 +1,15 @@
 ---
 title: Arbeta med ATA-granskningsloggar | Microsoft Docs
-description: "Den här artikeln beskriver hur du arbetar med ATA-granskningsloggar i Windows-händelseloggen."
-keywords: 
+description: Den här artikeln beskriver hur du arbetar med ATA-granskningsloggar i Windows-händelseloggen.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010456"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

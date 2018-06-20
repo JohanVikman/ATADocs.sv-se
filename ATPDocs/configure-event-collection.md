@@ -18,6 +18,7 @@ ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30213990"
 ---
 *Gäller för: Azure Advanced Threat Protection*
 

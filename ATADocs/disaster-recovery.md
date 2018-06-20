@@ -1,15 +1,15 @@
 ---
-title: "Katastrofåterställning för Advanced Threat Analytics | Microsoft Docs"
-description: "Beskriver hur du snabbt kan återställa ATA-funktioner efter en katastrof"
-keywords: 
+title: Katastrofåterställning för Advanced Threat Analytics | Microsoft Docs
+description: Beskriver hur du snabbt kan återställa ATA-funktioner efter en katastrof
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009561"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

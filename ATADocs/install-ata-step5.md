@@ -1,15 +1,15 @@
 ---
 title: Installera Advanced Threat Analytics steg 5 | Microsoft Docs
-description: "Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway."
-keywords: 
+description: Steg fem för att installera ATA hjälper dig att konfigurera inställningar för ATA Gateway.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009752"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9.*
 

@@ -1,15 +1,15 @@
 ---
-title: "Migreringsguide för Advanced Threat Analytics-uppdatering till 1.5 | Microsoft Docs"
-description: "Procedurer för att uppdatera ATA till version 1.5"
-keywords: 
+title: Migreringsguide för Advanced Threat Analytics-uppdatering till 1.5 | Microsoft Docs
+description: Procedurer för att uppdatera ATA till version 1.5
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019331"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Migreringsguide för ATA-uppdatering till 1.5
 Uppdateringen till ATA 1.5 erbjuder förbättringar inom följande områden:

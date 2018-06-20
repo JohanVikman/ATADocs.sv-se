@@ -1,23 +1,24 @@
 ---
 title: Nyheter i ATA version 1.7 | Microsoft Docs
-description: "Visar en lista över nyheter i ATA version 1.7 tillsammans med kända problem"
-keywords: 
+description: Visar en lista över nyheter i ATA version 1.7 tillsammans med kända problem
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 1/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
 ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018226"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nyheter i ATA version 1.7
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
