@@ -1,6 +1,6 @@
 ---
 title: Felsöka Azure ATP kända problem | Microsoft Docs
-description: Beskriver hur du felsöker problem i Azure ATP.
+description: Beskriver hur du kan felsöka problem i Azure ATP.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -13,50 +13,51 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 15c857085fb7d003f783981a89fe02e920a8e49a
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
+ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34760064"
 ---
-*Gäller för: Azure Advanced Threat Protection*
+*Gäller för: Azure Avancerat skydd*
 
 
-# <a name="troubleshooting-azure-atp-known-issues"></a>Felsöka Azure ATP kända problem 
+# <a name="troubleshooting-azure-atp-known-issues"></a>Felsöka Azure ATP-kända problem 
 
 
-## <a name="deployment-log-location"></a>Platsen för distribution
+## <a name="deployment-log-location"></a>Loggplatsen för distribution
  
-Azure ATP-distributionsloggar finns i temp-katalogen för den användare som installerade produkten. På standardplatsen för installation finns på: C:\Users\Administrator\AppData\Local\Temp (eller en katalog över % temp %).
+Azure ATP-distributionsloggarna finns i temp-katalogen för den användare som installerade produkten. På standardplatsen för installation finns på: C:\Users\Administrator\AppData\Local\Temp (eller en katalog över % temp %).
 
-## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problem med autentisering i proxy presenteras som licensieringsfel
+## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problem med autentisering i proxy presenterar som licensiering fel
 
-Under installationen av sensor du följande felmeddelande: **sensorn kunde inte registreras på grund av problem.**
+Under installationen av sensorn du får följande fel: **sensorn kunde inte registreras pga licensieringsproblem.**
 
-Distribution loggposter: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 C 60: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 felsöka SensorBootstrapperApplication Engine.Quit [\[] deploymentResultStatus = 1602 isRestartRequired = False [\]] [1 C 60: 15B8] [2018-03-25T00:27:56] i500: avslutas, slutkod: 0x642
+Loggposter för distribution: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 Info InteractiveDeploymentManager ValidateCreateSensorAsync returnerade [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 C 60: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 felsöka SensorBootstrapperApplication Engine.Quit [\[] deploymentResultStatus = 1602 isRestartRequired = False [\]] [1 C 60: 15B8] [2018-03-25T00:27:56] i500: har påbörjat slutkod: 0x642
 
 
 **Orsak:**
 
-I vissa fall, när de kommunicerar via en proxyserver under autentiseringen kan den svara på Azure ATP sensor med fel 401 eller 403 i stället för fel 407. Azure ATP-sensor tolkar fel 401 eller 403 som ett licensiering problem och inte som en proxy-autentiseringsproblem. 
+I vissa fall, när de kommunicerar via en proxyserver under autentiseringen kan de svara på Azure ATP-sensorn med fel 401 eller 403 i stället för fel 407. Azure ATP-sensorn tolkar fel 401 eller 403 som ett problem med licensiering och inte som ett proxy-autentisering-problem. 
 
 **Lösning:**
 
-Se till att sensorn kan bläddra till *. atp.azure.com via den konfigurerade proxyn utan autentisering. Mer information finns i [konfigurera proxy för att aktivera kommunikation](configure-proxy.md).
+Se till att sensorn kan bläddra till *. atp.azure.com via den konfigurerade proxyn utan autentisering. Mer information finns i [konfigurera proxyn för att aktivera kommunikation](configure-proxy.md).
 
 
 
 
-## Azure ATP sensor NIC-teamindelning problemet <a name="nic-teaming"></a>
+## Azure ATP-sensorn NIC teaming problemet <a name="nic-teaming"></a>
 
-Om du försöker installera ATP-sensor på en dator som har konfigurerats med ett NIC-Teamindelning kort får ett fel vid installation. Om du vill installera ATP-sensor på en dator som har konfigurerats med NIC-teamindelning, följer du dessa anvisningar:
+Om du försöker installera ATP-sensorn på en dator som konfigureras med en NIC-teamindelningsadapter, får du ett fel vid installation. Om du vill installera ATP-sensorn på en dator som konfigureras med NIC-teamindelning, följer du dessa anvisningar:
 
 Om du inte har installerat sensorn ännu:
 
 1.  Hämta Npcap från [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
 2.  Avinstallera WinPcap, om den har installerats.
 3.  Installera Npcap med följande alternativ: loopback_support = Nej & winpcap_mode = Ja
-4.  Installera sensor-paketet.
+4.  Installera sensorpaketet.
 
 Om du redan har installerat sensorn:
 
@@ -64,21 +65,21 @@ Om du redan har installerat sensorn:
 2.  Avinstallera sensorn.
 3.  Avinstallera WinPcap.
 4.  Installera Npcap med följande alternativ: loopback_support = Nej & winpcap_mode = Ja
-5.  Installera om sensor-paketet.
+5.  Installera om sensorpaketet.
 
 ## <a name="windows-defender-atp-integration-issue"></a>Windows Defender ATP-integrering problemet
 
-Azure Advanced Threat Protection kan du integrera Azure ATP med Windows Defender ATP. Integrering är för närvarande bara tillgänglig om du är Windows Defender ATP privat förhandsversion kund. 
+Azure Advanced Threat Protection kan du integrera Azure ATP med Windows Defender ATP. 
 
-## <a name="vmware-virtual-machine-sensor-issue"></a>VMware virtuella sensor problemet
+## <a name="vmware-virtual-machine-sensor-issue"></a>VMware-dator sensor problemet
 
-Om du har en Azure ATP sensor på virtuella VMware-datorer som kan aviseringen övervakning **nätverkstrafik analyseras inte**. Detta inträffar på grund av ett matchningsfel i VMware.
+Om du har en Azure ATP-sensorn på virtuella VMware-datorer kan du få övervakningsaviseringen **en del nätverkstrafik analyseras inte**. Detta inträffar på grund av ett konfigurationsmatchningsfel i VMware.
 
-Så här löser du problemet:
+Att lösa problemet:
 
-Ange följande inställningar till **0** eller **inaktiverad** i konfiguration av den virtuella datorns nätverkskort: TsoEnable, LargeSendOffload, Systemansvarig avlastning, Giant Systemansvarig-avlastning.
+Ange följande inställningar **0** eller **inaktiverad** i konfigurationen för den virtuella datorns nätverkskort: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload.
 > [!NOTE]
-> För Azure ATP sensorer, behöver du bara inaktivera **IPv4 Systemansvarig Offload** under konfigurationen av nätverkskort.
+> För Azure ATP-sensorer, behöver du bara inaktivera **IPv4 TSO Offload** under konfigurationen av nätverkskort.
 
  ![VMware sensor problemet](./media/vm-sensor-issue.png)
 
@@ -87,4 +88,4 @@ Ange följande inställningar till **0** eller **inaktiverad** i konfiguration a
 - [Azure ATP-kapacitetsplanering](atp-capacity-planning.md)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)
