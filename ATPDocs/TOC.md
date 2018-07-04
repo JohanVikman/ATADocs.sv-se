@@ -2,7 +2,7 @@
 ## [Vad är Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Vanliga frågor och svar](atp-technical-faq.md)
 ## [Nyheter i Azure ATP](atp-whats-new.md)
-## [Datasäkerhet och sekretess i Azure ATP](atp-privacy-compliance.md)
+## [Datasäkerhet och -sekretess för SQL Advanced Threat Protection](atp-privacy-compliance.md)
 # Planera och utforma
 ## [Krav för Azure ATP](atp-prerequisites.md)
 ## [Azure ATP-arkitektur](atp-architecture.md)
@@ -18,6 +18,7 @@
 ## [7. Undantag och Honeytoken-konton](install-atp-step7.md)
 ## [8. Konfigurera SAM-R obligatoriska behörigheter](install-atp-step8-samr.md)
 ## [Tyst installation](ATP-silent-installation.md)
+## [Uppdatera ATP-sensorer](sensor-update.md)
 ## Ytterligare steg för Azure ATP-sensorn
 ### [Konfigurera portspegling](configure-port-mirroring.md)
 ### [Verifiera portspegling](validate-port-mirroring.md)
