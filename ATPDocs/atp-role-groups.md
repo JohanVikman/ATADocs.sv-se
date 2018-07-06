@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39709e4749b7f897bffb914dd1e15c80277d6ed8
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: c41e695124b65623e9c2aed5aeb6e76369add5b6
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948973"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800665"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -66,7 +66,7 @@ När användare försöker komma åt en sida som inte är tillgänglig för dera
 
 ## <a name="add-and-remove-users"></a>Lägga till och ta bort användare 
 
-Azure ATP använder Azure AD-säkerhetsgrupper som bas för rollgrupper. Rollgrupperna kan hanteras från [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups ](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). AAD-användare kan läggs till eller tas bort från säkerhetsgrupper. 
+Azure ATP använder Azure AD-säkerhetsgrupper som bas för rollgrupper. Rollgrupperna kan hanteras från [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupper](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). AAD-användare kan läggs till eller tas bort från säkerhetsgrupper. 
 
 
 ## <a name="see-also"></a>Se även

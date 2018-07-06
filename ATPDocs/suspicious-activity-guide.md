@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259233"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800682"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -182,25 +182,44 @@ Pass the Ticket är en teknik för lateral förflyttning där stjäl angriparen 
 
 2. Om det är ett känsligt konto bör du återställa KRBTGT-kontot två gånger som den misstänkta aktiviteten Golden Ticket. När du återställer KRBTGT två gånger upphäver alla Kerberos uppgifterna i den här domänen så planera innan du gör det. Finns i riktlinjerna i [KRBTGT Account Password Reset Scripts nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), se även med hjälp av den [återställa verktyget lösenord/nycklar för KRBTGT-kontot](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Eftersom det här är en teknik för lateral förflyttning, följ rekommenderade metoder i [skicka hash-rekommendationer](http://aka.ms/PtH).
 
-## Guld för Kerberos-biljett<a name="golden-ticket"></a>
+## Kerberos gyllene biljett<a name="golden-ticket"></a>
 
 **Beskrivning**
 
-Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som tillhandahåller auktorisering till alla resurser och ange förfallodatum för biljett till någon godtycklig tidpunkt. Den här falska TGT kallas en ”gyllene biljett” och gör att angripare kan tillskansa sig beständighet i nätverket.
+Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som tillhandahåller auktorisering till alla resurser och ange förfallodatum för biljett till någon godtycklig tidpunkt. Den här falska TGT kallas en ”goldentTicket” och gör att angripare kan tillskansa sig beständighet i nätverket.
 
-I den här identifieringen en avisering utlöses när en Kerberos-biljett beviljad biljett används under mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) säkerhetsprincip.
+I den här identifieringen en avisering utlöses när en Kerberos-biljett beviljad biljett används under mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), det här är en **tid avvikelseidentifiering**golden ticket-attack, eller som ett icke-befintligt konto är en **icke-befintligt konto** golden ticket-attack.
+säkerhetsprincip.
 
 **Undersökning**
 
-1. Det har alla de senaste (inom de senaste timmarna) ändringar på den **högsta livstid för användarbiljett** i Grupprincip? Om Ja, sedan **Stäng** aviseringen (det var en falsk positiv identifiering).
+- **Tid avvikelseidentifiering**
+   1.   Fanns där alla nyligen (inom de senaste timmarna) ändringar på den högsta livstiden för inställningen för användar-biljett i en Grupprincip? Sök efter det specifika värdet och se om det är lägre än den tid som biljetten användes för. Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
+   2.   Är Azure ATP-sensorn som ingår i den här aviseringen en virtuell dator? Om Ja, det nyligen återupptas från ett sparat tillstånd? Om Ja, stänger du aviseringen.
+   3.   Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
+- **Icke-befintligt konto**
+   1.   Ställa följande frågor:
+         - Är användaren är en domänanvändare som är kända och giltig? Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
+         - Har du nyligen har lagts till? Om Ja, stänga aviseringen, ändringen kanske inte har synkroniserats ännu.
+         - Har du nyligen har raderats från AD? Om Ja, stänger du aviseringen.
+   2.   Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
 
-2. Är fristående Azure ATP-sensorn som ingår i den här aviseringen en virtuell dator? Om Ja, det nyligen återupptas från ett sparat tillstånd? Om Ja, sedan **Stäng** den här aviseringen.
+1. Båda typerna av golden ticket-attacker, klickar du på källdatorn för att gå till dess **profil** sidan. Kontrollera vad som hände ungefär samma tid som aktiviteten och söka efter ovanliga aktiviteter, inklusive vem som har loggat in, vilka resurser som användes? 
 
-3. Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
+2.  Är alla användare som har loggats i ska vara inloggad på datorn? Vad är sina privilegier? 
+
+3.  Dessa användare ska ha åtkomst till dessa resurser?<br>
+Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![WD märket](./media/wd-badge.png).
+ 
+ 4. Kontrollera vilka processer och aviseringar som har uppstått vid tidpunkten för aviseringen för att undersöka datorn i Windows Defender ATP.
 
 **Reparation**
 
+
 Ändra lösenordet för Kerberos-biljett biljettbeviljande biljetter (KRBTGT) två gånger enligt riktlinjerna i [KRBTGT Account Password Reset Scripts nu tillgängligt för kunder](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)med hjälp av den [återställa KRBTGT-kontot lösenord/nycklar verktyget](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). När du återställer KRBTGT två gånger upphäver alla Kerberos uppgifterna i den här domänen så planera innan du gör det. Dessutom eftersom skapar en Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
 
@@ -232,9 +251,14 @@ I den här identifieringen utlöses en avisering när en replikeringsbegäran in
 
 **Undersökning**
 
-1.  Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderade domänkontrollant som hade problem med replikering. Om Ja, **Stäng** den misstänkta aktiviteten. 
-2.  Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och undanta** den misstänkta aktiviteten.
-3.  Klicka på källdatorn eller konto för att gå till dess profilsida. Kontrollera vad som hände vid tidpunkten för replikering, söker efter ovanliga aktiviteter, till exempel: vem som har loggat in, vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP. 
+> [!NOTE]
+> Om du har domänkontrollanter som Azure ATP-sensorer inte är installerade kan omfattas dessa domänkontrollanter inte av Azure ATP. I det här fallet om du distribuerar en ny domänkontrollant på en oregistrerad eller oskyddade domänkontrollant, kan den inte identifieras genom Azure ATP som en domänkontrollant först. Vi rekommenderar starkt att installera Azure ATP-sensorn på alla domänkontrollanter för att få fullständig täckning.
+
+1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderade domänkontrollant som hade problem med replikering. Om Ja, **Stäng** den misstänkta aktiviteten. 
+2.  Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect eller nätverk prestandaövervakning av enheter. Om Ja, **Stäng och undanta** den misstänkta aktiviteten.
+3. Är den IP-Adressen som replikeringsbegäran skickades en NAT eller en proxy? Om Ja, kontrollera om det finns en ny domänkontrollant bakom enheten eller om andra misstänkta aktiviteter har inträffat därifrån. 
+
+4. Klicka på källdatorn eller konto för att gå till dess profilsida. Kontrollera vad som hände vid tidpunkten för replikering, söker efter ovanliga aktiviteter, till exempel: vem som har loggat in, vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP. 
 
 
 **Reparation**
@@ -505,9 +529,9 @@ För att avgöra om detta är en WannaCry-attack, utför du följande steg:
 
 2. Om det finns inga attack verktyg kan du kontrollera om källdatorn kör ett program som implementerar sin egen NTLM- eller SMB-stacken.
 
-3. Om det inte kontrollera om detta orsakas av wannacry-angrepp genom att köra ett WannaCry-skannern skript, till exempel [skannern](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) mot källdatorn som ingår i den misstänkta aktiviteten. Om skannern hittar som datorn som infekterade eller sårbara, arbetet med korrigeringar på datorn och ta bort den skadliga koden och blockerar den från nätverket.
+3. Klicka på källdatorn för att gå till dess profilsida. Kontrollera vad som hände ungefär samma tidpunkt som aviseringen, söker efter ovanliga aktiviteter, till exempel: vem som har loggat in, vilka resurser där nås. Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![WD märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP.
 
-4. Om skriptet inte hittar att datorn är infekterade eller sårbara och det fortfarande vara smittade men SMBv1 kan ha inaktiverats eller har konfigurerats för datorn, vilket påverkar genomsökningsverktyget.
+
 
 **Reparation**
 
