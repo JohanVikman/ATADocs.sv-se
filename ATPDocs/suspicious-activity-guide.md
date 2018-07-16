@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800682"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064125"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -107,9 +107,11 @@ Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ova
 
 2.  Gyllene biljett – i excel-kalkylblad, gå till fliken nätverk aktivitet. Du ser att relevanta nedgraderat fältet är **begär kryptering Biljettyp**, och **stöds krypteringstyper som källa datorn** innehåller starkare krypteringsmetoder.
 
-  1. Kontrollera käll- och konto eller om det finns flera källdatorer och konton kontrollera om de har något i gemensamma (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Det finns fall där ett anpassat program som används sällan, autentiseras med hjälp av ett chiffer med lägre kryptering. Kontrollera om det finns några anpassade appar på källdatorn. I så, fall är troligen en godartad sann positiv händelse och kan förhindras.
+  1. Kontrollera resursen som används av dessa biljetter, om det finns en resurs som de kommer alla åt, verifiera den, se till att det är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark krypteringsmetoder. Du kan kontrollera detta i Active Directory genom att markera det attributet msDS-SupportedEncryptionTypes-namn, resurs-tjänstkontots.
   
-  2. Kontrollera resursen som används av dessa biljetter, om det finns en resurs som de kommer alla åt, verifiera den, se till att det är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark krypteringsmetoder. Du kan kontrollera detta i Active Directory genom att markera det attributet msDS-SupportedEncryptionTypes-namn, resurs-tjänstkontots.
+  2. Kontrollera käll- och konto eller om det finns flera källdatorer och konton kontrollera om de har något i gemensamma (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Det finns fall där ett anpassat program som används sällan, autentiseras med hjälp av ett chiffer med lägre kryptering. Kontrollera om det finns några anpassade appar på källdatorn. I så, fall är troligen en godartad sann positiv händelse och kan förhindras.
+  
+  
 
 3.  Overpass-the-Hash – i excel-kalkylblad, gå till fliken nätverk aktivitet. Du ser att relevanta nedgraderat fältet är **krypterade tidsstämpel krypteringstyp** och **stöds krypteringstyper som källa datorn** innehåller starkare krypteringsmetoder.
 
@@ -197,7 +199,8 @@ säkerhetsprincip.
    1.   Fanns där alla nyligen (inom de senaste timmarna) ändringar på den högsta livstiden för inställningen för användar-biljett i en Grupprincip? Sök efter det specifika värdet och se om det är lägre än den tid som biljetten användes för. Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
    2.   Är Azure ATP-sensorn som ingår i den här aviseringen en virtuell dator? Om Ja, det nyligen återupptas från ett sparat tillstånd? Om Ja, stänger du aviseringen.
    3.   Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
-- **Icke-befintligt konto**
+
+- **Icke-befintligt konto** (förhandsversion)
    1.   Ställa följande frågor:
          - Är användaren är en domänanvändare som är kända och giltig? Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
          - Har du nyligen har lagts till? Om Ja, stänga aviseringen, ändringen kanske inte har synkroniserats ännu.

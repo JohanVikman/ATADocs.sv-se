@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f533d835c9129dd56db5ac6e0ef2cca4b33cc043
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800716"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064091"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+## <a name="azure-atp-release-240"></a>Azure ATP-versionen 2,40
+
+Gavs ut den 15 juli 2018
+
+- Pass-the-ticket-identifiering nu innehåller ett bevis avsnitt på sidan aviseringsinformation. Detta ger ytterligare information för att undersöka aviseringen.
+
+- Användaren åtkomstkontroll flaggor som finns i en användares profil under katalogdata, innehåller nu en förklaring så att du bättre kan förstå vilka attribut som är på och som är inaktiverade.  
 
 ## <a name="azure-atp-release-239"></a>Azure ATP-versionen 2,39
 
