@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 089481d393acd0c18ad098d22a63bc521946b4e3
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064125"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202089"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -468,6 +468,72 @@ I den här identifieringen en avisering utlöses när många autentiseringsfel m
 **Reparation**
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Misstänkt befordran av domänkontrollant (möjlig DCShadow attack)
+
+**Beskrivning**
+
+En attack med domain controller shadow (DCShadow) är en attack som utformats för att ändra directory-objekt med skadlig replikering. Angreppet kan utföras från en valfri dator genom att skapa en falsk domänkontrollant med hjälp av en replikeringsprocess.
+ 
+DCShadow använder RPC och LDAP till:
+1. Registrera datorkontot som en domänkontrollant (med administratörsrättigheter i domänen), och
+2. Utför replikering (med beviljade replikering rättigheter) via DRSUAPI och skicka ändringar till katalogobjekt.
+ 
+I den här identifieringen utlöses en avisering när en dator i nätverket försöker registrera dig som en falsk-domänkontrollant. 
+
+**Undersökning**
+ 
+1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderade domänkontrollant som hade problem med replikering. Om Ja, **Stäng** den misstänkta aktiviteten.
+2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och undanta** den misstänkta aktiviteten.
+3. Klicka på källdatorn eller konto för att gå till dess profilsida. Kontrollera vad som hände vid tidpunkten för replikering, söker efter ovanliga aktiviteter, till exempel: vem som har loggat in, till vilka resurser och vad som är datorns operativsystem?
+   1. Är alla användare som har loggats i datorn ska vara inloggad i den? Vad är sina privilegier? De har behörighet att uppgradera en servern till domänkontrollant? (är de Domänadministratörer)?
+   2. Användare ska få åtkomst till dessa resurser?
+   3. Datorn som kör Operativsystemet Windows Server (eller Windows-/ Linux)? En icke-server-dator är inte avsedd för att replikera data.
+Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP.
+
+4. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser, men om den här avisering recurrs måste du aktivera den här granskningen på relevanta domänkontrollanten för vidare studier.
+
+**Åtgärda**
+
+Kontrollera vem i din organisation har följande behörigheter: 
+- Replikera katalogändringar 
+- Replikera alla katalogändringar 
+ 
+ 
+Mer information finns i [bevilja Active Directory Domain Services-behörigheter för profilsynkronisering i SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Du kan utnyttja [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Misstänkt replikeringsbegäran (möjlig DCShadow attack)
+
+**Beskrivning** 
+
+Active Directory-replikering är en process som synkroniseras ändringar som görs på en domänkontrollant med andra domänkontrollanter. Med tillräcklig behörighet kan kan angripare beviljas rättigheter till deras datorkontot, så att de kan personifiera en domänkontrollant. De strävar efter att initiera en skadlig replikeringsbegäran så att de kan ändra Active Directory-objekt på en äkta domänkontrollanten som skulle kunna angriparna beständighet i domänen.
+I den här identifieringen utlöses en avisering när en misstänkt replikeringsbegäran genereras mot en äkta domänkontrollant som skyddas av Azure ATP. Beteendet är en indikation på tekniker som används i domain controller shadow attacker.
+
+**Undersökning** 
+ 
+1. Är datorn i fråga en domänkontrollant? Till exempel en nyligen uppgraderade domänkontrollant som hade problem med replikering. Om Ja, **Stäng** den misstänkta aktiviteten.
+2. Datorn i fråga ska vara replikering av data från Active Directory? Till exempel Azure AD Connect. Om Ja, **Stäng och undanta** den misstänkta aktiviteten.
+3. Klicka på källdatorn för att gå till dess profilsida. Kontrollera vad som hände **ungefär samma tidpunkt som** av replikering, söker efter ovanliga aktiviteter, till exempel: vem som har loggat in, vilka resurser som användes och vad som är datorns operativsystem?
+
+   1.  Är alla användare som har loggats i datorn ska vara inloggad i den? Vad är sina privilegier? Har de behörighet så här använder du replikeringar (är de Domänadministratörer)?
+   2.  Användare ska få åtkomst till dessa resurser?
+   3. Datorn som kör Operativsystemet Windows Server (eller Windows-/ Linux)? En icke-server-dator är inte avsedd för att replikera data.
+Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP.
+1. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser, men om den här avisering recurrs måste du aktivera den här granskningen på relevanta domänkontrollanten för vidare studier.
+
+**Reparation**
+
+Kontrollera vem i din organisation har följande behörigheter: 
+- Replikera katalogändringar 
+- Replikera alla katalogändringar 
+
+Om du vill göra detta måste du använda [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
+
 
 ## <a name="suspicious-service-creation"></a>Misstänkt skapande av tjänst
 

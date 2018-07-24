@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 7/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 032dde1ccbbfe0b2585c96410d4e19a799d8133a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064091"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202157"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+
+## <a name="azure-atp-release-241"></a>Azure ATP-versionen 2.41
+
+Publicerad 22 juli 2018
+
+- **Support för Azure ATP-flera skogar distribueras gradvis (förhandsversion)** <br> Azure ATP har nu stöd för organisationer med flera skogar där du kan övervakaraktivitet och profilanvändare i skogar. Den här nya funktionen kan du:
+
+  - Visa och undersöka aktiviteter som utförs av användare i flera skogar från en enda glasruta.
+  - Förbättrar identifiering och minskar antalet falska positiva identifieringar genom att tillhandahålla avancerade Active Directory-integrering och konto-lösning.
+  - Få bättre övervakning av aviseringar och rapportering för cross-org täckning.
+
+
+-   **Nya identifieringar: DCShadow**<br>Två nya identifieringar har lagts till för att skydda mot attacker för domain controller shadow (DCShadow):
+
+    -   Misstänkt befordran av domänkontrollant (möjlig DCShadow-attack) – den här identifieringen hjälper dig att identifiera attacker där en dator för att personifiera en domänkontrollant och sedan försöker använda replikering för att sprida ändringarna till andra domänkontrollanter i domänen.
+
+    -   Misstänkt-replikeringsbegäran (möjlig DCShadow-attack) – den här identifieringen som hjälper dig att skydda mot attacker som försöker utföra befordran av domänkontrollanter för datorer som inte är domänkontrollanter för att kunna ändra katalogobjekt.
+
+-   **Förbättrad information för nedgradering av kryptering**<br>Kryptering nedgradering identifiering nu ger mer information om vilken typ av attack upptäcktes: overpass-the-hash och gyllene biljett dyrken. Dessutom kan har de här aviseringarna aggregerats om du vill aktivera enklare undersökning.
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem. 
+
+
 
 ## <a name="azure-atp-release-240"></a>Azure ATP-versionen 2,40
 

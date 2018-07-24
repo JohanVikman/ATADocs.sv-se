@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098203"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202140"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -44,7 +44,7 @@ Möjlighet att hantera flera Active Directory-skogar gör följande:
 Azure ATP-sensorer fråga för att identifiera aktiviteter mellan skogar, domänkontrollanter i fjärranslutna skogar för att skapa profiler för alla entiteter som berörs, inklusive användare och datorer från fjärranslutna skogar. 
 
 > [!NOTE]
-> - Skogen som Azure ATP-sensorer är installerade måste vara betrott av alla andra skogar i ordning för att detta ska fungera.
+> - Azure ATP-sensorer kan installeras på alla skogar (om det finns ett minsta enkelriktat förtroende).
 > - Användaren som du konfigurerar i Azure ATP-konsolen under **katalogtjänster** måste vara betrott i de andra skogarna.
 
 
