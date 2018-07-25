@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7ef73907b224758aabde1db5dd4f6060b6d244a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202055"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227146"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -64,6 +64,7 @@ När Azure ATP är igång, kommer du att kunna se misstänkta aktiviteter som id
 ## <a name="security-best-practices"></a>Rekommenderade säkerhetsmetoder
 
 - [Azure ATP vanliga frågor och svar](atp-technical-faq.md) -den här artikeln innehåller en lista över vanliga frågor och svar om Azure ATP och ger insikt och svar. 
+
 ## <a name="community-resources"></a>Gruppresurser
 
 Blogg: [Azure ATP-bloggen](https://aka.ms/aatpblog)

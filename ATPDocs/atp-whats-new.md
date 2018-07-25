@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 032dde1ccbbfe0b2585c96410d4e19a799d8133a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202157"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227231"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -68,7 +68,7 @@ Publicerad den 5 juli 2018
 
 Gavs ut den 1 juli 2018
 
-- Den här versionen innehåller korrigeringar och förbättringar för flera problem samt förbättringar i Azure ATP-portalen. 
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem samt förbättringar i Azure ATP-portalen.
 
 ## <a name="azure-atp-release-237"></a>Azure ATP-versionen 2.37
 
