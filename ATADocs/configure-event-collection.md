@@ -62,7 +62,7 @@ När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare*
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, uppdatera = 10* () Till exempel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, uppdatera = 10)
+    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,uppdatera=10*(Till exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,uppdatera=10)
  
    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
    
