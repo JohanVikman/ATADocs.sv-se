@@ -13,18 +13,18 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 07/30/2018
 ms.locfileid: "30010031"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA-kapacitetsplanering
-Den här artikeln hjälper dig att avgöra hur många ATA-servrar behövs för att övervaka nätverket. Det hjälper dig att ta reda på hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapacitet för ATA Center och ATA-gatewayer.
+Den här artikeln hjälper dig att avgöra hur många ATA-servrar behövs för att övervaka ditt nätverk. Det hjälper dig att ta reda på hur många ATA-gatewayer och/eller ATA Lightweight-gatewayer du behöver samt serverkapaciteten för ATA Center och ATA-gatewayer.
 
 > [!NOTE] 
 > ATA Center kan distribueras hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
@@ -42,7 +42,7 @@ Det rekommenderade och enklaste sättet att avgöra kapaciteten för ATA-distrib
 
 
 > [!NOTE]
-> Eftersom olika miljöer variera och har flera nätverk för särskilda och oväntat trafikmönster när du först distribuera ATA och kör storleksverktyget, kan du behöva justera och finjustera din distribution för kapacitet.
+> Eftersom olika miljöer kan variera och har flera trafikmönster för särskilda och oväntat nätverk, när du först distribuera ATA och kör storleksverktyget, kan du behöva justera och finjustera din distribution för kapacitet.
 
 
 Om du av någon anledning inte kan använda ATA-storleksverktyget samlar du manuellt in informationen om paket/sek från alla dina domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
@@ -50,7 +50,7 @@ I följande avsnitt finns anvisningar om hur du samlar in information om paket/s
 
 
 > [!NOTE]
-> Eftersom olika miljöer variera och har flera nätverk för särskilda och oväntat trafikmönster när du först distribuera ATA och kör storleksverktyget, kan du behöva justera och finjustera din distribution för kapacitet.
+> Eftersom olika miljöer kan variera och har flera trafikmönster för särskilda och oväntat nätverk, när du först distribuera ATA och kör storleksverktyget, kan du behöva justera och finjustera din distribution för kapacitet.
 
 
 ### <a name="ata-center-sizing"></a>Storlek för ATA Center
@@ -70,8 +70,8 @@ ATA Center kräver minst 30 dagars data enligt rekommendation för analys av anv
 
 &#42;&#42;Genomsnittligt antal (högsta antal)
 > [!NOTE]
-> -   ATA Center kan hantera sammanlagt högst 1 miljon paket per sekund från alla övervakade domänkontrollanter. I vissa miljöer med kan samma ATA Center hantera övergripande trafik som är högre än 1M. Kontakta askcesec@microsoft.com för hjälp med den här typen av miljöer.
-> -   Om det lediga utrymmet når minst 20% eller 200 GB tas den äldsta Datasamlingen bort. Om det inte är möjligt att minska insamling av data till den här nivån har loggas en avisering.  ATA ska fortsätta att fungera tills tröskelvärdet 5% eller 50 GB ledigt har uppnåtts.  Nu ATA slutar att fylla i databasen och en ytterligare varning utfärdas.
+> -   ATA Center kan hantera sammanlagt högst 1 miljon paket per sekund från alla övervakade domänkontrollanter. I vissa miljöer kan samma ATA Center hantera övergripande trafik som är högre än 1 miljon. Kontakta askcesec@microsoft.com för hjälp med den här typen av miljöer.
+> -   Om det lediga utrymmet når minst 20% eller 200 GB, den äldsta Datasamlingen har tagits bort. Om det inte är möjligt att minska insamling av data till den här nivån har loggas en varning.  ATA ska fortsätta att fungera tills tröskelvärdet på 5% eller 50 GB ledigt har nåtts.  Nu kan ATA slutar att fylla i databasen och en ytterligare avisering kommer att utfärdas.
 > - Det går att distribuera ATA Center hos valfri IaaS-leverantör så länge prestandakraven som beskrivs i den här artikeln uppfylls.
 > -   Lagringssvarstiden för läs- och skrivaktiviteter bör vara under 10 ms.
 > -   Förhållandet mellan läs- och skrivaktiviteter är cirka 1:3 under 100 000 paket per sekund och 1:6 över 100 000 paket per sekund.
@@ -129,7 +129,7 @@ En ATA Lightweight Gateway kan stödja övervakning av en domänkontrollant base
 > -   Domänkontrollantens prestanda påverkas inte om den inte har de resurser som krävs av ATA Lightweight Gateway, men ATA Lightweight-gatewayen kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Lightweight Gateway på **Höga prestanda**.
-> -   Minst 5 GB utrymme som krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
+> -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Storlek på ATA-gateway
@@ -164,12 +164,12 @@ Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribue
 > [!NOTE] 
 > -   Dynamiskt minne stöds inte.
 > -   För bästa prestanda ställer du in **Energialternativ** för ATA Gateway på **Höga prestanda**.
-> -   Minst 5 GB utrymme som krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
+> -   Minst 5 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för ATA-binärfiler [ATA-loggarna](troubleshooting-ata-using-logs.md), och [Prestandaloggar](troubleshooting-ata-using-perf-counters.md).
 
 
 
 ## <a name="related-videos"></a>Relaterade videor
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Se även
