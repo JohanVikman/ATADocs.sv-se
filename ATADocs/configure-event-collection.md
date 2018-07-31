@@ -14,13 +14,13 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 07/30/2018
 ms.locfileid: "30010252"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -30,13 +30,13 @@ ms.locfileid: "30010252"
 > För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
 
 
-För att förbättra identifieringsfunktionerna behöver ATA Windows följande händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller om ATA Lightweight Gateway inte har distribuerats, den kan vidarebefordras till ATA Gateway i ett av två sätt, genom att konfigurera ATA Gateway så att den lyssnar efter SIEM-händelser eller genom att konfigurera Windows-händelse Vidarebefordran.
+För att förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt genom att konfigurera ATA-Gateway för att lyssna efter SIEM-händelser eller genom att konfigurera Windows-händelse Vidarebefordran.
 
 
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>WEF-konfiguration för ATA-gatewayar med portspegling
 
-När du har konfigurerat portspegling från domänkontrollanterna till ATA Gateway, följer du följande instruktioner för att konfigurera vidarebefordran av Windows-händelse med källan initierade konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
+När du har konfigurerat portspegling från domänkontrollanterna till ATA Gateway följer du instruktionerna för att konfigurera vidarebefordran av Windows-händelse med Källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
 
 **Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp** 
 
@@ -46,7 +46,7 @@ I det här scenariot förutsätter att ATA-gatewayen är medlem i domänen.
 2.  Välj **medlemmar**.
 4.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
 
-När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare** och starta om domänkontrollanterna för att ändringarna ska börja gälla.
+När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** och starta om domänkontrollanterna för att ändringen ska börja gälla.
 
 **Steg 2: Skapa en princip på domänkontrollanterna för att ställa in inställningen Konfigurera målprenumerationshanterare.** 
 > [!Note] 
@@ -58,7 +58,7 @@ När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare*
 
  ![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
 
-4.  Dubbelklicka på **konfigurera mål prenumeration Manager**.
+4.  Dubbelklicka på **konfigurera målprenumerationshanterare**.
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
@@ -76,7 +76,7 @@ När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare*
 3.  Högerklicka på **prenumerationer** och välj **skapa prenumeration**. 
 
    1.   Ange namn och beskrivning för prenumerationen. 
-   2.   För **mål loggen**, bekräftar du att **vidarebefordrade händelser** är markerad. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
+   2.   För **Målloggen**, bekräftar du att **vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
    3.   Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
         1.  Klicka på **Lägg till domändator**.
         2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
@@ -88,15 +88,15 @@ När du lägger till den **nätverkstjänsten** till den **Händelseloggläsare*
    4.   Klicka på **Välj händelser**.
 
         1. Klicka på **Av logg** och välj **Säkerhet**.
-        2. Skriv händelsenumret i fältet **Includes/Excludes Event ID** (Med/utan händelse-ID) och klicka på **OK**. Skriv till exempel 4776, som i följande exempel.
+        2. Skriv händelsenumret i fältet **Includes/Excludes Event ID** (Med/utan händelse-ID) och klicka på **OK**. Skriv exempelvis 4776, som i följande exempel.
 
  ![Frågefilterbild](media/wef 4 query filter.png)
 
-   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det uppstår några problem med status. 
+   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det finns några problem med statusen. 
    6.   Efter några minuter kontrollerar du att de händelser som du har konfigurerat för vidarebefordran visas i Vidarebefordrade händelser på ATA-gatewayen.
 
 
-Mer information finns: [konfigurera datorerna att vidarebefordra och samla händelser](https://technet.microsoft.com/library/cc748890)
+Mer information finns i: [konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Se även
 - [Installera ATA](install-ata-step1.md)
