@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227180"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335885"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -101,7 +101,7 @@ Det finns tre identifieringstyper:
 
 **Undersökning**
 
-Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ovanstående tre identifieringstyper hanterar du med. Undersökning först kontrollerar du beskrivningen av aviseringen för att se vilka av de ovanstående tre identifieringstyper hanterar du med. För ytterligare information, hämta Excel-kalkylblad.
+Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ovanstående tre identifieringstyper hanterar du med. För ytterligare information, hämta Excel-kalkylblad.
 
 1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key har påverkat domänkontrollanterna med hjälp av [genomsökningsverktyget som utvecklats av Azure ATP-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Om skannern hittar skadlig kod på 1 eller flera av dina domänkontrollanter, är det en sann positiv händelse.
 
@@ -109,9 +109,9 @@ Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ova
 
   1. Kontrollera resursen som används av dessa biljetter, om det finns en resurs som de kommer alla åt, verifiera den, se till att det är en giltig resurs som de ska komma åt. Kontrollera också om målresurs stöder stark krypteringsmetoder. Du kan kontrollera detta i Active Directory genom att markera det attributet msDS-SupportedEncryptionTypes-namn, resurs-tjänstkontots.
   
-  2. Kontrollera käll- och konto eller om det finns flera källdatorer och konton kontrollera om de har något i gemensamma (till exempel alla som marknadsföring personal använder en viss app som gör att aviseringen ska utlösas). Det finns fall där ett anpassat program som används sällan, autentiseras med hjälp av ett chiffer med lägre kryptering. Kontrollera om det finns några anpassade appar på källdatorn. I så, fall är troligen en godartad sann positiv händelse och kan förhindras.
+  2. Kontrollera käll- och konto eller om det finns flera källdatorer och konton kontrollera om de har något gemensamt. Till exempel använder alla personalen marknadsföring en viss app som gör att aviseringen ska utlösas. Det finns fall där ett anpassat program som används sällan, autentiseras med hjälp av ett chiffer med lägre kryptering. Kontrollera om det finns några anpassade appar på källdatorn. I så, fall är troligen en godartad sann positiv händelse och kan förhindras.
   
-  
+
 
 3.  Overpass-the-Hash – i excel-kalkylblad, gå till fliken nätverk aktivitet. Du ser att relevanta nedgraderat fältet är **krypterade tidsstämpel krypteringstyp** och **stöds krypteringstyper som källa datorn** innehåller starkare krypteringsmetoder.
 
@@ -120,7 +120,7 @@ Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ova
 
 **Reparation**
 
-1.  Stommen Key – ta bort den skadliga koden. Mer information finns i [Dyrken analys av skadlig kod](https://www.secureworks.com/research/skeleton-key-malware-analysis) av SecureWorks.
+1.  Stommen Key – ta bort den skadliga koden. Mer information finns i [Dyrken analys av skadlig kod](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Gyllene biljett – Följ instruktionerna för den [Golden Ticket](#golden-ticket) misstänkta aktiviteter.   
     Dessutom eftersom skapar en Golden Ticket kräver administratörsrättigheter i domänen, implementera [skicka hash-rekommendationer](http://aka.ms/PtH).

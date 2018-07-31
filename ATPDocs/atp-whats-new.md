@@ -2,10 +2,10 @@
 title: Vad är nytt i Azure ATP | Microsoft Docs
 description: Beskriver de senaste versionerna av Azure ATP och innehåller information om nyheter i varje version.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/21/2018
+ms.date: 7/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: ebdae7617dd550631186ab87cba922758649fd45
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227231"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335987"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+## <a name="azure-atp-release-242"></a>Azure ATP-versionen 2.42
+
+Gavs ut den 29 juli 2018
+
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem. 
 
 
 ## <a name="azure-atp-release-241"></a>Azure ATP-versionen 2.41

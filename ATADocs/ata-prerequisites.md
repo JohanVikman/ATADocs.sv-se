@@ -2,10 +2,10 @@
 title: Krav för Advanced Threat Analytics | Microsoft Docs
 description: Beskriver kraven för en lyckad distribution av ATA i din miljö
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233012"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335919"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -129,7 +129,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 
 ### <a name="certificates"></a>Certifikat
 
-För att underlätta installationen av ATA kan du installera självsignerade certifikat under installationen. Efter distributionen bör du ersätta de självsignerade certifikaten med ett certifikat från en intern certifikatutfärdare som ska användas av ATA Center.
+För att installera och distribuera ATA snabbare, kan du installera självsignerade certifikat under installationen. Om du har valt att använda självsignerade certifikat, efter den första distributionen bör du ersätta självsignerade certifikat med certifikat från en intern certifikatutfärdare som ska användas av ATA Center.
 
 
 Kontrollera att ATA Center och ATA-Gatewayerna har åtkomst till CRL-distributionsplatsen. Om de inte har Internetåtkomst följer [proceduren för att importera en CRL manuellt](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), och ser till att installera den alla CRL-distributionsplatsen pekar för hela kedjan.
@@ -139,6 +139,7 @@ Certifikatet måste ha:
 -   En providertyp av kryptografiprovider (CSP) eller Nyckellagringsprovider (KSP)
 -   En offentlig nyckellängd på 2 048 bitar
 -   Ange ett värde för KeyEncipherment och ServerAuthentication för användning flaggor
+-   KeySpec (KeyNumber) värdet för ”KeyExchange-” (vid\_KEYEXCHANGE). Observera att värdet ”Signature” (vid\_SIGNATUR) stöds inte. 
 
 Du kan till exempel använda standarden **webbservern** eller **datorn** mallar.
 
