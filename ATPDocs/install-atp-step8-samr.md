@@ -2,10 +2,10 @@
 title: Konfigurera SAM-R för att aktivera laterala sökvägen i Azure ATP | Microsoft Docs
 description: Beskriver hur du konfigurerar SAM-R för att aktivera laterala sökvägen i Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/31/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a529c9751fc993ec0913a54772d46161f39199f6
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: 955051a93b017af2f1d97bccf32735e9ceaaf19f
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098176"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567856"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -30,9 +30,9 @@ ms.locfileid: "39098176"
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>Steg 8. Konfigurera SAM-R obligatoriska behörigheter
 
-Den [lateral rörelsesökväg](use-case-lateral-movement-path.md) identifieringen baseras på frågor som identifierar lokala administratörer på specifika datorer. Dessa frågor utförs med SAM-R-protokollet via Azure ATP-Service-kontot som skapades i [steg 2. Anslut till AD](install-atp-step2.md).
+Den [lateral rörelsesökväg](use-case-lateral-movement-path.md) identifieringen baseras på frågor som identifierar lokala administratörer på specifika datorer. Dessa frågor utförs med SAM-R-protokollet, med hjälp av tjänsten Azure ATP-konto som skapats i [steg 2. Anslut till AD](install-atp-step2.md).
  
-Se till att Windows-klienter och servrar tillåta Azure ATP-konto för att utföra åtgärden SAM-R en ändring av **Grupprincip** måste göras för att lägga till kontot Azure ATP-tjänsten utöver de Konfigurera konton som visas i  **Nätverksåtkomst** princip.
+Se till att Windows-klienter och servrar tillåta din Azure ATP-konto för att utföra SAM-R, en ändring av **Grupprincip** måste göras för att lägga till kontot Azure ATP-tjänsten utöver de Konfigurera konton som visas i den  **Nätverksåtkomst** princip.
 
 1. Leta upp principen:
 
@@ -45,9 +45,12 @@ Se till att Windows-klienter och servrar tillåta Azure ATP-konto för att utfö
  
   ![Lägga till tjänsten](./media/samr-add-service.png)
 
-3. Den **AATP Service** (Azure ATP tjänsten skapades under installation) har nu rätt behörighet för att utföra SAMR i miljön.
+3. **AATP Service** (Azure ATP tjänsten skapades under installation) har nu de behörigheter som krävs för att utföra SAM-R i miljön.
 
-Mer information om SAM-R och den här grupprincipen, finns det [Nätverksåtkomst: begränsa klienter som har tillåtelse att göra fjärranrop till SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Kontrollera att miljön förblir säkert, utan att påverka dina programkompatibilitet genom att aktivera och verifiera föreslagna ändringar i granskningsläge innan de verkställer nya principer.
+
+Mer information om SAM-R och den här grupprincipen finns i [Nätverksåtkomst: begränsa klienter som har tillåtelse att göra fjärranrop till SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]

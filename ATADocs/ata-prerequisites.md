@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335919"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567669"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -49,7 +49,7 @@ ATA-systemet fungerar på Active Directory-skogens gränser och stöder skogens 
 ![Diagram över ATA-arkitektur](media/ATA-architecture-topology.jpg)
 
 ## <a name="before-you-start"></a>Innan du börjar
-Det här avsnittet innehåller information som du bör samla in och konton och nätverksentiteter som du bör ha innan du börjar installera ATA.
+Det här avsnittet innehåller information som du bör samla in samt konton och nätverksentiteter som du bör ha innan du börjar installera ATA.
 
 
 -   Användarkonto och lösenord med läsbehörighet till alla objekt i de övervakade domänerna.
@@ -57,7 +57,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
--   Installera inte Microsoft Message Analyzer på en ATA Gateway eller Lightweight Gateway. Drivrutinen för Analysverktyg för meddelanden är inte kompatibel med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Om inte gatewayen slutar att fånga in trafik. Om du kör Wireshark på en ATA Lightweight Gateway stör inte ATA Lightweight Gateway.
+-   Installera inte Microsoft Message Analyzer på en ATA Gateway eller Lightweight Gateway. Message Analyzer drivrutinen konflikter med drivrutinerna för ATA Gateway och ATA Lightweight Gateway. Om du kör Wireshark i ATA Gateway måste du starta om Microsoft Advanced Threat Analytics Gateway-tjänsten när du har stoppat Wireshark-insamlingen. Om inte gatewayen slutar att fånga in trafik. Om du kör Wireshark på en ATA Lightweight Gateway stör inte ATA Lightweight Gateway.
 
 -    Rekommenderat: Ska användaren ha läsbehörighet för behållaren borttagna objekt. Detta gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i den **ändring av behörigheter i en behållare för borttagna objekt** i avsnittet den [visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) artikeln.
 
@@ -117,7 +117,7 @@ I följande tabell visas de portar som minst måste öppnas för att ATA Center 
 |**HTTPS**|TCP|443|Företagsnätverk och ATA Gateway|Inkommande|
 |**SMTP** (valfritt)|TCP|25|SMTP-server|Utgående|
 |**SMTPS** (valfritt)|TCP|465|SMTP-server|Utgående|
-|**Syslog** (valfritt)|TCP|514|Syslog-server|Utgående|
+|**Syslog** (valfritt)|TCP/UPS/TLS (kan konfigureras)|514 (standard)|Syslog-server|Utgående|
 |**LDAP**|TCP och UDP|389|Domänkontrollanter|Utgående|
 |**LDAPS** (valfritt)|TCP|636|Domänkontrollanter|Utgående|
 |**DNS**|TCP och UDP|53|DNS-servrar|Utgående|

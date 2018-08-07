@@ -2,10 +2,10 @@
 title: Azure Advanced Threat Protection-arkitektur | Microsoft Docs
 description: Här beskrivs arkitekturen för Azure Advanced Threat Analytics (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799200"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567652"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 
 # <a name="azure-atp-architecture"></a>Azure ATP-arkitektur
-Azure Advanced Threat Protection-arkitekturen beskrivs i det här diagrammet:
+Azure Advanced Threat Protection-arkitektur:
 
 ![Topologidiagram för Azure ATP-arkitektur](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Tänk på följande när du bestämmer hur många Azure ATP-arbetsytor du distri
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP-sensorn och Azure ATP fristående sensor
 
-Den **Azure ATP-sensorn** och **fristående Azure ATP-sensorn** har båda samma grundläggande funktioner:
+Den **Azure ATP-sensorn** och **fristående Azure ATP-sensorn** har samma grundfunktioner:
 
 -   Samla in och inspektera nätverkstrafik på domänkontrollanter. Det här är portspeglad trafik för Azure ATP fristående sensorer och lokal trafik på domänkontrollanten i Azure ATP-sensorer. 
 
 -   Ta emot Windows-händelser direkt från domänkontrollanterna (för ATP sensorer) eller från SIEM- eller Syslog-servrar (för ATP fristående sensorer)
 
--  Ta emot RADIUS-redovisningsinformation från VPN-leverantören
+-   Ta emot RADIUS-redovisningsinformation från VPN-leverantören
 
 -   Hämta information om användare och datorer från Active Directory-domänen
 
@@ -176,7 +176,7 @@ Om Active Directory behöver mer bearbetningskraft, minskas kvoten som krävs av
 
 
 ## <a name="your-network-components"></a>Dina nätverkskomponenter
-Se till att kontrollera att följande komponenter har ställts in för att fungera med Azure ATP.
+Kontrollera att följande komponenter har ställts in, för att fungera med Azure ATP.
 
 ### <a name="port-mirroring"></a>Portspegling
 Om du använder Azure ATP fristående sensorer kan behöva du konfigurera portspegling för de domänkontrollanter som övervakas och ange fristående Azure ATP-sensorn som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. Azure ATP fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringar är mindre effektiva.
