@@ -43,7 +43,8 @@
 ## [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
 ## [Guide för misstänkt aktivitet](suspicious-activity-guide.md)
 ## [Undersöka laterala förflyttningssökvägar med Azure ATP](use-case-lateral-movement-path.md)
-## [Undersöka entiteter](entity-profiles.md)
+## [Undersöka entiteter](investigate-entity.md)
+## [Förstå entitetsprofiler](entity-profiles.md)
 # Felsökning
 ## [Felsök vanliga problem](troubleshooting-atp-known-issues.md)
 ## [Support och information](atp-support.md)
