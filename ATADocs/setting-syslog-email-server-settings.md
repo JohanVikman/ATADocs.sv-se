@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a77e7e86d635d80ee09338843c42e003220133a0
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f415fabe71512a5f9948a824d04e7bfece086ba4
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010167"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585043"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -43,6 +43,7 @@ ATA kan meddela dig när det identifierar en misstänkt aktivitet. Om ATA ska ku
     |SSL|Växla SSL om SMTP-servern kräver SSL. **Obs:** om du aktiverar SSL måste du också behöva ändra portnumret.|Standardvärdet är inaktiverat|
     |Autentisering|Aktivera om SMTP-servern kräver autentisering. **Obs:** om du aktiverar autentisering måste du ange ett användarnamn och lösenord för ett e-postkonto som har behörighet att ansluta till SMTP-servern.|Standardvärdet är inaktiverat|
     |Skicka från (krävs)|Ange en e-postadress som e-postmeddelandet ska skickas från.|Exempel:<br />ATA@contoso.com|
+    
     ![Bild för e-postserverinställningar i ATA](media/ata-email-server.png)
 
 ## <a name="provide-ata-with-your-syslog-server-settings"></a>Ange Syslog-serverinställningar för ATA

@@ -2,10 +2,10 @@
 title: Hur du undersöker användare och datorer med Azure ATP | Microsoft Docs
 description: Beskriver hur du undersöker misstänkta aktiviteter som utförs av användare, enheter, datorer eller enheter som använder Azure Advanced Threat Protection (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 32f5ab58ba9e17d36761ce5b99f4711d0e390ff7
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 722ef73fe2c039a567b4f3d807f97e4ede16dc67
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585228"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -34,7 +34,7 @@ Entitetsprofilen ger dig en omfattande entitet-sida som utformats för djupgåen
 
 Klicka på namnet på entiteten, till exempel ett användarnamn i tidslinjen för misstänkta aktiviteter för att komma åt en sida för entiteten. Du kan också se en mini version av entitetsprofilen på sidan misstänkt aktivitet genom att hovra över enhetens namn.
 
-Entitetsprofilen kan du visa enhetsaktiviteter, visa katalogdata och visa laterala rörelsebanor för entiteten. Mer information finns i [undersöka entitetsprofiler ](entity-profiles.md).
+Entitetsprofilen kan du visa enhetsaktiviteter, visa katalogdata och visa laterala rörelsebanor för entiteten. Mer information finns i [förstå entitetsprofiler ](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Kontrollera entitetstaggar
 
@@ -49,7 +49,7 @@ Azure ATP hämtar taggar från Active Directory för att ge dig ett enda gränss
 
 ## <a name="look-at-the-user-account-control-flags"></a>Titta på användare konto control flaggor
 
-Användare konto control flaggor som också importeras från Active Directory. Azure ATP innehåller 10 flaggor som gäller för undersökning: 
+Användare konto control flaggor som också importeras från Active Directory. Azure ATP entitet directory data omfattar 10 flaggor som gäller för undersökning: 
 - Lösenordet upphör aldrig att gälla
 - Betrodd för delegering
 - Smartkort krävs
@@ -61,7 +61,7 @@ Användare konto control flaggor som också importeras från Active Directory. A
 - Kerberos-förautentisering krävs inte
 - Kontot har inaktiverats 
 
-Azure ATP får du reda på om dessa flaggor är eller inaktivera i Azure Active Directory. Färgad ikoner visar att flaggan finns på i Active Directory. i exemplet nedan, endast **kontot har inaktiverats** finns på i Active Directory.
+Azure ATP får du reda på om dessa flaggor är eller inaktivera i Azure Active Directory. Färgade ikoner och motsvarande reglage anger status för varje flagga. I exemplet nedan, endast **lösenordet upphör aldrig att gälla** finns på i Active Directory.
 
  ![användare konto control flaggor](./media/user-access-flags.png)
 

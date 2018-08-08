@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: a6876de4f5cf293d58da08ab4e3a8443e76480f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30202280"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585077"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -49,14 +49,14 @@ Utför följande steg på Azure ATP-sensorn servern eller domänkontrollanten.
 > [!NOTE] 
 > Det går inte att installera direkt från zip-filen.
 
-2.  Kör **Azure ATP-sensorn setup.exe** och följ installationsguiden.
+3.  Kör **Azure ATP-sensorn setup.exe** och följ installationsguiden.
 
-3.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
+4.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
      ![Azure ATP fristående sensorn installationsspråk](media/sensor-install-language.png)
 
 
-4.  Installationsguiden kontrollerar automatiskt om servern är en domänkontrollant eller en dedikerad server. Om det är en domänkontrollant, Azure ATP-sensorn installeras, om det är en dedikerad server, fristående Azure ATP-sensorn installeras. 
+5.  Installationsguiden kontrollerar automatiskt om servern är en domänkontrollant eller en dedikerad server. Om det är en domänkontrollant, Azure ATP-sensorn installeras, om det är en dedikerad server, fristående Azure ATP-sensorn installeras. 
     
     För ett fristående Azure ATP-sensorn exempelvis visas följande skärm så att du vet att en fristående Azure ATP-sensorn är installerad på din dedikerade server:
     
@@ -67,7 +67,7 @@ Utför följande steg på Azure ATP-sensorn servern eller domänkontrollanten.
     > [!NOTE] 
     > Om domänkontrollanten eller dedikerad server inte uppfyller de lägsta maskinvarukraven för installation, får du en varning. Detta förhindrar inte att du klickar på **Nästa** och fortsätter med installationen. Det kan vara rätt alternativ för installation av Azure ATP i en liten labbtestmiljö där du inte behöver lika mycket utrymme för lagring av data. För produktionsmiljöer, rekommenderas att arbeta med Azure ATP [kapacitetsplanering](atp-capacity-planning.md) guide för att se till att dina domänkontrollanter eller dedikerade servrar uppfyller de nödvändiga kraven.
 
-4.  Under **Konfigurera sensorn**, ange installationssökvägen och åtkomstnyckel som du kopierade i föregående steg, baserat på miljön:
+6.  Under **Konfigurera sensorn**, ange installationssökvägen och åtkomstnyckel som du kopierade i föregående steg, baserat på miljön:
 
     ![Azure ATP fristående sensorn configuration bild](media/sensor-install-config.png)
 
@@ -75,7 +75,7 @@ Utför följande steg på Azure ATP-sensorn servern eller domänkontrollanten.
 
       - Åtkomstnyckel: Denna hämtas från arbetsytans portal i föregående steg.
     
-5. Klicka på **Installera**. Följande komponenter installeras och konfigureras under installationen av Azure ATP-sensorn:
+7. Klicka på **Installera**. Följande komponenter installeras och konfigureras under installationen av Azure ATP-sensorn:
 
     -   KB 3047154 (endast för Windows Server 2012 R2)
 
@@ -86,7 +86,7 @@ Utför följande steg på Azure ATP-sensorn servern eller domänkontrollanten.
     -   Azure ATP-sensorn-tjänsten och uppdateringstjänsten för Azure ATP-sensorn
     -   Microsoft Visual C++ 2013 Redistributable
 
-5.  När installationen är klar klickar du på **starta** att öppna webbläsaren och logga in på Azure ATP-arbetsyteportalen.
+8.  När installationen är klar klickar du på **starta** att öppna webbläsaren och logga in på Azure ATP-arbetsyteportalen.
 
 
 >[!div class="step-by-step"]

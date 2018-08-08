@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b620e5b6203d387de389cfb857c2dd6125239ed9
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010065"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585060"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -92,11 +92,12 @@ ATA Center tar emot parsad trafik från ATA Gateway och ATA Lightweight Gateway.
 |Databas|ATA använder MongoDB för lagring av alla data i systemet:<br /><br />– Nätverksaktiviteter<br />– Händelseaktiviteter<br />– Unika entiteter<br />– Misstänkta aktiviteter<br />– ATA-konfiguration|
 |Detektorer|Detektorerna använder maskininlärningsalgoritmer och deterministiska regler för att hitta misstänkta aktiviteter och onormalt användarbeteende i nätverket.|
 |ATA-konsolen|ATA-konsolen används för att konfigurera ATA och övervaka misstänkta aktiviteter som identifieras av ATA i nätverket. ATA-konsolen är inte beroende av ATA Center-tjänsten och körs även om tjänsten har stoppats, förutsatt att den kan kommunicera med databasen.|
+
 Tänk på följande när du bestämmer hur många ATA Center som ska distribueras i nätverket:
 
 -   Ett ATA Center kan övervaka en enda Active Directory-skog. Om du har fler än en Active Directory-skog behöver du minst ett ATA Center per Active Directory-skog.
 
--    I stora Active Directory-distributioner kanske inte ett enda ATA Center kan hantera all trafik på alla domänkontrollanter. I så fall krävs flera ATA Center. Antalet ATA Center bör avgöras genom [ATA-kapacitetsplanering](ata-capacity-planning.md).
+-    I stora Active Directory-distributioner kanske inte ett enda ATA Center kan hantera all trafik för alla domänkontrollanter. I så fall krävs flera ATA Center. Antalet ATA Center bör avgöras genom [ATA-kapacitetsplanering](ata-capacity-planning.md).
 
 ## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway och ATA Lightweight Gateway
 
@@ -135,15 +136,15 @@ Följande funktioner fungerar på olika sätt beroende på om du kör ATA Gatewa
 -   **Kandidat för domänsynkronisering**<br>
 Domänsynkroniseringsgateway ansvarar för att proaktivt synkronisera alla entiteter från en specifik Active Directory-domän (liknar mekanismen som används av själva domänkontrollanterna för replikering). En gateway väljs slumpmässigt från listan över kandidater för att fungera som domänsynkroniserare. <br><br>
 Om synkroniseraren är offline i mer än 30 minuter väljs en annan kandidat i stället. Om det finns någon domänsynkroniserare tillgänglig för en specifik domän, är ATA synkronisera entiteter och deras ändringar proaktivt men ATA kan reaktivt hämta nya entiteter när de hittas i övervakad trafik. 
-<br>Om det inte finns någon domänsynkroniserare, och du söker efter en entitet som inte har någon trafik relaterad till den, visas inga sökresultat.<br><br>
+<br>Om det finns någon domänsynkroniserare tillgänglig och du söker efter en entitet som inte har någon trafik relaterad till den, visas inga sökresultat.<br><br>
 Som standard är alla ATA-gatewayer synkroniseringskandidater.<br><br>
 Eftersom alla ATA Lightweight-gatewayer mer troligt distribueras på avdelningskontor och på små domänkontrollanter är de som standard inte synkroniseringskandidater.
 
 
 -   **Resursbegränsningar**<br>
-ATA Lightweight Gateway innehåller en övervakningskomponent som utvärderar den tillgängliga kapaciteten för beräknings- och minneskapaciteten på den domänkontrollant där den körs. Övervakningsprocessen körs var 10:e sekund och uppdaterar dynamiskt processor- och minnesanvändningskvoten på ATA Lightweight Gateway-processen för att se till att domänkontrollanten vid varje given tidpunkt har minst 15 % lediga beräknings- och minnesresurser.<br><br>
+ATA Lightweight Gateway innehåller en övervakningskomponent som utvärderar den tillgängliga beräknings- och minneskapaciteten på den domänkontrollant där den körs. Övervakningsprocessen körs var 10:e sekund och uppdaterar dynamiskt processor- och minnesanvändningskvoten på ATA Lightweight Gateway-processen för att se till att domänkontrollanten vid varje given tidpunkt har minst 15 % lediga beräknings- och minnesresurser.<br><br>
 Oavsett vad som händer på domänkontrollanten frigör den här processen alltid resurser för att se till att domänkontrollantens grundläggande funktioner inte påverkas.<br><br>
-Om detta orsakar ATA Lightweight Gateway får slut på resurser övervakas endast delar av trafiken och den övervakning aviseringen ”bort portspeglad nätverkstrafik” visas på hälsosidan.
+Om detta orsakar ATA Lightweight Gateway till slut på resurser övervakas endast delvis trafik och övervakning varning ”förlorad portspeglad nätverkstrafik” visas på hälsosidan.
 
 Följande tabell innehåller ett exempel på en domänkontrollant med tillräckligt med beräkningsresurser tillgängliga som möjliggör en större kvot än vad som krävs för närvarande, så att all trafik övervakas:
 
@@ -163,12 +164,12 @@ Om Active Directory behöver mer beräkning minskas kvoten som krävs av ATA Lig
 
 
 ## <a name="your-network-components"></a>Dina nätverkskomponenter
-Se till att kontrollera att följande komponenter har ställts in för att arbeta med ATA.
+Se till att kontrollera att följande komponenter har ställts in för att fungera med ATA.
 
 ### <a name="port-mirroring"></a>Portspegling
-Om du använder ATA-gatewayer behöver du konfigurera portspegling för de domänkontrollanter som övervakas och ange ATA Gateway som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. ATA fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringar är mindre effektiva.
+Om du använder ATA-gatewayer kan behöva du konfigurera portspegling för de domänkontrollanter som övervakas och ange ATA Gateway som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. ATA fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringar är mindre effektiva.
 
-Även om portspegling speglar all domänkontrollantstrafik till ATA Gateway är endast en liten andel av denna trafik som sedan skickas i komprimerat format till ATA Center för analys.
+Även om portspegling speglar all domänkontrollantstrafik till ATA Gateway är det bara en liten andel av denna trafik som sedan skickas, komprimerat format till ATA Center för analys.
 
 Domänkontrollanterna och ATA-gatewayerna kan vara fysiska eller virtuella, mer information finns i [Konfigurera portspegling](configure-port-mirroring.md).
 
@@ -178,10 +179,10 @@ Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force, Ändri
 
 -   Konfigurera ATA Gateway för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATA. ATA har stöd för ett antal SIEM-leverantörer. Mer information finns i [Konfigurera händelseinsamling](configure-event-collection.md).
 
--   Konfigurera vidarebefordran av Windows-händelser<br>Du kan också ATA kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelser 4776, 4732, 4733, 4728, 4729, 4756 och 4757 till ATA Gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. Mer information om vidarebefordran av Windows-händelser i ATA finns i [Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md#configuring-windows-event-forwarding). Detta gäller endast för fysisk ATA-gatewayer - inte till ATA Lightweight Gateway.
+-   Konfigurera vidarebefordran av Windows-händelser<br>Du kan också ATA kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 till din ATA-Gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. Mer information om vidarebefordran av Windows-händelser i ATA finns i [Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md#configuring-windows-event-forwarding). Detta gäller endast för fysisk ATA-gatewayer – inte ATA Lightweight Gateway.
 
 ## <a name="related-videos"></a>Relaterade videor
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Se även

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335885"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585245"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -101,7 +101,7 @@ Det finns tre identifieringstyper:
 
 **Undersökning**
 
-Först kontrollerar du beskrivningen av aviseringen, för att se vilka av de ovanstående tre identifieringstyper hanterar du med. För ytterligare information, hämta Excel-kalkylblad.
+Först kontrollerar du beskrivningen av aviseringen, för att se vilken av de tre typerna för identifiering av ovanstående du hanterar. För ytterligare information, hämta Excel-kalkylblad.
 
 1.  Skadlig Skeleton Key – du kan kontrollera om Skeleton Key har påverkat domänkontrollanterna med hjälp av [genomsökningsverktyget som utvecklats av Azure ATP-teamet](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Om skannern hittar skadlig kod på 1 eller flera av dina domänkontrollanter, är det en sann positiv händelse.
 
@@ -191,7 +191,7 @@ Pass the Ticket är en teknik för lateral förflyttning där stjäl angriparen 
 Angripare med administratörsrättigheter i domänen kan påverka den [KRBTGT-kontot](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). De kan använda KRBTGT-kontot för att skapa Kerberos biljettbeviljande biljetter (TGT) som tillhandahåller auktorisering till alla resurser och ange förfallodatum för biljett till någon godtycklig tidpunkt. Den här falska TGT kallas en ”goldentTicket” och gör att angripare kan tillskansa sig beständighet i nätverket.
 
 I den här identifieringen en avisering utlöses när en Kerberos-biljett beviljad biljett används under mer än den tillåtna tiden tillåts som anges i den [högsta livstid för användarbiljett](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), det här är en **tid avvikelseidentifiering**golden ticket-attack, eller som ett icke-befintligt konto är en **icke-befintligt konto** golden ticket-attack.
-säkerhetsprincip.
+
 
 **Undersökning**
 
@@ -275,21 +275,6 @@ Verifiera följande behörigheter:
 Mer information finns i [bevilja Active Directory Domain Services-behörigheter för profilsynkronisering i SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Du kan utnyttja [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Lösenord som exponerats i klartext rapport
-
-**Beskrivning**
-
-Vissa tjänster skickar autentiseringsuppgifter i klartext. Detta kan även inträffa för användarkonton. Angripare som övervakar nätverkstrafiken kan fånga upp och sedan återanvända dessa autentiseringsuppgifter för skadliga syften. 
-
-**Undersökning**
-
-Klicka på rapportsidan och ladda ned det lösenord som exponerats i klartext rapporten. Se vilka konton som exponerades i Excel-kalkylblad.
-Det är vanligtvis ett skript eller äldre program på källdatorerna som använder enkel LDAP-bindning.
-
-**Reparation**
-
-Kontrollera konfigurationen på källdatorerna och se till att du inte använder enkel LDAP-bindning. Du kan använda LDAP SALS eller LDAPS i stället för enkla LDAP-bindningar.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Behörighetseskalering med förfalskade auktoriseringsdata
 

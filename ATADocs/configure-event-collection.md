@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010252"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585096"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -56,15 +56,15 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
 2.  Från en kommandotolk, ange *gpedit.msc*.
 3.  Expandera **Datorkonfiguration > Administrativa mallar > Windows-komponenter > Vidarebefordran av händelse**
 
- ![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
+![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
 
 4.  Dubbelklicka på **konfigurera målprenumerationshanterare**.
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,uppdatera=10*(Till exempel: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,uppdatera=10)
+    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
+    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
    
     5.  Klicka på **OK**.
     6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
@@ -75,25 +75,25 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
 2.  Öppna **Loggboken**. 
 3.  Högerklicka på **prenumerationer** och välj **skapa prenumeration**. 
 
-   1.   Ange namn och beskrivning för prenumerationen. 
-   2.   För **Målloggen**, bekräftar du att **vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
-   3.   Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
+    1.  Ange namn och beskrivning för prenumerationen. 
+    2.  För **Målloggen**, bekräftar du att **vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
+    3.  Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
         1.  Klicka på **Lägg till domändator**.
         2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
-       
-        ![Loggboksbild](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Loggboksbild](media/wef3 event viewer.png)
+ 
+ 
         3.  Klicka på **OK**.
-   4.   Klicka på **Välj händelser**.
+     4. Klicka på **Välj händelser**.
 
         1. Klicka på **Av logg** och välj **Säkerhet**.
         2. Skriv händelsenumret i fältet **Includes/Excludes Event ID** (Med/utan händelse-ID) och klicka på **OK**. Skriv exempelvis 4776, som i följande exempel.
 
- ![Frågefilterbild](media/wef 4 query filter.png)
+    ![Frågefilterbild](media/wef 4 query filter.png)
 
-   5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det finns några problem med statusen. 
-   6.   Efter några minuter kontrollerar du att de händelser som du har konfigurerat för vidarebefordran visas i Vidarebefordrade händelser på ATA-gatewayen.
+    5.  Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det finns några problem med statusen. 
+    6.  Efter några minuter kontrollerar du att de händelser som du har konfigurerat för vidarebefordran visas i Vidarebefordrade händelser på ATA-gatewayen.
 
 
 Mer information finns i: [konfigurera datorerna att vidarebefordra och samla in händelser](https://technet.microsoft.com/library/cc748890)

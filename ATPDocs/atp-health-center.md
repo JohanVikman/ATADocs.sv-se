@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5fb4acaca989922ad894cee4a799378bb912643d
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567992"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585008"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -51,8 +51,8 @@ Du kan kontrollera din arbetsyta övergripande hälsa, klickar du på Health Cen
 -   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Om det finns en liknande avisering Azure ATP inte öppna den igen. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, du aviseras igen.
 
 -   **Öppna**: du kan återaktivera en stängd eller ignorerade problemet så att den visas öppen i tidslinjen igen.
-- 
-- **Ta bort**: från i tidslinjen för misstänkta aktiviteter du har också möjlighet att ta bort ett hälsoproblem. Om du tar bort en avisering tas bort från arbetsytan och du kan inte återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+
+-   **Ta bort**: från i tidslinjen för misstänkta aktiviteter du har också möjlighet att ta bort ett hälsoproblem. Om du tar bort en avisering tas bort från arbetsytan och du kan inte återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
 
 
 

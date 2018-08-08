@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 5fafa4e8e9644c870a92c1684fa5165ef68b31a7
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010031"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585114"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -155,6 +155,7 @@ Ha följande i åtanke när du avgör hur många ATA-gatewayer som ska distribue
 |10,000|3|12|
 |20,000|6|24|
 |50 000|16|48|
+
 &#42;Totalt genomsnittligt antal paket per sekund från alla domänkontrollanter som övervakas av den specifika ATA-gatewayen under den tid på dagen som är mest aktiv.
 
 &#42;Den totala mängden portspeglad trafik för domänkontrollanter får inte överskrida kapaciteten för avbildningsnätverkskortet på ATA-gatewayen.
