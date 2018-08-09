@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "29977581"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625616"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -30,7 +30,7 @@ Använd följande resurser för att du lär dig mer om, distribuera och stöd f�
 
 |Om du vill...|...Skicka detta:|
 |----|----|
-|I vår mest populära dokumentation|Läs de fem främsta sidorna:|- [Vad är Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Krav för Azure ATP](atp-prerequisites.md)<br>- [Azure ATP-arkitektur](atp-architecture.md)<br>- [Azure ATP-kapacitetsplanering](atp-capacity-planning.md)<br>- [Skapa en arbetsyta](install-atp-step1.md)|
+|I vår mest populära dokumentation|Läs de fem främsta sidorna:<br>- [Vad är Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Krav för Azure ATP](atp-prerequisites.md)<br>- [Azure ATP-arkitektur](atp-architecture.md)<br>- [Azure ATP-kapacitetsplanering](atp-capacity-planning.md)<br>- [Skapa en arbetsyta](install-atp-step1.md)|
 |Interagera med produktteamet och dina kolleger|Gå till den [Teknikcommunity för](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Avancerat skydd för Azure.|
 |Kontrollera prenumerationsinformationen och hämta en lista av vilka funktioner som stöds|Se [prenumerationsinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) och [funktionslistan](https://www.microsoft.com/cloud-platform/azure-information-protection-features) från webbplatsen Azure Advanced Threat Protection.|
 
