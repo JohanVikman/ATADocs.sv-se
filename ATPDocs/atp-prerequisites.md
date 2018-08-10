@@ -2,10 +2,10 @@
 title: Krav för Azure Advanced Threat Protection | Microsoft Docs
 description: Beskriver kraven för en lyckad distribution av Azure ATP i din miljö
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
-ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
+ms.openlocfilehash: 0a7cd9825f5b921b9dbe6cffe54e82d3249f10b7
+ms.sourcegitcommit: 583f2f144384a6a0cb9875d5f2b0fef7e7e3735d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827493"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723284"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -143,11 +143,11 @@ I följande tabell visas de portar som minst kräver fristående Azure ATP-senso
 |Netlogon (SMB/CIFS, SAM-R)|TCP och UDP|445|Alla enheter i nätverket|Utgående|
 |Windows Time|UDP|123|Domänkontrollanter|Utgående|
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
-|NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
+|NTLM över RPC|TCP|135|Alla enheter i nätverket|Båda|
+|NetBIOS|UDP|137|Alla enheter i nätverket|Båda|
 |Syslog (valfritt)|TCP/UDP|514, beroende på konfiguration|SIEM-server|Inkommande|
 |RADIUS|UDP|1813|RADIUS|Inkommande|
-|RDP|TCP|3389|Alla enheter i nätverket|Utgående|
+|TLS för RDP|TCP|3389|Alla enheter i nätverket|Båda|
 
 > [!NOTE]
 > - Använder användarkontot för Directory service, sensorn frågar slutpunkter i din organisation för lokala administratörer med SAM-R (nätverksinloggning) för att skapa den [laterala sökväg graph](use-case-lateral-movement-path.md). Mer information finns i [behörigheter som krävs för Konfigurera SAM-R](install-atp-step8-samr.md).
@@ -203,11 +203,11 @@ I följande tabell visas de portar som Azure ATP-sensorn kräver minst:
 |**Interna portar**|||||
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
 |NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|Netlogon (SMB/CIFS, SAM-R)|TCP/UDP|445|Alla enheter i nätverket|Utgående|
-|NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
+|Netlogon (SMB/CIFS, SAM-R)|TCP/UDP|445|Alla enheter i nätverket|Båda|
+|NetBIOS|UDP|137|Alla enheter i nätverket|Båda|
 |Syslog (valfritt)|TCP/UDP|514, beroende på konfiguration|SIEM-server|Inkommande|
 |RADIUS|UDP|1813|RADIUS|Inkommande|
-|TLS för att RDP-porten|TCP|3389|Alla enheter i nätverket|Utgående|
+|TLS för att RDP-porten|TCP|3389|Alla enheter i nätverket|Båda|
 
 > [!NOTE]
 > - Använder användarkontot för Directory service, sensorn frågar slutpunkter i din organisation för lokala administratörer med SAM-R (nätverksinloggning) för att skapa den [laterala sökväg graph](use-case-lateral-movement-path.md). Mer information finns i [behörigheter som krävs för Konfigurera SAM-R](install-atp-step8-samr.md).

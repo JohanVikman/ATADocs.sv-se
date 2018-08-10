@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 04284a622aec1985e363bac7f0215cfd031d9854
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567669"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723420"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -215,8 +215,8 @@ I följande tabell visas de portar som ATA Gateway som minst kräver är konfigu
 |Netlogon (SMB/CIFS, SAM-R)|TCP och UDP|445|Alla enheter i nätverket|Utgående|
 |Windows Time|UDP|123|Domänkontrollanter|Utgående|
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
-|NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
+|NTLM över RPC|TCP|135|Alla enheter i nätverket|Båda|
+|NetBIOS|UDP|137|Alla enheter i nätverket|Båda|
 |SSL|TCP|443|ATA Center|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 
@@ -282,8 +282,8 @@ I följande tabell visas de portar som ATA Lightweight Gateway som minst kräver
 |Protokoll|Transport|Port|Till/från|Riktning|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
-|NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|NetBIOS|UDP|137|Alla enheter i nätverket|Utgående|
+|NTLM över RPC|TCP|135|Alla enheter i nätverket|Båda|
+|NetBIOS|UDP|137|Alla enheter i nätverket|Båda|
 |SSL|TCP|443|ATA Center|Utgående|
 |Syslog (valfritt)|UDP|514|SIEM-server|Inkommande|
 |Netlogon (SMB/CIFS, SAM-R)|TCP och UDP|445|Alla enheter i nätverket|Utgående|
