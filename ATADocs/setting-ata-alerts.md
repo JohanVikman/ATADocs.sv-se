@@ -14,13 +14,13 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 0b4d783d55d38d2a50c651ba47c584fed8bcee50
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "30010150"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -28,7 +28,7 @@ ms.locfileid: "30010150"
 ATA kan meddela dig när det upptäcker misstänkt aktivitet, antingen via e-post eller genom att använda vidarebefordran av ATA-händelser och vidarebefordra händelsen till SIEM/syslog-servern. Innan du väljer vilka meddelanden du vill ta emot måste du [konfigurera e-postservern och Syslog-servern](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
-> -   E-postmeddelanden som innehåller en länk som tar användaren direkt till den misstänkta aktiviteten som har identifierats. Värdnamnsdelen i länken kommer från inställningen för ATA-konsolens URL på sidan för ATA Center. ATA-konsolens URL är som standard den IP-adress som väljs vid installation av ATA Center. Om du ska konfigurera e-postaviseringar, rekommenderas det att du använder en FQDN som ATA-konsolens URL.
+> -   E-postmeddelanden innehåller en länk som leder användaren direkt till den misstänkta aktiviteten som har identifierats. Värdnamnsdelen i länken kommer från inställningen för ATA-konsolens URL på sidan för ATA Center. ATA-konsolens URL är som standard den IP-adress som väljs vid installation av ATA Center. Om du ska konfigurera e-postaviseringar, rekommenderas att du använder en FQDN som ATA-konsolens URL.
 > -   Meddelanden skickas från ATA Center till antingen SMTP-servern eller Syslog-servern.
 
 
@@ -43,7 +43,7 @@ Om du vill ta emot aviseringar måste du ange följande parametrar:
 3. Under **E-postaviseringar** anger du vilka meddelanden som ska skickas via e-post – nya misstänkta aktiviteter och nya hälsorelaterade problem. Du kan ange separata e-postadresser som misstänkta aktiviteter och hälsorelaterade aviseringar ska skickas till, så att till exempel aviseringar om misstänkt aktivitet skickas till din säkerhetsanalytiker och aviseringar om hälsorelaterade problem till IT-administratören.
 >   [!NOTE]
 >   E-postaviseringar för misstänkta aktiviteter skickas endast när den misstänkta aktiviteten skapas.
-3. Under **Syslog-aviseringar**, ange vilka meddelanden som ska skickas till Syslog-servern - nya misstänkta aktiviteter, uppdaterade misstänkta aktiviteter och nya problem.
+3. Under **Syslog-aviseringar**, ange vilka meddelanden ska skickas till Syslog-servern – nya misstänkta aktiviteter, uppdaterade misstänkta aktiviteter och nya hälsorelaterade problem.
 5. Klicka på **Spara**.
 
 ![Bild för inställning av ATA-e-postaviseringar](media/ata-mail-notification-settings.png)

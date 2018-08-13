@@ -14,10 +14,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "24018566"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
@@ -128,12 +128,12 @@ Om du ser något av dessa fel, kör du följande lösning:
 
 ![Lösning för uppdatering](http://i.imgur.com/Nj99X2f.png)
 
-Detta bör returnera en `WriteResult({ "nRemoved" : XX })` där ”XX” är antalet misstänkta aktiviteter som har tagits bort. Om antalet är större än 0 avslutar du kommandotolken och fortsätter med uppdateringsprocessen.
+Detta bör returnera ett `WriteResult({ "nRemoved" : XX })` där ”XX” är antalet misstänkta aktiviteter som har tagits bort. Om antalet är större än 0 avslutar du kommandotolken och fortsätter med uppdateringsprocessen.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1 kräver att servern startas om
 
-I vissa fall kan installationen av .Net Framework 4.6.1 kräva att du startar om servern. Observera att klicka på OK i den **Microsoft Advanced Threat Analytics Center Setup** dialogrutan automatiskt startar om servern. Detta är särskilt viktigt när du installerar ATA Lightweight Gateway på en domänkontrollant, eftersom du kanske vill planera en underhållsperiod före installationen.
+I vissa fall kan installationen av .Net Framework 4.6.1 kräva att du startar om servern. Lägg märke till att klicka på OK i den **Microsoft Advanced Threat Analytics Center installationsprogrammet** dialogrutan automatiskt startar om servern. Detta är särskilt viktigt när du installerar ATA Lightweight Gateway på en domänkontrollant, eftersom du kanske vill planera en underhållsperiod före installationen.
     ![Omstart av .NET Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historiska nätverksaktiviteter migreras inte längre

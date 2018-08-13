@@ -14,13 +14,13 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "30009752"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -51,12 +51,12 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
       - Minst en domänkontrollant i listan bör vara en global katalog. Detta gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
 
   - **Avbilda nätverkskort** (krävs):
-  - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa ta emot speglad domain controller trafik.
+  - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa ta emot speglad domain controller-trafik.
   - För en ATA Lightweight Gateway bör detta vara alla nätverkskort som används för kommunikation med andra datorer i organisationen.
 
 
   - **Kandidat för domänsynkronisering**: Eventuell ATA Gateway som har konfigurerats som kandidat för domänsynkronisering kan ansvara för synkronisering mellan ATA och Active Directory-domänen. Beroende på domänens storlek på den första synkroniseringen kan ta lite tid och är resurskrävande. Som standard anges endast ATA-gatewayar som kandidater för domänsynkronisering.
-   Det rekommenderas att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.
+   Vi rekommenderar att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.
    Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Mer information finns i [ATA-arkitektur](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
@@ -64,13 +64,13 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
   > Ändringar i konfigurationen tillämpas på ATA Gateway vid nästa schemalagda synkronisering mellan ATA Gateway och ATA Center.
 
 3. Du kan välja att ange [Syslog listener och Windows Event Forwarding Collection](configure-event-collection.md). 
-4. Aktivera **uppdatera ATA Gateway automatiskt** så att med kommande versioner när du uppdaterar ATA Center, ATA-Gateway uppdateras automatiskt.
+4. Aktivera **uppdatera ATA Gateway automatiskt** så att den kommande versioner när du uppdaterar ATA Center, ATA-gatewayen uppdateras automatiskt.
 
 5. Klicka på **Spara**.
 
 
 ## <a name="validate-installations"></a>Verifiera installationer
-Om du vill verifiera att ATA Gateway har distribuerats, kontrollerar du följande steg:
+För att verifiera att ATA-gatewayen har distribuerats kan du kontrollera följande:
 
 1.  Kontrollera att tjänsten **Microsoft Advanced Threat Analytics Gateway** körs. Det kan ta några minuter innan tjänsten startar efter att du har sparat inställningarna för ATA Gateway.
 
@@ -93,11 +93,11 @@ Om du vill verifiera att ATA Gateway har distribuerats, kontrollerar du följand
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Översikt över ATA-distribution](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Se även
-- [ATA POC Distributionsguide](http://aka.ms/atapoc)
+- [ATA POC-Distributionsguide](http://aka.ms/atapoc)
 - [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
