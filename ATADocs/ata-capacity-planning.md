@@ -13,10 +13,10 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 5fafa4e8e9644c870a92c1684fa5165ef68b31a7
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "39585114"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*

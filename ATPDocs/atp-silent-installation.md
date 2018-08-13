@@ -14,10 +14,10 @@ ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: b318e4eefe05aee9ab99221d4ccd1e20764047a2
-ms.sourcegitcommit: be87b7bf30270a4b8f9886199748bb664274331b
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/08/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "39631641"
 ---
 *Gäller för: Azure Avancerat skydd*
