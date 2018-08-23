@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0062fc22df357e338d8eaf446688ea8bba56019c
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 83b7b88d2b1ba61a2ae2733f1401d98b341ad3bd
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567958"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734829"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+
+## <a name="azure-atp-release-245"></a>Azure ATP-versionen 2.45
+
+Gavs ut den 19 augusti 2018
+
+- **Azure ATP lägger till för Windows ETW (Event Tracing) som en ytterligare datakälla**  <br> För Windows ETW (Event Tracing) har lagts till som källa för ytterligare data utöver befintliga nätverkstrafik och Windows-händelser. ETW ger ytterligare misstänkt aktivitet identifieringar, inklusive: misstänkt domain controller kampanjer och misstänkt replikering av domänkontrollanter begäranden (båda är den potentiella DCShadow attacker). <br>
+Endast ATP sensorer som installeras på domänkontrollanter support ETW baserat identifieringar. ETW-identifieringar stöds inte av ATP fristående sensorer. <br>  
+
+- **Fyra nya identifieringar nu i allmän tillgänglighet** <br>
+  - Misstänkt VPN-anslutning
+  - Guld för Kerberos-biljett – icke-befintligt konto 
+  - Misstänkt befordran av domänkontrollant (möjlig DcShadow-attack) – ETW-baserad identifiering, endast tillgängligt med ATP sensorer 
+  - Misstänkt domain controller-replikeringsbegäran (möjlig DcShadow-attack) – ETW-baserad identifiering, endast tillgängligt med ATP sensorer
+
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem.
+
+
+## <a name="azure-atp-release-244"></a>Azure ATP-versionen 2.44
+
+Gavs ut den 12: e augusti 2018
+
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem.
+- Loggfilerna som skapades på den sensor-datorn inte längre innehåller ”undantag statistik”-loggen.
 
 
 ## <a name="azure-atp-release-243"></a>Azure ATP-versionen 2.43

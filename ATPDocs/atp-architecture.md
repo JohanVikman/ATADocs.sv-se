@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567652"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734803"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -28,20 +28,17 @@ Azure Advanced Threat Protection-arkitektur:
 
 ![Topologidiagram för Azure ATP-arkitektur](media/atp-architecture-topology.png)
 
-Azure ATP övervakar din domänkontrollantens nätverkstrafik genom att använda portspegling till en Azure ATP fristående sensorn med fysiska eller virtuella växlar. Om du distribuerar Azure ATP-sensorn direkt på domänkontrollanterna undanröjer behovet av portspegling. Azure ATP kan också utnyttja Windows-händelser (vidarebefordras direkt från domänkontrollanterna eller från en SIEM-server) och analysera data beträffande attacker och hot. Azure ATP tar emot tolkad trafik från fristående Azure ATP-sensorn och Azure ATP-sensorn. Därefter genomför tjänsten profilering, kör deterministisk identifiering, och kör maskininlärnings- och beteendealgoritmer för att lära sig om ditt nätverk, identifierar avvikelser samt varnar dig för misstänkta aktiviteter.
+Azure ATP övervakar din domänkontrollantens nätverkstrafik genom att använda portspegling till en Azure ATP fristående sensorn med fysiska eller virtuella växlar. Om du distribuerar Azure ATP-sensorn direkt på domänkontrollanterna undanröjer behovet av portspegling. Azure ATP kan också utnyttja Windows-händelser (vidarebefordras direkt från domänkontrollanterna eller från en SIEM-server) och analysera data beträffande attacker och hot. Azure ATP tar emot tolkad trafik från Azure ATP-sensorn och Azure ATP fristående sensorn. Azure ATP sedan utför profilering, kör deterministisk identifiering och kör maskininlärnings- och beteendealgoritmer för att lära sig om nätverket, aktivera identifiering av avvikelser och varna dig för misstänkta aktiviteter.
 
-Det här avsnittet beskriver flödet i nätverk och händelseinsamling och beskriver funktionerna i huvudkomponenterna i ATP: fristående Azure ATP-sensorn, Azure ATP-sensorn (som har samma grundfunktioner som fristående Azure ATP-sensorn) och Azure ATP-Molntjänsten. 
+Det här avsnittet beskriver flödet i nätverk och händelseinsamling och beskriver funktionerna i huvudkomponenterna i ATP: Azure ATP-sensorn, Azure ATP fristående sensorn (som har samma grundfunktioner som Azure ATP-sensorn, men kräver ytterligare maskinvara, portspegling, konfiguration och har inte stöd för Windows ETW (Event Tracing) baserade identifieringar), och Azure ATP-Molntjänsten. 
 
-När installerad direkt på domänkontrollanter, åt sensorn krävs händelseloggarna direkt från domänkontrollanten. När dessa loggar och nätverkstrafiken har tolkats av sensorn, skickar Azure ATP endast denna parsade information till Azure ATP-tjänsten (inte alla loggar).
+Installerad direkt på domänkontrollanter, ATP-sensorn har åtkomst till nödvändiga händelseloggarna direkt från domänkontrollanten. När dessa loggar och nätverkstrafiken har tolkats av sensorn, skickar Azure ATP endast denna parsade information till Azure ATP-tjänsten (inte alla loggar).
 
 ## <a name="azure-atp-components"></a>Azure ATP-komponenter
 Azure ATP består av följande komponenter:
 
 -   **Azure ATP-arbetsytehanteringsportalen** <br>
-Hanteringsportalen för Azure ATP-arbetsytan kan du skapa arbetsytor och möjliggör integrering med andra Microsoft-tjänster.
-
-> [!NOTE]
-> Endast sensorer från en enda Active Directory-skog kan ansluta till en enda arbetsyta.
+Azure ATP-arbetsyteportalen för hantering kan du skapa och hantera din arbetsyta och möjliggör integrering med andra Microsoft-tjänster.
 
 -   **Azure ATP-arbetsyteportalen** <br>
 Azure ATP-arbetsyteportalen tar emot data från ATP sensorer och fristående sensorer. Den övervakar, hanterar och undersöker hoten i din miljö.
@@ -50,30 +47,28 @@ Azure ATP-arbetsyteportalen tar emot data från ATP sensorer och fristående sen
 Azure ATP-sensorn installeras direkt på domänkontrollanterna och övervakar trafiken direkt, utan att behöva en dedikerad server eller konfiguration av portspegling. 
 
 -   **Azure ATP fristående sensor**<br>
-Fristående Azure ATP-sensorn installeras på en dedikerad server som övervakar trafiken från domänkontrollanterna med antingen portspegling eller en nätverks-TAP. Det är ett alternativ till Azure ATP-sensorn.
+Fristående Azure ATP-sensorn installeras på en dedikerad server som övervakar trafiken från domänkontrollanterna med antingen portspegling eller en nätverks-TAP. Det är ett alternativ till Azure ATP-sensorn som kräver ytterligare maskinvara, portspegling och konfiguration. Azure ATP fristående sensorer har inte stöd för Windows ETW (Event Tracing) baserade identifieringar som stöds av ATP-sensorn. 
 
 ## <a name="deployment-options"></a>Distributionsalternativ
 Du kan distribuera Azure ATP med följande kombination av sensorer:
 
 -   **Med hjälp av endast Azure ATP-sensorer**<br>
-Din Azure ATP-distribution kan innehålla endast Azure ATP-sensorer: The Azure ATP-sensorer distribueras på varje domänkontrollant och inga ytterligare servrar eller konfiguration av portspegling krävs.
+Din Azure ATP-distribution kan innehålla endast Azure ATP-sensorer: The Azure ATP-sensorer distribueras direkt på varje domänkontrollant och inga ytterligare servrar eller konfiguration av portspegling krävs.
 
 -   **Med hjälp av endast Azure ATP fristående sensorer** <br>
 Din Azure ATP-distribution kan innehålla endast Azure ATP fristående sensorer, utan någon Azure ATP-sensorer: alla domänkontrollanter måste konfigureras för att aktivera portspegling till en fristående Azure ATP-sensorn eller nätverks-TAP måste vara uppfyllda.
 
 -   **Med både Azure ATP fristående sensorer och Azure ATP-sensorer**<br>
-Din Azure ATP-distributionen omfattar både Azure ATP fristående sensorer och Azure ATP-sensorer. Azure ATP-sensorer är installerade på några av dina domänkontrollanter (till exempel alla domänkontrollanter hos avdelningskontor). På samma gång övervakas andra domänkontrollanter av Azure ATP fristående sensorer (till exempel de större domänkontrollanterna i huvuddatacentren).
+Din Azure ATP-distributionen omfattar både Azure ATP fristående sensorer och Azure ATP-sensorer. Azure ATP-sensorer är installerade på några av dina domänkontrollanter (till exempel alla domänkontrollanter hos avdelningskontor). På samma gång övervakas andra domänkontrollanter av Azure ATP fristående sensorer (till exempel de större domänkontrollanterna i huvuddatacentren. 
 
 
-### <a name="azure-atp-workspace-management-portal"></a>Azure ATP-arbetsytehanteringsportalen
+### <a name="azure-atp-management-portal"></a>Azure ATP-hanteringsportalen
 
-Hanteringsportalen för Azure ATP-arbetsytan kan du:
+Azure ATP-hanteringsportalen kan du:
 
--   Skapa och hantera Azure ATP-arbetsytor
+-   Skapa och hantera din Azure ATP-arbetsyta
 
 -   Integrera med andra Microsoft-säkerhetstjänster
-
-Ange din huvudsakliga arbetsyta som **primära**. Ställa in en arbetsyta som primär effekterna integreringar – kan du bara integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. 
 
 > [!NOTE]
 > - Azure ATP stöder för närvarande skapa bara en arbetsyta. När du har tagit bort en arbetsyta kan kontakta du supporten om du vill återaktivera den. Du kan ha högst tre borttagna arbetsytor. Kontakta Azure ATP-supporten om du vill öka antalet arbetsytor, och har tagits bort.
@@ -99,20 +94,16 @@ Azure ATP-arbetsytan kan du hantera följande Azure ATP-funktioner:
 |Entitetsmottagare|Tar emot entitetsgrupper från alla Azure ATP-sensorer och Azure ATP fristående sensorer.|
 |Nätverksaktivitetsprocessor|Bearbetar alla nätverksaktiviteter inom varje grupp som tas emot. Till exempel utförs matchning mellan de olika Kerberos-stegen från potentiellt olika datorer|
 |Entitetsprofilerare|Profilerar alla unika entiteter enligt trafik och händelser. Till exempel uppdaterar Azure ATP listan över inloggade datorer för varje användarprofil.|
-|Azure ATP-arbetsytehanteringsportalen|Hanterar dina Azure ATP-arbetsytor.|
+|Azure ATP-hanteringsportalen|Hanterar din Azure ATP-arbetsyta.|
 |Azure ATP-arbetsyteportalen|Azure ATP-arbetsyta används för att konfigurera Azure ATP och övervaka misstänkta aktiviteter som identifieras av Azure ATP i nätverket. Azure ATP-arbetsyta är inte beroende av Azure ATP-sensorn och körs även om tjänsten Azure ATP-sensorn har stoppats. |
 |Detektorer|Detektorerna använder maskininlärningsalgoritmer och deterministiska regler för att hitta misstänkta aktiviteter och onormalt användarbeteende i nätverket.|
-
-Tänk på följande när du bestämmer hur många Azure ATP-arbetsytor du distribuerar i nätverket:
-
--   En Azure ATP-arbetsyta kan övervaka en Active Directory-skog. Om du har mer än en Active Directory-skog, måste minst en enda Azure ATP-molntjänst per Active Directory-skog.
 
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP-sensorn och Azure ATP fristående sensor
 
 Den **Azure ATP-sensorn** och **fristående Azure ATP-sensorn** har samma grundfunktioner:
 
--   Samla in och inspektera nätverkstrafik på domänkontrollanter. Det här är portspeglad trafik för Azure ATP fristående sensorer och lokal trafik på domänkontrollanten i Azure ATP-sensorer. 
+-   Samla in och inspektera nätverkstrafik på domänkontrollanter. Detta är lokal trafik på domänkontrollanten i Azure ATP-sensorer och portspeglad trafik för Azure ATP fristående sensorer. 
 
 -   Ta emot Windows-händelser direkt från domänkontrollanterna (för ATP sensorer) eller från SIEM- eller Syslog-servrar (för ATP fristående sensorer)
 
@@ -124,7 +115,7 @@ Den **Azure ATP-sensorn** och **fristående Azure ATP-sensorn** har samma grundf
 
 -   Överföra relevanta data till Molntjänsten Azure ATP
 
--   Övervaka flera domänkontrollanter från en enda fristående Azure ATP-sensorn eller övervaka en enda domänkontrollant för en Azure ATP-sensorn.
+-   Övervaka en enda domänkontrollant för en Azure ATP-sensorn eller övervaka flera domänkontrollanter från en enda fristående Azure ATP-sensorn.
 
 Som standard stöder Azure ATP upp till 100 sensorer. Kontakta Azure ATP-supporten om du vill installera fler.
 
@@ -141,9 +132,9 @@ Fristående Azure ATP-sensorn tar emot nätverkstrafik och Windows-händelser fr
 
 ## <a name="azure-atp-sensor-features"></a>Funktioner i Azure ATP-sensorn
 
-Följande funktioner fungerar på olika sätt beroende på om du kör ett fristående Azure ATP-sensorn eller en Azure ATP-sensorn.
+Följande funktioner fungerar på olika sätt beroende på om du har en Azure ATP-sensorn eller en fristående Azure ATP-sensorn.
 
--   Azure ATP-sensorn kan läsa händelser lokalt, utan att behöva konfigurera vidarebefordran av händelser.
+-   Azure ATP-sensorn läser händelser lokalt, utan att behöva köpa och underhålla ytterligare maskinvara eller konfigurera vidarebefordran som krävs med ATP fristående sensorer. Azure ATP-sensorn har även stöd för tråd för Windows ETW (Event) som tillhandahåller logginformation för flera identifieringar. ETW baserat identifieringar omfattar både misstänkt replikering begära och befordran av domänkontrollant misstänkt, båda är den potentiella DCShadow attacker och stöds inte av ATP fristående sensorer.  
 
 -   **Kandidat för domänsynkronisering**<br>
 Kandidat för domänsynkronisering ansvarar för att proaktivt synkronisera alla entiteter från en specifik Active Directory-domän (liknar mekanismen som används av själva domänkontrollanterna för replikering). En sensor väljs slumpmässigt från listan över kandidater för att fungera som domänsynkroniserare. <br><br>
@@ -179,7 +170,7 @@ Om Active Directory behöver mer bearbetningskraft, minskas kvoten som krävs av
 Kontrollera att följande komponenter har ställts in, för att fungera med Azure ATP.
 
 ### <a name="port-mirroring"></a>Portspegling
-Om du använder Azure ATP fristående sensorer kan behöva du konfigurera portspegling för de domänkontrollanter som övervakas och ange fristående Azure ATP-sensorn som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. Azure ATP fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringar är mindre effektiva.
+Om du använder Azure ATP fristående sensorer, krävs portspegling set upp för de domänkontrollanter som övervakas. Ange Azure ATP-sensorn fristående som mål med hjälp av de fysiska eller virtuella växlarna. Ett annat alternativ är att använda nätverks-TAP. Azure ATP fungerar om vissa men inte alla domänkontrollanter övervakas, men identifieringar är mindre effektiva.
 
 Även om portspegling speglar all domänkontrollantens nätverkstrafik till fristående Azure ATP-sensorn, det är bara en liten andel av denna trafik och sedan skickas i komprimerat format till Azure ATP molntjänst för analys.
 
@@ -187,9 +178,12 @@ Domänkontrollanterna och sensorer för Azure ATP-fristående kan vara fysiska e
 
 
 ### <a name="events"></a>händelser
-För att förbättra Azure ATP-identifieringen av Pass-the-Hash, Brute Force, ändring av känsliga grupper, skapande av misstänkt tjänster, ändringar av Honey Tokens behöver Azure ATP måste följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045. Dessa kan antingen läsas automatiskt av Azure ATP-sensorn eller om Azure ATP-sensorn inte har distribuerats, vidarebefordras till Azure ATP-sensorn för fristående i ett av två sätt, genom att konfigurera Azure ATP-sensorn för fristående för att lyssna efter SIEM-händelser eller genom att [Konfigurera vidarebefordran av Windows-händelser](configure-event-forwarding.md).
+För att förbättra Azure ATP-identifieringsomfattningen av Pass-the-Hash, misstänkt autentiseringsfel, ändring av känsliga grupper, skapande av misstänkt tjänster och Honey token aktivitetstyper av angrepp, Azure ATP-behov att analysera loggarna för följande Windows-händelser: 4776,4732,4733,4728,4729,4756,4757 och 7045. Dessa händelser läses automatiskt av Azure ATP-sensorer med rätt avancerade granskningsprinciper. I situationer där Azure ATP fristående sensorer har distribuerats, kan händelseloggarna vidarebefordras till den fristående sensorn på något av två olika sätt. Konfigurera Azure ATP-sensorn för fristående för att lyssna efter SIEM-händelser eller genom [konfigurera vidarebefordran av Windows händelser](configure-event-forwarding.md). 
 
--   Konfigurera Azure ATP-sensorn för fristående för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATP. Azure ATP stöder ett antal SIEM-leverantörer. Mer information finns i [konfigurera vidarebefordran](configure-event-forwarding.md).
+> [!NOTE]
+> - Windows-händelser vidarebefordran för fristående sensorer har inte stöd för ETW (Event Tracing för Windows). ETW baserat identifieringar omfattar både misstänkta replikeringsbegäran och misstänkta befordran av domänkontrollant, båda är den potentiella DCShadow attacker.  
+
+-   Konfigurera Azure ATP-sensorn för fristående för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATP. Azure ATP stöder ett antal SIEM-leverantörer. Mer information finns i [konfigurera vidarebefordran av Windows händelser](configure-event-forwarding.md).
 
 -   Konfigurera vidarebefordran av Windows-händelser<br>Du kan också Azure ATP kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045 till din Azure ATP fristående sensorn. Detta är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATP. Mer information om vidarebefordran av Windows händelser i ATP finns [konfigurera Windows-vidarebefordran](configure-event-forwarding.md). Detta gäller endast för fysiska Azure ATP fristående sensorer - inte till Azure ATP-sensorn.
 

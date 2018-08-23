@@ -2,10 +2,10 @@
 title: Support för Azure Advanced Threat Protection använda skogar | Microsoft Docs
 description: Hur du konfigurerar stöd för flera Active Directory-skogar i Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 2a3460c39d6428831cc34231321fff745dbe0701
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202140"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734819"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -29,14 +29,14 @@ ms.locfileid: "39202140"
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Steg 9.  Installera Azure Advanced Threat Protection stöd för flera skogar
 
-Azure ATP stöder organisationer med flera skogar där du kan övervakaraktivitet och profilanvändare i skogar. 
+Azure ATP stöder organisationer med flera skogar, vilket ger dig möjlighet att enkelt övervaka aktivitet och profilanvändare över flera skogar från en enda glasruta. 
 
-En enterprise-organisation kan ha flera Active Directory-skogar - används ofta för olika syften, inklusive äldre infrastruktur från företagets fusioner och förvärv, geografisk fördelning och säkerhetsgränser (red-skog). Du kan skydda flera skogar med hjälp av Azure ATP, rapporterar alla data till en enda, primär arbetsyta, vilket ger dig möjlighet att övervaka och undersöka via en enda glasruta.
+Företag har vanligtvis flera Active Directory-skogar - används ofta för olika syften, inklusive äldre infrastruktur från företagets fusioner och förvärv, geografisk fördelning och säkerhetsgränser (red-skog). Du kan skydda flera skogar med hjälp av Azure ATP, vilket ger dig möjlighet att övervaka och undersöka via en enda glasruta.
 
 Möjlighet att hantera flera Active Directory-skogar gör följande:
--   Du kan visa och undersöka aktiviteter som utförs av användare i flera skogar från en enda glasruta. 
--   Stöd för flera skogar förbättrar identifiering och minskar antalet falska positiva identifieringar genom att tillhandahålla avancerade Active Directory-integrering och konto-lösning. 
--   Eftersom flera foresst support eliminerar behovet av flera arbetsytor, har du större kontroll och underlättar distributionen, även om domänkontrollanterna är alla övervakade centralt från en enda Azure ATP konsolen som ger bättre övervakningsaviseringar och rapportering för cross-org täckning.
+-   Visa och undersöka aktiviteter som utförs av användare i flera skogar från en enda glasruta. 
+-   Förbättrad identifiering och minskade falska positiva identifieringar genom att tillhandahålla avancerade Active Directory-integrering och konto lösning. 
+-   Bättre kontroll och underlättar distributionen. Förbättrad övervakning av aviseringar och rapportering för cross-org täckning när domänkontrollanter övervakas från en enda Azure ATP-konsol.
 
 
 ## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Hur Azure ATP identifierar aktiviteter i flera skogar 
@@ -48,7 +48,7 @@ Azure ATP-sensorer fråga för att identifiera aktiviteter mellan skogar, domän
 > - Användaren som du konfigurerar i Azure ATP-konsolen under **katalogtjänster** måste vara betrott i de andra skogarna.
 
 
-Om du har skogar på vilka inga Azure ATP sensorer installeras, kan Azure ATP fortfarande visa och övervaka aktiviteter från dessa skogar. ATP-sensorer installerad kan fråga efter alla anslutna fjärrskog domänkontrollanter för att lösa användare och datorer och skapa profiler för var och en av dem. 
+Om du har skogar på vilka inga Azure ATP sensorer installeras, kan Azure ATP fortfarande visa och övervaka aktiviteter från dessa skogar. ATP-sensorer installerad kan fråga efter alla anslutna fjärrskog domänkontrollanter för att lösa användare, datorer och skapa profiler för var och en av dem. 
 
 ## <a name="installation-requirements"></a>Installationskrav 
 
@@ -76,7 +76,7 @@ När Azure ATP mappar dina skogar, används en process som påverkar följande:
 -   När Azure ATP-sensorn körs, frågar de fjärranslutna Active Directory-skogarna och hämtar en lista över användare och Maskindata för att skapa en profil.
 -   Var femte minut, frågar varje Azure ATP-sensorn en domänkontrollant från en domän från varje skog att mappa alla skogar i nätverket.
 -   Varje Azure ATP-sensorn mappar skogarna med det ”trustedDomain”-objektet i Active Directory genom att logga in och kontrollera vilken förtroende.
--   Du kan också se ad hoc-trafik när ATP-sensorn identifierar mellan skogar aktivitet. När detta inträffar skickar ATP-sensorer en LDAP-fråga till relevanta domänkontrollanter i ordning hämta entitetsinformation. 
+-   Du kan också se ad hoc-trafik när ATP-sensorn identifierar mellan skogar aktivitet. När detta inträffar kan skicka en LDAP-fråga till relevanta domänkontrollanter för att hämta entitetsinformation med ATP-sensorer. 
 
 ## <a name="known-limitations"></a>Kända begränsningar
 -   Interaktiva inloggningar som genomförs av användare i en skog komma åt resurser i en annan skog visas inte i Azure ATP-instrumentpanelen.
@@ -87,8 +87,8 @@ När Azure ATP mappar dina skogar, används en process som påverkar följande:
 
 
 ## <a name="see-also"></a>Se även
-- [ATA-storleksverktyget](http://aka.ms/aatpsizingtool)
-- [ATA-arkitektur](atp-architecture.md)
-- [Installera ATA](install-atp-step1.md)
+- [ATP-storleksverktyget](http://aka.ms/aatpsizingtool)
+- [ATP-arkitektur](atp-architecture.md)
+- [Installera ATP](install-atp-step1.md)
 - [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)
 

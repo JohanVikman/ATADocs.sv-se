@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a7cd9825f5b921b9dbe6cffe54e82d3249f10b7
-ms.sourcegitcommit: 583f2f144384a6a0cb9875d5f2b0fef7e7e3735d
+ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "39723284"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734820"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -31,20 +31,20 @@ Den här artikeln beskrivs kraven för en lyckad distribution av Azure ATP i din
 > Information om hur du planerar resurser och kapacitet finns i [Azure ATP-kapacitetsplanering](atp-capacity-planning.md).
 
 
-Azure ATP består av Azure ATP-Molntjänsten, som består av arbetsytehanteringsportalen och en arbetsyta-portal, fristående Azure ATP-sensorn och/eller Azure ATP-sensorn. Läs mer om Azure ATP-komponenter, [Azure ATP-arkitektur](atp-architecture.md).
+Azure ATP består av Azure ATP-Molntjänsten, som består av hanteringsportalen, arbetsytans portal, Azure ATP-sensorn eller fristående Azure ATP-sensorn. Mer information om var och en av de Azure ATP-komponenterna finns i [Azure ATP-arkitektur](atp-architecture.md).
 
-Varje arbetsyta för Azure ATP stöder en Active Directory-skogens gränser och stöder skogens funktionella nivå (FFL) av Windows 2003 och senare. För distributioner med flera skogar krävs en separat Azure ATP-arbetsyta för varje skog.
+Varje Azure ATP-instans har stöd för en gräns för flera Active Directory-skog och skogens funktionella nivå (FFL) av Windows 2003 och senare. 
 
 
 [Innan du börjar](#before-you-start): det här avsnittet innehåller information som du bör samla in och konton och nätverksentiteter som du bör ha innan du börjar installera Azure ATP.
 
-[Azure ATP-arbetsytehanteringsportalen](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): det här avsnittet beskrivs Webbläsarkrav för arbetsytan management portal.
+[Azure ATP-hanteringsportalen](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): det här avsnittet beskrivs Webbläsarkrav för Azure ATP management portal.
 
 [Azure ATP-arbetsyteportalen](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): det här avsnittet beskrivs Webbläsarkrav för att köra Azure ATP-arbetsyteportalen.
 
-[Azure ATP fristående sensorn](#azure-atp-sensor-requirements): det här avsnittet innehåller Azure ATP fristående sensorn maskinvara, programvarukrav samt inställningar du måste konfigurera på din Azure ATP fristående sensor-servrar.
-
 [Azure ATP-sensorn](#azure-atp-lightweight-sensor-requirements): det här avsnittet innehåller Azure ATP-sensorn maskin- och programvarukrav.
+
+[Azure ATP fristående sensorn](#azure-atp-sensor-requirements): det här avsnittet innehåller Azure ATP fristående sensorn maskinvara, programvarukrav samt inställningar du måste konfigurera på din Azure ATP fristående sensor-servrar.
 
 ![Azure ATP-arkitekturdiagrammet](media/ATP-architecture-topology.png)
 
@@ -57,7 +57,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
     > [!NOTE]
     > Om du har angett anpassade ACL:er på olika organisationsenheter i domänen ska du se till att den valda användaren har läsbehörighet till de organisationsenheterna.
 
--   Om du kör Wireshark i Azure ATP fristående sensorn behöver starta om Azure Advanced Threat Protection sensorn tjänsten när du har stoppat Wireshark-insamlingen. Om inte, sensorn slutar att fånga in trafik.
+-   Om du kör Wireshark i Azure ATP fristående sensorn behöver starta om tjänsten Azure Advanced Threat Protection sensor när du har stoppat Wireshark-insamlingen. Om inte, sensorn slutar att fånga in trafik.
 
 - Om du försöker installera ATP-sensorn på en dator som konfigureras med en NIC-teamindelningsadapter, får du ett fel vid installation. Om du vill installera ATP-sensorn på en dator som konfigureras med NIC teaming kan du läsa [Azure ATP-sensorn NIC teaming problemet](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -65,7 +65,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 
 -   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot har konfigurerats som Azure ATP Honeytoken-användare. Mer information finns i [konfigurera undantag och Honeytoken-användare](install-atp-step7.md).
 
--   Valfritt: Om du distribuerar den fristående sensorn, är det nödvändigt att vidarebefordra Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045 till ATP att förbättra Azure ATP-Pass-the-Hash, Brute Force, ändring av känsliga grupper, Honey token-identifieringar och skapa skadliga tjänster. I Azure ATP-sensorn emot händelserna automatiskt. I den fristående sensorn Azure ATP tas händelserna emot från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger Azure ATP med ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
+-   Valfritt: Om du distribuerar den fristående sensorn, är det nödvändigt att vidarebefordra Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045 till ATP att förbättra Azure ATP-Pass-the-Hash, Brute Force, ändring av känsliga grupper, Honey token-identifieringar och skapa skadliga tjänster. Azure ATP-sensorn tar emot dessa händelser automatiskt. I Azure ATP fristående sensorn tas händelserna emot från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger Azure ATP med ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
 
 ## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Azure ATP-arbetsyta-portalen och arbetsytan portal hanteringskrav
@@ -74,7 +74,7 @@ Det här avsnittet innehåller information som du bör samla in och konton och n
 -   Internet Explorer version 10 och senare
 -   Google Chrome 4.0 och senare
 -   Minsta bredd för skärmupplösning på 1 700 bildpunkter
--   Brandvägg/proxy är öppen - att kommunicera med Azure ATP-Molntjänsten, måste du ha öppen: *. atp.azure.com port 443 i din brandväggsproxy. 
+-   Öppna brandvägg/proxy – för att kommunicera med Molntjänsten Azure ATP *. atp.azure.com port 443 måste vara öppna i din brandväggsproxy. 
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Azure ATP fristående sensor-krav
 Det här avsnittet innehåller kraven för fristående Azure ATP-sensorn.
@@ -83,7 +83,7 @@ Fristående Azure ATP-sensorn har stöd för installation på en server som kör
 Fristående Azure ATP-sensorn kan installeras på en server som är medlem i en domän eller arbetsgrupp.
 Fristående Azure ATP-sensorn kan användas för att övervaka domänkontrollanter med domän funktionella nivån för Windows 2003 och senare.
 
-För din fristående sensor för att kommunicera med Molntjänsten, måste du öppna port 443 i brandväggar och proxyservrar till *. atp.azure.com
+Port 443 i brandväggar och proxyservrar till för din fristående sensorn att kommunicera med Molntjänsten *. atp.azure.com måste vara öppna.
 
 
 Information om hur du använder virtuella datorer med Azure ATP-sensorn fristående finns i [konfigurera portspegling](configure-port-mirroring.md).
@@ -202,8 +202,8 @@ I följande tabell visas de portar som Azure ATP-sensorn kräver minst:
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP-molntjänst|Utgående|
 |**Interna portar**|||||
 |DNS|TCP och UDP|53|DNS-servrar|Utgående|
-|NTLM över RPC|TCP|135|Alla enheter i nätverket|Utgående|
-|Netlogon (SMB/CIFS, SAM-R)|TCP/UDP|445|Alla enheter i nätverket|Båda|
+|Netlogon (SMB/CIFS, SAM-R)|TCP/UDP|445|Alla enheter i nätverket|Utgående|
+|NTLM över RPC|TCP|135|Alla enheter i nätverket|Båda|
 |NetBIOS|UDP|137|Alla enheter i nätverket|Båda|
 |Syslog (valfritt)|TCP/UDP|514, beroende på konfiguration|SIEM-server|Inkommande|
 |RADIUS|UDP|1813|RADIUS|Inkommande|

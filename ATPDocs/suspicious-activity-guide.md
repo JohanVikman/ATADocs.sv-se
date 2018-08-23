@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585245"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734846"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -200,7 +200,7 @@ I den här identifieringen en avisering utlöses när en Kerberos-biljett bevilj
    2.   Är Azure ATP-sensorn som ingår i den här aviseringen en virtuell dator? Om Ja, det nyligen återupptas från ett sparat tillstånd? Om Ja, stänger du aviseringen.
    3.   Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
 
-- **Icke-befintligt konto** (förhandsversion)
+- **Icke-befintligt konto**
    1.   Ställa följande frågor:
          - Är användaren är en domänanvändare som är kända och giltig? Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
          - Har du nyligen har lagts till? Om Ja, stänga aviseringen, ändringen kanske inte har synkroniserats ännu.
@@ -454,7 +454,7 @@ I den här identifieringen en avisering utlöses när många autentiseringsfel m
 
 [Komplexa och lång lösenord](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) ger den nödvändiga första säkerhetsnivån mot brute force-attacker.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Misstänkt befordran av domänkontrollant (möjlig DCShadow-attack) – förhandsversion
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Misstänkt befordran av domänkontrollant (möjlig DCShadow-attack) – ny
 
 **Beskrivning**
 
@@ -489,10 +489,11 @@ Mer information finns i [bevilja Active Directory Domain Services-behörigheter 
 
 Du kan utnyttja [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
  
+> [!NOTE]
+> Misstänkt domain controller befordran (möjlig DCShadow attack) identifieringar stöds endast ATP-sensorer. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Misstänkt replikeringsbegäran (möjlig DCShadow-attack) – förhandsversion
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Misstänkt replikeringsbegäran (möjlig DCShadow-attack) – ny
 
 **Beskrivning** 
 
@@ -519,6 +520,9 @@ Kontrollera vem i din organisation har följande behörigheter:
 
 Om du vill göra detta måste du använda [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) eller skapa ett Windows PowerShell-skript för att fastställa vem i domänen har dessa behörigheter.
 
+> [!NOTE]
+> Misstänkt replikering identifieringar för förfrågan (möjlig DCShadow attack) stöds endast ATP-sensorer. 
+
 
 ## <a name="suspicious-service-creation"></a>Misstänkt skapande av tjänst
 
@@ -542,7 +546,7 @@ En misstänkt tjänst har skapats på en domänkontrollant i din organisation. D
 
 - Implementera mindre privilegierad åtkomst på datorer i domänen så att endast specifika användare behörighet att skapa nya tjänster.
 
-## Misstänkt VPN-anslutning – förhandsversion<a name="suspicious-vpn-detection"></a>
+## Misstänkt VPN-anslutning <a name="suspicious-vpn-detection"></a>
 
 **Beskrivning**
 

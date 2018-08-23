@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064074"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734752"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -31,14 +31,14 @@ Azure ATP ger rollbaserad säkerhet för att skydda data i enlighet med organisa
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Rollgrupper aktivera åtkomsthantering för Azure ATP. Genom att använda rollgrupper kan du särskilja uppgifter inom din säkerhetsgrupp och endast ge den mängd åtkomst som användare behöver att utföra sitt arbete. Den här artikeln förklarar åtkomsthantering och Azure ATP-rollbehörighet och hjälper dig att komma igång med rollgrupper i ATP.
+Rollgrupper aktivera åtkomsthantering för Azure ATP. Genom att använda rollgrupper kan du särskilja uppgifter inom din säkerhetsgrupp och endast ge den mängd åtkomst som användare behöver att utföra sitt arbete. Den här artikeln förklarar åtkomsthantering, Azure ATP-rollbehörighet och hjälper dig att komma igång med rollgrupper i ATP.
 
 > [!NOTE]
 > Alla global administratör eller säkerhetsadministratör på klientens Azure Active Directory blir automatiskt en Azure ATP-administratör.
 
-## <a name="accessing-the-workspace-management-portal"></a>Åtkomst till arbetsytehanteringsportalen
+## <a name="accessing-the-management-portal"></a>Åtkomst till hanteringsportalen
 
-Åtkomst till arbetsytehanteringsportalen (portal.atp.azure.com) kan endast utföras av en Azure AD-användare som har katalogrollen global administratör eller säkerhetsadministratör. När du har angett på portalen kan du skapa olika arbetsytor. För varje arbetsyta Azure ATP-tjänsten skapar tre säkerhetsgrupper i Azure Active Directory-klient: administratörer, användare, visningsprogram. 
+Åtkomst till hanteringsportalen (portal.atp.azure.com) kan endast utföras av en Azure AD-användare som har katalogrollen global administratör eller säkerhetsadministratör. När du har angett på portalen kan du skapa din arbetsyta. Azure ATP-tjänsten skapar tre säkerhetsgrupper i Azure Active Directory-klient: administratörer, användare, visningsprogram. 
 
 > [!NOTE]
 > Åtkomst till Azure ATP-arbetsyteportalen ges endast till användare i Azure AD-säkerhetsgrupper för den arbetsytan och globala administratörer och säkerhetsadministratörer.

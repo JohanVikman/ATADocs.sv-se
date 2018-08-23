@@ -1,11 +1,11 @@
 ---
 title: Tagga känsliga konton med Azure ATP | Microsoft Docs
-description: Beskriver hur du tagga känsliga konton med hjälp av Azure Advanced Threat Protection (ATP)
+description: Beskriver hur du tagga känsliga konton med Azure Advanced Threat Protection (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4270ebda76309e19518f9d49b72bbce7f9bb5f32
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8f1a78e8ce6005c58dc98171a4bf4d049ff60d8f
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446059"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734776"
 ---
-*Gäller för: Azure Advanced Threat Protection version 1.9.*
+*Gäller för: Azure Avancerat skydd*
 
 
 
@@ -49,19 +49,19 @@ Följande lista över grupper betraktas som känslig genom Azure ATP. En entitet
 -   Företagsadministratörer
 
 
-## <a name="tagging-sensitive-accounts"></a>Taggning känsliga konton
+## <a name="tagging-sensitive-accounts"></a>Tagga känsliga konton
 
-Förutom dessa grupper kan du tagga grupper eller konton som känslig för att förbättra identifieringar manuellt. Detta är viktigt eftersom vissa Azure ATP identifieringar, till exempel känsliga grupp ändring identifiering och lateral förflyttning sökväg förlitar sig på vilka grupper och konton anses vara känslig. Manuellt kan du tagga andra användare eller grupper som skiftlägeskänslig, till exempel styrelsemedlemmar, chefer, försäljning, etc.-chef och Azure ATP anser dem känslig.
+Förutom dessa grupper kan du tagga grupper eller känsliga konton för att förbättra identifieringarna manuellt. Detta är viktigt eftersom vissa Azure ATP-identifieringar, till exempel känsliga grupp ändring av identifiering och lateral rörelsesökväg är beroende av vilka grupper och konton betraktas som känslig. Manuellt kan du tagga andra användare eller grupper som känsliga, till exempel styrelsemedlemmar, chefer, chef för försäljning, etc. och Azure ATP kan identifiera känslig.
 
-1.  I arbetsytan ATP Azure-portalen klickar du på den **Configuration** kugge i menyraden.
+1.  I Azure ATP-arbetsyteportalen, klickar du på den **Configuration** kugghjulet på menyraden.
 
 2.  Under **identifiering** klickar du på **entitetstaggar**.
 
     ![Azure ATP-entitetstaggar](media/entity-tags.png)
 
-3.  I den **känsliga** avsnittet, skriver du namnet på den **känsliga konton** och **känsliga grupper** och klicka sedan på  **+**  Logga lägga till dem.
+3.  I den **känsliga** Skriv namnet på den **känsliga konton** och **känsliga grupper** och klicka sedan på **+** logga in att lägga till dem.
 
-    ![Azure ATP känsligt konto-exempel](media/sensitive-account-sample.png)
+    ![Exempel på Azure ATP känsligt konto](media/sensitive-account-sample.png)
 
 4. Klicka på **Spara**.
 
@@ -69,4 +69,4 @@ Förutom dessa grupper kan du tagga grupper eller konton som känslig för att f
 ## <a name="see-also"></a>Se även
 
 - [Arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

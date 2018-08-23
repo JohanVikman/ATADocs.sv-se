@@ -2,10 +2,10 @@
 title: Konfigurera vidarebefordran av Windows-händelser i Azure Advanced Threat Protection | Microsoft Docs
 description: Beskriver alternativen för att konfigurera vidarebefordran av Windows-händelser med Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396425"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734699"
 ---
-*Gäller för: Azure Advanced Threat Protection version 1.9*
+*Gäller för: Azure Avancerat skydd*
 
 
 
@@ -63,12 +63,12 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger följande värde och klickar på **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,uppdatera=10*(Till exempel: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,uppdatera=10)
- 
-   ![Konfigurera målprenumerationsbild](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Klicka på **OK**.
-    6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
+    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Konfigurera målprenumerationsbild](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  Klicka på **OK**.
+6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
 
 **Steg 3: Utför följande steg på den fristående Azure ATP-sensorn** 
 
@@ -91,7 +91,7 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
         1. Klicka på **Av logg** och välj **Säkerhet**.
         2. Skriv händelsenumret i fältet **Includes/Excludes Event ID** (Med/utan händelse-ID) och klicka på **OK**. Skriv exempelvis 4776, som i följande exempel:
 
- ![Frågefilterbild](media/wef-4-query-filter.png)
+        ![Frågefilterbild](media/wef-4-query-filter.png)
 
    5.   Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det finns några problem med statusen. 
    6.   Efter några minuter visas Kontrollera att händelserna har du konfigurerat för vidarebefordran i vidarebefordrade händelser på den fristående Azure ATP-sensorn.

@@ -2,10 +2,10 @@
 title: Azure Avancerat skydd av personuppgifter-principen | Microsoft Docs
 description: Innehåller länkar till information om hur du tar bort privat information och personliga data från Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: d64cc0d40acc31e2187305c38a625924a91db06b
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: e4aad8af65c27f351185808585aea37a8a67de42
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948939"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734786"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -30,13 +30,13 @@ ms.locfileid: "36948939"
 
 I Azure Advanced Threat Protection kan du visa identifierbar personliga data från den [arbetsyteportalen](workspace-portal.md) med hjälp av den [sökfältet](workspace-portal.md#search-bar). 
 
-Du kan söka efter en viss användare eller dator och klicka på entiteten kommer du till användaren eller datorn [profilsida](entity-profiles.md). Profilen innehåller omfattande information från Active Directory, inklusive nätverksaktivitet som är relaterade till entiteten och dess historik.
+Sök efter en viss användare eller dator och klicka på entiteten så att du till användaren eller datorn [profilsida](entity-profiles.md). Profilen innehåller omfattande information från Active Directory, inklusive nätverksaktivitet som är relaterade till entiteten och dess historik.
 
 Azure ATP-personuppgifter samlas in från Active Directory via Azure ATP-sensorn och lagras i en backend-databas.
 
 ## <a name="update-personal-data"></a>Uppdatera personliga data 
 
-Eftersom Azure ATP användarens personliga data hämtas från användarobjektet i Active Directory för organisationen, visas alla ändringar i användarprofilen i AD i Azure ATP.
+Azure ATP personliga användardata härleds från användarens objekt i Active Directory för organisationen. Därför återspeglas ändringar som gjorts i användarens profil i organisationen AD i Azure ATP.
 
 
 ## <a name="delete-personal-data"></a>Ta bort personliga data 
@@ -45,7 +45,7 @@ När en användare har tagits bort från organisationens Active Directory, Azure
 
 ## <a name="export-personal-data"></a>Exportera personliga data 
 
-I Azure ATP har du möjlighet att [exportera](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security aviseringsinformation till Excel. Detta kommer också att exportera personliga data. 
+I Azure ATP har du möjlighet att [exportera](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security aviseringsinformation till Excel. Den här funktionen exporterar också personliga data. 
  
 ## <a name="audit-personal-data"></a>Granska personliga data
 
