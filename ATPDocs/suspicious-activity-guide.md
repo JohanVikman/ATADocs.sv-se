@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734846"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709784"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -200,7 +200,7 @@ I den här identifieringen en avisering utlöses när en Kerberos-biljett bevilj
    2.   Är Azure ATP-sensorn som ingår i den här aviseringen en virtuell dator? Om Ja, det nyligen återupptas från ett sparat tillstånd? Om Ja, stänger du aviseringen.
    3.   Om svaret på dessa frågor är Nej, förutsätter att detta är skadliga.
 
-- **Icke-befintligt konto**
+- **Icke-befintligt konto – ny** 
    1.   Ställa följande frågor:
          - Är användaren är en domänanvändare som är kända och giltig? Om Ja, stänger du aviseringen (det var en falsk positiv identifiering).
          - Har du nyligen har lagts till? Om Ja, stänga aviseringen, ändringen kanske inte har synkroniserats ännu.
@@ -476,7 +476,7 @@ I den här identifieringen utlöses en avisering när en dator i nätverket för
    3. Datorn som kör Operativsystemet Windows Server (eller Windows-/ Linux)? En icke-server-dator är inte avsedd för att replikera data.
 Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP.
 
-4. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser, men om den här avisering recurrs måste du aktivera den här granskningen på relevanta domänkontrollanten för vidare studier.
+4. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser som standard, men om den här aviseringen återkommer kan du aktivera den här granskning på relevanta domänkontrollanten för vidare studier.
 
 **Åtgärda**
 
@@ -510,7 +510,7 @@ I den här identifieringen utlöses en avisering när en misstänkt replikerings
    2.  Användare ska få åtkomst till dessa resurser?
    3. Datorn som kör Operativsystemet Windows Server (eller Windows-/ Linux)? En icke-server-dator är inte avsedd för att replikera data.
 Om du har aktiverat Windows Defender ATP-integrering, klickar du på Windows Defender ATP-märket ![Windows Defender ATP-märket](./media/wd-badge.png) att undersöka datorn. Du kan se vilka processer och aviseringar som inträffade ungefär samma tidpunkt som aviseringen i Windows Defender ATP.
-1. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser, men om den här avisering recurrs måste du aktivera den här granskningen på relevanta domänkontrollanten för vidare studier.
+1. Titta på Loggboken för att se [Active Directory-händelser som registreras i loggen för directory services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Du kan använda loggen för att övervaka ändringar i Active Directory. Active Directory registrerar endast kritiska felhändelser som standard, men om den här aviseringen återkommer kan du aktivera den här granskning på relevanta domänkontrollanten för vidare studier.
 
 **Reparation**
 
@@ -546,7 +546,8 @@ En misstänkt tjänst har skapats på en domänkontrollant i din organisation. D
 
 - Implementera mindre privilegierad åtkomst på datorer i domänen så att endast specifika användare behörighet att skapa nya tjänster.
 
-## Misstänkt VPN-anslutning <a name="suspicious-vpn-detection"></a>
+
+## Misstänkt VPN-anslutning – ny <a name="suspicious-vpn-detection"></a>
 
 **Beskrivning**
 
