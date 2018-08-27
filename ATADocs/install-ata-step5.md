@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
+ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30009752"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903931"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -46,9 +46,9 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
   - **Beskrivning**: Ange en beskrivning av ATA Gateway (valfritt).
   - **Portspeglade domänkontrollanter (FQDN)** (krävs för ATA Gateway, detta kan inte ändras för ATA Lightweight Gateway): Ange fullständig FQDN för domänkontrollanten och klicka på plustecknet för att lägga till den i listan. Till exempel  **dc01.contoso.com**
 
-      Följande information gäller servrar som du anger i listan **Domänkontrollanter**:
-      - Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
-      - Minst en domänkontrollant i listan bör vara en global katalog. Detta gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
+    Följande information gäller servrar som du anger i listan **Domänkontrollanter**:
+    - Alla domänkontrollanter vars trafik övervakas via portspegling av ATA Gateway måste anges i listan **Domänkontrollanter**. Om en domänkontrollant inte visas i listan **Domänkontrollanter** kan det hända att identifiering av misstänkta aktiviteter inte fungerar som förväntat.
+    - Minst en domänkontrollant i listan bör vara en global katalog. Detta gör det möjligt för ATA att lösa dator- och användarobjekt i andra domäner i skogen.
 
   - **Avbilda nätverkskort** (krävs):
   - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa ta emot speglad domain controller-trafik.
