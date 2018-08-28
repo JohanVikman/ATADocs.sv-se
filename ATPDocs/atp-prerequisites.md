@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: f1c9e4bc90289e7c7bfb90710ecbc83beb368ba8
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038991"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -125,7 +125,7 @@ Fristående Azure ATP-sensorn kräver minst ett hanteringskort och minst ett avb
 
     > [!IMPORTANT]
     > -   Konfigurera portspegling för avbildningskortet som mål för domänkontrollantens nätverkstrafik. Mer information finns i [konfigurera portspegling](configure-port-mirroring.md). Vanligtvis måste du arbeta med nätverks- eller -teamet att konfigurera portspegling.
-    > -   Konfigurera en statisk icke-dirigerbara IP-adress för din miljö med någon standard-sensor och ingen DNS-serveradresser. Exempel: 1.1.1.1/32. Detta garanterar att avbildningsnätverkskortet kan avbilda maximal mängd trafik och att hanteringsnätverkskortet används för att skicka och ta emot nödvändig nätverkstrafik.
+    > -   Konfigurera en statisk icke-dirigerbara IP-adress (med /32 mask) för miljön utan standardgateway sensorn och ingen DNS-serveradresser. Till exempel 10.10.0.10/32. Detta garanterar att avbildningsnätverkskortet kan avbilda maximal mängd trafik och att hanteringsnätverkskortet används för att skicka och ta emot nödvändig nätverkstrafik.
 
 ### <a name="ports"></a>Portar
 I följande tabell visas de portar som minst kräver fristående Azure ATP-sensorn konfigurerade på Hanteringskortet:

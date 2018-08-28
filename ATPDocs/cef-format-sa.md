@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 840f6cb885d4917039af168d00b7094b8f6567c4
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: 88056e1dd7523b77569241ccbe3a967c4b7a26ef
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734754"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039063"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -74,9 +74,9 @@ Prioriteter:
 ### <a name="suspicious-replication-of-directory-services"></a>Misstänkt replikering av katalogtjänster
 2018-02-21 16:21:22 Auth.Error 192.168.0.220 1 2018-02-21T14:21:13.978554 + 00:00 CENTER CEF 6076 DirectoryServicesReplicationSecu ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | DirectoryServicesReplicationSecurityAlert | Skadlig replikering av katalogtjänster | 10 | start = 2018-02-21T14:19:03.9975656Z app = Drsr shost = KLIENT1 msg = skadlig replikering begäranden utfördes av Användare1, från KLIENT1 mot DC1. resultatet = lyckades externalId = 2006 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/cb95648e-1b6f-4d3b-81b9-7605532787d7
 ### <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Misstänkt replikeringsbegäran (möjlig DcShadow attack)
-07-12-2018 11:18:37 Auth.Error 192.168.0.200 1 2018-07-12T08:18:32.265989 + 00:00 DC1 CEF 3868 DirectoryServicesRogueReplicatio ï» ¿0 | Microsoft | Azure ATP | 2.40.0.0 | DirectoryServicesRogueReplicationSecurityAlert | [FÖRHANDSVERSION] **Misstänkta replikeringsbegäran (möjlig DcShadow attack)**| 10 | start = 2018-07-12T08:17:55.3816102Z **app = replikering aktivitet** shost = KLIENT1 msg = KLIENT1 som inte är en giltig domän Controller i domain1.test.local, skickas ändringar till katalogobjekt på DC1. externalId = 2029 cs1Label = url cs1 =https://contoso-corp.atp.azure.com:13000/securityAlert/1d5d1444-12cf-4db9-be48-39ebc2f51515
+07-12-2018 11:18:37 Auth.Error 192.168.0.200 1 2018-07-12T08:18:32.265989 + 00:00 DC1 CEF 3868 DirectoryServicesRogueReplicatio ï» ¿0 | Microsoft | Azure ATP | 2.40.0.0 | DirectoryServicesRogueReplicationSecurityAlert | **Misstänkta replikeringsbegäran (möjlig DcShadow attack)**| 10 | start = 2018-07-12T08:17:55.3816102Z **app = replikering aktivitet** shost = KLIENT1 msg = KLIENT1 som inte är en giltig domän Controller i domain1.test.local, skickas ändringar till katalogobjekt på DC1. externalId = 2029 cs1Label = url cs1 =https://contoso-corp.atp.azure.com:13000/securityAlert/1d5d1444-12cf-4db9-be48-39ebc2f51515
 ### <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Misstänkt befordran av domänkontrollant (möjlig DcShadow attack)
-07-12-2018 11:18:07 Auth.Error 192.168.0.200 1 2018-07-12T08:18:06.883880 + 00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï» ¿0 | Microsoft | Azure ATP | 2.40.0.0 | DirectoryServicesRoguePromotionSecurityAlert | [FÖRHANDSVERSION] **Misstänkta befordran av domänkontrollant (möjlig DcShadow attack)**| 10 | start = 2018-07-12T08:17:55.4067092Z app = Ldap shost = KLIENT1 msg = KLIENT1 är en dator i domain1.test.local, registreras som en domänkontrollant på DC1. externalId = 2028 cs1Label = url cs1 =https://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53
+07-12-2018 11:18:07 Auth.Error 192.168.0.200 1 2018-07-12T08:18:06.883880 + 00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï» ¿0 | Microsoft | Azure ATP | 2.40.0.0 | DirectoryServicesRoguePromotionSecurityAlert | **Misstänkta befordran av domänkontrollant (möjlig DcShadow attack)**| 10 | start = 2018-07-12T08:17:55.4067092Z app = Ldap shost = KLIENT1 msg = KLIENT1 är en dator i domain1.test.local, registreras som en domänkontrollant på DC1. externalId = 2028 cs1Label = url cs1 =https://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53
 
 ### <a name="malicious-data-protection-private-information-request"></a>Skadlig privat informationsbegäran för dataskydd
 2018-02-21 16:22:08 Auth.Error 192.168.0.220 1 2018-02-21T14:21:54.080266 + 00:00 CENTER CEF 6076 RetrieveDataProtectionBackupKeyS ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | RetrieveDataProtectionBackupKeySecurityAlert | Skadliga Data Protection privat informationsbegäran | 10 | start = 2018-02-21T14:19:41.8382786Z app = LsaRpc shost = KLIENT1 msg = user1 utförs 1 lyckade försök från KLIENT1 att hämta DPAPI-domänens säkerhetskopieringsnyckel från DC1. externalId = 2020 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/b22221d1-764a-4fae-a5ce-e6a0c69dc55a
@@ -108,6 +108,9 @@ Prioriteter:
 
 ### <a name="pass-the-ticket"></a>Pass the Ticket
 2018-02-21 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | PassTheTicketSecurityAlert | Identitetsstöld med Pass-the-Ticket-attack | 10 | start = 2018-02-21T15:02:22.2577465Z app = Kerberos suser = Eugene Jenkins msg = Eugene Jenkins (programvaruutvecklare)'s Kerberos biljetter har stals från Admin-PC till Victim-PC och används för att komma åt krbtgt/domän1. TEST. LOKALA. externalId = 2017 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+
+### <a name="suspicious-vpn-connection"></a>Misstänkt VPN-anslutning
+2018-03-07 13:13:12 Auth.Warning 192.168.0.200 1 2018-07-03T10:13:06.187834 + 00:00 DC1 CEF 2520 AbnormalVpnSecurityAlert ï» ¿0 | Microsoft | Azure ATP | 2.39.0.0 | AbnormalVpnSecurityAlert | Misstänkt VPN-anslutning | 5 | start = 2018-06-30T15:34:05.3887333Z app = VpnConnection suser = user1 msg = user1 som är anslutna till en VPN-anslutning med hjälp av 3 datorer från 3 platser.     externalId = 2025 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com:13000/securityAlert/88c46b0e-372f-4c06-9935-67bd512c4f68
 
 
 ## <a name="see-also"></a>Se även

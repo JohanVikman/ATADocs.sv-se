@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics-arkitektur | Microsoft Docs
 description: Beskriver arkitekturen i Microsoft Advance Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: f2ae9948f6865480797b4a2a8b761c12553728b9
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585060"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039027"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -179,7 +179,7 @@ Om du vill förbättra ATA-identifieringen av Pass-the-Hash, Brute Force, Ändri
 
 -   Konfigurera ATA Gateway för att lyssna efter SIEM-händelser <br>Konfigurera SIEM för att vidarebefordra specifika Windows-händelser till ATA. ATA har stöd för ett antal SIEM-leverantörer. Mer information finns i [Konfigurera händelseinsamling](configure-event-collection.md).
 
--   Konfigurera vidarebefordran av Windows-händelser<br>Du kan också ATA kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 till din ATA-Gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. Mer information om vidarebefordran av Windows-händelser i ATA finns i [Konfigurera vidarebefordran av Windows-händelser](configure-event-collection.md#configuring-windows-event-forwarding). Detta gäller endast för fysisk ATA-gatewayer – inte ATA Lightweight Gateway.
+-   Konfigurera vidarebefordran av Windows-händelser<br>Du kan också ATA kan även hämta händelser genom att konfigurera domänkontrollanterna så att de vidarebefordrar Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 till din ATA-Gateway. Det här är särskilt användbart om du inte har en SIEM eller om din SIEM för närvarande inte stöds av ATA. För att slutföra konfigurationen av vidarebefordran av Windows händelser i ATA finns i [konfigurera Windows-vidarebefordran](configure-event-collection.md#configuring-windows-event-forwarding). Detta gäller endast för fysisk ATA-gatewayer – inte ATA Lightweight Gateway.
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

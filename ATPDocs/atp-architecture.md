@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734803"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039087"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -91,9 +91,6 @@ Azure ATP-arbetsytan kan du hantera följande Azure ATP-funktioner:
 
 |||
 |-|-|
-|Entitetsmottagare|Tar emot entitetsgrupper från alla Azure ATP-sensorer och Azure ATP fristående sensorer.|
-|Nätverksaktivitetsprocessor|Bearbetar alla nätverksaktiviteter inom varje grupp som tas emot. Till exempel utförs matchning mellan de olika Kerberos-stegen från potentiellt olika datorer|
-|Entitetsprofilerare|Profilerar alla unika entiteter enligt trafik och händelser. Till exempel uppdaterar Azure ATP listan över inloggade datorer för varje användarprofil.|
 |Azure ATP-hanteringsportalen|Hanterar din Azure ATP-arbetsyta.|
 |Azure ATP-arbetsyteportalen|Azure ATP-arbetsyta används för att konfigurera Azure ATP och övervaka misstänkta aktiviteter som identifieras av Azure ATP i nätverket. Azure ATP-arbetsyta är inte beroende av Azure ATP-sensorn och körs även om tjänsten Azure ATP-sensorn har stoppats. |
 |Detektorer|Detektorerna använder maskininlärningsalgoritmer och deterministiska regler för att hitta misstänkta aktiviteter och onormalt användarbeteende i nätverket.|
