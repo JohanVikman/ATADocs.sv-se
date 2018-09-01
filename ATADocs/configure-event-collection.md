@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585096"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353104"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -79,11 +79,8 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
     2.  För **Målloggen**, bekräftar du att **vidarebefordrade händelser** har valts. För att ATA ska läsa händelser måste målloggen vara **Vidarebefordrade händelser**. 
     3.  Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
         1.  Klicka på **Lägg till domändator**.
-        2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**. 
- 
-    ![Loggboksbild](media/wef3 event viewer.png)
- 
- 
+        2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**.  
+          ![Loggboksbild](media/wef3 event viewer.png)  
         3.  Klicka på **OK**.
      4. Klicka på **Välj händelser**.
 
