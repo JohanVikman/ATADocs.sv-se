@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 730cf886f199c101ea14a09f177d7682238c2b7e
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 270b84c24ef8b52565ee97c2c15374645eb54a2c
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567720"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469659"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -28,7 +28,7 @@ ms.locfileid: "39567720"
 Lateral förflyttning är när en angripare använder icke-känsliga konton för att få åtkomst till känsliga konton. Detta kan göras med hjälp av metoderna som beskrivs i den [guide för misstänkt aktivitet](suspicious-activity-guide.md). Lateral förflyttning används av angripare för att identifiera och få åtkomst till känsliga konton och datorer i nätverket med hjälp av icke-känsliga konton som delar lagrade logga in autentiseringsuppgifter i konton, grupper och datorer. När en angripare har fått åtkomst kan kan angriparen också dra nytta av data på domänkontrollanterna.
 
 
-## <a name="discovery-your-at-risk-sensitive-accounts"></a>Identifiering av din Projektstatistik känsliga konton
+## <a name="discover-your-at-risk-sensitive-accounts"></a>Identifiera dina Projektstatistik känsliga konton
 
 Följ dessa steg för att identifiera vilka känsliga konton i nätverket är tillgängliga på grund av sin anslutning till icke-känsliga konton, grupper och datorer. 
 

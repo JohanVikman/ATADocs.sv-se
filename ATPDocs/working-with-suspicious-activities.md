@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259216"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469676"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -53,7 +53,7 @@ Varje misstänkt aktivitet har följande information:
 
 ## Förhandsversion av identifieringar<a name="preview-detections"></a>
 
-Azure ATP research-teamet arbetar ständigt på att implementera nya identifieringar för nyligen identifierade attacker. Eftersom Azure ATP är en molnbaserad tjänst, är det möjligt att släppa dessa nya identifieringar snabbt om du vill aktivera Azure ATP-kunder kan dra nytta av nya identifieringar så snart som möjligt.
+Azure ATP research-teamet arbetar ständigt på att implementera nya identifieringar för nyligen identifierade attacker. Eftersom Azure ATP är en molnbaserad tjänst, släpps nya identifieringar snabbt för att aktivera Azure ATP-kunder kan dra nytta av nya identifieringar så snart som möjligt.
 
 Dessa identifieringar är märkta med en symbol i förhandsversion, för att identifiera nya identifieringar och när de är nybörjare på produkten. Om du inaktiverar förhandsversion identifieringar de visas inte i Azure ATP-konsolen – inte i tidslinjen eller i entitetsprofiler - och kommer inte att öppna nya aviseringar.
 
@@ -67,7 +67,7 @@ Inaktivera förhandsgranskning identifieringar:
 2. I den vänstra menyn under förhandsgranskning klickar du på **identifieringar**.
 3. Använd skjutreglaget för att aktivera eller inaktivera förhandsgranskning identifieringar.
  
-![förhandsversion av identifieringar](./media/preview-detections.png) 
+![Förhandsversion av identifieringar](./media/preview-detections.png) 
 
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrera lista med misstänkta aktiviteter
