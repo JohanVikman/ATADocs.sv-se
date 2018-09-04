@@ -60,7 +60,7 @@
 # Felsöka
 ## [Arbeta med granskningsloggar](troubleshoot-audit.md)
 ## [Felsök vanliga problem](troubleshooting-ata-known-errors.md)
-## [Felsöka med loggarna](troubleshooting-ata-using-logs.md)
+## [Felsöka med hjälp av loggarna](troubleshooting-ata-using-logs.md)
 ## [Felsöka med prestandaräknarna](troubleshooting-ata-using-perf-counters.md)
 ## [Felsöka med databasen](troubleshooting-ata-using-ata-database.md)
 ## [Felsöka start av tjänsten](troubleshooting-service-startup.md)

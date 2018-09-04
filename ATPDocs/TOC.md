@@ -45,7 +45,9 @@
 ## [Undersöka laterala förflyttningssökvägar med Azure ATP](use-case-lateral-movement-path.md)
 ## [Undersöka entiteter](investigate-entity.md)
 ## [Förstå entitetsprofiler](entity-profiles.md)
-# Felsökning
+# Felsöka
+## [Kontroll av avancerad granskningsprincip](atp-advanced-audit-policy.md)
 ## [Felsök vanliga problem](troubleshooting-atp-known-issues.md)
+## [Felsöka med hjälp av loggar](troubleshooting-atp-using-logs.md)
 ## [Support och information](atp-support.md)
 ## [Översikt över Azure ATP-beredskap](atp-resources.md)
