@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
-ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
+ms.openlocfilehash: 50a46bad5f138344cc3e62a3fca236e98e71f904
+ms.sourcegitcommit: 6f1406f28c4c2af6a36bc691ebaf4e819adc6b4b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675176"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -53,8 +53,7 @@ När ATA Gateway har installerats gör du följande för att konfigurera instäl
   - **Avbilda nätverkskort** (krävs):
   - Välj de nätverkskort som har konfigurerats som målspeglingskort för en ATA Gateway på en dedikerad server. Dessa ta emot speglad domain controller-trafik.
   - För en ATA Lightweight Gateway bör detta vara alla nätverkskort som används för kommunikation med andra datorer i organisationen.
-
-
+  
   - **Kandidat för domänsynkronisering**: Eventuell ATA Gateway som har konfigurerats som kandidat för domänsynkronisering kan ansvara för synkronisering mellan ATA och Active Directory-domänen. Beroende på domänens storlek på den första synkroniseringen kan ta lite tid och är resurskrävande. Som standard anges endast ATA-gatewayar som kandidater för domänsynkronisering.
    Vi rekommenderar att du inaktiverar eventuella fjärranslutna ATA-gatewayer från att vara kandidater för domänsynkronisering.
    Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Mer information finns i [ATA-arkitektur](ata-architecture.md#ata-lightweight-gateway-features).
