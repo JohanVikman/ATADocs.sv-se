@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics personuppgifter princip | Microsoft Docs
 description: Innehåller länkar till information om hur du tar bort privat information och personliga data från ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 34c758cf96b583c32ad19aa2f8deab7a3bb96392
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 831fceafe3672d916d18801eb1273a62a81c84cd
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948956"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743339"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -52,7 +52,7 @@ Använd ATA GDPR databasen skript för att ta bort entiteter och ta bort entitet
 
 Den här åtgärden tar permanent bort en entitet från ATA-databasen. Om du vill köra det här kommandot ger kommandonamnet `deleteAccount`, och `SamName`, `UpnName` eller `GUID` på datorn eller användarnamn som du vill ta bort. Exempel: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteAccount,admin1@contoso.com;” GDPR.js `
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
 Kör det helt tar bort entiteten med UPN admin1@contoso.com från databasen tillsammans med alla aktiviteter och säkerhetsaviseringar som är associerade med entiteten. 
 
@@ -64,7 +64,7 @@ Om du vill köra det här kommandot ger kommandonamnet `deleteOldData`, och anta
 
 Exempel: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteOldData,30;” GDPR.js`
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 
 Det här skriptet tar bort alla data för alla enhetsaktiviteter och säkerhetsaviseringar från databasen som är äldre än 30 dagar. Du behåller endast de senaste 30 dagarna data.
 

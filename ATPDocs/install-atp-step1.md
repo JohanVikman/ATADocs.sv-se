@@ -1,11 +1,11 @@
 ---
 title: Installera Azure Advanced Threat Protection – steg 1 | Microsoft Docs
-description: Första steget för att installera Azure ATP innebär att du skapar en arbetsyta för din Azure ATP-distribution.
+description: Första steget för att installera Azure ATP innebär att du skapar instansen för din Azure ATP-distribution.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 9ba476c579de3c468ce9c8ca09e8b8bab4fa9e1d
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799084"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743322"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -28,30 +28,30 @@ ms.locfileid: "37799084"
 >[!div class="step-by-step"]
 [Steg 2 »](install-atp-step2.md)
 
-Den här installationsproceduren innehåller anvisningar för att skapa och hantera en arbetsyta i hanteringsportalen för Azure ATP-arbetsytan. Information om Azure ATP-arkitekturen finns i [Azure ATP-arkitektur](atp-architecture.md).
+Den här installationsproceduren innehåller anvisningar för att skapa och hantera din Azure ATP-instans. Information om Azure ATP-arkitekturen finns i [Azure ATP-arkitektur](atp-architecture.md).
 
-I Azure ATP har du möjlighet att hantera och övervaka flera arbetsytor. Detta är särskilt användbart om du vill skapa en demo-arbetsyta och en test-arbetsyta där du kan POC Azure ATP innan den distribueras ut till hela organisationen. Detta krävs också stöd för distributioner med flera skogar. En enda arbetsyta kan endast övervaka flera domäner från en enda skog. 
+I Azure ATP får du en enda arbetsyta eller en instans så att du kan hantera flera skogar från en enda glasruta. 
 
 > [!NOTE]
 > För närvarande distribueras Azure ATP-datacenter i Europa, Nordamerika/centrala America/Karibien och Asien.
 
-## <a name="step-1-enter-the-workspace-management-portal"></a>Steg 1. Ange arbetsytehanteringsportalen
+## <a name="step-1-enter-the-management-portal"></a>Steg 1. Ange hanteringsportalen
 
 När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du fortsätta med skapa Azure ATP-arbetsyta.
 
 > [!NOTE]
->Du måste vara en global administratör eller säkerhetsadministratör på den klienten för att komma åt arbetsytehanteringsportalen.
+>Du måste vara en global administratör eller säkerhetsadministratör på den klienten för att komma åt hanteringsportalen.
 
 
-1.  Ange [Azure ATP-arbetsyteportalen](https://portal.atp.azure.com).
+1.  Ange [Azure ATP-portal](https://portal.atp.azure.com).
 
 2.  Logga in med ditt Azure Active Directory-användarkonto.
 
-## <a name="step-2-create-a-workspace"></a>Steg 2. Skapa en arbetsyta
+## <a name="step-2-create-your-workspace"></a>Steg 2. Skapa din arbetsyta
 
 1. Klicka på **Skapa arbetsyta**.
 
-2. I den **Skapa ny arbetsyta** dialogrutan namnge din arbetsyta, bestämmer om det är din primära arbetsytan eller inte och väljer en **Geoplats** för ditt datacenter. Endast en arbetsyta kan anges som primär. Ange en arbetsyta som primär påverkar integreringar – du kan bara integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. Du kan ändra vilken arbetsyta är primär senare, men för att kunna göra det behöver du måste ta bort alla integreringar som redan angetts för den aktuella primära arbetsytan.
+2. I den **Skapa ny arbetsyta** dialogrutan namnge din arbetsyta och välj en **Geoplats** för ditt datacenter. Endast en arbetsyta kan anges som primär. Ange en arbetsyta som primär påverkar integreringar – du kan bara integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. Du kan ändra vilken arbetsyta är primär senare, men för att kunna göra det behöver du måste ta bort alla integreringar som redan angetts för den aktuella primära arbetsytan.
  > [!NOTE]
  > När du har valt en geografisk plats, kan du inte ändra den.
     ![Azure ATP-arbetsyta](media/create-workspace.png)
@@ -61,7 +61,7 @@ När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du
  > [!NOTE]
  > Du måste logga in med en användare som har tilldelats rätt Azure ATP-roll att komma åt Azure ATP-arbetsyteportalen för att du har loggat in till Azure ATP. Mer information om rollbaserad åtkomstkontroll (RBAC) i Azure ATP finns [arbeta med Azure ATP-rollgrupper](atp-role-groups.md).
 
-4. Klicka på namnet på den nya arbetsyteåtkomst Azure ATP-arbetsyteportalen för den arbetsytan.
+4. Klicka på namnet på den nya arbetsytan för att komma åt Azure ATP-arbetsyteportalen för den arbetsytan.
 
     ![Azure ATP-arbetsytor](media/atp-workspaces.png)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/30/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 657a3488e967979555c5d5e5d48ac02b6cc32a04
-ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
+ms.openlocfilehash: 91e20af8e0bfedd626ee4625b0a5ec5647a41f97
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469635"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743407"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -28,13 +28,15 @@ ms.locfileid: "43469635"
 Publicerad 2 September 2018
 
 - **Azure ATP avancerade Audit Principkontrollen**
-<br> Azure Advanced Threat Protection nu kontrollerar dina domänkontrollantens befintliga avancerade granskningsprinciper och rekommenderar principändringar att ge maximal täckning för Azure ATP-tjänsten för din organisation. <br> 
+ 
+Azure Advanced Threat Protection nu kontrollerar dina domänkontrollantens befintliga avancerade granskningsprinciper och rekommenderar principändringar att ge maximal täckning för Azure ATP-tjänsten för din organisation. 
+
 **Den här nya kontrollen kan du:**
   -  Identifiera händelser som saknas i din Windows-händelseloggar som inte omfattas av din Azure ATP-täckning.
   -  Kontrollera inställningarna för perfekt och göra ändringar baserat på health avisering rekommendationerna.
   -  En enda aggregerade hälsovarning kommer att utfärdas för alla dina domänkontrollanter inklusive åtgärdsförslag (om/när det behövs).
 
-Läs hur du [konfigurera avancerade granskningsprinciper](atp-advanced-audit-policy.md)att se till att din dator har konfigurerats korrekt. 
+Läs hur du [konfigurera avancerade granskningsprinciper](atp-advanced-audit-policy.md) att se till att din dator har konfigurerats korrekt. 
 - Den här versionen innehåller korrigeringar och förbättringar för flera problem.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP-versionen 2.46
