@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
-ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
+ms.openlocfilehash: a20353d8db038ccdeef81390631f7ea84557b13d
+ms.sourcegitcommit: d9e7c108bd2e070eec583cd57cb5d45d19e4a0f4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353104"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44045955"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -56,7 +56,7 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
 2.  Från en kommandotolk, ange *gpedit.msc*.
 3.  Expandera **Datorkonfiguration > Administrativa mallar > Windows-komponenter > Vidarebefordran av händelse**
 
-![Bild av gruppredigerare för lokal princip](media/wef 1 local group policy editor.png)
+![Bild av gruppredigerare för lokal princip](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Dubbelklicka på **konfigurera målprenumerationshanterare**.
    
@@ -64,7 +64,7 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
     2.  Under **alternativ**, klickar du på **visa**.
     3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-    ![Konfigurera målprenumerationsbild](media/wef 2 config target sub manager.png)
+    ![Konfigurera målprenumerationsbild](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Klicka på **OK**.
     6.  Från en upphöjd kommandotolk skriver du: *gpupdate/force*. 
