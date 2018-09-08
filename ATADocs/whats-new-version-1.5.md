@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 0639a1732d542f570b988402d2de72e2519cedcb
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018277"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165872"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nyheter i ATA version 1.5
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
@@ -48,10 +48,10 @@ När du har uppdaterat ATA-distributionen till ATA version 1.5 visas följande f
 
 ![ATA GW-fel](media/ata-install-error.png)
 
-<b>Lösning:</b> Skicka ett e-postmeddelande till <ataeval@microsoft.com> för att begära lösningssteg.
+<b>Lösning:</b> skicka ett e- <ataeval@microsoft.com> att begära Lösningssteg.
 ### <a name="deployment"></a>distribution
 Mappen som anges för "Datasökväg för databasen" och "Journalsökväg för databasen" måste vara tom (inga filer eller undermappar).
-Distributionen inte gå vidare om det inte är tom.
+Om den inte är tom fortskrider inte distributionen.
 
 ### <a name="installation-from-zip-file"></a>Installation från ZIP-fil
 Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från zip-filen eller misslyckas installationen.

@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b516c3179e5a870b022bd4c890dcd4099adcb67
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 5414539edca088b49d16dc03c17dfe0ee0a2bfc5
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009680"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125880"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -50,25 +50,25 @@ På ATA Gateway-servern utför du följande steg.
 
 3.  På sidan **Välkommen** väljer du språk och klickar på **Nästa**.
 
-4.  Installationsguiden kontrollerar automatiskt du om servern är en domänkontrollant eller en dedikerad server. Om det är en domänkontrollant, ATA Lightweight Gateway installeras, om det är en dedikerad server ATA-gatewayen har installerats. 
+4.  Installationsguiden kontrollerar automatiskt om servern är en domänkontrollant eller en dedikerad server. Om det är en domänkontrollant, ATA Lightweight Gateway har installerats, om det är en dedikerad server, ATA Gateway har installerats. 
     
-    För en ATA Gateway, till exempel visas följande skärm så att du vet att en ATA Gateway kommer att installeras på en dedikerad server:
+    För en ATA-Gateway visas exempelvis följande skärm så att du vet att en ATA Gateway kommer att installeras på din dedikerade server:
     
     ![ATA Gateway-installation](media/ata-gw-install.png) Klicka på **Nästa**.
 
     > [!NOTE] 
-    > Om domänkontrollanten eller dedicerad server inte uppfyller minimikraven för installationen, visas ett varningsmeddelande. Detta förhindrar inte att du klickar på **Nästa** och fortsätter med installationen. Det kan vara rätt alternativ för installation av ATA i små testa labbmiljö där du inte behöver lika mycket utrymme för lagring av data. I produktionsmiljöer, rekommenderas det att arbeta med ATA:s guide för [kapacitetsplanering](ata-capacity-planning.md) för att se till att dina domänkontrollanter eller dedikerade servrar uppfyller de nödvändiga kraven.
+    > Om domänkontrollanten eller dedikerad server inte uppfyller de lägsta maskinvarukraven för installation, får du en varning. Detta förhindrar inte att du klickar på **Nästa** och fortsätter med installationen. Det kan vara rätt alternativ för installation av ATA i en liten labbtestmiljö där du inte behöver lika mycket utrymme för lagring av data. I produktionsmiljöer, rekommenderas det att arbeta med ATA:s guide för [kapacitetsplanering](ata-capacity-planning.md) för att se till att dina domänkontrollanter eller dedikerade servrar uppfyller de nödvändiga kraven.
 
 4.  Under **Configure the Gateway** (Konfigurera gatewayen) anger du följande information baserat på din miljö:
 
     ![Bild av ATA Gateway-konfiguration](media/ata-gw-configure.png)
 
     > [!NOTE]
-    > När du distribuerar ATA Gateway, behöver du inte ange autentiseringsuppgifter. Om ATA Gateway-installationen misslyckas att hämta dina autentiseringsuppgifter med hjälp av enkel inloggning (t.ex, detta kan inträffa om ATA Center inte är i domänen, om ATA Gateway inte i domänen kan du inte har administratörsautentiseringsuppgifter för ATA), du uppmanas att ange autentiseringsuppgifter, som i följande skärmbild: 
+    > När du distribuerar ATA Gateway, behöver du inte ange autentiseringsuppgifter. Om installationen av ATA Gateway inte kan hämta dina autentiseringsuppgifter med hjälp av enkel inloggning (t.ex, det kan hända om ATA Center inte är i domänen, om ATA Gateway inte är i domänen, har du inte administratörsautentiseringsuppgifter för ATA), uppmanas du att ange autentiseringsuppgifter, som i följande skärmbild: 
 
   ![Ange autentiseringsuppgifter för ATA gateway](media/ata-install-credentials.png)
 
-   - Installationssökväg: Detta är den plats där ATA Gateway har installerats. Som standard är sökvägen %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Lämna standardvärdet.
+   - Installationssökväg: Det här är den plats där ATA Gateway är installerad. Som standard är sökvägen %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Lämna standardvärdet.
     
 5. Klicka på **Installera**. Följande komponenter installeras och konfigureras under installationen av ATA Gateway:
 
@@ -92,10 +92,10 @@ På ATA Gateway-servern utför du följande steg.
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Översikt över ATA-distribution](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Se även
-- [ATA POC Distributionsguide](http://aka.ms/atapoc)
+- [ATA POC-Distributionsguide](http://aka.ms/atapoc)
 - [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

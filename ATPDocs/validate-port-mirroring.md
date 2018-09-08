@@ -6,35 +6,35 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3d9d35d31eee7ae46800e0547f18330d66e90cc
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: a799d87c2657836594e290812ac6cd6e08f09042
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444611"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125931"
 ---
-*Gäller för: Azure Advanced Threat Protection*
+*Gäller för: Azure Avancerat skydd*
 
 
 
 # <a name="validate-port-mirroring"></a>Verifiera portspegling
 > [!NOTE] 
-> Den här artikeln gäller bara om du distribuerar distribuera Azure ATP fristående Sensor i stället för Azure ATP Sensor. Om du behöver använda Azure ATP Sensor finns [att välja rätt sensor för din distribution](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Den här artikeln är bara relevant om du distribuerar distribuera Azure ATP fristående sensorn i stället för Azure ATP-sensorn. För att avgöra om du behöver använda Azure ATP-sensorn, se [välja rätt sensorn för din distribution](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
-Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. För Azure ATP ska fungera korrekt, kunna Azure ATP fristående sensor Se trafiken till och från domänkontrollanten. Den huvudsakliga datakälla som används av Azure ATP är djup paketinspektion av nätverkstrafiken till och från domänkontrollanterna. För Azure ATP att se nätverkstrafiken, måste portspegling konfigureras. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
+Följande steg vägleder dig genom processen för att verifiera att portspegling har konfigurerats korrekt. För Azure ATP ska fungera korrekt, kunna fristående Azure ATP-sensorn Se trafik till och från domänkontrollanten. Den huvudsakliga datakälla som används av Azure ATP är djup paketinspektion för nätverkstrafiken till och från domänkontrollanterna. För Azure ATP att se nätverkstrafiken måste portspegling vara konfigurerad. Portspegling kopierar trafiken från en port (källport) till en annan port (målport).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Validera portspegling med Net Mon
-1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på den fristående ATP-sensor som du vill validera.
+1.  Installera [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) på fristående ATP-sensorn som du vill validera.
 
     > [!IMPORTANT]
-    > Om du väljer att installera Wireshark för att verifiera portspegling, starta om Azure ATP fristående sensor när valideringen.
+    > Om du väljer att installera Wireshark för att verifiera portspegling, startar du om tjänsten Azure ATP fristående sensorn efter valideringen.
 
 2.  Öppna Network Monitor och skapa en ny avbildningsflik.
 
@@ -62,6 +62,6 @@ Följande steg vägleder dig genom processen för att verifiera att portspegling
 
 ## <a name="see-also"></a>Se även
 
-- [Konfigurera vidarebefordran av händelser](configure-event-forwarding.md)
+- [Konfigurera vidarebefordran](configure-event-forwarding.md)
 - [Konfigurera portspegling](configure-port-mirroring.md)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

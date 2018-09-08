@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 4/29/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fdc83443c30db4278ccffde35e070e8b17b423bb
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 21841082a619a220e22d93f895f638162d4450fd
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166331"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -47,14 +47,14 @@ Varje misstänkt aktivitet har följande information:
 
 > [!NOTE]
 > -   När du håller muspekaren över en användare eller dator visas en entitetsminiprofil som innehåller ytterligare information om entiteten och som innehåller antalet misstänkta aktiviteter som entiteten är kopplad till.
-> -   Om du klickar på en enhet går du till entitetsprofilen för användaren eller datorn.
+> -   Om du klickar på en entitet kommer du till entitetsprofilen för användaren eller datorn.
 
 ![Tidslinjebild för misstänkta aktiviteter i ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrera lista med misstänkta aktiviteter
 Filtrera listan med misstänkta aktiviteter:
 
-1.  I den **filtrera efter** till vänster på skärmen väljer du något av följande alternativ: **alla**, **öppna**, **stängd**, eller **Ignorerade**.
+1.  I den **filtrera efter** fönstret till vänster på skärmen väljer du något av följande alternativ: **alla**, **öppna**, **stängd**, eller **Ignorerade**.
 
 2.  Om du vill filtrera listan ytterligare väljer **hög**, **medel**, eller **låg**.
 
@@ -76,7 +76,7 @@ Filtrera listan med misstänkta aktiviteter:
 
 
 ## <a name="remediating-suspicious-activities"></a>Åtgärda misstänkta aktiviteter
-Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktiviteten aktuella status och välja något av följande **öppna**, **Suppressed**, **stängd**, eller **bort**.
+Du kan ändra status för en misstänkt aktivitet genom att klicka på den misstänkta aktiviteten aktuella status och välja något av följande **öppna**, **ignorerad**, **stängd**, eller **bort**.
 Du gör det genom att klicka på de tre punkterna i det övre högra hörnet för en specifik misstänkt aktivitet så att listan över tillgängliga åtgärder visas.
 
 ![ATA-åtgärder för misstänkta aktiviteter](./media/sa-actions.png)
@@ -85,14 +85,14 @@ Du gör det genom att klicka på de tre punkterna i det övre högra hörnet fö
 
 -   **Öppna**: Alla nya misstänkta aktiviteter visas i den här listan.
 
--   **Stäng**: används för att spåra misstänkta aktiviteter som du identifierat, undersökt och åtgärdat för begränsade.
+-   **Stäng**: används för att spåra misstänkta aktiviteter som du har identifierat, undersökt och åtgärdat för begränsade.
 
     > [!NOTE]
-    > Om samma aktivitet identifieras igen under en kort tidsperiod, kan ATA öppna en stängd aktivitet.
+    > Om samma aktivitet identifieras igen inom en kort tidsperiod, kan ATA öppna en stängd aktivitet.
 
--   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär som om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen slutar i sju dagar och sedan visas igen, du meddelas igen.
+-   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Det innebär som om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, du aviseras igen.
 
-- **Ta bort**: Om du tar bort en avisering, tas bort från systemet från databasen och du kommer inte att kunna återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+- **Ta bort**: Om du tar bort en avisering tas bort från systemet och från databasen och du kommer inte att återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
 
 - **Undanta**: Möjligheten att undanta en entitet så att den inte genererar fler aviseringar av en viss typ. Du kan till exempel ange att ATA ska undanta en specifik entitet (användare eller dator) så att den inte utlöser aviseringar igen för en viss typ av misstänkt aktivitet, t.ex. en specifik administratör som kör fjärrkod eller ett säkerhetsgenomsökningsverktyg som utför en DNS-rekognosering. Förutom att lägga till undantag direkt för den misstänkta aktiviteten när den identifieras på tidslinjen kan du även gå till **Undantag** från sidan Konfiguration och, för varje misstänkt aktivitet, manuellt lägga till och ta bort undantagna enheter eller undernät (till exempel för Pass-the-Ticket). 
 > [!NOTE]
@@ -100,10 +100,10 @@ Du gör det genom att klicka på de tre punkterna i det övre högra hörnet fö
 
 
 ## <a name="related-videos"></a>Relaterade videor
-- [Koppla säkerhets-community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+- [Koppla säkerhets-communityn](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Se även
-- [ATA misstänkt aktivitet playbook](http://aka.ms/ataplaybook)
+- [Spelboken för ATA-misstänkt aktivitet](http://aka.ms/ataplaybook)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Ändra ATA-konfiguration](modifying-ata-center-configuration.md)

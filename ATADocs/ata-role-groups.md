@@ -6,35 +6,35 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3fdee9a98adaaacfa354a4ce95ad45c12b9be548
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: b9779476187d22e8fdd35c0958b52de527b3830c
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010201"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126526"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
 
 # <a name="ata-role-groups"></a>ATA-rollgrupper
 
-Rollgrupper kan åtkomsthantering för ATA. Genom att använda rollgrupper kan du särskilja uppgifter inom din säkerhetsgrupp och endast ge den mängd åtkomst som användare behöver att utföra sitt arbete. Den här artikeln förklarar åtkomsthantering och ATA-rollauktorisering, och hjälper dig att komma igång med rollgrupper i ATA.
+Rollgrupper aktivera åtkomsthantering för ATA. Genom att använda rollgrupper kan du särskilja uppgifter inom din säkerhetsgrupp och endast ge den mängd åtkomst som användare behöver att utföra sitt arbete. Den här artikeln förklarar åtkomsthantering och ATA-rollauktorisering, och hjälper dig att komma igång med rollgrupper i ATA.
 
 > [!NOTE]
 > En lokal administratör i ATA Center blir automatiskt en Microsoft Advanced Threat Analytics-administratör.
 
 ## <a name="types-of-ata-role-groups"></a>Typer av ATA-rollgrupper 
 
-ATA introducerar tre typer av rollen grupp: ATA administratörer, ATA-användare och ATA-visningsprogram. Följande tabell beskriver vilken typ av åtkomst som är tillgänglig i ATA per roll. Beroende på vilken roll du är tilldela olika skärmar och menyn Alternativ i ATA inte tillgängliga på följande sätt:
+ATA introducerar tre typer av rollgrupper: ATA-administratörer, ATA-användare och ATA-visningsprogram. Följande tabell beskriver vilken typ av åtkomst som är tillgänglig i ATA per roll. Beroende på vilken roll du tilldela olika skärmar och menyn Alternativ i ATA finns inte, enligt följande:
 
 |Aktivitet |Administratörer för Microsoft Advanced Threat Analytics|Användare av Microsoft Advanced Threat Analytics|Visningsprogram för Microsoft Advanced Threat Analytics|
 |----|----|----|----|
@@ -51,7 +51,7 @@ ATA introducerar tre typer av rollen grupp: ATA administratörer, ATA-användare
 |Visa aviseringar och misstänkta aktiviteter|Tillgänglig|Tillgänglig|Tillgänglig|
 
 
-När användare försöker komma åt en sida som inte är tillgänglig för sin roll-grupp måste omdirigeras till sidan ATA obehörig. 
+När användare försöker komma åt en sida som inte är tillgänglig för deras rollgrupp, omdirigeras till sidan ATA obehörig. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>Lägg till\ta bort användare – ATA-rollgrupper 
 

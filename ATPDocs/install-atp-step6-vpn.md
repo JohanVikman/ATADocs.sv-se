@@ -1,25 +1,26 @@
 ---
-title: Installera Azure Advanced Threat Protection - steg 6 | Microsoft Docs
-description: "I det här steget av installationen ATP integrera din VPN."
-keywords: 
+title: Installera Azure Advanced Threat Protection – steg 6 | Microsoft Docs
+description: I det här steget för att installera ATP integrera du ditt VPN.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
-ms.topic: get-started-article
-ms.prod: 
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d29210983f3f9f879b462ef760d0b3fe6e53cd5d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126135"
 ---
-*Gäller för: Azure Advanced Threat Protection*
+*Gäller för: Azure Avancerat skydd*
 
 
 
@@ -31,9 +32,9 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="step-6-integrate-vpn"></a>Steg 6. Integrera VPN
 
-Azure Advanced Threat Protection (ATP) kan samla in redovisningsinformation från VPN-lösningar. När konfigurerats omfattar användarens profilsida information från VPN-anslutningar, till exempel IP-adresser och platser där anslutningar har sitt ursprung. Detta kompletterar undersökningsprocessen ger ytterligare information om användaren som en ny identifiering för onormalt VPN-anslutningar. Anrop att matcha en extern IP-adress till en plats är anonym. Ingen personligt ID skickas i det här anropet.
+Azure Advanced Threat Protection (ATP) kan samla in redovisningsinformation från VPN-lösningar. När konfigurerad, omfattar information från VPN-anslutningar, till exempel IP-adresser och platser där anslutningar har sitt ursprung i användarens profilsida. Detta kompletterar undersökningsprocessen genom att tillhandahålla ytterligare information om användaren som en ny identifiering av onormal VPN-anslutningar. Anropet för att lösa en extern IP-adress till en plats är anonyma. Ingen personligt ID skickas i det här anropet.
 
-Azure ATP integreras med din VPN-lösning genom att lyssna på RADIUS-redovisningshändelser som vidarebefordras till Azure ATP sensorer. Den här mekanismen baseras på standard RADIUS-redovisning ([RFC 2866](https://tools.ietf.org/html/rfc2866)), och följande leverantörer stöds:
+Azure ATP kan integreras med din VPN-lösning genom att lyssna på RADIUS-redovisningshändelser som vidarebefordras till Azure ATP-sensorer. Den här mekanismen baseras på standard RADIUS-redovisning ([RFC 2866](https://tools.ietf.org/html/rfc2866)), och följande VPN-leverantörer stöds:
 
 -   Microsoft
 -   F5
@@ -44,10 +45,10 @@ Azure ATP integreras med din VPN-lösning genom att lyssna på RADIUS-redovisnin
 
 Om du vill aktivera VPN-integrering, se till att ange följande parametrar:
 
--   Öppna porten UDP 1813 på Azure ATP fristående sensorer och Azure ATP sensor.
+-   Öppna port 1813 med UDP på din Azure ATP fristående sensorer och Azure ATP-sensorn.
 
 
-Exemplet nedan använder Microsoft Routing and Remote Access Server (RRAS) för att beskriva den VPN-konfigurationen.
+I exemplet nedan används Microsoft Routing and Remote Access Server (RRAS) för att beskriva konfigurationsprocessen VPN.
 
 Om du använder en VPN-lösning från tredje part dokumentationen sina anvisningar om hur du aktiverar RADIUS-redovisning.
 
@@ -56,35 +57,35 @@ Om du använder en VPN-lösning från tredje part dokumentationen sina anvisning
 Utför följande steg på RRAS-servern.
  
 1.  Öppna konsolen Routning och fjärråtkomst.
-2.  Högerklicka på namnet på servern och på **egenskaper**.
-3.  I den **säkerhet** fliken, under **redovisning providern**väljer **RADIUS-redovisning** och på **konfigurera**.
+2.  Högerklicka på servernamnet och klickar på **egenskaper**.
+3.  I den **Security** fliken, under **redovisning providern**väljer **RADIUS-redovisning** och klicka på **konfigurera**.
 
-    ![RADIUS-installationen](./media/radius-setup.png)
+    ![RADIUS-konfiguration](./media/radius-setup.png)
 
-4.  I den **Lägg till RADIUS-Server** fönster, Skriv den **servernamn** närmaste Azure ATP fristående sensor eller Azure ATP sensor. Under **Port**, kontrollera standard 1813 har konfigurerats. Klicka på **ändra** och Skriv en ny delad hemlig sträng med alfanumeriska tecken som du kan komma ihåg. Du måste fylla i det senare i Azure ATP konfigurationen. Kontrollera den **skicka RADIUS-konto och redovisning inaktivera meddelanden** och klicka sedan på **OK** på alla öppna dialogrutor.
+4.  I den **Lägg till RADIUS-Server** fönster och skriver den **servernamn** närmaste Azure ATP fristående sensorn eller Azure ATP-sensorn. Under **Port**, kontrollera standard 1813 har konfigurerats. Klicka på **ändra** och Skriv en ny delad hemlighet sträng med alfanumeriska tecken som du kan komma ihåg. Du måste fylla i det senare i din Azure ATP-konfiguration. Kontrollera den **skicka RADIUS-konto och redovisning inaktivera meddelanden** rutan och klicka sedan på **OK** på alla öppna dialogrutor.
  
-     ![VPN-konfiguration](./media/vpn-set-accounting.png)
+     ![VPN-konfigurationen](./media/vpn-set-accounting.png)
      
 ### <a name="configure-vpn-in-atp"></a>Konfigurera VPN i ATP
 
-Azure ATP samlar in VPN som hjälper profil platser från vilka datorer ansluta till nätverket och för att kunna identifiera onormalt VPN-anslutningar.
+Azure ATP samlar in VPN-data som hjälper till att profilen platser från vilka datorer ansluta till nätverket och för att kunna identifiera misstänkt VPN-anslutningar.
 
 Konfigurera VPN-data i ATP:
 
-1.  I arbetsytan ATP Azure-portalen klickar du på kugghjulet för konfiguration och sedan **VPN**.
+1.  I Azure ATP-arbetsyteportalen, klickar du på kugghjulet för konfiguration och sedan **VPN**.
  
 
 2.  Aktivera **RADIUS-redovisning**, och Skriv den **delad hemlighet** du tidigare konfigurerat på RRAS VPN-servern. Klicka sedan på **Spara**.
  
 
-  ![Konfigurera Azure ATP VPN](./media/atp-vpn-radius.png)
+  ![Konfigurera Azure ATP-VPN](./media/atp-vpn-radius.png)
 
 
-När den är aktiverad, port alla Azure ATP fristående sensorer och sensorer lyssnar på 1813 för RADIUS-redovisningshändelser. 
+När detta är aktiverat kommer port alla Azure ATP fristående sensorer och sensorer lyssnar på 1813 för RADIUS-redovisningshändelser. 
 
-Installationen har slutförts. 
+Din konfiguration har slutförts. 
 
-När Azure ATP-sensor tar emot VPN-händelser och skickar dem till Azure ATP-Molntjänsten för bearbetning, entitetsprofilen visar distinkta komma åt VPN-platser och aktiviteter i profilen visar platser.
+När Azure ATP-sensorn tar emot VPN-händelser och skickar dem till Azure ATP-Molntjänsten för bearbetning, entitetsprofilen visar distinkta används VPN-platser och aktiviteter i profilen visar platser.
 
 
 
@@ -99,4 +100,4 @@ När Azure ATP-sensor tar emot VPN-händelser och skickar dem till Azure ATP-Mol
 - [Azure ATP-storleksverktyget](http://aka.ms/aatpsizingtool)
 - [Konfigurera händelseinsamling](configure-event-collection.md)
 - [Krav för Azure ATP](atp-prerequisites.md)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

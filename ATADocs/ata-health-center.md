@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0c8eb2c368a81a64e62f79b9fb606b9fc04efd8b
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 7bf91f258d1eaf9c83cc610fc43dfa52a2da3e6b
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009793"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166909"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 # <a name="working-with-ata-system-health-and-events"></a>Arbeta med systemhälsa och händelser i ATA
@@ -36,18 +36,18 @@ Med ATA Health Center får du reda på att det finns ett problem genom att en av
 ### <a name="managing-ata-health"></a>Hantera ATA-hälsa
 Du kan kontrollera systemets övergripande hälsa genom att klicka på Health Center-ikonen på menyraden ![ATA Health Center-ikon](media/ATA-red-dot.png)
 
--   Alla öppna aviseringar kan hanteras genom att ange dem **Stäng**, **utelämna**, eller **ta bort** genom att klicka på de tre punkterna i hörnet av aviseringen och göra valet.
+-   Alla öppna aviseringar kan hanteras genom att ange dem till **Stäng**, **utelämna**, eller **ta bort** genom att klicka på de tre punkterna i hörnet av aviseringen och ditt val.
 
 -   **Öppna**: Alla nya misstänkta aktiviteter visas i den här listan.
 
--   **Stäng**: används för att spåra misstänkta aktiviteter som du identifierat, undersökt och åtgärdat för begränsade.
+-   **Stäng**: används för att spåra misstänkta aktiviteter som du har identifierat, undersökt och åtgärdat för begränsade.
 
     > [!NOTE]
     > ATA kan öppna en stängd aktivitet om samma aktivitet identifieras igen inom en kort tidsperiod.
 
--   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen slutar i sju dagar och sedan visas igen, du meddelas igen.
+-   **Ignorera**: Används för att ignorera en aktivitet tillsvidare, så att du bara aviseras igen om det finns en ny instans. Om det finns en liknande avisering ATA inte öppna den igen. Men om aviseringen stoppas under sju dagar, och sedan registreras igen, du aviseras igen.
 
-- **Ta bort**: Om du tar bort en avisering, tas bort från systemet från databasen och du kommer inte att kunna återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
+- **Ta bort**: Om du tar bort en avisering tas bort från systemet och från databasen och du kommer inte att återställa den. När du klickar på Ta bort kan du ta bort alla misstänkta aktiviteter av samma typ.
 
 
 

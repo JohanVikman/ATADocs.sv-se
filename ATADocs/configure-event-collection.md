@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a20353d8db038ccdeef81390631f7ea84557b13d
-ms.sourcegitcommit: d9e7c108bd2e070eec583cd57cb5d45d19e4a0f4
+ms.openlocfilehash: 50d23f23432305c47ff14b8a1d68e204de9e32d7
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44045955"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125812"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 

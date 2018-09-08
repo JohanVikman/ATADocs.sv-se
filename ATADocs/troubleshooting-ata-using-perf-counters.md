@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 78f23d3f2552ed7ddc086be2620fbb627b676722
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 9952eed3557616a63cf137e65d1e968123340924
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010439"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166671"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -34,7 +34,7 @@ Mer information om flödet av interna ATA-komponenter finns i [ATA-arkitektur](a
 
 2.  Slutligen börjar föregående komponent öka **sin** egen storlek tills den blockerar komponenten före den från att skicka fler entiteter.
 
-3.  Detta inträffar ända tillbaka till NetworkListener-komponenten, som förlorar trafik när den inte längre kan vidarebefordra entiteter.
+3.  Detta inträffar ända tillbaka till NetworkListener-komponenten som förlorar trafik när den inte längre kan vidarebefordra entiteter.
 
 
 ## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Hämta prestandaövervakningsfiler för felsökning
@@ -69,13 +69,13 @@ Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medvete
 
 > [!NOTE]
 > -   Tidsinställda räknare anges i millisekunder.
-> -   Ibland är det mer praktiskt att övervaka hela listan med räknare med hjälp av den **rapporten** kurva typ (exempel: realtidsövervakning av alla räknare)
+> -   Ibland är det mer praktiskt att övervaka den fullständiga listan med räknare med hjälp av den **rapporten** graph typ (exempel: realtidsövervakning av alla räknare)
 
 ## <a name="ata-lightweight-gateway-performance-counters"></a>ATA Lightweight Gateway-prestandaräknare
 Prestandaräknare kan användas för kvothantering i Lightweight Gateway, för att se till att ATA inte tömmer för många resurser från domänkontrollanter som har installerats.
 För att mäta de resursbegränsningar som ATA framtvingar på Lightweight-gatewayen, lägger du till de här räknarna.
 
-Detta görs genom att öppna **Prestandaövervakaren** och lägga till alla räknare för ATA Lightweight Gateway. Namnen på räknaren prestandaobjekt är: **Microsoft ATA Gateway** och **Microsoft ATA Gateway Updater**.
+Detta görs genom att öppna **Prestandaövervakaren** och lägga till alla räknare för ATA Lightweight Gateway. Namnen på prestandaräknarna är: **Microsoft ATA Gateway** och **Microsoft ATA Gateway Updater**.
 
 > [!div class="mx-tableFixed"]
 |Räknare|Description|Tröskelvärde|Felsökning|
@@ -106,10 +106,10 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 > [!div class="mx-tableFixed"]
 |Räknare|Description|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Center\EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Referera till den föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|Microsoft ATA Center\NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till den föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|Microsoft ATA Center\EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till den föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|Microsoft ATA Center\Databas &#42; blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till den föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\Databas &#42; blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 
 
 > [!NOTE]
@@ -117,7 +117,7 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 > -   Ibland är det mer praktiskt att övervaka hela listan med räknare med hjälp av diagramtypen för rapport (exempel: realtidsövervakning av alla räknare).
 
 ## <a name="operating-system-counters"></a>Operativsystemsräknare
-I följande tabell visas de huvudsakliga operativsystemsräknare för att ta hänsyn till:
+I följande tabell visas de viktigaste räknare för att ta hänsyn till:
 
 > [!div class="mx-tableFixed"]
 |Räknare|Description|Tröskelvärde|Felsökning|
@@ -125,9 +125,9 @@ I följande tabell visas de huvudsakliga operativsystemsräknare för att ta hä
 |Processor(_total)\% Processortid|Procentandelen av förfluten tid som processorn använder för att köra en icke-inaktiv tråd.|Mindre än 80 % i genomsnitt|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
 |System\Kontextbyten/s|Den sammanlagda hastigheten som alla processorer byter från en tråd till en annan.|Färre än 5 000&#42;kärnor (fysiska kärnor)|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
 |System\Kölängd för processor|Antal trådar som är redo att köra och väntar på att schemaläggas.|Mindre än fem&#42;kärnor (fysiska kärnor)|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
-|Minne\Tillgängliga megabyte|Mängden fysiskt minne (RAM) som är tillgängligt för allokering.|Bör vara mer än 512|Kontrollera om det finns en särskild process som tar mycket mer fysiskt minne än den borde.<br /><br />Öka mängden fysiskt minne.<br /><br />Minska mängden trafik per server.|
-|Logisk disk(&#42;)\Medel s/diskläsning|Genomsnittlig svarstid för att läsa data från disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontakta din lagringsteamet /-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med mindre än 10 ms latens. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
-|Logisk disk(&#42;)\Medel s/diskskrivning|Genomsnittlig svarstid för att skriva data till disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontakta din lagring team\vendor om den här enheten kan leverera den nuvarande arbetsbelastningen med mindre än 10 ms latens. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
+|Minne\Tillgängliga megabyte|Mängden fysiskt minne (RAM) som är tillgängligt för allokering.|Ska vara mer än 512|Kontrollera om det finns en särskild process som tar mycket mer fysiskt minne än den borde.<br /><br />Öka mängden fysiskt minne.<br /><br />Minska mängden trafik per server.|
+|Logisk disk(&#42;)\Medel s/diskläsning|Genomsnittlig svarstid för att läsa data från disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontakta din /-leverantören om den här enheten kan leverera den nuvarande arbetsbelastningen med mindre än 10 ms svarstid. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
+|Logisk disk(&#42;)\Medel s/diskskrivning|Genomsnittlig svarstid för att skriva data till disken (du bör välja databasenheten som instans).|Bör vara mindre än 10 millisekunder|Kontrollera om det finns en särskild process som använder databasenheten mer än den borde.<br /><br />Kontakta din eller din lagringsleverantör om den här enheten kan leverera den nuvarande arbetsbelastningen med mindre än 10 ms svarstid. Den nuvarande arbetsbelastningen kan fastställas med hjälp av räknarna för diskanvändning.|
 |\Logisk disk(&#42;)\Diskläsningar/s|Frekvensen för att utföra läsåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 |\Logisk disk(&#42;)\Disk – lästa byte/s|Antal byte per sekund som läses från disken.|Inget tröskelvärde|Räknarna för diskanvändning kan ge information när du felsöker svarstid för lagring.|
 |\Logisk disk&#42;\Diskskrivningar/s|Frekvensen för att utföra skrivåtgärder på disken.|Inget tröskelvärde|Räknarna för diskanvändning (kan ge information när du felsöker svarstiden för lagring)|

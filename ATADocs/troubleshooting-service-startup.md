@@ -1,41 +1,42 @@
 ---
-title: Felsökning av Advanced Threat Analytics startades | Microsoft Docs
-description: Beskriver hur du felsöker problem med start av ATA
+title: Felsök Advanced Threat Analytics starttjänst | Microsoft Docs
+description: Beskriver hur du kan felsöka problem med ATA-Start
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 637f26736a520def329ba8599c3927079fdf354d
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009276"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165923"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
-# <a name="troubleshooting-service-startup"></a>Felsöka startades
+# <a name="troubleshooting-service-startup"></a>Felsökning av tjänsten startades
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Felsöka starten av ATA Center-tjänsten
 
-Om ATA Center inte startar, gör du följande felsökning:
+Om ATA Center inte startar utför du följande felsökningssteg:
 
-1.  Kör följande Windows PowerShell-kommandot: `Get-Service Pla | Select Status` att säkerställa prestandaräknartjänsten körs. Om den inte körs rör det sig om ett plattformsproblem, och du måste få tjänsten att köra igen.
-2.  Om den kördes försök att starta om den och se om det löser problemet: `Restart-Service Pla`
+1.  Kör följande Windows PowerShell-kommando: `Get-Service Pla | Select Status`
+    Om du vill kontrollera att körs tjänsten för prestandaräknare. Om den inte körs rör det sig om ett plattformsproblem, och du måste få tjänsten att köra igen.
+2.  Om den kördes försök starta om den och se om det löser problemet: `Restart-Service Pla`
 3.  Prova att skapa en ny datainsamlare manuellt (vilken som helst fungerar, till exempel bara insamling av datorns CPU-användning).
-Om det går att starta är plattformen troligtvis inte skadad. Om inte, det beror på fortfarande plattform.
+Om tjänsten kan starta är plattformen förmodligen bra. Om inte, det är fortfarande ett problem med plattformen.
 
-4.  Försök att manuellt återskapa ATA datainsamlaren, med hjälp av en förhöjd behörighet kör följande kommandon:
+4.  Försök att manuellt återskapa ATA-datainsamlaren, från en upphöjd kommandotolk kör dessa kommandon:
 
         sc stop ATACenter
         logman stop "Microsoft ATA Center"
@@ -47,20 +48,21 @@ Om det går att starta är plattformen troligtvis inte skadad. Om inte, det bero
 
 ## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Felsöka ATA Lightweight Gateway Start
 
-**Symptom**
+**Symtom**
 
-ATA-gatewayen startar inte och du får detta fel:<br></br>
-*System.Net.Http.HttpRequestException: Svarsstatuskoden indikerar inte lyckade: 500 (Internt serverfel)*
+ATA-gatewayen startar inte och du får felet:<br></br>
+*System.Net.Http.HttpRequestException: Svarsstatuskod anger inte lyckad: 500 (Internt serverfel)*
 
 **Beskrivning**
 
-Detta inträffar eftersom som en del av installationen av Lightweight Gateway, ATA allokerar en CPU-tröskel som gör det möjligt för Lightweight Gateway att använda processor med en buffert på 15%. Om du oberoende av varandra har angett ett tröskelvärde med registernyckeln: konflikten hindrar Lightweight Gateway från att starta. 
+Detta inträffar eftersom som en del av installationsprocessen Lightweight Gateway, ATA allokerar en CPU-tröskelvärdet som gör det möjligt för Lightweight Gateway kan använda CPU och en buffert med 15%. Om du oberoende av varandra har angett ett tröskelvärde med registernyckeln: den här konflikten förhindrar Lightweight-Gateway från att starta. 
 
 **Lösning**
 
-1. Under registret nycklar, om det finns en DWORD-värdet kallas **Inaktivera prestandaräknare** Kontrollera att den är inställd på **0**:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. Under registret nycklar, om det finns en DWORD-värdet kallas **Inaktivera prestandaräknare** kontrollerar den är inställd på **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
-2. Starta sedan om tjänsten Pla. ATA Lightweight Gateway upptäcks ändringen automatiskt och starta om tjänsten.
+2. Starta sedan om tjänsten Pla. ATA Lightweight Gateway identifierar ändringen automatiskt och starta om tjänsten.
 
 
 ## <a name="see-also"></a>Se även

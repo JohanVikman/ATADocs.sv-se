@@ -1,32 +1,32 @@
 ---
-title: Ange e-post meddelandeinställningar i Azure Advanced Threat Protection | Microsoft Docs
-description: Beskriver hur du får Azure ATP meddela dig (via e-post eller Azure ATP vidarebefordran av händelser) när det upptäcker misstänkta aktiviteter
+title: Ange aviseringsinställningar för e-post i Azure Advanced Threat Protection | Microsoft Docs
+description: Beskriver hur du får Azure ATP meddela dig (via e-post eller genom vidarebefordran av Azure ATP-händelser) när det upptäcker misstänkta aktiviteter
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fe9976df769ae01c58a5d66ca491c3fa8958d9
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 399773b174f52cfc26888fcaa9923de4f258e897
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445996"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166892"
 ---
-*Gäller för: Azure Advanced Threat Protection*
+*Gäller för: Azure Avancerat skydd*
 
 
 
 # <a name="integrate-with-syslog"></a>Integrera med Syslog
 
-Azure ATP kan meddela dig när det upptäcker misstänkta aktiviteter och health-aviseringar genom att skicka aviseringen till Syslog-servern. Du kan ange följande om du aktiverar Syslog-aviseringar.
+Azure ATP kan meddela dig när det upptäcker misstänkta aktiviteter och hälsovarningar genom att skicka aviseringen till Syslog-servern. Du kan ange följande om du aktiverar Syslog-aviseringar.
 
 1.  Innan du konfigurerar Syslog-aviseringar arbetar du med SIEM-administratören för att ta reda på följande information:
 
@@ -38,9 +38,9 @@ Azure ATP kan meddela dig när det upptäcker misstänkta aktiviteter och health
 
     -   Format för att skicka data, RFC 3164 eller 5424
 
-2.  Ange arbetsytan portal URL.
+2.  Ange arbetsytans portal URL: en.
 
-3.  Ange ditt Azure Active Directory-användarnamn och lösenord och klicka på **logga in**.
+3.  Ange din Azure Active Directory-användarnamn och lösenord och klicka på **logga in**.
 
 4.  Välj inställningsalternativ i verktygsfältet och välj **Konfiguration**.
 
@@ -50,17 +50,17 @@ Azure ATP kan meddela dig när det upptäcker misstänkta aktiviteter och health
 
     |Fält|Description|
     |---------|---------------|
-    |sensor|Välj en avsedda sensor som ansvarar för aggregering Syslog-händelser och vidarebefordra dem till din SIEM-server.|
+    |Sensorn|Välj en avsedda sensor som ansvarar för att sammanställa alla Syslog-händelser och vidarebefordrar dem till din SIEM-server.|
     |Tjänsteslutpunkt|Det fullständiga domännamnet för Syslog-servern och du kan också ändra portnumret (standard 514)|
     |Transport|Kan vara UDP, TCP eller TLS (skyddad Syslog)|
     |Format|Detta är det format som Azure ATP använder för att skicka händelser till SIEM-servern, antingen RFC 5424 eller RFC 3164.|
 
- ![Azure ATP Syslog inställningar serveravbildning](media/atp-syslog.png)
+ ![Azure ATP Syslog bild för inställning av server](media/atp-syslog.png)
 
-6. Du kan välja vilka händelser som ska skickas till Syslog-servern. Under **Syslog-aviseringar**, ange vilka meddelanden som ska skickas till Syslog-servern - nya säkerhetsaviseringar och uppdaterade säkerhetsaviseringar nya problem.
+6. Du kan välja vilka händelser som ska skicka till Syslog-servern. Under **Syslog-aviseringar**, ange vilka meddelanden ska skickas till Syslog-servern - nya säkerhetsaviseringar, uppdaterade säkerhetsaviseringar och nya hälsorelaterade problem.
 
 
 ## <a name="see-also"></a>Se även
 
 - [Arbeta med känsliga konton](sensitive-accounts.md)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

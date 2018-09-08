@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/29/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
-ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
+ms.openlocfilehash: 7aadacc98daa5ff259a4eb14fcd81c1cab9e5acd
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34560249"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126509"
 ---
 *Gäller för: Azure Avancerat skydd*
 

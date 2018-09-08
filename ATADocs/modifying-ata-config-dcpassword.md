@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 47bd7e9cdd97d8343202be86954e82e69948afed
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a8a07fd1db2eb0e3797d4330d37fe2059b35f13f
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009317"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165736"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -29,9 +29,9 @@ ms.locfileid: "30009317"
 
 
 ## <a name="change-the-domain-connectivity-password"></a>Ändra lösenord för domänanslutning
-Om du ändrar lösenordet för domänanslutning ska du se till att lösenordet du anger stämmer. Om det inte är stoppas ATA Gateway-tjänsten körs på ATA-gatewayer.
+Om du ändrar lösenordet för domänanslutning ska du se till att lösenordet du anger stämmer. Om den inte ATA Gateway-tjänsten slutar att köras på ATA-gatewayer.
 
-Om du misstänker att det har inträffat på ATA-Gateway kan du titta på filen Microsoft.Tri.Gateway-Errors.log för följande fel: `The supplied credential is invalid.`
+Om du misstänker att det har inträffat på ATA-gatewayen kan du titta på filen Microsoft.Tri.Gateway Errors.log för följande fel: `The supplied credential is invalid.`
 
 Du åtgärdar det genom att följa den här proceduren för att uppdatera lösenordet för domänanslutning på ATA-Center:
 
@@ -47,7 +47,7 @@ Du åtgärdar det genom att följa den här proceduren för att uppdatera lösen
 
 4.  Under **Lösenord**, ändrar du lösenordet.
 
-    Om ATA Center har anslutning till domänen använder den **Testanslutningen** för att verifiera autentiseringsuppgifterna
+    Om ATA Center har anslutning till domänen, använder du den **Testanslutningen** knappen för att verifiera autentiseringsuppgifterna
 
 5.  Klicka på **Spara**.
 

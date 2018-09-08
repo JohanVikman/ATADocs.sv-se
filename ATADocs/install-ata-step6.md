@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6361cf277d1b27ab6792e4780827377835c9abd3
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0adbf6fe0c3cd475c50ea5fbe62b90eecc3214bf
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010381"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126441"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -32,12 +32,12 @@ ms.locfileid: "30010381"
 
 ## <a name="step-6-configure-event-collection"></a>Steg 6. Konfigurera händelseinsamling
 ### <a name="configure-event-collection"></a>Konfigurera händelseinsamling
-För att förbättra identifieringsfunktionerna behöver ATA Windows följande händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller, om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt genom att ATA Gateway konfigureras att lyssna efter SIEM-händelser eller genom att [vidarebefordran av Windows-händelser konfigureras](configure-event-collection.md). 
+För att förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757 och 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller, om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt genom att ATA Gateway konfigureras att lyssna efter SIEM-händelser eller genom att [vidarebefordran av Windows-händelser konfigureras](configure-event-collection.md). 
 
 > [!NOTE]
 > För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
 
-Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser för att förbättra identifieringarna ytterligare. Den använder händelse 4776 för NTLM, vilket förbättrar olika identifieringar och händelser 4732, 4733, 4728, 4729, 4756 och 4757 för att förbättra identifiera känsliga grupp ändringar. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
+Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelser för att förbättra identifieringarna ytterligare. Tjänsten använder händelse 4776 för NTLM som förbättrar olika identifieringar, och händelserna 4732, 4733, 4728, 4729, 4756 och 4757 för att förbättra identifieringen av ändringar av känsliga grupper. Den kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
 Om ATA ska kunna använda data från en Syslog-server måste du utföra följande steg:
@@ -77,7 +77,7 @@ ATA har stöd för SIEM-händelser i följande format:
 
     1.  RsaSA-konstant (måste visas).
 
-    2.  Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst noggrannhet på millisekunder är detta viktigt.
+    2.  Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst på millisekunder är detta viktigt.
 
     3.  Windows-händelse-ID
 
@@ -108,7 +108,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Dom�
 
     -   externalId = Windows händelse-ID
 
-    -   rt = tidsstämpel för den faktiska händelsen (se till att den inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst noggrannhet på millisekunder är detta viktigt.
+    -   rt = tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Helst på millisekunder är detta viktigt.
 
     -   cat = Loggnamn för Windows-händelse
 
@@ -153,7 +153,7 @@ Felkod:         0x0
 
     -   SourceName = Providernamn för Windows-händelse
 
-    -   TimeGenerated = Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst noggrannhet på millisekunder, detta är viktigt.
+    -   TimeGenerated = Tidsstämpel för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, noggrannhet på millisekunder, detta är viktigt.
 
     -   ComputerName = Källans värdnamn
 
@@ -164,7 +164,7 @@ Felkod:         0x0
 -   Ordningen är inte viktig för paren nyckel=värde.
 
 #### <a name="qradar"></a>QRadar
-QRadar aktiverar händelseinsamling via en agent. Om data samlas in med hjälp av en agent samlas tidsformatet in utan data för millisekunder. Eftersom ATA kräver data för millisekunder är det nödvändigt att konfigurera QRadar att använda Windows-händelseinsamling utan agent. Mer information finns i [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: utan Agent insamling av Windows-händelser med MSRPC-protokollet").
+QRadar aktiverar händelseinsamling via en agent. Om data samlas in med hjälp av en agent samlas tidsformatet in utan data för millisekunder. Eftersom ATA kräver data för millisekunder är det nödvändigt att konfigurera QRadar att använda Windows-händelseinsamling utan agent. Mer information finns i [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: utan Agent samling för Windows-händelser med MSRPC-protokollet").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -176,7 +176,7 @@ De obligatoriska fälten är:
 - Domänkontrollantens fullständiga kvalificerade domännamn
 - Windows-händelse-ID
 
-TimeGenerated är tidsstämpeln för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, helst noggrannhet på millisekunder, detta är viktigt.
+TimeGenerated är tidsstämpeln för den faktiska händelsen (se till att det inte är tidsstämpeln för ankomst till SIEM eller när det skickas till ATA). Formatet måste överensstämma med yyyyMMddHHmmss.FFFFFF, noggrannhet på millisekunder, detta är viktigt.
 
 Message är den ursprungliga händelsetexten från Windows-händelsen
 
@@ -195,11 +195,11 @@ Se till att det finns \t mellan nyckel=värde-paren.
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Översikt över ATA-distribution](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Se även
-- [ATA POC Distributionsguide](http://aka.ms/atapoc)
+- [ATA POC-Distributionsguide](http://aka.ms/atapoc)
 - [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

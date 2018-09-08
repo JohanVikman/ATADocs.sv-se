@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 1/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 73b62edd2a03001998a5fdcef75a14a71177d1d7
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018226"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166535"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nyheter i ATA version 1.7
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
@@ -105,8 +105,8 @@ För att lösa det här problemet kan du bläddra till följande plats från en 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Det kanske inte går att exportera information om misstänkt aktivitet till Excel
 Om du försöker exportera information om misstänkt aktivitet till en Excel-fil kanske åtgärden misslyckas och följande felmeddelande visas: *Fel [BsonClassMapSerializer`1] System.FormatException: Ett fel inträffade under deserialiseringen av egenskapen Activity av klassen Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Elementet ”ResourceIdentifier” matchar inte något fält eller någon egenskap av klassen Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
-Lös problemet, från en upphöjd kommandotolk, bläddra till följande plats: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** och kör följande kommandon:
-1.  `Mongo.exe ATA`(ATA måste anges med versaler)
+För att lösa problemet, från en upphöjd kommandotolk och bläddra till följande plats: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** och kör följande kommandon:
+1.  `Mongo.exe ATA` (ATA måste anges med versaler)
 2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Mindre ändringar

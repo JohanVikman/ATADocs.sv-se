@@ -1,95 +1,95 @@
 ---
-title: Planera distributionen Azure Advanced Threat Protection | Microsoft Docs
+title: Planera din Azure Advanced Threat Protection-distribution | Microsoft Docs
 description: Hjälper dig att planera distributionen och bestämma hur många Azure ATP-servrar som behövs för nätverket
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444798"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126373"
 ---
-*Gäller för: Azure Advanced Threat Protection*
+*Gäller för: Azure Avancerat skydd*
 
 
 
 # <a name="azure-atp-capacity-planning"></a>Azure ATP-kapacitetsplanering
-Den här artikeln hjälper dig att avgöra hur många Azure ATP sensorer och fristående sensorer som du behöver.
+Den här artikeln hjälper dig att avgöra hur många Azure ATP-sensorer och fristående sensorer återställningsprenumeration.
 
 > [!NOTE] 
-> Storleksverktyget har två blad - en för ATA och en för Azure ATP. Kontrollera att rätt bladet.
+> Storleksverktyget har två blad – en för ATA och en för Azure ATP. Kontrollera att du är på rätt bladet.
 
 ## <a name="using-the-sizing-tool"></a>Använda storleksverktyget
-Det rekommenderade och enklaste sättet att avgöra kapaciteten för din Azure ATP-distribution är att använda den [Azure ATP Storleksverktyget](http://aka.ms/aatpsizingtool). Kör verktyget Azure ATP storlek och Använd följande fält från resultaten Excel-fil för att fastställa minne och CPU som används av sensor:
+Det rekommendera och enklaste sättet att avgöra kapaciteten för din Azure ATP-distribution är att använda den [Azure ATP-Storleksverktyget](http://aka.ms/aatpsizingtool). Kör Azure ATP-Storleksverktyget och från resultat som Excel-fil, använder du följande fält för att fastställa CPU och minne som används av sensorn:
 
-- Azure ATP sensor: matchar den **upptagna paket/sek** i Azure ATP sensor tabellen i resultatfilen med den **paket PER sekund** i den [Azure ATP fristående sensor tabell](#azure-atp-sensor-sizing)eller [Azure ATP sensor tabell](#azure-atp-standalone-sensor-sizing), beroende på den [sensor-typ du väljer](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP-sensorn: matchar den **upptagna paket/sek** i Azure ATP-sensorn tabellen i resultatfilen med den **paket PER sekund** i den [Azure ATP fristående sensorn tabell](#azure-atp-sensor-sizing)eller [Azure ATP-sensorn tabell](#azure-atp-standalone-sensor-sizing), beroende på den [sensor databastyp du väljer](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Exempel på kapacitetsplaneringsverktyg](media/capacity-tool.png)
 
 
-Om du inte kan använda Azure ATP-Storleksverktyget av någon anledning, manuellt samla in informationen om räknaren paket/sek från alla domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
+Om du inte kan använda Azure ATP-Storleksverktyget av någon anledning, manuellt samla in informationen om paket/sek från alla dina domänkontrollanter under 24 timmar med ett lågt insamlingsintervall (ca 5 sekunder). För varje domänkontrollant måste du sedan beräkna dagligt genomsnitt och genomsnitt för den mest hektiska perioden (15 minuter).
 I följande avsnitt finns anvisningar om hur du samlar in information om paket/sek från en domänkontrollant.
 
-## Välja rätt sensor-typ för distributionen<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-I en Azure ATP-distribution stöds valfri kombination av Azure ATP fristående sensor typer:
+## Välja rätt sensor-typ för din distribution<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
+I en Azure ATP-distribution stöds valfri kombination av Azure ATP fristående sensorn typer:
 
 - Endast Azure ATP fristående sensorer
-- Endast Azure ATP-temperatursensor
+- Azure ATP-sensorn
 - En kombination av båda
 
-När du bestämmer typen av sensor distribution, Överväg följande fördelar:
+När du bestämmer typ av sensor-distribution, Överväg följande fördelar:
 
-|typen av sensor|Fördelar|Kostnad|Distributionstopologi|Användning av domänkontrollant|
+|typ av sensor|Fördelar|Kostnad|Distributionstopologi|Användning av domänkontrollant|
 |----|----|----|----|-----|
-|Azure ATP fristående sensor|Out-of-band-distribution gör det svårare för angripare att upptäcka Azure ATP finns|Högre|Installeras tillsammans med domänkontrollanten (out-of-band)|Har stöd för upp till 100 000 paket per sekund|
-|Azure ATP-temperatursensor|Kräver inte en dedikerad server och portspeglingskonfiguration|Lägre|Installerad på domänkontrollanten|Har stöd för upp till 100 000 paket per sekund|
+|Azure ATP fristående sensor|Out of band-distribution gör det svårare för angripare att upptäcka Azure ATP finns|Högre|Installeras tillsammans med domänkontrollanten (out-of-band)|Har stöd för upp till 100 000 paket per sekund|
+|Azure ATP-sensorn|Kräver inte en dedikerad server och portspeglingskonfiguration|Lägre|Installerad på domänkontrollanten|Har stöd för upp till 100 000 paket per sekund|
 
-Tänk på följande när du bestämmer hur många Azure ATP fristående sensorer att distribuera.
+Tänk på följande när du bestämmer hur många Azure ATP fristående sensorer för att distribuera.
 
 -   **Active Directory-skogar och domäner**<br>
     Azure ATP kan övervaka trafik från flera domäner inom en Active Directory-skog för varje arbetsyta som du skapar. För att övervaka flera skogar, måste du skapa flera arbetsytor. 
 
 -   **Portspegling**<br>
-Överväganden för portspegling kan kräva att du kan distribuera flera Azure ATP fristående sensorer per data Datacenter eller avdelningskontor plats.
+Överväganden för portspegling kan kräva att du kan distribuera flera fristående Azure ATP-sensorer per plats för data Datacenter eller avdelningskontor.
 
 -   **Kapacitet**<br>
-    En fristående Azure ATP-sensor har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik för de domänkontrollanter som övervakas. 
+    En fristående Azure ATP-sensorn har stöd för övervakning av flera domänkontrollanter, beroende på mängden nätverkstrafik för de domänkontrollanter som övervakas. 
 
 
-## Azure ATP sensor och fristående sensor storlek <a name="sizing"></a>
+## Azure ATP-sensorn och fristående sensorn storlek <a name="sizing"></a>
 
-En Azure ATP sensor har stöd för övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. I följande tabell är en uppskattning är det belopp som slutligen som Parsar sensorn beroende på mängden trafik och distribution av trafik. 
+Azure ATP-sensorn har stöd för övervakning av en domänkontrollant baserat på mängden nätverkstrafik som domänkontrollanten genererar. I följande tabell är en uppskattning, den slutliga mängd som sensorn Parsar beror på mängden trafik och distribuering av trafik. 
 > [!NOTE]
-> Följande CPU och minne kapaciteten avser sensor's egen förbrukning – inte domänkontrollantens kapacitet.
+> Följande kapacitet för CPU och minne refererar till sensorns egen förbrukning – inte domänkontrollantens kapacitet.
 
 |Paket per sekund *|CPU (kärnor)|Minne (GB)|
 |----|----|-----|
-|0-1 k|0.25|2,50|
-|1 kB - 5k|0,75|6.00|
+|0 – 1 k|0.25|2,50|
+|1k - 5k|0,75|6.00|
 |5k - 10k|1,00|6.50|
-|10k - 20k|2,00|9,00|
+|10k - 20k|2,00|9.00|
 |20k - 50k|3.50|9,50|
 |50k - 75k |3.50|9,50|
-|75k - 100k|3.50 |9,50|
+|75k - 100 kB|3.50 |9,50|
 
 > [!NOTE]
-> - Totalt antal kärnor som ska användas av sensor-tjänsten.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.
-> - Total mängd minne som ska användas av sensor-tjänsten.
-> -   Om domänkontrollanten inte har de resurser som krävs av Azure ATP sensorn domänkontrollantens prestanda påverkas inte, men Azure ATP-sensor kanske inte fungerar som förväntat.
+> - Totalt antal kärnor som ska användas av sensortjänsten.<br>Vi rekommenderar att du inte arbetar med hypertrådade kärnor.
+> - Total mängd minne som ska användas av sensortjänsten.
+> -   Om domänkontrollanten inte har de resurser som krävs av Azure ATP-sensorn domänkontrollantens prestanda påverkas inte, men Azure ATP-sensorn kanske inte fungerar som förväntat.
 > -   Vid körning som virtuell dator stöds inte dynamiskt minne och andra funktioner för ballongminne.
-> -   För optimala prestanda ställer du in den **Energialternativ** av Azure ATP sensor till **högpresterande**.
-> -   Minst 2 kärnor och 6 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymmet som krävs för Azure ATP binärfiler och loggar.
+> -   För optimala prestanda ställer du in den **Energialternativ** för Azure ATP-sensorn till **högpresterande**.
+> -   Minst 2 kärnor och 6 GB utrymme krävs och 10 GB rekommenderas, inklusive utrymme som krävs för Azure ATP-binärfiler och loggar.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Beräkning av trafik för domänkontrollanter
@@ -125,7 +125,7 @@ Fastställ antal paket per sekund genom att utföra följande steg på varje dom
 
     ![Bild av hur du lägger till prestandaräknare](media/atp-traffic-estimation-7.png)
 
-8.  Ändra den **provintervallet** till **fem sekunder**.
+8.  Ändra den **provintervall** till **fem sekunder**.
 
 9. Ange den plats där du vill att data ska sparas.
 
@@ -149,4 +149,4 @@ Fastställ antal paket per sekund genom att utföra följande steg på varje dom
 - [Azure ATP-storleksverktyget](http://aka.ms/aatpsizingtool)
 - [Krav för Azure ATP](atp-prerequisites.md)
 - [Azure ATP-arkitektur](atp-architecture.md)
-- [Ta en titt i ATP-forumet!](https://aka.ms/azureatpcommunity)
+- [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

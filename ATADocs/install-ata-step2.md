@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b3505693650f353772511804198b617f53d0437
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 1d3832d74d776c33ed7812409c16f7134d6d22a0
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126169"
 ---
-*Gäller för: Advanced Threat Analytics version 1.9.*
+*Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
@@ -44,9 +44,9 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
     |**Lösenord** (krävs)|Ange lösenordet för den skrivskyddade användaren, till exempel: **Penna1**.|
     |**Domän** (krävs)|Ange domänen för den skrivskyddade användaren, till exempel: **contoso.com**. **Obs:** Det är viktigt att du anger det fullständiga FQDN för domänen där användaren finns. Om användarens konto exempelvis finns i domänen corp.contoso.com måste du ange `corp.contoso.com`, inte contoso.com|
 
-2. Du kan klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Det fungerar ATA Center är ansluten till domänen.    
+2. Du kan klicka på **Testa anslutning** för att testa anslutningen till domänen och kontrollera att autentiseringsuppgifterna som du fått ger åtkomst. Detta fungerar om ATA Center har anslutning till domänen.    
 
-    När den har sparats välkomstmeddelandet i konsolen ändras till följande meddelande: ![ATA Välkommen fas 1 klar](media/ATA_1.7-welcome-provide-username-finished.png)
+    Välkomstmeddelandet i konsolen ändras till följande meddelande när det sparats: ![ATA-Välkommen, steg 1 slutfört](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. I administratörskonsolen, klicka på **Hämta Gateway-installationen och installera den första gatewayen** för att fortsätta.
 
@@ -59,11 +59,11 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 ## <a name="see-also"></a>Se även
 ## <a name="related-videos"></a>Relaterade videor
 - [Översikt över ATA-distribution](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Välja rätt ATA Gateway-typ](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Se även
-- [ATA POC Distributionsguide](http://aka.ms/atapoc)
+- [ATA POC-Distributionsguide](http://aka.ms/atapoc)
 - [ATA-storleksverktyget](http://aka.ms/atasizingtool)
 - [Ta en titt i ATA-forumet!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurera händelseinsamling](configure-event-collection.md)

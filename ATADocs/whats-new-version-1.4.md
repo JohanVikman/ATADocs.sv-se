@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c60e577ed5df2beecd9737a4637c7a3162a9e706
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a4e9b9f5213322b21a22cb22bbede9db60144e6b
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018532"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166859"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Nyheter i ATA version 1.4
 Dessa versionsanmärkningar innehåller information om kända problem i version 1.4 av Advanced Threat Analytics.
@@ -35,7 +35,7 @@ Dessa versionsanmärkningar innehåller information om kända problem i version 
 
 -   Prestandaförbättringar för stöd för fler ATA-gatewayer per ATA Center.
 
--   En ny automatisk namnmatchningsprocess har lagts till som matchar datornamn och IP-adresser – den här unika funktionen sparar värdefull tid i undersökningsprocessen och ger starka bevis för säkerhetsanalytiker
+-   En ny automatisk namnmatchningsprocess har lagts till som matchar datornamn och IP-adresser – den här unika funktionen sparar dyrbar tid i undersökningsprocessen och ger starka bevis för säkerhetsanalytiker
 
 -   Förbättrad möjlighet att samla in indata från användare för att automatiskt finjustera identifieringsprocessen.
 
@@ -59,7 +59,7 @@ Dessa versionsanmärkningar innehåller information om kända problem i version 
 Följande kända problem finns i den här versionen.
 
 ### <a name="network-capture-software"></a>Programvara för nätverksavbildning
-Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Annan programvara installeras kommer ATA Gateway att sluta fungera korrekt.
+Den enda programvara för nätverksavbildning som går att installera på ATA Gateway är [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Installera inte Microsoft Message Analyzer eller någon annan programvara för nätverksavbildning. Annan programvara installeras gör att ATA Gateway att sluta fungera korrekt.
 
 ### <a name="installation-from-zip-file"></a>Installation från ZIP-fil
 Tänk på att extrahera filerna från ZIP-filen till en lokal katalog och installera ATA Gateway därifrån. Installera inte ATA Gateway direkt från zip-filen eller misslyckas installationen.
@@ -90,7 +90,7 @@ Om ATA-installationen öppnas i stället för avinstallationen när du försöke
 Ta bort installationsmappen på både ATA Center och ATA Gateway efter avinstallationen.  Om du har installerat databasen i en separat mapp tar du bort databasmappen på ATA Center.
 
 ### <a name="health-alert---disconnected-ata-gateway"></a>Hälsoavisering – frånkopplad ATA-gateway
-Om du har fler än en ATA Gateway och har aviseringar om frånkopplad ATA-Gateway, lösa automatiskt fungerar bara på en av dem. resten lämnas med öppen status. Manuellt bekräfta att ATA Gateway är igång och att tjänsten körs och lösa aviseringen manuellt.
+Om du har fler än en ATA Gateway och har aviseringar om frånkopplad ATA-Gateway, Lös automatiskt fungerar bara på en av dem. resten lämnas med öppen status. Manuellt bekräfta att ATA Gateway är igång och att tjänsten körs och lösa aviseringen manuellt.
 
 ### <a name="kb-on-virtualization-host"></a>KB på virtualiseringsvärd
 Installera inte KB 3047154 på en virtualiseringsvärd. Det kan leda till att portspegling slutar fungera ordentligt.

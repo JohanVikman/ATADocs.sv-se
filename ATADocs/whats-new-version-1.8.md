@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 4d8000f7a50b4847f647a9bcc10843786aeb1285
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019059"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166654"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nyheter i ATA version 1.8
 
@@ -77,12 +77,12 @@ Den här versionsinformationen innehåller information om uppdateringar, nya fun
 
 - Alternativet att lägga till anteckningar har tagits bort från misstänkta aktiviteter
 - Rekommendationer för hur du minimerar misstänkta aktiviteter har tagits bort från i tidslinjen för misstänkta aktiviteter.
-- Från och med ATA version 1.8 ATA-gatewayer och Lightweight-gatewayer hanterar sina egna certifikat och behöver ingen åtgärd av administratör ska kunna hanteras.
+- Från och med ATA version 1.8 ATA gateway och Lightweight-gatewayer hanterar sina egna certifikat och behöver ingen åtgärd av administratör ska hanteras.
 
 ## <a name="known-issues"></a>Kända problem
 
 > [!WARNING]
-> För att undvika kända problem du uppdateringen eller distribueras med hjälp av uppdatering 1.8 1.
+> För att undvika dessa kända problem uppdatera eller distribuera med hjälp av uppdatering 1.8 1.
 
 ### <a name="ata-gateway-on-windows-server-core"></a>ATA Gateway på Windows Server Core
 
@@ -128,13 +128,13 @@ Felet kanske inte visas i Windows Server 2016 Core, men processen kommer att mis
 
 **Lösning**: Inaktivera användningen av en proxyserver på ATA Gateway-tjänstkontot. En framtida version kommer att innehålla en uppdatering för att åtgärda det här problemet.
 
-### <a name="report-settings-reset"></a>Rapporten inställningar för återställning
+### <a name="report-settings-reset"></a>Inställningar för återställning av rapport
 
-**Symptom**: alla inställningar som har gjorts för schemalagda rapporter raderas när du uppdaterar till 1,8 uppdatering 1.
+**Symptom**: alla inställningar som har gjorts för schemalagda rapporter raderas när du uppdaterar till 1.8 uppdatering 1.
 
-**Beskrivning**: uppdatering till 1,8 uppdatering 1 från 1,8 återställer rapporterna schemainställningar.
+**Beskrivning av**: uppdatering till 1.8 update 1 från 1.8 återställer rapporterna schemainställningar.
 
-**Lösning**: innan du uppdaterar till 1,8 uppdatering 1 gör en kopia av rapportinställningarna och ange dem, det kan också vara via ett skript, mer information finns i [exportera och importera ATA-konfiguration](ata-configuration-file.md).
+**Lösning**: innan du uppdaterar till 1.8 uppdatering 1, göra en kopia av rapportinställningarna och kör dem på nytt, det kan också vara via ett skript, mer information finns i [exportera och importera ATA-konfigurationen](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Se även
