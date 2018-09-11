@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 81cbe1d2952bfe57266f084cb1fc05b5558415c5
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 48123c7eab69f40423142e2368c4c37b3b74172b
+ms.sourcegitcommit: 625b56f8069038ea3e45a91f9d449bd7f39f06b8
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166875"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44326262"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
@@ -43,26 +43,27 @@ Uppdateringen för ATA 1.6 ger förbättringar inom följande områden:
 ### <a name="new-detections"></a>Nya identifieringar
 
 
-- **Skadlig privat informationsbegäran för dataskydd** API för dataskydd (DPAPI) är en lösenordsbaserad dataskyddstjänst. Den här skyddstjänsten används av olika program som lagrar användarens hemligheter, t.ex. webbplatslösenord och autentiseringsuppgifter för filresurser. I syfte att ge stöd för scenarier med förlorat lösenord kan användare kryptera data med hjälp av en återställningsnyckel som inte omfattar lösenordet. I en domänmiljö kan angripare stjäla återställningsnyckeln fjärranslutet och använda den för att dekryptera skyddade data i alla domänanslutna datorer.
+- **Skadlig privat informationsbegäran för dataskydd** API för dataskydd (DPAPI) är en lösenordsbaserad dataskyddstjänst. Den här skyddstjänsten används av olika program som lagrar användarens hemligheter, t.ex. webbplatslösenord och autentiseringsuppgifter för filresurser. För att stödja scenarier med förlorat lösenord kan användare dekryptera skyddade data med hjälp av en återställningsnyckel som inte omfattar lösenordet. I en domänmiljö kan angripare stjäla återställningsnyckeln fjärranslutet och använda den för att dekryptera skyddade data i alla domänanslutna datorer.
 
 
-- **Nettosessionsuppräkning** Rekognosering är ett viktigt steg i den avancerade attackkedjan. Domänkontrollanter (DC) fungerar som filservrar för distribution av grupprincipobjekt som använder SMB-protokollet (Server Message Block). Som en del av rekognoseringsfasen kan angripare fråga DC om alla aktiva SMB-sessioner på servern och ge dem åtkomst till alla användare och IP-adresser som är kopplade till dessa SMB-sessioner. SMB-sessionsuppräkningen kan användas av angripare för rikta in sig på känsliga konton, vilket hjälper dem att flyttas i sidled över nätverket.
+- **Nettosessionsuppräkning** Rekognosering är ett viktigt steg i den avancerade attackkedjan. Domänkontrollanter (DC) fungerar som filservrar för distribution av grupprincipobjekt som använder SMB-protokollet (Server Message Block). Som en del av rekognoseringsfasen kan fråga angripare DC om alla aktiva SMB-sessioner på servern. Det låter dem få tillgång till alla användare och IP-adresser som är kopplade till dessa SMB-sessioner. SMB-sessionsuppräkningen kan användas av angripare för rikta in sig på känsliga konton, vilket hjälper dem att flyttas i sidled över nätverket.
 
 
-- **Skadliga replikeringsbegäranden** I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontrollanter. En angripare kan imitera en Active Directory-replikeringsbegäran (ibland genom att utge sig för att vara domänkontrollant) vilket gör det möjligt för angriparen att hämta data som finns lagrad i Active Directory, inklusive lösenordshashvärden, utan att använda mer påträngande tekniker som Volume Shadow Copy.
+- **Skadliga replikeringsbegäranden** I Active Directory-miljöer (AD) sker replikering regelbundet mellan domänkontrollanter. En angripare kan imitera en Active Directory-replikeringsbegäran (ibland personifiera en domänkontrollant). Den här spoof kan angriparen att hämta data som lagras i Active Directory, inklusive lösenordshashvärden, utan att använda mer påträngande tekniker som Volume Shadow Copy.
 
 
-- **Identifiering av MS11-013-säkerhetsproblem** Det finns en säkerhetsrisk för privilegier i Kerberos som gör det möjligt att förfalska vissa aspekter av en Kerberos-tjänstbiljett. En obehörig användare eller angripare som utnyttjar denna säkerhetsrisk kan hämta en token med högre behörighet på domänkontrollanten.
+- **Identifiering av MS11-013-säkerhetsproblem**  
+Det finns en säkerhets för privilegier i Kerberos, som gör att förfalska vissa aspekter av en Kerberos-tjänstbiljett. En obehörig användare eller angripare som utnyttjar denna säkerhetsrisk kan hämta en token med högre behörighet på domänkontrollanten.
 
 
-- **Onormal protokollimplementering** Autentiseringsbegäranden (Kerberos eller NTLM) utförs vanligtvis med en standarduppsättning metoder och protokoll. För att kunna autentisera måste dock begäran endast uppfylla en specifik kravuppsättning. Angripare kan implementera dessa protokoll med mindre avvikelser från standardimplementeringen i miljön. Dessa avvikelser kan tyda på att det finns en angripare som försöker köra attacker som Pass-The-Hash, Brute Force med mera.
+- **Onormal protokollimplementering** Autentiseringsbegäranden (Kerberos eller NTLM) utförs vanligtvis med en standarduppsättning metoder och protokoll. För att kunna autentisera måste dock begäran endast uppfylla en specifik kravuppsättning. Angripare kan implementera dessa protokoll med mindre avvikelser från standardimplementeringen i miljön. Dessa avvikelser kan tyda på förekomsten av en angripare försöker köra attacker som Pass-The-Hash och råstyrka.
 
 
 ### <a name="improvements-to-existing-detections"></a>Förbättringar av befintliga identifieringar
-ATA 1.6 omfattar förbättrad identifieringslogik som minskar scenarier med falska positiva och falska negativa identifieringar för befintliga identifieringar som Golden Ticket, Honey Token, Brute Force och fjärrkörning.
+ATA 1.6 omfattar förbättrad identifieringslogik som minskar falska positiva och falska negativa scenarier för befintliga identifieringar som Golden Ticket, Honey Token, Brute Force och fjärrkörning.
 
 ### <a name="the-ata-lightweight-gateway"></a>ATA Lightweight Gateway
-Den här versionen av ATA inför ett nytt distributionsalternativ för ATA Gateway, vilket gör att en ATA Gateway installeras direkt på domänkontrollanten. Det här distributionsalternativet tar bort ej kritiska funktioner från ATA Gateway och inför dynamisk resurshantering baserat på tillgängliga resurser på domänkontrollanten, vilket säkerställer att domänkontrollantens befintliga drift inte påverkas. ATA Lightweight Gateway minskar kostnaden för ATA-distribution. Samtidigt underlättar den distribution på avdelningskontor där det finns begränsad kapacitet hos maskinvaruresurser eller oförmåga att konfigurera stöd för portspegling.
+Den här versionen av ATA inför ett nytt distributionsalternativ för ATA Gateway, vilket gör att en ATA Gateway installeras direkt på domänkontrollanten. Det här distributionsalternativet tar bort ej kritiska funktioner från ATA Gateway och inför dynamisk resurshantering baserat på tillgängliga resurser på domänkontrollanten, vilket säkerställer att domänkontrollantens befintliga drift inte påverkas. ATA Lightweight Gateway minskar kostnaden för ATA-distribution. På samma gång, underlättar den distribution på avdelningskontor där det finns maskinvarubegränsningar Resurskapacitet eller oförmåga att konfigurera upp stöd för portspegling.
 Mer information om ATA Lightweight Gateway finns i [ATA-arkitektur](ata-architecture.md#ata-gateway-and-ata-lightweight-gateway)
 
 Mer information om överväganden vid distribution och att välja rätt typ av gatewayer finns [ATA-kapacitetsplanering](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment)
@@ -77,14 +78,14 @@ Med den här versionen gör en lättare databasbelastning och ett mer effektivt 
 ATA 1.6 kräver avsevärt mindre lagringsutrymme för att köra ATA-databasen, som nu endast kräver 20 % av det lagringsutrymme som användes i tidigare versioner.
 
 ### <a name="support-for-ibm-qradar"></a>Stöd för IBM QRadar
-ATA kan nu ta emot händelser från IBM:s QRadar SIEM-lösning, utöver de SIEM-lösningar som det fanns stöd för tidigare.
+ATA kan nu ta emot händelser från IBM: s QRadar SIEM-lösning, utöver de tidigare stöds SIEM-lösningarna.
 
 ## <a name="known-issues"></a>Kända problem
 Följande kända problem finns i den här versionen.
 
 ### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>Det gick inte att identifiera ny sökväg i databaser som har flyttats manuellt
 
-I distributioner där databassökvägen har flyttats manuellt använder inte ATA-distributionen den nya databassökvägen för uppdateringen. Detta kan orsaka följande problem:
+I distributioner där databassökvägen har flyttats manuellt använder inte ATA-distributionen den nya databassökvägen för uppdateringen. Detta flyttats manuellt Databassökväg kan orsaka följande problem:
 
 
 - ATA kan använda alla ledigt utrymme på systemenheten för ATA Center, utan att ta bort gamla nätverksaktiviteter cirkulärt.
@@ -92,9 +93,10 @@ I distributioner där databassökvägen har flyttats manuellt använder inte ATA
 
 - Uppdatering av ATA till version 1.6 kan misslyckas med beredskapskontrollerna före uppdatering, på det sätt som visas i bilden nedan.
     ![Beredskapskontrollen misslyckades](media/ata_failed_readinesschecks.png)
-    >[!Important]
-Innan du uppdaterar ATA till version 1.6 uppdaterar du följande registernyckel med rätt databassökväg:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
-
+    
+    > [!IMPORTANT]
+    > Innan du uppdaterar ATA till version 1.6 uppdaterar du följande registernyckel med rätt Databassökväg: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+    
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Migreringsfel vid uppdatering från ATA 1.5
 Vid uppdatering till ATA 1.6 kan uppdateringen misslyckas med följande felkod:
 
@@ -133,12 +135,11 @@ Detta bör returnera ett `WriteResult({ "nRemoved" : XX })` där ”XX” är an
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1 kräver att servern startas om
 
-I vissa fall kan installationen av .Net Framework 4.6.1 kräva att du startar om servern. Lägg märke till att klicka på OK i den **Microsoft Advanced Threat Analytics Center installationsprogrammet** dialogrutan automatiskt startar om servern. Detta är särskilt viktigt när du installerar ATA Lightweight Gateway på en domänkontrollant, eftersom du kanske vill planera en underhållsperiod före installationen.
-    ![Omstart av .NET Framework](media/ata-net-framework-restart.png)
+![Omstart av .NET Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historiska nätverksaktiviteter migreras inte längre
 Den här versionen av ATA ger en förbättrad identifieringsmotor, som ger mer exakt identifiering och minskar många falska positiva scenarier, särskilt för Pass-the-Hash.
-Den nya och förbättrade identifieringsmotorn använder teknik för infogad identifiering, vilket möjliggör identifiering utan att få åtkomst till historisk nätverksaktivitet, så att prestanda för ATA Center ökas avsevärt. Det innebär också att det inte är nödvändigt att migrera historisk nätverksaktivitet under uppdateringsprocessen.
+Nya och förbättrade identifieringsmotorn använder teknik för infogad identifiering som möjliggör identifiering utan åtkomst till historisk nätverksaktivitet, för att avsevärt öka prestanda för ATA Center. Det innebär också att det är nödvändigt att migrera historisk nätverksaktivitet under uppdateringsprocessen.
 Uppdateringsprocessen för ATA exporterar data, om du vill ha den för framtida undersökningar, till `<Center Installation Path>\Migration` som en JSON-fil.
 
 ## <a name="see-also"></a>Se även
