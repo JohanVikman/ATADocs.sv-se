@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8889d04063ce4e165104639281322b32178b93ec
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: d7207388702c659a08258862326ee89a49ae3ac2
+ms.sourcegitcommit: f3f80c5d3e2e5c1bcf975ae0cbae1469da7ab74d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126101"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44515516"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -32,7 +32,7 @@ Om du vill göra det enklare att verifiera den aktuella statusen för var och en
 ![Hälsoavisering för avancerade granskningsprinciper princip](media/atp-health-alert-audit-policy.png)
 
 
-Avancerade granskningsprincip aktiveras via GPO. Dessa granska händelser som ska registreras på domänkontrollantens Windows-händelser. Detta måste vara aktiverat i den **standardprincip för domänkontrollanter** i Active Directory.
+Avancerade granskningsprincip är aktiverat via **standardprincip för domänkontrollanter** grupprincipobjekt. Dessa granska händelser som ska registreras på domänkontrollantens Windows-händelser. 
 
 <br>Ändra granskningsprinciper avancerade för domänkontrollanten att följa dessa anvisningar:
 
@@ -50,7 +50,7 @@ Avancerade granskningsprincip aktiveras via GPO. Dessa granska händelser som sk
 
     ![Verifiering av autentiseringsuppgifter](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Gå till kontoinloggning, dubbelklicka på **granska grupp säkerhetshantering** och välj **konfigurera följande granskningshändelser** för både lyckade och misslyckade händelser.
+6. Gå till kontohantering, dubbelklicka på **granska grupp säkerhetshantering** och välj **konfigurera följande granskningshändelser** för både lyckade och misslyckade händelser.
 
     ![Granska hantering av säkerhetsgrupp](media/atp-advanced-audit-policy-check-step-4.png)
 

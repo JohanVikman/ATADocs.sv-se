@@ -2,10 +2,10 @@
 title: Azure Advanced Threat Protection-integrering med Windows Defender ATP | Microsoft Docs
 description: Hur du integrerar Azure Avancerat skydd med Windows Defender ATP för fullständig threat identifieringsomfattningen
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 097769c53eefd1c6e5242086cd56d47b89b36e68
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126271"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697233"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -59,13 +59,9 @@ Om du vill aktivera den här funktionen behöver en licens för både Azure ATP-
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Hur du integrerar Azure ATP med Windows Defender ATP
 
-1. Ange den arbetsyta du vill integrera som **primära**. Endast en arbetsyta kan vara den primära arbetsytan och endast en primär arbetsyta kan integrera med andra tjänster. Om du någon gång i framtiden, bör du se den här arbetsytan inte längre den primära arbetsytan, måste du först ta bort integrationen innan du kan ställa in det som icke-primär.
+1. Klicka på **Configuration**, och under **datakällor** Välj **Windows Defender ATP**. Klicka på länken till **arbetsytehantering**. Detta är bara tillgängligt om du har en licens för Windows Defender ATP och du redan har utfört registreringen av processen för Windows Defender ATP. 
 
- ![primära arbetsytan](./media/primary-workspace.png)
-
-2. Klicka på **Configuration**, och under **datakällor** Välj **Windows Defender ATP**. Klicka på länken till **arbetsytehantering**. Detta är bara tillgängligt om du har en licens för Windows Defender ATP och du redan har utfört registreringen av processen för Windows Defender ATP. 
-
-3. I den primära arbetsytan klickar du på kugghjulet för inställningar.
+2. Klicka på kugghjulet i din arbetsyta.
 
  ![integrering av arbetsyta](./media/edit-workspace.png)
  

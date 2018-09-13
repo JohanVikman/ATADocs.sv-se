@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 50d23f23432305c47ff14b8a1d68e204de9e32d7
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125812"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697216"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -80,14 +80,14 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
     3.  Välj **Källdatorn initierad** och klicka på **Välj datorgrupper**.
         1.  Klicka på **Lägg till domändator**.
         2.  Ange namnet på domänkontrollanten i fältet **Ange ett objektnamn du vill markera**. Klicka sedan på **Kontrollera namn** och klicka på **OK**.  
-          ![Loggboksbild](media/wef3 event viewer.png)  
+          ![Loggboksbild](media/wef3%20event%20viewer.png)  
         3.  Klicka på **OK**.
      4. Klicka på **Välj händelser**.
 
         1. Klicka på **Av logg** och välj **Säkerhet**.
         2. Skriv händelsenumret i fältet **Includes/Excludes Event ID** (Med/utan händelse-ID) och klicka på **OK**. Skriv exempelvis 4776, som i följande exempel.
 
-    ![Frågefilterbild](media/wef 4 query filter.png)
+        ![Frågefilterbild](media/wef%204%20query%20filter.png)
 
     5.  Högerklicka på den skapade prenumerationen och välj **Körningsstatus** att se om det finns några problem med statusen. 
     6.  Efter några minuter kontrollerar du att de händelser som du har konfigurerat för vidarebefordran visas i Vidarebefordrade händelser på ATA-gatewayen.

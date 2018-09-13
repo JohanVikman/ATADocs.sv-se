@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8dce45be6b1e4fa383eea3993f120fa504239f34
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125727"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697250"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -28,7 +28,9 @@ Det är viktigt att hålla Azure Advanced Threat Protection uppdaterade för att
 
 Azure ATP-tjänsten uppdateras några gånger i månaden med felkorrigeringar, prestandaförbättringar av och nya identifieringar. Ibland kräver dessa uppdateringar en motsvarande uppdatering sensorerna. 
 
-Om du inte uppdaterar din sensorer, kan de inte kan kommunicera med Azure ATP-Molntjänsten, vilket kan resultera i ett degraderat tjänst.
+Om du inte uppdaterar din sensorer, kan de inte kan kommunicera med Azure ATP-Molntjänsten, vilket kan resultera i ett degraderat tjänst. 
+
+Autentisering mellan din sensorer och Azure-Molntjänsten använder stark, certifikatbaserad ömsesidig autentisering. 
 
 Varje uppdatering har testats och godkänts för alla operativsystem som stöds kan orsaka minimal påverkan på ditt nätverk och åtgärder.
 

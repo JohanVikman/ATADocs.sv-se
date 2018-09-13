@@ -2,10 +2,10 @@
 title: Konfigurera proxyservern eller brandväggen för att aktivera Azure ATP-kommunikation med sensorn | Microsoft Docs
 description: Beskriver hur du ställer in din brandvägg eller proxy för att tillåta kommunikation mellan Azure ATP-Molntjänsten och Azure ATP-sensorer
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7aadacc98daa5ff259a4eb14fcd81c1cab9e5acd
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 2e8a4cdccad7f371601941e20ede20000aeef5ec
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126509"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697199"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -71,8 +71,8 @@ Om en proxy eller brandvägg blockerar all trafik som standard och så att endas
 
 
 Du kan även skydda brandvägg eller proxyserver regler för en viss arbetsyta du skapade genom att skapa en regel för följande DNS-poster:
-- < Arbetsytenamn >. atp.azure.com – för konsolen anslutning. Till exempel contosoATP.atp.azure.com
-- < Arbetsytenamn > sensorapi.atp.azure.com – för sensorer anslutning. Till exempel contosoATPsensorapi.atp.azure.com
+- \<ditt Arbetsytenamn >. atp.azure.com – för konsolen anslutning. Till exempel ”Contoso-corp.atp.azure.com”
+- \<ditt Arbetsytenamn > sensorapi.atp.azure.com – för sensorer anslutning. Till exempel ”contoso-corpsensorapi.atp.azure.com”
 
  
 > [!NOTE]
