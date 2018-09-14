@@ -63,7 +63,7 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Konfigurera målprenumerationsbild](media/wef%202%20config%20target%20sub%20manager.png)
     
