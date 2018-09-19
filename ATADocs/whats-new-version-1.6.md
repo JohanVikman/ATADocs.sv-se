@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 48123c7eab69f40423142e2368c4c37b3b74172b
-ms.sourcegitcommit: 625b56f8069038ea3e45a91f9d449bd7f39f06b8
+ms.openlocfilehash: 5fd3b7a0abb3c70e87634e28273fe5ce8b6d4d9a
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44326262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133624"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nyheter i ATA version 1.6
 Dessa versionsanmärkningar innehåller information om kända problem i denna version av Advanced Threat Analytics.
