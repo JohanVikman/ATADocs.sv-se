@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 808268a10a4de0bb4d3a1655064ee3c6b08b0943
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 444fd71f4c343619ceeea4056fbe98dce4f06b6a
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166739"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362450"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -42,8 +42,8 @@ Om du vill ta emot aviseringar måste du ange följande parametrar:
 1. Välj **Meddelanden** under **Notifications & Reports** (Meddelanden och rapporter).
 1. Under **E-postaviseringar** anger du vilka meddelanden som ska skickas via e-post – nya misstänkta aktiviteter och nya hälsorelaterade problem. Du kan ange separata e-postadresser som misstänkta aktiviteter och hälsorelaterade aviseringar ska skickas till, så att till exempel aviseringar om misstänkt aktivitet skickas till din säkerhetsanalytiker och aviseringar om hälsorelaterade problem till IT-administratören.
     
-    >   [!NOTE]
-    >   E-postaviseringar för misstänkta aktiviteter skickas endast när den misstänkta aktiviteten skapas.
+  > [!NOTE]
+  > E-postaviseringar för misstänkta aktiviteter skickas endast när den misstänkta aktiviteten skapas.
 
 1. Under **Syslog-aviseringar**, ange vilka meddelanden ska skickas till Syslog-servern – nya misstänkta aktiviteter, uppdaterade misstänkta aktiviteter och nya hälsorelaterade problem.
 1. Klicka på **Spara**.
