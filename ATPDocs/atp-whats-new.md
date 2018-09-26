@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 9/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6f291ebed680278391498361737e0f8be5ea710
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750562"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 # <a name="whats-new-in-azure-atp"></a>Vad är nytt i Azure ATP 
+
+## <a name="azure-atp-release-248"></a>Azure ATP-versionen 2,48 tum
+Gavs ut den 16 September 2018
+- **Säkerhetsvarning:** rekognosering med kontotjänstfrågor
+
+  Den här Säkerhetsvarning har förbättrats informationsgrafik och bevis. 
+
+- **Exkludera entiteter från identifieringar** 
+
+  För att minska antalet falska positiva identifieringar, kan du nu välja att exkludera entiteter från följande identifieringar: 
+  - Misstänkt VPN-anslutning (undantag av användare)
+  - Misstänkt befordran av domänkontrollant (möjlig DcShadow attack)
+  - Misstänkt replikeringsbegäran (möjlig DcShadow attack)
+
+- Den här versionen innehåller korrigeringar och förbättringar för flera problem.
+
 
 ## <a name="azure-atp-release-247"></a>Azure ATP-versionen 2.47
 Publicerad 2 September 2018

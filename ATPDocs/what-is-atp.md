@@ -1,115 +1,92 @@
 ---
 title: Vad är Azure Advanced Threat Protection (ATP)? | Microsoft Docs
-description: Förklarar vad Azure Advanced Threat Protection (ATP) är och vilka typer av misstänkta aktiviteter kan identifiera
+description: Förklarar Azure Advanced Threat Protection (ATP) är och vilka typer av misstänkta aktiviteter kan identifiera
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
-ms.topic: conceptual
+ms.date: 9/16/2018
+ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e78d5db2babc682de8eae50091193e1ccee8433
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f3e03f5307a9a09ffb2a62e7313be4629f4bc060
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166149"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750478"
 ---
 *Gäller för: Azure Avancerat skydd*
 
-
 # <a name="what-is-azure-advanced-threat-protection"></a>Vad är Azure Advanced Threat Protection?
-Azure Advanced Threat Protection (ATP) är en molntjänst som hjälper dig att skydda dina företagshybridmiljöer från flera typer av avancerade riktade cyberattacker och insiderhot.
+Azure avancerade Threat Protection (ATP) är en molnbaserad säkerhetslösning som identifierar, identifierar och hjälper dig att undersöka avancerade hot, komprometterade identiteter och externa och interna angripares åtgärder riktat mot din organisation. Azure ATP kan SecOp analytiker och säkerhetsproffs svårt att identifiera avancerade attacker i hybridmiljöer till:  
+- Övervaka användare, entitetsbeteende och aktiviteter med maskininlärningsbaserad analys  
+- Skydda användaridentiteter och autentiseringsuppgifter som lagras i Active Directory  
+- Identifiera och undersöka misstänkta användaraktiviteter och avancerade attacker genom kill-kedjan 
+- Ange Rensa incidentinformation på en enkel tidslinje för snabb hantering 
+ 
+## <a name="monitor-and-profile-user-behavior-and-activities"></a>Övervaka och profilen användarbeteenden och aktiviteter  
+Azure ATP övervakar och analyserar användaraktiviteter och information över nätverket, till exempel behörigheter och gruppmedlemskap, skapar en beteendeanalys baslinje för varje användare. Azure ATP identifierar sedan avvikelser med anpassningsbar inbyggd intelligens, vilket ger dig insikter om misstänkta aktiviteter och händelser, avslöja avancerade hot, komprometterade användare och insiderhot mot din organisation. Azure ATP upphovsrättsskyddad sensorer övervaka organisationens domänkontrollanter för att tillhandahålla en omfattande vy för alla användaraktiviteter från varje enhet. 
+ 
+## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Skydda användaridentiteter och minska risken för angrepp   
+Azure ATP ger dig ovärderliga insikter om identitet konfigurationer och föreslagna security metodtips. Med säkerhetsrapporter och användarens profil analyser, Azure ATP hjälper till att avsevärt minska din organisations attackyta, vilket gör det svårare att kompromettera autentiseringsuppgifter och få en attack. Avancerat skydd visual Lateral förflyttning hjälper dig att snabbt se exakt hur en angripare kan flytta sidled i din organisation att kompromettera känsliga konton och hjälper till att hindra riskerna i förväg. Ytterligare, ATP säkerhetsrapporter hjälper dig att identifiera användare och enheter som autentiseras med hjälp av lösenord i klartext och tillhandahålla ytterligare insikter för att förbättra din organisations säkerhet och principer.  
+ 
+## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Identifiera misstänkta aktiviteter och avancerade attacker över i attackkedjan 
+Normalt attacker startas mot någon tillgänglig enhet, till exempel en lågprivilegierad användare, och sedan lateralt snabbt tills angripare får tillgång till värdefulla tillgångar – som känsliga konton, Domänadministratörer och mycket känsliga data. Azure ATP identifierar dessa avancerade hot vid källan under hela attackkedjan: 
+### <a name="reconnaissance"></a>Rekognosering 
+Identifiera obehöriga användare och angriparens försök att få information om användarnamn, användarens gruppmedlemskap, IP-adresser tilldelade till enheter, resurser och mycket mer – med hjälp av olika metoder.  
+### <a name="compromised-users"></a>Komprometterade användare
+Identifiera försök att kompromettera autentiseringsuppgifterna via brute force-attacker, misslyckade autentiseringar, användarens ändringar i gruppmedlemskap och ytterligare metoder.  
 
-## <a name="how-azure-atp-works"></a>Hur fungerar Azure ATP
+### <a name="lateral-movements"></a>Lateral rörelse
+Identifiera försök att flyttas i sidled i nätverket att få mer kontroll över känsliga användare, använder metoder som Pass the Ticket, Pass the Hash, Overpass hash-värdet och mycket mer.  
 
-Azure ATP utnyttjar en nätverkstolkningsmotor för att samla in och tolka nätverkstrafiken hos flera protokoll (till exempel Kerberos, DNS, RPC, NTLM och andra) för autentisering, auktorisering och insamling av information. Den här informationen samlas in av Azure ATP via antingen:
+### <a name="domain-dominance"></a>Domändominans
+Markering angripare beteende om domändominans uppnås via fjärrkörning av kod på domänkontrollanten och metoder, till exempel DC Shadow, skadlig replikering av domänkontrollanter, Golden Ticket-aktiviteter med mera.   
 
--   Distribuera Azure ATP-sensorer direkt på domänkontrollanterna
--   Portspegling från domänkontrollanter och DNS-servrar till fristående Azure ATP-sensorn
+## <a name="investigate-alerts-and-user-activities"></a>Undersöka aviseringar och användaraktiviteter  
+Azure ATP är utformad för att minska Allmänt aviseringsbruset att tillhandahålla endast relevanta och viktiga säkerhetsaviseringar i en enkel, i realtid organisationens angreppstidslinje. Azure ATP-attack tidslinjevyn kan du enkelt kan fokusera på det viktigaste att utnyttja intelligence av smart analytics. Med Azure ATP-säkerhetsproffs kan snabbt undersöka hot och få insikter i organisationen för användare, enheter och resurser i nätverket. Smidig integrering med Windows Defender ATP ger ytterligare ett lager med förbättrad säkerhet genom ytterligare identifiering och skydd mot avancerade beständiga hot i operativsystemet.  
 
-Azure ATP tar information från flera datakällor, till exempel loggar och händelser i nätverket, att lära sig beteendet hos användare och andra entiteter i organisationen och skapar en beteendeprofil om dem.
-Azure ATP kan ta emot händelser och loggar från:
-
--   SIEM-integrering
--   Vidarebefordran av Windows-händelser (WEF)
--   Direkt från Windows Event Collector (för sensorn)
--   RADIUS-redovisning från virtuella privata nätverk
-
+## <a name="additional-resources-for-azure-atp"></a>Ytterligare resurser för Azure ATP  
+Starta en kostnadsfri utvärderingsversion: [ https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 ] (https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
+ 
+Följ Azure ATP på Microsoft Tech Community  
+[https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP på Microsoft Tech Community")
+ 
+Gå med i Azure ATP Yammer community [ https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 ] (https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer-communityn")
+ 
+Gå till produktsidan för Azure ATP  
+[https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Produktsida för Azure ATP")
 
 Mer information om Azure ATP-arkitekturen finns i [Azure ATP-arkitektur](atp-architecture.md).
+ 
+## <a name="whats-next"></a>Vad händer nu? 
 
-## <a name="what-does-azure-atp-do"></a>Vad är Azure ATP?
+Vi rekommenderar att du distribuerar Azure ATP i 3 faser:  
 
-Azure ATP-teknik identifierar flera misstänkta aktiviteter och fokuserar på flera faser av cyberattackkedjan kill chain, inklusive:
+### <a name="phase-1"></a>Fas 1
 
--   Rekognosering, under vilken angripare samla in information om hur miljön har skapats, vilka olika tillgångarna är och vilka entiteter finns. De skapar vanligtvis planerar för nästkommande faser av angrepp.
--   Lateral rörelsecykel då en angripare investerar tid och möda i spridning av sin angreppsyta i nätverket.
--   Domändominans (persistence) då en angripare samlar information för att kunna återuppta sina kampanjer med olika uppsättningar av startpunkter, autentiseringsuppgifter och tekniker. 
-
-Faserna för en cyberattack är liknande och förutsägbara, oavsett vilken typ av företag som är utsatt för en attack eller vilken typ av information som bearbetas.
-Azure ATP söker efter tre typer av angrepp: skadliga attacker, onormalt beteende och säkerhetsproblem och risker.
-
-**Skadliga attacker** upptäcks deterministiskt, samt via onormalt beteende analytics. En fullständig lista över kända angreppstyper innehåller:
-
--   Pass-the-Ticket (PtT)
--   Pass-the-Hash (PtH)
--   Overpass-the-Hash
--   Förfalskade PAC (MS14-068)
--   Golden ticket
-    -   tid anomoly
-    -   icke befintligt konto – ny
--   Skadlig replikering
--   Directory Service-uppräkning
--   SMB-sessionsuppräkning
--   DNS-spaning
--   Vågrät Brute Force 
--   Lodrät Brute Force
--   Dyrk
--   Ovanligt protokoll
--   Nedgradering av kryptering
--   Fjärrkörning
--   Skapa skadliga tjänster
--   Misstänkt befordran av domänkontrollant (möjlig DCShadow-attack) – ny
--   Misstänkt replikeringsbegäran (möjlig DCShadow-attack) – ny
--   VPN 
+1. Konfigurera Azure ATP för att skydda dina primära miljöer. Azure ATP-modellen för snabb distribution kan du börja skydda din organisation redan idag. [Installera ATP](install-atp-step1.md)  
+2. Ange [känsliga konton](sensitive-accounts.md) och [honeytoken-konton](install-atp-step7.md).   
+3. Granska rapporter och [lateral förflyttning](use-case-lateral-movement-path.md).  
 
 
-Azure ATP identifierar dessa misstänkta aktiviteter och hämtar information i Azure ATP-arbetsyteportalen, inklusive en överblick av vem, vad, när och hur. Som du kan se den här enkla och användarvänliga instrumentpanelen informeras du att Azure ATP misstänker att ett Pass-the-Ticket-angrepp gjorts på Client 1 och 2-datorer i nätverket.
+### <a name="phase-2"></a>Fas 2
 
- ![exemplet Azure ATP skärm för pass-the-ticket](media/pass-the-ticket-sa.png)
-
-
-Azure ATP identifierar också **säkerhetsproblem och risker**, inklusive:
-
--   Svaga protokoll
--   Kända sårbarheter i protokoll
--   [Lateral förflyttning sökvägen till känsliga konton](use-case-lateral-movement-path.md)
-
-# <a name="what-threats-does-azure-atp-look-for"></a>Vilka hot Azure ATP leta efter
-
-Azure ATP ger identifiering för följande olika faser i en avancerad attack: rekognosering, avslöjade autentiseringsuppgifter, lateral förflyttning, eskalering av privilegier, domändominans och andra. Dessa identifieringar är avsedda att identifiera avancerade attacker och insiderhot innan de skadar organisationen.
-
-Identifieringen av varje fas ger flera misstänkta aktiviteter som är relevanta för fasen i fråga, där varje misstänkt aktivitet motsvarar olika varianter av möjliga attacker.
-Faserna i attackkedjan där Azure ATP för närvarande kan identifiera hot är markerade på följande bild:
-
-![Azure ATP-fokuserar på lateral aktivitet i attackkedjan](media/attack-kill-chain-small.jpg)
+1. Skydda alla domänkontrollanter och [skogar](atp-multi-forest.md) i din organisation.  
+2.  Övervaka alla [aviseringar](working-with-suspicious-activities.md) – undersöka lateral förflyttning & domän dominans aviseringar.  
+3. Arbeta med den [Säkerhetsvarning guide](suspicious-activity-guide.md) att förstå hot och bedöma potentiella attacker.   
 
 
-Mer information finns i [arbeta med misstänkta aktiviteter](working-with-suspicious-activities.md) och [Azure ATP-guide för misstänkt aktivitet](suspicious-activity-guide.md).
+### <a name="phase-3"></a>Fas 3
 
-## <a name="whats-next"></a>Vad händer nu?
-
--   Mer information om hur Azure ATP passar in i ditt nätverk: [Azure ATP-arkitektur](atp-architecture.md)
-
--   Du kommer igång med att distribuera ATP: [installera ATP](install-atp-step1.md)
-
+1. Integrera Azure ATP-aviseringar i dina SecOp arbetsflöden. 
 
 ## <a name="see-also"></a>Se även
 - [Vanliga och frågor svar om Azure ATP](atp-technical-faq.md)
+- [Arbeta med säkerhetsaviseringar](working-with-suspicious-activities.md)
 - [Kolla in ATP-forumet!](https://aka.ms/azureatpcommunity)

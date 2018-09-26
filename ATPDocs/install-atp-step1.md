@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f44bbf50cff2e983a7ddb1ef1cf54ebaf928741
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126237"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750511"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -51,7 +51,7 @@ När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du
 
 1. Klicka på **Skapa arbetsyta**.
 
-2. I den **Skapa ny arbetsyta** dialogrutan namnge din arbetsyta och välj en **Geoplats** för ditt datacenter. Endast en arbetsyta kan anges som primär. Ange en arbetsyta som primär påverkar integreringar – du kan bara integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. Du kan ändra vilken arbetsyta är primär senare, men för att kunna göra det behöver du måste ta bort alla integreringar som redan angetts för den aktuella primära arbetsytan.
+2. I den **Skapa ny arbetsyta** dialogrutan namnge din arbetsyta och välj en **Geoplats** för ditt datacenter. En arbetsyta kan anges som primär. Ange en arbetsyta som primär påverkar integreringar – du kan bara integrera Azure ATP med Windows Defender ATP för den primära arbetsytan. Du kan ändra vilken arbetsyta är primär senare, men för att kunna göra det behöver du måste ta bort alla integreringar som redan angetts för den aktuella primära arbetsytan.
  > [!NOTE]
  > När du har valt en geografisk plats, kan du inte ändra den.
     ![Azure ATP-arbetsyta](media/create-workspace.png)
@@ -65,7 +65,7 @@ När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du
 
     ![Azure ATP-arbetsytor](media/atp-workspaces.png)
 
-- Endast den primära arbetsytan kan redigeras. Om du vill göra ändringar i andra arbetsytor, kan du ta bort dem och lägga till dem igen. Om du vill ta bort den primära arbetsytan kan du först inaktivera integreringar och ange arbetsytan ska inte **primära** innan den kan tas bort.
+- Endast den primära arbetsytan kan redigeras. Om du vill ta bort den primära arbetsytan kan du först inaktivera integreringar och ange arbetsytan ska inte **primära** innan den kan tas bort.
 - Om du vill redigera en primär arbetsyta, måste du först inaktivera befintliga integreringar på arbetsytan.
 
 - Kvarhållning av data – borttagna arbetsytor syns inte i Användargränssnittet. Läs mer på Azure ATP-datakvarhållning [Aure ATP datasäkerhet och sekretess](atp-privacy-compliance.md).

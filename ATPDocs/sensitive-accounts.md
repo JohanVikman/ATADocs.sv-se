@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8b48b8090e109c9fc23c52b05f986b34e2549eb
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165889"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750445"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -37,7 +37,6 @@ Följande lista över grupper betraktas som känslig genom Azure ATP. En entitet
 -   Skrivaransvariga
 -   Ansvariga för säkerhetskopiering
 -   Ansvariga för replikering
--   Användare av fjärrskrivbord 
 -   Ansvariga för nätverkskonfigurering 
 -   Incoming Forest Trust Builders
 -   Domänadministratörer
@@ -48,6 +47,8 @@ Följande lista över grupper betraktas som känslig genom Azure ATP. En entitet
 -   Schemaadministratörer 
 -   Företagsadministratörer
 
+ > [!NOTE]
+ > Till September 2018 användare av fjärrskrivbord har också automatiskt anses vara känsliga med Azure ATP. Remote Desktop entiteter eller grupper har lagts till det här datumet är inte längre automatiskt markerats som känsliga när Remote Desktop-enheter och grupper som har lagts till innan detta datum förbli markerat som känsliga. Den här inställningen för känsliga kan nu ändras manuellt.  
 
 ## <a name="tagging-sensitive-accounts"></a>Tagga känsliga konton
 

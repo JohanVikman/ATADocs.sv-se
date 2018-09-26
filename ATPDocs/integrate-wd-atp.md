@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697233"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750426"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -91,7 +91,8 @@ Om du klickar på aktivitetsikonen, kommer du till Windows Defender ATP-portal d
 
 När du klickar på en slutpunkt i Windows Defender ATP-portalen kan du visa Azure ATP-aviseringar. Om du klickar på aviseringar för den här entiteten i Windows Defender ATP öppnas entitetens profilsida i Azure ATP. 
  
- > ! [OBS] Azure ATP-integrering med Windows Defender ATP stöder för närvarande endast användare och datorer från lokalt AD. Användare från Azure AD och virtuella datorer som hanteras i Azure visas inte som en del av integreringen 
+ > [!NOTE]
+ > Azure ATP-integrering med Windows Defender ATP stöder för närvarande endast användare och datorer från lokalt AD. Användare från Azure AD och virtuella datorer som hanteras i Azure visas inte som en del av integreringen 
 
 ![Windows Defender ATP-aviseringar](./media/wd-atp-alerts.png)
 

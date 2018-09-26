@@ -6,18 +6,18 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: conceptual
+ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: d2fce6a4cf3b3440e3ceedc524fe8457e8831bbe
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126373"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750494"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -58,7 +58,7 @@ När du bestämmer typ av sensor-distribution, Överväg följande fördelar:
 Tänk på följande när du bestämmer hur många Azure ATP fristående sensorer för att distribuera.
 
 -   **Active Directory-skogar och domäner**<br>
-    Azure ATP kan övervaka trafik från flera domäner inom en Active Directory-skog för varje arbetsyta som du skapar. För att övervaka flera skogar, måste du skapa flera arbetsytor. 
+    Azure ATP kan övervaka trafik från flera domäner i flera Active Directory-skogar för varje arbetsyta som du skapar. 
 
 -   **Portspegling**<br>
 Överväganden för portspegling kan kräva att du kan distribuera flera fristående Azure ATP-sensorer per plats för data Datacenter eller avdelningskontor.
