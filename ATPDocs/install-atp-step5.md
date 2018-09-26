@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 353845c3fb03d5bd4af18ea467fceea57010f33e
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126016"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168611"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -32,7 +32,7 @@ ms.locfileid: "44126016"
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Steg 5. Konfigurera inställningar för Azure ATP-sensorn
-När Azure ATP-sensorn har installerats kan du utföra följande steg för att konfigurera inställningar för Azure ATP-sensorn.
+När du har installerat Azure ATP-sensorn utför du följande steg för att konfigurera inställningar för Azure ATP-sensorn.
 
 1.  I Azure ATP-arbetsyteportalen, går du till **Configuration** och under **System**väljer **sensor**.
    
@@ -51,12 +51,15 @@ När Azure ATP-sensorn har installerats kan du utföra följande steg för att k
       - Minst en domänkontrollant i listan bör vara en global katalog. Detta gör Azure ATP att lösa dator- och användarobjekt i andra domäner i skogen.
 
   - **Avbilda nätverkskort** (krävs):
-     - Välj de nätverkskort som är konfigurerade som målspegelport för en Azure ATP fristående sensorn på en dedikerad server. Dessa ta emot speglad domain controller-trafik.
+   
      - Det bör vara alla nätverkskort som används för kommunikation med andra datorer i din organisation för en Azure ATP-sensorn.
+    - Välj de nätverkskort som är konfigurerade som målspegelport för en Azure ATP fristående sensorn på en dedikerad server. Dessa ta emot speglad domain controller-trafik.
 
-    - **Kandidat för domänsynkronisering**: Any Azure ATP fristående sensorn inställd på att en kandidat för domänsynkronisering kan ansvara för synkronisering mellan Azure ATP- och Active Directory-domänen. Beroende på domänens storlek på den första synkroniseringen kan ta lite tid och är resurskrävande. Som standard ställs endast Azure ATP fristående sensorer som kandidater för domänsynkronisering.
-   Vi rekommenderar att du inaktiverar alla fjärrplatsen Azure ATP-sensorn från att vara kandidater för domänsynkronisering.
-   Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Mer information finns i [Azure ATP-arkitektur](atp-architecture.md#azure-atp-sensor-features).
+    - **Kandidat för domänsynkronisering**: som standard Azure ATP-sensorer som är inte kandidater för domänsynkronisering, medan Azure ATP fristående sensorer är. För att manuellt välja ett Azure ATP-sensorn som en domän syncronizer kandidat, växla den **kandidat för domänsynkronisering** växla möjlighet att **på** på skärm för konfiguration. 
+    
+        Domänsynkroniseraren ansvarar för synkronisering mellan Azure ATP- och Active Directory-domänen. Beroende på domänens storlek på den första synkroniseringen kan ta lite tid och är resurskrävande. 
+   Vi rekommenderar att du inaktiverar eventuella fjärranslutna Azure ATP givare från att domänen kandidater för domänsynkronisering.
+   Om domänkontrollanten är skrivskyddad ska den inte anges som kandidat för domänsynkronisering. Läs mer om Azure ATP-domänsynkronisering [Azure ATP-arkitektur](atp-architecture.md#azure-atp-sensor-features)
   
 4. Klicka på **Spara**.
 

@@ -2,10 +2,10 @@
 title: Felsök Advanced Threat Analytics med prestandaräknare | Microsoft Docs
 description: Beskriver hur du kan använda prestandaräknare för att felsöka problem med ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c7a0ded6092740f92c12fbd7c57100293bf735c2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 455e66b286916f125fcc34d61b167b86ccc59740
+ms.sourcegitcommit: caaa864708ec631ca4903f6270ad0012951ceef1
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134134"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114467"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -57,7 +57,7 @@ Detta görs genom att öppna **Prestandaövervakaren** och lägga till alla räk
 Här är listan med de viktigaste ATA Gateway-räknarna som du bör vara medveten om:
 
 > [!div class="mx-tableFixed"]
-|Räknare|Description|Tröskelvärde|Felsökning|
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF parsade meddelanden\Sek|Mängden trafik som bearbetas av ATA Gateway varje sekund.|Inget tröskelvärde|Hjälper dig att förstå mängden trafik som parsas av ATA Gateway.|
 |NetworkListener PEF – förlorade händelser/s|Mängden trafik som förloras av ATA Gateway varje sekund.|Det här antalet bör alltid vara noll (sällsynta korta förekomster av förlorade meddelanden är godtagbara).|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Se **Process för ATA-komponenter** ovan.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
@@ -78,7 +78,7 @@ För att mäta de resursbegränsningar som ATA framtvingar på Lightweight-gatew
 Detta görs genom att öppna **Prestandaövervakaren** och lägga till alla räknare för ATA Lightweight Gateway. Namnen på prestandaräknarna är: **Microsoft ATA Gateway** och **Microsoft ATA Gateway Updater**.
 
 > [!div class="mx-tableFixed"]
-|Räknare|Description|Tröskelvärde|Felsökning|
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager maximal processortid i %|Den maximala mängden processortid (i procent) som Lightweight Gateway-processen kan använda. |Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager dedikera maximal minnesstorlek|Den maximala mängden dedikerat minne (i byte) som Lightweight Gateway-processen kan använda.|Inget tröskelvärde. | Detta är den begränsning som skyddar domänkontrollantresurserna från att användas av ATA Lightweight Gateway. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste lägga till fler resurser på servern som kör domänkontrollanten.| 
@@ -90,7 +90,7 @@ Om du vill se din faktiska användning, se följande räknare:
 
 
 > [!div class="mx-tableFixed"]
-|Räknare|Description|Tröskelvärde|Felsökning|
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.gateway)\%processortid|Mängden processortid (i procent) som Lightweight Gateway-processen faktiskt använder. |Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal processortid i % för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.|
 |Process(Microsoft.Tri.Gateway)\Privata byte|Mängden dedikerat minne (i byte) som Lightweight Gateway-processen faktiskt använder.|Inget tröskelvärde. | Jämför resultatet från den här räknaren med gränsen i maximal storlek för dedikerat minne för GatewayUpdaterResourceManager. Om du ser att processen ofta når gränsen under en tidsperiod (processen når gränsen och börjar sedan att släppa trafik) innebär det att du måste dedikera fler resurser till Lightweight Gateway.| 
@@ -104,11 +104,11 @@ Detta görs genom att öppna **Prestandaövervakaren** och lägga till alla räk
 Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten om:
 
 > [!div class="mx-tableFixed"]
-|Räknare|Description|Tröskelvärde|Felsökning|
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver – blockstorlek för entitetsbatch|Antal entitetsbatchar som placerats i kö av ATA Center.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener.  Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 |Microsoft ATA Center\NetworkActivityProcessor – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för bearbetning.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
-|Microsoft ATA Center\EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 10 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
+|Microsoft ATA Center\EntityProfiler – blockstorlek för nätverksaktivitet|Antal nätverksaktiviteter (NA) i kö för profilering.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 100 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 |Microsoft ATA Center\Databas &#42; blockstorlek|Antal nätverksaktiviteter av en viss typ i kö för att skrivas till databasen.|Bör vara mindre än maxvärdet-1 (standardmaxvärde: 50 000)|Kontrollera om det finns någon komponent som nått maximal storlek och blockerar tidigare komponenter ända till NetworkListener. Referera till det föregående **Process för ATA-komponenter**.<br /><br />Kontrollera att det inte finns något problem med CPU eller minne.|
 
 
@@ -120,7 +120,7 @@ Här är listan med de viktigaste ATA Center-räknarna som du bör vara medveten
 I följande tabell visas de viktigaste räknare för att ta hänsyn till:
 
 > [!div class="mx-tableFixed"]
-|Räknare|Description|Tröskelvärde|Felsökning|
+|Räknare|Beskrivning|Tröskelvärde|Felsökning|
 |-----------|---------------|-------------|-------------------|
 |Processor(_total)\% Processortid|Procentandelen av förfluten tid som processorn använder för att köra en icke-inaktiv tråd.|Mindre än 80 % i genomsnitt|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|
 |System\Kontextbyten/s|Den sammanlagda hastigheten som alla processorer byter från en tråd till en annan.|Färre än 5 000&#42;kärnor (fysiska kärnor)|Kontrollera om det finns en särskild process som tar mycket mer processortid än den borde.<br /><br />Lägg till fler processorer.<br /><br />Minska mängden trafik per server.<br /><br />Räknaren ”Processor(_total)\% Processortid” kan vara mindre exakt på virtuella servrar. Det mer exakta sättet att mäta bristen på processorkraft är då via räknaren ”System\Kölängd för processor”.|

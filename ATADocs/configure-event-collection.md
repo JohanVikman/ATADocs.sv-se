@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 37d3234694b92c988fcd1153c79d37dbba371aaa
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133607"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168594"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -44,7 +44,7 @@ I det här scenariot förutsätter att ATA-gatewayen är medlem i domänen.
 
 1.  Öppna Active Directory-användare och datorer, navigera till den **BuiltIn** mappen och dubbelklickar på **Händelseloggläsare**. 
 2.  Välj **medlemmar**.
-4.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
+3.  Om **Nätverkstjänst** inte visas klicka på **Lägg till**, skriv **Nätverkstjänst** i fältet **Ange de objektnamn som ska väljas**. Klicka på **Kontrollera namn** och klicka på **OK**. 
 
 När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** och starta om domänkontrollanterna för att ändringen ska börja gälla.
 
@@ -62,7 +62,9 @@ När du lägger till den **nätverkstjänst** till den **Händelseloggläsare** 
    
     1.  Välj **Aktiverad**.
     2.  Under **alternativ**, klickar du på **visa**.
-    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: \*Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (till exempel: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Under **SubscriptionManagers**, anger du följande värde och klickar på **OK**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, Refresh = 10* 
+    
+        *(Till exempel: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, uppdatera = 10)*
  
     ![Konfigurera målprenumerationsbild](media/wef%202%20config%20target%20sub%20manager.png)
    
