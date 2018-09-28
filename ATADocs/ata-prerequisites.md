@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06789ac50d52a9b202eea9fb9fb6ea74aaf7a5f3
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133970"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403207"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
 
 
 # <a name="ata-prerequisites"></a>Krav för ATA
-Den här artikeln beskriver kraven för en lyckad distribution av ATA i din miljö.
+Den här artikeln beskrivs kraven för en lyckad ATA-distribution i din miljö.
 
 > [!NOTE]
 > Mer information om hur du planerar resurser och kapacitet finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).
@@ -61,7 +61,7 @@ Det här avsnittet innehåller information som du bör samla in samt konton och 
 
 -    Rekommenderat: Ska användaren ha läsbehörighet för behållaren borttagna objekt. Detta gör att ATA kan identifiera massborttagning av objekt i domänen. Information om hur du konfigurerar läsbehörigheter för behållaren för borttagna objekt finns i den **ändring av behörigheter i en behållare för borttagna objekt** i avsnittet den [visa eller ange behörigheter för ett katalogobjekt](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) artikeln.
 
--   Valfritt: Ett användarkonto för en användare utan nätverksaktiviteter. Det här kontot konfigureras som ATA-honeytokenanvändaren. Om du vill konfigurera honeytokenanvändaren behöver du SID för användarkontot, inte användarnamnet. Mer information finns i [undantag konfigurera IP-adresser och honeytokenanvändare](install-ata-step7.md).
+-   Valfritt: Ett användarkonto för en användare med några Nätverksaktiviteter. Det här kontot kan konfigureras som en ATA-honeytokenanvändaren. Endast användarnamn krävs om du vill konfigurera ett konto som en Honeytoken-användare. Honeytoken-konfigurationsinformation, se [undantag konfigurera IP-adresser och honeytokenanvändare](install-ata-step7.md).
 
 -   Valfritt: Förutom att samla in och analysera nätverkstrafik till och från domänkontrollanterna kan ATA använda Windows-händelserna 4776, 4732, 4733, 4728, 4729, 4756 och 4757 för att förbättra ATA Pass-the-Hash, Brute Force, ändring av känsliga grupper och Honey token-identifieringar. Dessa händelser kan fås från SIEM eller genom att ange vidarebefordran av Windows-händelser från domänkontrollanten. Insamlade händelser ger ATA ytterligare information som inte är tillgänglig via domänkontrollantens nätverkstrafik.
 

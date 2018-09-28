@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168594"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403224"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -27,16 +27,16 @@ ms.locfileid: "47168594"
 # <a name="configuring-windows-event-forwarding"></a>Konfigurera vidarebefordran av Windows-händelser
 
 > [!NOTE]
-> För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway kan nu läsa händelser lokalt, utan att du behöver konfigurera vidarebefordran av händelser.
-
+> För ATA versions 1.8 och senare behövs inte längre konfiguration av händelseinsamling för ATA Lightweight-gatewayer. ATA Lightweight Gateway nu läsa händelser lokalt, utan att behöva konfigurera vidarebefordran av händelser.
 
 För att förbättra identifieringsfunktionerna behöver ATA följande Windows-händelser: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Dessa kan antingen läsas automatiskt av ATA Lightweight Gateway eller om ATA Lightweight Gateway inte har distribuerats, vidarebefordras till ATA Gateway på något av två sätt genom att konfigurera ATA-Gateway för att lyssna efter SIEM-händelser eller genom att konfigurera Windows-händelse Vidarebefordran.
 
-
+> [!NOTE]
+> Om du använder Server Core [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) kan användas för att skapa och hantera prenumerationer på händelser som vidarebefordras från fjärrdatorer.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>WEF-konfiguration för ATA-gatewayar med portspegling
 
-När du har konfigurerat portspegling från domänkontrollanterna till ATA Gateway följer du instruktionerna för att konfigurera vidarebefordran av Windows-händelse med Källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
+När du har konfigurerat portspegling från domänkontrollanterna till ATA Gateway, Använd följande instruktioner för att konfigurera vidarebefordran av Windows-händelse med Källinitierad konfiguration. Detta är ett sätt att konfigurera vidarebefordran av Windows-händelse. 
 
 **Steg 1: Lägg till konto för nätverkstjänst i domänens händelselogg för läsargrupp** 
 

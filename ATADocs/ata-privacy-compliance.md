@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 0f4a7546b6231fb263d1734b731f6be3cae7570a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 08876085e3fe5d86c8219c6b0ad7beb8c44c700a
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134021"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403241"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -44,7 +44,7 @@ Följ den här proceduren om du vill ta bort användarrelaterade data från ATA-
 
 1. [Ladda ned](https://aka.ms/ata-gdpr-script) MongoDB-skript (gdpr.js).  
 
-2. Kopiera skriptet till ATA Center-datorn och kör följande kommando från ATA Center-datorn: 
+2. Kopiera skriptet till ATA-mapp (finns på `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` och kör följande kommando från ATA Center-datorn: 
 
 Använd ATA GDPR databasen skript för att ta bort entiteter och ta bort entiteten aktivitetsdata, enligt beskrivningen i följande avsnitt.
 
