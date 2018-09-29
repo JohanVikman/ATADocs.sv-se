@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 9ce1bbbda96cc8a10b026f2f422ac79b1b2bae55
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126135"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454113"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126135"
 
 # <a name="install-azure-atp---step-6"></a>Installera Azure ATP - steg 6
 
->[!div class="step-by-step"]
-[« Steg 5](install-atp-step5.md)
-[Steg 7 »](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [« Steg 5](install-atp-step5.md)
+> [Steg 7 »](install-atp-step7.md)
 
 ## <a name="step-6-integrate-vpn"></a>Steg 6. Integrera VPN
 
@@ -91,9 +91,9 @@ När Azure ATP-sensorn tar emot VPN-händelser och skickar dem till Azure ATP-Mo
 
 
 
->[!div class="step-by-step"]
-[«Steg 6](install-atp-step5.md)
-[steg 7»](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [«Steg 6](install-atp-step5.md)
+> [steg 7»](install-atp-step7.md)
 
 
 ## <a name="see-also"></a>Se även

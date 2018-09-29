@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63fee52a45913685c75872df156fecdddc5a6803
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 34ee1589d59b0740e9d3b05eb117991325619295
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125829"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454005"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 # <a name="install-azure-atp---step-8"></a>Installera Azure ATP - steg 8
 
->[!div class="step-by-step"]
-[«Steg 7](install-atp-step7.md)
-[steg 9»](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [«Steg 7](install-atp-step7.md)
+> [steg 9»](atp-multi-forest.md)
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>Steg 8. Konfigurera SAM-R obligatoriska behörigheter
 
@@ -53,9 +53,9 @@ Se till att Windows-klienter och servrar tillåta din Azure ATP-konto för att u
 Mer information om SAM-R och den här grupprincipen finns i [Nätverksåtkomst: begränsa klienter som har tillåtelse att göra fjärranrop till SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[«Steg 7](install-atp-step7.md)
-[steg 9»](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [«Steg 7](install-atp-step7.md)
+> [steg 9»](atp-multi-forest.md)
 
 
 

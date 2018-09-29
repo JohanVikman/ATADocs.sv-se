@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4b2e7ae1dad939db3a2394876acfe9ed4042924b
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 431368a1ceee57870a3eadf176b5899b69784c98
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133267"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454130"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133267"
 
 # <a name="install-ata---step-2"></a>Installera ATA – Steg 2
 
->[!div class="step-by-step"]
-[« Steg 1](install-ata-step1.md)
-[Steg 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Steg 1](install-ata-step1.md)
+> [Steg 3 »](install-ata-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
 
@@ -51,9 +51,9 @@ Första gången du öppnar ATA-konsolen visas följande skärmbild:
 3. I administratörskonsolen, klicka på **Hämta Gateway-installationen och installera den första gatewayen** för att fortsätta.
 
 
->[!div class="step-by-step"]
-[« Steg 1](install-ata-step1.md)
-[Steg 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Steg 1](install-ata-step1.md)
+> [Steg 3 »](install-ata-step3.md)
 
 
 ## <a name="see-also"></a>Se även

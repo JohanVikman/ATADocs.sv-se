@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10dd0714b2574ff9e1e476bc1865b1a0ed337b8
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125914"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454028"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125914"
 
 # <a name="install-azure-atp---step-3"></a>Installera Azure ATP - steg 3
 
->[!div class="step-by-step"]
-[« Steg 2](install-atp-step2.md)
-[Steg 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Steg 2](install-atp-step2.md)
+> [Steg 4 »](install-atp-step4.md)
 
 ## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Steg 3. Hämta installationspaketet för Azure ATP-sensorn
 När du har konfigurerat anslutningsinställningarna för domänen, kan du hämta installationspaketet för Azure ATP-sensorn. Azure ATP-sensorn installationspaketet kan installeras på en dedikerad server eller på en domänkontrollant. När du installerar direkt på en domänkontrollant, den installeras som en Azure ATP-sensorn när du installerar på en dedikerad server och använda portspegling kan den installeras som fristående Azure ATP-sensorn. Läs mer på Azure ATP-sensorn [Azure ATP-arkitektur](atp-architecture.md). 
@@ -52,9 +52,9 @@ Zip-filen innehåller följande filer:
 -   Konfigurationsfilen med informationen som krävs för att ansluta till Molntjänsten Azure ATP
 
 
->[!div class="step-by-step"]
-[« Steg 2](install-atp-step2.md)
-[Steg 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Steg 2](install-atp-step2.md)
+> [Steg 4 »](install-atp-step4.md)
 
 
 ## <a name="see-also"></a>Se även

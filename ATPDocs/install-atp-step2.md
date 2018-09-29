@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b2f83da3192770ddde05b04bed46a558a4491290
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125897"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453841"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125897"
 
 # <a name="install-azure-atp---step-2"></a>Installera Azure ATP - steg 2
 
->[!div class="step-by-step"]
-[« Steg 1](install-atp-step1.md)
-[Steg 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Steg 1](install-atp-step1.md)
+> [Steg 3 »](install-atp-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Steg 2. Ange ett användarnamn och lösenord för att ansluta till Active Directory-skogen
 
@@ -51,9 +51,9 @@ Första gången du öppnar Azure ATP-arbetsyteportalen, visas följande skärmbi
 3. I arbetsyteportalen klickar du på **hämta sensorkonfiguration och installera den första sensorn** att fortsätta.
 
 
->[!div class="step-by-step"]
-[« Steg 1](install-atp-step1.md)
-[Steg 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Steg 1](install-atp-step1.md)
+> [Steg 3 »](install-atp-step3.md)
 
 
 ## <a name="see-also"></a>Se även

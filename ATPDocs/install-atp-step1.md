@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: c9fc833a315c5e2259080d922c24e6a64de98905
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750511"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453824"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 
 # <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Skapa en arbetsyta i Azure ATP arbetsytehanteringsportalen – steg 1
 
->[!div class="step-by-step"]
-[Steg 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [Steg 2 »](install-atp-step2.md)
 
 Den här installationsproceduren innehåller anvisningar för att skapa och hantera din Azure ATP-instans. Information om Azure ATP-arkitekturen finns i [Azure ATP-arkitektur](atp-architecture.md).
 
@@ -71,9 +71,9 @@ När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du
 - Kvarhållning av data – borttagna arbetsytor syns inte i Användargränssnittet. Läs mer på Azure ATP-datakvarhållning [Aure ATP datasäkerhet och sekretess](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[«Förinstallation](configure-port-mirroring.md)
-[steg 2»](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [«Förinstallation](configure-port-mirroring.md)
+> [steg 2»](install-atp-step2.md)
 
 
 ## <a name="see-also"></a>Se även

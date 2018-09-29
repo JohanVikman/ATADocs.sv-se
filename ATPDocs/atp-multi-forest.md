@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6ba913710d5158c2e39105061acbebd566c5f13
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126203"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454096"
 ---
 *Gäller för: Azure Avancerat skydd*
 
 # <a name="install-azure-atp---step-9"></a>Installera Azure ATP - steg 9
 
->[!div class="step-by-step"]
-[«Steg 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Steg 8](install-atp-step8-samr.md)
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Steg 9.  Installera Azure Advanced Threat Protection stöd för flera skogar
 
@@ -82,8 +82,8 @@ När Azure ATP mappar dina skogar, används en process som påverkar följande:
 -   Interaktiva inloggningar som genomförs av användare i en skog komma åt resurser i en annan skog visas inte i Azure ATP-instrumentpanelen.
 
 
->[!div class="step-by-step"]
-[«Steg 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Steg 8](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Se även

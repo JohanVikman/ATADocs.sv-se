@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e37954252708da31347b0af6479fbafbfd9433a7
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133743"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454164"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
 
 # <a name="install-ata---step-1"></a>Installera ATA – Steg 1
 
->[!div class="step-by-step"]
-[Steg 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [Steg 2 »](install-ata-step2.md)
 
 Den här installationsproceduren innehåller anvisningar som beskriver hur du utför en helt ny installation av ATA 1.8. Information om hur du uppdaterar en befintlig ATA-distribution från en tidigare version finns i [ATA-Migreringsguide för version 1.9](ata-update-1.9-migration-guide.md).
 
@@ -64,7 +64,7 @@ På ATA Center-servern utför du följande steg.
 
 8.  Ange följande information på sidan **Configure the Center** (Konfigurera Center) baserat på din miljö:
 
-    |Fält|Description|Kommentar|
+    |Fält|Beskrivning|Kommentar|
     |---------|---------------|------------|
     |Installationssökväg|Det här är den plats där ATA Center är installerat. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center|Låt standardvärdet vara kvar|
     |Datasökväg för databasen|Det här är den plats där MongoDB-databasfilerna finns. Detta är som standard %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Ändra platsen till en plats där det finns utrymme att växa, baserat på storleken. **Obs:** <ul><li>I produktionsmiljöer bör du använda en enhet som har tillräckligt med utrymme baserat på kapacitetsplaneringen.</li><li>Vid stora distributioner bör databasen finnas på en separat fysisk enhet.</li></ul>Storleksinformation finns i [ATA-kapacitetsplanering](ata-capacity-planning.md).|
@@ -98,9 +98,9 @@ När du har installerat ATA Center ska du undanta databaskatalogen MongoDB från
 
 
 
->[!div class="step-by-step"]
-[«Förinstallation](configure-port-mirroring.md)
-[steg 2»](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [«Förinstallation](configure-port-mirroring.md)
+> [steg 2»](install-ata-step2.md)
 
 ## <a name="related-videos"></a>Relaterade videor
 - [Välja rätt typ av ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

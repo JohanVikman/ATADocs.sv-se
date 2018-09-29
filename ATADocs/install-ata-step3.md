@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 86941e2081c3893d3ea8499b435968fbad243015
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d49770f435985027690ddfc05a9359e84841c0ff
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133165"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454045"
 ---
 *Gäller för: Advanced Threat Analytics version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133165"
 
 # <a name="install-ata---step-3"></a>Installera ATA – Steg 3
 
->[!div class="step-by-step"]
-[« Steg 2](install-ata-step2.md)
-[Steg 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Steg 2](install-ata-step2.md)
+> [Steg 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Steg 3. Hämta installationspaketet för ATA Gateway
 När du har konfigurerat anslutningsinställningarna för domänen kan du hämta ATA Gateway-installationspaketet. ATA Gateway kan installeras på dedikerad server eller en domänkontrollant. Om du installerar den på en domänkontrollant måste installeras den som en ATA Lightweight Gateway. Mer information om ATA Lightweight Gateway finns i [ATA-arkitektur](ata-architecture.md). 
@@ -52,9 +52,9 @@ Zip-filen innehåller följande filer:
 -   Filen med konfigurationsinställningar som innehåller informationen som krävs för att ansluta till ATA Center
 
 
->[!div class="step-by-step"]
-[« Steg 2](install-ata-step2.md)
-[Steg 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Steg 2](install-ata-step2.md)
+> [Steg 4 »](install-ata-step4.md)
 
 
 ## <a name="related-videos"></a>Relaterade videor
