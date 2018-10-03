@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: a007a277641835be292ae6ab0b3004f154dad753
+ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48039370"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -29,7 +29,7 @@ ms.locfileid: "47168560"
 Varje Azure Advanced Threat Protection (ATP)-sensor kräver en Internetanslutning till Azure ATP-Molntjänsten att fungera korrekt. I vissa organisationer har domänkontrollanterna inte är direkt ansluten till Internet, men det är anslutna via en proxyanslutning för webben. Varje Azure ATP-sensorn kräver att du använder Microsoft Windows Internet (WinINET) proxykonfigurationen till sensorn rapportdata och kommunicera med Azure ATP-tjänsten. Om du använder WinHTTP proxykonfiguration kan behöva du fortfarande konfigurera proxyinställningar för Windows Internet (WinINet) webbläsaren för kommunikation mellan sensorn och Azure ATP-Molntjänsten.
 
 
-När du konfigurerar proxyservern kommer du behöver veta att Azure ATP inbäddat sensortjänsten körs i kontexten med det **LocalService** konto och Azure ATP-sensorn Updater-tjänsten körs i systemkontexten med **LocalSystem** konto. 
+När du konfigurerar proxyservern, måste du veta att Azure ATP inbäddat sensortjänsten körs i kontexten med det **LocalService** konto och Azure ATP-sensorn Updater-tjänsten körs i kontexten system med  **LocalSystem** konto. 
 
 > [!NOTE]
 > Om du använder Transparent proxy eller WPAD i din nätverkstopologi, behöver du inte konfigurera WinINET för proxyservern.
@@ -45,13 +45,13 @@ Statisk proxyn kan konfigureras via registret. Du måste kopiera proxykonfigurat
 
 1.   Se till att säkerhetskopiera registernycklarna innan du ändrar dem.
 
-2. Sök efter värdet i registret, `DefaultConnectionSettings` som REG_BINARY under registernyckeln `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` och kopiera den.
+2. Sök efter värdet i registret, `DefaultConnectionSettings` som REG_BINARY under registernyckeln `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` och kopiera den.
  
-2.  Om LocalSystem inte har rätt proxyinställningarna (de inte har konfigurerats eller de skiljer sig från Current_User), kopiera proxyinställning från Current_User LocalSystem. Under registernyckeln `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+2.  Om LocalSystem inte har rätt proxyinställningarna (de inte har konfigurerats eller de skiljer sig från Current_User), kopiera proxyinställning från Current_User LocalSystem. Under registernyckeln `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 3.  Klistra in värdet från Current_user `DefaultConnectionSettings` som REG_BINARY.
 
-4.  Om LocalService inte har rätt proxyinställningarna, kopierar du proxyinställning från Current_User till LocalService. Under registernyckeln `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+4.  Om LocalService inte har rätt proxyinställningarna, kopierar du proxyinställning från Current_User till LocalService. Under registernyckeln `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 5.  Klistra in värdet från Current_User `DefaultConnectionSettings` som REG_BINARY.
 
