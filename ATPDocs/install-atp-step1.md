@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b30c9df27deed308c9c725ff1d6d193329721135
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
-ms.translationtype: HT
+ms.openlocfilehash: 8a6238b6d3cd05c3896b88701c15d17404db43cf
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039387"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245357"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -30,7 +30,7 @@ ms.locfileid: "48039387"
 
 Den här installationsproceduren innehåller anvisningar för att skapa och hantera din Azure ATP-instans. Information om Azure ATP-arkitekturen finns i [Azure ATP-arkitektur](atp-architecture.md).
 
-I Azure ATP får du en enda arbetsyta eller en instans så att du kan hantera flera skogar från en enda glasruta. 
+I Azure ATP får du en enda arbetsyta eller så att du kan hantera flera skogar från en enda glasruta-instans. 
 
 > [!NOTE]
 > För närvarande distribueras Azure ATP-datacenter i Europa, Nordamerika/centrala America/Karibien och Asien.
@@ -70,9 +70,10 @@ När du har kontrollerat att ditt nätverk uppfyller kraven för sensorn, kan du
 - Kvarhållning av data – tidigare borttagna arbetsytor syns inte i Användargränssnittet. Läs mer på Azure ATP-datakvarhållning [Aure ATP datasäkerhet och sekretess](atp-privacy-compliance.md).
 
 
-> [!div class="step-by-step"]
-> [«Förinstallation](configure-port-mirroring.md)
-> [steg 2»](install-atp-step2.md)
+>[!div class="step-by-step"]
+[«Förinstallation](atp-prerequisites.md)
+[steg 2»](install-atp-step2.md)
+
 
 
 ## <a name="see-also"></a>Se även

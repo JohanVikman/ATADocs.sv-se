@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/2/2018
+ms.date: 10/3/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 33493463eeb4ed23e33d81c9eb60b17c23285649
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
-ms.translationtype: HT
+ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039404"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245391"
 ---
 *Gäller för: Azure Avancerat skydd*
 
@@ -49,7 +49,7 @@ Microsoft använder dessa data till:
 Microsoft inte min dina data i reklamsyfte eller för något annat syfte än att ge dig till tjänsten. 
 
 ### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>Azure ATP endast trafik från Active Directory?
-Förutom att analysera Active Directory-trafik med teknik för djup paketinspektion Azure ATP också samlar in relevanta händelser från din säkerhetsinformation och händelsehantering (SIEM) och skapar entitetsprofiler baserat på information från Active Directory Domain Services. Om du använder Azure ATP-sensorn extraherar händelserna automatiskt. Du kan använda vidarebefordran av Windows-händelser för att skicka dessa händelser till fristående Azure ATP-sensorn. Azure ATP stöder också mottagande RADIUS-redovisning för VPN-loggar från olika leverantörer (Microsoft, Cisco, F5 och kontrollpunkt).
+Förutom att analysera Active Directory-trafik med teknik för djup paketinspektion Azure ATP också samlar in relevanta Windows-händelser från domänkontrollanten och skapar entitetsprofiler baserat på information från Active Directory Domain Services. Azure ATP stöder också mottagande RADIUS-redovisning för VPN-loggar från olika leverantörer (Microsoft, Cisco, F5 och kontrollpunkt).
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Övervakar Azure ATP-domänanslutna enheter?
 Nej. Azure ATP övervakar alla enheter i nätverket som utför autentisering och auktorisering förfrågningar mot Active Directory, inklusive icke-Windows och mobila enheter.
@@ -89,7 +89,7 @@ Dessutom Microsoft utför bakgrundsundersökningar verifiering på vissa anstäl
 Alla domänkontrollanter i miljön bör omfattas av en ATP-sensorn eller fristående sensorn. Mer information finns i [Azure ATP-sensorn ändrar storlek på](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Fungerar Azure ATP med krypterad trafik?
-Azure ATP förlitar sig på analysen av flera nätverksprotokoll och även händelser som samlas in från SIEM eller via vidarebefordran av Windows-händelser.  Nätverksprotokoll med krypterad trafik (till exempel LDAPS och IPSEC) dekryptera inte, men har analyserats.
+Nätverksprotokoll med krypterad trafik (till exempel LDAPS och IPSEC) dekryptera inte, men analyseras av sensorerna.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Fungerar Azure ATP med Kerberos-skydd?
 Aktivering av Kerberos Armoring, även kallat Flexible Authentication Secure Tunneling (FAST), stöds av ATP, med undantag för over-pass hash-identifiering, vilket inte fungerar med Kerberos-skydd.
@@ -119,10 +119,7 @@ Ja, du kan visa den övergripande hälsan för den distribution och specifika pr
 ## <a name="operation"></a>Aktivitet
 
 ### <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>Vilken typ av integrering har Azure ATP med Siem?
-Azure ATP har en dubbelriktad integrering med Siem enligt följande:
-
-1. Azure ATP kan konfigureras för att skicka en Syslog-avisering till valfri SIEM-server som använder CEF-formatet för hälsovarningar och när en misstänkt aktivitet har identifierats.
-2. Azure ATP kan konfigureras för att ta emot Syslog-meddelanden för Windows-händelser från [dessa siem-servrar](configure-event-collection.md).
+Azure ATP kan konfigureras för att skicka en Syslog-avisering till valfri SIEM-server som använder CEF-formatet för hälsovarningar och när en säkerhetsvarning har identifierats. Se den [referens: loggar SIEM](cef-format-sa.md) för mer information.
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Varför anses vissa konton känsliga?
 Det här inträffar när ett konto är medlem i grupper som är tilldelade som känsliga (till exempel: ”Domänadministratörer”).
